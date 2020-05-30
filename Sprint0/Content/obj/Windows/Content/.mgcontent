@@ -4,8 +4,8 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/99376/OneDrive/CSE3902/Workspace/Team1Project/Sprint0/Content/Credits1.spritefont</File>
-    <File>C:/Users/99376/OneDrive/CSE3902/Workspace/Team1Project/Sprint0/Content/luigi.png</File>
+    <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/Credits1.spritefont</File>
+    <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/luigi.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

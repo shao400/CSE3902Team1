@@ -56,6 +56,7 @@
     <Compile Include="Sprite\movingAnimatedSprite.cs" />
     <Compile Include="Sprite\textSprite.cs" />
     <Compile Include="Sprite\movingStaticSprite.cs" />
+    <Compile Include="State\P1State.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
