@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework;
 
 namespace Sprint0.Controller
 {
-    public class movingAnimatedSprite:ISprite
+    public class MovingAnimatedSprite:ISprite
     {
         public Texture2D Texture { get; set; }
         public int Rows { get; set; }
@@ -18,7 +18,7 @@ namespace Sprint0.Controller
         private int currentFrame;
         private int totalFrames;
 
-        public movingAnimatedSprite(Texture2D texture, int rows, int columns)
+        public MovingAnimatedSprite(Texture2D texture, int rows, int columns)
         {
             Texture = texture;
             Rows = rows;

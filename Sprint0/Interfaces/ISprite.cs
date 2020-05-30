@@ -12,8 +12,7 @@ namespace Sprint0
     {
 
         void Update();
-
-
+        void LoadContent();
         void Draw(SpriteBatch spriteBatch, Vector2 location);
        
     }

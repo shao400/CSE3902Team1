@@ -51,11 +51,12 @@
     <Compile Include="Interfaces\ISprite.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sprite\fixedAnimatedSprite.cs" />
-    <Compile Include="Sprite\fixedStaticSprite.cs" />
-    <Compile Include="Sprite\movingAnimatedSprite.cs" />
-    <Compile Include="Sprite\textSprite.cs" />
-    <Compile Include="Sprite\movingStaticSprite.cs" />
+    <Compile Include="Sprite\FixedAnimatedSprite.cs" />
+    <Compile Include="Sprite\FixedStaticSprite.cs" />
+    <Compile Include="Sprite\MovingAnimatedSprite.cs" />
+    <Compile Include="Sprite\SpriteFactory.cs" />
+    <Compile Include="Sprite\TextSprite.cs" />
+    <Compile Include="Sprite\MovingStaticSprite.cs" />
     <Compile Include="State\P1State.cs" />
   </ItemGroup>
   <ItemGroup>

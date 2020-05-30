@@ -8,11 +8,11 @@ using Microsoft.Xna.Framework;
 
 namespace Sprint0
 {
-    public class textSprite:ISprite
+    public class TextSprite:ISprite
     {
         private SpriteFont font;
 
-        public textSprite(Texture2D texture, int rows, int columns)
+        public TextSprite(Texture2D texture, int rows, int columns)
         {
             
         }
