@@ -15,7 +15,7 @@ namespace Sprint0.State
 
         private enum weapon
         {
-            none, WoodenSword, WhiteSword, MagicalSword, MagicalRod;
+            none, WoodenSword, WhiteSword, MagicalSword, MagicalRod
         }
 
         private bool isAttacking;
