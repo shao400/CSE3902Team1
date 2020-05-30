@@ -18,7 +18,11 @@ namespace Sprint0.State
             none, WoodenSword, WhiteSword, MagicalSword, MagicalRod
         }
 
-        private bool isAttacking;
+        private enum pState
+        {
+            standing, walking, attacking
+        }
+
         private bool isTakingDmg;
 
     }
