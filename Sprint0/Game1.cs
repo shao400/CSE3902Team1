@@ -60,7 +60,7 @@ namespace Sprint0
             luigi = Content.Load<Texture2D>("luigi");
             spriteX = 400;
             spriteY = 240;
-            sprite = new fixedStaticSprite(luigi, 6, 14);
+            
             font = Content.Load<SpriteFont>("Credits1");
         }
 
