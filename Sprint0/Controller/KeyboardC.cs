@@ -10,11 +10,12 @@ namespace Sprint0.Controller
 {
     class KeyboardC : IController
     {
+        
         private Game1 myGame;
         private KeyboardState Kstate;
-        private enum SpriteState {quit, fixedSatic,fixedAnimated, movingStatic, movingAnimated };
+        //private enum SpriteState {quit, fixedSatic,fixedAnimated, movingStatic, movingAnimated }; 没用上
         SpriteState currentState = SpriteState.fixedSatic;
-        //private Dictionary<Keys, PossibleCommands> keymap;
+        private Dictionary<Keys, PossibleCommands> keymap;
        
 
         public KeyboardC(Game1 game)
