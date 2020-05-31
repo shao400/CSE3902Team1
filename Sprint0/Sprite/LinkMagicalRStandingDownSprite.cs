@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CrossPlatformDesktopProject.Sprite
+namespace Sprint0
 {
-    public class standMario: Interface.ISprite
+    public class LinkMagicalRStandingDownSprite: ISprite
     {
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
@@ -18,10 +18,10 @@ namespace CrossPlatformDesktopProject.Sprite
         {
 
         }
-        public void Draw(Rectangle destinationRec)
+        public void Draw(Vector2 location)
         {
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, destinationRec,sourceRec,myColor);
+            mySpriteBatch.Draw(myTexture, location,sourceRec,myColor);
             mySpriteBatch.End();
 
         }

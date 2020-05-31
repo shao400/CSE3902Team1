@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CrossPlatformDesktopProject.Sprite
-{
-    class LinkNoneStandingLeftSprite
+namespace Sprint0
+{ 
+    class LinkWoodenStandingLeftSprite : ISprite
     {
     }
 }

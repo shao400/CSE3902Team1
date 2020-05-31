@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CrossPlatformDesktopProject.Sprite
+namespace Sprint0
 {
-    public class LinkNoneMovingRightSprite : Interface.ISprite
+    public class LinkNoneMovingRightSprite : ISprite
     {
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
@@ -23,7 +23,7 @@ namespace CrossPlatformDesktopProject.Sprite
                 frame = 0;
             }
         }
-        public void Draw(Rectangle destinationRec)
+        public void Draw(Vector2 location)
         {
             if (frame == 0)
                 sourceRec = new Rectangle(0, 0, 69, 86);
@@ -35,7 +35,7 @@ namespace CrossPlatformDesktopProject.Sprite
                 sourceRec = new Rectangle(173, 0, 50, 86);
 
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, location, sourceRec, myColor);
             mySpriteBatch.End();
 
         }

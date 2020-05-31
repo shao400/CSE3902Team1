@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sprint0;
 
-namespace CrossPlatformDesktopProject.Sprite
+namespace Sprint0
 {
-    class Class1
+    class LinkWhiteMovingUpSprite : ISprite
     {
     }
 }

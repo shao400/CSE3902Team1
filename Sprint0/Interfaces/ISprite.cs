@@ -13,7 +13,7 @@ namespace Sprint0
 
         void Update();
         void LoadContent(SpriteBatch batch, Texture2D texture);
-        void Draw(SpriteBatch spriteBatch, Vector2 location);
+        void Draw(Vector2 location);
        
     }
 }

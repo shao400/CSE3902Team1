@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CrossPlatformDesktopProject.Sprite
+namespace Sprint0
 {
-    public class leftrightMario : Interface.ISprite
+    public class LinkMagicalMovingRightSprite : ISprite
     {
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
@@ -23,7 +23,7 @@ namespace CrossPlatformDesktopProject.Sprite
                 frame = 0;
             }
         }
-        public void Draw(Rectangle destinationRec)
+        public void Draw(Vector2 location)
         {
             if (frame == 0)
                 sourceRec = new Rectangle(0, 0, 69, 86);
