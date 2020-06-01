@@ -33,7 +33,7 @@ namespace Sprint0.State
             currentFacing = facing.right;
             currentWeapon = weapon.None;
             currentStatus = status.standing;
-            currentSprite = new standingNoneRight();
+            currentSprite = new LinkNoneStandingRightSprite();
         }
 
         public void Update()
@@ -520,12 +520,263 @@ namespace Sprint0.State
             }
         }
 
+        public void right()
+        {
+            currentStatus = status.walking;
+            currentFacing = facing.right;
+            if (currentWeapon == weapon.None)
+            {
+                currentSprite = new LinkNoneMovingRightSprite();
+            }
+            else if (currentWeapon == weapon.WoodenSword)
+            {
+                currentSprite = new LinkWoodenMovingRightSprite();
+            }
+            else if (currentWeapon == weapon.WhiteSword)
+            {
+                currentSprite = new LinkWhiteMovingRightSprite();
+            }
+            else if (currentWeapon == weapon.MagicalSword)
+            {
+                currentSprite = new LinkMagicalSMovingUpSprite();
+            }
+            else if (currentWeapon == weapon.MagicalRod)
+            {
+                currentSprite = new LinkMagicalMovingRightSprite();
+            }
+        }
+
+        public void left()
+        {
+            currentStatus = status.walking;
+            currentFacing = facing.left;
+            if (currentWeapon == weapon.None)
+            {
+                currentSprite = new LinkNoneMovingLeftSprite();
+            }
+            else if (currentWeapon == weapon.WoodenSword)
+            {
+                currentSprite = new LinkWoodenMovingLeftSprite();
+            }
+            else if (currentWeapon == weapon.WhiteSword)
+            {
+                currentSprite = new LinkWhiteMovingLeftSprite();
+            }
+            else if (currentWeapon == weapon.MagicalSword)
+            {
+                currentSprite = new LinkMagicalSMovingLeftSprite();
+            }
+            else if (currentWeapon == weapon.MagicalRod)
+            {
+                currentSprite = new LinkMagicalRMovingLeftSprite();
+            }
+        }
+
+        public void Up()
+        {
+            currentStatus = status.walking;
+            currentFacing = facing.up;
+            if (currentWeapon == weapon.None)
+            {
+                currentSprite = new LinkNoneMovingUpSprite();
+            }
+            else if (currentWeapon == weapon.WoodenSword)
+            {
+                currentSprite = new LinkWoodenMovingUpSprite();
+            }
+            else if (currentWeapon == weapon.WhiteSword)
+            {
+                currentSprite = new LinkWhiteMovingUpSprite();
+            }
+            else if (currentWeapon == weapon.MagicalSword)
+            {
+                currentSprite = new LinkMagicalSMovingUpSprite();
+            }
+            else if (currentWeapon == weapon.MagicalRod)
+            {
+                currentSprite = new LinkMagicalRMovingUpSprite();
+            }
+        }
+
+        public void Down()
+        {
+            currentStatus = status.walking;
+            currentFacing = facing.down;
+            if (currentWeapon == weapon.None)
+            {
+                currentSprite = new LinkNoneMovingDownSprite();
+            }
+            else if (currentWeapon == weapon.WoodenSword)
+            {
+                currentSprite = new LinkWoodenMovingDownSprite();
+            }
+            else if (currentWeapon == weapon.WhiteSword)
+            {
+                currentSprite = new LinkWhiteMovingDownSprite();
+            }
+            else if (currentWeapon == weapon.MagicalSword)
+            {
+                currentSprite = new LinkMagicalSMovingDownSprite();
+            }
+            else if (currentWeapon == weapon.MagicalRod)
+            {
+                currentSprite = new LinkMagicalRMovingDownSprite();
+            }
+        }
+
+        public void UseFirstItem()
+        {
+            currentWeapon = weapon.WoodenSword;
+            if (currentFacing == facing.up)
+                currentSprite = new LinkWoodenStandingUpSprite();
+            else if (currentFacing == facing.down)
+                currentSprite = new LinkWoodenStandingDownSprite();
+            else if (currentFacing == facing.right)
+                currentSprite = new LinkWoodenStandingRightSprite();
+            else if (currentFacing == facing.left)
+                currentSprite = new LinkWoodenStandingLeftSprite();
+        }
+
+        public void UseSecondItem()
+        {
+            currentWeapon = weapon.WhiteSword;
+            if (currentFacing == facing.up)
+                currentSprite = new LinkWhiteStandingUpSprite();
+            else if (currentFacing == facing.down)
+                currentSprite = new LinkWhiteStandingDownSprite();
+            else if (currentFacing == facing.right)
+                currentSprite = new LinkWhiteStandingRightSprite();
+            else if (currentFacing == facing.left)
+                currentSprite = new LinkWhiteStandingLeftSprite();
+        }
+
+        public void UseThirdItem()
+        {
+            currentWeapon = weapon.MagicalSword;
+            if (currentFacing == facing.up)
+                currentSprite = new LinkMagicalSStandingUpSprite();
+            else if (currentFacing == facing.down)
+                currentSprite = new LinkMagicalSStandingDownSprite();
+            else if (currentFacing == facing.right)
+                currentSprite = new LinkMagicalSStandingRightSprite();
+            else if (currentFacing == facing.left)
+                currentSprite = new LinkMagicalSStandingLeftSprite();
+        }
+
+        public void UseFourthItem()
+        {
+            currentWeapon = weapon.MagicalRod;
+            if (currentFacing == facing.up)
+                currentSprite = new LinkMagicalRStandingUpSprite();
+            else if (currentFacing == facing.down)
+                currentSprite = new LinkMagicalRStandingDownSprite();
+            else if (currentFacing == facing.right)
+                currentSprite = new LinkMagicalRStandingRightSprite();
+            else if (currentFacing == facing.left)
+                currentSprite = new LinkMagicalRStandingLeftSprite();
+        }
+
+        public void Attack()
+        {
+            currentStatus = status.attacking;
+            if (currentFacing == facing.right && currentWeapon == weapon.WoodenSword)
+            {
+                currentSprite = new LinkWoodenStandRightAttack();
+            }
+            else if (currentFacing == facing.right && currentWeapon == weapon.WhiteSword)
+            {
+                currentSprite = new LinkWhiteStandRightAttack();
+            }
+            else if (currentFacing == facing.right && currentWeapon == weapon.MagicalSword)
+            {
+                currentSprite = new LinkNoneStandRightAttack();
+            }
+            else if (currentFacing == facing.right && currentWeapon == weapon.MagicalRod)
+            {
+                currentSprite = new LinkNoneStandRightAttack();
+            }
+            else if (currentFacing == facing.left && currentWeapon == weapon.WoodenSword)
+            {
+                currentSprite = new LinkNoneStandRightAttack();
+            }
+            else if (currentFacing == facing.left && currentWeapon == weapon.WhiteSword)
+            {
+                currentSprite = new LinkNoneStandRightAttack();
+            }
+            else if (currentFacing == facing.left && currentWeapon == weapon.MagicalSword)
+            {
+                currentSprite = new LinkNoneStandRightAttack();
+            }
+            else if (currentFacing == facing.left && currentWeapon == weapon.MagicalRod)
+            {
+                currentSprite = new LinkNoneStandRightAttack();
+
+            }
+            else if (currentFacing == facing.up && currentWeapon == weapon.WoodenSword)
+            {
+                currentSprite = new LinkNoneStandRightAttack();
+
+            }
+            else if (currentFacing == facing.up && currentWeapon == weapon.WhiteSword)
+            {
+                currentSprite = new LinkNoneStandRightAttack();
+
+            }
+            else if (currentFacing == facing.up && currentWeapon == weapon.MagicalSword)
+            {
+                currentSprite = new LinkNoneStandRightAttack();
+
+            }
+            else if (currentFacing == facing.up && currentWeapon == weapon.MagicalRod)
+            {
+                currentSprite = new LinkNoneStandRightAttack();
+
+            }
+            else if (currentFacing == facing.down && currentWeapon == weapon.WoodenSword)
+            {
+                currentSprite = new LinkNoneStandRightAttack();
+
+            }
+            else if (currentFacing == facing.down && currentWeapon == weapon.WhiteSword)
+            {
+                currentSprite = new LinkNoneStandRightAttack();
+
+            }
+            else if (currentFacing == facing.down && currentWeapon == weapon.MagicalSword)
+            {
+                currentSprite = new LinkNoneStandRightAttack();
+
+            }
+            else if (currentFacing == facing.down && currentWeapon == weapon.MagicalRod)
+            {
+                currentSprite = new LinkNoneStandRightAttack();
+            }
+        }
         public void Reset()
         {
             this.currentFacing = facing.right;
             this.currentWeapon = weapon.None;
             this.currentStatus = status.standing;
-            this.currentSprite = new standingNoneRight();
+            this.currentSprite = new LinkNoneStandingRightSprite();
+        }
+
+        public void reloadSprite()
+        {
+            switch (CurrentStatus)
+            {
+                case status.attacking:
+                    Attack();
+                    break;
+                case status.standing:
+                    Stand();
+                    break;
+                case status.walking:
+                    Walk();
+                    break;
+                case status.takingDmg:
+                    TakingDmg();
+                    break;
+            }
         }
     }
 }
