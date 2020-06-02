@@ -15,7 +15,7 @@ namespace Sprint0
         Color myColor = Color.CornflowerBlue;
         Rectangle sourceRec;
         int frame = 0;
-        SpriteEffect spriteEffect = SpriteEffects.FlipHorizontally
+        
         public void Update()
         {
             frame++;
@@ -39,8 +39,9 @@ namespace Sprint0
         }
         public void Draw(Vector2 location)
         {
+            SpriteEffects effect = SpriteEffects.FlipHorizontally;
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, location, sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, location, sourceRec, myColor, 0, new Vector2(0, 0), 1, effect, 0);
             mySpriteBatch.End();
 
         }

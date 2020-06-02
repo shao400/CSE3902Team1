@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Credits1.spritefont</SourceFile>
-  <SourceTime>2020-05-30T14:13:54.951009-04:00</SourceTime>
-  <DestFile>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Credits1.xnb</DestFile>
-  <DestTime>2020-06-02T15:26:52.7995968-04:00</DestTime>
+  <SourceFile>C:/Users/99376/OneDrive/CSE3902/Workspace/Team1Project/Sprint0/Content/Credits1.spritefont</SourceFile>
+  <SourceTime>2020-05-28T20:42:51.4362158-04:00</SourceTime>
+  <DestFile>C:/Users/99376/OneDrive/CSE3902/Workspace/Team1Project/Sprint0/Content/bin/Windows/Content/Credits1.xnb</DestFile>
+  <DestTime>2020-06-02T19:19:15.2130581-04:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>
