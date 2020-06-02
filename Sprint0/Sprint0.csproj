@@ -42,7 +42,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Controller\KeyboardC.cs" />
-    <Compile Include="Controller\MouseC.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\IController.cs" />
