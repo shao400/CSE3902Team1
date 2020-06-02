@@ -35,7 +35,7 @@ namespace Sprint0
                 sourceRec = new Rectangle(173, 0, 50, 86);
 
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, location, sourceRec, myColor);
             mySpriteBatch.End();
 
         }
