@@ -35,7 +35,7 @@ namespace Sprint0.Player
         }
         public Rectangle GetRectangle()
         {
-            return new Rectangle(xAxis, xAxis, width, height);
+            return new Rectangle(xAxis, yAxis, width, height);
         }
         public void Right()
         {

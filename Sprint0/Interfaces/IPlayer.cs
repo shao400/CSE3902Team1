@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 //Author: Gengyi Qin
 namespace Sprint0
 {
-    interface IPlayer
+    public interface IPlayer
     {
         void Draw();
         void Update();

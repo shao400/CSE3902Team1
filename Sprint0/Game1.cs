@@ -1,7 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Sprint0.Controller;
+using Sprint0.Player;
 using System.Collections.Generic;
 
 namespace Sprint0
@@ -21,6 +23,7 @@ namespace Sprint0
         public SpriteFont font;
         public IController controls;
         public ISprite sprite;
+        public IPlayer player1;
 
         List<object> controllerList; // could also be defined as List <IController>
         
@@ -41,8 +44,8 @@ namespace Sprint0
             // TODO: Add your initialization logic here
             controllerList = new List<object>();
             controllerList.Add(new KeyboardC(this));
-            controllerList.Add(new MouseC(this));
             base.Initialize();
+            player1 = new Player1(100, 100, 50, 80);
         }
 
         /// <summary>
@@ -53,15 +56,15 @@ namespace Sprint0
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            
             // TODO: use this.Content to load your game content here
+
+            Sprite.SpriteFactory.LoadContent(spriteBatch, Content);
+            //luigi = Content.Load<Texture2D>("luigi");
+            //spriteX = 400;
+            //spriteY = 240;
             
-            
-            luigi = Content.Load<Texture2D>("luigi");
-            spriteX = 400;
-            spriteY = 240;
-            
-            font = Content.Load<SpriteFont>("Credits1");
+            //font = Content.Load<SpriteFont>("Credits1");
         }
 
         /// <summary>
@@ -105,10 +108,10 @@ namespace Sprint0
             //spriteBatch.Begin();
             //spriteBatch.Draw(luigi, new Rectangle(spriteX,spriteY,80,48), Color.White);
             //spriteBatch.End();
-            Vector2 location = new Vector2();
-            location.X = spriteX;
-            location.Y = spriteY;
-            sprite.Draw(spriteBatch,location);
+            //Vector2 location = new Vector2();
+            //location.X = spriteX;
+            //location.Y = spriteY;
+            //sprite.Draw(spriteBatch,location);
 
             spriteBatch.Begin();
             spriteBatch.DrawString(font, "Credits\nProgram made by: Zilin Shao" +
