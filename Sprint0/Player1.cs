@@ -40,20 +40,24 @@ namespace Sprint0.Player
         public void Right()
         {
             states.right();
+            xAxis += 10;
         }
         public void Left()
         {
             states.left();
+            xAxis -= 10;
         }
 
         public void Up()
         {
             states.Up();
+            yAxis -= 10;
         }
 
         public void Down()
         {
             states.Down();
+            yAxis += 10;
         }
         public void Attack()
         {
