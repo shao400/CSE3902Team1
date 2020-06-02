@@ -18,10 +18,21 @@ namespace Sprint0
         public void Update()
         {
             frame++;
-            if (frame == 4)
+            if (frame == 2)
             {
                 frame = 0;
             }
+            switch (frame) { 
+                case 1:
+                    sourceRec = new Rectangle(1, 11, 16, 16);
+                    break;
+                case 2:
+                    sourceRec = new Rectangle(18, 11, 16, 16);
+                    break;
+                default:
+                    break;
+            }
+
         }
         public void Draw(Vector2 location)
         {
