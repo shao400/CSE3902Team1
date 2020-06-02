@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Sprint0.Commands;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,10 @@ namespace Sprint0.Controller
         {
             myGame = game;
             keymap = new Dictionary<Keys, ICommand>();
-            //keymap.Add(Keys.W, new);
+            keymap.Add(Keys.W, new wUp(myGame));
+            keymap.Add(Keys.S, new sDown(myGame));
+            keymap.Add(Keys.A, new aLeft(myGame));
+            keymap.Add(Keys.D, new dRight(myGame));
             //keymap.Add(Keys.A, new);
             //keymap.Add(Keys.S, new);
             //keymap.Add(Keys.D, new);
