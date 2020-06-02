@@ -18,12 +18,10 @@ namespace Sprint0
         SpriteBatch spriteBatch;
 
         public Texture2D luigi;
-        int spriteX;
-        int spriteY;
         public SpriteFont font;
         public IController controls;
         public ISprite sprite;
-        public IPlayer player1;
+        public Player1 player1;
 
         List<object> controllerList; // could also be defined as List <IController>
         
@@ -46,6 +44,7 @@ namespace Sprint0
             controllerList.Add(new KeyboardC(this));
             base.Initialize();
             player1 = new Player1(100, 100, 50, 80);
+            sprite = new LinkNoneStandingDownSprite();
         }
 
         /// <summary>
@@ -83,8 +82,8 @@ namespace Sprint0
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            // if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-            //   Exit();
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            Exit();
 
             // TODO: Add your update logic here
             foreach (IController controller in controllerList)
@@ -103,7 +102,7 @@ namespace Sprint0
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
+            sprite.Draw(new Vector2(player1.xAxis, player1.yAxis));
             // TODO: Add your drawing code here
             //spriteBatch.Begin();
             //spriteBatch.Draw(luigi, new Rectangle(spriteX,spriteY,80,48), Color.White);
@@ -113,11 +112,11 @@ namespace Sprint0
             //location.Y = spriteY;
             //sprite.Draw(spriteBatch,location);
 
-            spriteBatch.Begin();
-            spriteBatch.DrawString(font, "Credits\nProgram made by: Zilin Shao" +
-                "\nUrl:www.mariomayhem.com/downloads/sprites/super_mario_bros_sprites.php ",
-                new Vector2(500, 200), Color.Black);
-            spriteBatch.End();
+            //spriteBatch.Begin();
+            //spriteBatch.DrawString(font, "Credits\nProgram made by: Zilin Shao" +
+            //    "\nUrl:www.mariomayhem.com/downloads/sprites/super_mario_bros_sprites.php ",
+            //    new Vector2(500, 200), Color.Black);
+            //spriteBatch.End();
             base.Draw(gameTime);
         }
     }

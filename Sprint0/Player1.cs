@@ -13,8 +13,8 @@ namespace Sprint0.Player
     public class Player1 : IPlayer
     {
         private P1State states;
-        private int xAxis;
-        private int yAxis;
+        public int xAxis;
+        public int yAxis;
         private int width;
         private int height;
         public Player1(int x, int y, int width_g, int height_g) //Ä¿Ç°²»ÖªµÀ»¹ÐèÒªÊ²Ã´paramet 

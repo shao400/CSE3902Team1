@@ -54,7 +54,14 @@ namespace Sprint0.Sprite
 
         private static void LoadLinkContent(SpriteBatch batch, ContentManager content)
         {
-
+            LinkNoneStandingDown.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkNoneStandingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkNoneStandingRight.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkNoneStandingUp.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkNoneMovingDown.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkNoneMovingRight.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkNoneMovingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkNoneMovingUp.LoadContent(batch, content.Load<Texture2D>("link"));
         }
 
         private static void LoadItemContent(SpriteBatch batch, ContentManager content)

@@ -45,9 +45,12 @@ namespace Sprint0.Controller
             //{
                 foreach (Keys key in pressedKeys)
                 {
-                    //if (prev.IsKeyDown(key))
-                    //{
-                        keymap[key].Execute();
+                //if (prev.IsKeyDown(key))
+                //{
+                if (keymap.ContainsKey(key))
+                {
+                    keymap[key].Execute();
+                }
                     //}
                 }
            // }
