@@ -25,6 +25,10 @@ namespace Sprint0.Player
             width = width_g;
             height = height_g;
         }
+        public ISprite getSprite()
+        {
+            return states.currentSprite;
+        }
         public void Update()
         {
 

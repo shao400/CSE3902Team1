@@ -21,8 +21,8 @@ namespace Sprint0.State
         {
             standing, walking, attacking, takingDmg
         }
-
-        private ISprite currentSprite;
+        // salkfnlkasflkans!
+        public ISprite currentSprite;
         private facing currentFacing;
         private weapon currentWeapon;
         private status currentStatus;

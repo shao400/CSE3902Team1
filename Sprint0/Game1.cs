@@ -44,7 +44,7 @@ namespace Sprint0
             controllerList.Add(new KeyboardC(this));
             base.Initialize();
             player1 = new Player1(100, 100, 50, 80);
-            sprite = new LinkNoneStandingDownSprite();
+            sprite = player1.getSprite();
         }
 
         /// <summary>
