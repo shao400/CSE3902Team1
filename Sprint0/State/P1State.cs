@@ -597,6 +597,28 @@ namespace Sprint0.State
                 //currentSprite = new LinkMagicalRMovingUpSprite();
             }
         }
+        public void Stand()
+        {
+            currentStatus = status.standing;
+            
+            if (currentFacing == facing.up)
+            {
+                currentSprite = new LinkNoneStandingUpSprite();
+            }
+            if (currentFacing == facing.down)
+            {
+                currentSprite = new LinkNoneStandingDownSprite();
+            }
+            if (currentFacing == facing.left)
+            {
+                currentSprite = new LinkNoneStandingLeftSprite();
+            }
+            if (currentFacing == facing.right)
+            {
+                currentSprite = new LinkNoneStandingRightSprite();
+            }
+
+        }
 
         public void Down()
         {
