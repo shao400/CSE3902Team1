@@ -32,7 +32,7 @@ namespace Sprint0
             
 
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, location, sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 48, 48), sourceRec, myColor);
             mySpriteBatch.End();
 
         }
