@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="Commands\aLeft.cs" />
     <Compile Include="Commands\dRight.cs" />
+    <Compile Include="Commands\oNextEnemy.cs" />
+    <Compile Include="Commands\pPrevEnemy.cs" />
     <Compile Include="Commands\sDown.cs" />
     <Compile Include="Commands\wUp.cs" />
     <Compile Include="Controller\KeyboardC.cs" />
@@ -55,6 +57,9 @@
     <Compile Include="Player1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sprite\EnemyMoblinSprite.cs" />
+    <Compile Include="Sprite\EnemyPeahatSprite.cs" />
+    <Compile Include="Sprite\EnemyTektiteSprite.cs" />
     <Compile Include="Sprite\LinkMagicalRStandingDownSprite.cs" />
     <Compile Include="Sprite\LinkMagicalRStandingLeftSprite.cs" />
     <Compile Include="Sprite\LinkMagicalRStandingRightSprite.cs" />

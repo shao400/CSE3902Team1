@@ -102,3 +102,4 @@ E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.csproj
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.csproj.CopyComplete
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.exe
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.pdb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\enemy.xnb
