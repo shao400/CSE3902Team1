@@ -90,7 +90,7 @@ namespace Sprint0
             {
                 controller.Update();
             }
-
+            sprite = player1.getSprite();
             sprite.Update();
             base.Update(gameTime);
         }
