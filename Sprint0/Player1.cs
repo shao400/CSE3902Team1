@@ -45,28 +45,32 @@ namespace Sprint0.Player
         {
             states.right();
             xAxis += 10;
-            states.Stand();
+            
         }
         public void Left()
         {
             states.left();
             xAxis -= 10;
-            states.Stand();
+            
         }
 
         public void Up()
         {
             states.Up();
             yAxis -= 10;
-            states.Stand();
+            
         }
 
         public void Down()
         {
             states.Down();
             yAxis += 10;
-            states.Stand();
+            
 
+        }
+        public void Stand()
+        {
+            states.Stand();
         }
         public void Attack()
         {
