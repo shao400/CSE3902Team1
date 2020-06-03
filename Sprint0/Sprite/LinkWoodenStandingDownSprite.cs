@@ -8,20 +8,20 @@ using System.Threading.Tasks;
 
 namespace Sprint0
 {
-    public class LinkWoodenStandingDownSprite: ISprite
+    public class LinkWoodenStandingDownSprite : ISprite
     {
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
-        Rectangle sourceRec = new Rectangle(125, 0, 48, 86);
+        Rectangle sourceRec = new Rectangle(18, 47, 16, 16);
         Color myColor = Color.CornflowerBlue;
-        public void Update() 
+        public void Update()
         {
 
         }
         public void Draw(Vector2 location)
         {
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, location, sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 48, 48), sourceRec, myColor);
             mySpriteBatch.End();
 
         }

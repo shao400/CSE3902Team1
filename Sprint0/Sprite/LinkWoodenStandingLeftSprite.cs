@@ -10,17 +10,25 @@ namespace Sprint0
 { 
     public class LinkWoodenStandingLeftSprite : ISprite
     {
+        private static SpriteBatch mySpriteBatch;
+        private static Texture2D myTexture;
+        Rectangle sourceRec = new Rectangle(18, 77, 16, 16);
+        Color myColor = Color.CornflowerBlue;
         public void Update()
         {
 
         }
         public void LoadContent(SpriteBatch batch, Texture2D texture)
         {
-
+            mySpriteBatch = batch;
+            myTexture = texture;
         }
         public void Draw(Vector2 location)
         {
-
+            SpriteEffects effect = SpriteEffects.FlipHorizontally;
+            mySpriteBatch.Begin();
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 48, 48), sourceRec, myColor, 0, new Vector2(0, 0), effect, 0);
+            mySpriteBatch.End();
         }
     }
 }
