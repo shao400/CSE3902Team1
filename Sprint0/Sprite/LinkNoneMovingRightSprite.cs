@@ -18,7 +18,7 @@ namespace Sprint0
         public void Update()
         {
             frame++;
-            if (frame == 4)
+            if (frame == 2)
             {
                 frame = 0;
             }
@@ -26,13 +26,10 @@ namespace Sprint0
         public void Draw(Vector2 location)
         {
             if (frame == 0)
-                sourceRec = new Rectangle(0, 0, 69, 86);
+                sourceRec = new Rectangle(35, 11, 16, 16);
             if (frame == 1)
-                sourceRec = new Rectangle(69, 0, 56, 86);
-            if (frame == 2)
-                sourceRec = new Rectangle(125, 0, 48, 86);
-            if (frame == 3)
-                sourceRec = new Rectangle(173, 0, 50, 86);
+                sourceRec = new Rectangle(52, 11, 16, 16);
+            
 
             mySpriteBatch.Begin();
             mySpriteBatch.Draw(myTexture, location, sourceRec, myColor);

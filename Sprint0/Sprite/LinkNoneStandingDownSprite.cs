@@ -12,7 +12,7 @@ namespace Sprint0
     {
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
-        Rectangle sourceRec = new Rectangle(125, 0, 48, 86);
+        Rectangle sourceRec = new Rectangle(1, 11, 16, 16);
         Color myColor = Color.CornflowerBlue;
         public void Update() 
         {
@@ -25,9 +25,9 @@ namespace Sprint0
             mySpriteBatch.End();
 
         }
-        public void LoadContent(SpriteBatch spriteBatch, Texture2D texture)
+        public void LoadContent(SpriteBatch batch, Texture2D texture)
         {
-            mySpriteBatch = spriteBatch;
+            mySpriteBatch = batch;
             myTexture = texture;
         }
     }
