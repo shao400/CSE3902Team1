@@ -6,12 +6,14 @@
   <SourceFiles>
     <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/Credits1.spritefont</File>
     <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/enemy.png</File>
+    <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/items.png</File>
     <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/link.png</File>
     <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/luigi.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
     <File xsi:nil="true" />
+    <File>item.png</File>
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>

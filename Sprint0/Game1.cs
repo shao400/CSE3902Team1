@@ -6,6 +6,7 @@ using Sprint0.Controller;
 using Sprint0.Player;
 using Sprint0.Sprite;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace Sprint0
 {
@@ -24,7 +25,9 @@ namespace Sprint0
         public ISprite sprite;
         public Player1 player1;
         public ISprite enemy;
+        public ISprite item;
         public int enemyCount;
+        public int itemCount;
 
         List<object> controllerList; // could also be defined as List <IController>
         
@@ -49,7 +52,9 @@ namespace Sprint0
             player1 = new Player1(100, 100, 50, 80);
             sprite = player1.getSprite();
             enemyCount = 0;
+            itemCount = 0;
             enemy = SpriteFactory.EnemyList[enemyCount];
+            item = SpriteFactory.ItemList[itemCount];
         }
 
         /// <summary>
@@ -100,6 +105,7 @@ namespace Sprint0
             sprite.Update();
             
             enemy.Update();
+            item.Update();
             player1.Stand();
             base.Update(gameTime);
         }
@@ -113,6 +119,7 @@ namespace Sprint0
             GraphicsDevice.Clear(Color.CornflowerBlue);
             sprite.Draw(new Vector2(player1.xAxis, player1.yAxis));
             enemy.Draw(new Vector2(600, 350));
+            item.Draw(new Vector2(400, 150));
             // TODO: Add your drawing code here
             //spriteBatch.Begin();
             //spriteBatch.Draw(luigi, new Rectangle(spriteX,spriteY,80,48), Color.White);

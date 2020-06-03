@@ -32,17 +32,23 @@ namespace Sprint0.Sprite
         public static LinkWoodenStandingLeftSprite LinkWoodenStandingLeft = new LinkWoodenStandingLeftSprite();
         public static LinkWoodenStandingRightSprite LinkWoodenStandingRight = new LinkWoodenStandingRightSprite();
         public static LinkWoodenStandingUpSprite LinkWoodenStandingUp = new LinkWoodenStandingUpSprite();
-        
+       
+
         public static List<ISprite> EnemyList = new List<ISprite>();
         public static EnemyMoblinSprite EnemyMoblin = new EnemyMoblinSprite();
         public static EnemyPeahatSprite EnemyPeahat = new EnemyPeahatSprite();
         public static EnemyTektiteSprite EnemyTektite = new EnemyTektiteSprite();
+
+        // Items Author: Zhizhou He, Chuwen Sun
+        public static List<ISprite> ItemList = new List<ISprite>();
+        public static ItemHeartSprite ItemHeart = new ItemHeartSprite(); 
 
         public static void LoadContent(SpriteBatch batch, ContentManager content)
         {
             LoadLinkContent(batch, content);
             LoadItemContent(batch, content);
             LoadEnemyContent(batch, content);
+            LoadItemContent(batch, content);
         }
 
         private static void LoadLinkContent(SpriteBatch batch, ContentManager content)
@@ -71,7 +77,8 @@ namespace Sprint0.Sprite
 
         private static void LoadItemContent(SpriteBatch batch, ContentManager content)
         {
-
+            ItemHeart.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemList.Add(ItemHeart);
         }
         
         private static void LoadEnemyContent(SpriteBatch batch, ContentManager content)
