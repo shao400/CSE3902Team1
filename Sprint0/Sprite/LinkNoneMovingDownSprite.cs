@@ -23,10 +23,10 @@ namespace Sprint0
                 frame = 0;
             }
             switch (frame) { 
-                case 1:
+                case 0:
                     sourceRec = new Rectangle(1, 11, 16, 16);
                     break;
-                case 2:
+                case 1:
                     sourceRec = new Rectangle(18, 11, 16, 16);
                     break;
                 default:

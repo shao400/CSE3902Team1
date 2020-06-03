@@ -25,11 +25,11 @@ namespace Sprint0
             }
             switch (frame)
             {
-                case 1:
+                case 0:
                     sourceRec = new Rectangle(35, 11, 16, 16);
                     
                     break;
-                case 2:
+                case 1:
                     sourceRec = new Rectangle(52, 11, 16, 16);
                     break;
                 default:
@@ -41,7 +41,7 @@ namespace Sprint0
         {
             SpriteEffects effect = SpriteEffects.FlipHorizontally;
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 48, 48), sourceRec, myColor, 0, location, effect, 0);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 48, 48), sourceRec, myColor, 0, new Vector2(0,0), effect, 0);
             mySpriteBatch.End();
 
         }
