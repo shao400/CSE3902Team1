@@ -125,7 +125,7 @@ namespace Sprint0
             sprite.Draw(new Vector2(player1.xAxis, player1.yAxis));
             enemy.Draw(new Vector2(600, 350));
             item.Draw(new Vector2(400, 150));
-            block.Draw(new Vector2(550,300));
+            block.Draw(new Vector2(220,250));
             // TODO: Add your drawing code here
             //spriteBatch.Begin();
             //spriteBatch.Draw(luigi, new Rectangle(spriteX,spriteY,80,48), Color.White);
