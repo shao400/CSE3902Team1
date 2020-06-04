@@ -43,12 +43,18 @@ namespace Sprint0.Sprite
         public static List<ISprite> ItemList = new List<ISprite>();
         public static ItemHeartSprite ItemHeart = new ItemHeartSprite(); 
 
+        // Block Author: Zilin Shao
+        public static List<ISprite> BlockList = new List<ISprite>();
+        public static ISprite BlockA = new BlockASprite();
+        public static ISprite BlockB = new BlockBSprite();
+        public static ISprite BlockC = new BlockCSprite();
+
         public static void LoadContent(SpriteBatch batch, ContentManager content)
         {
             LoadLinkContent(batch, content);
             LoadItemContent(batch, content);
             LoadEnemyContent(batch, content);
-            LoadItemContent(batch, content);
+            LoadBlockContent(batch, content);
         }
 
         private static void LoadLinkContent(SpriteBatch batch, ContentManager content)
@@ -89,6 +95,16 @@ namespace Sprint0.Sprite
             EnemyList.Add(EnemyMoblin);
             EnemyList.Add(EnemyPeahat);
             EnemyList.Add(EnemyTektite);
+        }
+
+          private static void LoadBlockContent(SpriteBatch batch, ContentManager content)
+        {
+            BlockA.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            BlockB.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            BlockC.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            BlockList.Add(BlockA);
+            BlockList.Add(BlockB);
+            BlockList.Add(BlockC);
         }
 
     }
