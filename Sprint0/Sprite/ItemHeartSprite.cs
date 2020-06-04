@@ -14,23 +14,10 @@ namespace Sprint0.Sprite
         private static Texture2D myTexture;
         Color myColor = Color.CornflowerBlue;
         Rectangle sourceRec;
-        Rectangle destinationRec = new Rectangle(300, 350, 64, 64);
-        int frame = 0;
+        Rectangle destinationRec = new Rectangle(300, 100, 32, 32);
         public void Update()
         {
-            frame++;
-            if (frame >= 20) frame = 0;
-            if(frame < 10)
-            {
-                sourceRec = new Rectangle(116, 11, 16, 16);
-                destinationRec.X += 5;
-            } 
-            else
-            {
-                sourceRec = new Rectangle(133, 11, 16, 16);
-                destinationRec.X += 5;
-            }
-            if (destinationRec.X > 800) destinationRec.X = 0;
+                sourceRec = new Rectangle(25, 1, 13, 13);
         }
 
         public void LoadContent(SpriteBatch batch, Texture2D texture)

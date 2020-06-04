@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sprint0.Sprite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -45,7 +46,7 @@ namespace Sprint0.State
         {
             currentStatus = status.walking;
             currentFacing = facing.right;
-            currentSprite = new LinkNoneMovingRightSprite();
+            currentSprite = SpriteFactory.LinkNoneMovingRight;
 /*            if (currentWeapon == weapon.None)
             {
                 currentSprite = new LinkNoneMovingRightSprite();
@@ -64,7 +65,7 @@ namespace Sprint0.State
             }
             else if (currentWeapon == weapon.MagicalRod)
             {
-                //currentSprite = new LinkMagicalMovingRightSprite();
+                currentSprite = Sprit LinkMagicalMovingRightSprite();
             }*/
         }
 
@@ -72,7 +73,8 @@ namespace Sprint0.State
         {
             currentStatus = status.walking;
             currentFacing = facing.left;
-            currentSprite = new LinkNoneMovingLeftSprite();
+            currentSprite = SpriteFactory.LinkNoneMovingLeft;
+            
 /*            if (currentWeapon == weapon.None)
             {
                 currentSprite = new LinkNoneMovingLeftSprite();

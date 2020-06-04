@@ -110,3 +110,4 @@ C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.cspro
 C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.csproj.CoreCompileInputs.cache
 C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.exe
 C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.pdb
+C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Blocks.xnb
