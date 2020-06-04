@@ -11,16 +11,17 @@ namespace Sprint0.Controller
 {
     class KeyboardC : IController
     {
-        
+
         private Game1 myGame;
-        private KeyboardState state;
+        private KeyboardState prev, state;
         //private enum SpriteState {quit, fixedSatic,fixedAnimated, movingStatic, movingAnimated }; 没用上
         //SpriteState currentState = SpriteState.fixedSatic;
         private Dictionary<Keys, ICommand> keymap;
-       
+
 
         public KeyboardC(Game1 game)
         {
+            prev = Keyboard.GetState();
             myGame = game;
             keymap = new Dictionary<Keys, ICommand>();
             keymap.Add(Keys.W, new wUp(myGame));
@@ -29,42 +30,42 @@ namespace Sprint0.Controller
             keymap.Add(Keys.D, new dRight(myGame));
             keymap.Add(Keys.O, new oNextEnemy(myGame));
             keymap.Add(Keys.P, new pPrevEnemy(myGame));
-            keymap.Add(Keys.T, new tSwitchBlock(myGame));//Block commands
-            keymap.Add(Keys.Y, new ySwitchBlock(myGame));
-            keymap.Add(Keys.U, new uNextItem(myGame));
-            keymap.Add(Keys.I, new iPrevItem(myGame));
             //keymap.Add(Keys.D1, new);
             //keymap.Add(Keys.D2, new);
             //keymap.Add(Keys.D3, new);
         }
-      
+
 
         public void Update()
         {
             state = Keyboard.GetState();
             Keys[] pressedKeys = state.GetPressedKeys();
+            
+            foreach (Keys key in pressedKeys)
+            {
+                
+                if (state.IsKeyDown(key) && !prev.IsKeyDown(key))
+                {
+                    
+                    if (keymap.ContainsKey(key))
+                    {
+                        keymap[key].Execute();
+                       
 
-            //if (pressedKeys.Length == 0)
-            //{
-                foreach (Keys key in pressedKeys)
-                {
-                //if (prev.IsKeyDown(key))
-                //{
-                if (keymap.ContainsKey(key))
-                {
-                    keymap[key].Execute();
+
+                    }
                 }
-                    //}
+
+                if (state.IsKeyUp(key) && prev.IsKeyDown(key))
+                {
+                    new Stand(myGame).Execute();
+
                 }
-           // }
-            //else
-            //{
-             //   foreach (Keys key in pressedKeys)
-             //   {
-             //       keymap[key].Execute();
-             //   }
-             //   prev = state;
-            //}
+                prev = state;
+
+
+            }
+
         }
     }
 }

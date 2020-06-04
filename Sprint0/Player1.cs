@@ -17,6 +17,7 @@ namespace Sprint0.Player
         public int yAxis;
         private int width;
         private int height;
+        private string currentFacing, currentStatus;
         public Player1(int x, int y, int width_g, int height_g) //Ä¿Ç°²»ÖªµÀ»¹ÐèÒªÊ²Ã´paramet 
         {
             states = new P1State();
@@ -24,6 +25,7 @@ namespace Sprint0.Player
             yAxis = y;
             width = width_g;
             height = height_g;
+            
         }
         public ISprite getSprite()
         {
@@ -31,7 +33,26 @@ namespace Sprint0.Player
         }
         public void Update()
         {
-
+            currentFacing = states.GetCurrentFacing();
+            currentStatus = states.GetCurrentStatus();
+            states.Update();
+            if (currentFacing.CompareTo("left") == 0 && currentStatus.CompareTo("walking") == 0)
+            {
+                
+                xAxis -= 1;
+            }
+            else if (currentFacing.CompareTo("right") == 0 && currentStatus.CompareTo("walking") == 0)
+            {
+                xAxis += 1;
+            }
+            else if (currentFacing.CompareTo("down") == 0 && currentStatus.CompareTo("walking") == 0)
+            {
+                yAxis += 1;
+            }
+            else if (currentFacing.CompareTo("up") == 0 && currentStatus.CompareTo("walking") == 0)
+            {
+                yAxis -= 1;
+            }
         }
         public void Draw()
         {
@@ -44,27 +65,27 @@ namespace Sprint0.Player
         public void Right()
         {
             states.right();
-            xAxis += 10;
+            
             
         }
         public void Left()
         {
             states.left();
-            xAxis -= 10;
+            
             
         }
 
         public void Up()
         {
             states.Up();
-            yAxis -= 10;
+            
             
         }
 
         public void Down()
         {
             states.Down();
-            yAxis += 10;
+           
             
 
         }
