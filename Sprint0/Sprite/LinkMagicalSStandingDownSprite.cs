@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Sprint0
 {
-    public class LinkWoodenStandingDownSprite : ISprite
+    public class LinkMagicalSStandingDownSprite : ISprite
     {
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
-        Rectangle sourceRec = new Rectangle(18, 47, 16, 27);
+        Rectangle sourceRec = new Rectangle(204, 47, 16, 27);
         Color myColor = Color.CornflowerBlue;
         public void Update()
         {

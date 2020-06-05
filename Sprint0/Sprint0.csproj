@@ -86,6 +86,14 @@
     <Compile Include="Sprite\LinkMagicalRStandingLeftSprite.cs" />
     <Compile Include="Sprite\LinkMagicalRStandingRightSprite.cs" />
     <Compile Include="Sprite\LinkMagicalRStandingUpSprite.cs" />
+    <Compile Include="Sprite\LinkMagicalSAttackingDownSprite.cs" />
+    <Compile Include="Sprite\LinkMagicalSAttackingLeftSprite.cs" />
+    <Compile Include="Sprite\LinkMagicalSAttackingRightSprite.cs" />
+    <Compile Include="Sprite\LinkMagicalSAttackingUpSprite.cs" />
+    <Compile Include="Sprite\LinkMagicalSStandingDownSprite.cs" />
+    <Compile Include="Sprite\LinkMagicalSStandingLeftSprite.cs" />
+    <Compile Include="Sprite\LinkMagicalSStandingRightSprite.cs" />
+    <Compile Include="Sprite\LinkMagicalSStandingUpSprite.cs" />
     <Compile Include="Sprite\LinkNoneMovingDownSprite.cs" />
     <Compile Include="Sprite\LinkNoneMovingLeftSprite.cs" />
     <Compile Include="Sprite\LinkNoneMovingRightSprite.cs" />

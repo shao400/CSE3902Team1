@@ -258,7 +258,7 @@ namespace Sprint0.State
             }
             else if (currentFacing == facing.left && currentWeapon == weapon.WoodenSword)
             {
-                currentSprite = new LinkWoodenAttackingRightSprite();
+                currentSprite = new LinkWoodenAttackingLeftSprite();
             }
             else if (currentFacing == facing.left && currentWeapon == weapon.WhiteSword)
             {
@@ -266,7 +266,7 @@ namespace Sprint0.State
             }
             else if (currentFacing == facing.left && currentWeapon == weapon.MagicalSword)
             {
-                //currentSprite = new linkmagicalSwordAttackingLeftSprite();
+                //currentSprite = new linkMagicalSAttackingLeftSprite();
             }
             else if (currentFacing == facing.left && currentWeapon == weapon.MagicalRod)
             {
@@ -305,7 +305,6 @@ namespace Sprint0.State
             else if (currentFacing == facing.down && currentWeapon == weapon.MagicalSword)
             {
                 //currentSprite = new LinkMagicalSAttackingDownSprite();
-
             }
             else if (currentFacing == facing.down && currentWeapon == weapon.MagicalRod)
             {

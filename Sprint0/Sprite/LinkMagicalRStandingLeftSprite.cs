@@ -12,7 +12,7 @@ namespace Sprint0
     {
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
-        Rectangle sourceRec = new Rectangle(297, 77, 16, 16);
+        Rectangle sourceRec = new Rectangle(297, 77, 27, 17);
         Color myColor = Color.CornflowerBlue;
         public void Update()
         {
@@ -27,7 +27,8 @@ namespace Sprint0
         {
             SpriteEffects effect = SpriteEffects.FlipHorizontally;
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 48, 48), sourceRec, myColor, 0, new Vector2(0, 0), effect, 0);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 81, 51), sourceRec, myColor, 0, new Vector2(0, 0), effect, 0);
+            mySpriteBatch.End();
             mySpriteBatch.End();
         }
     }

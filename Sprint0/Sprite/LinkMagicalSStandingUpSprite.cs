@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Sprint0;
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
 
 namespace Sprint0
 {
-    public class LinkMagicalRStandingUpSprite : ISprite
+    public class LinkMagicalSStandingUpSprite : ISprite
     {
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
-        Rectangle sourceRec = new Rectangle(297, 97, 16, 28);
+        Rectangle sourceRec = new Rectangle(204, 97, 16, 28);
         Color myColor = Color.CornflowerBlue;
         public void Update()
         {

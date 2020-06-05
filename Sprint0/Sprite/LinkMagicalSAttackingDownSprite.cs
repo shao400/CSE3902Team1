@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Sprint0
 {
-    public class LinkWoodenAttackingDownSprite : ISprite
+    public class LinkMagicalSAttackingDownSprite: ISprite
     {
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
@@ -35,22 +35,23 @@ namespace Sprint0
             {
                 shownFrame = 2;
             }
-            else {
+            else
+            {
                 shownFrame = 3;
             }
             switch (shownFrame)
             {
                 case 0:
-                    sourceRec = new Rectangle(1, 47, 16, 16);
+                    sourceRec = new Rectangle(187, 47, 16, 16);
                     break;
                 case 1:
-                    sourceRec = new Rectangle(18, 47, 16, 27);
+                    sourceRec = new Rectangle(204, 47, 16, 27);
                     break;
                 case 2:
-                    sourceRec = new Rectangle(35, 47, 16, 23);
+                    sourceRec = new Rectangle(221, 47, 16, 23);
                     break;
                 case 3:
-                    sourceRec = new Rectangle(52, 47, 16, 19);
+                    sourceRec = new Rectangle(238, 47, 16, 19);
                     break;
                 default:
                     break;
