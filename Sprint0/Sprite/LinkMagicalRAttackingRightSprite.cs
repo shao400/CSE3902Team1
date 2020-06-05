@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Sprint0
 {
-    public class LinkWhiteMovingRightSprite : ISprite
+    public class LinkMagicalRAttackingRightSprite : ISprite
     {
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
@@ -18,24 +18,33 @@ namespace Sprint0
         public void Update()
         {
             frame++;
-            if (frame == 4)
+            if (frame == 5)
             {
                 frame = 0;
+            }
+            switch (frame)
+            {
+                case 0:
+                    sourceRec = new Rectangle(280, 77, 16, 16);
+                    break;
+                case 1:
+                    sourceRec = new Rectangle(297, 77, 16, 16);
+                    break;
+                case 3:
+                    sourceRec = new Rectangle(325, 77, 16, 16);
+                    break;
+                case 4:
+                    sourceRec = new Rectangle(349, 77, 16, 16);
+                    break;
+                default:
+                    break;
             }
         }
         public void Draw(Vector2 location)
         {
-            if (frame == 0)
-                sourceRec = new Rectangle(0, 0, 69, 86);
-            if (frame == 1)
-                sourceRec = new Rectangle(69, 0, 56, 86);
-            if (frame == 2)
-                sourceRec = new Rectangle(125, 0, 48, 86);
-            if (frame == 3)
-                sourceRec = new Rectangle(173, 0, 50, 86);
 
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, location, sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 48, 48), sourceRec, myColor);
             mySpriteBatch.End();
 
         }
