@@ -27,7 +27,7 @@ namespace Sprint0
         public void Draw(Vector2 location)
         {
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 48, 84), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y-36, 48, 84), sourceRec, myColor);
             mySpriteBatch.End();
         }
     }
