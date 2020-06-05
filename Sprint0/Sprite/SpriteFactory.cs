@@ -32,7 +32,21 @@ namespace Sprint0.Sprite
         public static LinkWoodenStandingLeftSprite LinkWoodenStandingLeft = new LinkWoodenStandingLeftSprite();
         public static LinkWoodenStandingRightSprite LinkWoodenStandingRight = new LinkWoodenStandingRightSprite();
         public static LinkWoodenStandingUpSprite LinkWoodenStandingUp = new LinkWoodenStandingUpSprite();
-       
+
+        //attack
+        public static LinkMagicalRAttackingDownSprite LinkMagicalRAttackingDown = new LinkMagicalRAttackingDownSprite();
+        public static LinkMagicalRAttackingLeftSprite LinkMagicalRAttackingLeft = new LinkMagicalRAttackingLeftSprite();
+        public static LinkMagicalRAttackingRightSprite LinkMagicalRAttackingRight = new LinkMagicalRAttackingRightSprite();
+        public static LinkMagicalRAttackingUpSprite LinkMagicalRAttackingUp = new LinkMagicalRAttackingUpSprite();
+        public static LinkWhiteAttackingDownSprite LinkWhiteAttackingDown = new LinkWhiteAttackingDownSprite();
+        public static LinkWhiteAttackingLeftSprite LinkWhiteAttackingLeft = new LinkWhiteAttackingLeftSprite();
+        public static LinkWhiteAttackingRightSprite LinkWhiteAttackingRight = new LinkWhiteAttackingRightSprite();
+        public static LinkWhiteAttackingUpSprite LinkWhiteAttackingUp = new LinkWhiteAttackingUpSprite();
+        public static LinkWoodenAttackingDownSprite LinkWoodenAttackingDown = new LinkWoodenAttackingDownSprite();
+        public static LinkWoodenAttackingLeftSprite LinkWoodenAttackingLeft = new LinkWoodenAttackingLeftSprite();
+        public static LinkWoodenAttackingRightSprite LinkWoodenAttackingRight = new LinkWoodenAttackingRightSprite();
+        public static LinkWoodenAttackingUpSprite LinkWoodenAttackingUp = new LinkWoodenAttackingUpSprite();
+
 
         public static List<ISprite> EnemyList = new List<ISprite>();
         public static EnemyMoblinSprite EnemyMoblin = new EnemyMoblinSprite();
@@ -59,6 +73,8 @@ namespace Sprint0.Sprite
             LoadBlockContent(batch, content);
         }
 
+
+
         private static void LoadLinkContent(SpriteBatch batch, ContentManager content)
         {
             LinkNoneStandingDown.LoadContent(batch, content.Load<Texture2D>("link"));
@@ -81,6 +97,21 @@ namespace Sprint0.Sprite
             LinkWoodenStandingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkWoodenStandingRight.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkWoodenStandingUp.LoadContent(batch, content.Load<Texture2D>("link"));
+
+            //attack
+            LinkMagicalRAttackingDown.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkMagicalRAttackingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkMagicalRAttackingRight.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkMagicalRAttackingUp.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkWhiteAttackingDown.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkWhiteAttackingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkWhiteAttackingRight.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkWhiteAttackingUp.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkWoodenAttackingDown.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkWoodenAttackingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkWoodenAttackingRight.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkWoodenAttackingUp.LoadContent(batch, content.Load<Texture2D>("link"));
+
         }
 
         private static void LoadItemContent(SpriteBatch batch, ContentManager content)
@@ -93,7 +124,7 @@ namespace Sprint0.Sprite
             ItemList.Add(ItemGirl);
             ItemList.Add(ItemClock);
         }
-        
+
         private static void LoadEnemyContent(SpriteBatch batch, ContentManager content)
         {
             EnemyPeahat.LoadContent(batch, content.Load<Texture2D>("enemy"));
@@ -104,7 +135,7 @@ namespace Sprint0.Sprite
             EnemyList.Add(EnemyTektite);
         }
 
-          private static void LoadBlockContent(SpriteBatch batch, ContentManager content)
+        private static void LoadBlockContent(SpriteBatch batch, ContentManager content)
         {
             BlockA.LoadContent(batch, content.Load<Texture2D>("Blocks"));
             BlockB.LoadContent(batch, content.Load<Texture2D>("Blocks"));

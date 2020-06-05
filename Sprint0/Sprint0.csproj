@@ -42,6 +42,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Commands\aLeft.cs" />
+    <Compile Include="Commands\D1FirstWeapon.cs" />
+    <Compile Include="Commands\D2SecondWeapon.cs" />
+    <Compile Include="Commands\D4FourthWeapon.cs" />
+    <Compile Include="Commands\D3ThirdWeapon.cs" />
     <Compile Include="Commands\iPrevItem.cs" />
     <Compile Include="Commands\Stand.cs" />
     <Compile Include="Commands\tSwitchBlock.cs" />
@@ -54,6 +58,7 @@
     <Compile Include="Commands\sDown.cs" />
     <Compile Include="Commands\wUp.cs" />
     <Compile Include="Commands\ySwitchBlock.cs" />
+    <Compile Include="Commands\Attack.cs" />
     <Compile Include="Controller\KeyboardC.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Interfaces\ICommand.cs" />

@@ -19,7 +19,7 @@ namespace Sprint0.Player
         private int height;
         private string currentFacing, currentStatus;
 
-        public Player1(int x, int y, int width_g, int height_g) //Ä¿Ç°²»ÖªµÀ»¹ÐèÒªÊ²Ã´paramet 
+        public Player1(int x, int y, int width_g, int height_g) 
         {
             states = new P1State();
             xAxis = x;
@@ -108,7 +108,10 @@ namespace Sprint0.Player
         {
             //states.UseThirdItem();
         }
-
+        public void UseFourthItem()
+        {
+            states.UseFourthItem();
+        }
 
 
     }

@@ -36,9 +36,12 @@ namespace Sprint0.Controller
             keymap.Add(Keys.I, new iPrevItem(myGame));
             keymap.Add(Keys.Q, new qQuit(myGame));
             keymap.Add(Keys.R, new rReset(myGame));
-            //keymap.Add(Keys.D1, new);
-            //keymap.Add(Keys.D2, new);
-            //keymap.Add(Keys.D3, new);
+            keymap.Add(Keys.Z, new Attack(myGame));
+            keymap.Add(Keys.N, new Attack(myGame));
+            keymap.Add(Keys.D1, new D1FirstWeapon(myGame));
+            keymap.Add(Keys.D2, new D2SecondWeapon(myGame));
+            keymap.Add(Keys.D3, new D3ThirdWeapon(myGame));
+            keymap.Add(Keys.D4, new D4FourthWeapon(myGame));
         }
 
 
@@ -49,7 +52,6 @@ namespace Sprint0.Controller
 
             foreach (Keys key in pressedKeys)
             {
-
                 if (state.IsKeyDown(key) && !prev.IsKeyDown(key))
                 {
 
@@ -62,13 +64,9 @@ namespace Sprint0.Controller
                 if (state.IsKeyUp(key) && prev.IsKeyDown(key))
                 {
                     new Stand(myGame).Execute();
-
                 }
                 prev = state;
-
-
             }
-
         }
     }
 }
