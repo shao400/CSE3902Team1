@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Commands\aLeft.cs" />
     <Compile Include="Commands\iPrevItem.cs" />
+    <Compile Include="Commands\Stand.cs" />
     <Compile Include="Commands\tSwitchBlock.cs" />
     <Compile Include="Commands\rReset.cs" />
     <Compile Include="Commands\qQuit.cs" />

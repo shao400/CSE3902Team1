@@ -39,7 +39,17 @@ namespace Sprint0.State
 
         public void Update()
         {
+            currentSprite.Update();
+        }
+        public string GetCurrentFacing()
+        {
 
+            return currentFacing.ToString();
+        }
+        public string GetCurrentStatus()
+        {
+
+            return currentStatus.ToString();
         }
 
         public void right()

@@ -104,14 +104,13 @@ namespace Sprint0
             {
                 controller.Update();
             }
-            
-            sprite = player1.getSprite();
-            sprite.Update();
+
+            player1.Update();
             
             enemy.Update();
             item.Update();
             block.Update();
-            player1.Stand();
+
             base.Update(gameTime);
         }
 
@@ -122,7 +121,7 @@ namespace Sprint0
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            sprite.Draw(new Vector2(player1.xAxis, player1.yAxis));
+            player1.getSprite().Draw(new Vector2(player1.xAxis, player1.yAxis));
             enemy.Draw(new Vector2(600, 350));
             item.Draw(new Vector2(400, 150));
             block.Draw(new Vector2(550,300));

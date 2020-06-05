@@ -13,15 +13,16 @@ namespace Sprint0.Controller
     {
         
         private Game1 myGame;
-        private KeyboardState state;
         //private enum SpriteState {quit, fixedSatic,fixedAnimated, movingStatic, movingAnimated }; 没用上
         //SpriteState currentState = SpriteState.fixedSatic;
         private Dictionary<Keys, ICommand> keymap;
+        private KeyboardState prev, state;
        
 
         public KeyboardC(Game1 game)
         {
             myGame = game;
+            prev = Keyboard.GetState();
             keymap = new Dictionary<Keys, ICommand>();
             keymap.Add(Keys.W, new wUp(myGame));
             keymap.Add(Keys.S, new sDown(myGame));
@@ -39,34 +40,35 @@ namespace Sprint0.Controller
             //keymap.Add(Keys.D2, new);
             //keymap.Add(Keys.D3, new);
         }
-      
+
 
         public void Update()
         {
             state = Keyboard.GetState();
             Keys[] pressedKeys = state.GetPressedKeys();
 
-            //if (pressedKeys.Length == 0)
-            //{
-                foreach (Keys key in pressedKeys)
+            foreach (Keys key in pressedKeys)
+            {
+
+                if (state.IsKeyDown(key) && !prev.IsKeyDown(key))
                 {
-                //if (prev.IsKeyDown(key))
-                //{
-                if (keymap.ContainsKey(key))
+
+                    if (keymap.ContainsKey(key))
+                    {
+                        keymap[key].Execute();
+                    }
+                }
+
+                if (state.IsKeyUp(key) && prev.IsKeyDown(key))
                 {
-                    keymap[key].Execute();
+                    new Stand(myGame).Execute();
+
                 }
-                    //}
-                }
-           // }
-            //else
-            //{
-             //   foreach (Keys key in pressedKeys)
-             //   {
-             //       keymap[key].Execute();
-             //   }
-             //   prev = state;
-            //}
+                prev = state;
+
+
+            }
+
         }
     }
 }
