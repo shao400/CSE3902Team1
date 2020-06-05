@@ -13,8 +13,6 @@ namespace Sprint0.Controller
     {
         
         private Game1 myGame;
-        //private enum SpriteState {quit, fixedSatic,fixedAnimated, movingStatic, movingAnimated }; 没用上
-        //SpriteState currentState = SpriteState.fixedSatic;
         private Dictionary<Keys, ICommand> keymap;
         private KeyboardState prev, state;
        
@@ -28,12 +26,7 @@ namespace Sprint0.Controller
             keymap.Add(Keys.S, new sDown(myGame));
             keymap.Add(Keys.A, new aLeft(myGame));
             keymap.Add(Keys.D, new dRight(myGame));
-            keymap.Add(Keys.O, new oNextEnemy(myGame));
-            keymap.Add(Keys.P, new pPrevEnemy(myGame));
-            keymap.Add(Keys.T, new tSwitchBlock(myGame));//Block commands
-            keymap.Add(Keys.Y, new ySwitchBlock(myGame));
-            keymap.Add(Keys.U, new uNextItem(myGame));
-            keymap.Add(Keys.I, new iPrevItem(myGame));
+            
             keymap.Add(Keys.Q, new qQuit(myGame));
             keymap.Add(Keys.R, new rReset(myGame));
             keymap.Add(Keys.Z, new Attack(myGame));

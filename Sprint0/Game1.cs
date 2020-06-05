@@ -50,6 +50,7 @@ namespace Sprint0
             // TODO: Add your initialization logic here
             controllerList = new List<object>();
             controllerList.Add(new KeyboardC(this));
+            controllerList.Add(new ItemsController(this));
             base.Initialize();
             player1 = new Player1(100, 100, 50, 80);
             sprite = player1.getSprite();

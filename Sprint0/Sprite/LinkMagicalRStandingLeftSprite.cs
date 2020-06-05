@@ -29,7 +29,7 @@ namespace Sprint0
             mySpriteBatch.Begin();
             mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 81, 51), sourceRec, myColor, 0, new Vector2(0, 0), effect, 0);
             mySpriteBatch.End();
-            mySpriteBatch.End();
+            
         }
     }
 }

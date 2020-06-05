@@ -59,6 +59,7 @@
     <Compile Include="Commands\wUp.cs" />
     <Compile Include="Commands\ySwitchBlock.cs" />
     <Compile Include="Commands\Attack.cs" />
+    <Compile Include="Controller\ItemsController.cs" />
     <Compile Include="Controller\KeyboardC.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
