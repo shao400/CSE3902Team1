@@ -32,7 +32,9 @@ namespace Sprint0.Sprite
 
         public void Draw(Vector2 location)
         {
+            spritebatch.Begin();
             spritebatch.Draw(texture, destinationRec, sourceRec, Color.White);
+            spritebatch.End();  
         }
 
 
