@@ -114,3 +114,33 @@ C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\De
 C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\items.xnb
 C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Blocks.xnb
 C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\item.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\items.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Blocks.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Credits1.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\enemy.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\item.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\link.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\luigi.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Sprint0.exe
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Sprint0.pdb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\MonoGame.Framework.dll
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\SharpDX.dll
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\SharpDX.XInput.dll
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\MonoGame.Framework.xml
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\SharpDX.xml
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\SharpDX.XInput.xml
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.csprojAssemblyReference.cache
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.csproj.CoreCompileInputs.cache
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.csproj.CopyComplete
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.exe
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.pdb

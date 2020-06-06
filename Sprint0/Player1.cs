@@ -73,14 +73,12 @@ namespace Sprint0.Player
             //xAxis -= 10;
             
         }
-
         public void Up()
         {
             states.Up();
             //yAxis -= 10;
             
         }
-
         public void Down()
         {
             states.Down();
@@ -95,6 +93,10 @@ namespace Sprint0.Player
         public void Attack()
         {
             states.Attack();
+        }
+        public void Reset()
+        {
+            states.Reset();
         }
         public void UseFirstItem()
         {

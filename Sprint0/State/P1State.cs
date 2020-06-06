@@ -17,7 +17,6 @@ namespace Sprint0.State
         {
             None, WoodenSword, WhiteSword, MagicalSword, MagicalRod
         }
-
         private enum status
         {
             standing, walking, attacking, takingDmg
@@ -28,7 +27,7 @@ namespace Sprint0.State
         private weapon currentWeapon;
         private status currentStatus;
 
-        public P1State()// 可能不需要parameter因为P1里面有P1State，P1State里面也不需要P1
+        public P1State()
         {
             //initial
             currentFacing = facing.right;
@@ -78,7 +77,6 @@ namespace Sprint0.State
                 currentSprite = Sprit LinkMagicalMovingRightSprite();
             }*/
         }
-
         public void left()
         {
             currentStatus = status.walking;
@@ -106,7 +104,6 @@ namespace Sprint0.State
                 //currentSprite = new LinkMagicalRMovingLeftSprite();
             }*/
         }
-
         public void Up()
         {
             currentStatus = status.walking;
@@ -155,7 +152,6 @@ namespace Sprint0.State
             }
 
         }
-
         public void Down()
         {
             currentStatus = status.walking;
@@ -195,7 +191,6 @@ namespace Sprint0.State
             else if (currentFacing == facing.left)
                 currentSprite = new LinkWoodenStandingLeftSprite();
         }
-
         public void UseSecondItem()
         {
             currentWeapon = weapon.WhiteSword;
@@ -208,7 +203,6 @@ namespace Sprint0.State
             else if (currentFacing == facing.left)
                 currentSprite = new LinkWhiteStandingLeftSprite();
         }
-
 /*        public void UseThirdItem()
         {
             currentWeapon = weapon.MagicalSword;
@@ -221,7 +215,6 @@ namespace Sprint0.State
             else if (currentFacing == facing.left)
                 //currentSprite = new LinkMagicalSStandingLeftSprite();
         }*/
-
         public void UseFourthItem()
         {
             currentWeapon = weapon.MagicalRod;
@@ -236,7 +229,6 @@ namespace Sprint0.State
                     currentSprite = new LinkMagicalRStandingLeftSprite();
             }
         }
-
         public void Attack()
         {
             currentStatus = status.attacking;
@@ -313,10 +305,20 @@ namespace Sprint0.State
         }
         public void Reset()
         {
-            this.currentFacing = facing.right;
-            this.currentWeapon = weapon.None;
-            this.currentStatus = status.standing;
-            this.currentSprite = new LinkNoneStandingRightSprite();
+
+           // initialize all var that affact sprites
+
+           //item, enemy, count&location
+           
+           // initialize blockCount
+
+           //Link's, needa initialize location
+           this.currentFacing = facing.right;
+           this.currentWeapon = weapon.None;
+           this.currentStatus = status.standing;
+           this.currentSprite = new LinkNoneStandingRightSprite();
+            
+
         }
 
 /*        public void reloadSprite()

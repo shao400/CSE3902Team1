@@ -32,13 +32,12 @@ namespace Sprint0
         public int blockCount;
 
         List<object> controllerList; // could also be defined as List <IController>
-        
+    
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
-
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
         /// This is where it can query for any required services and load any non-graphic
@@ -61,7 +60,6 @@ namespace Sprint0
             item = SpriteFactory.ItemList[itemCount];
             block = SpriteFactory.BlockList[blockCount];
         }
-
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
         /// all of your content.
@@ -80,7 +78,6 @@ namespace Sprint0
             
             //font = Content.Load<SpriteFont>("Credits1");
         }
-
         /// <summary>
         /// UnloadContent will be called once per game and is the place to unload
         /// game-specific content.
@@ -89,7 +86,6 @@ namespace Sprint0
         {
             // TODO: Unload any non ContentManager content here
         }
-
         /// <summary>
         /// Allows the game to run logic such as updating the world,
         /// checking for collisions, gathering input, and playing audio.
@@ -114,7 +110,6 @@ namespace Sprint0
 
             base.Update(gameTime);
         }
-
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
@@ -142,5 +137,14 @@ namespace Sprint0
             //spriteBatch.End();
             base.Draw(gameTime);
         }
+
+      
+        public void ResetGame()
+        {  
+            //gameTime = 0;
+            this.Initialize();
+            //this.Draw(gameTime);
+        }
+      
     }
 }

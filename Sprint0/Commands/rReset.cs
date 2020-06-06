@@ -18,7 +18,7 @@ namespace Sprint0.Commands
 
         public void Execute()
         {
-
+            myGame.player1.Reset();
         }
 
     }
