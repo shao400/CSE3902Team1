@@ -94,9 +94,11 @@ namespace Sprint0.Player
         {
             states.Attack();
         }
-        public void Reset()
+        public void Player_Reset()
         {
-            states.Reset();
+            states.State_Reset();
+            xAxis = 100;
+            yAxis = 100;
         }
         public void UseFirstItem()
         {

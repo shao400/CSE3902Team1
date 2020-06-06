@@ -26,6 +26,7 @@ namespace Sprint0.State
         private facing currentFacing;
         private weapon currentWeapon;
         private status currentStatus;
+        public int ii =0;
 
         public P1State()
         {
@@ -303,20 +304,18 @@ namespace Sprint0.State
                 currentSprite = new LinkMagicalRAttackingDownSprite();
             }
         }
-        public void Reset()
+
+        public void State_Reset()
         {
-
-           // initialize all var that affact sprites
-
-           //item, enemy, count&location
-           
+           // initialize all var that affact sprites (sprite count, location x y, Link's state)
+           //item, enemy, count&location        
            // initialize blockCount
-
-           //Link's, needa initialize location
+           //need to initialize location
            this.currentFacing = facing.right;
            this.currentWeapon = weapon.None;
            this.currentStatus = status.standing;
            this.currentSprite = new LinkNoneStandingRightSprite();
+           
             
 
         }

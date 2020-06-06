@@ -18,7 +18,10 @@ namespace Sprint0.Commands
 
         public void Execute()
         {
-            myGame.player1.Reset();
+            myGame.player1.Player_Reset();
+            myGame.enemyCount= 0;
+            myGame.itemCount = 0;
+            myGame.blockCount = 0;
         }
 
     }

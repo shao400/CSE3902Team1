@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Input;
 using Sprint0.Controller;
 using Sprint0.Player;
 using Sprint0.Sprite;
+using Sprint0.State;
 using System.Collections.Generic;
 using System.ComponentModel;
 
@@ -136,14 +137,6 @@ namespace Sprint0
             //    new Vector2(500, 200), Color.Black);
             //spriteBatch.End();
             base.Draw(gameTime);
-        }
-
-      
-        public void ResetGame()
-        {  
-            //gameTime = 0;
-            this.Initialize();
-            //this.Draw(gameTime);
         }
       
     }
