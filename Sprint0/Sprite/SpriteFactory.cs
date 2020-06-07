@@ -97,6 +97,10 @@ namespace Sprint0.Sprite
             LinkMagicalRStandingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkMagicalRStandingRight.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkMagicalRStandingUp.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkMagicalSStandingDown.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkMagicalSStandingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkMagicalSStandingRight.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkMagicalSStandingUp.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkWhiteStandingDown.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkWhiteStandingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkWhiteStandingRight.LoadContent(batch, content.Load<Texture2D>("link"));
@@ -111,6 +115,10 @@ namespace Sprint0.Sprite
             LinkMagicalRAttackingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkMagicalRAttackingRight.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkMagicalRAttackingUp.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkMagicalSAttackingDown.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkMagicalSAttackingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkMagicalSAttackingRight.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkMagicalSAttackingUp.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkWhiteAttackingDown.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkWhiteAttackingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkWhiteAttackingRight.LoadContent(batch, content.Load<Texture2D>("link"));

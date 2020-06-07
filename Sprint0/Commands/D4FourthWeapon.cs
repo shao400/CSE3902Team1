@@ -19,6 +19,5 @@ namespace Sprint0.Commands
         {
             myGame.player1.UseFourthItem();
         }
-
     }
 }

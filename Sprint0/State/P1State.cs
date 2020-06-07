@@ -101,38 +101,47 @@ namespace Sprint0.State
         public void UseFirstItem()
         {
             currentWeapon = weapon.WoodenSword;
-            if (currentFacing == facing.up)
-                currentSprite = SpriteFactory.LinkWoodenStandingUp;
-            else if (currentFacing == facing.down)
-                currentSprite = SpriteFactory.LinkWoodenStandingDown;
-            else if (currentFacing == facing.right)
-                currentSprite = SpriteFactory.LinkWoodenStandingRight;
-            else if (currentFacing == facing.left)
-                currentSprite = SpriteFactory.LinkWoodenStandingLeft;
+            if (currentStatus == status.standing)
+            {
+                if (currentFacing == facing.up)
+                    currentSprite = SpriteFactory.LinkWoodenStandingUp;
+                else if (currentFacing == facing.down)
+                    currentSprite = SpriteFactory.LinkWoodenStandingDown;
+                else if (currentFacing == facing.right)
+                    currentSprite = SpriteFactory.LinkWoodenStandingRight;
+                else if (currentFacing == facing.left)
+                    currentSprite = SpriteFactory.LinkWoodenStandingLeft;
+            }
         }
         public void UseSecondItem()
         {
             currentWeapon = weapon.WhiteSword;
-            if (currentFacing == facing.up)
-                currentSprite = SpriteFactory.LinkWhiteStandingUp;
-            else if (currentFacing == facing.down)
-                currentSprite = SpriteFactory.LinkWhiteStandingDown;
-            else if (currentFacing == facing.right)
-                currentSprite = SpriteFactory.LinkWhiteStandingRight;
-            else if (currentFacing == facing.left)
-                currentSprite = SpriteFactory.LinkWhiteStandingLeft;
+            if (currentStatus == status.standing)
+            {
+                if (currentFacing == facing.up)
+                    currentSprite = SpriteFactory.LinkWhiteStandingUp;
+                else if (currentFacing == facing.down)
+                    currentSprite = SpriteFactory.LinkWhiteStandingDown;
+                else if (currentFacing == facing.right)
+                    currentSprite = SpriteFactory.LinkWhiteStandingRight;
+                else if (currentFacing == facing.left)
+                    currentSprite = SpriteFactory.LinkWhiteStandingLeft;
+            }
         }
         public void UseThirdItem()
         {
             currentWeapon = weapon.MagicalSword;
-            if (currentFacing == facing.up)
-                currentSprite = SpriteFactory.LinkMagicalSStandingDown;
-            else if (currentFacing == facing.down)
-                currentSprite = SpriteFactory.LinkMagicalSStandingDown;
-            else if (currentFacing == facing.right)
-                currentSprite = SpriteFactory.LinkMagicalSStandingRight;
-            else if (currentFacing == facing.left)
-                currentSprite = SpriteFactory.LinkMagicalSStandingLeft;
+            if (currentStatus == status.standing)
+            {
+                if (currentFacing == facing.up)
+                    currentSprite = SpriteFactory.LinkMagicalSStandingUp;
+                else if (currentFacing == facing.down)
+                    currentSprite = SpriteFactory.LinkMagicalSStandingDown;
+                else if (currentFacing == facing.right)
+                    currentSprite = SpriteFactory.LinkMagicalSStandingRight;
+                else if (currentFacing == facing.left)
+                    currentSprite = SpriteFactory.LinkMagicalSStandingLeft;
+            }
         }
         public void UseFourthItem()
         {
@@ -191,27 +200,22 @@ namespace Sprint0.State
             else if (currentFacing == facing.up && currentWeapon == weapon.WhiteSword)
             {
                 currentSprite = SpriteFactory.LinkWhiteAttackingUp;
-
             }
             else if (currentFacing == facing.up && currentWeapon == weapon.MagicalSword)
             {
                 currentSprite = SpriteFactory.LinkMagicalSAttackingUp;
-
             }
             else if (currentFacing == facing.up && currentWeapon == weapon.MagicalRod)
             {
                 currentSprite = SpriteFactory.LinkMagicalRAttackingUp;
-
             }
             else if (currentFacing == facing.down && currentWeapon == weapon.WoodenSword)
             {
                 currentSprite = SpriteFactory.LinkWoodenAttackingDown;
-
             }
             else if (currentFacing == facing.down && currentWeapon == weapon.WhiteSword)
             {
                 currentSprite = SpriteFactory.LinkWhiteAttackingDown;
-
             }
             else if (currentFacing == facing.down && currentWeapon == weapon.MagicalSword)
             {
