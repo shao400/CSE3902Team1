@@ -29,8 +29,6 @@ namespace Sprint0.Controller
             
             keymap.Add(Keys.Q, new qQuit(myGame));
             keymap.Add(Keys.R, new rReset(myGame));
-            keymap.Add(Keys.Z, new Attack(myGame));
-            keymap.Add(Keys.N, new Attack(myGame));
             keymap.Add(Keys.D1, new D1FirstWeapon(myGame));
             keymap.Add(Keys.D2, new D2SecondWeapon(myGame));
             keymap.Add(Keys.D3, new D3ThirdWeapon(myGame));

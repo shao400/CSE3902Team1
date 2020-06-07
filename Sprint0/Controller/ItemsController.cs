@@ -25,6 +25,8 @@ namespace Sprint0.Controller
             keymap.Add(Keys.Y, new ySwitchBlock(myGame));
             keymap.Add(Keys.U, new uNextItem(myGame));
             keymap.Add(Keys.I, new iPrevItem(myGame));
+            keymap.Add(Keys.Z, new Attack(myGame));
+            keymap.Add(Keys.N, new Attack(myGame));
         }
 
         public void Update()
