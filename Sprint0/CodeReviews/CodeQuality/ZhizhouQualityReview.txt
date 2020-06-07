@@ -8,8 +8,8 @@ Time: 8 minutes
 
 I think the quality of this code is high. The code is very coherent because they internally or externally be referenced.
 The methods of code are public because they can be called from P1State.cs and show the specific sprite graphs.
-In the Update() method, it uses if-else and switch statement to show the coherent attacking. 
+In the Update() method, it uses if-else and switch statements to show coherent attacking. 
 In the Draw() method, it uses two parameters to know Link's current location and if in the damaged status.
 
-We finished the damaging status in the end of the coding process, it didn't take so long to add a boolean into all sprite files. 
-So I think this code could easily support the potential future changes. 
+We finished the damaging status at the end of the coding process, it didn't take so long to add a boolean into all sprite files. 
+So I think this code could easily support potential future changes. 
