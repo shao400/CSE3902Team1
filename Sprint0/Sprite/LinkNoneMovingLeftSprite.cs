@@ -15,14 +15,23 @@ namespace Sprint0
         Color myColor = Color.CornflowerBlue;
         Rectangle sourceRec;
         int frame = 0;
-        
+        int shownFrame = 0;
         public void Update()
         {
-            frame++;
-            if (frame == 2)
+            shownFrame++;
+            if (shownFrame == 20)
+            {
+                shownFrame = 0;
+            }
+            if (shownFrame < 10)
             {
                 frame = 0;
             }
+            else if (shownFrame < 20)
+            {
+                frame = 1;
+            }
+        
             switch (frame)
             {
                 case 0:
