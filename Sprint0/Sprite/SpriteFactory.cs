@@ -16,6 +16,10 @@ namespace Sprint0.Sprite
         public static LinkMagicalRStandingLeftSprite LinkMagicalRStandingLeft = new LinkMagicalRStandingLeftSprite();
         public static LinkMagicalRStandingRightSprite LinkMagicalRStandingRight = new LinkMagicalRStandingRightSprite();
         public static LinkMagicalRStandingUpSprite LinkMagicalRStandingUp = new LinkMagicalRStandingUpSprite();
+        public static LinkMagicalSStandingDownSprite LinkMagicalSStandingDown = new LinkMagicalSStandingDownSprite();
+        public static LinkMagicalSStandingLeftSprite LinkMagicalSStandingLeft = new LinkMagicalSStandingLeftSprite();
+        public static LinkMagicalSStandingRightSprite LinkMagicalSStandingRight = new LinkMagicalSStandingRightSprite();
+        public static LinkMagicalSStandingUpSprite LinkMagicalSStandingUp = new LinkMagicalSStandingUpSprite();
         public static LinkNoneMovingDownSprite LinkNoneMovingDown = new LinkNoneMovingDownSprite();
         public static LinkNoneMovingLeftSprite LinkNoneMovingLeft = new LinkNoneMovingLeftSprite();
         public static LinkNoneMovingRightSprite LinkNoneMovingRight = new LinkNoneMovingRightSprite();
@@ -38,6 +42,10 @@ namespace Sprint0.Sprite
         public static LinkMagicalRAttackingLeftSprite LinkMagicalRAttackingLeft = new LinkMagicalRAttackingLeftSprite();
         public static LinkMagicalRAttackingRightSprite LinkMagicalRAttackingRight = new LinkMagicalRAttackingRightSprite();
         public static LinkMagicalRAttackingUpSprite LinkMagicalRAttackingUp = new LinkMagicalRAttackingUpSprite();
+        public static LinkMagicalSAttackingDownSprite LinkMagicalSAttackingDown = new LinkMagicalSAttackingDownSprite();
+        public static LinkMagicalSAttackingLeftSprite LinkMagicalSAttackingLeft = new LinkMagicalSAttackingLeftSprite();
+        public static LinkMagicalSAttackingRightSprite LinkMagicalSAttackingRight = new LinkMagicalSAttackingRightSprite();
+        public static LinkMagicalSAttackingUpSprite LinkMagicalSAttackingUp = new LinkMagicalSAttackingUpSprite();
         public static LinkWhiteAttackingDownSprite LinkWhiteAttackingDown = new LinkWhiteAttackingDownSprite();
         public static LinkWhiteAttackingLeftSprite LinkWhiteAttackingLeft = new LinkWhiteAttackingLeftSprite();
         public static LinkWhiteAttackingRightSprite LinkWhiteAttackingRight = new LinkWhiteAttackingRightSprite();

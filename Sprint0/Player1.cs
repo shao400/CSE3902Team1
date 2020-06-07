@@ -125,7 +125,7 @@ namespace Sprint0.Player
         }
         public void UseThirdItem()
         {
-            //states.UseThirdItem();
+            states.UseThirdItem();
         }
         public void UseFourthItem()
         {
