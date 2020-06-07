@@ -20,7 +20,14 @@ namespace Sprint0
         }
         public void Draw(Vector2 location, Boolean isDamaged)
         {
-            if (isDamaged) myColor = Color.GreenYellow;
+            if (isDamaged)
+            {
+                myColor = Color.GreenYellow;
+            }
+            else
+            {
+                myColor = Color.CornflowerBlue;
+            }
             mySpriteBatch.Begin();
             mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 48, 81), sourceRec, myColor);
             mySpriteBatch.End();

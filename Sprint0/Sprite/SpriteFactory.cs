@@ -55,7 +55,7 @@ namespace Sprint0.Sprite
         public static LinkWoodenAttackingRightSprite LinkWoodenAttackingRight = new LinkWoodenAttackingRightSprite();
         public static LinkWoodenAttackingUpSprite LinkWoodenAttackingUp = new LinkWoodenAttackingUpSprite();
 
-
+        // Enemy Author: Gengyi Qin
         public static List<ISprite> EnemyList = new List<ISprite>();
         public static EnemyMoblinSprite EnemyMoblin = new EnemyMoblinSprite();
         public static EnemyPeahatSprite EnemyPeahat = new EnemyPeahatSprite();

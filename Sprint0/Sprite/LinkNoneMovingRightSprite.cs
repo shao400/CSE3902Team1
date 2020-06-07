@@ -33,7 +33,14 @@ namespace Sprint0
         }
         public void Draw(Vector2 location, Boolean isDamaged)
         {
-            if (isDamaged) myColor = Color.GreenYellow;
+            if (isDamaged)
+            {
+                myColor = Color.GreenYellow;
+            }
+            else
+            {
+                myColor = Color.CornflowerBlue;
+            }
             if (frame == 0)
                 sourceRec = new Rectangle(35, 11, 16, 16);
             if (frame == 1)

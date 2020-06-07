@@ -64,7 +64,15 @@ namespace Sprint0
         }
         public void Draw(Vector2 location, Boolean isDamaged)
         {
-            if (isDamaged) myColor = Color.GreenYellow;
+            if (isDamaged)
+            {
+                myColor = Color.GreenYellow;
+            }
+            else
+            {
+                myColor = Color.CornflowerBlue;
+            }
+            
             SpriteEffects effect = SpriteEffects.FlipHorizontally;
             mySpriteBatch.Begin();
             switch (sourceRec.Width)

@@ -73,11 +73,7 @@ namespace Sprint0
             // TODO: use this.Content to load your game content here
 
             Sprite.SpriteFactory.LoadContent(spriteBatch, Content);
-            //luigi = Content.Load<Texture2D>("luigi");
-            //spriteX = 400;
-            //spriteY = 240;
             
-            //font = Content.Load<SpriteFont>("Credits1");
         }
         /// <summary>
         /// UnloadContent will be called once per game and is the place to unload
