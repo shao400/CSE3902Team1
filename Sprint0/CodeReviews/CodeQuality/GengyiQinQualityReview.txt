@@ -1,0 +1,10 @@
+Gengyi Qin
+6/7/2020
+Sprint2
+P1State.cs
+Main Author: Zhizhou He, Chuwen Sun
+Time: 10 min
+
+The quality of the code is high, as the linkages are clear, variables are understandable and well organized, and all the methods are clear and separated, 
+which is good for future updates. Though the if-else statements in some of the methods seem to be really long but the logics are not complicated and it's acceptable for 
+future maintenance.

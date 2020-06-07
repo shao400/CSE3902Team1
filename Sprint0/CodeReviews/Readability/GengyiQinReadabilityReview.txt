@@ -1,0 +1,10 @@
+Gengyi Qin
+6/7/2020
+Sprint2
+P1State.cs
+Main Author: Zhizhou He, Chuwen Sun
+Time: 10 min
+
+Generally speaking the code is highly readable, as the enumerations clearly indicate the functionality and logics of the player state class.
+Most methods are short and easy to understand, and though the Attack() method is a bit longer, it's still easy to comprehend. Maybe using a switch
+structure is a better option regarding readability in the future.
