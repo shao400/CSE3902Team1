@@ -26,5 +26,7 @@ Q---Quit game
 
 Known bugs for Sprint2
 -----------------------------------
-There is a solid color square around Link, enemies and npc. 
+1. There is a solid color square around sprite.
+2. The damaging state only shows green color currently. We played the game online and found the Link will be push backward when he takes damage.
+	So we decided to put it here first, and then make specific changes according to the requirements later.
 

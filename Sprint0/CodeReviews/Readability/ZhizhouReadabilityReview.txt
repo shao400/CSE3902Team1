@@ -6,6 +6,6 @@ Main Author:
 Time: 5 minutes
 
 I think the readability of this code is okay. 
-The code looks long because it has many method for Link's movement.
-This code plays a crucial role in the project because it contains all function that related to Link's states and actions.
-Each method directly invode the corresponding method in P1State.cs so I think it looks very clear and easy to understand.
+The code looks long because it has many methods for Link's movement.
+This code plays a crucial role in the project because it contains all functions related to Link's states and actions.
+Each method directly invokes the corresponding method in P1State.cs so I think it looks very clear and easy to understand.
