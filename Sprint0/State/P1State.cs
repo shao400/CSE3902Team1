@@ -89,7 +89,6 @@ namespace Sprint0.State
             {
                 currentSprite = SpriteFactory.LinkNoneStandingRight;
             }
-
         }
         public void Down()
         {
@@ -227,7 +226,16 @@ namespace Sprint0.State
             }
         }
 
-        public void State_Reset()
+        public void takeDmg()
+        {
+            currentStatus = status.takingDmg;
+        }
+
+        public bool isTakingDmg(){
+            return this.currentStatus == status.takingDmg;
+        }
+
+            public void State_Reset()
         {
             // initialize all var that affact sprites (sprite count, location x y, Link's state)
             //item, enemy, count&location        

@@ -41,6 +41,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Commands\eTakeDmg.cs" />
     <Compile Include="Commands\aLeft.cs" />
     <Compile Include="Commands\D1FirstWeapon.cs" />
     <Compile Include="Commands\D2SecondWeapon.cs" />
@@ -73,12 +74,12 @@
     <Compile Include="Sprite\BlockASprite.cs" />
     <Compile Include="Sprite\BlockBSprite.cs" />
     <Compile Include="Sprite\BlockCSprite.cs" />
-    <Compile Include="Sprite\ItemClockSprite.cs" />
-    <Compile Include="Sprite\ItemGirlSprite.cs" />
-    <Compile Include="Sprite\ItemHeartSprite.cs" />
     <Compile Include="Sprite\EnemyMoblinSprite.cs" />
     <Compile Include="Sprite\EnemyPeahatSprite.cs" />
     <Compile Include="Sprite\EnemyTektiteSprite.cs" />
+    <Compile Include="Sprite\ItemClockSprite.cs" />
+    <Compile Include="Sprite\ItemGirlSprite.cs" />
+    <Compile Include="Sprite\ItemHeartSprite.cs" />
     <Compile Include="Sprite\LinkMagicalRAttackingDownSprite.cs" />
     <Compile Include="Sprite\LinkMagicalRAttackingLeftSprite.cs" />
     <Compile Include="Sprite\LinkMagicalRAttackingRightSprite.cs" />

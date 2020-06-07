@@ -16,22 +16,35 @@ namespace Sprint0.Sprite
         Rectangle sourceRec;
         Rectangle destinationRec = new Rectangle(300, 350, 64, 64);
         int frame = 0;
+        bool backmove = false;
         public void Update()
         {
             frame++;
             if (frame >= 20) frame = 0;
-            if(frame < 10)
+            if(frame < 10 && !backmove )
             {
                 sourceRec = new Rectangle(116, 11, 16, 16);
                 destinationRec.X += 5;
             } 
-            else
+            else if(frame >10 && !backmove)
             {
                 sourceRec = new Rectangle(133, 11, 16, 16);
                 destinationRec.X += 5;
             }
-            if (destinationRec.X > 800) destinationRec.X = 0;
-        }
+            else if(frame <10 && backmove){
+
+                sourceRec = new Rectangle(153, 212, 16, 16);
+                destinationRec.X -= 5;
+            }
+            else if (frame >10 && backmove){
+
+                sourceRec = new Rectangle(170, 212, 16, 16);
+                destinationRec.X -= 5;
+            }
+
+            if (destinationRec.X > 736) backmove = true;
+            if (destinationRec.X <0) backmove = false;
+         }
 
         public void LoadContent(SpriteBatch batch, Texture2D texture)
         {
@@ -39,7 +52,7 @@ namespace Sprint0.Sprite
             myTexture = texture;
         }
 
-        public void Draw(Vector2 location)
+        public void Draw(Vector2 location, bool isDamaged)
         {
             mySpriteBatch.Begin();
             mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor);

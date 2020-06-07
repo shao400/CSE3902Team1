@@ -26,7 +26,7 @@ namespace Sprint0.Sprite
             myTexture = texture;
         }
 
-        public void Draw(Vector2 location)
+        public void Draw(Vector2 location, Boolean isDamaged)
         {
             mySpriteBatch.Begin();
             mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor);

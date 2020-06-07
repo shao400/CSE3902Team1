@@ -19,19 +19,19 @@ namespace Sprint0
         public void Update()
         {
             frame++;
-            if (frame == 40)
+            if (frame == 16)
             {
                 frame = 0;
             }
-            if (frame < 10)
+            if (frame < 4)
             {
                 shownFrame = 0;
             }
-            else if (frame < 20)
+            else if (frame < 8)
             {
                 shownFrame = 1;
             }
-            else if (frame < 30)
+            else if (frame < 12)
             {
                 shownFrame = 2;
             }
@@ -62,8 +62,9 @@ namespace Sprint0
             mySpriteBatch = batch;
             myTexture = texture;
         }
-        public void Draw(Vector2 location)
+        public void Draw(Vector2 location, Boolean isDamaged)
         {
+            if (isDamaged) myColor = Color.GreenYellow;
             SpriteEffects effect = SpriteEffects.FlipHorizontally;
             mySpriteBatch.Begin();
             switch (sourceRec.Width)

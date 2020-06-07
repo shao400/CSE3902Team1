@@ -19,6 +19,7 @@ namespace Sprint0.Player
         private int height;
         private string currentFacing, currentStatus;
 
+
         public Player1(int x, int y, int width_g, int height_g) 
         {
             states = new P1State();
@@ -26,6 +27,10 @@ namespace Sprint0.Player
             yAxis = y;
             width = width_g;
             height = height_g;
+        }
+        public bool isTakingDmg()
+        {
+            return currentStatus == "takingDmg";
         }
         public ISprite getSprite()
         {
@@ -108,6 +113,10 @@ namespace Sprint0.Player
         public void Attack()
         {
             states.Attack();
+        }
+        public void takeDmg()
+        {
+            states.takeDmg();
         }
         public void Player_Reset()
         {

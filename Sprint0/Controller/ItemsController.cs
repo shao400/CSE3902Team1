@@ -27,6 +27,9 @@ namespace Sprint0.Controller
             keymap.Add(Keys.I, new iPrevItem(myGame));
             keymap.Add(Keys.Z, new Attack(myGame));
             keymap.Add(Keys.N, new Attack(myGame));
+            keymap.Add(Keys.E, new eTakeDmg(myGame));
+
+
         }
 
         public void Update()

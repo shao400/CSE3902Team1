@@ -118,24 +118,10 @@ namespace Sprint0
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            player1.getSprite().Draw(new Vector2(player1.xAxis, player1.yAxis));
-            enemy.Draw(new Vector2(600, 350));
-            item.Draw(new Vector2(400, 150));
-            block.Draw(new Vector2(550,300));
-            // TODO: Add your drawing code here
-            //spriteBatch.Begin();
-            //spriteBatch.Draw(luigi, new Rectangle(spriteX,spriteY,80,48), Color.White);
-            //spriteBatch.End();
-            //Vector2 location = new Vector2();
-            //location.X = spriteX;
-            //location.Y = spriteY;
-            //sprite.Draw(spriteBatch,location);
-
-            //spriteBatch.Begin();
-            //spriteBatch.DrawString(font, "Credits\nProgram made by: Zilin Shao" +
-            //    "\nUrl:www.mariomayhem.com/downloads/sprites/super_mario_bros_sprites.php ",
-            //    new Vector2(500, 200), Color.Black);
-            //spriteBatch.End();
+            player1.getSprite().Draw(new Vector2(player1.xAxis, player1.yAxis), player1.isTakingDmg());
+            enemy.Draw(new Vector2(600, 350), false);
+            item.Draw(new Vector2(400, 150), false);
+            block.Draw(new Vector2(550,300), false);
             base.Draw(gameTime);
         }
       

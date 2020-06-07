@@ -23,8 +23,9 @@ namespace Sprint0
             mySpriteBatch = batch;
             myTexture = texture;
         }
-        public void Draw(Vector2 location)
+        public void Draw(Vector2 location, Boolean isDamaged)
         {
+            if (isDamaged) myColor = Color.GreenYellow;
             SpriteEffects effect = SpriteEffects.FlipHorizontally;
             mySpriteBatch.Begin();
             mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 48, 48), sourceRec,  myColor, 0, new Vector2(0,0), effect, 0);

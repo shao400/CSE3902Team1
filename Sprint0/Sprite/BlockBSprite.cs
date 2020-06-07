@@ -30,7 +30,7 @@ namespace Sprint0.Sprite
 
         }
 
-        public void Draw(Vector2 location)
+        public void Draw(Vector2 location, Boolean isDamaged)
         {
             spritebatch.Begin();
             spritebatch.Draw(texture, destinationRec, sourceRec, Color.White);
