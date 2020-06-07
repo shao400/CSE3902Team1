@@ -144,3 +144,7 @@ D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.csproj.CoreCo
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.csproj.CopyComplete
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.exe
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.pdb
+E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\items.xnb
+E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Blocks.xnb
+E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\enemy.xnb
+E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\item.xnb

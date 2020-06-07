@@ -38,19 +38,34 @@ namespace Sprint0.Player
             states.Update();
             if (currentFacing.CompareTo("left") == 0 && currentStatus.CompareTo("walking") == 0)
             {
-                xAxis -= 1;
+                if(xAxis > 0)
+                {
+                    xAxis -= 5;
+                }
+                
             }
             else if (currentFacing.CompareTo("right") == 0 && currentStatus.CompareTo("walking") == 0)
             {
-                xAxis += 1;
+                if (xAxis < 750)
+                {
+                    xAxis += 5;
+                }
             }
             else if (currentFacing.CompareTo("down") == 0 && currentStatus.CompareTo("walking") == 0)
             {
-                yAxis += 1;
+                if (yAxis < 430)
+                {
+                    yAxis += 5;
+                }
+                
             }
             else if (currentFacing.CompareTo("up") == 0 && currentStatus.CompareTo("walking") == 0)
             {
-                yAxis -= 1;
+                if (yAxis > 0)
+                {
+                    yAxis -= 5;
+                }
+                
             }
         }
         public void Draw()
