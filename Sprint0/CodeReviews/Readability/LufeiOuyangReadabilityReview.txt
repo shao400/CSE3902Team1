@@ -1,0 +1,11 @@
+Lufei Ouyang
+6/8/2020
+Sprint2
+P1State.cs
+Main Author: Zhizhou He, Chuwen Sun
+Time: 5 minutes
+
+The readability of this code is good since this code file does not have too much logic or nested conditions.
+The programmer can understand the intent of the code easily. Also, the name of each variable is clear. 
+All the variables are the V shape name, and each name is meaningful. Even there have some long method bodies, 
+but the logic behind the long code is easy. 
