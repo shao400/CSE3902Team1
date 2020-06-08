@@ -46,18 +46,6 @@ namespace Sprint0.Controller
                 {
                     keymap[key].Execute();
                 }
-               /* if (state.IsKeyDown(key) && !prev.IsKeyDown(key))
-                {
-                    if (keymap.ContainsKey(key))
-                    {
-                        keymap[key].Execute();
-                    }
-                }
-
-                if (state.IsKeyUp(key) && prev.IsKeyDown(key))
-                {
-                    new Stand(myGame).Execute();
-                }*/
                 prev = state;
             }
             if (pressedKeys.Length == 0)

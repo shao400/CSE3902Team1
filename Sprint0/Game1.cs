@@ -21,7 +21,6 @@ namespace Sprint0
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        public Texture2D luigi;
         public SpriteFont font;
         public IController controls;
         public ISprite sprite;

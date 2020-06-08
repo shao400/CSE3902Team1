@@ -238,10 +238,6 @@ namespace Sprint0.State
 
             public void State_Reset()
         {
-            // initialize all var that affact sprites (sprite count, location x y, Link's state)
-            //item, enemy, count&location        
-            // initialize blockCount
-            //need to initialize location
             this.currentFacing = facing.right;
             this.currentWeapon = weapon.None;
             this.currentStatus = status.standing;
