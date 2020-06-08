@@ -2,7 +2,7 @@ Zhizhou He
 6/7/2020
 Sprint2
 Player1.cs
-Main Author: 
+Main Author: Lufei Ouyang
 Time: 5 minutes
 
 I think the readability of this code is okay. 
