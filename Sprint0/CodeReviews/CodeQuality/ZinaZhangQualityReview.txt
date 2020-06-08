@@ -1,0 +1,12 @@
+Zina Zhang
+6/8/2020
+Sprint2
+itemsController, spriteFactory
+Main Author: Gnegyi Qin
+Time: 10 min
+
+Logical in itemsController are clear with variable names declared. 
+In spriteFactory, it is good when he seperate different items in different content method. It is easy to control differnet type of sprite in this way, 
+and it is easy to change one of the type without interupt others.
+By using list, it is easy to control and see different type of sprites.
+Overall good quality in code due to high flexibility.

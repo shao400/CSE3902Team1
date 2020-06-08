@@ -1,0 +1,12 @@
+Zina Zhang
+6/8/2020
+Sprint2
+itemsController, spriteFactory
+Main Author: Gengyi Qin
+Time: 10 min
+
+The code is highly readable with comments and empty line to seperate different parts. 
+In sprite factory, things get easy to read since most of them are the same except the name of sprite.
+
+In itemsController, key array name are declared by the name so it is easy for me to understand what in the array. prev and state are good name to store prev state and current state.
+May be it is better to user curr to store current state. But not a big deal. Overall, a good code with high readbility. 
