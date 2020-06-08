@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Author: Chuwen Sun, Zhizhou He
 namespace Sprint0.State
 {
     class P1State

@@ -1,0 +1,10 @@
+Chuwen Sun
+6/8/2020
+Sprint2
+SpriteFactory.cs
+Main Author: GengyiQin
+Time: 5 min
+
+The code of this class is highly readable, all the initializations and methods are pretty easy to read and maintain in the long run since it kind of creates a simple
+formula for us to input a new sprite and use it in the game.
+All the methods are easy to understand and read, also specific comments are presented to improve the readability. So I think in general this class is highly readable.

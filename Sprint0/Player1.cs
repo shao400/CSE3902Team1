@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
+// Author: Lufei Ouyang
 namespace Sprint0.Player
 {
     public class Player1 : IPlayer

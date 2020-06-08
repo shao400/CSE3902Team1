@@ -1,0 +1,10 @@
+Gengyi Qin
+6/7/2020
+Sprint2
+Player1.cs
+Main Author: Lufei Ouyang
+Time: 5 min
+
+I think the quality of this code is high. The code is very coherent. The methods of code are public because they can be called by every concrete classes of ICommand.execute().
+If-else statements are used in Update() which is the most well-done method in this class. And it solved the problem that Link does not come back to standing state while we release the moving button.
+Other methods are pretty clean and easy to maintain in the long run.

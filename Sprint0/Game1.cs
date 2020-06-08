@@ -13,8 +13,9 @@ namespace Sprint0
 {
     /// <summary>
     /// This is the main type for your game.
-    /// </summary>
-    /// Name: Zilin Shao
+    /// 
+
+
     public class Game1 : Game
     {
         GraphicsDeviceManager graphics;
