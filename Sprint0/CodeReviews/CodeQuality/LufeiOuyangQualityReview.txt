@@ -1,0 +1,13 @@
+Lufei Ouyang
+6/8/2020
+Sprint2
+P1State.cs
+Main Author: Zhizhou He, Chuwen Sun
+Time: 10 min
+
+This code file does not have too much logic or nested conditions.
+Each different state corresponds to a different method. 
+Which means the maintainability is very high. If we want to change something, we only need to change the corresponding method.
+For example, the enum of facing and status make this code easy to maintain. Also the Extensibility is good, 
+to add new states later, just create a new method, and then add new states in the enum. 
+Very easy to implement and very easy to manage. Overall, the quality of this code is good.
