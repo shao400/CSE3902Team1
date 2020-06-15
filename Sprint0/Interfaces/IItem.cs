@@ -10,5 +10,6 @@ namespace Sprint0.Interfaces
     interface IItem
     {
         Rectangle GetRectangle();
+        void Update();
     }
 }
