@@ -7,12 +7,11 @@ using Microsoft.Xna.Framework;
 
 namespace Sprint0.Interfaces
 {
-    interface IEnemy
+    public interface IEnemy
     {
         void Draw();
-        void Fall(/*to be determined*/);
-        void Reverse(/*to be determined*/);
         void Update(/*to be determined*/);
         Rectangle GetRectangle();
+        
     }
 }

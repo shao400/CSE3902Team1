@@ -18,12 +18,12 @@ namespace Spriny0.Collisions
             myPlayer = player;
         }
 
-        public int CollisionTest(Player1 player, List<IEnemy> enemies)
+        public void EnemyCollisionTest(Player1 player, List<IEnemy> enemies)
         {
             Rectangle linkRectangle = myPlayer.GetRectangle();
             Rectangle enemyRectangle;
             Rectangle intersectionRectangle;
-            bool enemyKilled = false;
+            //bool enemyKilled = false;
             Queue<IEnemy> deadEnemies = new Queue<IEnemy>();
 
             foreach (IEnemy enemy in enemies)
@@ -35,23 +35,39 @@ namespace Spriny0.Collisions
                 {
                     if (intersectionRectangle.Width >= intersectionRectangle.Height)
                     {
-                        //myPlayer.Bounce(); need implementation
-                        enemyKilled = true;
-                        deadEnemies.Enqueue(enemy);
+                        //myPlayer.Hit(); need implementation
+                        if (linkRectangle.Y > enemyRectangle.Y) // from down
+                        {
+                            myPlayer.yAxis += intersectionRectangle.Height;
+                        }
+                        else //from up
+                        {
+                            myPlayer.yAxis -= intersectionRectangle.Height;
+                        }
                     }
                     else
                     {
-                        //myPlayer.Hit(); need implementation
+                        if (linkRectangle.X > enemyRectangle.X)//from right
+                        {
+                            myPlayer.xAxis += intersectionRectangle.Width;
+                            if (myPlayer.xAxis < 712) { myPlayer.xAxis += 40; } else { myPlayer.xAxis = 752; }
+                        }
+                        else //from left
+                        {
+                            myPlayer.xAxis -= intersectionRectangle.Width;
+                            if (myPlayer.xAxis > 40) { myPlayer.xAxis -= 40; } else { myPlayer.xAxis = 0; }
+                        }
                     }
                 }
             }
 
-            while (deadEnemies.Count > 0)
-            {
-                IEnemy enemy = deadEnemies.Dequeue();
-                enemies.Remove(enemy);
-            }
-            return 0;
+            //to be determined by future functions and implementations
+            //while (deadEnemies.Count > 0)
+            //{
+            //    IEnemy enemy = deadEnemies.Dequeue();
+            //    enemies.Remove(enemy); 
+            //}
+            
         }
     }
 }

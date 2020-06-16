@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using Sprint0.Interfaces;
+using Spriny0.Collisions;
 
 // Author: Lufei Ouyang
 namespace Sprint0.Player
@@ -22,6 +23,7 @@ namespace Sprint0.Player
         private int height;
         private string currentFacing, currentStatus;
         private LinkBlockCollision linkBlockCollision;
+        private LinkEnemyCollision linkEnemyCollision;
 
         public Player1(int x, int y, int width_g, int height_g) 
         {
@@ -32,6 +34,7 @@ namespace Sprint0.Player
             height = height_g;
 
             linkBlockCollision = new LinkBlockCollision(this);
+            linkEnemyCollision = new LinkEnemyCollision(this);
         }
         public bool isTakingDmg()
         {
@@ -150,6 +153,11 @@ namespace Sprint0.Player
         public void BlockCollisionTest(List<IBlock> blocks)
         {
             linkBlockCollision.BlockCollision(this, blocks);
+        }
+
+        public void EnemyCollisionTest(List<IEnemy> enemies)
+        {
+            linkEnemyCollision.EnemyCollisionTest(this, enemies);
         }
     }
 }

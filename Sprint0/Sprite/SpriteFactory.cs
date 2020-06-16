@@ -57,7 +57,7 @@ namespace Sprint0.Sprite
 
         // Enemy Author: Gengyi Qin
         public static List<ISprite> EnemyList = new List<ISprite>();
-        public static EnemyMoblinSprite EnemyMoblin = new EnemyMoblinSprite();
+        public static EnemyMoblinSprite EnemyMoblin = new EnemyMoblinSprite(650, 240);
         public static EnemyPeahatSprite EnemyPeahat = new EnemyPeahatSprite();
         public static EnemyTektiteSprite EnemyTektite = new EnemyTektiteSprite();
 

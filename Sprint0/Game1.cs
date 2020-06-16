@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Sprint0.Block;
 using Sprint0.Controller;
+using Sprint0.Enemies;
 using Sprint0.Interfaces;
 using Sprint0.Player;
 using Sprint0.Sprite;
@@ -35,6 +36,8 @@ namespace Sprint0
         public int blockCount;
         public IBlock blockA;
         public List<IBlock> BlockList;
+        public IEnemy moblin;
+        public List<IEnemy> EnemyList;
 
         List<object> controllerList; // could also be defined as List <IController>
     
@@ -68,6 +71,10 @@ namespace Sprint0
             blockA = new BlockA(400, 350);
             BlockList = new List<IBlock>();
             BlockList.Add(blockA);
+
+            moblin = new Moblin(650, 240, 64, 64);            
+            EnemyList = new List<IEnemy>();
+            EnemyList.Add(moblin);
         }
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
@@ -109,10 +116,13 @@ namespace Sprint0
 
             player1.Update();
             player1.BlockCollisionTest(BlockList);
+            player1.EnemyCollisionTest(EnemyList);
             
             enemy.Update();
             item.Update();
             block.Update();
+
+            moblin.Update();
 
             base.Update(gameTime);
         }
@@ -124,7 +134,7 @@ namespace Sprint0
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             player1.getSprite().Draw(new Vector2(player1.xAxis, player1.yAxis), player1.isTakingDmg());
-            enemy.Draw(new Vector2(600, 350), false);
+            moblin.Draw();
             item.Draw(new Vector2(400, 150), false);
             blockA.Draw();
             base.Draw(gameTime);
