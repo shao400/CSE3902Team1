@@ -14,7 +14,7 @@ namespace Sprint0.Collisions
         }
         public void AllItemCollisionTest()
         {
-            Rectangle thisRectangle = thisItem.GetRectangle(IList < IBlock > blocks);
+            Rectangle thisRectangle = thisItem.GetRectangle(IList <IBlock> blocks);
             Rectangle blockRectangle;
             Rectangle intersectionRectangle;
             foreach (IBlock block in blocks)

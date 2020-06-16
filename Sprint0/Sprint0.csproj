@@ -49,6 +49,10 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Block\BlockA.cs" />
+    <Compile Include="Block\BlockB.cs" />
+    <Compile Include="Block\BlockC.cs" />
+    <Compile Include="Collisions\LinkBlockCollision.cs" />
     <Compile Include="Collisions\LinkEnemyCollision.cs" />
     <Compile Include="Commands\eTakeDmg.cs" />
     <Compile Include="Commands\aLeft.cs" />
@@ -72,9 +76,11 @@
     <Compile Include="Controller\ItemsController.cs" />
     <Compile Include="Controller\KeyboardC.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="Interfaces\IBlock.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\IController.cs" />
     <Compile Include="Interfaces\IEnemy.cs" />
+    <Compile Include="Interfaces\IItem.cs" />
     <Compile Include="Interfaces\IState.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />
     <Compile Include="Interfaces\ISprite.cs" />

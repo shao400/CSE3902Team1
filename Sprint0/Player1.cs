@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Sprint0.Collisions;
 using Sprint0.State;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using Sprint0.Interfaces;
 
 // Author: Lufei Ouyang
 namespace Sprint0.Player
@@ -19,7 +21,7 @@ namespace Sprint0.Player
         private int width;
         private int height;
         private string currentFacing, currentStatus;
-
+        private LinkBlockCollision linkBlockCollision;
 
         public Player1(int x, int y, int width_g, int height_g) 
         {
@@ -28,6 +30,8 @@ namespace Sprint0.Player
             yAxis = y;
             width = width_g;
             height = height_g;
+
+            linkBlockCollision = new LinkBlockCollision(this);
         }
         public bool isTakingDmg()
         {
@@ -142,6 +146,10 @@ namespace Sprint0.Player
             states.UseFourthItem();
         }
 
-
+        //collision tests
+        public void BlockCollisionTest(List<IBlock> blocks)
+        {
+            linkBlockCollision.BlockCollision(this, blocks);
+        }
     }
 }

@@ -2,7 +2,9 @@
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Sprint0.Block;
 using Sprint0.Controller;
+using Sprint0.Interfaces;
 using Sprint0.Player;
 using Sprint0.Sprite;
 using Sprint0.State;
@@ -31,6 +33,8 @@ namespace Sprint0
         public int enemyCount;
         public int itemCount;
         public int blockCount;
+        public IBlock blockA;
+        public List<IBlock> BlockList;
 
         List<object> controllerList; // could also be defined as List <IController>
     
@@ -52,7 +56,7 @@ namespace Sprint0
             controllerList.Add(new KeyboardC(this));
             controllerList.Add(new ItemsController(this));
             base.Initialize();
-            player1 = new Player1(100, 100, 50, 80);
+            player1 = new Player1(100, 100, 48, 48);
             sprite = player1.getSprite();
             enemyCount = 0;
             itemCount = 0;
@@ -60,6 +64,10 @@ namespace Sprint0
             enemy = SpriteFactory.EnemyList[enemyCount];
             item = SpriteFactory.ItemList[itemCount];
             block = SpriteFactory.BlockList[blockCount];
+
+            blockA = new BlockA(400, 350);
+            BlockList = new List<IBlock>();
+            BlockList.Add(blockA);
         }
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
@@ -100,6 +108,7 @@ namespace Sprint0
             }
 
             player1.Update();
+            player1.BlockCollisionTest(BlockList);
             
             enemy.Update();
             item.Update();
@@ -117,7 +126,7 @@ namespace Sprint0
             player1.getSprite().Draw(new Vector2(player1.xAxis, player1.yAxis), player1.isTakingDmg());
             enemy.Draw(new Vector2(600, 350), false);
             item.Draw(new Vector2(400, 150), false);
-            block.Draw(new Vector2(550,300), false);
+            blockA.Draw();
             base.Draw(gameTime);
         }
       

@@ -19,7 +19,7 @@ namespace Sprint0.Collisions
         }
 
 
-        public void CollisionItem(Player1 player, List<IBlock> blocks)
+        public void BlockCollision(Player1 player, List<IBlock> blocks)
         {
             Rectangle linkRectangle = myPlayer.GetRectangle();
             Rectangle blockRectangle;
@@ -37,22 +37,22 @@ namespace Sprint0.Collisions
                     {
                         if (linkRectangle.Y > blockRectangle.Y) // from down
                         {
-                            linkRectangle.Y += intersectionRectangle.Height;
+                            myPlayer.yAxis += intersectionRectangle.Height;
                         }
                         else //from up
                         {
-                            linkRectangle.Y -= intersectionRectangle.Height;
+                            myPlayer.yAxis -= intersectionRectangle.Height;
                         }
                     }
                     else //from right or left
                     {
                         if (linkRectangle.X > blockRectangle.X)//from right
                         {
-                            linkRectangle.X += intersectionRectangle.Width;
+                            myPlayer.xAxis += intersectionRectangle.Width;
                         }
                         else //from left
                         {
-                            linkRectangle.X -= intersectionRectangle.Width;
+                            myPlayer.xAxis -= intersectionRectangle.Width;
                         }
                     }
                 }
