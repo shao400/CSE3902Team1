@@ -14,7 +14,7 @@ namespace Sprint0.Sprite
         private static SpriteBatch spritebatch;
         private static Texture2D texture;
         Rectangle sourceRec = new Rectangle(339, 59, 16, 16);
-        Rectangle destinationRec = new Rectangle(250, 300, 64, 64);
+        //Rectangle destinationRec = new Rectangle(250, 300, 64, 64);
 
         public void Update()
         {
@@ -32,6 +32,7 @@ namespace Sprint0.Sprite
 
         public void Draw(Vector2 location, Boolean isDamaged)
         {
+            Rectangle destinationRec = new Rectangle((int)location.X, (int)location.Y, 64, 64);
             spritebatch.Begin();
             spritebatch.Draw(texture, destinationRec, sourceRec, Color.White);
             spritebatch.End();  

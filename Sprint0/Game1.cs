@@ -18,7 +18,6 @@ namespace Sprint0
     /// This is the main type for your game.
     /// 
 
-
     public class Game1 : Game
     {
         GraphicsDeviceManager graphics;
@@ -34,8 +33,12 @@ namespace Sprint0
         public int enemyCount;
         public int itemCount;
         public int blockCount;
+
         public IBlock blockA;
+        public IBlock blockB;
+        public IBlock blockC;
         public List<IBlock> BlockList;
+
         public IEnemy moblin;
         public List<IEnemy> EnemyList;
 
@@ -69,8 +72,13 @@ namespace Sprint0
             block = SpriteFactory.BlockList[blockCount];
 
             blockA = new BlockA(400, 350);
+            blockB = new BlockB(250, 350);
+            blockC = new BlockC(100, 350);
+
             BlockList = new List<IBlock>();
             BlockList.Add(blockA);
+            BlockList.Add(blockB);
+            BlockList.Add(blockC);
 
             moblin = new Moblin(650, 240);            
             EnemyList = new List<IEnemy>();
@@ -115,6 +123,7 @@ namespace Sprint0
             }
 
             player1.Update();
+
             player1.BlockCollisionTest(BlockList);
             player1.EnemyCollisionTest(EnemyList);
             
@@ -133,10 +142,13 @@ namespace Sprint0
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            player1.getSprite().Draw(new Vector2(player1.xAxis, player1.yAxis), player1.isTakingDmg());
+            player1.getSprite().Draw(new Vector2(player1.xAxis, player1.yAxis), player1.isTakingDmg());        
             moblin.Draw();
             item.Draw(new Vector2(400, 150), false);
+
             blockA.Draw();
+            blockB.Draw();
+            blockC.Draw();
             base.Draw(gameTime);
         }
       
