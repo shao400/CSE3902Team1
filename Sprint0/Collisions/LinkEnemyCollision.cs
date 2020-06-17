@@ -24,7 +24,7 @@ namespace Spriny0.Collisions
             Rectangle enemyRectangle;
             Rectangle intersectionRectangle;
             //bool enemyKilled = false;
-            Queue<IEnemy> deadEnemies = new Queue<IEnemy>();
+            //Queue<IEnemy> deadEnemies = new Queue<IEnemy>();
 
             foreach (IEnemy enemy in enemies)
             {

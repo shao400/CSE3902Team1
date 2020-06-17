@@ -16,19 +16,17 @@ namespace Sprint0.Enemies
         private static ISprite MoblinSprite;
         private int xPosition;
         private int yPosition;
-        private int width;
-        private int height;
-        private Rectangle destinationRectangle;
+        private int frame = 0;
+        bool backmove = false;
+        private Rectangle destinationRec;
 
-        public Moblin(int x, int y, int height_e, int width_e)
+        public Moblin(int x, int y)
         {
             
             xPosition = x;
             yPosition = y;
-            width = width_e;
-            height = height_e;
             MoblinSprite = new EnemyMoblinSprite(x, y);
-            destinationRectangle = new Rectangle(x, y, 64, 64);
+            destinationRec = new Rectangle(x, y, 64, 64);
         }
 
 
@@ -41,12 +39,32 @@ namespace Sprint0.Enemies
 
         public void Update()
         {
+            frame++;
+            if (frame >= 20) frame = 0;
+            if (frame < 10 && !backmove)
+            {
+                destinationRec.X += 5;
+            }
+            else if (frame > 10 && !backmove)
+            {
+                destinationRec.X += 5;
+            }
+            else if (frame < 10 && backmove)
+            {
+                destinationRec.X -= 5;
+            }
+            else if (frame > 10 && backmove)
+            {
+                destinationRec.X -= 5;
+            }
+            if (destinationRec.X > 736) backmove = true;
+            if (destinationRec.X < 0) backmove = false;
             MoblinSprite.Update();
         }
 
         public Rectangle GetRectangle()
         {
-            return new Rectangle(xPosition, yPosition, width, height);
+            return destinationRec;
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Sprint0.Sprite
         Rectangle destinationRec;
         int frame = 0;
         bool backmove = false;
-        //private IEnemy myEnemy;
+        
         public EnemyMoblinSprite(int x, int y)
         {
             destinationRec = new Rectangle(x, y, 64, 64);

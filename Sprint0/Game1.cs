@@ -72,7 +72,7 @@ namespace Sprint0
             BlockList = new List<IBlock>();
             BlockList.Add(blockA);
 
-            moblin = new Moblin(650, 240, 64, 64);            
+            moblin = new Moblin(650, 240);            
             EnemyList = new List<IEnemy>();
             EnemyList.Add(moblin);
         }
@@ -118,7 +118,7 @@ namespace Sprint0
             player1.BlockCollisionTest(BlockList);
             player1.EnemyCollisionTest(EnemyList);
             
-            enemy.Update();
+            
             item.Update();
             block.Update();
 
