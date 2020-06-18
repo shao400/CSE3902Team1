@@ -40,6 +40,9 @@ namespace Sprint0
         public List<IBlock> BlockList;
 
         public IEnemy moblin;
+        public IEnemy peahat;
+        public IEnemy tektite;
+
         public List<IEnemy> EnemyList;
 
         List<object> controllerList; // could also be defined as List <IController>
@@ -83,6 +86,12 @@ namespace Sprint0
             moblin = new Moblin(650, 240);            
             EnemyList = new List<IEnemy>();
             EnemyList.Add(moblin);
+
+            peahat = new Peahat(300, 240);
+            EnemyList.Add(peahat);
+
+            tektite = new Tektite(650, 240);
+            EnemyList.Add(tektite);
         }
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
@@ -132,6 +141,8 @@ namespace Sprint0
             block.Update();
 
             moblin.Update();
+            tektite.Update();
+            peahat.Update();
 
             base.Update(gameTime);
         }
@@ -144,6 +155,8 @@ namespace Sprint0
             GraphicsDevice.Clear(Color.CornflowerBlue);
             player1.getSprite().Draw(new Vector2(player1.xAxis, player1.yAxis), player1.isTakingDmg());        
             moblin.Draw();
+            tektite.Draw();
+            peahat.Draw();
             item.Draw(new Vector2(400, 150), false);
 
             blockA.Draw();

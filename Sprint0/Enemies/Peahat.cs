@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Sprint0.Sprite;
+using Sprint0.Interfaces;
 
 namespace Sprint0.Enemies
 {
@@ -11,40 +13,58 @@ namespace Sprint0.Enemies
     {
       
 
-        private static ISprite PiranhaSprite = new Sprites.GreenPlantSprite();
+        private static ISprite PeahatSprite;
         private int xPosition;
         private int yPosition;
-        private int width;
-        private int height;
+        private int frame = 0;
+        bool backmove = false;
+        private Rectangle destinationRec;
 
-        public Peahat(int x, int y, int height_e, int width_e)
+        public Peahat(int x, int y)
         {
-            
             xPosition = x;
             yPosition = y;
-            width = width_e;
-            height = height_e;
+            PeahatSprite = new EnemyPeahatSprite(x, y);
+            destinationRec = new Rectangle(x, y, 32, 32);
         }
 
 
 
         public void Draw()
         {
-            
+            Vector2 location = new Vector2(xPosition, yPosition);
+            PeahatSprite.Draw(location, false);
         }
 
-        public void Reverse(int w)
+        public void Update()
         {
-        }
 
-        public void Update(IList<IBlock> blocks, IList<IEnemy> enemies)
-        {
-            EnemyPeahatSprite.update();
+            frame++;
+            if (frame >= 20) frame = 0;
+            if (frame < 10 && !backmove)
+            {
+                destinationRec.Y += 5;
+            }
+            else if (frame > 10 && !backmove)
+            {
+                destinationRec.Y += 5;
+            }
+            else if (frame < 10 && backmove)
+            {
+                destinationRec.Y -= 5;
+            }
+            else if (frame > 10 && backmove)
+            {
+                destinationRec.Y -= 5;
+            }
+            if (destinationRec.Y > 418) backmove = true;
+            if (destinationRec.Y < 0) backmove = false;
+            PeahatSprite.Update();
         }
 
         public Rectangle GetRectangle()
         {
-            return new Rectangle(xPosition, yPosition, width, height);
+            return destinationRec;
         }
     }
 }

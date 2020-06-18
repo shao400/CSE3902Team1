@@ -14,37 +14,43 @@ namespace Sprint0.Sprite
         private static Texture2D myTexture;
         Color myColor = Color.CornflowerBlue;
         Rectangle sourceRec;
-        Rectangle destinationRec = new Rectangle(300, 350, 64, 64);
+        Rectangle destinationRec;
         int frame = 0;
         bool backmove = false;
-
+        public EnemyTektiteSprite(int x, int y)
+        {
+            destinationRec = new Rectangle(x, y, 64, 64);
+        }
         public void Update()
         {
             frame++;
             if (frame >= 20) frame = 0;
 
-            if (frame < 10)
+            if (frame < 10 && !backmove)
             {
                 sourceRec = new Rectangle(162, 90, 16, 16);
-                if(!backmove){
-                    destinationRec.Y -= 5;
-                }else{
-                    destinationRec.Y += 5;
-                }
+                destinationRec.Y += 5;
             }
-            else
+            else if (frame > 10 && !backmove)
             {
-                sourceRec = new Rectangle(179, 90, 16, 16);
-                if(!backmove){
-                    destinationRec.Y -= 5;
-                }else{
-                    destinationRec.Y += 5;
-                }
+                sourceRec = new Rectangle(153, 212, 16, 16);
+                destinationRec.Y += 5;
             }
+            else if (frame < 10 && backmove)
+            {
 
-            if (destinationRec.Y < 0) backmove = true;
-            if (destinationRec.Y > 416) backmove = false;
-        }
+                sourceRec = new Rectangle(107, 291, 16, 16);
+                destinationRec.Y -= 5;
+            }
+            else if (frame > 10 && backmove)
+            {
+
+                sourceRec = new Rectangle(124, 291, 16, 16);
+                destinationRec.Y -= 5;
+            }
+            if (destinationRec.Y > 416) backmove = true;
+            if (destinationRec.Y < 0) backmove = false;
+        }   
 
         public void LoadContent(SpriteBatch batch, Texture2D texture)
         {

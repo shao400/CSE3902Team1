@@ -1,7 +1,7 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Blocks.png","D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Blocks.xnb","TextureProcessor","Texture2DContent",74652,5826381,0.2772749
-"D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Credits1.spritefont","D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Credits1.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21521,0.1581822
-"D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/enemy.png","D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/bin/Windows/Content/enemy.xnb","TextureProcessor","Texture2DContent",26805,485701,0.0240519
-"D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/items.png","D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/bin/Windows/Content/item.xnb","TextureProcessor","Texture2DContent",6408,138325,0.0059825
-"D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/link.png","D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/bin/Windows/Content/link.xnb","TextureProcessor","Texture2DContent",19462,460125,0.0109717
-"D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/luigi.png","D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/bin/Windows/Content/luigi.xnb","TextureProcessor","Texture2DContent",6625,304645,0.0070104
+"C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Blocks.png","C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Blocks.xnb","TextureProcessor","Texture2DContent",74652,5826381,0.7163256
+"C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Credits1.spritefont","C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Credits1.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21521,0.2922192
+"C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/enemy.png","C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/bin/Windows/Content/enemy.xnb","TextureProcessor","Texture2DContent",26805,485701,0.0339073
+"C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/items.png","C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/bin/Windows/Content/item.xnb","TextureProcessor","Texture2DContent",6408,138325,0.0269298
+"C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/link.png","C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/bin/Windows/Content/link.xnb","TextureProcessor","Texture2DContent",19462,460125,0.0269278
+"C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/luigi.png","C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/bin/Windows/Content/luigi.xnb","TextureProcessor","Texture2DContent",6625,304645,0.0289228

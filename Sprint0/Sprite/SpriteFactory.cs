@@ -58,8 +58,8 @@ namespace Sprint0.Sprite
         // Enemy Author: Gengyi Qin
         public static List<ISprite> EnemyList = new List<ISprite>();
         public static EnemyMoblinSprite EnemyMoblin = new EnemyMoblinSprite(650, 240);
-        public static EnemyPeahatSprite EnemyPeahat = new EnemyPeahatSprite();
-        public static EnemyTektiteSprite EnemyTektite = new EnemyTektiteSprite();
+        public static EnemyPeahatSprite EnemyPeahat = new EnemyPeahatSprite(300,240);
+        public static EnemyTektiteSprite EnemyTektite = new EnemyTektiteSprite(550,240);
 
         // Items Author: Zhizhou He, Chuwen Sun
         public static List<ISprite> ItemList = new List<ISprite>();
