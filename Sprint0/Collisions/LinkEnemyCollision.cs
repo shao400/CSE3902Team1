@@ -38,11 +38,25 @@ namespace Spriny0.Collisions
                         //myPlayer.Hit(); need implementation
                         if (linkRectangle.Y > enemyRectangle.Y) // from down
                         {
-                            myPlayer.yAxis += intersectionRectangle.Height;
+                            if (myPlayer.yAxis < 432 - intersectionRectangle.Height)
+                            {
+                                myPlayer.yAxis += intersectionRectangle.Height;
+                            }
+                            else
+                            {
+                                myPlayer.yAxis = 432;
+                            }
                         }
                         else //from up
                         {
-                            myPlayer.yAxis -= intersectionRectangle.Height;
+                            if (myPlayer.yAxis > intersectionRectangle.Height)
+                            {
+                                myPlayer.yAxis -= intersectionRectangle.Height;
+                            }
+                            else
+                            {
+                                myPlayer.yAxis = 0;
+                            }
                         }
                     }
                     else

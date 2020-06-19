@@ -33,7 +33,7 @@ namespace Sprint0.Sprite
             }
             else if (frame > 10 && !backmove)
             {
-                sourceRec = new Rectangle(153, 212, 16, 16);
+                sourceRec = new Rectangle(179, 90, 16, 16);
                 destinationRec.Y += 5;
             }
             else if (frame < 10 && backmove)

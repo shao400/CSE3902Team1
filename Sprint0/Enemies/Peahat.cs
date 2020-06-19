@@ -25,7 +25,7 @@ namespace Sprint0.Enemies
             xPosition = x;
             yPosition = y;
             PeahatSprite = new EnemyPeahatSprite(x, y);
-            destinationRec = new Rectangle(x, y, 32, 32);
+            destinationRec = new Rectangle(x, y, 64, 64);
         }
 
 
