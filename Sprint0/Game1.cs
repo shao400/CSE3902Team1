@@ -6,6 +6,7 @@ using Sprint0.Block;
 using Sprint0.Controller;
 using Sprint0.Enemies;
 using Sprint0.Interfaces;
+using Sprint0.Items;
 using Sprint0.Player;
 using Sprint0.Sprite;
 using Sprint0.State;
@@ -45,6 +46,11 @@ namespace Sprint0
 
         public List<IEnemy> EnemyList;
 
+        public IItem heart;
+        public IItem clock;
+        public List<IItem> ItemList;
+
+
         List<object> controllerList; // could also be defined as List <IController>
     
         public Game1()
@@ -82,6 +88,12 @@ namespace Sprint0
             BlockList.Add(blockA);
             BlockList.Add(blockB);
             BlockList.Add(blockC);
+
+            heart = new Heart(140, 100);
+            clock = new mClock(240, 100);
+            ItemList = new List<IItem>();
+            ItemList.Add(heart);
+            ItemList.Add(clock);
 
             moblin = new Moblin(650, 240);            
             EnemyList = new List<IEnemy>();
@@ -135,9 +147,9 @@ namespace Sprint0
 
             player1.BlockCollisionTest(BlockList);
             player1.EnemyCollisionTest(EnemyList);
-            
-            
-            item.Update();
+            player1.ItemCollisionTest(ItemList);
+
+            //item.Update();
             block.Update();
 
             moblin.Update();
@@ -157,7 +169,9 @@ namespace Sprint0
             moblin.Draw();
             tektite.Draw();
             peahat.Draw();
-            item.Draw(new Vector2(400, 150), false);
+
+            heart.Draw();
+            clock.Draw();
 
             blockA.Draw();
             blockB.Draw();

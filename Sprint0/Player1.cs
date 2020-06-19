@@ -23,6 +23,7 @@ namespace Sprint0.Player
         private int height;
         private string currentFacing, currentStatus;
         private LinkBlockCollision linkBlockCollision;
+        private LinkItemCollision linkItemCollision;
         private LinkEnemyCollision linkEnemyCollision;
 
         public Player1(int x, int y, int width_g, int height_g) 
@@ -34,6 +35,7 @@ namespace Sprint0.Player
             height = height_g;
 
             linkBlockCollision = new LinkBlockCollision(this);
+            linkItemCollision = new LinkItemCollision(this);
             linkEnemyCollision = new LinkEnemyCollision(this);
         }
         public bool isTakingDmg()
@@ -158,6 +160,11 @@ namespace Sprint0.Player
         public void EnemyCollisionTest(List<IEnemy> enemies)
         {
             linkEnemyCollision.EnemyCollisionTest(this, enemies);
+        }
+
+        public void ItemCollisionTest(List<IItem> items)
+        {
+            linkItemCollision.ItemCollision(this, items);
         }
     }
 }

@@ -7,9 +7,12 @@ using Microsoft.Xna.Framework;
 
 namespace Sprint0.Interfaces
 {
-    interface IItem
+    public interface IItem
     {
-        Rectangle GetRectangle();
+        void Draw();
         void Update();
+        Rectangle GetRectangle();
+        
+        
     }
 }

@@ -10,14 +10,14 @@ using Sprint0.Sprite;
 
 namespace Sprint0.Items
 {
-    class Heart : IItem
+    class mClock : IItem
     {
-        private ItemHeartSprite sprite = SpriteFactory.ItemHeart;
+        private ItemClockSprite sprite = SpriteFactory.ItemClock;
         private int xAix;
         private int yAix;
         //private int width;
         //private int height;
-        public Heart(int x, int y)
+        public mClock(int x, int y)
         {
             xAix = x;
             yAix = y;
@@ -36,7 +36,7 @@ namespace Sprint0.Items
 
         public void Update()
         {
-            //ItemHeartSprite.update();
+            //ItemClockSprite.update();
         }
 
         public Rectangle GetRectangle()
@@ -45,6 +45,5 @@ namespace Sprint0.Items
         }
     }
 }
-
 
 

@@ -54,6 +54,7 @@
     <Compile Include="Block\BlockC.cs" />
     <Compile Include="Collisions\LinkBlockCollision.cs" />
     <Compile Include="Collisions\LinkEnemyCollision.cs" />
+    <Compile Include="Collisions\LinkItemCollision.cs" />
     <Compile Include="Commands\eTakeDmg.cs" />
     <Compile Include="Commands\aLeft.cs" />
     <Compile Include="Commands\D1FirstWeapon.cs" />
@@ -87,6 +88,8 @@
     <Compile Include="Interfaces\IState.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />
     <Compile Include="Interfaces\ISprite.cs" />
+    <Compile Include="Items\mClock.cs" />
+    <Compile Include="Items\Heart.cs" />
     <Compile Include="Player1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -159,9 +162,7 @@
     <None Include="app.manifest" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Items\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\analyzers\dotnet\cs\Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll" />
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\analyzers\dotnet\Microsoft.CodeAnalysis.VersionCheckAnalyzer.dll" />
