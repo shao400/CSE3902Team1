@@ -177,3 +177,4 @@ C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Sharp
 C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
 C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\SharpDX.XInput.xml
 C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.csproj.CopyComplete
+C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.csprojAssemblyReference.cache

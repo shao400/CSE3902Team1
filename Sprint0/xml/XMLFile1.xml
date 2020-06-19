@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<testRoom>
+	<player xpos="100" ypos="100" />
+	<enemy type="Moblin" xpos="650" ypos="240" />
+	<enemy type="Peahat" xpos="300" ypos="240" />
+	<block type="BlockA" xpos="100" ypos="350" />
+	<block type="BlockA" xpos="164" ypos="350" />
+	<block type="BlockA" xpos="228" ypos="350" />
+	<block type="BlockA" xpos="292" ypos="350" />
+	<block type="BlockA" xpos="356" ypos="350" />
+	<block type="BlockA" xpos="420" ypos="350" />
+	<block type="BlockA" xpos="484" ypos="350" />
+</testRoom>

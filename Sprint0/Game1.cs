@@ -74,9 +74,9 @@ namespace Sprint0
             item = SpriteFactory.ItemList[itemCount];
             block = SpriteFactory.BlockList[blockCount];
 
-            blockA = new BlockA(400, 350);
-            blockB = new BlockB(250, 350);
-            blockC = new BlockC(100, 350);
+            blockA = new BlockA(100, 350);
+            blockB = new BlockB(164, 350);
+            blockC = new BlockC(228, 350);
 
             BlockList = new List<IBlock>();
             BlockList.Add(blockA);
