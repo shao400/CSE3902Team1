@@ -21,7 +21,7 @@ namespace Sprint0.Commands
 
             myGame.blockCount--;
             if (myGame.blockCount < 0) myGame.blockCount = SpriteFactory.BlockList.Count - 1;
-            myGame.block = SpriteFactory.BlockList[myGame.blockCount];
+            //myGame.block = SpriteFactory.BlockList[myGame.blockCount];
         }
 
     }

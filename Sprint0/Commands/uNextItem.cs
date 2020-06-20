@@ -20,7 +20,7 @@ namespace Sprint0.Commands
         {
             myGame.itemCount++;
             if (myGame.itemCount >= SpriteFactory.ItemList.Count) myGame.itemCount = 0;
-            myGame.item = SpriteFactory.ItemList[myGame.itemCount];
+            //myGame.item = SpriteFactory.ItemList[myGame.itemCount];
         }
 
     }
