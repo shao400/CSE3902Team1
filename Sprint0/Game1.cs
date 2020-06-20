@@ -28,9 +28,6 @@ namespace Sprint0
         public IController controls;
         public ISprite sprite;
         public Player1 player1;
-        public ISprite enemy;
-        public ISprite item;
-        public ISprite block;
         public int enemyCount;
         public int itemCount;
         public int blockCount;
@@ -76,9 +73,6 @@ namespace Sprint0
             enemyCount = 0;
             itemCount = 0;
             blockCount = 0;
-            enemy = SpriteFactory.EnemyList[enemyCount];
-            item = SpriteFactory.ItemList[itemCount];
-            block = SpriteFactory.BlockList[blockCount];
 
             blockA = new BlockA(100, 350);
             blockB = new BlockB(164, 350);
@@ -149,8 +143,7 @@ namespace Sprint0
             player1.EnemyCollisionTest(EnemyList);
             player1.ItemCollisionTest(ItemList);
 
-            //item.Update();
-            block.Update();
+            //item.Update()；
 
             moblin.Update();
             tektite.Update();
