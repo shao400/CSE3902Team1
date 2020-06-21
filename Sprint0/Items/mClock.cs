@@ -15,23 +15,32 @@ namespace Sprint0.Items
         private ItemClockSprite sprite = SpriteFactory.ItemClock;
         private int xAix;
         private int yAix;
+        private bool picked;
         //private int width;
         //private int height;
         public mClock(int x, int y)
         {
             xAix = x;
             yAix = y;
+            picked = false;
             //width = w;
             //height = h;
         }
         public void Draw()
         {
             Vector2 location = new Vector2(xAix, yAix);
-            sprite.Draw(location, false);
+            if (picked == false)
+            {
+                sprite.Draw(location, false);
+            }
         }
 
         public void Reverse()
         {
+        }
+        public void PickedUp()
+        {
+            picked = true;
         }
 
         public void Update()
