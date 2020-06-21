@@ -46,6 +46,8 @@ namespace Spriny0.Collisions
                             {
                                 myPlayer.yAxis = 432;
                             }
+                            myPlayer.yAxis += intersectionRectangle.Height;
+                            if (myPlayer.yAxis < 432) { myPlayer.yAxis += 40; } else { myPlayer.yAxis = 432; }
                         }
                         else //from up
                         {
@@ -57,17 +59,36 @@ namespace Spriny0.Collisions
                             {
                                 myPlayer.yAxis = 0;
                             }
+                            
+                            myPlayer.xAxis -= intersectionRectangle.Width;
+                            if (myPlayer.yAxis > 40) { myPlayer.yAxis -= 40; } else { myPlayer.yAxis = 0; }
                         }
                     }
                     else
                     {
                         if (linkRectangle.X > enemyRectangle.X)//from right
                         {
+                            if (myPlayer.xAxis < 736 - intersectionRectangle.Width)
+                            {
+                                myPlayer.xAxis += intersectionRectangle.Width;
+                            }
+                            else
+                            {
+                                myPlayer.xAxis = 736;
+                            }
                             myPlayer.xAxis += intersectionRectangle.Width;
                             if (myPlayer.xAxis < 712) { myPlayer.xAxis += 40; } else { myPlayer.xAxis = 752; }
                         }
                         else //from left
                         {
+                            if (myPlayer.xAxis > intersectionRectangle.Width)
+                            {
+                                myPlayer.xAxis -= intersectionRectangle.Width;
+                            }
+                            else
+                            {
+                                myPlayer.xAxis = 0;
+                            }
                             myPlayer.xAxis -= intersectionRectangle.Width;
                             if (myPlayer.xAxis > 40) { myPlayer.xAxis -= 40; } else { myPlayer.xAxis = 0; }
                         }
