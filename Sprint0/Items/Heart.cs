@@ -40,6 +40,11 @@ namespace Sprint0.Items
             picked = true;
         }
 
+        public void item_reset()
+        {
+            picked = false;
+        }
+
         public void Reverse()
         {
         }

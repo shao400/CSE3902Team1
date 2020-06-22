@@ -34,13 +34,15 @@ namespace Sprint0.Items
                 sprite.Draw(location, false);
             }
         }
-
-        public void Reverse()
-        {
-        }
+       
         public void PickedUp()
         {
             picked = true;
+        }
+
+        public void item_reset()
+        {
+            picked = false;
         }
 
         public void Update()
