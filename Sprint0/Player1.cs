@@ -56,32 +56,35 @@ namespace Sprint0.Player
                 if(xAxis > 0)
                 {
                     xAxis -= 5;
-                }
-                
+                }    
             }
             else if (currentFacing.CompareTo("right") == 0 && currentStatus.CompareTo("walking") == 0)
             {
-                if (xAxis < 750)
+                if (xAxis < 752)
                 {
                     xAxis += 5;
                 }
             }
             else if (currentFacing.CompareTo("down") == 0 && currentStatus.CompareTo("walking") == 0)
             {
-                if (yAxis < 430)
+                if (yAxis < 432)
                 {
                     yAxis += 5;
-                }
-                
+                }                
             }
             else if (currentFacing.CompareTo("up") == 0 && currentStatus.CompareTo("walking") == 0)
             {
                 if (yAxis > 0)
                 {
                     yAxis -= 5;
-                }
-                
+                }                
             }
+
+            //more border restrictions
+            if (xAxis < 0) xAxis = 0;
+            if (xAxis > 752) xAxis = 752;
+            if (yAxis < 0) yAxis = 0;
+            if (yAxis > 432) yAxis = 432;
         }
         public void Draw()
         {

@@ -68,13 +68,13 @@ namespace Spriny0.Collisions
                     {
                         if (linkRectangle.X > enemyRectangle.X)//from right
                         {
-                            if (myPlayer.xAxis < 736 - intersectionRectangle.Width)
+                            if (myPlayer.xAxis < 752 - intersectionRectangle.Width)
                             {
                                 myPlayer.xAxis += intersectionRectangle.Width;
                             }
                             else
                             {
-                                myPlayer.xAxis = 736;
+                                myPlayer.xAxis = 752;
                             }
                             myPlayer.xAxis += intersectionRectangle.Width;
                             if (myPlayer.xAxis < 712) { myPlayer.xAxis += 40; } else { myPlayer.xAxis = 752; }
