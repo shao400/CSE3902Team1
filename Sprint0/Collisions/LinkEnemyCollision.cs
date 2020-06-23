@@ -46,7 +46,7 @@ namespace Spriny0.Collisions
                             {
                                 myPlayer.yAxis = 432;
                             }
-                            myPlayer.yAxis += intersectionRectangle.Height;
+                            //myPlayer.yAxis += intersectionRectangle.Height;
                             if (myPlayer.yAxis < 432) { myPlayer.yAxis += 40; } else { myPlayer.yAxis = 432; }
                         }
                         else //from up
@@ -60,7 +60,7 @@ namespace Spriny0.Collisions
                                 myPlayer.yAxis = 0;
                             }
                             
-                            myPlayer.xAxis -= intersectionRectangle.Width;
+                            //myPlayer.xAxis -= intersectionRectangle.Height;
                             if (myPlayer.yAxis > 40) { myPlayer.yAxis -= 40; } else { myPlayer.yAxis = 0; }
                         }
                     }
@@ -76,7 +76,7 @@ namespace Spriny0.Collisions
                             {
                                 myPlayer.xAxis = 752;
                             }
-                            myPlayer.xAxis += intersectionRectangle.Width;
+                            //myPlayer.xAxis += intersectionRectangle.Width;
                             if (myPlayer.xAxis < 712) { myPlayer.xAxis += 40; } else { myPlayer.xAxis = 752; }
                         }
                         else //from left
@@ -89,7 +89,7 @@ namespace Spriny0.Collisions
                             {
                                 myPlayer.xAxis = 0;
                             }
-                            myPlayer.xAxis -= intersectionRectangle.Width;
+                            //myPlayer.xAxis -= intersectionRectangle.Width;
                             if (myPlayer.xAxis > 40) { myPlayer.xAxis -= 40; } else { myPlayer.xAxis = 0; }
                         }
                     }
