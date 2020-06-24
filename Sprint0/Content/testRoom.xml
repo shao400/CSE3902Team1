@@ -1,13 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Room>
-	<player xPos="100" yPos="100" > </player>
-	<enemy type="Moblin" xPos="650" yPos="240"> </enemy>
-	<enemy type="Peahat" xPos="300" yPos="240"> </enemy>
-	<block type="BlockA" xPos="100" yPos="350"> </block>
-	<block type="BlockA" xPos="164" yPos="350"> </block>
-	<block type="BlockA" xPos="228" yPos="350"> </block>
-	<block type="BlockA" xPos="292" yPos="350"> </block>
-	<block type="BlockA" xPos="356" yPos="350"> </block>
-	<block type="BlockA" xPos="420" yPos="350"> </block>
-	<block type="BlockA" xPos="484" yPos="350"> </block>
+	<enemy type="Moblin" xpos="650" ypos="240"> </enemy>
+	<player xpos="100" ypos="100" > </player>
+	<enemy type="Peahat" xpos="300" ypos="240"> </enemy>
+	<block type="BlockA" xpos="100" ypos="350"> </block>
+	<block type="BlockA" xpos="164" ypos="350"> </block>
+	<block type="BlockA" xpos="228" ypos="350"> </block>
+	<block type="BlockA" xpos="292" ypos="350"> </block>
+	<block type="BlockA" xpos="356" ypos="350"> </block>
+	<block type="BlockA" xpos="420" ypos="350"> </block>
+	<block type="BlockA" xpos="484" ypos="350"> </block>
+	<block type="BlockB" xpos="548" ypos="350"> </block>
+	<block type="BlockB" xpos="612" ypos="350"> </block>
+	<block type="BlockC" xpos="676" ypos="350"> </block>
+	<block type="BlockC" xpos="740" ypos="350"> </block>
 </Room>

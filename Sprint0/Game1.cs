@@ -13,6 +13,7 @@ using Sprint0.State;
 using System.Collections.Generic;
 using System.ComponentModel;
 using Sprint0.xml;
+using System.Xml;
 
 namespace Sprint0
 {
@@ -27,9 +28,8 @@ namespace Sprint0
 
         public SpriteFont font;
         public IController controls;
-        public ISprite sprite;
         public roomProperties currentRoom;
-
+        public XmlReader reader;
 
         List<object> controllerList; // could also be defined as List <IController>
     
@@ -51,8 +51,8 @@ namespace Sprint0
             controllerList.Add(new KeyboardC(this));
             controllerList.Add(new ItemsController(this));
             base.Initialize();
-            currentRoom = roomLoader.LoadRoomFromXML("testRoom.xml");
-            sprite = currentRoom.link.getSprite();
+            reader = XmlReader.Create("testRoom.xml");
+            currentRoom = Loader.LoadFromReader(reader);
         }
         /// <summary>
         /// LoadContent will be called once per game and is the place to load

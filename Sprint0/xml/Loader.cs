@@ -23,37 +23,44 @@ namespace Sprint0.xml
             Player1 link = null;
             reader.MoveToContent();
             reader.Read(); // jump over <Room>
+            int count = 0;
             while (reader.Read())
             {
                 if (reader.Name == "player")
-                {                 
-                   link = new Player1(Int32.Parse(reader.GetAttribute("xPos")), Int32.Parse(reader.GetAttribute("yPos")), 48, 48);
-                }
-                else
                 {
-                    int xPos = Int32.Parse(reader.GetAttribute("xPos"));
-                    int yPos = Int32.Parse(reader.GetAttribute("yPos"));
+                    count++;
+                    Console.WriteLine("reader.name: " + reader.Name);
+                    link = new Player1(Int32.Parse(reader.GetAttribute("xpos")), Int32.Parse(reader.GetAttribute("ypos")), 48, 48);
+                    Console.WriteLine("link xpos: " + Int32.Parse(reader.GetAttribute("xpos")) + "link ypos: " + Int32.Parse(reader.GetAttribute("ypos")));
+                }
+                else if(reader.Name == "enemy" || reader.Name == "item" || reader.Name == "block")
+                {
+                    count++;
+                    Console.WriteLine("reader.name: " + reader.Name);
+                    Console.WriteLine("2nd loop xpos:" + Int32.Parse(reader.GetAttribute("xpos")) + "ypos: " + Int32.Parse(reader.GetAttribute("ypos")) + "type: " + reader.GetAttribute("type"));
+                    int xpos = Int32.Parse(reader.GetAttribute("xpos"));
+                    int ypos = Int32.Parse(reader.GetAttribute("ypos"));
                     String type = reader.GetAttribute("type");
 
                     switch (type)
                     {
                         case "Moblin":
-                            enemies.Add(new Moblin(xPos, yPos));
+                            enemies.Add(new Moblin(xpos, ypos));
                             break;
                         case "Peahat":
-                            enemies.Add(new Peahat(xPos, yPos));
+                            enemies.Add(new Peahat(xpos, ypos));
                             break;
                         case "Tektite":
-                            enemies.Add(new Tektite(xPos, yPos));
+                            enemies.Add(new Tektite(xpos, ypos));
                             break;
                         case "BlockA":
-                            blocks.Add(new BlockA(xPos, yPos));
+                            blocks.Add(new BlockA(xpos, ypos));
                             break;
                         case "BlockB":
-                            blocks.Add(new BlockB(xPos, yPos));
+                            blocks.Add(new BlockB(xpos, ypos));
                             break;
                         case "BlockC":
-                            blocks.Add(new BlockC(xPos, yPos));
+                            blocks.Add(new BlockC(xpos, ypos));
                             break;
                     }
                 }
