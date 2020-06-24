@@ -144,6 +144,8 @@
     <Compile Include="Sprite\LinkWoodenStandingUpSprite.cs" />
     <Compile Include="Sprite\SpriteFactory.cs" />
     <Compile Include="State\P1State.cs" />
+    <Compile Include="xml\roomLoader.cs" />
+    <Compile Include="xml\roomProperties.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

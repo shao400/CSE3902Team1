@@ -17,7 +17,7 @@ namespace Sprint0.Commands
 
         public void Execute()
         {
-            myGame.player1.Left();
+            myGame.currentRoom.link.Left();
         }
 
     }

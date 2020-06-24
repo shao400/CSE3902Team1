@@ -17,8 +17,8 @@ namespace Sprint0.Commands
         }
         public void Execute()
         {
-            myGame.enemyCount--;
-            if (myGame.enemyCount < 0) myGame.enemyCount = SpriteFactory.EnemyList.Count - 1;
+            //myGame.enemyCount--;
+            //if (myGame.enemyCount < 0) myGame.enemyCount = SpriteFactory.EnemyList.Count - 1;
             //myGame.enemy = SpriteFactory.EnemyList[myGame.enemyCount];
         }
     }

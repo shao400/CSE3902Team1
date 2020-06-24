@@ -54,8 +54,8 @@ namespace Sprint0.xml
                     link = new Player1(xPos, yPos, 48, 48);
                 }else
                 {
-                    int? xPos = 0;
-                    int? yPos = 0;
+                    int? xPos = null;
+                    int? yPos = null;
                     String type = "";
                     for (int count = 1; count < currentText.Length; count++)
                     {

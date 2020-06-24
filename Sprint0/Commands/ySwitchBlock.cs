@@ -19,8 +19,8 @@ namespace Sprint0.Commands
         public void Execute()
         {
 
-            myGame.blockCount--;
-            if (myGame.blockCount < 0) myGame.blockCount = SpriteFactory.BlockList.Count - 1;
+            //myGame.blockCount--;
+            //if (myGame.blockCount < 0) myGame.blockCount = SpriteFactory.BlockList.Count - 1;
             //myGame.block = SpriteFactory.BlockList[myGame.blockCount];
         }
 

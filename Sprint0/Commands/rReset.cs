@@ -18,9 +18,11 @@ namespace Sprint0.Commands
 
         public void Execute()
         {
-            myGame.player1.Player_Reset();
-            myGame.clock.item_reset();
-            myGame.heart.item_reset();
+            myGame.currentRoom.link.Player_Reset();
+            for (int i = 0; i < myGame.currentRoom.itemList.Count;i++)
+            {
+                myGame.currentRoom.itemList[i].item_reset();
+            }
             //myGame.enemyCount= 0;
             //myGame.enemy = SpriteFactory.EnemyList[myGame.enemyCount];
            //myGame.itemCount = 0;

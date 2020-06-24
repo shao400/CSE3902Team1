@@ -17,7 +17,7 @@ namespace Sprint0.Commands
 
         public void Execute()
         {
-            myGame.player1.Attack();
+            myGame.currentRoom.link.Attack();
         }
     }
 }

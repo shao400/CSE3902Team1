@@ -12,6 +12,7 @@ using Sprint0.Sprite;
 using Sprint0.State;
 using System.Collections.Generic;
 using System.ComponentModel;
+using Sprint0.xml;
 
 namespace Sprint0
 {
@@ -27,25 +28,7 @@ namespace Sprint0
         public SpriteFont font;
         public IController controls;
         public ISprite sprite;
-        public Player1 player1;
-        public int enemyCount;
-        public int itemCount;
-        public int blockCount;
-
-        public IBlock blockA;
-        public IBlock blockB;
-        public IBlock blockC;
-        public List<IBlock> BlockList;
-
-        public IEnemy moblin;
-        public IEnemy peahat;
-        public IEnemy tektite;
-
-        public List<IEnemy> EnemyList;
-
-        public IItem heart;
-        public IItem clock;
-        public List<IItem> ItemList;
+        public roomProperties currentRoom;
 
 
         List<object> controllerList; // could also be defined as List <IController>
@@ -68,36 +51,8 @@ namespace Sprint0
             controllerList.Add(new KeyboardC(this));
             controllerList.Add(new ItemsController(this));
             base.Initialize();
-            player1 = new Player1(100, 100, 48, 48);
-            sprite = player1.getSprite();
-            enemyCount = 0;
-            itemCount = 0;
-            blockCount = 0;
-
-            blockA = new BlockA(100, 350);
-            blockB = new BlockB(164, 350);
-            blockC = new BlockC(228, 350);
-
-            BlockList = new List<IBlock>();
-            BlockList.Add(blockA);
-            BlockList.Add(blockB);
-            BlockList.Add(blockC);
-
-            heart = new Heart(155, 100);
-            clock = new mClock(240, 100);
-            ItemList = new List<IItem>();
-            ItemList.Add(heart);
-            ItemList.Add(clock);
-
-            moblin = new Moblin(650, 240);            
-            EnemyList = new List<IEnemy>();
-            EnemyList.Add(moblin);
-
-            peahat = new Peahat(300, 240);
-            EnemyList.Add(peahat);
-
-            tektite = new Tektite(650, 240);
-            EnemyList.Add(tektite);
+            currentRoom = roomLoader.LoadRoomFromXML("testRoom.xml");
+            sprite = currentRoom.link.getSprite();
         }
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
@@ -137,17 +92,12 @@ namespace Sprint0
                 controller.Update();
             }
 
-            player1.Update();
+            currentRoom.link.Update();
 
-            player1.BlockCollisionTest(BlockList);
-            player1.EnemyCollisionTest(EnemyList);
-            player1.ItemCollisionTest(ItemList);
-
-            //item.Update()；
-
-            moblin.Update();
-            tektite.Update();
-            peahat.Update();
+            currentRoom.link.BlockCollisionTest(currentRoom.blockList);
+            currentRoom.link.EnemyCollisionTest(currentRoom.enemyList);
+            currentRoom.link.ItemCollisionTest(currentRoom.itemList);
+            currentRoom.Update();
 
             base.Update(gameTime);
         }
@@ -158,17 +108,8 @@ namespace Sprint0
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            player1.getSprite().Draw(new Vector2(player1.xAxis, player1.yAxis), player1.isTakingDmg());        
-            moblin.Draw();
-            tektite.Draw();
-            peahat.Draw();
-
-            heart.Draw();
-            clock.Draw();
-
-            blockA.Draw();
-            blockB.Draw();
-            blockC.Draw();
+            currentRoom.link.getSprite().Draw(new Vector2(currentRoom.link.xAxis, currentRoom.link.yAxis), currentRoom.link.isTakingDmg());
+            currentRoom.Draw();
             base.Draw(gameTime);
         }
       
