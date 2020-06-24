@@ -55,6 +55,7 @@ namespace Sprint0.Collisions
                             myPlayer.xAxis -= intersectionRectangle.Width;
                         }
                     }
+                    break;//once link has collision with one block, no need to detect other blocks
                 }
             }
         }

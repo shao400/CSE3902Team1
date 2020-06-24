@@ -19,11 +19,13 @@ namespace Sprint0.Commands
         public void Execute()
         {
             myGame.player1.Player_Reset();
-            myGame.enemyCount= 0;
+            myGame.clock.item_reset();
+            myGame.heart.item_reset();
+            //myGame.enemyCount= 0;
             //myGame.enemy = SpriteFactory.EnemyList[myGame.enemyCount];
-            myGame.itemCount = 0;
+           //myGame.itemCount = 0;
             //myGame.item = SpriteFactory.ItemList[myGame.itemCount];
-            myGame.blockCount = 0;
+            //myGame.blockCount = 0;
             //myGame.block = SpriteFactory.BlockList[myGame.blockCount];
         }
 

@@ -83,7 +83,7 @@ namespace Sprint0
             BlockList.Add(blockB);
             BlockList.Add(blockC);
 
-            heart = new Heart(140, 100);
+            heart = new Heart(155, 100);
             clock = new mClock(240, 100);
             ItemList = new List<IItem>();
             ItemList.Add(heart);

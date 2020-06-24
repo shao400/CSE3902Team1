@@ -37,22 +37,26 @@ namespace Sprint0.Collisions
                     {
                         if (linkRectangle.Y > itemRectangle.Y) // from down
                         {
-                            myPlayer.yAxis += intersectionRectangle.Height;
+                            //myPlayer.yAxis += intersectionRectangle.Height;
+                            item.PickedUp();
                         }
                         else //from up
                         {
-                            myPlayer.yAxis -= intersectionRectangle.Height;
+                           // myPlayer.yAxis -= intersectionRectangle.Height;
+                            item.PickedUp();
                         }
                     }
                     else //from right or left
                     {
                         if (linkRectangle.X > itemRectangle.X)//from right
                         {
-                            myPlayer.xAxis += intersectionRectangle.Width;
+                            //myPlayer.xAxis += intersectionRectangle.Width;
+                            item.PickedUp();
                         }
                         else //from left
                         {
-                            myPlayer.xAxis -= intersectionRectangle.Width;
+                            //myPlayer.xAxis -= intersectionRectangle.Width;
+                            item.PickedUp();
                         }
                     }
                 }

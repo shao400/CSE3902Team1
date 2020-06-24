@@ -12,7 +12,9 @@ namespace Sprint0.Interfaces
         void Draw();
         void Update();
         Rectangle GetRectangle();
-        
+        void PickedUp();
+
+        void item_reset();
         
     }
 }
