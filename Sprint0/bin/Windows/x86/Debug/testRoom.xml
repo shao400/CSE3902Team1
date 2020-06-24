@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <testRoom>
-	<player xpos="100" ypos="100" />
 	<enemy type="Moblin" xpos="650" ypos="240" />
+	<player xpos="100" ypos="100" />
 	<enemy type="Peahat" xpos="300" ypos="240" />
 	<block type="BlockA" xpos="100" ypos="350" />
 	<block type="BlockA" xpos="164" ypos="350" />
@@ -10,4 +10,6 @@
 	<block type="BlockA" xpos="356" ypos="350" />
 	<block type="BlockA" xpos="420" ypos="350" />
 	<block type="BlockA" xpos="484" ypos="350" />
+	<block type="BlockB" xpos="548" ypos="350" />
+	<block type="BlockC" xpos="612" ypos="350" />
 </testRoom>

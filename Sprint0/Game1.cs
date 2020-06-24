@@ -53,6 +53,7 @@ namespace Sprint0
             base.Initialize();
             reader = XmlReader.Create("testRoom.xml");
             currentRoom = Loader.LoadFromReader(reader);
+            reader.Close();
         }
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
