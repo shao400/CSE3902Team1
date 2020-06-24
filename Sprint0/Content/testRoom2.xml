@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<room>
+		<enemy>
+			<type> Moblin </type>
+			<xPos> 650 </xPos>
+			<yPos> 240 </yPos>
+		</enemy>
+		<player>
+			<xPos> 100 </xPos>
+			<yPos> 100 </yPos>
+		</player>
+</room>

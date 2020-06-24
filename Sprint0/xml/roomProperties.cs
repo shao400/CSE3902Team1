@@ -8,12 +8,12 @@ using Sprint0.Player;
 
 namespace Sprint0.xml
 {
-    class roomProperties
+    public class roomProperties
     {
-        private List<IBlock> blockList;
-        private List<IItem> itemList;
-        private List<IEnemy> enemyList;
-        private Player1 link;
+        public List<IBlock> blockList;
+        public List<IItem> itemList;
+        public List<IEnemy> enemyList;
+        public Player1 link;
 
         //Constructor method
         public roomProperties(List<IBlock> b, List<IItem> i, List<IEnemy> e, Player1 p)
@@ -23,7 +23,38 @@ namespace Sprint0.xml
             blockList = b;
             link = p;
         }
+        public void Draw()
+        {
+            for (int i = 0; i < enemyList.Count; i++)
+            {
+                enemyList[i].Draw();
+            }
+            for (int i = 0; i < itemList.Count; i++)
+            {
+                itemList[i].Draw();
+            }
+            for (int i = 0; i < blockList.Count; i++)
+            {
+                blockList[i].Draw();
+            }
+        }
 
+        public void Update()
+        {
+            link.Update();
+            for (int i = 0; i < enemyList.Count; i++)
+            {
+                enemyList[i].Update();
+            }
+            for (int i = 0; i < itemList.Count; i++)
+            {
+                itemList[i].Update();
+            }
+            for (int i = 0; i < blockList.Count; i++)
+            {
+                blockList[i].Update();
+            }
+        }
 
 
     }

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Room>
+	<player xPos="100" yPos="100" > </player>
+	<enemy type="Moblin" xPos="650" yPos="240"> </enemy>
+	<enemy type="Peahat" xPos="300" yPos="240"> </enemy>
+	<block type="BlockA" xPos="100" yPos="350"> </block>
+	<block type="BlockA" xPos="164" yPos="350"> </block>
+	<block type="BlockA" xPos="228" yPos="350"> </block>
+	<block type="BlockA" xPos="292" yPos="350"> </block>
+	<block type="BlockA" xPos="356" yPos="350"> </block>
+	<block type="BlockA" xPos="420" yPos="350"> </block>
+	<block type="BlockA" xPos="484" yPos="350"> </block>
+</Room>

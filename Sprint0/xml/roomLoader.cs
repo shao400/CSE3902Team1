@@ -14,9 +14,9 @@ using Sprint0.Items;
 
 namespace Sprint0.xml
 {
-    class roomLoader
+    public class roomLoader
     {
-        static public void LoadRoomFromXML(String filename)
+        static public roomProperties LoadRoomFromXML(String filename)
         {
             roomProperties room = null;
            
@@ -25,6 +25,7 @@ namespace Sprint0.xml
                 stream.ReadLine(); //First line(useless) of the xml file
                 room = LoadRoom(stream);
             }
+            return room;
         }
         static private roomProperties LoadRoom(StreamReader stream)
         {
@@ -45,46 +46,49 @@ namespace Sprint0.xml
                     int yPos = 0;
                     for (int count = 1; count < currentText.Length; count++)
                     {
-                        if (currentText[count].Substring(0,5).Equals("xpos"))
+                        if (currentText[count].Substring(0,5).Equals("xPos="))
                             xPos = Int32.Parse(currentText[count].Trim('"'));
-                        else if (currentText[count].Substring(0, 5).Equals("ypos"))
+                        else if (currentText[count].Substring(0, 5).Equals("yPos="))
                             yPos = Int32.Parse(currentText[count].Trim('"'));
                     }
                     link = new Player1(xPos, yPos, 48, 48);
-
                 }else
                 {
-                    int xPos = 0;
-                    int yPos = 0;
+                    int? xPos = 0;
+                    int? yPos = 0;
                     String type = "";
                     for (int count = 1; count < currentText.Length; count++)
                     {
-                        if (currentText[count].Substring(0, 5).Equals("xpos"))
-                            xPos = Int32.Parse(currentText[count].Trim('"'));
-                        else if (currentText[count].Substring(0, 5).Equals("ypos"))
-                            yPos = Int32.Parse(currentText[count].Trim('"'));
-                        else if (currentText[count].Substring(0, 5).Equals("type="))
-                            type = currentText[count].Trim('"');
+                        String temp = currentText[count];
+                        if (currentText[count].Length > 5)
+                        {
+                            if (currentText[count].Substring(0, 5).Equals("xPos="))
+                                xPos = Int32.Parse(currentText[count].Substring(5).Trim('"'));
+                            else if (currentText[count].Substring(0, 5).Equals("yPos="))
+                                yPos = Int32.Parse(currentText[count].Substring(5).Trim('"'));
+                            else if (currentText[count].Substring(0, 5).Equals("type="))
+                                type = currentText[count].Substring(5).Trim('"');
+                        }
                     }
                     switch (type.Trim('"'))
                     {
                         case "Moblin":
-                            enemies.Add(new Moblin(xPos, yPos));
+                            enemies.Add(new Moblin(xPos.Value, yPos.Value));
                             break;
                         case "Peahat":
-                            enemies.Add(new Peahat(xPos, yPos));
+                            enemies.Add(new Peahat(xPos.Value, yPos.Value));
                             break;
                         case "Tektite":
-                            enemies.Add(new Tektite(xPos, yPos));
+                            enemies.Add(new Tektite(xPos.Value, yPos.Value));
                             break;
                         case "BlockA":
-                            blocks.Add(new BlockA(xPos, yPos));
+                            blocks.Add(new BlockA(xPos.Value, yPos.Value));
                             break;
                         case "BlockB":
-                            blocks.Add(new BlockB(xPos, yPos));
+                            blocks.Add(new BlockB(xPos.Value, yPos.Value));
                             break;
                         case "BlockC":
-                            blocks.Add(new BlockC(xPos, yPos));
+                            blocks.Add(new BlockC(xPos.Value, yPos.Value));
                             break;
                     }
                 }

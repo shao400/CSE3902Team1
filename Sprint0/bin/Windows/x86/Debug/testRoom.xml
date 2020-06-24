@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <testRoom>
 	<player xpos="100" ypos="100" />
 	<enemy type="Moblin" xpos="650" ypos="240" />
