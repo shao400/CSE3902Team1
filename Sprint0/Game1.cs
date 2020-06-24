@@ -29,8 +29,9 @@ namespace Sprint0
         public SpriteFont font;
         public IController controls;
         public roomProperties currentRoom;
+        public List<roomProperties> roomList;
         public XmlReader reader;
-
+        public int roomCount;
         List<object> controllerList; // could also be defined as List <IController>
     
         public Game1()
@@ -50,9 +51,17 @@ namespace Sprint0
             controllerList = new List<object>();
             controllerList.Add(new KeyboardC(this));
             controllerList.Add(new ItemsController(this));
+            controllerList.Add(new MouseC(this));
             base.Initialize();
-            reader = XmlReader.Create("testRoom.xml");
-            currentRoom = Loader.LoadFromReader(reader);
+            roomCount = 0;
+            roomList = new List<roomProperties>();
+            reader = XmlReader.Create("testRoom0.xml");
+            roomList.Add(Loader.LoadFromReader(reader));
+            reader = XmlReader.Create("testRoom1.xml");
+            roomList.Add(Loader.LoadFromReader(reader));
+            reader = XmlReader.Create("testRoom2.xml");
+            roomList.Add(Loader.LoadFromReader(reader));
+            currentRoom = roomList[roomCount];
             reader.Close();
         }
         /// <summary>
@@ -94,7 +103,6 @@ namespace Sprint0
             }
 
             currentRoom.link.Update();
-
             currentRoom.link.BlockCollisionTest(currentRoom.blockList);
             currentRoom.link.EnemyCollisionTest(currentRoom.enemyList);
             currentRoom.link.ItemCollisionTest(currentRoom.itemList);

@@ -62,6 +62,8 @@
     <Compile Include="Commands\D4FourthWeapon.cs" />
     <Compile Include="Commands\D3ThirdWeapon.cs" />
     <Compile Include="Commands\iPrevItem.cs" />
+    <Compile Include="Commands\MouseRightNextRM.cs" />
+    <Compile Include="Commands\MouseLeftLastRM.cs" />
     <Compile Include="Commands\Stand.cs" />
     <Compile Include="Commands\tSwitchBlock.cs" />
     <Compile Include="Commands\rReset.cs" />
@@ -75,6 +77,7 @@
     <Compile Include="Commands\ySwitchBlock.cs" />
     <Compile Include="Commands\Attack.cs" />
     <Compile Include="Controller\ItemsController.cs" />
+    <Compile Include="Controller\MouseC.cs" />
     <Compile Include="Controller\KeyboardC.cs" />
     <Compile Include="Enemies\Moblin.cs" />
     <Compile Include="Enemies\Peahat.cs" />
