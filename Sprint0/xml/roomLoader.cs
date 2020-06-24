@@ -11,6 +11,7 @@ using System.Xml;
 using Sprint0.Enemies;
 using Sprint0.Block;
 using Sprint0.Items;
+using Sprint0.Rooms;
 
 namespace Sprint0.xml
 {
@@ -32,6 +33,7 @@ namespace Sprint0.xml
             List<IEnemy> enemies = new List<IEnemy>();
             List<IBlock> blocks = new List<IBlock>();
             List<IItem> items = new List<IItem>();
+            List<IRoom> rooms = new List<IRoom>();
             Player1 link = null;
             
             String line;
@@ -99,6 +101,15 @@ namespace Sprint0.xml
                             blocks.Add(new BlockB(xpos.Value, ypos.Value));
                             break;
                         case "BlockC":
+                            blocks.Add(new BlockC(xpos.Value, ypos.Value));
+                            break;
+                        case "RoomBlock":
+                            blocks.Add(new BlockB(xpos.Value, ypos.Value));
+                            break;
+                        case "RoomEnemy":
+                            blocks.Add(new BlockC(xpos.Value, ypos.Value));
+                            break;
+                        case "RoomItem":
                             blocks.Add(new BlockC(xpos.Value, ypos.Value));
                             break;
                     }

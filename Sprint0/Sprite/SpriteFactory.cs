@@ -74,12 +74,21 @@ namespace Sprint0.Sprite
         public static ISprite BlockB = new BlockBSprite();
         public static ISprite BlockC = new BlockCSprite();
 
+
+        //Room Author Zhizhou He
+        public static List<ISprite> RoomList = new List<ISprite>();
+        public static ISprite RoomBlock = new RoomBlockASprite();
+        public static ISprite RoomItem = new RoomItemSprite();
+        public static ISprite RoomEnemy = new RoomEnemySprite();
+
+
         public static void LoadContent(SpriteBatch batch, ContentManager content)
         {
             LoadLinkContent(batch, content);
             LoadItemContent(batch, content);
             LoadEnemyContent(batch, content);
             LoadBlockContent(batch, content);
+            LoadRoomContent(batch, content);
         }
 
 
@@ -164,5 +173,14 @@ namespace Sprint0.Sprite
             BlockList.Add(BlockC);
         }
 
+        private static void LoadRoomContent(SpriteBatch batch, ContentManager content)
+        {
+            RoomBlock.LoadContent(batch, content.Load<Texture2D>("Room"));
+            RoomItem.LoadContent(batch, content.Load<Texture2D>("Room"));
+            RoomEnemy.LoadContent(batch, content.Load<Texture2D>("Room"));
+            RoomList.Add(RoomBlock);
+            RoomList.Add(RoomItem);
+            RoomList.Add(RoomEnemy);
+        }
     }
 }
