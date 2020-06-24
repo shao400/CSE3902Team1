@@ -66,6 +66,7 @@ namespace Sprint0.Sprite
         public static ItemHeartSprite ItemHeart = new ItemHeartSprite();
         public static ItemGirlSprite ItemGirl = new ItemGirlSprite();
         public static ItemClockSprite ItemClock = new ItemClockSprite();
+        public static ItemBombSprite ItemBomb = new ItemBombSprite();
 
         // Block Author: Zilin Shao
         public static List<ISprite> BlockList = new List<ISprite>();
@@ -135,10 +136,12 @@ namespace Sprint0.Sprite
             ItemHeart.LoadContent(batch, content.Load<Texture2D>("item"));
             ItemGirl.LoadContent(batch, content.Load<Texture2D>("item"));
             ItemClock.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemBomb.LoadContent(batch, content.Load<Texture2D>("item"));
 
             ItemList.Add(ItemHeart);
             ItemList.Add(ItemGirl);
             ItemList.Add(ItemClock);
+            ItemList.Add(ItemBomb);
         }
 
         private static void LoadEnemyContent(SpriteBatch batch, ContentManager content)

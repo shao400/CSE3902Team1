@@ -88,6 +88,7 @@
     <Compile Include="Interfaces\IState.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />
     <Compile Include="Interfaces\ISprite.cs" />
+    <Compile Include="Items\Bomb.cs" />
     <Compile Include="Items\mClock.cs" />
     <Compile Include="Items\Heart.cs" />
     <Compile Include="Player1.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="Sprite\EnemyMoblinSprite.cs" />
     <Compile Include="Sprite\EnemyPeahatSprite.cs" />
     <Compile Include="Sprite\EnemyTektiteSprite.cs" />
+    <Compile Include="Sprite\ItemBombSprite.cs" />
     <Compile Include="Sprite\ItemClockSprite.cs" />
     <Compile Include="Sprite\ItemGirlSprite.cs" />
     <Compile Include="Sprite\ItemHeartSprite.cs" />
