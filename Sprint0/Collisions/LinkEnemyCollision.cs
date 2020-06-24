@@ -33,11 +33,13 @@ namespace Spriny0.Collisions
 
                 if (!intersectionRectangle.IsEmpty)
                 {
+                    myPlayer.takeDmg();
                     if (intersectionRectangle.Width >= intersectionRectangle.Height)
                     {
-                        //myPlayer.Hit(); need implementation
+                        //myPlayer.Hit(); need implementation                       
                         if (linkRectangle.Y > enemyRectangle.Y && linkRectangle.Y > 0) // from down
                         {
+
                             if (myPlayer.yAxis < 432 - intersectionRectangle.Height)
                             {
                                 myPlayer.yAxis += intersectionRectangle.Height;
@@ -48,8 +50,9 @@ namespace Spriny0.Collisions
                             }
                             //myPlayer.yAxis += intersectionRectangle.Height;
                             if (myPlayer.yAxis < 432) { myPlayer.yAxis += 40; } else { myPlayer.yAxis = 432; }
+                            
                         }
-                        else //from up
+                        else if (linkRectangle.Y < enemyRectangle.Y) //from up
                         {
                             if (myPlayer.yAxis > intersectionRectangle.Height)
                             {
