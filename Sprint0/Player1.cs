@@ -21,19 +21,20 @@ namespace Sprint0.Player
         public int yAxis;
         private int width;
         private int height;
+        private Sound sound;
         private string currentFacing, currentStatus;
         private LinkBlockCollision linkBlockCollision;
         private LinkItemCollision linkItemCollision;
         private LinkEnemyCollision linkEnemyCollision;
 
-        public Player1(int x, int y, int width_g, int height_g) 
+        public Player1(int x, int y, int width_g, int height_g, Sound snd) 
         {
             states = new P1State();
             xAxis = x;
             yAxis = y;
             width = width_g;
             height = height_g;
-
+            sound = snd;
             linkBlockCollision = new LinkBlockCollision(this);
             linkItemCollision = new LinkItemCollision(this);
             linkEnemyCollision = new LinkEnemyCollision(this);
@@ -129,6 +130,7 @@ namespace Sprint0.Player
         }
         public void takeDmg()
         {
+            sound.linkHurt();
             states.takeDmg();
             states.decreaseLife();
         }
@@ -140,14 +142,17 @@ namespace Sprint0.Player
         }
         public void UseFirstItem()
         {
+            sound.swordSlash();
             states.UseFirstItem();
         }
         public void UseSecondItem()
         {
+            sound.swordSlash();
             states.UseSecondItem();
         }
         public void UseThirdItem()
         {
+            sound.swordSlash();
             states.UseThirdItem();
         }
         public void UseFourthItem()

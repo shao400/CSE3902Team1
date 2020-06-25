@@ -104,6 +104,7 @@
     <Compile Include="Rooms\RoomEnemy.cs" />
     <Compile Include="Rooms\ExRoom.cs" />
     <Compile Include="Rooms\RoomItem.cs" />
+    <Compile Include="Sound.cs" />
     <Compile Include="Sprite\BlockASprite.cs" />
     <Compile Include="Sprite\BlockBSprite.cs" />
     <Compile Include="Sprite\BlockCSprite.cs" />

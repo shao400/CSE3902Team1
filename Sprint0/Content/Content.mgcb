@@ -80,3 +80,15 @@
 /processorParam:TextureFormat=Color
 /build:luigi.png
 
+#begin Sounds/LOZ_Link_Hurt.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/LOZ_Link_Hurt.wav
+
+#begin Sounds/SwordSlash.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/SwordSlash.wav
+

@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using Sprint0.xml;
 using System.Xml;
+using Microsoft.Xna.Framework.Audio;
 
 namespace Sprint0
 {
@@ -32,6 +33,10 @@ namespace Sprint0
         public List<roomProperties> roomList;
         public XmlReader reader;
         public int roomCount;
+        private Sound sound;
+        List<SoundEffect> sounds;
+
+
         List<object> controllerList; // could also be defined as List <IController>
     
         public Game1()
@@ -52,7 +57,9 @@ namespace Sprint0
             graphics.PreferredBackBufferWidth = 768;
             graphics.ApplyChanges();
             //a way to modify screen size, better way probably exists
-
+            sounds =new List<SoundEffect>();
+            sounds.Add(Content.Load<SoundEffect>("Sounds/SwordSlash"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Link_Hurt"));
             controllerList = new List<object>();
             controllerList.Add(new KeyboardC(this));
             controllerList.Add(new ItemsController(this));
@@ -62,11 +69,11 @@ namespace Sprint0
             roomCount = 0;
             roomList = new List<roomProperties>();
             reader = XmlReader.Create("testRoom0.xml");
-            roomList.Add(Loader.LoadFromReader(reader));
+            roomList.Add(Loader.LoadFromReader(reader, sound));
             reader = XmlReader.Create("testRoom1.xml");
-            roomList.Add(Loader.LoadFromReader(reader));
+            roomList.Add(Loader.LoadFromReader(reader, sound));
             reader = XmlReader.Create("testRoom2.xml");
-            roomList.Add(Loader.LoadFromReader(reader));
+            roomList.Add(Loader.LoadFromReader(reader, sound));
             currentRoom = roomList[roomCount];
             reader.Close();
         }
@@ -78,9 +85,9 @@ namespace Sprint0
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            
-            // TODO: use this.Content to load your game content here
 
+            // TODO: use this.Content to load your game content here
+            sound = new Sound(sounds);
             Sprite.SpriteFactory.LoadContent(spriteBatch, Content);
             
         }

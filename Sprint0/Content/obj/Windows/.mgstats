@@ -1,0 +1,9 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Blocks.png","E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/bin/Windows/Blocks.xnb","TextureProcessor","Texture2DContent",74652,5826381,0.2742507
+"E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Credits1.spritefont","E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/bin/Windows/Credits1.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21521,0.1771548
+"E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/enemy.png","E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/bin/Windows/enemy.xnb","TextureProcessor","Texture2DContent",26805,485701,0.0230279
+"E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/items.png","E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/bin/Windows/item.xnb","TextureProcessor","Texture2DContent",6408,138325,0.0160144
+"E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/link.png","E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/bin/Windows/link.xnb","TextureProcessor","Texture2DContent",19462,460125,0.0212916
+"E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/luigi.png","E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/bin/Windows/luigi.xnb","TextureProcessor","Texture2DContent",6625,304645,0.017017
+"E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Link_Hurt.wav","E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/bin/Windows/Sounds/LOZ_Link_Hurt.xnb","SoundEffectProcessor","SoundEffectContent",5416,5477,0.1516562
+"E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/SwordSlash.wav","E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/bin/Windows/Sounds/SwordSlash.xnb","SoundEffectProcessor","SoundEffectContent",8598,8658,0.1265077
