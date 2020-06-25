@@ -77,7 +77,7 @@ namespace Sprint0.Sprite
 
         //Room Author Zhizhou He
         public static List<ISprite> RoomList = new List<ISprite>();
-        public static ISprite RoomBlock = new RoomBlockASprite();
+        public static ISprite RoomBlock = new RoomBlockSprite();
         public static ISprite RoomItem = new RoomItemSprite();
         public static ISprite RoomEnemy = new RoomEnemySprite();
 
@@ -175,9 +175,9 @@ namespace Sprint0.Sprite
 
         private static void LoadRoomContent(SpriteBatch batch, ContentManager content)
         {
-            RoomBlock.LoadContent(batch, content.Load<Texture2D>("Room"));
-            RoomItem.LoadContent(batch, content.Load<Texture2D>("Room"));
-            RoomEnemy.LoadContent(batch, content.Load<Texture2D>("Room"));
+            RoomBlock.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            RoomItem.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            RoomEnemy.LoadContent(batch, content.Load<Texture2D>("Blocks"));
             RoomList.Add(RoomBlock);
             RoomList.Add(RoomItem);
             RoomList.Add(RoomEnemy);

@@ -55,11 +55,11 @@ namespace Sprint0
             base.Initialize();
             roomCount = 0;
             roomList = new List<roomProperties>();
-            reader = XmlReader.Create("testRoom0.xml");
+            reader = XmlReader.Create("RoomBlock.xml");
             roomList.Add(Loader.LoadFromReader(reader));
-            reader = XmlReader.Create("testRoom1.xml");
+            reader = XmlReader.Create("RoomEnemy.xml");
             roomList.Add(Loader.LoadFromReader(reader));
-            reader = XmlReader.Create("testRoom2.xml");
+            reader = XmlReader.Create("RoomItem.xml");
             roomList.Add(Loader.LoadFromReader(reader));
             currentRoom = roomList[roomCount];
             reader.Close();

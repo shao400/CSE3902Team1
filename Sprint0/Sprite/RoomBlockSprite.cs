@@ -8,12 +8,12 @@ using Microsoft.Xna.Framework;
 
 namespace Sprint0.Sprite
 {
-    public class RoomItemSprite : ISprite
+    public class RoomBlockSprite : ISprite
     {
         private static SpriteBatch spritebatch;
         private static Texture2D texture;
         Rectangle sourceRec = new Rectangle(587, 193, 192, 112);
-        
+
 
         public void Update()
         {

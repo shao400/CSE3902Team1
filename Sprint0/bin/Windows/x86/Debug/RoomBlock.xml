@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Room>
+	<player xpos="100" ypos="100" > </player>
+	<exterior xpos="0" ypos="0" > </exterior>
+	<interior type="RoomBlock" xpos="100" ypos="100" > </interior>
+	<block type="BlockA" xpos="350" ypos="200"> </block>
+	<block type="BlockA" xpos="400" ypos="200"> </block>
+	<block type="BlockA" xpos="350" ypos="250"> </block>
+	<block type="BlockA" xpos="400" ypos="250"> </block>
+	<block type="BlockA" xpos="350" ypos="300"> </block>
+	<block type="BlockA" xpos="400" ypos="300"> </block>
+</Room>

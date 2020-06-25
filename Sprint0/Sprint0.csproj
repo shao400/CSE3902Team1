@@ -88,6 +88,7 @@
     <Compile Include="Interfaces\IController.cs" />
     <Compile Include="Interfaces\IEnemy.cs" />
     <Compile Include="Interfaces\IItem.cs" />
+    <Compile Include="Interfaces\IRoom.cs" />
     <Compile Include="Interfaces\IState.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />
     <Compile Include="Interfaces\ISprite.cs" />
@@ -97,6 +98,9 @@
     <Compile Include="Player1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rooms\RoomBlock.cs" />
+    <Compile Include="Rooms\RoomEnemy.cs" />
+    <Compile Include="Rooms\RoomItem.cs" />
     <Compile Include="Sprite\BlockASprite.cs" />
     <Compile Include="Sprite\BlockBSprite.cs" />
     <Compile Include="Sprite\BlockCSprite.cs" />
@@ -147,6 +151,10 @@
     <Compile Include="Sprite\LinkWoodenStandingLeftSprite.cs" />
     <Compile Include="Sprite\LinkWoodenStandingRightSprite.cs" />
     <Compile Include="Sprite\LinkWoodenStandingUpSprite.cs" />
+    <Compile Include="Sprite\RoomBlockSprite.cs" />
+    <Compile Include="Sprite\RoomEnemySprite.cs" />
+    <Compile Include="Sprite\RoomExteriorSprite.cs" />
+    <Compile Include="Sprite\RoomItemSprite.cs" />
     <Compile Include="Sprite\SpriteFactory.cs" />
     <Compile Include="State\P1State.cs" />
     <Compile Include="xml\Loader.cs" />

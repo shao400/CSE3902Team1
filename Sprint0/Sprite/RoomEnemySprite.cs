@@ -11,7 +11,6 @@ namespace Sprint0.Sprite
     public class RoomEnemySprite : ISprite
     {
         private static SpriteBatch spritebatch;
-        private static SpriteBatch spritebatch;
         private static Texture2D texture;
         Rectangle sourceRec = new Rectangle(977, 653, 192, 112);
         
