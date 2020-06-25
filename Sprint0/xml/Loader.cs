@@ -22,6 +22,7 @@ namespace Sprint0.xml
             List<IBlock> blocks = new List<IBlock>();
             List<IItem> items = new List<IItem>();
             List<IRoom> rooms = new List<IRoom>();
+            List<IHud> huds = new List<IHud>();
             Player1 link = null;
             reader.MoveToContent();
             reader.Read(); // jump over <Room>
@@ -78,7 +79,7 @@ namespace Sprint0.xml
                     }
                 }
             }
-            return new roomProperties(blocks, items, enemies, rooms, link);
+            return new roomProperties(blocks, items, enemies, rooms, huds, link);
         }
     }
 }

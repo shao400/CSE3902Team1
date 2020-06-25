@@ -130,6 +130,7 @@ namespace Sprint0.Player
         public void takeDmg()
         {
             states.takeDmg();
+            states.decreaseLife();
         }
         public void Player_Reset()
         {

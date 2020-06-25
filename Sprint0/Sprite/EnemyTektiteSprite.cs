@@ -19,7 +19,7 @@ namespace Sprint0.Sprite
         bool backmove = false;
         public EnemyTektiteSprite(int x, int y)
         {
-            destinationRec = new Rectangle(x, y, 64, 64);
+            destinationRec = new Rectangle(x, y, 48, 48);
         }
         public void Update()
         {

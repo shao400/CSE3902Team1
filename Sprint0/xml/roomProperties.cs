@@ -14,15 +14,17 @@ namespace Sprint0.xml
         public List<IItem> itemList;
         public List<IEnemy> enemyList;
         List<IRoom> roomList;
+        public List<IHud> hudList;
         public Player1 link;
 
         //Constructor method
-        public roomProperties(List<IBlock> b, List<IItem> i, List<IEnemy> e, List<IRoom> r, Player1 p)
+        public roomProperties(List<IBlock> b, List<IItem> i, List<IEnemy> e, List<IRoom> r, List<IHud> h, Player1 p)
         {
             itemList = i;
             enemyList = e;
             blockList = b;
             roomList = r;
+            hudList = h;
             link = p;
         }
         public void Draw()
@@ -42,6 +44,10 @@ namespace Sprint0.xml
             for (int i = 0; i < itemList.Count; i++)
             {
                 itemList[i].Draw();
+            }
+            for (int i = 0; i < hudList.Count; i++)
+            {
+                hudList[i].Draw();
             }
         }
 
@@ -63,6 +69,10 @@ namespace Sprint0.xml
             for (int i = 0; i < roomList.Count; i++)
             {
                 roomList[i].Update();
+            }
+            for (int i = 0; i < hudList.Count; i++)
+            {
+                hudList[i].Update();
             }
         }
 

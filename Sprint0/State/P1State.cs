@@ -1,7 +1,9 @@
-﻿using Sprint0.Sprite;
+﻿using Sprint0.Items;
+using Sprint0.Sprite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Lifetime;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,6 +29,8 @@ namespace Sprint0.State
         private facing currentFacing;
         private weapon currentWeapon;
         private status currentStatus;
+        
+        private int currentLife; //not used yet
 
         public P1State()
         {
@@ -35,11 +39,28 @@ namespace Sprint0.State
             currentWeapon = weapon.None;
             currentStatus = status.standing;
             currentSprite = SpriteFactory.LinkNoneStandingRight;
+            //currentLife = 2;
         }
 
         public void Update()
         {
             currentSprite.Update();
+        }
+
+        public int GetCurrentLife()
+        {
+            return currentLife;
+        }
+
+        public void decreaseLife()
+        {
+            currentLife = currentLife- 1;
+            //HealthBar.Reduced();
+        }
+
+        public void increaseLife()
+        {
+            currentLife = currentLife + 1;
         }
         public string GetCurrentFacing()
         {
@@ -238,6 +259,7 @@ namespace Sprint0.State
 
             public void State_Reset()
         {
+            this.currentLife = 2;
             this.currentFacing = facing.right;
             this.currentWeapon = weapon.None;
             this.currentStatus = status.standing;

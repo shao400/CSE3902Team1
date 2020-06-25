@@ -21,7 +21,7 @@ namespace Sprint0.Sprite
         
         public EnemyMoblinSprite(int x, int y)
         {
-            destinationRec = new Rectangle(x, y, 64, 64);
+            destinationRec = new Rectangle(x, y, 48, 48);
         }
 
 

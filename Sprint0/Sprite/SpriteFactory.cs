@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Sprint0.Controller;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
+using Sprint0.Interfaces;
+using Sprint0.Items;
 //Author: Gengyi Qin
 namespace Sprint0.Sprite
 {
@@ -82,7 +84,11 @@ namespace Sprint0.Sprite
         public static ISprite RoomEnemy = new RoomEnemySprite();
         public static ISprite RoomExterior = new RoomExteriorSprite();
 
-
+        //Hud Author: Zilin Shao
+        public static List<IHud> HudList = new List<IHud>();
+        public static HudHalfHeartSprite HudHalfHeart = new HudHalfHeartSprite();
+        public static HudEmptyHeartSprite HudEmptyHeart = new HudEmptyHeartSprite();
+        public static ItemHeartSprite HudHeart = new ItemHeartSprite();
 
         public static void LoadContent(SpriteBatch batch, ContentManager content)
         {
@@ -91,6 +97,7 @@ namespace Sprint0.Sprite
             LoadEnemyContent(batch, content);
             LoadBlockContent(batch, content);
             LoadRoomContent(batch, content);
+            LoadHudContent(batch, content);
         }
 
 
@@ -153,6 +160,17 @@ namespace Sprint0.Sprite
             ItemList.Add(ItemGirl);
             ItemList.Add(ItemClock);
             ItemList.Add(ItemBomb);
+        }
+
+        private static void LoadHudContent(SpriteBatch batch, ContentManager content)
+        {
+            HudHalfHeart.LoadContent(batch, content.Load<Texture2D>("item"));
+            HudEmptyHeart.LoadContent(batch, content.Load<Texture2D>("item"));
+            HudHeart.LoadContent(batch, content.Load<Texture2D>("item"));
+
+            ItemList.Add(HudHalfHeart);
+            ItemList.Add(HudEmptyHeart);
+            ItemList.Add(HudHeart);
         }
 
         private static void LoadEnemyContent(SpriteBatch batch, ContentManager content)

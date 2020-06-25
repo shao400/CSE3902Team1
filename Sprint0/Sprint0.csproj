@@ -83,10 +83,12 @@
     <Compile Include="Enemies\Peahat.cs" />
     <Compile Include="Enemies\Tektite.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="HUD\HealthBar.cs" />
     <Compile Include="Interfaces\IBlock.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\IController.cs" />
     <Compile Include="Interfaces\IEnemy.cs" />
+    <Compile Include="Interfaces\IHud.cs" />
     <Compile Include="Interfaces\IItem.cs" />
     <Compile Include="Interfaces\IRoom.cs" />
     <Compile Include="Interfaces\IState.cs" />
@@ -108,6 +110,8 @@
     <Compile Include="Sprite\EnemyMoblinSprite.cs" />
     <Compile Include="Sprite\EnemyPeahatSprite.cs" />
     <Compile Include="Sprite\EnemyTektiteSprite.cs" />
+    <Compile Include="Sprite\HudEmptyHeartSprite.cs" />
+    <Compile Include="Sprite\HudHalfHeartSprite.cs" />
     <Compile Include="Sprite\ItemBombSprite.cs" />
     <Compile Include="Sprite\ItemClockSprite.cs" />
     <Compile Include="Sprite\ItemGirlSprite.cs" />
