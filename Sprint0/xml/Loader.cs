@@ -9,6 +9,7 @@ using Sprint0.Enemies;
 using Sprint0.Block;
 using Sprint0.Items;
 using Sprint0.Interfaces;
+using Sprint0.Rooms;
 
 namespace Sprint0.xml
 {
@@ -20,6 +21,7 @@ namespace Sprint0.xml
             List<IEnemy> enemies = new List<IEnemy>();
             List<IBlock> blocks = new List<IBlock>();
             List<IItem> items = new List<IItem>();
+            List<IRoom> rooms = new List<IRoom>();
             Player1 link = null;
             reader.MoveToContent();
             reader.Read(); // jump over <Room>
@@ -33,7 +35,7 @@ namespace Sprint0.xml
                     link = new Player1(Int32.Parse(reader.GetAttribute("xpos")), Int32.Parse(reader.GetAttribute("ypos")), 48, 48);
                     Console.WriteLine("link xpos: " + Int32.Parse(reader.GetAttribute("xpos")) + "link ypos: " + Int32.Parse(reader.GetAttribute("ypos")));
                 }
-                else if(reader.Name == "enemy" || reader.Name == "item" || reader.Name == "block")
+                else if(reader.Name == "enemy" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior")
                 {
                     count++;
                     Console.WriteLine("2nd loop xpos:" + Int32.Parse(reader.GetAttribute("xpos")) + "ypos: " + Int32.Parse(reader.GetAttribute("ypos")) + "type: " + reader.GetAttribute("type"));
@@ -61,10 +63,22 @@ namespace Sprint0.xml
                         case "BlockC":
                             blocks.Add(new BlockC(xpos, ypos));
                             break;
+                        case "RoomBlock":
+                            rooms.Add(new RoomBlock(xpos, ypos));
+                            break;
+                        case "RoomEnemy":
+                            rooms.Add(new RoomEnemy(xpos, ypos));
+                            break;
+                        case "RoomItem":
+                            rooms.Add(new RoomItem(xpos, ypos));
+                            break;
+                        case "exRoom":
+                            rooms.Add(new ExRoom(xpos, ypos));
+                            break;
                     }
                 }
             }
-            return new roomProperties(blocks, items, enemies, link);
+            return new roomProperties(blocks, items, enemies, rooms, link);
         }
     }
 }

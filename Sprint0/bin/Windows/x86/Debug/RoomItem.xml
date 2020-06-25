@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Room>
 	<player xpos="100" ypos="100" > </player>
-	<exterior xpos="0" ypos="0" > </exterior>
+	<exterior type="exRoom" xpos="0" ypos="0" > </exterior>
 	<interior type="RoomItem" xpos="100" ypos="100" > </interior>
 	<item type="Heart" xpos="250" ypos="250"> </item>
 	<item type="Clock" xpos="500" ypos="250"> </item>

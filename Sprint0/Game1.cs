@@ -52,14 +52,15 @@ namespace Sprint0
             controllerList.Add(new KeyboardC(this));
             controllerList.Add(new ItemsController(this));
             controllerList.Add(new MouseC(this));
+            this.IsMouseVisible = true;
             base.Initialize();
             roomCount = 0;
             roomList = new List<roomProperties>();
-            reader = XmlReader.Create("RoomBlock.xml");
+            reader = XmlReader.Create("testRoom0.xml");
             roomList.Add(Loader.LoadFromReader(reader));
-            reader = XmlReader.Create("RoomEnemy.xml");
+            reader = XmlReader.Create("testRoom1.xml");
             roomList.Add(Loader.LoadFromReader(reader));
-            reader = XmlReader.Create("RoomItem.xml");
+            reader = XmlReader.Create("testRoom2.xml");
             roomList.Add(Loader.LoadFromReader(reader));
             currentRoom = roomList[roomCount];
             reader.Close();

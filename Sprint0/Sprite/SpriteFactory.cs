@@ -80,6 +80,8 @@ namespace Sprint0.Sprite
         public static ISprite RoomBlock = new RoomBlockSprite();
         public static ISprite RoomItem = new RoomItemSprite();
         public static ISprite RoomEnemy = new RoomEnemySprite();
+        public static ISprite RoomExterior = new RoomExteriorSprite();
+
 
 
         public static void LoadContent(SpriteBatch batch, ContentManager content)

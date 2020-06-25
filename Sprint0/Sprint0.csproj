@@ -100,6 +100,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rooms\RoomBlock.cs" />
     <Compile Include="Rooms\RoomEnemy.cs" />
+    <Compile Include="Rooms\ExRoom.cs" />
     <Compile Include="Rooms\RoomItem.cs" />
     <Compile Include="Sprite\BlockASprite.cs" />
     <Compile Include="Sprite\BlockBSprite.cs" />
@@ -158,7 +159,6 @@
     <Compile Include="Sprite\SpriteFactory.cs" />
     <Compile Include="State\P1State.cs" />
     <Compile Include="xml\Loader.cs" />
-    <Compile Include="xml\roomLoader.cs" />
     <Compile Include="xml\roomProperties.cs" />
   </ItemGroup>
   <ItemGroup>

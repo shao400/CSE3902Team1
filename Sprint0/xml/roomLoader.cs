@@ -33,7 +33,7 @@ namespace Sprint0.xml
             List<IEnemy> enemies = new List<IEnemy>();
             List<IBlock> blocks = new List<IBlock>();
             List<IItem> items = new List<IItem>();
-            List<IRoom> rooms = new List<IRoom>();
+
             Player1 link = null;
             
             String line;
@@ -104,13 +104,13 @@ namespace Sprint0.xml
                             blocks.Add(new BlockC(xpos.Value, ypos.Value));
                             break;
                         case "RoomBlock":
-                            blocks.Add(new BlockB(xpos.Value, ypos.Value));
+                            blocks.Add(new RoomBlock(xpos.Value, ypos.Value));
                             break;
                         case "RoomEnemy":
-                            blocks.Add(new BlockC(xpos.Value, ypos.Value));
+                            blocks.Add(new RoomEnemy(xpos.Value, ypos.Value));
                             break;
                         case "RoomItem":
-                            blocks.Add(new BlockC(xpos.Value, ypos.Value));
+                            blocks.Add(new ExRoom(xpos.Value, ypos.Value));
                             break;
                     }
                 }
