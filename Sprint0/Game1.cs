@@ -48,7 +48,7 @@ namespace Sprint0
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            graphics.PreferredBackBufferHeight = 528;
+            graphics.PreferredBackBufferHeight = 696;
             graphics.PreferredBackBufferWidth = 768;
             graphics.ApplyChanges();
             //a way to modify screen size, better way probably exists

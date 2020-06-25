@@ -8,9 +8,9 @@ using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
 using Sprint0.Sprite;
 
-namespace Sprint0.Items
+namespace Sprint0.HUD
 {
-    class HealthBar : IHud
+    public class HealthBar : IHud
     {
         private HudEmptyHeartSprite empty = SpriteFactory.HudEmptyHeart;
         private HudEmptyHeartSprite half = SpriteFactory.HudEmptyHeart;
@@ -30,7 +30,7 @@ namespace Sprint0.Items
         }
         public void Draw()
         {
-            Vector2 location = new Vector2(xAix, yAix);
+            Vector2 location = new Vector2(50, 550); //test, change to xAix and yAix later
             if (health == 2)
             {
                 solid.Draw(location, false);
@@ -57,7 +57,7 @@ namespace Sprint0.Items
 
         public void Update()
         {
-            //ItemHeartSprite.update();
+            
         }
 
         public Rectangle GetRectangle()

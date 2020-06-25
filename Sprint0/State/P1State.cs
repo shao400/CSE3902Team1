@@ -1,11 +1,13 @@
 ﻿using Sprint0.Items;
 using Sprint0.Sprite;
+using Sprint0.HUD;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Lifetime;
 using System.Text;
 using System.Threading.Tasks;
+
 
 //Author: Chuwen Sun, Zhizhou He
 namespace Sprint0.State
@@ -29,6 +31,7 @@ namespace Sprint0.State
         private facing currentFacing;
         private weapon currentWeapon;
         private status currentStatus;
+        private HealthBar currentHealth = new HealthBar(50, 550);
         
         private int currentLife; //not used yet
 
@@ -55,7 +58,7 @@ namespace Sprint0.State
         public void decreaseLife()
         {
             currentLife = currentLife- 1;
-            //HealthBar.Reduced();
+            currentHealth.Reduced();
         }
 
         public void increaseLife()
