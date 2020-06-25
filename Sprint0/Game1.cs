@@ -118,8 +118,8 @@ namespace Sprint0
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            currentRoom.link.getSprite().Draw(new Vector2(currentRoom.link.xAxis, currentRoom.link.yAxis), currentRoom.link.isTakingDmg());
             currentRoom.Draw();
+            currentRoom.link.getSprite().Draw(new Vector2(currentRoom.link.xAxis, currentRoom.link.yAxis), currentRoom.link.isTakingDmg());
             base.Draw(gameTime);
         }
       

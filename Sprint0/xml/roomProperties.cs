@@ -27,6 +27,14 @@ namespace Sprint0.xml
         }
         public void Draw()
         {
+            for (int i = 0; i < roomList.Count; i++)
+            {
+                roomList[i].Draw();
+            }
+            for (int i = 0; i < blockList.Count; i++)
+            {
+                blockList[i].Draw();
+            }
             for (int i = 0; i < enemyList.Count; i++)
             {
                 enemyList[i].Draw();
@@ -34,14 +42,6 @@ namespace Sprint0.xml
             for (int i = 0; i < itemList.Count; i++)
             {
                 itemList[i].Draw();
-            }
-            for (int i = 0; i < blockList.Count; i++)
-            {
-                blockList[i].Draw();
-            }
-            for (int i = 0; i < roomList.Count; i++)
-            {
-                roomList[i].Draw();
             }
         }
 

@@ -12,7 +12,7 @@ namespace Sprint0.Rooms
 {
     class ExRoom : IRoom
     {
-        private ISprite sprite = SpriteFactory.RoomItem;
+        private ISprite sprite = SpriteFactory.RoomExterior;
         private int xpos;
         private int ypos;
         public ExRoom(int x, int y)
