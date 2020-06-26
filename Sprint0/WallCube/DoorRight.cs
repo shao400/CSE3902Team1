@@ -8,11 +8,11 @@ using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
 using Sprint0.Sprite;
 
-namespace Sprint0.Rooms
+namespace Sprint0.WallCube
 {
     class DoorRight : IWallCube
     {
-        private ISprite sprite = SpriteFactory.RoomBlock;
+        private ISprite sprite = SpriteFactory.DoorRight;
         private int xpos;
         private int ypos;
         public DoorRight(int x, int y)

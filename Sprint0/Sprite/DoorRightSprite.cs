@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework;
 
 namespace Sprint0.Sprite
 {
-    public class DoorLeftSprite : ISprite
+    public class DoorRightSprite : ISprite
     {
         private static SpriteBatch spritebatch;
         private static Texture2D texture;

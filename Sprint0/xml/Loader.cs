@@ -10,6 +10,7 @@ using Sprint0.Block;
 using Sprint0.Items;
 using Sprint0.Interfaces;
 using Sprint0.Rooms;
+using Sprint0.WallCube;
 
 namespace Sprint0.xml
 {
@@ -23,6 +24,7 @@ namespace Sprint0.xml
             List<IItem> items = new List<IItem>();
             List<IRoom> rooms = new List<IRoom>();
             List<IHud> huds = new List<IHud>();
+            List<IWallCube> cubes = new List<IWallCube>();
             Player1 link = null;
             reader.MoveToContent();
             reader.Read(); // jump over <Room>
@@ -36,7 +38,7 @@ namespace Sprint0.xml
                     link = new Player1(Int32.Parse(reader.GetAttribute("xpos")), Int32.Parse(reader.GetAttribute("ypos")), 48, 48);
                     Console.WriteLine("link xpos: " + Int32.Parse(reader.GetAttribute("xpos")) + "link ypos: " + Int32.Parse(reader.GetAttribute("ypos")));
                 }
-                else if(reader.Name == "enemy" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior" || reader.Name == "WallCube")
+                else if(reader.Name == "enemy" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior" || reader.Name == "wallCube")
                 {
                     count++;
                     Console.WriteLine("2nd loop xpos:" + Int32.Parse(reader.GetAttribute("xpos")) + "ypos: " + Int32.Parse(reader.GetAttribute("ypos")) + "type: " + reader.GetAttribute("type"));
@@ -77,21 +79,21 @@ namespace Sprint0.xml
                             rooms.Add(new ExRoom(xpos, ypos));
                             break;
                         case "WallTop":
-                            rooms.Add(new RoomBlock(xpos, ypos));
+                            cubes.Add(new WallTop(xpos, ypos));
                             break;
                         case "WallDown":
-                            rooms.Add(new RoomEnemy(xpos, ypos));
+                            cubes.Add(new WallDown(xpos, ypos));
                             break;
                         case "DoorLeft":
-                            rooms.Add(new RoomItem(xpos, ypos));
+                            cubes.Add(new DoorLeft(xpos, ypos));
                             break;
                         case "DoorRight":
-                            rooms.Add(new ExRoom(xpos, ypos));
+                            cubes.Add(new DoorRight(xpos, ypos));
                             break;
                     }
                 }
             }
-            return new roomProperties(blocks, items, enemies, rooms, huds, link);
+            return new roomProperties(blocks, items, enemies, rooms, huds, cubes, link);
         }
     }
 }

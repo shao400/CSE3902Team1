@@ -13,12 +13,13 @@ namespace Sprint0.xml
         public List<IBlock> blockList;
         public List<IItem> itemList;
         public List<IEnemy> enemyList;
-        List<IRoom> roomList;
+        public List<IWallCube> cubeList;
+        public List<IRoom> roomList;
         public List<IHud> hudList;
         public Player1 link;
 
         //Constructor method
-        public roomProperties(List<IBlock> b, List<IItem> i, List<IEnemy> e, List<IRoom> r, List<IHud> h, Player1 p)
+        public roomProperties(List<IBlock> b, List<IItem> i, List<IEnemy> e, List<IRoom> r, List<IHud> h, List<IWallCube> w, Player1 p)
         {
             itemList = i;
             enemyList = e;
@@ -26,6 +27,7 @@ namespace Sprint0.xml
             roomList = r;
             hudList = h;
             link = p;
+            cubeList = w;
         }
         public void Draw()
         {
@@ -37,6 +39,14 @@ namespace Sprint0.xml
             {
                 blockList[i].Draw();
             }
+            for (int i = 0; i < hudList.Count; i++)
+            {
+                hudList[i].Draw();
+            }
+            for (int i = 0; i < cubeList.Count; i++)
+            {
+                cubeList[i].Draw();
+            }
             for (int i = 0; i < enemyList.Count; i++)
             {
                 enemyList[i].Draw();
@@ -44,10 +54,6 @@ namespace Sprint0.xml
             for (int i = 0; i < itemList.Count; i++)
             {
                 itemList[i].Draw();
-            }
-            for (int i = 0; i < hudList.Count; i++)
-            {
-                hudList[i].Draw();
             }
         }
 
@@ -73,6 +79,10 @@ namespace Sprint0.xml
             for (int i = 0; i < hudList.Count; i++)
             {
                 hudList[i].Update();
+            }
+            for (int i = 0; i < cubeList.Count; i++)
+            {
+                cubeList[i].Update();
             }
         }
 

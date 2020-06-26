@@ -217,14 +217,15 @@ namespace Sprint0.Sprite
         }
             private static void LoadWallCubeContent(SpriteBatch batch, ContentManager content)
         {
-            RoomBlock.LoadContent(batch, content.Load<Texture2D>("Blocks"));
-            RoomItem.LoadContent(batch, content.Load<Texture2D>("Blocks"));
-            RoomEnemy.LoadContent(batch, content.Load<Texture2D>("Blocks"));
-            RoomExterior.LoadContent(batch, content.Load<Texture2D>("Blocks"));
-            RoomList.Add(RoomBlock);
-            RoomList.Add(RoomItem);
-            RoomList.Add(RoomEnemy);
-            RoomList.Add(RoomExterior);
+            WallTop.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            WallDown.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            DoorLeft.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            DoorRight.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            WallCubeList.Add(WallTop);
+            WallCubeList.Add(WallDown);
+            WallCubeList.Add(DoorLeft);
+            WallCubeList.Add(DoorRight);
+
         }
     }
 }

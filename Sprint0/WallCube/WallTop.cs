@@ -8,11 +8,11 @@ using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
 using Sprint0.Sprite;
 
-namespace Sprint0.Rooms
+namespace Sprint0.WallCube
 {
     class WallTop : IWallCube
     {
-        private ISprite sprite = SpriteFactory.RoomExterior;
+        private ISprite sprite = SpriteFactory.WallTop;
         private int xpos;
         private int ypos;
         public WallTop(int x, int y)
