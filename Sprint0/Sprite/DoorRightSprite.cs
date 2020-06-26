@@ -8,11 +8,11 @@ using Microsoft.Xna.Framework;
 
 namespace Sprint0.Sprite
 {
-    public class RoomItemSprite : ISprite
+    public class DoorLeftSprite : ISprite
     {
         private static SpriteBatch spritebatch;
         private static Texture2D texture;
-        Rectangle sourceRec = new Rectangle(2, 194, 192, 112);
+        Rectangle sourceRec = new Rectangle(849, 78, 32, 32);
         
 
         public void Update()
@@ -31,7 +31,7 @@ namespace Sprint0.Sprite
 
         public void Draw(Vector2 location, Boolean isDamaged)
         {
-            Rectangle destinationRec = new Rectangle((int)location.X, (int)location.Y, 576, 336);
+            Rectangle destinationRec = new Rectangle((int)location.X, (int)location.Y, 97, 97);
             spritebatch.Begin();
             spritebatch.Draw(texture, destinationRec, sourceRec, Color.White);
             spritebatch.End();

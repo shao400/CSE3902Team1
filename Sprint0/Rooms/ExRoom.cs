@@ -34,7 +34,7 @@ namespace Sprint0.Rooms
 
         public Rectangle GetRectangle()
         {
-            return new Rectangle(xpos, ypos, 800, 480);
+            return new Rectangle(xpos, ypos, 768, 528);
         }
 
     }

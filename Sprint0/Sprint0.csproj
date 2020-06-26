@@ -90,6 +90,7 @@
     <Compile Include="Interfaces\IEnemy.cs" />
     <Compile Include="Interfaces\IHud.cs" />
     <Compile Include="Interfaces\IItem.cs" />
+    <Compile Include="Interfaces\IWallCube.cs" />
     <Compile Include="Interfaces\IRoom.cs" />
     <Compile Include="Interfaces\IState.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="Sprite\BlockASprite.cs" />
     <Compile Include="Sprite\BlockBSprite.cs" />
     <Compile Include="Sprite\BlockCSprite.cs" />
+    <Compile Include="Sprite\DoorRightSprite.cs" />
     <Compile Include="Sprite\EnemyMoblinSprite.cs" />
     <Compile Include="Sprite\EnemyPeahatSprite.cs" />
     <Compile Include="Sprite\EnemyTektiteSprite.cs" />
@@ -159,9 +161,16 @@
     <Compile Include="Sprite\RoomBlockSprite.cs" />
     <Compile Include="Sprite\RoomEnemySprite.cs" />
     <Compile Include="Sprite\RoomExteriorSprite.cs" />
+    <Compile Include="Sprite\DoorLeftSprite.cs" />
+    <Compile Include="Sprite\WallDownSprite.cs" />
+    <Compile Include="Sprite\WallTopSprite.cs" />
     <Compile Include="Sprite\RoomItemSprite.cs" />
     <Compile Include="Sprite\SpriteFactory.cs" />
     <Compile Include="State\P1State.cs" />
+    <Compile Include="WallCube\WallTop.cs" />
+    <Compile Include="WallCube\DoorRight.cs" />
+    <Compile Include="WallCube\DoorLeft.cs" />
+    <Compile Include="WallCube\WallDown.cs" />
     <Compile Include="xml\Loader.cs" />
     <Compile Include="xml\roomProperties.cs" />
   </ItemGroup>

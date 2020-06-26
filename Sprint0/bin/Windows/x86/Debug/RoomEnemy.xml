@@ -1,37 +1,16 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Room>
-	<player xpos="100" ypos="100" > </player>
-	<exterior type="exRoom" xpos="0" ypos="0" > </exterior>
-	<interior type="RoomEnemy" xpos="100" ypos="100" > </interior>
-	<enemy type="Moblin" xpos="650" ypos="100"> </enemy>
-	<block type="BlockA" xpos="150" ypos="150"> </block>
-	<block type="BlockA" xpos="200" ypos="150"> </block>
-	<block type="BlockA" xpos="250" ypos="150"> </block>
-	<block type="BlockA" xpos="300" ypos="150"> </block>
-	<block type="BlockA" xpos="350" ypos="150"> </block>
-	<block type="BlockA" xpos="400" ypos="150"> </block>
-	<block type="BlockA" xpos="450" ypos="150"> </block>
-	<block type="BlockA" xpos="500" ypos="150"> </block>
-	<block type="BlockA" xpos="550" ypos="150"> </block>
-	<block type="BlockA" xpos="600" ypos="150"> </block>
-	<block type="BlockA" xpos="150" ypos="250"> </block>
-	<block type="BlockA" xpos="200" ypos="250"> </block>
-	<block type="BlockA" xpos="250" ypos="250"> </block>
-	<block type="BlockA" xpos="300" ypos="250"> </block>
-	<block type="BlockA" xpos="350" ypos="250"> </block>
-	<block type="BlockA" xpos="400" ypos="250"> </block>
-	<block type="BlockA" xpos="450" ypos="250"> </block>
-	<block type="BlockA" xpos="500" ypos="250"> </block>
-	<block type="BlockA" xpos="550" ypos="250"> </block>
-	<block type="BlockA" xpos="600" ypos="250"> </block>
-	<block type="BlockA" xpos="150" ypos="350"> </block>
-	<block type="BlockA" xpos="200" ypos="350"> </block>
-	<block type="BlockA" xpos="250" ypos="350"> </block>
-	<block type="BlockA" xpos="300" ypos="350"> </block>
-	<block type="BlockA" xpos="350" ypos="350"> </block>
-	<block type="BlockA" xpos="400" ypos="350"> </block>
-	<block type="BlockA" xpos="450" ypos="350"> </block>
-	<block type="BlockA" xpos="500" ypos="350"> </block>
-	<block type="BlockA" xpos="550" ypos="350"> </block>
-	<block type="BlockA" xpos="600" ypos="350"> </block>
+	<player xpos="100" ypos="100" />
+	<exterior type="exRoom" xpos="0" ypos="168" />
+	<interior type="RoomBlock" xpos="91" ypos="262" />
+	<enemy type="Moblin" xpos="100" ypos="450"/>
+	<block type="BlockA" xpos="281" ypos="306" />
+	<block type="BlockA" xpos="331" ypos="306" />
+	<block type="BlockA" xpos="381" ypos="306" />
+	<block type="BlockA" xpos="281" ypos="406" />
+	<block type="BlockA" xpos="331" ypos="406" />
+	<block type="BlockA" xpos="381" ypos="406" />
+	<block type="BlockA" xpos="281" ypos="506" />
+	<block type="BlockA" xpos="331" ypos="506" />
+	<block type="BlockA" xpos="381" ypos="506" />
 </Room>

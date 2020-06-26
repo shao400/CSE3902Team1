@@ -10,12 +10,12 @@ using Sprint0.Sprite;
 
 namespace Sprint0.Rooms
 {
-    class RoomItem : IRoom
+    class WallTop : IWallCube
     {
-        private ISprite sprite = SpriteFactory.RoomItem;
+        private ISprite sprite = SpriteFactory.RoomExterior;
         private int xpos;
         private int ypos;
-        public RoomItem(int x, int y)
+        public WallTop(int x, int y)
         {
             xpos = x;
             ypos = y;
@@ -34,7 +34,7 @@ namespace Sprint0.Rooms
 
         public Rectangle GetRectangle()
         {
-            return new Rectangle(xpos, ypos, 576, 336);
+            return new Rectangle(xpos, ypos, 97, 97);
         }
 
     }

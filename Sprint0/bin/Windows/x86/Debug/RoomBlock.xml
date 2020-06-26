@@ -1,12 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Room>
-	<player xpos="100" ypos="100" > </player>
-	<exterior type="exRoom" xpos="0" ypos="0" > </exterior>
-	<interior type="RoomBlock" xpos="100" ypos="100" > </interior>
-	<block type="BlockA" xpos="350" ypos="200"> </block>
-	<block type="BlockA" xpos="400" ypos="200"> </block>
-	<block type="BlockA" xpos="350" ypos="250"> </block>
-	<block type="BlockA" xpos="400" ypos="250"> </block>
-	<block type="BlockA" xpos="350" ypos="300"> </block>
-	<block type="BlockA" xpos="400" ypos="300"> </block>
+	<player xpos="100" ypos="100" />
+	<exterior type="exRoom" xpos="0" ypos="168" />
+	<interior type="RoomBlock" xpos="91" ypos="262" />
+	<block type="BlockA" xpos="281" ypos="306" />
+	<block type="BlockA" xpos="331" ypos="306" />
+	<block type="BlockA" xpos="381" ypos="306" />
 </Room>

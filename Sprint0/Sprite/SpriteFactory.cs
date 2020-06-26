@@ -84,11 +84,21 @@ namespace Sprint0.Sprite
         public static ISprite RoomEnemy = new RoomEnemySprite();
         public static ISprite RoomExterior = new RoomExteriorSprite();
 
+        public static List<ISprite> WallCubeList = new List<ISprite>();
+        public static ISprite WallTop = new WallTopSprite();
+        public static ISprite WallDown = new WallDownSprite();
+        public static ISprite DoorLeft = new DoorLeftSprite();
+        public static ISprite DoorRight = new DoorRightSprite();
+
         //Hud Author: Zilin Shao
         public static List<IHud> HudList = new List<IHud>();
         public static HudHalfHeartSprite HudHalfHeart = new HudHalfHeartSprite();
         public static HudEmptyHeartSprite HudEmptyHeart = new HudEmptyHeartSprite();
         public static ItemHeartSprite HudHeart = new ItemHeartSprite();
+
+
+
+
 
         public static void LoadContent(SpriteBatch batch, ContentManager content)
         {
@@ -98,6 +108,7 @@ namespace Sprint0.Sprite
             LoadBlockContent(batch, content);
             LoadRoomContent(batch, content);
             LoadHudContent(batch, content);
+            LoadWallCubeContent(batch, content);
         }
 
 
@@ -194,6 +205,17 @@ namespace Sprint0.Sprite
         }
 
         private static void LoadRoomContent(SpriteBatch batch, ContentManager content)
+        {
+            RoomBlock.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            RoomItem.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            RoomEnemy.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            RoomExterior.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            RoomList.Add(RoomBlock);
+            RoomList.Add(RoomItem);
+            RoomList.Add(RoomEnemy);
+            RoomList.Add(RoomExterior);
+        }
+            private static void LoadWallCubeContent(SpriteBatch batch, ContentManager content)
         {
             RoomBlock.LoadContent(batch, content.Load<Texture2D>("Blocks"));
             RoomItem.LoadContent(batch, content.Load<Texture2D>("Blocks"));

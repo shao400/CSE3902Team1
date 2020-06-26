@@ -12,7 +12,7 @@ namespace Sprint0.Sprite
     {
         private static SpriteBatch spritebatch;
         private static Texture2D texture;
-        Rectangle sourceRec = new Rectangle(523, 12, 257, 176);
+        Rectangle sourceRec = new Rectangle(523, 12, 254, 175);
         
 
         public void Update()

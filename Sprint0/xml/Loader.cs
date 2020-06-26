@@ -36,7 +36,7 @@ namespace Sprint0.xml
                     link = new Player1(Int32.Parse(reader.GetAttribute("xpos")), Int32.Parse(reader.GetAttribute("ypos")), 48, 48);
                     Console.WriteLine("link xpos: " + Int32.Parse(reader.GetAttribute("xpos")) + "link ypos: " + Int32.Parse(reader.GetAttribute("ypos")));
                 }
-                else if(reader.Name == "enemy" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior")
+                else if(reader.Name == "enemy" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior" || reader.Name == "WallCube")
                 {
                     count++;
                     Console.WriteLine("2nd loop xpos:" + Int32.Parse(reader.GetAttribute("xpos")) + "ypos: " + Int32.Parse(reader.GetAttribute("ypos")) + "type: " + reader.GetAttribute("type"));
@@ -74,6 +74,18 @@ namespace Sprint0.xml
                             rooms.Add(new RoomItem(xpos, ypos));
                             break;
                         case "exRoom":
+                            rooms.Add(new ExRoom(xpos, ypos));
+                            break;
+                        case "WallTop":
+                            rooms.Add(new RoomBlock(xpos, ypos));
+                            break;
+                        case "WallDown":
+                            rooms.Add(new RoomEnemy(xpos, ypos));
+                            break;
+                        case "DoorLeft":
+                            rooms.Add(new RoomItem(xpos, ypos));
+                            break;
+                        case "DoorRight":
                             rooms.Add(new ExRoom(xpos, ypos));
                             break;
                     }
