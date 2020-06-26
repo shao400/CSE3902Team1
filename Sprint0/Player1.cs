@@ -158,6 +158,7 @@ namespace Sprint0.Player
         }
         public void UseFourthItem()
         {
+            sound.magicRod();
             states.UseFourthItem();
         }
 

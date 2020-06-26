@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using Sprint0.xml;
 using System.Xml;
+using Microsoft.Xna.Framework.Media;
 
 namespace Sprint0
 {
@@ -35,6 +36,7 @@ namespace Sprint0
         public int roomCount;
         private List<SoundEffect> sounds;
         private Sound soundEffect;
+        private Song intro;
         List<object> controllerList; // could also be defined as List <IController>
     
         public Game1()
@@ -58,6 +60,10 @@ namespace Sprint0
             sounds = new List<SoundEffect>();
             sounds.Add(Content.Load<SoundEffect>("Sounds/SwordSlash"));
             sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Link_Hurt"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_MagicalRod"));
+            intro = Content.Load<Song>("Sounds/intro");
+            MediaPlayer.Play(intro);
+            MediaPlayer.IsRepeating = true;
             soundEffect = new Sound(sounds);
             controllerList = new List<object>();
             controllerList.Add(new KeyboardC(this));

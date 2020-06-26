@@ -180,3 +180,6 @@ C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.cspro
 C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.csprojAssemblyReference.cache
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Link_Hurt.xnb
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\SwordSlash.xnb
+E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_MagicalRod.xnb
+E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Intro.wma
+E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Intro.xnb

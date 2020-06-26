@@ -3,7 +3,7 @@
   <SourceFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Link_Hurt.wav</SourceFile>
   <SourceTime>2020-06-24T19:40:23.6290037-04:00</SourceTime>
   <DestFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/bin/Windows/Sounds/LOZ_Link_Hurt.xnb</DestFile>
-  <DestTime>2020-06-26T00:59:14.4657057-04:00</DestTime>
+  <DestTime>2020-06-26T01:27:19.1148015-04:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

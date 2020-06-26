@@ -3,7 +3,7 @@
   <SourceFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/SwordSlash.wav</SourceFile>
   <SourceTime>2020-06-24T19:40:13.3590541-04:00</SourceTime>
   <DestFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/bin/Windows/Sounds/SwordSlash.xnb</DestFile>
-  <DestTime>2020-06-26T00:59:14.5928214-04:00</DestTime>
+  <DestTime>2020-06-26T01:27:19.3721955-04:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>
