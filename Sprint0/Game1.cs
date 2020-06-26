@@ -6,6 +6,7 @@ using Sprint0.Block;
 using Sprint0.Controller;
 using Sprint0.Enemies;
 using Sprint0.Interfaces;
+using Microsoft.Xna.Framework.Audio;
 using Sprint0.Items;
 using Sprint0.Player;
 using Sprint0.Sprite;
@@ -32,6 +33,8 @@ namespace Sprint0
         public List<roomProperties> roomList;
         public XmlReader reader;
         public int roomCount;
+        private List<SoundEffect> sounds;
+        private Sound soundEffect;
         List<object> controllerList; // could also be defined as List <IController>
     
         public Game1()
@@ -52,7 +55,10 @@ namespace Sprint0
             graphics.PreferredBackBufferWidth = 768;
             graphics.ApplyChanges();
             //a way to modify screen size, better way probably exists
-
+            sounds = new List<SoundEffect>();
+            sounds.Add(Content.Load<SoundEffect>("Sounds/SwordSlash"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Link_Hurt"));
+            soundEffect = new Sound(sounds);
             controllerList = new List<object>();
             controllerList.Add(new KeyboardC(this));
             controllerList.Add(new ItemsController(this));
@@ -62,11 +68,11 @@ namespace Sprint0
             roomCount = 0;
             roomList = new List<roomProperties>();
             reader = XmlReader.Create("RoomBlock.xml");
-            roomList.Add(Loader.LoadFromReader(reader));
+            roomList.Add(Loader.LoadFromReader(reader, soundEffect));
             reader = XmlReader.Create("RoomItem.xml");
-            roomList.Add(Loader.LoadFromReader(reader));
+            roomList.Add(Loader.LoadFromReader(reader, soundEffect));
             reader = XmlReader.Create("RoomEnemy.xml");
-            roomList.Add(Loader.LoadFromReader(reader));
+            roomList.Add(Loader.LoadFromReader(reader, soundEffect));
             currentRoom = roomList[roomCount];
             reader.Close();
         }

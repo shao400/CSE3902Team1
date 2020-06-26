@@ -16,7 +16,7 @@ namespace Sprint0.xml
 {
     public class Loader
     {
-        static public roomProperties LoadFromReader(XmlReader reader)
+        static public roomProperties LoadFromReader(XmlReader reader, Sound s)
         {
             roomProperties room = null;
             List<IEnemy> enemies = new List<IEnemy>();
@@ -35,7 +35,7 @@ namespace Sprint0.xml
                 if (reader.Name == "player")
                 {
                     count++;
-                    link = new Player1(Int32.Parse(reader.GetAttribute("xpos")), Int32.Parse(reader.GetAttribute("ypos")), 48, 48);
+                    link = new Player1(Int32.Parse(reader.GetAttribute("xpos")), Int32.Parse(reader.GetAttribute("ypos")), 48, 48, s);
                     Console.WriteLine("link xpos: " + Int32.Parse(reader.GetAttribute("xpos")) + "link ypos: " + Int32.Parse(reader.GetAttribute("ypos")));
                 }
                 else if(reader.Name == "enemy" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior" || reader.Name == "wallCube")

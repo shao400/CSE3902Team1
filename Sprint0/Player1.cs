@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using Sprint0.Interfaces;
 using Spriny0.Collisions;
+using Microsoft.Xna.Framework.Audio;
 
 // Author: Lufei Ouyang
 namespace Sprint0.Player
@@ -25,15 +26,16 @@ namespace Sprint0.Player
         private LinkBlockCollision linkBlockCollision;
         private LinkItemCollision linkItemCollision;
         private LinkEnemyCollision linkEnemyCollision;
+        private Sound sound;
 
-        public Player1(int x, int y, int width_g, int height_g) 
+        public Player1(int x, int y, int width_g, int height_g, Sound s) 
         {
             states = new P1State();
             xAxis = x;
             yAxis = y;
             width = width_g;
             height = height_g;
-
+            sound = s;
             linkBlockCollision = new LinkBlockCollision(this);
             linkItemCollision = new LinkItemCollision(this);
             linkEnemyCollision = new LinkEnemyCollision(this);
@@ -129,6 +131,7 @@ namespace Sprint0.Player
         }
         public void takeDmg()
         {
+            sound.linkHurt();
             states.takeDmg();
             states.decreaseLife();
         }
@@ -140,14 +143,17 @@ namespace Sprint0.Player
         }
         public void UseFirstItem()
         {
+            sound.swordSlash();
             states.UseFirstItem();
         }
         public void UseSecondItem()
         {
+            sound.swordSlash();
             states.UseSecondItem();
         }
         public void UseThirdItem()
         {
+            sound.swordSlash();
             states.UseThirdItem();
         }
         public void UseFourthItem()
