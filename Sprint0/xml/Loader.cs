@@ -11,6 +11,7 @@ using Sprint0.Items;
 using Sprint0.Interfaces;
 using Sprint0.Rooms;
 using Sprint0.WallCube;
+using Sprint0.HUD;
 
 namespace Sprint0.xml
 {
@@ -26,6 +27,7 @@ namespace Sprint0.xml
             List<IHud> huds = new List<IHud>();
             List<IWallCube> cubes = new List<IWallCube>();
             Player1 link = null;
+            HealthBar hp = null;
             reader.MoveToContent();
             reader.Read(); // jump over <Room>
             int count = 0;
@@ -35,10 +37,10 @@ namespace Sprint0.xml
                 if (reader.Name == "player")
                 {
                     count++;
-                    link = new Player1(Int32.Parse(reader.GetAttribute("xpos")), Int32.Parse(reader.GetAttribute("ypos")), 48, 48, s);
+                    link = new Player1(Int32.Parse(reader.GetAttribute("xpos")), Int32.Parse(reader.GetAttribute("ypos")), 48, 48, s, hp);
                     Console.WriteLine("link xpos: " + Int32.Parse(reader.GetAttribute("xpos")) + "link ypos: " + Int32.Parse(reader.GetAttribute("ypos")));
                 }
-                else if(reader.Name == "enemy" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior" || reader.Name == "wallCube")
+                else if(reader.Name == "enemy" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior" || reader.Name == "wallCube" || reader.Name =="hud")
                 {
                     count++;
                     Console.WriteLine("2nd loop xpos:" + Int32.Parse(reader.GetAttribute("xpos")) + "ypos: " + Int32.Parse(reader.GetAttribute("ypos")) + "type: " + reader.GetAttribute("type"));
@@ -48,6 +50,10 @@ namespace Sprint0.xml
 
                     switch (type)
                     {
+                        case "HealthBar":
+                            hp = new HealthBar(xpos, ypos);
+                            huds.Add(hp);
+                            break;
                         case "Moblin":
                             enemies.Add(new Moblin(xpos, ypos));
                             break;

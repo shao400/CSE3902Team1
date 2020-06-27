@@ -183,3 +183,8 @@ E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Conten
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_MagicalRod.xnb
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Intro.wma
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Intro.xnb
+C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Intro.wma
+C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Intro.xnb
+C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Link_Hurt.xnb
+C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_MagicalRod.xnb
+C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\SwordSlash.xnb

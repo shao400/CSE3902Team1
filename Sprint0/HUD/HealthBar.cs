@@ -1,4 +1,5 @@
 ﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Media;
 using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
+using Sprint0.Player;
 using Sprint0.Sprite;
 
 namespace Sprint0.HUD
@@ -13,15 +15,15 @@ namespace Sprint0.HUD
     public class HealthBar : IHud
     {
         private HudEmptyHeartSprite empty = SpriteFactory.HudEmptyHeart;
-        private HudEmptyHeartSprite half = SpriteFactory.HudEmptyHeart;
-        private HudEmptyHeartSprite solid = SpriteFactory.HudEmptyHeart;
+        private HudHalfHeartSprite half = SpriteFactory.HudHalfHeart;
+        private ItemHeartSprite solid = SpriteFactory.ItemHeart;
         private int xAix;
         private int yAix;
         private int health;
         //private int width;
         //private int height;
         public HealthBar(int x, int y)
-        {
+        { 
             xAix = x;
             yAix = y;
             health = 2;
@@ -30,11 +32,12 @@ namespace Sprint0.HUD
         }
         public void Draw()
         {
-            Vector2 location = new Vector2(50, 550); //test, change to xAix and yAix later
+            Vector2 location = new Vector2(xAix, yAix); //test, change to xAix and yAix later
             if (health == 2)
             {
                 solid.Draw(location, false);
-            }else if (health == 1)
+            }
+            else if (health == 1)
             {
                 half.Draw(location, false);
             }
@@ -47,7 +50,10 @@ namespace Sprint0.HUD
 
         public void Reduced()
         {
-            health = health - 1;
+            if (health > 0)
+            {
+                health = health - 1;
+            }
         }
 
         public void hud_reset()
@@ -57,7 +63,7 @@ namespace Sprint0.HUD
 
         public void Update()
         {
-            
+
         }
 
         public Rectangle GetRectangle()
@@ -66,6 +72,3 @@ namespace Sprint0.HUD
         }
     }
 }
-
-
-

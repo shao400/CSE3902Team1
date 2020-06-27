@@ -11,6 +11,7 @@ using System.Windows;
 using Sprint0.Interfaces;
 using Spriny0.Collisions;
 using Microsoft.Xna.Framework.Audio;
+using Sprint0.HUD;
 
 // Author: Lufei Ouyang
 namespace Sprint0.Player
@@ -27,8 +28,9 @@ namespace Sprint0.Player
         private LinkItemCollision linkItemCollision;
         private LinkEnemyCollision linkEnemyCollision;
         private Sound sound;
+        private HealthBar _hp;
 
-        public Player1(int x, int y, int width_g, int height_g, Sound s) 
+        public Player1(int x, int y, int width_g, int height_g, Sound s, HealthBar hp) 
         {
             states = new P1State();
             xAxis = x;
@@ -36,6 +38,7 @@ namespace Sprint0.Player
             width = width_g;
             height = height_g;
             sound = s;
+            _hp = hp;
             linkBlockCollision = new LinkBlockCollision(this);
             linkItemCollision = new LinkItemCollision(this);
             linkEnemyCollision = new LinkEnemyCollision(this);
@@ -133,7 +136,7 @@ namespace Sprint0.Player
         {
             sound.linkHurt();
             states.takeDmg();
-            states.decreaseLife();
+            _hp.Reduced();
         }
         public void Player_Reset()
         {
