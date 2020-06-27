@@ -131,6 +131,7 @@ namespace Sprint0.Player
         public void Attack()
         {
             states.Attack();
+            sound.swordSlash();
         }
         public void takeDmg()
         {
