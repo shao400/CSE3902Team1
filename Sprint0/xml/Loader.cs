@@ -96,6 +96,12 @@ namespace Sprint0.xml
                         case "DoorRight":
                             cubes.Add(new DoorRight(xpos, ypos));
                             break;
+                        case "Heart":
+                            items.Add(new Heart(xpos, ypos));
+                            break;
+                        case "Clock":
+                            items.Add(new mClock(xpos, ypos));
+                            break;
                     }
                 }
             }
