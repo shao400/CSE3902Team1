@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows;
 using Sprint0.Interfaces;
 using Spriny0.Collisions;
+using Sprint0.xml;
+using Sprint0.HUD;
 
 // Author: Lufei Ouyang
 namespace Sprint0.Player
@@ -26,8 +28,9 @@ namespace Sprint0.Player
         private LinkBlockCollision linkBlockCollision;
         private LinkItemCollision linkItemCollision;
         private LinkEnemyCollision linkEnemyCollision;
+        private HealthBar _hp;
 
-        public Player1(int x, int y, int width_g, int height_g, Sound snd) 
+        public Player1(int x, int y, int width_g, int height_g, Sound snd, HealthBar hp) 
         {
             states = new P1State();
             xAxis = x;
@@ -38,6 +41,10 @@ namespace Sprint0.Player
             linkBlockCollision = new LinkBlockCollision(this);
             linkItemCollision = new LinkItemCollision(this);
             linkEnemyCollision = new LinkEnemyCollision(this);
+
+
+            _hp = hp;
+ 
         }
         public bool isTakingDmg()
         {
@@ -128,15 +135,17 @@ namespace Sprint0.Player
         {
             states.Attack();
         }
-        public void takeDmg()
+        public Boolean takeDmg()
         {
             sound.linkHurt();
             states.takeDmg();
-            states.decreaseLife();
+            _hp.Reduced();
+            return true;   
         }
         public void Player_Reset()
         {
             states.State_Reset();
+            _hp.hud_reset();
             xAxis = 100;
             yAxis = 100;
         }

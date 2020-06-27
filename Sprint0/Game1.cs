@@ -69,11 +69,11 @@ namespace Sprint0
             roomCount = 0;
             roomList = new List<roomProperties>();
             reader = XmlReader.Create("testRoom0.xml");
-            roomList.Add(Loader.LoadFromReader(reader, sound));
+            roomList.Add(Loader.LoadFromReader(reader, sound,this));
             reader = XmlReader.Create("testRoom1.xml");
-            roomList.Add(Loader.LoadFromReader(reader, sound));
+            roomList.Add(Loader.LoadFromReader(reader, sound,this));
             reader = XmlReader.Create("testRoom2.xml");
-            roomList.Add(Loader.LoadFromReader(reader, sound));
+            roomList.Add(Loader.LoadFromReader(reader, sound,this));
             currentRoom = roomList[roomCount];
             reader.Close();
         }
@@ -108,7 +108,6 @@ namespace Sprint0
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
-
             // TODO: Add your update logic here
             foreach (IController controller in controllerList)
             {

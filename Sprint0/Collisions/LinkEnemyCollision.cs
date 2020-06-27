@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using Sprint0.HUD;
 using Sprint0.Interfaces;
 using Sprint0.Player;
 

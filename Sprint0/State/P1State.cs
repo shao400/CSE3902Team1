@@ -31,7 +31,6 @@ namespace Sprint0.State
         private facing currentFacing;
         private weapon currentWeapon;
         private status currentStatus;
-        private HealthBar currentHealth = new HealthBar(50, 550);
         
         private int currentLife; //not used yet
 
@@ -58,7 +57,6 @@ namespace Sprint0.State
         public void decreaseLife()
         {
             currentLife = currentLife- 1;
-            currentHealth.Reduced();
         }
 
         public void increaseLife()

@@ -10,19 +10,24 @@ using Sprint0.Block;
 using Sprint0.Items;
 using Sprint0.Interfaces;
 using Sprint0.Rooms;
+using System.Windows;
+using Sprint0.HUD;
+using Microsoft.Xna.Framework;
 
 namespace Sprint0.xml
 {
     public class Loader
     {
-        static public roomProperties LoadFromReader(XmlReader reader, Sound sound)
+        static public roomProperties LoadFromReader(XmlReader reader, Sound sound, Game1 myGame)
         {
             roomProperties room = null;
+            Game1 _myGame = null;
             List<IEnemy> enemies = new List<IEnemy>();
             List<IBlock> blocks = new List<IBlock>();
             List<IItem> items = new List<IItem>();
             List<IRoom> rooms = new List<IRoom>();
             List<IHud> huds = new List<IHud>();
+            HealthBar hp = null;
             Player1 link = null;
             
             reader.MoveToContent();
@@ -34,10 +39,10 @@ namespace Sprint0.xml
                 if (reader.Name == "player")
                 {
                     count++;
-                    link = new Player1(Int32.Parse(reader.GetAttribute("xpos")), Int32.Parse(reader.GetAttribute("ypos")), 48, 48, sound);
+                    link = new Player1(Int32.Parse(reader.GetAttribute("xpos")), Int32.Parse(reader.GetAttribute("ypos")), 48, 48, sound, hp);
                     Console.WriteLine("link xpos: " + Int32.Parse(reader.GetAttribute("xpos")) + "link ypos: " + Int32.Parse(reader.GetAttribute("ypos")));
                 }
-                else if(reader.Name == "enemy" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior")
+                else if(reader.Name == "enemy" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior" || reader.Name == "hud")
                 {
                     count++;
                     Console.WriteLine("2nd loop xpos:" + Int32.Parse(reader.GetAttribute("xpos")) + "ypos: " + Int32.Parse(reader.GetAttribute("ypos")) + "type: " + reader.GetAttribute("type"));
@@ -47,6 +52,10 @@ namespace Sprint0.xml
 
                     switch (type)
                     {
+                        case "HealthBar":
+                            hp = new HealthBar(xpos, ypos, _myGame);
+                            huds.Add(hp);
+                            break;
                         case "Moblin":
                             enemies.Add(new Moblin(xpos, ypos));
                             break;
