@@ -13,6 +13,7 @@ using Sprint0.Rooms;
 using Sprint0.WallCube;
 using Sprint0.HUD;
 
+// Author: Chuwen Sun
 namespace Sprint0.xml
 {
     public class Loader

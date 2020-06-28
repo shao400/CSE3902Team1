@@ -8,6 +8,8 @@ using Sprint0.Player;
 
 namespace Sprint0.xml
 {
+
+    //Author: Chuwen Sun
     public class roomProperties
     {
         public List<IBlock> blockList;

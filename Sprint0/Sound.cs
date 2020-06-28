@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework.Audio;
 
 
 
-
+//Author: Lufei Ouyang
 namespace Sprint0
 {
     public class Sound
