@@ -10,22 +10,29 @@ Overview of Sprint3:
 1. Collisions between player and enemy, player and blocks. 
 2. Xml loader for loading room into the game.
 3. New concrete classes for enemy, item and block.
-4. Started HUDs and sounds(Sprint 4).
+4. Started to work on HUDs and sounds(Sprint 4).
+5. Warnings fixes, redundant code deleted and adjusted.
 
 Program Control: 
 -----------------------------------
-W,A,S,D---Walk
+W,A,S,D and arrow keys---Walk
 Z/N---Attack
 1,2,3---Switch weapons
 
-LeftClick(Mouse)---Last Room
+LeftClick(Mouse)---Previous Room
 RightClick(Mouse)---Next Room
 R---Reset game
 Q---Quit game
 
+Suppressed Warnings:
+-----------------------------------
+1. X and Y coordinate in Player1.cs: Link's position need to be updated by other classes
+2. Lists and Link objects in roomProperties: need to be accessed by other classes to update Link and rooms
+3. Sprite objects in SpriteFactory: they need to be accessed by other classes to draw sprites
+4. Room-related variables in Game1: they need to be accessed when switching the room
 
 
 Known bugs for Sprint3
 -----------------------------------
 1. When Link have collision with enemy on the top of the room, Link will be pushed to unexpected positions. 
-2. Every room has its own health bar instead of having only one.
+2. Every room has its own health bar instead of having the only one.

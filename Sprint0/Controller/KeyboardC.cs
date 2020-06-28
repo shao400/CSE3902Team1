@@ -26,13 +26,20 @@ namespace Sprint0.Controller
             keymap.Add(Keys.S, new sDown(myGame));
             keymap.Add(Keys.A, new aLeft(myGame));
             keymap.Add(Keys.D, new dRight(myGame));
-            
+
+            keymap.Add(Keys.Up, new wUp(myGame));
+            keymap.Add(Keys.Down, new sDown(myGame));
+            keymap.Add(Keys.Left, new aLeft(myGame));
+            keymap.Add(Keys.Right, new dRight(myGame));
+
             keymap.Add(Keys.Q, new qQuit(myGame));
             keymap.Add(Keys.R, new rReset(myGame));
             keymap.Add(Keys.D1, new D1FirstWeapon(myGame));
             keymap.Add(Keys.D2, new D2SecondWeapon(myGame));
             keymap.Add(Keys.D3, new D3ThirdWeapon(myGame));
             keymap.Add(Keys.D4, new D4FourthWeapon(myGame));
+            keymap.Add(Keys.Z, new Attack(myGame));
+            keymap.Add(Keys.N, new Attack(myGame));
         }
 
         //check no keys

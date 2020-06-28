@@ -30,13 +30,13 @@ namespace Sprint0.Player
         private Sound sound;
         private int hp;
 
-        public Player1(int x, int y, int width_g, int height_g, Sound s) 
+        public Player1(int x, int y, int widthG, int heightG, Sound s) 
         {
             states = new P1State();
             xAxis = x;
             yAxis = y;
-            width = width_g;
-            height = height_g;
+            width = widthG;
+            height = heightG;
             sound = s;
             hp = 2;
             linkBlockCollision = new LinkBlockCollision(this);
@@ -150,9 +150,9 @@ namespace Sprint0.Player
                 hp++;
             }
         }
-        public void Player_Reset()
+        public void PlayerReset()
         {
-            states.State_Reset();
+            states.StateReset();
             xAxis = 100;
             yAxis = 100;
             hp = 2;

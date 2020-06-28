@@ -45,7 +45,7 @@ namespace Sprint0.Items
             return picked;
         }
 
-        public void item_reset()
+        public void ItemReset()
         {
             picked = false;
         }

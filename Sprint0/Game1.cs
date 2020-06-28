@@ -27,13 +27,11 @@ namespace Sprint0
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-
-        public SpriteFont font;
-        public IController controls;
+        
         public roomProperties currentRoom;
         public List<roomProperties> roomList;
-        public XmlReader reader;
         public int roomCount;
+        private XmlReader reader;
         private List<SoundEffect> sounds;
         private Sound soundEffect;
         private Song intro;
@@ -67,7 +65,6 @@ namespace Sprint0
             soundEffect = new Sound(sounds);
             controllerList = new List<object>();
             controllerList.Add(new KeyboardC(this));
-            controllerList.Add(new ItemsController(this));
             controllerList.Add(new MouseC(this));
             this.IsMouseVisible = true;
             base.Initialize();
@@ -93,7 +90,7 @@ namespace Sprint0
             
             // TODO: use this.Content to load your game content here
 
-            Sprite.SpriteFactory.LoadContent(spriteBatch, Content);
+            SpriteFactory.LoadContent(spriteBatch, Content);
             
         }
         /// <summary>

@@ -16,7 +16,7 @@ namespace Sprint0.Interfaces
 
         Boolean isPickedUp();
 
-        void item_reset();
+        void ItemReset();
         
     }
 }

@@ -243,7 +243,7 @@ namespace Sprint0.State
             return this.currentStatus == status.takingDmg;
         }
 
-            public void State_Reset()
+        public void StateReset()
         {
             this.currentFacing = facing.right;
             this.currentWeapon = weapon.None;
