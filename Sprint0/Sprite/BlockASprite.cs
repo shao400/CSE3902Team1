@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework;
 namespace Sprint0.Sprite
 {
     public class BlockASprite : ISprite
-    {
+    { 
         //BlockA 323 91 16 16
         private static SpriteBatch spritebatch;
         private static Texture2D texture;
