@@ -8,12 +8,12 @@
 	<wallCube type="WallDown" xpos="332" ypos="602" />
 	<wallCube type="DoorLeft" xpos="0" ypos="382" />
 	<wallCube type="DoorRight" xpos="672" ypos="381" />
-	<item type="Heart" xpos="250" ypos="250" />
-	<item type="Clock" xpos="500" ypos="250" />
-	<block type="BlockA" xpos="281" ypos="306" />
-	<block type="BlockA" xpos="331" ypos="306" />
-	<block type="BlockA" xpos="381" ypos="306" />
-	<block type="BlockA" xpos="281" ypos="406" />
-	<block type="BlockA" xpos="331" ypos="406" />
-	<block type="BlockA" xpos="381" ypos="406" />
+	<item type="Heart" xpos="244" ypos="268" />
+	<item type="Clock" xpos="494" ypos="268" />
+	<block type="BlockA" xpos="284" ypos="310" />
+	<block type="BlockA" xpos="334" ypos="310" />
+	<block type="BlockA" xpos="384" ypos="310" />
+	<block type="BlockA" xpos="283" ypos="407" />
+	<block type="BlockA" xpos="333" ypos="407" />
+	<block type="BlockA" xpos="383" ypos="407" />
 </Room>
