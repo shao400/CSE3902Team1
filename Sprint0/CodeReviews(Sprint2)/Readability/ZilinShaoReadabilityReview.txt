@@ -1,0 +1,12 @@
+Zilin Shao
+6/7/2020
+Sprint2
+Player1.cs
+Main Author: Zhizhou He, Lufei Ouyang, ChuwenSun
+
+
+Generally speaking, this class has high readability. Basically, it is a class for our object
+Link. It is the only character we could control currently so the class is named Player1.cs.
+The variables's names and functions' order are both OK. I can easily understand its function
+either as itself or with State class. Also, for the design of this class, other contributors
+can easily add functions and not effect the class's conciseness.
