@@ -60,28 +60,28 @@ namespace Sprint0.Player
             {
                 if(xAxis > 96)
                 {
-                    xAxis -= 5;
+                    xAxis -= 3;
                 }    
             }
             else if (currentFacing.CompareTo("right") == 0 && currentStatus.CompareTo("walking") == 0)
             {
                 if (xAxis < 624)
                 {
-                    xAxis += 5;
+                    xAxis += 3;
                 }
             }
             else if (currentFacing.CompareTo("down") == 0 && currentStatus.CompareTo("walking") == 0)
             {
                 if (yAxis < 552)
                 {
-                    yAxis += 5;
+                    yAxis += 3;
                 }                
             }
             else if (currentFacing.CompareTo("up") == 0 && currentStatus.CompareTo("walking") == 0)
             {
                 if (yAxis > 264)
                 {
-                    yAxis -= 5;
+                    yAxis -= 3;
                 }                
             }
 

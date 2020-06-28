@@ -19,7 +19,7 @@ namespace Sprint0.Sprite
         bool backmove = false;
         public EnemyTektiteSprite(int x, int y)
         {
-            destinationRec = new Rectangle(x, y, 48, 48);
+            destinationRec = new Rectangle(x, y, 45, 45);
         }
         public void Update()
         {
@@ -48,8 +48,8 @@ namespace Sprint0.Sprite
                 sourceRec = new Rectangle(124, 291, 16, 16);
                 destinationRec.Y -= 5;
             }
-            if (destinationRec.Y > 416) backmove = true;
-            if (destinationRec.Y < 0) backmove = false;
+            if (destinationRec.Y > 555) backmove = true;
+            if (destinationRec.Y < 264) backmove = false;
         }   
 
         public void LoadContent(SpriteBatch batch, Texture2D texture)

@@ -57,8 +57,8 @@ namespace Sprint0.Enemies
             {
                 destinationRec.X -= 5;
             }
-            if (destinationRec.X > 736) backmove = true;
-            if (destinationRec.X < 0) backmove = false;
+            if (destinationRec.X > 627) backmove = true;
+            if (destinationRec.X < 96) backmove = false;
             MoblinSprite.Update();
         }
 

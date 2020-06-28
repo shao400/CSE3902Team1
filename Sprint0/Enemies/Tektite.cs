@@ -57,8 +57,8 @@ namespace Sprint0.Enemies
             {
                 destinationRec.Y -= 5;
             }
-            if (destinationRec.Y > 418) backmove = true;
-            if (destinationRec.Y < 0) backmove = false;
+            if (destinationRec.Y > 555) backmove = true;
+            if (destinationRec.Y < 264) backmove = false;
             TektiteSprite.Update();
         }
 
