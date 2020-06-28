@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Link_Hurt.wav</SourceFile>
-  <SourceTime>2020-06-24T19:40:23.6290037-04:00</SourceTime>
-  <DestFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Sounds/LOZ_Link_Hurt.xnb</DestFile>
-  <DestTime>2020-06-27T14:56:46.9929161-04:00</DestTime>
+  <SourceFile>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Link_Hurt.wav</SourceFile>
+  <SourceTime>2020-06-26T12:36:29.4240989-04:00</SourceTime>
+  <DestFile>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Sounds/LOZ_Link_Hurt.xnb</DestFile>
+  <DestTime>2020-06-27T20:09:17.0119781-04:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

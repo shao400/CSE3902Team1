@@ -5,7 +5,7 @@
 	<exterior type="exRoom" xpos="0" ypos="168" />
 	<interior type="RoomBlock" xpos="91" ypos="262" />
 	<wallCube type="WallTop" xpos="332" ypos="168" />
-	<wallCube type="WallDown" xpos="332" ypos="600" />
+	<wallCube type="WallDown" xpos="332" ypos="602" />
 	<wallCube type="DoorLeft" xpos="0" ypos="382" />
 	<wallCube type="DoorRight" xpos="672" ypos="381" />
 	<enemy type="Moblin" xpos="100" ypos="450"/>
