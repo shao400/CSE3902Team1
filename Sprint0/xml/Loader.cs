@@ -38,7 +38,7 @@ namespace Sprint0.xml
                 if (reader.Name == "player")
                 {
                     count++;
-                    link = new Player1(Int32.Parse(reader.GetAttribute("xpos")), Int32.Parse(reader.GetAttribute("ypos")), 48, 48, s, hp);
+                    link = new Player1(Int32.Parse(reader.GetAttribute("xpos")), Int32.Parse(reader.GetAttribute("ypos")), 48, 48, s);
                     Console.WriteLine("link xpos: " + Int32.Parse(reader.GetAttribute("xpos")) + "link ypos: " + Int32.Parse(reader.GetAttribute("ypos")));
                 }
                 else if(reader.Name == "enemy" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior" || reader.Name == "wallCube" || reader.Name =="hud")
@@ -52,8 +52,7 @@ namespace Sprint0.xml
                     switch (type)
                     {
                         case "HealthBar":
-                            hp = new HealthBar(xpos, ypos);
-                            huds.Add(hp);
+                            huds.Add(new HealthBar(xpos, ypos, link));
                             break;
                         case "Moblin":
                             enemies.Add(new Moblin(xpos, ypos));

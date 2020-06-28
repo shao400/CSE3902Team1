@@ -28,9 +28,9 @@ namespace Sprint0.Player
         private LinkItemCollision linkItemCollision;
         private LinkEnemyCollision linkEnemyCollision;
         private Sound sound;
-        private HealthBar _hp;
+        private int hp;
 
-        public Player1(int x, int y, int width_g, int height_g, Sound s, HealthBar hp) 
+        public Player1(int x, int y, int width_g, int height_g, Sound s) 
         {
             states = new P1State();
             xAxis = x;
@@ -38,7 +38,7 @@ namespace Sprint0.Player
             width = width_g;
             height = height_g;
             sound = s;
-            _hp = hp;
+            hp = 2;
             linkBlockCollision = new LinkBlockCollision(this);
             linkItemCollision = new LinkItemCollision(this);
             linkEnemyCollision = new LinkEnemyCollision(this);
@@ -137,13 +137,30 @@ namespace Sprint0.Player
         {
             sound.linkHurt();
             states.takeDmg();
-            _hp.Reduced();
+            if (hp>0)
+            {
+                hp--;
+            }
+        }
+
+        public void getHealed()
+        {
+            if (hp<2)
+            {
+                hp++;
+            }
         }
         public void Player_Reset()
         {
             states.State_Reset();
             xAxis = 100;
             yAxis = 100;
+            hp = 2;
+        }
+
+        public int linkHp()
+        {
+            return hp;
         }
         public void UseFirstItem()
         {

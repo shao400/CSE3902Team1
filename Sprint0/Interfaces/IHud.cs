@@ -13,8 +13,6 @@ namespace Sprint0.Interfaces
         void Update();
         Rectangle GetRectangle();
         
-
-        void hud_reset();
         
     }
 }

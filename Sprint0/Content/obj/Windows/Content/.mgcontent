@@ -4,16 +4,16 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/Blocks.png</File>
-    <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/Credits1.spritefont</File>
-    <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/enemy.png</File>
-    <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/items.png</File>
-    <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/link.png</File>
-    <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/luigi.png</File>
-    <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/Sounds/Intro.mp3</File>
-    <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Link_Hurt.wav</File>
-    <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/Sounds/LOZ_MagicalRod.wav</File>
-    <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/Sounds/SwordSlash.wav</File>
+    <File>C:/Users/shao4/Documents/GitHub/CSE3902Team1/Sprint0/Content/Blocks.png</File>
+    <File>C:/Users/shao4/Documents/GitHub/CSE3902Team1/Sprint0/Content/Credits1.spritefont</File>
+    <File>C:/Users/shao4/Documents/GitHub/CSE3902Team1/Sprint0/Content/enemy.png</File>
+    <File>C:/Users/shao4/Documents/GitHub/CSE3902Team1/Sprint0/Content/items.png</File>
+    <File>C:/Users/shao4/Documents/GitHub/CSE3902Team1/Sprint0/Content/link.png</File>
+    <File>C:/Users/shao4/Documents/GitHub/CSE3902Team1/Sprint0/Content/luigi.png</File>
+    <File>C:/Users/shao4/Documents/GitHub/CSE3902Team1/Sprint0/Content/Sounds/Intro.mp3</File>
+    <File>C:/Users/shao4/Documents/GitHub/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Link_Hurt.wav</File>
+    <File>C:/Users/shao4/Documents/GitHub/CSE3902Team1/Sprint0/Content/Sounds/LOZ_MagicalRod.wav</File>
+    <File>C:/Users/shao4/Documents/GitHub/CSE3902Team1/Sprint0/Content/Sounds/SwordSlash.wav</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

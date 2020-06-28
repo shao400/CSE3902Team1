@@ -14,6 +14,8 @@ namespace Sprint0.Interfaces
         Rectangle GetRectangle();
         void PickedUp();
 
+        Boolean isPickedUp();
+
         void item_reset();
         
     }

@@ -20,46 +20,41 @@ namespace Sprint0.HUD
         private int xAix;
         private int yAix;
         private int health;
+        Player1 _link;
         //private int width;
         //private int height;
-        public HealthBar(int x, int y)
+        public HealthBar(int x, int y, Player1 link)
         { 
             xAix = x;
             yAix = y;
-            health = 2;
+            _link = link;
             //width = w;
             //height = h;
         }
         public void Draw()
         {
-            Vector2 location = new Vector2(xAix, yAix); //test, change to xAix and yAix later
-            if (health == 2)
+            Vector2 location = new Vector2(xAix, yAix);
+            if (_link.linkHp() == 2)
             {
                 solid.Draw(location, false);
             }
-            else if (health == 1)
+            else if (_link.linkHp() == 1)
             {
                 half.Draw(location, false);
             }
-            else if (health == 0)
+            else if (_link.linkHp() == 0)
             {
                 empty.Draw(location, false);
             }
 
         }
 
-        public void Reduced()
+        public void GetLinkHp()
         {
-            if (health > 0)
-            {
-                health = health - 1;
-            }
+            //not used yet
+            health = _link.linkHp();
         }
 
-        public void hud_reset()
-        {
-            health = 2;
-        }
 
         public void Update()
         {

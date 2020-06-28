@@ -40,6 +40,11 @@ namespace Sprint0.Items
             picked = true;
         }
 
+        public Boolean isPickedUp()
+        {
+            return picked;
+        }
+
         public void item_reset()
         {
             picked = false;
