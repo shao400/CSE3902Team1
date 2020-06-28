@@ -35,7 +35,7 @@ namespace Sprint0
             }
             SpriteEffects effect = SpriteEffects.FlipHorizontally;
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X-36, (int)location.Y, 84, 45), sourceRec, myColor, 0, new Vector2(0, 0), effect, 0);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X-36, (int)location.Y, 84, 51), sourceRec, myColor, 0, new Vector2(0, 0), effect, 0);
             mySpriteBatch.End();
         }
     }

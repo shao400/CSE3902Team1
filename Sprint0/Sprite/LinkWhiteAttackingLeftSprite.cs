@@ -77,16 +77,16 @@ namespace Sprint0
             switch (sourceRec.Width)
             {
                 case 16:
-                    mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 45, 45), sourceRec, myColor, 0, new Vector2(0, 0), effect, 0);
+                    mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 48, 48), sourceRec, myColor, 0, new Vector2(0, 0), effect, 0);
                     break;
                 case 27:
-                    mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X-36, (int)location.Y, 84, 45), sourceRec, myColor, 0, new Vector2(0, 0), effect, 0);
+                    mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X-36, (int)location.Y, 84, 51), sourceRec, myColor, 0, new Vector2(0, 0), effect, 0);
                     break;
                 case 23:
-                    mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X-21, (int)location.Y, 69, 45), sourceRec, myColor, 0, new Vector2(0, 0), effect, 0);
+                    mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X-21, (int)location.Y, 69, 51), sourceRec, myColor, 0, new Vector2(0, 0), effect, 0);
                     break;
                 case 19:
-                    mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X-9, (int)location.Y, 57, 45), sourceRec, myColor, 0, new Vector2(0, 0), effect, 0);
+                    mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X-9, (int)location.Y, 57, 51), sourceRec, myColor, 0, new Vector2(0, 0), effect, 0);
                     break;
                 default:
                     break;

@@ -7,7 +7,7 @@
 	<wallCube type="WallTop" xpos="332" ypos="168" />
 	<wallCube type="WallDown" xpos="332" ypos="602" />
 	<wallCube type="DoorLeft" xpos="0" ypos="382" />
-	<wallCube type="DoorRight" xpos="672" ypos="382" />
+	<wallCube type="DoorRight" xpos="672" ypos="381" />
 	<item type="Heart" xpos="244" ypos="268" />
 	<item type="Clock" xpos="494" ypos="268" />
 	<block type="BlockA" xpos="284" ypos="310" />
