@@ -9,6 +9,6 @@
 	<wallCube type="DoorLeft" xpos="0" ypos="382" />
 	<wallCube type="DoorRight" xpos="672" ypos="381" />
 	<block type="BlockA" xpos="284" ypos="310" />
-	<block type="BlockA" xpos="334" ypos="310" />
-	<block type="BlockA" xpos="384" ypos="310" />
+	<block type="BlockB" xpos="334" ypos="310" />
+	<block type="BlockC" xpos="384" ypos="310" />
 </Room>
