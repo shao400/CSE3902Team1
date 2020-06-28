@@ -34,7 +34,7 @@ namespace Sprint0
                 myColor = Color.CornflowerBlue;
             }
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 81, 51), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 81, 45), sourceRec, myColor);
             mySpriteBatch.End();
         }
     }
