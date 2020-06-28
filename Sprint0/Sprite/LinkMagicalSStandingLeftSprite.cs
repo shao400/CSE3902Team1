@@ -7,12 +7,12 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
 namespace Sprint0
-{
+{ 
     public class LinkMagicalSStandingLeftSprite : ISprite
     {
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
-        Rectangle sourceRec = new Rectangle(204, 77, 27, 17);
+        Rectangle sourceRec = new Rectangle(297, 77, 27, 17);
         Color myColor = Color.CornflowerBlue;
         public void Update()
         {
@@ -35,7 +35,7 @@ namespace Sprint0
             }
             SpriteEffects effect = SpriteEffects.FlipHorizontally;
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X - 36, (int)location.Y, 84, 45), sourceRec, myColor, 0, new Vector2(0, 0), effect, 0);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X-36, (int)location.Y, 84, 51), sourceRec, myColor, 0, new Vector2(0, 0), effect, 0);
             mySpriteBatch.End();
         }
     }

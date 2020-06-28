@@ -71,16 +71,16 @@ namespace Sprint0
             switch (sourceRec.Height)
             {
                 case 16:
-                    mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 45, 45), sourceRec, myColor);
+                    mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 48, 48), sourceRec, myColor);
                     break;
                 case 28:
-                    mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y-36, 45, 84), sourceRec, myColor);
+                    mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y-36, 48, 84), sourceRec, myColor);
                     break;
                 case 27:
-                    mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y-33, 45, 81), sourceRec, myColor);
+                    mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y-33, 48, 81), sourceRec, myColor);
                     break;
                 case 19:
-                    mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y-9, 45, 57), sourceRec, myColor);
+                    mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y-9, 48, 57), sourceRec, myColor);
                     break;
                 default:
                     break;
