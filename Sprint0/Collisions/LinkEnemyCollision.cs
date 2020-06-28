@@ -18,7 +18,7 @@ namespace Spriny0.Collisions
             myPlayer = player;
         }
 
-        public void EnemyCollisionTest(Player1 player, List<IEnemy> enemies)
+        public void EnemyCollisionTest(List<IEnemy> enemies)
         {
             Rectangle linkRectangle = myPlayer.GetRectangle();
             Rectangle enemyRectangle;

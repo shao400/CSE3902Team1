@@ -70,11 +70,11 @@ namespace Sprint0
             base.Initialize();
             roomCount = 0;
             roomList = new List<roomProperties>();
-            reader = XmlReader.Create("RoomBlock.xml");
+            reader = XmlReader.Create("RoomBlock.xml", new XmlReaderSettings());
             roomList.Add(Loader.LoadFromReader(reader, soundEffect));
-            reader = XmlReader.Create("RoomItem.xml");
+            reader = XmlReader.Create("RoomItem.xml", new XmlReaderSettings());
             roomList.Add(Loader.LoadFromReader(reader, soundEffect));
-            reader = XmlReader.Create("RoomEnemy.xml");
+            reader = XmlReader.Create("RoomEnemy.xml", new XmlReaderSettings());
             roomList.Add(Loader.LoadFromReader(reader, soundEffect));
             currentRoom = roomList[roomCount];
             reader.Close();

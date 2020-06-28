@@ -56,28 +56,28 @@ namespace Sprint0.Player
             currentFacing = states.GetCurrentFacing();
             currentStatus = states.GetCurrentStatus();
             states.Update();
-            if (currentFacing.CompareTo("left") == 0 && currentStatus.CompareTo("walking") == 0)
+            if (string.Compare(currentStatus,"walking", new StringComparison()) == 0 && string.Compare(currentFacing, "left", new StringComparison()) == 0)
             {
                 if(xAxis > 96)
                 {
                     xAxis -= 3;
                 }    
             }
-            else if (currentFacing.CompareTo("right") == 0 && currentStatus.CompareTo("walking") == 0)
+            else if (string.Compare(currentFacing, "right", new StringComparison()) == 0 && string.Compare(currentStatus, "walking", new StringComparison()) == 0)
             {
                 if (xAxis < 624)
                 {
                     xAxis += 3;
                 }
             }
-            else if (currentFacing.CompareTo("down") == 0 && currentStatus.CompareTo("walking") == 0)
+            else if (string.Compare(currentFacing, "down", new StringComparison()) == 0 && string.Compare(currentStatus, "walking", new StringComparison()) == 0)
             {
                 if (yAxis < 552)
                 {
                     yAxis += 3;
                 }                
             }
-            else if (currentFacing.CompareTo("up") == 0 && currentStatus.CompareTo("walking") == 0)
+            else if (string.Compare(currentFacing, "up", new StringComparison()) == 0 && string.Compare(currentStatus, "walking", new StringComparison()) == 0)
             {
                 if (yAxis > 264)
                 {
@@ -186,17 +186,17 @@ namespace Sprint0.Player
         //collision tests
         public void BlockCollisionTest(List<IBlock> blocks)
         {
-            linkBlockCollision.BlockCollision(this, blocks);
+            linkBlockCollision.BlockCollision(blocks);
         }
 
         public void EnemyCollisionTest(List<IEnemy> enemies)
         {
-            linkEnemyCollision.EnemyCollisionTest(this, enemies);
+            linkEnemyCollision.EnemyCollisionTest(enemies);
         }
 
         public void ItemCollisionTest(List<IItem> items)
         {
-            linkItemCollision.ItemCollision(this, items);
+            linkItemCollision.ItemCollision(items);
         }
     }
 }

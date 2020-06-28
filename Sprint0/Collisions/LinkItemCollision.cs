@@ -22,7 +22,7 @@ namespace Sprint0.Collisions
         }
 
 
-        public void ItemCollision(Player1 player, List<IItem> items)
+        public void ItemCollision(List<IItem> items)
         {
             Rectangle linkRectangle = myPlayer.GetRectangle();
             Rectangle itemRectangle;

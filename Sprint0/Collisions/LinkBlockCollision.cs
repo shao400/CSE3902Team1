@@ -19,7 +19,7 @@ namespace Sprint0.Collisions
         }
 
 
-        public void BlockCollision(Player1 player, List<IBlock> blocks)
+        public void BlockCollision(List<IBlock> blocks)
         {
             Rectangle linkRectangle = myPlayer.GetRectangle();
             Rectangle blockRectangle;
