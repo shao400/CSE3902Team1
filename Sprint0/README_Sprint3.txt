@@ -13,6 +13,9 @@ Overview of Sprint3:
 4. Started to work on HUDs and sounds(Sprint 4).
 5. Warnings fixes, redundant code deleted and adjusted.
 
+We added and adjusted many things in this project in one day according to the feedback on Sprint 2. We probably don't have enough time to complete everything mentioned in the feedback before Sprint 3 is 
+due, but we will make them up in sprint 4.
+
 Program Control: 
 -----------------------------------
 W,A,S,D and arrow keys---Walk
@@ -42,4 +45,6 @@ Known bugs for Sprint3
 
 TO-DOs:
 -----------------------------------
-Several enemy sprite sheets need to be updated and reversed
+1. Several enemy sprite sheets need to be updated and reversed
+2. Boss/Dragon fireballs and Flame need to be added, they are not in any sprite sheets that's currently available
+3. Need NPC/Boss interface and sort some of the enemy classes into them, as NPC/Boss may have different behavior from enemies
