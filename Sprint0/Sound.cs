@@ -16,9 +16,13 @@ namespace Sprint0
         private SoundEffect MagicRod;
         public Sound(List<SoundEffect> s)
         {
-            SwordSlash = s[0];
-            LinkHurt = s[1];
-            MagicRod = s[2];
+            if (s != null)
+            {
+                SwordSlash = s[0];
+                LinkHurt = s[1];
+                MagicRod = s[2];
+            }
+            
 
         }
         public void swordSlash()

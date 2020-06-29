@@ -15,12 +15,16 @@ namespace Sprint0.Items
         private ItemArrowSprite sprite = SpriteFactory.ItemArrow;
         private int xAix;
         private int yAix;
+        private int xSize;
+        private int ySize;
         private bool picked;
 
         public Arrow(int x, int y)
         {
             xAix = x;
             yAix = y;
+            xSize = 32;
+            ySize = 32;
             picked = false;
         }
         public void Draw()
@@ -35,6 +39,7 @@ namespace Sprint0.Items
         public void PickedUp()
         {
             picked = true;
+            
         }
 
         public Boolean isPickedUp()
@@ -54,7 +59,7 @@ namespace Sprint0.Items
 
         public Rectangle GetRectangle()
         {
-            return new Rectangle(xAix, yAix, 32, 32);
+            return new Rectangle(xAix, yAix, xSize, ySize);
         }
     }
 }

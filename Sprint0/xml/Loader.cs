@@ -35,12 +35,12 @@ namespace Sprint0.xml
             CultureInfo cultures = new CultureInfo("en-US");
             while (reader.Read())
             {
-                Console.WriteLine("reader.name: " + reader.Name);
+                
                 if (reader.Name == "player")
                 {
                     count++;
                     link = new Player1(Int32.Parse(reader.GetAttribute("xpos"), cultures), Int32.Parse(reader.GetAttribute("ypos"), cultures), 48, 48, s);
-                    Console.WriteLine("link xpos: " + Int32.Parse(reader.GetAttribute("xpos"), cultures) + "link ypos: " + Int32.Parse(reader.GetAttribute("ypos"), cultures));
+                    
                 }
                 else if(reader.Name == "enemy" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior" || reader.Name == "wallCube" || reader.Name =="hud")
                 {
