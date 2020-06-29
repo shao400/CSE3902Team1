@@ -1,0 +1,10 @@
+Zhizhou He
+6/29/2020
+Sprint3
+LinkEnemyCollision
+Main Author: Gengyi Qin
+Time: 8 min
+I think the quality of this file is pretty high. The file uses the intersection area's hight and width to determine the direction Link collides the enemy which I think is a very good way.
+The function LinkEnemyCollision(Player1 player) has Player as a parameter so it can be invoked by different players.
+And same way, the EnemyCollisionTest(List<IEnemy> enemies) can be applied by different enemies. 
+My suggestion to this file is just about some name of variable and even the file name since this file will be called by not just Link but other players. 
