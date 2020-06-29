@@ -44,8 +44,7 @@ namespace Sprint0.xml
                 }
                 else if(reader.Name == "enemy" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior" || reader.Name == "wallCube" || reader.Name =="hud")
                 {
-                    count++;
-                    //Console.WriteLine("2nd loop xpos:" + Int32.Parse(reader.GetAttribute("xpos"),cultures) + "ypos: " + Int32.Parse(reader.GetAttribute("ypos"), cultures) + "type: " + reader.GetAttribute("type"));
+                    count++;                    
                     int xpos = Int32.Parse(reader.GetAttribute("xpos"), cultures);
                     int ypos = Int32.Parse(reader.GetAttribute("ypos"), cultures);
                     String type = reader.GetAttribute("type");
