@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
 
@@ -26,7 +21,7 @@ namespace Sprint0.Enemies
             xPosition = x;
             yPosition = y;
             MoblinSprite = new EnemyMoblinSprite(x, y);
-            destinationRec = new Rectangle(x, y, 64, 64);
+            destinationRec = new Rectangle(x, y, 45, 45);
         }
 
 

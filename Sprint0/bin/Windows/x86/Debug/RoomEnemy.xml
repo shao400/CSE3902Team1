@@ -9,15 +9,17 @@
 	<wallCube type="DoorLeft" xpos="0" ypos="382" />
 	<wallCube type="DoorRight" xpos="672" ypos="381" />
 	<enemy type="Moblin" xpos="50" ypos="455"/>
+	<enemy type="Rope" xpos="506" ypos="407"/>
 	<enemy type="Peahat" xpos="600" ypos="455"/>
 	<enemy type="Tektite" xpos="160" ypos="455"/>
-	<block type="BlockA" xpos="284" ypos="310" />
-	<block type="BlockA" xpos="334" ypos="310" />
-	<block type="BlockA" xpos="384" ypos="310" />
-	<block type="BlockA" xpos="283" ypos="407" />
-	<block type="BlockA" xpos="333" ypos="407" />
-	<block type="BlockA" xpos="383" ypos="407" />
-	<block type="BlockA" xpos="283" ypos="506" />
-	<block type="BlockA" xpos="332" ypos="506" />
-	<block type="BlockA" xpos="381" ypos="506" />
+	<enemy type="Keese" xpos="200" ypos="455"/>
+	<enemy type="Goriya" xpos="50" ypos="554"/>
+	<enemy type="Stalfos" xpos="334" ypos="358"/>
+	<enemy type="Zol" xpos="554" ypos="255"/>
+	<enemy type="Wallmaster" xpos="382" ypos="358"/>
+	<enemy type="Trap" xpos="286" ypos="358"/>
+	<enemy type="Aqua" xpos="286" ypos="540"/>
+	<enemy type="Dodongo" xpos="96" ypos="506"/>
+	<enemy type="Oldman" xpos="286" ypos="358"/>
+	<enemy type="Merchant" xpos="238" ypos="358"/>
 </Room>

@@ -10,10 +10,12 @@
 	<wallCube type="DoorRight" xpos="672" ypos="381" />
 	<item type="Heart" xpos="244" ypos="268" />
 	<item type="Clock" xpos="494" ypos="268" />
-	<block type="BlockA" xpos="284" ypos="310" />
-	<block type="BlockA" xpos="334" ypos="310" />
-	<block type="BlockA" xpos="384" ypos="310" />
-	<block type="BlockA" xpos="283" ypos="407" />
-	<block type="BlockA" xpos="333" ypos="407" />
-	<block type="BlockA" xpos="383" ypos="407" />
+	<item type="Compass" xpos="192" ypos="336" />
+	<block type="Arrow" xpos="240" ypos="336" />
+	<block type="Bow" xpos="288" ypos="336" />
+	<block type="Key" xpos="336" ypos="336" />
+	<block type="Map" xpos="384" ypos="336" />
+	<block type="Ruppy" xpos="432" ypos="336" />
+	<block type="Triforce" xpos="480" ypos="336" />
+	<block type="WBoomerang" xpos="528" ypos="336" />
 </Room>

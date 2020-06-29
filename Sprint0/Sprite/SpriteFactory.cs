@@ -58,17 +58,36 @@ namespace Sprint0.Sprite
         public static LinkWoodenAttackingUpSprite LinkWoodenAttackingUp = new LinkWoodenAttackingUpSprite();
 
         // Enemy Author: Gengyi Qin
-        public static List<ISprite> EnemyList = new List<ISprite>();
-        public static EnemyMoblinSprite EnemyMoblin = new EnemyMoblinSprite(650, 240);
-        public static EnemyPeahatSprite EnemyPeahat = new EnemyPeahatSprite(300,240);
-        public static EnemyTektiteSprite EnemyTektite = new EnemyTektiteSprite(550,240);
+        public static EnemyMoblinSprite EnemyMoblin = new EnemyMoblinSprite(0, 0);
+        public static EnemyPeahatSprite EnemyPeahat = new EnemyPeahatSprite(0, 0);
+        public static EnemyTektiteSprite EnemyTektite = new EnemyTektiteSprite(0, 0);
+        public static EnemyKeeseSprite EnemyKeese = new EnemyKeeseSprite(0, 0);
+        public static EnemyStalfosSprite EnemyStalfos = new EnemyStalfosSprite(0, 0);
+        public static EnemyGoriyaSprite EnemyGoriya = new EnemyGoriyaSprite(0, 0);
+        public static EnemyZolSprite EnemyZol = new EnemyZolSprite(0, 0);
+        public static EnemyWallmasterSprite EnemyWallmaster = new EnemyWallmasterSprite(0, 0);
+        public static EnemyTrapSprite EnemyTrap = new EnemyTrapSprite(0, 0);
+        public static EnemyRopeSprite EnemyRope = new EnemyRopeSprite(0, 0);
+        public static EnemyAquaSprite EnemyAqua = new EnemyAquaSprite(0, 0);
+        public static EnemyDodongoSprite EnemyDodongo = new EnemyDodongoSprite(0, 0);
+        public static EnemyOldmanSprite EnemyOldman = new EnemyOldmanSprite(0, 0);
+        public static EnemyMerchantSprite EnemyMerchant = new EnemyMerchantSprite(0, 0);
 
         // Items Author: Zhizhou He, Chuwen Sun
         public static List<ISprite> ItemList = new List<ISprite>();
-        public static ItemHeartSprite ItemHeart = new ItemHeartSprite();
+        public static ItemHeartContainerSprite ItemHeartContainer = new ItemHeartContainerSprite();
         public static ItemGirlSprite ItemGirl = new ItemGirlSprite();
         public static ItemClockSprite ItemClock = new ItemClockSprite();
         public static ItemBombSprite ItemBomb = new ItemBombSprite();
+        public static ItemHeartSprite ItemHeart = new ItemHeartSprite();
+        public static ItemCompassSprite ItemCompass = new ItemCompassSprite();
+        public static ItemMapSprite ItemMap = new ItemMapSprite();
+        public static ItemKeySprite ItemKey = new ItemKeySprite();
+        public static ItemTriforceSprite ItemTriforce = new ItemTriforceSprite();
+        public static ItemWBoomerangSprite ItemWBoomerang = new ItemWBoomerangSprite();
+        public static ItemBowSprite ItemBow = new ItemBowSprite();
+        public static ItemRuppySprite ItemRuppy = new ItemRuppySprite();
+        public static ItemArrowSprite ItemArrow = new ItemArrowSprite();
 
         // Block Author: Zilin Shao
         public static List<ISprite> BlockList = new List<ISprite>();
@@ -94,7 +113,7 @@ namespace Sprint0.Sprite
         public static List<IHud> HudList = new List<IHud>();
         public static HudHalfHeartSprite HudHalfHeart = new HudHalfHeartSprite();
         public static HudEmptyHeartSprite HudEmptyHeart = new HudEmptyHeartSprite();
-        public static ItemHeartSprite HudHeart = new ItemHeartSprite();
+        public static ItemHeartContainerSprite HudHeart = new ItemHeartContainerSprite();
 
 
 
@@ -162,15 +181,34 @@ namespace Sprint0.Sprite
 
         private static void LoadItemContent(SpriteBatch batch, ContentManager content)
         {
-            ItemHeart.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemHeartContainer.LoadContent(batch, content.Load<Texture2D>("item"));
             ItemGirl.LoadContent(batch, content.Load<Texture2D>("item"));
             ItemClock.LoadContent(batch, content.Load<Texture2D>("item"));
             ItemBomb.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemHeart.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemCompass.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemKey.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemTriforce.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemWBoomerang.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemBow.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemRuppy.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemArrow.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemMap.LoadContent(batch, content.Load<Texture2D>("item"));
 
-            ItemList.Add(ItemHeart);
+            ItemList.Add(ItemHeartContainer);
             ItemList.Add(ItemGirl);
             ItemList.Add(ItemClock);
             ItemList.Add(ItemBomb);
+            ItemList.Add(ItemHeart);
+            ItemList.Add(ItemCompass);
+            ItemList.Add(ItemKey);
+            ItemList.Add(ItemTriforce);
+            ItemList.Add(ItemWBoomerang);
+            ItemList.Add(ItemBow);
+            ItemList.Add(ItemRuppy);
+            ItemList.Add(ItemArrow);
+            ItemList.Add(ItemMap);
+
         }
 
         private static void LoadHudContent(SpriteBatch batch, ContentManager content)
@@ -189,9 +227,17 @@ namespace Sprint0.Sprite
             EnemyPeahat.LoadContent(batch, content.Load<Texture2D>("enemy"));
             EnemyMoblin.LoadContent(batch, content.Load<Texture2D>("enemy"));
             EnemyTektite.LoadContent(batch, content.Load<Texture2D>("enemy"));
-            EnemyList.Add(EnemyMoblin);
-            EnemyList.Add(EnemyPeahat);
-            EnemyList.Add(EnemyTektite);
+            EnemyKeese.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            EnemyStalfos.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            EnemyGoriya.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            EnemyZol.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            EnemyWallmaster.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            EnemyTrap.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            EnemyRope.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            EnemyAqua.LoadContent(batch, content.Load<Texture2D>("boss"));
+            EnemyDodongo.LoadContent(batch, content.Load<Texture2D>("boss"));
+            EnemyOldman.LoadContent(batch, content.Load<Texture2D>("npc"));
+            EnemyMerchant.LoadContent(batch, content.Load<Texture2D>("npc"));
         }
 
         private static void LoadBlockContent(SpriteBatch batch, ContentManager content)

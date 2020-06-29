@@ -89,3 +89,5 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "<Pending>", Scope = "member", Target = "~M:Sprint0.Player.Player1.EnemyCollisionTest(System.Collections.Generic.List{Sprint0.Interfaces.IEnemy})")]
 [assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "<Pending>", Scope = "member", Target = "~M:Sprint0.Player.Player1.ItemCollisionTest(System.Collections.Generic.List{Sprint0.Interfaces.IItem})")]
 [assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "<Pending>", Scope = "member", Target = "~M:Sprint0.xml.Loader.LoadFromReader(System.Xml.XmlReader,Sprint0.Sound)~Sprint0.xml.roomProperties")]
+[assembly: SuppressMessage("Usage", "CA2211:Non-constant fields should not be visible", Justification = "<Pending>", Scope = "member", Target = "~F:Sprint0.Sprite.SpriteFactory.ItemHeartContainer")]
+[assembly: SuppressMessage("Usage", "CA2211:Non-constant fields should not be visible", Justification = "<Pending>", Scope = "member", Target = "~F:Sprint0.Sprite.SpriteFactory.ItemCompass")]

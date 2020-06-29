@@ -9,7 +9,7 @@ namespace Sprint0.HUD
     {
         private HudEmptyHeartSprite empty = SpriteFactory.HudEmptyHeart;
         private HudHalfHeartSprite half = SpriteFactory.HudHalfHeart;
-        private ItemHeartSprite solid = SpriteFactory.ItemHeart;
+        private ItemHeartContainerSprite solid = SpriteFactory.ItemHeartContainer;
         private int xAix;
         private int yAix;
         private int health;

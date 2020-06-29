@@ -33,7 +33,7 @@ namespace Sprint0.Items
             {
                 sprite.Draw(location, false);
             }
-            
+
         }
         public void PickedUp()
         {
@@ -56,7 +56,7 @@ namespace Sprint0.Items
 
         public void Update()
         {
-            //ItemHeartSprite.update();
+            sprite.Update();
         }
 
         public Rectangle GetRectangle()

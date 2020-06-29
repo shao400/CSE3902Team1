@@ -71,9 +71,20 @@
     <Compile Include="Commands\Attack.cs" />
     <Compile Include="Controller\MouseC.cs" />
     <Compile Include="Controller\KeyboardC.cs" />
+    <Compile Include="Enemies\Aqua.cs" />
+    <Compile Include="Enemies\Dodongo.cs" />
+    <Compile Include="Enemies\Goriya.cs" />
+    <Compile Include="Enemies\Keese.cs" />
+    <Compile Include="Enemies\Merchant.cs" />
     <Compile Include="Enemies\Moblin.cs" />
+    <Compile Include="Enemies\Oldman.cs" />
     <Compile Include="Enemies\Peahat.cs" />
+    <Compile Include="Enemies\Rope.cs" />
+    <Compile Include="Enemies\Stalfos.cs" />
     <Compile Include="Enemies\Tektite.cs" />
+    <Compile Include="Enemies\Trap.cs" />
+    <Compile Include="Enemies\Wallmaster.cs" />
+    <Compile Include="Enemies\Zol.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="HUD\HealthBar.cs" />
@@ -88,8 +99,17 @@
     <Compile Include="Interfaces\IPlayer.cs" />
     <Compile Include="Interfaces\ISprite.cs" />
     <Compile Include="Items\Bomb.cs" />
-    <Compile Include="Items\mClock.cs" />
+    <Compile Include="Items\Arrow.cs" />
+    <Compile Include="Items\Key.cs" />
+    <Compile Include="Items\Map.cs" />
+    <Compile Include="Items\Ruppy.cs" />
+    <Compile Include="Items\Triforce.cs" />
+    <Compile Include="Items\Bow.cs" />
+    <Compile Include="Items\WBoomerang.cs" />
     <Compile Include="Items\Heart.cs" />
+    <Compile Include="Items\Compass.cs" />
+    <Compile Include="Items\mClock.cs" />
+    <Compile Include="Items\HeartContainer.cs" />
     <Compile Include="Player1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,6 +122,26 @@
     <Compile Include="Sprite\BlockBSprite.cs" />
     <Compile Include="Sprite\BlockCSprite.cs" />
     <Compile Include="Sprite\DoorRightSprite.cs" />
+    <Compile Include="Sprite\EnemyAquaSprite.cs" />
+    <Compile Include="Sprite\EnemyDodongoSprite.cs" />
+    <Compile Include="Sprite\EnemyGoriyaSprite.cs" />
+    <Compile Include="Sprite\EnemyKeeseSprite.cs" />
+    <Compile Include="Sprite\EnemyMerchantSprite.cs" />
+    <Compile Include="Sprite\EnemyOldmanSprite.cs" />
+    <Compile Include="Sprite\EnemyRopeSprite.cs" />
+    <Compile Include="Sprite\EnemyStalfosSprite.cs" />
+    <Compile Include="Sprite\EnemyTrapSprite.cs" />
+    <Compile Include="Sprite\EnemyWallmasterSprite.cs" />
+    <Compile Include="Sprite\EnemyZolSprite.cs" />
+    <Compile Include="Sprite\ItemRuppySprite.cs" />
+    <Compile Include="Sprite\ItemBowSprite.cs" />
+    <Compile Include="Sprite\ItemArrowSprite.cs" />
+    <Compile Include="Sprite\ItemWBoomerangSprite.cs" />
+    <Compile Include="Sprite\ItemTriforceSprite.cs" />
+    <Compile Include="Sprite\ItemMapSprite.cs" />
+    <Compile Include="Sprite\ItemKeySprite.cs" />
+    <Compile Include="Sprite\ItemCompassSprite.cs" />
+    <Compile Include="Sprite\ItemHeartSprite.cs" />
     <Compile Include="Sprite\EnemyMoblinSprite.cs" />
     <Compile Include="Sprite\EnemyPeahatSprite.cs" />
     <Compile Include="Sprite\EnemyTektiteSprite.cs" />
@@ -110,7 +150,7 @@
     <Compile Include="Sprite\ItemBombSprite.cs" />
     <Compile Include="Sprite\ItemClockSprite.cs" />
     <Compile Include="Sprite\ItemGirlSprite.cs" />
-    <Compile Include="Sprite\ItemHeartSprite.cs" />
+    <Compile Include="Sprite\ItemHeartContainerSprite.cs" />
     <Compile Include="Sprite\LinkMagicalRAttackingDownSprite.cs" />
     <Compile Include="Sprite\LinkMagicalRAttackingLeftSprite.cs" />
     <Compile Include="Sprite\LinkMagicalRAttackingRightSprite.cs" />
@@ -177,7 +217,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />
-    <Content Include="xml\XMLFile1.xml" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />

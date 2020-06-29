@@ -14,7 +14,7 @@ namespace Sprint0.Collisions
     class LinkItemCollision
     {
         private Player1 myPlayer;
-        private Heart heart = new Heart(1, 1);
+        private HeartContainer heart = new HeartContainer(1, 1);
 
         public LinkItemCollision(Player1 player)
         {

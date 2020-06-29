@@ -17,11 +17,10 @@ using System.Globalization;
 // Author: Chuwen Sun
 namespace Sprint0.xml
 {
-    public class Loader
+    public static class Loader
     {
         static public roomProperties LoadFromReader(XmlReader reader, Sound s)
         {
-            roomProperties room = null;
             List<IEnemy> enemies = new List<IEnemy>();
             List<IBlock> blocks = new List<IBlock>();
             List<IItem> items = new List<IItem>();
@@ -29,7 +28,7 @@ namespace Sprint0.xml
             List<IHud> huds = new List<IHud>();
             List<IWallCube> cubes = new List<IWallCube>();
             Player1 link = null;
-            HealthBar hp = null;
+            //HealthBar hp = null;
             reader.MoveToContent();
             reader.Read(); // jump over <Room>
             int count = 0;
@@ -46,7 +45,7 @@ namespace Sprint0.xml
                 else if(reader.Name == "enemy" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior" || reader.Name == "wallCube" || reader.Name =="hud")
                 {
                     count++;
-                    Console.WriteLine("2nd loop xpos:" + Int32.Parse(reader.GetAttribute("xpos"), cultures) + "ypos: " + Int32.Parse(reader.GetAttribute("ypos"), cultures) + "type: " + reader.GetAttribute("type"), cultures);
+                    //Console.WriteLine("2nd loop xpos:" + Int32.Parse(reader.GetAttribute("xpos"),cultures) + "ypos: " + Int32.Parse(reader.GetAttribute("ypos"), cultures) + "type: " + reader.GetAttribute("type"));
                     int xpos = Int32.Parse(reader.GetAttribute("xpos"), cultures);
                     int ypos = Int32.Parse(reader.GetAttribute("ypos"), cultures);
                     String type = reader.GetAttribute("type");
@@ -104,7 +103,71 @@ namespace Sprint0.xml
                         case "Clock":
                             items.Add(new mClock(xpos, ypos));
                             break;
+                        case "Compass":
+                            items.Add(new Compass(xpos, ypos));
+                            break;
+                        case "Arrow":
+                            items.Add(new Arrow(xpos, ypos));
+                            break;
+                        case "Bomb":
+                            items.Add(new Bomb(xpos, ypos));
+                            break;
+                        case "Bow":
+                            items.Add(new Bow(xpos, ypos));
+                            break;
+                        case "HeartContainer":
+                            items.Add(new HeartContainer(xpos, ypos));
+                            break;
+                        case "Key":
+                            items.Add(new Key(xpos, ypos));
+                            break;
+                        case "Map":
+                            items.Add(new Map(xpos, ypos));
+                            break;
+                        case "Ruppy":
+                            items.Add(new Ruppy(xpos, ypos));
+                            break;
+                        case "Triforce":
+                            items.Add(new Triforce(xpos, ypos));
+                            break;
+                        case "WBoomerang":
+                            items.Add(new WBoomerang(xpos, ypos));
+                            break;
+                        case "Merchant":
+                            enemies.Add(new Merchant(xpos, ypos));
+                            break;
+                        case "Oldman":
+                            enemies.Add(new Oldman(xpos, ypos));
+                            break;
+                        case "Dodongo":
+                            enemies.Add(new Dodongo(xpos, ypos));
+                            break;
+                        case "Aqua":
+                            enemies.Add(new Aqua(xpos, ypos));
+                            break;
+                        case "Rope":
+                            enemies.Add(new Rope(xpos, ypos));
+                            break;
+                        case "Trap":
+                            enemies.Add(new Trap(xpos, ypos));
+                            break;
+                        case "Wallmaster":
+                            enemies.Add(new Wallmaster(xpos, ypos));
+                            break;
+                        case "Zol":
+                            enemies.Add(new Zol(xpos, ypos));
+                            break;
+                        case "Goriya":
+                            enemies.Add(new Goriya(xpos, ypos));
+                            break;
+                        case "Stalfos":
+                            enemies.Add(new Stalfos(xpos, ypos));
+                            break;
+                        case "Keese":
+                            enemies.Add(new Keese(xpos, ypos));
+                            break;
                     }
+
                 }
             }
             return new roomProperties(blocks, items, enemies, rooms, huds, cubes, link);
