@@ -39,3 +39,7 @@ Known bugs for Sprint3
 -----------------------------------
 1. When Link have collision with enemy on the top of the room, Link will be pushed to unexpected positions. 
 2. Every room has its own health bar instead of having the only one.
+
+TO-DOs:
+-----------------------------------
+Several enemy sprite sheets need to be updated and reversed

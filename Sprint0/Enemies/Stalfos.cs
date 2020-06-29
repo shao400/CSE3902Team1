@@ -16,8 +16,6 @@ namespace Sprint0.Enemies
         private static ISprite StalfosSprite;
         private int xPosition;
         private int yPosition;
-        private int frame = 0;
-        bool backmove = false;
         private Rectangle destinationRec;
 
         public Stalfos(int x, int y)
