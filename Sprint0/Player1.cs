@@ -122,7 +122,6 @@ namespace Sprint0.Player
             states.Down();
             //yAxis += 10;
             
-
         }
         public void Stand()
         {

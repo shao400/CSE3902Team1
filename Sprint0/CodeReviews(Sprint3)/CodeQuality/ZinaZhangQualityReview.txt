@@ -1,0 +1,11 @@
+Zina Zhang
+6/29/2020
+Sprint3
+Sound.cs Player1.cs
+Main Author: Lufei Ouyang
+Time: 10 min
+Logical is great. He edited a lot logic error from last edition Player1 and added sound in a good way without error. 
+I like how he use a list to store different method to include different sounds. This makes the future update easy.
+He have different method for each item and include sound and other method like state in it. That makes state flexible to edit. 
+He also eidt the boarder of the screen and link walking range, and link hp.
+It might be better to have a wider range for hp, so he might want to use switch in the future to have clearer look for link's hp 

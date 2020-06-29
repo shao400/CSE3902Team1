@@ -8,7 +8,7 @@ using Sprint0.Sprite;
 using Sprint0.Interfaces;
 
 namespace Sprint0.Enemies
-{
+{   //Zina
     public class Peahat : IEnemy
     {
       
