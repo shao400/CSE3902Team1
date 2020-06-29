@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+//currently not used, since enemy would not collition with items or blocks right now. May update future
 namespace Sprint0.Collisions
 {
     public class EnemyAllCollision

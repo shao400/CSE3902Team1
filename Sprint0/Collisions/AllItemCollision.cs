@@ -1,7 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
 
-
+//currently not used, since item would not collition with enemy or blocks right now. May update future
+ 
 namespace Sprint0.Collisions
 {
     class AllItemCollision

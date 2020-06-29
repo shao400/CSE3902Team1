@@ -50,9 +50,7 @@ namespace Sprint0.Items
             picked = false;
         }
 
-        public void Reverse()
-        {
-        }
+        
 
         public void Update()
         {

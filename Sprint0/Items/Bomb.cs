@@ -50,14 +50,13 @@ namespace Sprint0.Items
             picked = false;
         }
 
-        public void Reverse()
-        {
-        }
+        
 
         public void Update()
         {
-            //ItemHeartSprite.update();
+            //currently, does not need update
         }
+
 
         public Rectangle GetRectangle()
         {

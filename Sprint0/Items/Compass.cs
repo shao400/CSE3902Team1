@@ -46,10 +46,10 @@ namespace Sprint0.Items
         {
             picked = false;
         }
-
+        //currently, does not need update
         public void Update()
         {
-            //ItemClockSprite.update();
+            //currently, does not need update
         }
 
         public Rectangle GetRectangle()

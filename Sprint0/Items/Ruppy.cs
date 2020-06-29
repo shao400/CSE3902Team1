@@ -49,7 +49,7 @@ namespace Sprint0.Items
 
         public void Update()
         {
-            //ItemClockSprite.update();
+            //currently, does not need update
         }
 
         public Rectangle GetRectangle()
