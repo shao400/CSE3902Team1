@@ -25,7 +25,7 @@
 /processorParam:TextureFormat=Color
 /build:Blocks.png
 
-#begin boss.jpg
+#begin boss.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -35,7 +35,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:boss.jpg
+/build:boss.png
 
 #begin Credits1.spritefont
 /importer:FontDescriptionImporter
@@ -56,7 +56,7 @@
 /processorParam:TextureFormat=Color
 /build:enemy.png
 
-#begin enemy2.jpg
+#begin enemy2.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -66,7 +66,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:enemy2.jpg
+/build:enemy2.png
 
 #begin items.png
 /importer:TextureImporter
@@ -104,7 +104,7 @@
 /processorParam:TextureFormat=Color
 /build:luigi.png
 
-#begin npc.jpg
+#begin npc.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -114,7 +114,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:npc.jpg
+/build:npc.png
 
 #begin Sounds/Intro.mp3
 /importer:Mp3Importer
