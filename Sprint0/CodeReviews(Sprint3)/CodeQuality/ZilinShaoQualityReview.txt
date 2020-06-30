@@ -1,0 +1,10 @@
+Zilin Shao
+6/29/2020
+Sprint3
+Loader.cs
+Main Author: Chuwen Sun
+Time: 8 min
+I think the code quality of this file is high. The Loader basically read the sprites' information
+stored in our xml format files. Its implementation achieves its expected functionality well. It used
+many List objects to handle mutiple object classes. All warnings are removed. We can easily create 
+new sprites by adding few lines of code in Loader file. 

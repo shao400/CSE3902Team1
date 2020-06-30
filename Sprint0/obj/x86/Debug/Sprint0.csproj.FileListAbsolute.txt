@@ -220,3 +220,6 @@ C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Conte
 C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\boss.xnb
 C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\enemy2.xnb
 C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\npc.xnb
+C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\boss.xnb
+C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\enemy2.xnb
+C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\npc.xnb

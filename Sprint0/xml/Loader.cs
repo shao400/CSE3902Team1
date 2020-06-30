@@ -28,7 +28,6 @@ namespace Sprint0.xml
             List<IHud> huds = new List<IHud>();
             List<IWallCube> cubes = new List<IWallCube>();
             Player1 link = null;
-            //HealthBar hp = null;
             reader.MoveToContent();
             reader.Read(); // jump over <Room>
             int count = 0;

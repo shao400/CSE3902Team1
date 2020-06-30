@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
 using Sprint0.Player;
 
-namespace Spriny0.Collisions
+namespace Sprint0.Collisions
 {
     class LinkEnemyCollision
     {

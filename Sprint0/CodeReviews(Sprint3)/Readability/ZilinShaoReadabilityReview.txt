@@ -1,0 +1,12 @@
+Zilin Shao
+6/29/2020
+Sprint3
+LinkEnemyCollision.cs
+Main Author: Gengyi Qin
+Time: 7 min
+The readability of this file is high. First, it has a brief construct as whole. A variable 
+initialization, a constructor, and a method doing all the collision handling works. A foreach
+loop dealed with collision with each enemy. Comments are added inside the nested if statements,
+so reader of this file can understand how different if statements deal with different collisions
+within the first glance.
+
