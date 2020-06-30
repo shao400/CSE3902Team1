@@ -23,8 +23,7 @@ namespace Spriny0.Collisions
             Rectangle linkRectangle = myPlayer.GetRectangle();
             Rectangle enemyRectangle;
             Rectangle intersectionRectangle;
-            //bool enemyKilled = false;
-            //Queue<IEnemy> deadEnemies = new Queue<IEnemy>();
+            
 
             foreach (IEnemy enemy in enemies)
             {
@@ -35,8 +34,7 @@ namespace Spriny0.Collisions
                 {
                     myPlayer.takeDmg();
                     if (intersectionRectangle.Width >= intersectionRectangle.Height)
-                    {
-                        //myPlayer.Hit(); need implementation                       
+                    {                     
                         if (linkRectangle.Y > enemyRectangle.Y && linkRectangle.Y > 0) // from down
                         {
 
@@ -48,7 +46,6 @@ namespace Spriny0.Collisions
                             {
                                 myPlayer.yAxis = 552;
                             }
-                            //myPlayer.yAxis += intersectionRectangle.Height;
                             if (myPlayer.yAxis < 512) { myPlayer.yAxis += 40; } else { myPlayer.yAxis = 552; }
                             
                         }
@@ -63,7 +60,6 @@ namespace Spriny0.Collisions
                                 myPlayer.yAxis = 264;
                             }
                             
-                            //myPlayer.xAxis -= intersectionRectangle.Height;
                             if (myPlayer.yAxis > 304) { myPlayer.yAxis -= 40; } else { myPlayer.yAxis = 264; }
                         }
                     }
@@ -79,7 +75,6 @@ namespace Spriny0.Collisions
                             {
                                 myPlayer.xAxis = 624;
                             }
-                            //myPlayer.xAxis += intersectionRectangle.Width;
                             if (myPlayer.xAxis < 584) { myPlayer.xAxis += 40; } else { myPlayer.xAxis = 624; }
                         }
                         else //from left
@@ -92,7 +87,6 @@ namespace Spriny0.Collisions
                             {
                                 myPlayer.xAxis = 96;
                             }
-                            //myPlayer.xAxis -= intersectionRectangle.Width;
                             if (myPlayer.xAxis > 136) { myPlayer.xAxis -= 40; } else { myPlayer.xAxis = 96; }
                         }
                     }

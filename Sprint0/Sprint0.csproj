@@ -110,14 +110,14 @@
     <Compile Include="Items\Compass.cs" />
     <Compile Include="Items\mClock.cs" />
     <Compile Include="Items\HeartContainer.cs" />
-    <Compile Include="Player1.cs" />
+    <Compile Include="Players\Player1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rooms\RoomBlock.cs" />
     <Compile Include="Rooms\RoomEnemy.cs" />
     <Compile Include="Rooms\ExRoom.cs" />
     <Compile Include="Rooms\RoomItem.cs" />
-    <Compile Include="Sound.cs" />
+    <Compile Include="Sound\Sound.cs" />
     <Compile Include="Sprite\BlockASprite.cs" />
     <Compile Include="Sprite\BlockBSprite.cs" />
     <Compile Include="Sprite\BlockCSprite.cs" />

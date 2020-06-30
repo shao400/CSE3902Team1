@@ -1,0 +1,14 @@
+Lufei Ouyang
+6/29/2020
+Sprint3
+LinkItemCollision.cs, HealthBar.cs
+Main Author: Zilin Shao
+Time: 5 min
+
+
+The LinkItemCollision class contains a large nested condition loop, and several if-else statements inside the loop, which is a four-level nested structure. 
+I think the author might need to fix it by using more clear logic. 
+
+The HealthBar is inherited from the HUD interface. The HUD interface makes the code maintainable and reusable. Also, all the functions that the author wrote are good. 
+The logic behind each function is simple. And different function does a different thing, which makes the code modular, and it increases the testability. 
+One suggestion to this class is that try not to use public fields, it can make the data unsafe.

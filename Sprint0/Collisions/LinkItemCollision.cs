@@ -27,7 +27,6 @@ namespace Sprint0.Collisions
             Rectangle linkRectangle = myPlayer.GetRectangle();
             Rectangle itemRectangle;
             Rectangle intersectionRectangle;
-            //List<IItem> holdItems=new List<IItem>();
             foreach (IItem item in items)
             {
                 itemRectangle = item.GetRectangle();
@@ -43,12 +42,10 @@ namespace Sprint0.Collisions
                     {
                         if (linkRectangle.Y > itemRectangle.Y) // from down
                         {
-                            //myPlayer.yAxis += intersectionRectangle.Height;
                             item.PickedUp();
                         }
                         else //from up
                         {
-                           // myPlayer.yAxis -= intersectionRectangle.Height;
                             item.PickedUp();
                         }
                     }
@@ -56,12 +53,10 @@ namespace Sprint0.Collisions
                     {
                         if (linkRectangle.X > itemRectangle.X)//from right
                         {
-                            //myPlayer.xAxis += intersectionRectangle.Width;
                             item.PickedUp();
                         }
                         else //from left
                         {
-                            //myPlayer.xAxis -= intersectionRectangle.Width;
                             item.PickedUp();
                         }
                     }
