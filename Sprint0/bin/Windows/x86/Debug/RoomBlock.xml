@@ -2,6 +2,7 @@
 <Room>
 	<player xpos="100" ypos="100" />
 	<hud type="HealthBar" xpos="50" ypos="50" />
+	<hud type="WeaponSlot" xpos="150" ypos="50" />
 	<exterior type="exRoom" xpos="0" ypos="168" />
 	<interior type="RoomBlock" xpos="91" ypos="262" />
 	<wallCube type="WallTop" xpos="332" ypos="168" />
