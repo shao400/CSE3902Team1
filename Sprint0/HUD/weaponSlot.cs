@@ -29,22 +29,23 @@ namespace Sprint0.HUD
         {
             //None, WoodenSword, WhiteSword, MagicalSword, MagicalRod
             Vector2 location = new Vector2(xAix, yAix);
-            if (weapon.Equals("None", System.StringComparison.Ordinal))
+            //System.Diagnostics.Debug.WriteLine(_link.states.GetCurrentWeapon());
+            if (_link.states.GetCurrentWeapon().Equals("None", System.StringComparison.Ordinal))
             {
                 empty.Draw(location, false);
             }
-            else if (weapon.Equals("WoodenSword", System.StringComparison.Ordinal))
+            else if (_link.states.GetCurrentWeapon().Equals("WoodenSword", System.StringComparison.Ordinal))
             {
                 half.Draw(location, false);
             }
-            else if (weapon.Equals("WhiteSword", System.StringComparison.Ordinal))
+            else if (_link.states.GetCurrentWeapon().Equals("WhiteSword", System.StringComparison.Ordinal))
             {
                 solid.Draw(location, false);
-            }else if (weapon.Equals("MagicalSword", System.StringComparison.Ordinal))
+            }else if (_link.states.GetCurrentWeapon().Equals("MagicalSword", System.StringComparison.Ordinal))
             {
                 solid.Draw(location, false);
             }
-            else if (weapon.Equals("MagicalRod", System.StringComparison.Ordinal))
+            else if (_link.states.GetCurrentWeapon().Equals("MagicalRod", System.StringComparison.Ordinal))
             {
                 solid.Draw(location, false);
             }
@@ -53,7 +54,7 @@ namespace Sprint0.HUD
 
         public void GetLinkItem()
         {
-            weapon = _link.states.GetCurrentStatus();        
+            //weapon = _link.states.GetCurrentWeapon();        
         }
 
 

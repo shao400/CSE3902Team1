@@ -48,6 +48,12 @@ namespace Sprint0.State
             currentSprite.Update();
         }
 
+        public string GetCurrentWeapon()
+        {
+
+            return currentWeapon.ToString();
+        }
+
         public string GetCurrentFacing()
         {
 
