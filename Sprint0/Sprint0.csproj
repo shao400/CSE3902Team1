@@ -119,7 +119,7 @@
     <Compile Include="Rooms\ExRoom.cs" />
     <Compile Include="Rooms\RoomItem.cs" />
     <Compile Include="Sound\Sound.cs" />
-    <Compile Include="Sprite\woodenSword.cs" />
+    <Compile Include="Sprite\PlayerWoodenSwordSprite.cs" />
     <Compile Include="Sprite\BlockASprite.cs" />
     <Compile Include="Sprite\BlockBSprite.cs" />
     <Compile Include="Sprite\BlockCSprite.cs" />

@@ -51,6 +51,11 @@ namespace Sprint0.Player
         {
             return states.currentSprite;
         }
+
+        public ISprite getPlayerItem()
+        {
+            return states.currentItem;
+        }
         public void Update()
         {
             currentFacing = states.GetCurrentFacing();

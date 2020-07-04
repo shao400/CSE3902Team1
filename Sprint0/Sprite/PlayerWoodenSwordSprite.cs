@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework;
 
 namespace Sprint0.Sprite
 {
-    public class woodenSwordSprite : ISprite
+    public class PlayerWoodenSwordSprite : ISprite
     {
         //1,154,7,16 (whole)
         //1,154,7,13 (with green part)

@@ -73,6 +73,8 @@ namespace Sprint0.Sprite
         public static EnemyOldmanSprite EnemyOldman = new EnemyOldmanSprite(0, 0);
         public static EnemyMerchantSprite EnemyMerchant = new EnemyMerchantSprite(0, 0);
 
+        public static PlayerWoodenSwordSprite PlayerWoodenSword = new PlayerWoodenSwordSprite();
+
         // Items Author: Zhizhou He, Chuwen Sun
         public static List<ISprite> ItemList = new List<ISprite>();
         public static ItemHeartContainerSprite ItemHeartContainer = new ItemHeartContainerSprite();

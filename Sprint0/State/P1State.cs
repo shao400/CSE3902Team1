@@ -31,6 +31,7 @@ namespace Sprint0.State
         private facing currentFacing;
         private weapon currentWeapon;
         private status currentStatus;
+        public ISprite currentItem;
         
 
         public P1State()
@@ -46,6 +47,10 @@ namespace Sprint0.State
         public void Update()
         {
             currentSprite.Update();
+            if (currentItem != null && currentStatus == status.attacking)
+            {
+                currentItem.Update();
+            }
         }
 
         public string GetCurrentWeapon()
@@ -114,7 +119,8 @@ namespace Sprint0.State
         public void UseFirstItem()
         {
             currentWeapon = weapon.WoodenSword;
-            if (currentStatus == status.standing)
+            //currentItem = SpriteFactory.PlayerWoodenSword;
+            /*if (currentStatus == status.standing)
             {
                 if (currentFacing == facing.up)
                     currentSprite = SpriteFactory.LinkWoodenStandingUp;
@@ -124,7 +130,7 @@ namespace Sprint0.State
                     currentSprite = SpriteFactory.LinkWoodenStandingRight;
                 else if (currentFacing == facing.left)
                     currentSprite = SpriteFactory.LinkWoodenStandingLeft;
-            }
+            }*/
         }
         public void UseSecondItem()
         {
@@ -174,6 +180,7 @@ namespace Sprint0.State
         public void Attack()
         {
             currentStatus = status.attacking;
+            currentItem = SpriteFactory.PlayerWoodenSword;
             if (currentFacing == facing.right && currentWeapon == weapon.WoodenSword)
             {
                 currentSprite = SpriteFactory.LinkWoodenAttackingRight;
