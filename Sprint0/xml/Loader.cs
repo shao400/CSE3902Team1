@@ -53,6 +53,9 @@ namespace Sprint0.xml
                         case "HealthBar":
                             huds.Add(new HealthBar(xpos, ypos, link));
                             break;
+                        case "WeaponSlot":
+                            huds.Add(new WeaponSlot(xpos, ypos, link));
+                            break;
                         case "Moblin":
                             enemies.Add(new Moblin(xpos, ypos));
                             break;

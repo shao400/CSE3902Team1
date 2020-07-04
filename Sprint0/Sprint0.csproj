@@ -87,6 +87,7 @@
     <Compile Include="Enemies\Zol.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="HUD\WeaponSlot.cs" />
     <Compile Include="HUD\HealthBar.cs" />
     <Compile Include="Interfaces\IBlock.cs" />
     <Compile Include="Interfaces\ICommand.cs" />

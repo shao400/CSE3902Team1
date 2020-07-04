@@ -17,7 +17,7 @@ namespace Sprint0.Player
 {
     public class Player1 : IPlayer
     {
-        private P1State states;
+        public P1State states;
         public int xAxis;
         public int yAxis;
         private int width;
@@ -42,6 +42,7 @@ namespace Sprint0.Player
             linkItemCollision = new LinkItemCollision(this);
             linkEnemyCollision = new LinkEnemyCollision(this);
         }
+
         public bool isTakingDmg()
         {
             return currentStatus == "takingDmg";
