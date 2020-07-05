@@ -134,6 +134,10 @@ namespace Sprint0
             GraphicsDevice.Clear(Color.CornflowerBlue);
             currentRoom.Draw();
             currentRoom.link.getSprite().Draw(new Vector2(currentRoom.link.xAxis, currentRoom.link.yAxis), currentRoom.link.isTakingDmg());
+            if (currentRoom.link.states.GetCurrentStatus() == "attacking")
+            {
+                currentRoom.link.getPlayerItem().Draw(new Vector2(currentRoom.link.xAxis, currentRoom.link.yAxis), false);
+            }
             base.Draw(gameTime);
         }
       

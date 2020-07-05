@@ -180,71 +180,8 @@ namespace Sprint0.State
         public void Attack()
         {
             currentStatus = status.attacking;
-            currentItem = SpriteFactory.PlayerWoodenSword;
-            if (currentFacing == facing.right && currentWeapon == weapon.WoodenSword)
-            {
-                currentSprite = SpriteFactory.LinkWoodenAttackingRight;
-            }
-            else if (currentFacing == facing.right && currentWeapon == weapon.WhiteSword)
-            {
-                currentSprite = SpriteFactory.LinkWhiteAttackingRight;
-            }
-            else if (currentFacing == facing.right && currentWeapon == weapon.MagicalSword)
-            {
-                currentSprite = SpriteFactory.LinkMagicalSAttackingRight;
-            }
-            else if (currentFacing == facing.right && currentWeapon == weapon.MagicalRod)
-            {
-                currentSprite = SpriteFactory.LinkMagicalRAttackingRight;
-            }
-            else if (currentFacing == facing.left && currentWeapon == weapon.WoodenSword)
-            {
-                currentSprite = SpriteFactory.LinkWoodenAttackingLeft;
-            }
-            else if (currentFacing == facing.left && currentWeapon == weapon.WhiteSword)
-            {
-                currentSprite = SpriteFactory.LinkWhiteAttackingLeft;
-            }
-            else if (currentFacing == facing.left && currentWeapon == weapon.MagicalSword)
-            {
-                currentSprite = SpriteFactory.LinkMagicalSAttackingLeft;
-            }
-            else if (currentFacing == facing.left && currentWeapon == weapon.MagicalRod)
-            {
-                currentSprite = SpriteFactory.LinkMagicalRAttackingLeft;
-            }
-            else if (currentFacing == facing.up && currentWeapon == weapon.WoodenSword)
-            {
-                currentSprite = SpriteFactory.LinkWoodenAttackingUp;
-            }
-            else if (currentFacing == facing.up && currentWeapon == weapon.WhiteSword)
-            {
-                currentSprite = SpriteFactory.LinkWhiteAttackingUp;
-            }
-            else if (currentFacing == facing.up && currentWeapon == weapon.MagicalSword)
-            {
-                currentSprite = SpriteFactory.LinkMagicalSAttackingUp;
-            }
-            else if (currentFacing == facing.up && currentWeapon == weapon.MagicalRod)
-            {
-                currentSprite = SpriteFactory.LinkMagicalRAttackingUp;
-            }
-            else if (currentFacing == facing.down && currentWeapon == weapon.WoodenSword)
-            {
-                currentSprite = SpriteFactory.LinkWoodenAttackingDown;
-            }
-            else if (currentFacing == facing.down && currentWeapon == weapon.WhiteSword)
-            {
-                currentSprite = SpriteFactory.LinkWhiteAttackingDown;
-            }
-            else if (currentFacing == facing.down && currentWeapon == weapon.MagicalSword)
-            {
-                currentSprite = SpriteFactory.LinkMagicalSAttackingDown;
-            }
-            else if (currentFacing == facing.down && currentWeapon == weapon.MagicalRod)
-            {
-                currentSprite = SpriteFactory.LinkMagicalRAttackingDown;
-            }
+            currentItem = SpriteFactory.PlayerWoodenSwordRight;
+
         }
 
         public void takeDmg()

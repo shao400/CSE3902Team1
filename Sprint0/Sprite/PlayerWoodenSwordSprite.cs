@@ -19,7 +19,7 @@ namespace Sprint0.Sprite
         Color myColor = Color.CornflowerBlue;
         int frame = 0;
         Rectangle destinationRec;
-        Rectangle sourceRec = new Rectangle(1, 54, 7, 16);
+        Rectangle sourceRec = new Rectangle(10, 159, 16, 7);
 
 
         public void Update()
@@ -45,14 +45,14 @@ namespace Sprint0.Sprite
             }
             if (frame < 9)
             {
-                destinationRec = new Rectangle((int)location.X+5, (int)location.Y+12, 45, 45);
+                destinationRec = new Rectangle((int)location.X+27, (int)location.Y+12, 45, 23);
             }
             else
             {
-                destinationRec = new Rectangle((int)location.X, (int)location.Y, 45, 45);
+                //destinationRec = new Rectangle((int)location.X, (int)location.Y, 45, 21);
             }
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, Color.White);
+            mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor);
             mySpriteBatch.End();
 
         }

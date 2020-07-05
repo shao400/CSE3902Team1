@@ -73,7 +73,7 @@ namespace Sprint0.Sprite
         public static EnemyOldmanSprite EnemyOldman = new EnemyOldmanSprite(0, 0);
         public static EnemyMerchantSprite EnemyMerchant = new EnemyMerchantSprite(0, 0);
 
-        public static PlayerWoodenSwordSprite PlayerWoodenSword = new PlayerWoodenSwordSprite();
+        public static PlayerWoodenSwordSprite PlayerWoodenSwordRight = new PlayerWoodenSwordSprite();
 
         // Items Author: Zhizhou He, Chuwen Sun
         public static List<ISprite> ItemList = new List<ISprite>();
@@ -179,6 +179,7 @@ namespace Sprint0.Sprite
             LinkWoodenAttackingRight.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkWoodenAttackingUp.LoadContent(batch, content.Load<Texture2D>("link"));
 
+            PlayerWoodenSwordRight.LoadContent(batch, content.Load<Texture2D>("link"));
         }
 
         private static void LoadItemContent(SpriteBatch batch, ContentManager content)
