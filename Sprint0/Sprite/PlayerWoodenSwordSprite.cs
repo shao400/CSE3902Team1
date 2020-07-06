@@ -17,9 +17,16 @@ namespace Sprint0.Sprite
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
         Color myColor = Color.CornflowerBlue;
-        int frame = 0;
         Rectangle destinationRec;
         Rectangle sourceRec = new Rectangle(10, 159, 16, 7);
+        SpriteEffects myEffect;
+        float myRotation;
+
+        public PlayerWoodenSwordSprite(SpriteEffects effect, float rotation)
+        {
+            myEffect = effect;
+            myRotation = rotation;
+        }
 
 
         public void Update()
@@ -38,21 +45,13 @@ namespace Sprint0.Sprite
 
         public void Draw(Vector2 location, Boolean isDamaged)
         {
-            frame++;
-            if (frame == 12)
-            {
-                frame = 0;
-            }
-            if (frame < 9)
-            {
-                destinationRec = new Rectangle((int)location.X+27, (int)location.Y+12, 45, 23);
-            }
-            else
-            {
-                //destinationRec = new Rectangle((int)location.X, (int)location.Y, 45, 21);
-            }
+            if(myEffect == SpriteEffects.FlipHorizontally) destinationRec = new Rectangle((int)location.X - 28, (int)location.Y + 12, 45, 23); //left
+            else if (myEffect == SpriteEffects.None && myRotation == 0) destinationRec = new Rectangle((int)location.X + 27, (int)location.Y + 12, 45, 23); //right
+            else if (myEffect == SpriteEffects.None && myRotation < 0) destinationRec = new Rectangle((int)location.X + 12, (int)location.Y + 12, 45, 23);  //up
+            else if (myEffect == SpriteEffects.None && myRotation > 0) destinationRec = new Rectangle((int)location.X + 35, (int)location.Y + 30, 45, 23);  //down
+
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor, myRotation, new Vector2(0,0), myEffect, 0);
             mySpriteBatch.End();
 
         }

@@ -119,18 +119,19 @@ namespace Sprint0.State
         public void UseFirstItem()
         {
             currentWeapon = weapon.WoodenSword;
-            //currentItem = SpriteFactory.PlayerWoodenSword;
-            /*if (currentStatus == status.standing)
-            {
+            
+            
+            //if (currentStatus == status.standing)
+            //{
                 if (currentFacing == facing.up)
-                    currentSprite = SpriteFactory.LinkWoodenStandingUp;
+                    currentItem = SpriteFactory.PlayerWoodenSwordUp;
                 else if (currentFacing == facing.down)
-                    currentSprite = SpriteFactory.LinkWoodenStandingDown;
+                    currentItem = SpriteFactory.PlayerWoodenSwordDown;
                 else if (currentFacing == facing.right)
-                    currentSprite = SpriteFactory.LinkWoodenStandingRight;
+                    currentItem = SpriteFactory.PlayerWoodenSwordRight;
                 else if (currentFacing == facing.left)
-                    currentSprite = SpriteFactory.LinkWoodenStandingLeft;
-            }*/
+                    currentItem = SpriteFactory.PlayerWoodenSwordLeft;
+            //}
         }
         public void UseSecondItem()
         {
@@ -180,7 +181,10 @@ namespace Sprint0.State
         public void Attack()
         {
             currentStatus = status.attacking;
-            currentItem = SpriteFactory.PlayerWoodenSwordRight;
+            if (currentWeapon == weapon.WoodenSword) UseFirstItem();
+            
+                
+            
 
         }
 

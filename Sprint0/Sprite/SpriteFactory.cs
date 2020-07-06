@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 using Sprint0.Interfaces;
 using Sprint0.Items;
+using Microsoft.Xna.Framework;
 //Author: Gengyi Qin
 namespace Sprint0.Sprite
 {
@@ -73,7 +74,10 @@ namespace Sprint0.Sprite
         public static EnemyOldmanSprite EnemyOldman = new EnemyOldmanSprite(0, 0);
         public static EnemyMerchantSprite EnemyMerchant = new EnemyMerchantSprite(0, 0);
 
-        public static PlayerWoodenSwordSprite PlayerWoodenSwordRight = new PlayerWoodenSwordSprite();
+        public static PlayerWoodenSwordSprite PlayerWoodenSwordRight = new PlayerWoodenSwordSprite(SpriteEffects.None, 0);
+        public static PlayerWoodenSwordSprite PlayerWoodenSwordLeft = new PlayerWoodenSwordSprite(SpriteEffects.FlipHorizontally, 0);
+        public static PlayerWoodenSwordSprite PlayerWoodenSwordUp = new PlayerWoodenSwordSprite(SpriteEffects.None, (float)-1.5708);
+        public static PlayerWoodenSwordSprite PlayerWoodenSwordDown = new PlayerWoodenSwordSprite(SpriteEffects.None, (float)1.5708);
 
         // Items Author: Zhizhou He, Chuwen Sun
         public static List<ISprite> ItemList = new List<ISprite>();
@@ -180,6 +184,9 @@ namespace Sprint0.Sprite
             LinkWoodenAttackingUp.LoadContent(batch, content.Load<Texture2D>("link"));
 
             PlayerWoodenSwordRight.LoadContent(batch, content.Load<Texture2D>("link"));
+            PlayerWoodenSwordLeft.LoadContent(batch, content.Load<Texture2D>("link"));
+            PlayerWoodenSwordUp.LoadContent(batch, content.Load<Texture2D>("link"));
+            PlayerWoodenSwordDown.LoadContent(batch, content.Load<Texture2D>("link"));
         }
 
         private static void LoadItemContent(SpriteBatch batch, ContentManager content)
