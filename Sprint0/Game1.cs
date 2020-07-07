@@ -16,6 +16,7 @@ using System.ComponentModel;
 using Sprint0.xml;
 using System.Xml;
 using Microsoft.Xna.Framework.Media;
+using Sprint0.GameStates;
 
 namespace Sprint0
 {
@@ -36,7 +37,9 @@ namespace Sprint0
         private Sound soundEffect;
         private Song intro;
         List<object> controllerList; // could also be defined as List <IController>
-    
+        public IGameState currentState;
+        public List<IGameState> stateList;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -50,6 +53,9 @@ namespace Sprint0
         /// </summary>
         protected override void Initialize()
         {
+            spriteBatch = new SpriteBatch(GraphicsDevice);
+            SpriteFactory.LoadContent(spriteBatch, Content);
+
             // TODO: Add your initialization logic here
             graphics.PreferredBackBufferHeight = 696;
             graphics.PreferredBackBufferWidth = 768;
@@ -66,18 +72,27 @@ namespace Sprint0
             controllerList = new List<object>();
             controllerList.Add(new KeyboardC(this));
             controllerList.Add(new MouseC(this));
+
             this.IsMouseVisible = true;
             base.Initialize();
             roomCount = 0;
             roomList = new List<roomProperties>();
-            reader = XmlReader.Create("RoomBlock.xml", new XmlReaderSettings());
+            reader = XmlReader.Create("Room0.xml", new XmlReaderSettings());
             roomList.Add(Loader.LoadFromReader(reader, soundEffect));
-            reader = XmlReader.Create("RoomItem.xml", new XmlReaderSettings());
+            reader = XmlReader.Create("Room1.xml", new XmlReaderSettings());
             roomList.Add(Loader.LoadFromReader(reader, soundEffect));
-            reader = XmlReader.Create("RoomEnemy.xml", new XmlReaderSettings());
+            reader = XmlReader.Create("Room2.xml", new XmlReaderSettings());
             roomList.Add(Loader.LoadFromReader(reader, soundEffect));
+            foreach (roomProperties room in roomList)
+            {
+                room.loadBatchAndContent(Content, spriteBatch);
+            }
             currentRoom = roomList[roomCount];
             reader.Close();
+            stateList = new List<IGameState>();
+            stateList.Add(new InGame(this));
+            stateList.Add(new Transitioning(this, spriteBatch, Content));
+            currentState = stateList[0];
         }
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
@@ -85,12 +100,6 @@ namespace Sprint0
         /// </summary>
         protected override void LoadContent()
         {
-            // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(GraphicsDevice);
-            
-            // TODO: use this.Content to load your game content here
-
-            SpriteFactory.LoadContent(spriteBatch, Content);
             
         }
         /// <summary>
@@ -109,7 +118,7 @@ namespace Sprint0
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-            Exit();
+                Exit();
 
             // TODO: Add your update logic here
             foreach (IController controller in controllerList)
@@ -117,12 +126,7 @@ namespace Sprint0
                 controller.Update();
             }
 
-            currentRoom.link.Update();
-            currentRoom.link.BlockCollisionTest(currentRoom.blockList);
-            currentRoom.link.EnemyCollisionTest(currentRoom.enemyList);
-            currentRoom.link.ItemCollisionTest(currentRoom.itemList);
-            currentRoom.Update();
-
+            currentState.Update();
             base.Update(gameTime);
         }
         /// <summary>
@@ -132,13 +136,7 @@ namespace Sprint0
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            currentRoom.Draw();
-            
-            if (currentRoom.link.states.GetCurrentStatus() == "attacking")
-            {
-                currentRoom.link.getPlayerItem().Draw(new Vector2(currentRoom.link.xAxis, currentRoom.link.yAxis), false);
-            }
-            currentRoom.link.getSprite().Draw(new Vector2(currentRoom.link.xAxis, currentRoom.link.yAxis), currentRoom.link.isTakingDmg());
+            currentState.Draw();
             base.Draw(gameTime);
         }
       

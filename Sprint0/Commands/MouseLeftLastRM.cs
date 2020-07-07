@@ -18,11 +18,18 @@ namespace Sprint0.Commands
 
         public void Execute()
         {
-            if (myGame.roomCount != 0)
+            if (myGame.currentRoom.roomID > 0)
             {
-                myGame.roomCount--;
-                myGame.currentRoom = myGame.roomList[myGame.roomCount];
+                myGame.currentState = myGame.stateList[1];
+                Console.WriteLine("nextroom: " + myGame.currentRoom.roomID + "-1");
+                myGame.currentState.loadNextRoom(myGame.currentRoom.roomID - 1);
             }
+
+            /*            if (myGame.roomCount != 0)
+                        {
+                            myGame.roomCount--;
+                            myGame.currentRoom = myGame.roomList[myGame.roomCount];
+                        }*/
         }
 
     }

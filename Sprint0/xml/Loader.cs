@@ -13,6 +13,7 @@ using Sprint0.Rooms;
 using Sprint0.WallCube;
 using Sprint0.HUD;
 using System.Globalization;
+using Microsoft.Xna.Framework;
 
 // Author: Chuwen Sun
 namespace Sprint0.xml
@@ -21,6 +22,7 @@ namespace Sprint0.xml
     {
         static public roomProperties LoadFromReader(XmlReader reader, Sound s)
         {
+            int roomID = -1;
             List<IEnemy> enemies = new List<IEnemy>();
             List<IBlock> blocks = new List<IBlock>();
             List<IItem> items = new List<IItem>();
@@ -30,20 +32,30 @@ namespace Sprint0.xml
             Player1 link = null;
             reader.MoveToContent();
             reader.Read(); // jump over <Room>
-            int count = 0;
             CultureInfo cultures = new CultureInfo("en-US");
+            Rectangle source = new Rectangle(0,0,0,0);
+            List<int> Con = new List<int>();
             while (reader.Read())
             {
-                
                 if (reader.Name == "player")
                 {
-                    count++;
                     link = new Player1(Int32.Parse(reader.GetAttribute("xpos"), cultures), Int32.Parse(reader.GetAttribute("ypos"), cultures), 48, 48, s);
-                    
                 }
-                else if(reader.Name == "enemy" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior" || reader.Name == "wallCube" || reader.Name =="hud")
+                else if (reader.Name == "src")
                 {
-                    count++;                    
+                    source = new Rectangle(Int32.Parse(reader.GetAttribute("xpos"), cultures), Int32.Parse(reader.GetAttribute("ypos"), cultures), 256, 176);
+                }else if (reader.Name == "connect")
+                {
+                    Con.Add(Int32.Parse(reader.GetAttribute("up"), cultures));
+                    Con.Add(Int32.Parse(reader.GetAttribute("down"), cultures));
+                    Con.Add(Int32.Parse(reader.GetAttribute("left"), cultures));
+                    Con.Add(Int32.Parse(reader.GetAttribute("right"), cultures));
+                }else if (reader.Name == "no")
+                {
+                    roomID = Int32.Parse(reader.GetAttribute("i"), cultures);
+                }
+                else if(reader.Name == "enemy" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior" || reader.Name == "wallCube" || reader.Name =="hud" || reader.Name == "src")
+                {                   
                     int xpos = Int32.Parse(reader.GetAttribute("xpos"), cultures);
                     int ypos = Int32.Parse(reader.GetAttribute("ypos"), cultures);
                     String type = reader.GetAttribute("type");
@@ -171,7 +183,14 @@ namespace Sprint0.xml
 
                 }
             }
-            return new roomProperties(blocks, items, enemies, rooms, huds, cubes, link);
+            for (int i = 0; i < Con.Count; i++)
+            {
+                Console.WriteLine("ID: " + roomID);
+                Console.WriteLine("Con" + i + ": " + Con[i]);
+
+            }
+
+            return new roomProperties(roomID, blocks, items, enemies, rooms, huds, cubes, link, source, Con);
         }
     }
 }
