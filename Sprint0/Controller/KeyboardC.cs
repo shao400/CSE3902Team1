@@ -13,15 +13,17 @@ namespace Sprint0.Controller
     {
         
         private Game1 myGame;
-        private Dictionary<Keys, ICommand> keymap;
-        private KeyboardState prev, state;
+        private Dictionary<Keys, ICommand> keymap, attackmap;
+        private KeyboardState prevKeyState, prevAttackState, state;
        
 
         public KeyboardC(Game1 game)
         {
             myGame = game;
-            prev = Keyboard.GetState();
+            prevKeyState = Keyboard.GetState();
+            prevAttackState = Keyboard.GetState();
             keymap = new Dictionary<Keys, ICommand>();
+            attackmap = new Dictionary<Keys, ICommand>();
             keymap.Add(Keys.W, new wUp(myGame));
             keymap.Add(Keys.S, new sDown(myGame));
             keymap.Add(Keys.A, new aLeft(myGame));
@@ -38,13 +40,14 @@ namespace Sprint0.Controller
             keymap.Add(Keys.D2, new D2SecondWeapon(myGame));
             keymap.Add(Keys.D3, new D3ThirdWeapon(myGame));
             keymap.Add(Keys.D4, new D4FourthWeapon(myGame));
-            keymap.Add(Keys.Z, new Attack(myGame));
-            keymap.Add(Keys.N, new Attack(myGame));
+            attackmap.Add(Keys.Z, new Attack(myGame));
+            attackmap.Add(Keys.N, new Attack(myGame));
         }
 
         //check no keys
         public void Update()
         {
+            //keymap executing
             state = Keyboard.GetState();
             Keys[] pressedKeys = state.GetPressedKeys();
             foreach (Keys key in pressedKeys)
@@ -53,12 +56,27 @@ namespace Sprint0.Controller
                 {
                     keymap[key].Execute();
                 }
-                prev = state;
+                prevKeyState = state;
             }
             if (pressedKeys.Length == 0)
             {
                 new Stand(myGame).Execute();
             }
+
+            //attack button executing, different logic from other keys
+            
+            foreach (Keys key in attackmap.Keys)
+            {
+                if (state.IsKeyDown(key) && !prevAttackState.IsKeyDown(key))
+                {
+                    attackmap[key].Execute();
+                    prevAttackState = state;
+                } else if (prevAttackState.IsKeyDown(key))
+                {
+                    prevAttackState = state;
+                }
+            }
+            
         }
     }
 }
