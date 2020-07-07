@@ -71,6 +71,7 @@
     <Compile Include="Commands\Attack.cs" />
     <Compile Include="Controller\MouseC.cs" />
     <Compile Include="Controller\KeyboardC.cs" />
+    <Compile Include="Enemies\Empty.cs" />
     <Compile Include="Enemies\Aqua.cs" />
     <Compile Include="Enemies\Dodongo.cs" />
     <Compile Include="Enemies\Goriya.cs" />

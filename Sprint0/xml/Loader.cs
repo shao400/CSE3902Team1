@@ -68,6 +68,9 @@ namespace Sprint0.xml
                         case "WeaponSlot":
                             huds.Add(new WeaponSlot(xpos, ypos, link));
                             break;
+                        case "Empty":
+                            enemies.Add(new Empty(xpos, ypos));
+                            break;
                         case "Moblin":
                             enemies.Add(new Moblin(xpos, ypos));
                             break;
