@@ -104,6 +104,7 @@
     <Compile Include="Interfaces\IRoom.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />
     <Compile Include="Interfaces\ISprite.cs" />
+    <Compile Include="Items\Sword.cs" />
     <Compile Include="Items\Bomb.cs" />
     <Compile Include="Items\Arrow.cs" />
     <Compile Include="Items\Key.cs" />
@@ -124,6 +125,7 @@
     <Compile Include="Rooms\ExRoom.cs" />
     <Compile Include="Rooms\RoomItem.cs" />
     <Compile Include="Sound\Sound.cs" />
+    <Compile Include="Sprite\ItemWoodenSwordSprite.cs" />
     <Compile Include="Sprite\PlayerWoodenSwordSprite.cs" />
     <Compile Include="Sprite\BlockASprite.cs" />
     <Compile Include="Sprite\BlockBSprite.cs" />

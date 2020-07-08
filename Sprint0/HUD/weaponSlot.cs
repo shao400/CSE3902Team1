@@ -7,9 +7,10 @@ namespace Sprint0.HUD
 {
     public class WeaponSlot : IHud
     {
+        private ItemWoodenSwordSprite wSword = SpriteFactory.ItemWoodenSword;
         private HudEmptyHeartSprite empty = SpriteFactory.HudEmptyHeart;
         private HudHalfHeartSprite half = SpriteFactory.HudHalfHeart;
-        private ItemHeartContainerSprite solid = SpriteFactory.ItemHeartContainer;
+        private ItemHeartContainerSprite solid = SpriteFactory.ItemHeartContainer;//test used, delete later
         private int xAix;
         private int yAix;
         private string weapon;
@@ -32,7 +33,7 @@ namespace Sprint0.HUD
             //System.Diagnostics.Debug.WriteLine(_link.states.GetCurrentWeapon());
             if (_link.states.GetCurrentWeapon().Equals("None", System.StringComparison.Ordinal))
             {
-                empty.Draw(location, false);
+                wSword.Draw(location, false);
             }
             else if (_link.states.GetCurrentWeapon().Equals("WoodenSword", System.StringComparison.Ordinal))
             {
