@@ -15,14 +15,14 @@ namespace Sprint0.Sprite
     public static class SpriteFactory
     {
         //TO-DO:Initialize all kinds of sprite objects in according methods
-        public static LinkMagicalRStandingDownSprite LinkMagicalRStandingDown = new LinkMagicalRStandingDownSprite();
+        /*public static LinkMagicalRStandingDownSprite LinkMagicalRStandingDown = new LinkMagicalRStandingDownSprite();
         public static LinkMagicalRStandingLeftSprite LinkMagicalRStandingLeft = new LinkMagicalRStandingLeftSprite();
         public static LinkMagicalRStandingRightSprite LinkMagicalRStandingRight = new LinkMagicalRStandingRightSprite();
         public static LinkMagicalRStandingUpSprite LinkMagicalRStandingUp = new LinkMagicalRStandingUpSprite();
         public static LinkMagicalSStandingDownSprite LinkMagicalSStandingDown = new LinkMagicalSStandingDownSprite();
         public static LinkMagicalSStandingLeftSprite LinkMagicalSStandingLeft = new LinkMagicalSStandingLeftSprite();
         public static LinkMagicalSStandingRightSprite LinkMagicalSStandingRight = new LinkMagicalSStandingRightSprite();
-        public static LinkMagicalSStandingUpSprite LinkMagicalSStandingUp = new LinkMagicalSStandingUpSprite();
+        public static LinkMagicalSStandingUpSprite LinkMagicalSStandingUp = new LinkMagicalSStandingUpSprite();*/
         public static LinkNoneMovingDownSprite LinkNoneMovingDown = new LinkNoneMovingDownSprite();
         public static LinkNoneMovingLeftSprite LinkNoneMovingLeft = new LinkNoneMovingLeftSprite();
         public static LinkNoneMovingRightSprite LinkNoneMovingRight = new LinkNoneMovingRightSprite();
@@ -31,17 +31,17 @@ namespace Sprint0.Sprite
         public static LinkNoneStandingLeftSprite LinkNoneStandingLeft = new LinkNoneStandingLeftSprite();
         public static LinkNoneStandingRightSprite LinkNoneStandingRight = new LinkNoneStandingRightSprite();
         public static LinkNoneStandingUpSprite LinkNoneStandingUp = new LinkNoneStandingUpSprite();
-        public static LinkWhiteStandingDownSprite LinkWhiteStandingDown = new LinkWhiteStandingDownSprite();
+        /*public static LinkWhiteStandingDownSprite LinkWhiteStandingDown = new LinkWhiteStandingDownSprite();
         public static LinkWhiteStandingLeftSprite LinkWhiteStandingLeft = new LinkWhiteStandingLeftSprite();
         public static LinkWhiteStandingRightSprite LinkWhiteStandingRight = new LinkWhiteStandingRightSprite();
         public static LinkWhiteStandingUpSprite LinkWhiteStandingUp = new LinkWhiteStandingUpSprite();
         public static LinkWoodenStandingDownSprite LinkWoodenStandingDown = new LinkWoodenStandingDownSprite();
         public static LinkWoodenStandingLeftSprite LinkWoodenStandingLeft = new LinkWoodenStandingLeftSprite();
         public static LinkWoodenStandingRightSprite LinkWoodenStandingRight = new LinkWoodenStandingRightSprite();
-        public static LinkWoodenStandingUpSprite LinkWoodenStandingUp = new LinkWoodenStandingUpSprite();
+        public static LinkWoodenStandingUpSprite LinkWoodenStandingUp = new LinkWoodenStandingUpSprite();*/
 
         //attack
-        public static LinkMagicalRAttackingDownSprite LinkMagicalRAttackingDown = new LinkMagicalRAttackingDownSprite();
+        /*public static LinkMagicalRAttackingDownSprite LinkMagicalRAttackingDown = new LinkMagicalRAttackingDownSprite();
         public static LinkMagicalRAttackingLeftSprite LinkMagicalRAttackingLeft = new LinkMagicalRAttackingLeftSprite();
         public static LinkMagicalRAttackingRightSprite LinkMagicalRAttackingRight = new LinkMagicalRAttackingRightSprite();
         public static LinkMagicalRAttackingUpSprite LinkMagicalRAttackingUp = new LinkMagicalRAttackingUpSprite();
@@ -56,7 +56,7 @@ namespace Sprint0.Sprite
         public static LinkWoodenAttackingDownSprite LinkWoodenAttackingDown = new LinkWoodenAttackingDownSprite();
         public static LinkWoodenAttackingLeftSprite LinkWoodenAttackingLeft = new LinkWoodenAttackingLeftSprite();
         public static LinkWoodenAttackingRightSprite LinkWoodenAttackingRight = new LinkWoodenAttackingRightSprite();
-        public static LinkWoodenAttackingUpSprite LinkWoodenAttackingUp = new LinkWoodenAttackingUpSprite();
+        public static LinkWoodenAttackingUpSprite LinkWoodenAttackingUp = new LinkWoodenAttackingUpSprite();*/
 
         // Enemy Author: Gengyi Qin
         public static EnemyMoblinSprite EnemyMoblin = new EnemyMoblinSprite(0, 0);
@@ -148,7 +148,7 @@ namespace Sprint0.Sprite
             LinkNoneMovingRight.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkNoneMovingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkNoneMovingUp.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkMagicalRStandingDown.LoadContent(batch, content.Load<Texture2D>("link"));
+            /*LinkMagicalRStandingDown.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkMagicalRStandingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkMagicalRStandingRight.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkMagicalRStandingUp.LoadContent(batch, content.Load<Texture2D>("link"));
@@ -181,7 +181,7 @@ namespace Sprint0.Sprite
             LinkWoodenAttackingDown.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkWoodenAttackingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkWoodenAttackingRight.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkWoodenAttackingUp.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkWoodenAttackingUp.LoadContent(batch, content.Load<Texture2D>("link"));*/
 
             PlayerWoodenSwordRight.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordLeft.LoadContent(batch, content.Load<Texture2D>("link"));

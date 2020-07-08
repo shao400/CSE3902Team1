@@ -136,7 +136,7 @@ namespace Sprint0.State
         public void UseSecondItem()
         {
             currentWeapon = weapon.WhiteSword;
-            if (currentStatus == status.standing)
+            /*if (currentStatus == status.standing)
             {
                 if (currentFacing == facing.up)
                     currentSprite = SpriteFactory.LinkWhiteStandingUp;
@@ -146,12 +146,12 @@ namespace Sprint0.State
                     currentSprite = SpriteFactory.LinkWhiteStandingRight;
                 else if (currentFacing == facing.left)
                     currentSprite = SpriteFactory.LinkWhiteStandingLeft;
-            }
+            }*/
         }
         public void UseThirdItem()
         {
             currentWeapon = weapon.MagicalSword;
-            if (currentStatus == status.standing)
+            /*if (currentStatus == status.standing)
             {
                 if (currentFacing == facing.up)
                     currentSprite = SpriteFactory.LinkMagicalSStandingUp;
@@ -161,12 +161,12 @@ namespace Sprint0.State
                     currentSprite = SpriteFactory.LinkMagicalSStandingRight;
                 else if (currentFacing == facing.left)
                     currentSprite = SpriteFactory.LinkMagicalSStandingLeft;
-            }
+            }*/
         }
         public void UseFourthItem()
         {
             currentWeapon = weapon.MagicalRod;
-            if (currentStatus == status.standing)
+            /*if (currentStatus == status.standing)
             {
                 if (currentFacing == facing.up)
                     currentSprite = SpriteFactory.LinkMagicalRStandingUp;
@@ -176,15 +176,12 @@ namespace Sprint0.State
                     currentSprite = SpriteFactory.LinkMagicalRStandingRight;
                 else if (currentFacing == facing.left)
                     currentSprite = SpriteFactory.LinkMagicalRStandingLeft;
-            }
+            }*/
         }
         public void Attack()
         {
             currentStatus = status.attacking;
             if (currentWeapon == weapon.WoodenSword) UseFirstItem();
-            
-                
-            
 
         }
 
