@@ -3,14 +3,7 @@ using Sprint0.Collisions;
 using Sprint0.State;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.AccessControl;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using Sprint0.Interfaces;
-using Microsoft.Xna.Framework.Audio;
-using Sprint0.HUD;
 
 // Author: Lufei Ouyang
 namespace Sprint0.Player
@@ -31,7 +24,7 @@ namespace Sprint0.Player
 
         public Player1(int x, int y, int widthG, int heightG, Sound s) 
         {
-            states = new P1State();
+            states = new P1State(this);
             xAxis = x;
             yAxis = y;
             width = widthG;
@@ -52,14 +45,15 @@ namespace Sprint0.Player
             return states.currentSprite;
         }
 
-        public ISprite getPlayerItem()
+        public IProjectile getPlayerItem()
         {
-            return states.currentItem;
+            return states.currentProjectile;
         }
         public void Update()
         {
             currentFacing = states.GetCurrentFacing();
             currentStatus = states.GetCurrentStatus();
+            getPlayerItem().Update();
             states.Update();
             if (string.Compare(currentStatus,"walking", new StringComparison()) == 0 && string.Compare(currentFacing, "left", new StringComparison()) == 0)
             {
@@ -90,7 +84,7 @@ namespace Sprint0.Player
                 }                
             }
 
-            //more border restrictions
+            //border restrictions
             if (xAxis < 96) xAxis = 96;
             if (xAxis > 624) xAxis = 624;
             if (yAxis < 264) yAxis = 264;

@@ -15,14 +15,6 @@ namespace Sprint0.Sprite
     public static class SpriteFactory
     {
         //TO-DO:Initialize all kinds of sprite objects in according methods
-        /*public static LinkMagicalRStandingDownSprite LinkMagicalRStandingDown = new LinkMagicalRStandingDownSprite();
-        public static LinkMagicalRStandingLeftSprite LinkMagicalRStandingLeft = new LinkMagicalRStandingLeftSprite();
-        public static LinkMagicalRStandingRightSprite LinkMagicalRStandingRight = new LinkMagicalRStandingRightSprite();
-        public static LinkMagicalRStandingUpSprite LinkMagicalRStandingUp = new LinkMagicalRStandingUpSprite();
-        public static LinkMagicalSStandingDownSprite LinkMagicalSStandingDown = new LinkMagicalSStandingDownSprite();
-        public static LinkMagicalSStandingLeftSprite LinkMagicalSStandingLeft = new LinkMagicalSStandingLeftSprite();
-        public static LinkMagicalSStandingRightSprite LinkMagicalSStandingRight = new LinkMagicalSStandingRightSprite();
-        public static LinkMagicalSStandingUpSprite LinkMagicalSStandingUp = new LinkMagicalSStandingUpSprite();*/
         public static LinkNoneMovingDownSprite LinkNoneMovingDown = new LinkNoneMovingDownSprite();
         public static LinkNoneMovingLeftSprite LinkNoneMovingLeft = new LinkNoneMovingLeftSprite();
         public static LinkNoneMovingRightSprite LinkNoneMovingRight = new LinkNoneMovingRightSprite();
@@ -30,33 +22,7 @@ namespace Sprint0.Sprite
         public static LinkNoneStandingDownSprite LinkNoneStandingDown = new LinkNoneStandingDownSprite();
         public static LinkNoneStandingLeftSprite LinkNoneStandingLeft = new LinkNoneStandingLeftSprite();
         public static LinkNoneStandingRightSprite LinkNoneStandingRight = new LinkNoneStandingRightSprite();
-        public static LinkNoneStandingUpSprite LinkNoneStandingUp = new LinkNoneStandingUpSprite();
-        /*public static LinkWhiteStandingDownSprite LinkWhiteStandingDown = new LinkWhiteStandingDownSprite();
-        public static LinkWhiteStandingLeftSprite LinkWhiteStandingLeft = new LinkWhiteStandingLeftSprite();
-        public static LinkWhiteStandingRightSprite LinkWhiteStandingRight = new LinkWhiteStandingRightSprite();
-        public static LinkWhiteStandingUpSprite LinkWhiteStandingUp = new LinkWhiteStandingUpSprite();
-        public static LinkWoodenStandingDownSprite LinkWoodenStandingDown = new LinkWoodenStandingDownSprite();
-        public static LinkWoodenStandingLeftSprite LinkWoodenStandingLeft = new LinkWoodenStandingLeftSprite();
-        public static LinkWoodenStandingRightSprite LinkWoodenStandingRight = new LinkWoodenStandingRightSprite();
-        public static LinkWoodenStandingUpSprite LinkWoodenStandingUp = new LinkWoodenStandingUpSprite();*/
-
-        //attack
-        /*public static LinkMagicalRAttackingDownSprite LinkMagicalRAttackingDown = new LinkMagicalRAttackingDownSprite();
-        public static LinkMagicalRAttackingLeftSprite LinkMagicalRAttackingLeft = new LinkMagicalRAttackingLeftSprite();
-        public static LinkMagicalRAttackingRightSprite LinkMagicalRAttackingRight = new LinkMagicalRAttackingRightSprite();
-        public static LinkMagicalRAttackingUpSprite LinkMagicalRAttackingUp = new LinkMagicalRAttackingUpSprite();
-        public static LinkMagicalSAttackingDownSprite LinkMagicalSAttackingDown = new LinkMagicalSAttackingDownSprite();
-        public static LinkMagicalSAttackingLeftSprite LinkMagicalSAttackingLeft = new LinkMagicalSAttackingLeftSprite();
-        public static LinkMagicalSAttackingRightSprite LinkMagicalSAttackingRight = new LinkMagicalSAttackingRightSprite();
-        public static LinkMagicalSAttackingUpSprite LinkMagicalSAttackingUp = new LinkMagicalSAttackingUpSprite();
-        public static LinkWhiteAttackingDownSprite LinkWhiteAttackingDown = new LinkWhiteAttackingDownSprite();
-        public static LinkWhiteAttackingLeftSprite LinkWhiteAttackingLeft = new LinkWhiteAttackingLeftSprite();
-        public static LinkWhiteAttackingRightSprite LinkWhiteAttackingRight = new LinkWhiteAttackingRightSprite();
-        public static LinkWhiteAttackingUpSprite LinkWhiteAttackingUp = new LinkWhiteAttackingUpSprite();
-        public static LinkWoodenAttackingDownSprite LinkWoodenAttackingDown = new LinkWoodenAttackingDownSprite();
-        public static LinkWoodenAttackingLeftSprite LinkWoodenAttackingLeft = new LinkWoodenAttackingLeftSprite();
-        public static LinkWoodenAttackingRightSprite LinkWoodenAttackingRight = new LinkWoodenAttackingRightSprite();
-        public static LinkWoodenAttackingUpSprite LinkWoodenAttackingUp = new LinkWoodenAttackingUpSprite();*/
+        public static LinkNoneStandingUpSprite LinkNoneStandingUp = new LinkNoneStandingUpSprite();        
 
         // Enemy Author: Gengyi Qin
         public static EnemyMoblinSprite EnemyMoblin = new EnemyMoblinSprite(0, 0);
@@ -148,40 +114,6 @@ namespace Sprint0.Sprite
             LinkNoneMovingRight.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkNoneMovingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkNoneMovingUp.LoadContent(batch, content.Load<Texture2D>("link"));
-            /*LinkMagicalRStandingDown.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkMagicalRStandingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkMagicalRStandingRight.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkMagicalRStandingUp.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkMagicalSStandingDown.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkMagicalSStandingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkMagicalSStandingRight.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkMagicalSStandingUp.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkWhiteStandingDown.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkWhiteStandingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkWhiteStandingRight.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkWhiteStandingUp.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkWoodenStandingDown.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkWoodenStandingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkWoodenStandingRight.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkWoodenStandingUp.LoadContent(batch, content.Load<Texture2D>("link"));
-
-            //attack
-            LinkMagicalRAttackingDown.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkMagicalRAttackingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkMagicalRAttackingRight.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkMagicalRAttackingUp.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkMagicalSAttackingDown.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkMagicalSAttackingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkMagicalSAttackingRight.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkMagicalSAttackingUp.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkWhiteAttackingDown.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkWhiteAttackingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkWhiteAttackingRight.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkWhiteAttackingUp.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkWoodenAttackingDown.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkWoodenAttackingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkWoodenAttackingRight.LoadContent(batch, content.Load<Texture2D>("link"));
-            LinkWoodenAttackingUp.LoadContent(batch, content.Load<Texture2D>("link"));*/
 
             PlayerWoodenSwordRight.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordLeft.LoadContent(batch, content.Load<Texture2D>("link"));

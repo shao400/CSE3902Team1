@@ -118,6 +118,8 @@
     <Compile Include="Items\HeartContainer.cs" />
     <Compile Include="Players\Player1.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Projectile\AbstractProjectile.cs" />
+    <Compile Include="Projectile\WoodenSword.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rooms\RoomBlock.cs" />
     <Compile Include="Rooms\RoomEnemy.cs" />
@@ -198,9 +200,7 @@
     <None Include="app.manifest" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Projectiles\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\analyzers\dotnet\cs\Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll" />
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\analyzers\dotnet\Microsoft.CodeAnalysis.VersionCheckAnalyzer.dll" />

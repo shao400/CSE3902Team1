@@ -8,9 +8,12 @@ namespace Sprint0.Interfaces
 {
     public interface IProjectile
     {
-        void shoot();
+        void Shoot();
         void Explode();
-        int Speed();
-        int ShotDistance();
+        void Stab();
+        int Speed { get; set; }
+        int ShotDistance { get; set; }
+        bool IsDone { get; set; }
+        void Update();
     }
 }

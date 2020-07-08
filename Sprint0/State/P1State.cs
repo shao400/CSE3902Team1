@@ -1,12 +1,9 @@
 ﻿using Sprint0.Items;
 using Sprint0.Sprite;
 using Sprint0.HUD;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Remoting.Lifetime;
-using System.Text;
-using System.Threading.Tasks;
+using Sprint0.Projectile;
+using Sprint0.Interfaces;
+using Sprint0.Player;
 
 
 //Author: Chuwen Sun, Zhizhou He
@@ -27,18 +24,19 @@ namespace Sprint0.State
             standing, walking, attacking, takingDmg
         }
 
+        private Player1 player;
         public ISprite currentSprite;
         private facing currentFacing;
-        private weapon currentWeapon;
         private status currentStatus;
-        public ISprite currentItem;
+        public IProjectile currentProjectile;
         
 
-        public P1State()
+        public P1State(Player1 player)
         {
             //initial
+            this.player = player;
             currentFacing = facing.right;
-            currentWeapon = weapon.None;
+            currentProjectile = new WoodenSword(player, 2);
             currentStatus = status.standing;
             currentSprite = SpriteFactory.LinkNoneStandingRight;
             
@@ -47,16 +45,16 @@ namespace Sprint0.State
         public void Update()
         {
             currentSprite.Update();
-            if (currentItem != null && currentStatus == status.attacking)
+            /*if (currentProjectile != null && currentStatus == status.attacking)
             {
-                currentItem.Update();
-            }
+                currentProjectile.Update();
+            }*/
         }
 
         public string GetCurrentWeapon()
         {
 
-            return currentWeapon.ToString();
+            return currentProjectile.GetType().ToString();
         }
 
         public string GetCurrentFacing()
@@ -118,24 +116,20 @@ namespace Sprint0.State
 
         public void UseFirstItem()
         {
-            currentWeapon = weapon.WoodenSword;
+
+            //if (currentFacing == facing.up)
+            //;
+            //else if (currentFacing == facing.down)
+            //currentItem = SpriteFactory.PlayerWoodenSwordDown;
+            //else if (currentFacing == facing.right)
+                //currentItem = SpriteFactory.PlayerWoodenSwordRight;
+            //else if (currentFacing == facing.left)
+                //currentItem = SpriteFactory.PlayerWoodenSwordLeft;
             
-            
-            //if (currentStatus == status.standing)
-            //{
-                if (currentFacing == facing.up)
-                    currentItem = SpriteFactory.PlayerWoodenSwordUp;
-                else if (currentFacing == facing.down)
-                    currentItem = SpriteFactory.PlayerWoodenSwordDown;
-                else if (currentFacing == facing.right)
-                    currentItem = SpriteFactory.PlayerWoodenSwordRight;
-                else if (currentFacing == facing.left)
-                    currentItem = SpriteFactory.PlayerWoodenSwordLeft;
-            //}
         }
         public void UseSecondItem()
         {
-            currentWeapon = weapon.WhiteSword;
+            //currentWeapon = weapon.WhiteSword;
             /*if (currentStatus == status.standing)
             {
                 if (currentFacing == facing.up)
@@ -150,7 +144,7 @@ namespace Sprint0.State
         }
         public void UseThirdItem()
         {
-            currentWeapon = weapon.MagicalSword;
+            //currentWeapon = weapon.MagicalSword;
             /*if (currentStatus == status.standing)
             {
                 if (currentFacing == facing.up)
@@ -165,7 +159,7 @@ namespace Sprint0.State
         }
         public void UseFourthItem()
         {
-            currentWeapon = weapon.MagicalRod;
+            //currentWeapon = weapon.MagicalRod;
             /*if (currentStatus == status.standing)
             {
                 if (currentFacing == facing.up)
@@ -181,7 +175,11 @@ namespace Sprint0.State
         public void Attack()
         {
             currentStatus = status.attacking;
-            if (currentWeapon == weapon.WoodenSword) UseFirstItem();
+            if (currentFacing == facing.up) currentProjectile = new WoodenSword(this.player, 0);
+            else if (currentFacing == facing.down) currentProjectile = new WoodenSword(this.player, 1);
+            else if (currentFacing == facing.right) currentProjectile = new WoodenSword(this.player, 2);
+            else if (currentFacing == facing.left) currentProjectile = new WoodenSword(this.player, 3);
+            currentProjectile.Stab();
 
         }
 
@@ -197,7 +195,7 @@ namespace Sprint0.State
         public void StateReset()
         {
             this.currentFacing = facing.right;
-            this.currentWeapon = weapon.None;
+            this.currentProjectile = new WoodenSword(this.player, 2);
             this.currentStatus = status.standing;
             this.currentSprite = SpriteFactory.LinkNoneStandingRight;
         }
