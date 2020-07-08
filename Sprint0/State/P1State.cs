@@ -21,7 +21,7 @@ namespace Sprint0.State
         }
         private enum status
         {
-            standing, walking, attacking, takingDmg,shooting
+            standing, walking, attacking, takingDmg, shooting, exploding
         }
 
         private Player1 player;
@@ -189,6 +189,12 @@ namespace Sprint0.State
             else if (currentFacing == facing.right) currentProjectile = new WoodenSword(this.player, 2);
             else if (currentFacing == facing.left) currentProjectile = new WoodenSword(this.player, 3);
             currentProjectile.Shoot();
+        }
+        public void Explode()
+        {
+            currentStatus = status.exploding;
+            currentProjectile = new WoodenSword(this.player, 0);
+            currentProjectile.Explode();
         }
 
         public void takeDmg()

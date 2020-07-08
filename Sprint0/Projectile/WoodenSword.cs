@@ -13,6 +13,7 @@ namespace Sprint0.Projectile
     class WoodenSword : AbstractProjectile, IProjectile
     {
         private ISprite WoodenSwordShootingSprite;
+        private ISprite WoodenSwordExplodingSprite;
         private ISprite WoodenSwordSprite;
         int myDirection;
         int myFrame=0;
@@ -59,7 +60,10 @@ namespace Sprint0.Projectile
         public override void Explode()
         {
             currentStatus = status.explode;
-            throw new NotImplementedException();
+            WoodenSwordExplodingSprite = SpriteFactory.PlayerWoodenSwordExploding;
+            location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);
+            WoodenSwordExplodingSprite.Update();
+            WoodenSwordExplodingSprite.Draw(location, false);
         }
 
         public override void Stab()

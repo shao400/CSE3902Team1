@@ -15,6 +15,7 @@
     <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/luigi.png</File>
     <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Map.png</File>
     <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/npc.png</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/shoot.png</File>
     <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Sounds/Intro.mp3</File>
     <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Link_Hurt.wav</File>
     <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Sounds/LOZ_MagicalRod.wav</File>
@@ -28,6 +29,7 @@
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File>item.png</File>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

@@ -134,6 +134,10 @@ namespace Sprint0.Player
         public void Shoot() {
             states.Shoot();
         }
+        public void Explode()
+        {
+            states.Explode();
+        }
         public void takeDmg()
         {
             sound.linkHurt();

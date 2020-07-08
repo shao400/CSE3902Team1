@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework;
 
 namespace Sprint0.Sprite
 {
+    //Zina
     public class PlayerWoodenSwordShootingSprite : ISprite
     {
         private static SpriteBatch mySpriteBatch;
