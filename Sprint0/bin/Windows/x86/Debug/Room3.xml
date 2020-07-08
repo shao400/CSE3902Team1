@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Room>
 	<player xpos="100" ypos="100" />
-	<src xpos="772" ypos="886"/>
-	<block xpos="65" ypos="65"/>
-	<block xpos="81" ypos="65"/>
-	<block xpos="65" ypos="81"/>
-	<block xpos="81" ypos="81"/>
-	<block xpos="65" ypos="97"/>
-	<block xpos="81" ypos="97"/>
-	<block xpos="161" ypos="65"/>
-	<block xpos="177" ypos="65"/>
-	<block xpos="161" ypos="81"/>
-	<block xpos="177" ypos="81"/>
-	<block xpos="161" ypos="97"/>
-	<block xpos="177" ypos="97"/>
-	<no i="0" />
-	<connect up="-1" down="-1" left="-1" right="1" />
+	<src xpos="515" ypos="709" />
+	<no i="2" />
+	<connect up="5" down="1" left="-1" right="-1" />
 </Room>

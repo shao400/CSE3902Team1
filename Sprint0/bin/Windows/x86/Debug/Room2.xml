@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Room>
 	<player xpos="100" ypos="100" />
-	<src xpos="516" ypos="886" />
-	
-	<no i="1" />
-	<connect up="2" down="-1" left="0" right="-1" />
+	<src xpos="772" ypos="886"/>
+	<block type="BlockA" xpos="65" ypos="65"/>
+	<block type="BlockA" xpos="81" ypos="65"/>
+	<block type="BlockA" xpos="65" ypos="81"/>
+	<block type="BlockA" xpos="81" ypos="81"/>
+	<block type="BlockA" xpos="65" ypos="97"/>
+	<block type="BlockA" xpos="81" ypos="97"/>
+	<block type="BlockA" xpos="161" ypos="65"/>
+	<block type="BlockA" xpos="177" ypos="65"/>
+	<block type="BlockA" xpos="161" ypos="81"/>
+	<block type="BlockA" xpos="177" ypos="81"/>
+	<block type="BlockA" xpos="161" ypos="97"/>
+	<block type="BlockA" xpos="177" ypos="97"/>
+	<no i="0" />
+	<connect up="-1" down="-1" left="1" right="-1" />
 </Room>
