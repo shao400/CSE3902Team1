@@ -56,6 +56,7 @@
     <Compile Include="Collisions\LinkEnemyCollision.cs" />
     <Compile Include="Collisions\LinkItemCollision.cs" />
     <Compile Include="Commands\aLeft.cs" />
+    <Compile Include="Commands\Shoot.cs" />
     <Compile Include="Commands\D1FirstWeapon.cs" />
     <Compile Include="Commands\D2SecondWeapon.cs" />
     <Compile Include="Commands\D4FourthWeapon.cs" />
@@ -126,6 +127,7 @@
     <Compile Include="Rooms\ExRoom.cs" />
     <Compile Include="Rooms\RoomItem.cs" />
     <Compile Include="Sound\Sound.cs" />
+    <Compile Include="Sprite\PlayerWoodenSwordShootingSprite.cs" />
     <Compile Include="Sprite\PlayerWoodenSwordSprite.cs" />
     <Compile Include="Sprite\BlockASprite.cs" />
     <Compile Include="Sprite\BlockBSprite.cs" />

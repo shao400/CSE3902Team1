@@ -21,7 +21,7 @@ namespace Sprint0.State
         }
         private enum status
         {
-            standing, walking, attacking, takingDmg
+            standing, walking, attacking, takingDmg,shooting
         }
 
         private Player1 player;
@@ -181,6 +181,14 @@ namespace Sprint0.State
             else if (currentFacing == facing.left) currentProjectile = new WoodenSword(this.player, 3);
             currentProjectile.Stab();
 
+        }
+        public void Shoot() {
+            currentStatus = status.shooting;
+            if (currentFacing == facing.up) currentProjectile = new WoodenSword(this.player, 0);
+            else if (currentFacing == facing.down) currentProjectile = new WoodenSword(this.player, 1);
+            else if (currentFacing == facing.right) currentProjectile = new WoodenSword(this.player, 2);
+            else if (currentFacing == facing.left) currentProjectile = new WoodenSword(this.player, 3);
+            currentProjectile.Shoot();
         }
 
         public void takeDmg()

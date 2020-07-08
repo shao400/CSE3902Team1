@@ -27,6 +27,9 @@ namespace Sprint0.GameStates
             if (myGame.currentRoom.link.states.GetCurrentStatus() == "attacking")
             {
                 myGame.currentRoom.link.getPlayerItem().Stab(/*new Vector2(myGame.currentRoom.link.xAxis, myGame.currentRoom.link.yAxis), false*/);
+            } else if (myGame.currentRoom.link.states.GetCurrentStatus() == "shooting")
+            {
+                myGame.currentRoom.link.getPlayerItem().Shoot(/*new Vector2(myGame.currentRoom.link.xAxis, myGame.currentRoom.link.yAxis), false*/);
             }
         }
 

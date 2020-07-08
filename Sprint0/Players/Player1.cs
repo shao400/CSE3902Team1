@@ -131,6 +131,9 @@ namespace Sprint0.Player
             states.Attack();
             sound.swordSlash();
         }
+        public void Shoot() {
+            states.Shoot();
+        }
         public void takeDmg()
         {
             sound.linkHurt();
