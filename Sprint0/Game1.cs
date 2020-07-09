@@ -17,6 +17,7 @@ using Sprint0.xml;
 using System.Xml;
 using Microsoft.Xna.Framework.Media;
 using Sprint0.GameStates;
+using Sprint0.HUD;
 
 namespace Sprint0
 {
@@ -37,6 +38,8 @@ namespace Sprint0
         private Sound soundEffect;
         private Song intro;
         List<object> controllerList; // could also be defined as List <IController>
+        public HealthBar Hpbar;
+        public WeaponSlot WpSlot;
         public IGameState currentState;
         public List<IGameState> stateList;
 
@@ -93,6 +96,8 @@ namespace Sprint0
             stateList.Add(new InGame(this));
             stateList.Add(new Transitioning(this, spriteBatch, Content));
             currentState = stateList[0];
+            Hpbar = new HealthBar(150, 50, this.currentRoom.link);
+            WpSlot = new WeaponSlot(250, 50, this.currentRoom.link);
         }
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
@@ -137,6 +142,8 @@ namespace Sprint0
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             currentState.Draw();
+            Hpbar.Draw();
+            WpSlot.Draw();
             base.Draw(gameTime);
         }
       

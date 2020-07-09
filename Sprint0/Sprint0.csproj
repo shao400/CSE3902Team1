@@ -129,6 +129,7 @@
     <Compile Include="Rooms\ExRoom.cs" />
     <Compile Include="Rooms\RoomItem.cs" />
     <Compile Include="Sound\Sound.cs" />
+    <Compile Include="Sprite\ItemWoodenSwordSprite.cs" />
     <Compile Include="Sprite\PlayerWoodenSwordExplodingSprite.cs" />
     <Compile Include="Sprite\PlayerWoodenSwordShootingSprite.cs" />
     <Compile Include="Sprite\PlayerWoodenSwordSprite.cs" />

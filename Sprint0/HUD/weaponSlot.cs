@@ -10,6 +10,7 @@ namespace Sprint0.HUD
         private HudEmptyHeartSprite empty = SpriteFactory.HudEmptyHeart;
         private HudHalfHeartSprite half = SpriteFactory.HudHalfHeart;
         private ItemHeartContainerSprite solid = SpriteFactory.ItemHeartContainer;
+        private ItemWoodenSwordSprite woodenSword = SpriteFactory.ItemWoodenSword;
         private int xAix;
         private int yAix;
         private string weapon;
@@ -30,9 +31,10 @@ namespace Sprint0.HUD
             //None, WoodenSword, WhiteSword, MagicalSword, MagicalRod
             Vector2 location = new Vector2(xAix, yAix);
             //System.Diagnostics.Debug.WriteLine(_link.states.GetCurrentWeapon());
+            woodenSword.Draw(location, false);
             if (_link.states.GetCurrentWeapon().Equals("None", System.StringComparison.Ordinal))
             {
-                empty.Draw(location, false);
+                woodenSword.Draw(location, false);
             }
             else if (_link.states.GetCurrentWeapon().Equals("WoodenSword", System.StringComparison.Ordinal))
             {
