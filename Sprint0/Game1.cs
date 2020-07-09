@@ -99,7 +99,7 @@ namespace Sprint0
             currentState = stateList[0];
             Hpbar = new HealthBar(150, 50, this.currentRoom.link);
             WpSlot = new WeaponSlot(250, 50, this.currentRoom.link);
-            map = new HUD.HudMap(450, 50, this.currentRoom.link);
+            map = new HudMap(450, 70, this);
         }
         /// <summary>
         /// LoadContent will be called once per game and is the place to load

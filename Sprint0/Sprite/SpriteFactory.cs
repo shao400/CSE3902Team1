@@ -95,7 +95,7 @@ namespace Sprint0.Sprite
         public static HudEmptyHeartSprite HudEmptyHeart = new HudEmptyHeartSprite();
         public static ItemHeartContainerSprite HudHeart = new ItemHeartContainerSprite();
         public static HudMapPieceSprite HudMapPiece = new HudMapPieceSprite();
-
+        public static HudPointSprite HudPoint = new HudPointSprite();
 
 
 
@@ -174,11 +174,13 @@ namespace Sprint0.Sprite
             HudEmptyHeart.LoadContent(batch, content.Load<Texture2D>("item"));
             HudHeart.LoadContent(batch, content.Load<Texture2D>("item"));
             HudMapPiece.LoadContent(batch, content.Load<Texture2D>("Map"));
+            HudPoint.LoadContent(batch, content.Load<Texture2D>("dungeon"));
 
             ItemList.Add(HudHalfHeart);
             ItemList.Add(HudEmptyHeart);
             ItemList.Add(HudHeart);
             ItemList.Add(HudMapPiece);
+            ItemList.Add(HudPoint);
         }
 
         private static void LoadEnemyContent(SpriteBatch batch, ContentManager content)
