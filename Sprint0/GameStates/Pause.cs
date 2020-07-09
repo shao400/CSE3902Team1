@@ -8,14 +8,14 @@ using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
 using Sprint0.Sprite;
 
-namespace Sprint0.WallCube
+namespace Sprint0.Block
 {
-    class WallTop : IWallCube
+    class Pause : IGameState
     {
-        private ISprite sprite = SpriteFactory.WallTop;
+        private ISprite sprite = SpriteFactory.DeathScreen;
         private int xpos;
         private int ypos;
-        public WallTop(int x, int y)
+        public Pause(int x, int y)
         {
             xpos = x;
             ypos = y;
@@ -32,9 +32,9 @@ namespace Sprint0.WallCube
             //nothing to do here
         }
 
-        public Rectangle GetRectangle()
+        public void loadNextRoom(int nextRoom)
         {
-            return new Rectangle(xpos, ypos, 97, 97);
+            // nothing
         }
 
     }

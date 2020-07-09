@@ -8,12 +8,12 @@ using Microsoft.Xna.Framework;
 
 namespace Sprint0.Sprite
 {
-    public class WallTopSprite : ISprite
+    public class DeathScreenSprite : ISprite
     {
         private static SpriteBatch spritebatch;
         private static Texture2D texture;
-        Rectangle sourceRec = new Rectangle(816, 12, 31, 31);
-        
+        Rectangle sourceRec = new Rectangle(0, 0, 767, 430);
+        GraphicsDeviceManager graphics;
 
         public void Update()
         {
@@ -31,7 +31,7 @@ namespace Sprint0.Sprite
 
         public void Draw(Vector2 location, Boolean isDamaged)
         {
-            Rectangle destinationRec = new Rectangle((int)location.X, (int)location.Y, 98, 94);
+            Rectangle destinationRec = new Rectangle((int)location.X, (int)location.Y, graphics.GraphicsDevice.Viewport.Width, graphics.PreferredBackBufferHeight);
             spritebatch.Begin();
             spritebatch.Draw(texture, destinationRec, sourceRec, Color.White);
             spritebatch.End();
@@ -41,4 +41,3 @@ namespace Sprint0.Sprite
 
     }
 }
-

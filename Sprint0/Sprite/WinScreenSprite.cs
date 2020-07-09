@@ -8,12 +8,12 @@ using Microsoft.Xna.Framework;
 
 namespace Sprint0.Sprite
 {
-    public class DoorLeftSprite : ISprite
+    public class WinScreenSprite : ISprite
     {
         private static SpriteBatch spritebatch;
         private static Texture2D texture;
-        Rectangle sourceRec = new Rectangle(848, 44, 17, 32);
-        
+        Rectangle sourceRec = new Rectangle(0, 0, 509, 347);
+        GraphicsDeviceManager graphics;
 
         public void Update()
         {
@@ -31,7 +31,7 @@ namespace Sprint0.Sprite
 
         public void Draw(Vector2 location, Boolean isDamaged)
         {
-            Rectangle destinationRec = new Rectangle((int)location.X, (int)location.Y, 91, 97);
+            Rectangle destinationRec = new Rectangle((int)location.X, (int)location.Y, graphics.GraphicsDevice.Viewport.Width, graphics.PreferredBackBufferHeight);
             spritebatch.Begin();
             spritebatch.Draw(texture, destinationRec, sourceRec, Color.White);
             spritebatch.End();
@@ -41,4 +41,3 @@ namespace Sprint0.Sprite
 
     }
 }
-

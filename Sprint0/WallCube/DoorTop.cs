@@ -10,12 +10,12 @@ using Sprint0.Sprite;
 
 namespace Sprint0.WallCube
 {
-    class WallDown : IWallCube
+    class DoorTop : IWallCube
     {
-        private ISprite sprite = SpriteFactory.WallDown;
+        private ISprite sprite = SpriteFactory.DoorTop;
         private int xpos;
         private int ypos;
-        public WallDown(int x, int y)
+        public DoorTop(int x, int y)
         {
             xpos = x;
             ypos = y;

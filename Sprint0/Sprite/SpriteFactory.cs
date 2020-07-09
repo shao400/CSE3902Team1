@@ -84,8 +84,8 @@ namespace Sprint0.Sprite
         public static ISprite RoomExterior = new RoomExteriorSprite();
 
         public static List<ISprite> WallCubeList = new List<ISprite>();
-        public static ISprite WallTop = new WallTopSprite();
-        public static ISprite WallDown = new WallDownSprite();
+        public static ISprite DoorTop = new DoorTopSprite();
+        public static ISprite DoorDown = new DoorDownSprite();
         public static ISprite DoorLeft = new DoorLeftSprite();
         public static ISprite DoorRight = new DoorRightSprite();
 
@@ -96,7 +96,10 @@ namespace Sprint0.Sprite
         public static ItemHeartContainerSprite HudHeart = new ItemHeartContainerSprite();
         public static HudMapPieceSprite HudMapPiece = new HudMapPieceSprite();
 
-
+        public static List<ISprite> ScreenList = new List<ISprite>();
+        public static DeathScreenSprite DeathScreen = new DeathScreenSprite();
+        public static WinScreenSprite WinScreen = new WinScreenSprite();
+        public static PauseScreenSprite PauseScreen = new PauseScreenSprite();
 
 
         public static void LoadContent(SpriteBatch batch, ContentManager content)
@@ -108,6 +111,7 @@ namespace Sprint0.Sprite
             LoadRoomContent(batch, content);
             LoadHudContent(batch, content);
             LoadWallCubeContent(batch, content);
+            LoadScreenContent(batch, content);
         }
 
 
@@ -220,17 +224,27 @@ namespace Sprint0.Sprite
             RoomList.Add(RoomEnemy);
             RoomList.Add(RoomExterior);
         }
-            private static void LoadWallCubeContent(SpriteBatch batch, ContentManager content)
+        private static void LoadWallCubeContent(SpriteBatch batch, ContentManager content)
         {
-            WallTop.LoadContent(batch, content.Load<Texture2D>("Blocks"));
-            WallDown.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            DoorTop.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            DoorDown.LoadContent(batch, content.Load<Texture2D>("Blocks"));
             DoorLeft.LoadContent(batch, content.Load<Texture2D>("Blocks"));
             DoorRight.LoadContent(batch, content.Load<Texture2D>("Blocks"));
-            WallCubeList.Add(WallTop);
-            WallCubeList.Add(WallDown);
+            WallCubeList.Add(DoorTop);
+            WallCubeList.Add(DoorDown);
             WallCubeList.Add(DoorLeft);
             WallCubeList.Add(DoorRight);
 
+        }
+
+        private static void LoadScreenContent(SpriteBatch batch, ContentManager content)
+        {
+            DeathScreen.LoadContent(batch, content.Load<Texture2D>("game_over"));
+            WinScreen.LoadContent(batch, content.Load<Texture2D>("winning"));
+            PauseScreen.LoadContent(batch, content.Load<Texture2D>("pause"));
+            ScreenList.Add(DeathScreen);
+            ScreenList.Add(WinScreen);
+            ScreenList.Add(PauseScreen);
         }
     }
 }

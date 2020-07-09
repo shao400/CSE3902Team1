@@ -101,11 +101,11 @@ namespace Sprint0.xml
                         case "exRoom":
                             rooms.Add(new ExRoom(xpos, ypos));
                             break;
-                        case "WallTop":
-                            cubes.Add(new WallTop(xpos, ypos));
+                        case "DoorTop":
+                            cubes.Add(new DoorTop(xpos, ypos));
                             break;
-                        case "WallDown":
-                            cubes.Add(new WallDown(xpos, ypos));
+                        case "DoorDown":
+                            cubes.Add(new DoorDown(xpos, ypos));
                             break;
                         case "DoorLeft":
                             cubes.Add(new DoorLeft(xpos, ypos));

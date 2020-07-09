@@ -90,6 +90,8 @@
     <Compile Include="Enemies\Wallmaster.cs" />
     <Compile Include="Enemies\Zol.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="GameStates\Win.cs" />
+    <Compile Include="GameStates\Death.cs" />
     <Compile Include="GameStates\InGame.cs" />
     <Compile Include="GameStates\Transitioning.cs" />
     <Compile Include="GlobalSuppressions.cs" />
@@ -130,6 +132,8 @@
     <Compile Include="Rooms\ExRoom.cs" />
     <Compile Include="Rooms\RoomItem.cs" />
     <Compile Include="Sound\Sound.cs" />
+    <Compile Include="Sprite\WinScreenSprite.cs" />
+    <Compile Include="Sprite\DeathScreenSprite.cs" />
     <Compile Include="Sprite\HudMapPieceSprite.cs" />
     <Compile Include="Sprite\ItemWoodenSwordSprite.cs" />
     <Compile Include="Sprite\PlayerWoodenSwordExplodingSprite.cs" />
@@ -180,15 +184,15 @@
     <Compile Include="Sprite\RoomEnemySprite.cs" />
     <Compile Include="Sprite\RoomExteriorSprite.cs" />
     <Compile Include="Sprite\DoorLeftSprite.cs" />
-    <Compile Include="Sprite\WallDownSprite.cs" />
-    <Compile Include="Sprite\WallTopSprite.cs" />
+    <Compile Include="Sprite\DoorDownSprite.cs" />
+    <Compile Include="Sprite\DoorTopSprite.cs" />
     <Compile Include="Sprite\RoomItemSprite.cs" />
     <Compile Include="Sprite\SpriteFactory.cs" />
     <Compile Include="State\P1State.cs" />
-    <Compile Include="WallCube\WallTop.cs" />
+    <Compile Include="WallCube\DoorTop.cs" />
     <Compile Include="WallCube\DoorRight.cs" />
     <Compile Include="WallCube\DoorLeft.cs" />
-    <Compile Include="WallCube\WallDown.cs" />
+    <Compile Include="WallCube\DoorDown.cs" />
     <Compile Include="xml\Loader.cs" />
     <Compile Include="xml\roomProperties.cs" />
   </ItemGroup>
