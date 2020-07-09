@@ -93,6 +93,7 @@
     <Compile Include="GameStates\InGame.cs" />
     <Compile Include="GameStates\Transitioning.cs" />
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="HUD\HudMap.cs" />
     <Compile Include="HUD\WeaponSlot.cs" />
     <Compile Include="HUD\HealthBar.cs" />
     <Compile Include="Interfaces\IBlock.cs" />
@@ -129,6 +130,7 @@
     <Compile Include="Rooms\ExRoom.cs" />
     <Compile Include="Rooms\RoomItem.cs" />
     <Compile Include="Sound\Sound.cs" />
+    <Compile Include="Sprite\HudMapPieceSprite.cs" />
     <Compile Include="Sprite\ItemWoodenSwordSprite.cs" />
     <Compile Include="Sprite\PlayerWoodenSwordExplodingSprite.cs" />
     <Compile Include="Sprite\PlayerWoodenSwordShootingSprite.cs" />

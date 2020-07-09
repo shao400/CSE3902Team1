@@ -40,6 +40,7 @@ namespace Sprint0
         List<object> controllerList; // could also be defined as List <IController>
         public HealthBar Hpbar;
         public WeaponSlot WpSlot;
+        public HudMap map;
         public IGameState currentState;
         public List<IGameState> stateList;
 
@@ -98,6 +99,7 @@ namespace Sprint0
             currentState = stateList[0];
             Hpbar = new HealthBar(150, 50, this.currentRoom.link);
             WpSlot = new WeaponSlot(250, 50, this.currentRoom.link);
+            map = new HUD.HudMap(450, 50, this.currentRoom.link);
         }
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
@@ -144,6 +146,7 @@ namespace Sprint0
             currentState.Draw();
             Hpbar.Draw();
             WpSlot.Draw();
+            map.Draw();
             base.Draw(gameTime);
         }
       
