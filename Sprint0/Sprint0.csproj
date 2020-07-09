@@ -52,6 +52,7 @@
     <Compile Include="Block\BlockA.cs" />
     <Compile Include="Block\BlockB.cs" />
     <Compile Include="Block\BlockC.cs" />
+    <Compile Include="Collisions\ProjectileCollision.cs" />
     <Compile Include="Collisions\LinkBlockCollision.cs" />
     <Compile Include="Collisions\LinkEnemyCollision.cs" />
     <Compile Include="Collisions\LinkItemCollision.cs" />

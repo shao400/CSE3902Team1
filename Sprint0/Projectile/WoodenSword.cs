@@ -55,6 +55,7 @@ namespace Sprint0.Projectile
                 location = new Vector2(this.player.GetRectangle().X-myFrame, this.player.GetRectangle().Y);
             }
                 WoodenSwordShootingSprite.Draw(location, false);
+            this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), 45,23);
             }
 
         public override void Explode()

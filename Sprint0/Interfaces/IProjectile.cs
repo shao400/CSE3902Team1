@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ namespace Sprint0.Interfaces
         void Shoot();
         void Explode();
         void Stab();
+        Rectangle GetHitBox();
         int Speed { get; set; }
         int ShotDistance { get; set; }
         bool IsDone { get; set; }
