@@ -19,6 +19,7 @@ namespace Sprint0.Player
         private LinkBlockCollision linkBlockCollision;
         private LinkItemCollision linkItemCollision;
         private LinkEnemyCollision linkEnemyCollision;
+        
         private Sound sound;
         private int hp;
 
@@ -192,6 +193,10 @@ namespace Sprint0.Player
         public void BlockCollisionTest(List<IBlock> blocks)
         {
             linkBlockCollision.BlockCollision(blocks);
+        }
+        public void ProjectileCollisionTest(List<IBlock> blocks)
+        {
+            states.ProjectileCollisionTest(blocks);
         }
 
         public void EnemyCollisionTest(List<IEnemy> enemies)

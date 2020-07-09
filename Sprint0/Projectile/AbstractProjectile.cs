@@ -34,10 +34,10 @@ namespace Sprint0.Projectile
             this.damage = 0;
             return damage;
         }
-        public Rectangle GetHitBox()
-        {
-            return hitBox;
-        }
+       // public Rectangle GetHitBox()
+        //{
+          //  return hitBox;
+       // }
 
         public Vector2 GetPosition()
         {
@@ -48,7 +48,7 @@ namespace Sprint0.Projectile
 
         }
 
-
+        public abstract Rectangle GetHitBox();
         public abstract void Explode();
         public abstract void Shoot();
         public abstract void Stab();

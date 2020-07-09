@@ -4,6 +4,9 @@ using Sprint0.HUD;
 using Sprint0.Projectile;
 using Sprint0.Interfaces;
 using Sprint0.Player;
+using Sprint0.Collisions;
+using System.Collections.Generic;
+using System;
 
 
 //Author: Chuwen Sun, Zhizhou He
@@ -29,7 +32,8 @@ namespace Sprint0.State
         private facing currentFacing;
         private status currentStatus;
         public IProjectile currentProjectile;
-        
+        private ProjectileCollision projectileCollision;
+
 
         public P1State(Player1 player)
         {
@@ -40,6 +44,8 @@ namespace Sprint0.State
             currentStatus = status.standing;
             currentSprite = SpriteFactory.LinkNoneStandingRight;
             
+
+
         }
 
         public void Update()
@@ -188,7 +194,13 @@ namespace Sprint0.State
             else if (currentFacing == facing.down) currentProjectile = new WoodenSword(this.player, 1);
             else if (currentFacing == facing.right) currentProjectile = new WoodenSword(this.player, 2);
             else if (currentFacing == facing.left) currentProjectile = new WoodenSword(this.player, 3);
+            
             currentProjectile.Shoot();
+        }
+        public void ProjectileCollisionTest(List<IBlock> blocks)
+        {
+            projectileCollision = new ProjectileCollision(currentProjectile);
+            projectileCollision.ProjectileCollisionTest(blocks);
         }
         public void Explode()
         {

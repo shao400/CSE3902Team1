@@ -2,6 +2,7 @@
 <Room>
 	<player xpos="100" ypos="100" />
 	<src xpos="258" ypos="886" />
+	<block type="BlockB" xpos="250" ypos="263" />
 	<no i="0" />
 	<connect up="-1" down="-1" left="-1" right="1" />
 </Room>

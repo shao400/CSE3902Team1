@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
+using System;
 using System.Collections.Generic;
 
 //currently not used, since item would not collition with enemy or blocks right now. May update future
@@ -14,7 +15,7 @@ namespace Sprint0.Collisions
         {
             thisProjectile = projectile;
         }
-        public void AllItemCollisionTest(List<IBlock> blocks)
+        public void ProjectileCollisionTest(List<IBlock> blocks)
         {
             Rectangle thisRectangle = thisProjectile.GetHitBox();
             Rectangle blockRectangle;
@@ -24,7 +25,7 @@ namespace Sprint0.Collisions
 
                 blockRectangle = block.GetRectangle();
                 intersectionRectangle = Rectangle.Intersect(thisRectangle, blockRectangle);
-
+                Console.WriteLine(thisRectangle.ToString());
                 if (!intersectionRectangle.IsEmpty)
                 {
                     // check the collison occuring direction
@@ -44,10 +45,12 @@ namespace Sprint0.Collisions
                         if (thisRectangle.X > blockRectangle.X)//from right
                         {
                             thisProjectile.Explode();
+                            Console.WriteLine("xxx");
                         }
                         else //from left
                         {
                             thisProjectile.Explode();
+                            Console.WriteLine("xxxxxxxxx");
                         }
                     }
                     break;//once link has collision with one block, no need to detect other blocks
