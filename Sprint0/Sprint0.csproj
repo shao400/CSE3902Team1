@@ -133,9 +133,9 @@
     <Compile Include="Sprite\HudSprites\HudPointSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudMapPieceSprite.cs" />
     <Compile Include="Sprite\ItemSprites\ItemWoodenSwordSprite.cs" />
-    <Compile Include="Sprite\PlayerWoodenSwordExplodingSprite.cs" />
-    <Compile Include="Sprite\PlayerWoodenSwordShootingSprite.cs" />
-    <Compile Include="Sprite\PlayerWoodenSwordSprite.cs" />
+    <Compile Include="Sprite\ProjectileSprites\PlayerWoodenSwordExplodingSprite.cs" />
+    <Compile Include="Sprite\ProjectileSprites\PlayerWoodenSwordShootingSprite.cs" />
+    <Compile Include="Sprite\ProjectileSprites\PlayerWoodenSwordSprite.cs" />
     <Compile Include="Sprite\BlockSprites\BlockASprite.cs" />
     <Compile Include="Sprite\BlockSprites\BlockBSprite.cs" />
     <Compile Include="Sprite\BlockSprites\BlockCSprite.cs" />

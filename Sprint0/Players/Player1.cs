@@ -134,6 +134,7 @@ namespace Sprint0.Player
         }
         public void Shoot() {
             states.Shoot();
+            
         }
         public void Explode()
         {

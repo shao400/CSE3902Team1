@@ -12,11 +12,8 @@ namespace Sprint0.Projectile
 {
     class WoodenSword : AbstractProjectile, IProjectile
     {
-        private ISprite WoodenSwordShootingSprite;
-        private ISprite WoodenSwordExplodingSprite;
         private ISprite WoodenSwordSprite;
         int myDirection;
-        int myFrame=0;
         Vector2 location;
         private enum status
         {
@@ -33,7 +30,7 @@ namespace Sprint0.Projectile
         public override void Update()
         {
             if (currentStatus == status.stab) { }
-            else if (currentStatus == status.shoot) { myFrame+=5; }
+            else if (currentStatus == status.shoot) { ShotDistance+=5; }
             else if (currentStatus == status.explode) { }
             this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), 45, 23);
 
@@ -44,32 +41,32 @@ namespace Sprint0.Projectile
         {
             currentStatus = status.shoot;
             if (myDirection == 0) { 
-                WoodenSwordShootingSprite = SpriteFactory.PlayerWoodenSwordShootingUp;
-                location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y-myFrame);
+                WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingUp;
+                location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y - ShotDistance);
             }
             else if (myDirection == 1) { 
-                WoodenSwordShootingSprite = SpriteFactory.PlayerWoodenSwordShootingDown;
-                location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y+myFrame);
+                WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingDown;
+                location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y + ShotDistance);
             }
             else if (myDirection == 2) {
-                WoodenSwordShootingSprite = SpriteFactory.PlayerWoodenSwordShootingRight;
-                location = new Vector2(this.player.GetRectangle().X+myFrame, this.player.GetRectangle().Y);
+                WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingRight;
+                location = new Vector2(this.player.GetRectangle().X + ShotDistance, this.player.GetRectangle().Y);
             }
             else if (myDirection == 3) { 
-                WoodenSwordShootingSprite = SpriteFactory.PlayerWoodenSwordShootingLeft;
-                location = new Vector2(this.player.GetRectangle().X-myFrame, this.player.GetRectangle().Y);
+                WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingLeft;
+                location = new Vector2(this.player.GetRectangle().X - ShotDistance, this.player.GetRectangle().Y);
             }
-                WoodenSwordShootingSprite.Draw(location, false);
+            WoodenSwordSprite.Draw(location, false);
             
         }
         
         public override void Explode()
         {
             currentStatus = status.explode;
-            WoodenSwordExplodingSprite = SpriteFactory.PlayerWoodenSwordExploding;
+            WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordExploding;
             location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);
-            WoodenSwordExplodingSprite.Update();
-            WoodenSwordExplodingSprite.Draw(location, false);
+            WoodenSwordSprite.Update();
+            WoodenSwordSprite.Draw(location, false);
         }
 
         public override void Stab()

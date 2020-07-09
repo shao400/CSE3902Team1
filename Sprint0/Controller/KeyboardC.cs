@@ -64,8 +64,9 @@ namespace Sprint0.Controller
                 new Stand(myGame).Execute();
             }
 
+
             //attack button executing, different logic from other keys
-            
+
             foreach (Keys key in attackmap.Keys)
             {
                 if (state.IsKeyDown(key) && !prevAttackState.IsKeyDown(key))
@@ -75,7 +76,7 @@ namespace Sprint0.Controller
                 } else if (prevAttackState.IsKeyDown(key))
                 {
                     prevAttackState = state;
-                }
+                } 
             }
             
         }
