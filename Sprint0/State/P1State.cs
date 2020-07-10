@@ -33,6 +33,7 @@ namespace Sprint0.State
         private status currentStatus;
         public IProjectile currentProjectile;
         private ProjectileCollision projectileCollision;
+        int counter;
 
 
         public P1State(Player1 player)
@@ -43,6 +44,7 @@ namespace Sprint0.State
             currentProjectile = new WoodenSword(player, 2);
             currentStatus = status.standing;
             currentSprite = SpriteFactory.LinkNoneStandingRight;
+            counter = 0;
             
 
 
@@ -51,6 +53,21 @@ namespace Sprint0.State
         public void Update()
         {
             currentSprite.Update();
+            if (currentProjectile.IsExplode() == 1 && counter < 20)
+            {
+                currentStatus = status.exploding;
+                counter++;
+                Console.WriteLine(counter);
+            }else if (currentProjectile.IsExplode() == 0)
+            {
+                counter = 0;
+            }
+            if (counter == 20)
+            {
+                currentStatus = status.standing;
+                counter = 21;
+                Console.WriteLine(counter);
+            }
             /*if (currentProjectile != null && currentStatus == status.attacking)
             {
                 currentProjectile.Update();

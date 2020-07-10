@@ -64,11 +64,37 @@ namespace Sprint0.Projectile
         {
             currentStatus = status.explode;
             WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordExploding;
-            location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);
+            //location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);
             WoodenSwordSprite.Update();
             WoodenSwordSprite.Draw(location, false);
         }
+        public override int IsExplode()
+        {
+            if (currentStatus == status.explode)
+            {
+                return 1;
+            }
+            else if (currentStatus == status.shoot)
+            {
+                return 0;
+            }
+            else
+            {
+                return -1;
+            }
+        }
+        public override void explo(int i)
+        {
+            if (i == 1)
+            {
+                currentStatus = status.explode;
+            }
+            else
+            {
+                currentStatus = status.shoot;
+            }
 
+        }
         public override void Stab()
         {
             currentStatus = status.stab;

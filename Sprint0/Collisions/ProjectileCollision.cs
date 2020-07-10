@@ -33,23 +33,23 @@ namespace Sprint0.Collisions
                     {
                         if (thisRectangle.Y > blockRectangle.Y) // from down
                         {
-                            thisProjectile.Explode();
+                            thisProjectile.explo(1);
                         }
                         else //from up
                         {
-                            thisProjectile.Explode();
+                            thisProjectile.explo(1);
                         }
                     }
                     else //from right or left
                     {
                         if (thisRectangle.X > blockRectangle.X)//from right
                         {
-                            thisProjectile.Explode();
+                            thisProjectile.explo(1);
                             Console.WriteLine("xxx");
                         }
                         else //from left
                         {
-                            thisProjectile.Explode();
+                            thisProjectile.explo(1);
                             Console.WriteLine("xxxxxxxxx");
                         }
                     }

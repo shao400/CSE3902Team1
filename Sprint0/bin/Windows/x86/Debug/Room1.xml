@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Room>
 	<player xpos="100" ypos="100" />
+	<block type="BlockA" xpos="284" ypos="310" />
 	<src xpos="515" ypos="886" />
 	<no i="1" />
 	<connect up="3" down="-1" left="0" right="2" />
