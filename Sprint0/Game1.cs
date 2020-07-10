@@ -80,13 +80,14 @@ namespace Sprint0
             this.IsMouseVisible = true;
             base.Initialize();
             roomCount = 0;
+            string Room = "Room";
+            string xml = ".xml";
             roomList = new List<roomProperties>();
-            reader = XmlReader.Create("Room0.xml", new XmlReaderSettings());
-            roomList.Add(Loader.LoadFromReader(reader, soundEffect));
-            reader = XmlReader.Create("Room1.xml", new XmlReaderSettings());
-            roomList.Add(Loader.LoadFromReader(reader, soundEffect));
-            reader = XmlReader.Create("Room2.xml", new XmlReaderSettings());
-            roomList.Add(Loader.LoadFromReader(reader, soundEffect));
+            for (int i = 0; i <= 16; i++)
+            {
+                reader = XmlReader.Create(Room + i + xml, new XmlReaderSettings());
+                roomList.Add(Loader.LoadFromReader(reader, soundEffect));
+            }
             foreach (roomProperties room in roomList)
             {
                 room.loadBatchAndContent(Content, spriteBatch);

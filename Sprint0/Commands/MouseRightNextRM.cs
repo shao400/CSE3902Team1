@@ -20,17 +20,11 @@ namespace Sprint0.Commands
         public void Execute()
         {
 
-            if (myGame.currentRoom.roomID < 2)
+            if (myGame.currentRoom.roomID < 16)
             {
                 myGame.currentState = myGame.stateList[1];
                 myGame.currentState.loadNextRoom(myGame.currentRoom.roomID + 1);
             }
-
-            /*            if (myGame.roomCount != 2)
-                        {
-                            myGame.roomCount++;
-                            myGame.currentRoom = myGame.roomList[myGame.roomCount];
-                        }*/
         }
 
     }

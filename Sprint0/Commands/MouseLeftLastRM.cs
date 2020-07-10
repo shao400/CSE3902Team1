@@ -24,12 +24,6 @@ namespace Sprint0.Commands
                 Console.WriteLine("nextroom: " + myGame.currentRoom.roomID + "-1");
                 myGame.currentState.loadNextRoom(myGame.currentRoom.roomID - 1);
             }
-
-            /*            if (myGame.roomCount != 0)
-                        {
-                            myGame.roomCount--;
-                            myGame.currentRoom = myGame.roomList[myGame.roomCount];
-                        }*/
         }
 
     }
