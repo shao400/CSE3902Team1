@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Room>
+	<player xpos="100" ypos="100" />
+	<src xpos="258" ypos="1" />
+	<no i="15" />
+	<connect up="-1" down="-1" left="-1" right="16" />
+</Room>
