@@ -18,6 +18,7 @@ using System.Xml;
 using Microsoft.Xna.Framework.Media;
 using Sprint0.GameStates;
 using Sprint0.HUD;
+using Sprint0.UtilityClass;
 
 namespace Sprint0
 {
@@ -38,9 +39,11 @@ namespace Sprint0
         private Sound soundEffect;
         private Song intro;
         List<object> controllerList; // could also be defined as List <IController>
+        SpriteFont font;
         public HealthBar Hpbar;
         public WeaponSlot WpSlot;
         public HudMap map;
+        public ItemSlot itemSlot;
         public IGameState currentState;
         public List<IGameState> stateList;
 
@@ -80,12 +83,11 @@ namespace Sprint0
             this.IsMouseVisible = true;
             base.Initialize();
             roomCount = 0;
-            string Room = "Room";
-            string xml = ".xml";
+
             roomList = new List<roomProperties>();
             for (int i = 0; i <= 16; i++)
             {
-                reader = XmlReader.Create(Room + i + xml, new XmlReaderSettings());
+                reader = XmlReader.Create(StringHolder.Room + i +StringHolder.dotXml, new XmlReaderSettings());
                 roomList.Add(Loader.LoadFromReader(reader, soundEffect));
             }
             foreach (roomProperties room in roomList)
@@ -100,9 +102,12 @@ namespace Sprint0
             stateList.Add(new Pause(this, spriteBatch, Content));
             stateList.Add(new BackToGame(this, spriteBatch, Content));
             currentState = stateList[0];
+            //HUD
+            font = Content.Load<SpriteFont>(StringHolder.Hudfont);
             Hpbar = new HealthBar(150, 50, this.currentRoom.link);
-            WpSlot = new WeaponSlot(250, 50, this.currentRoom.link);
+            WpSlot = new WeaponSlot(250, 50, this.currentRoom.link, spriteBatch, font);
             map = new HudMap(450, 70, this);
+            itemSlot = new ItemSlot(650, 50, this.currentRoom.link, spriteBatch, font);
         }
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
@@ -150,6 +155,7 @@ namespace Sprint0
             Hpbar.Draw();
             WpSlot.Draw();
             map.Draw();
+            //itemSlot.Draw();
             base.Draw(gameTime);
         }
       

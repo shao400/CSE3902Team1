@@ -10,7 +10,7 @@ namespace Sprint0.Sprite
 {
     public class HudPointSprite : ISprite
     { 
-        //BlockA 323 91 16 16
+
         private static SpriteBatch spritebatch;
         private static Texture2D texture;
         Rectangle sourceRec = new Rectangle(960, 85, 25, 25);//a cut of green area of Dungeon.jpg

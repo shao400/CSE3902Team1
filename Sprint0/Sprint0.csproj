@@ -136,6 +136,7 @@
     <Compile Include="Rooms\ExRoom.cs" />
     <Compile Include="Rooms\RoomItem.cs" />
     <Compile Include="Sound\Sound.cs" />
+    <Compile Include="Sprite\HudSprites\HudWpSlotBorderSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudPointSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudMapPieceSprite.cs" />
     <Compile Include="Sprite\ItemSprites\ItemWoodenSwordSprite.cs" />
@@ -192,6 +193,7 @@
     <Compile Include="Sprite\RoomSprites\RoomItemSprite.cs" />
     <Compile Include="Sprite\SpriteFactory.cs" />
     <Compile Include="State\P1State.cs" />
+    <Compile Include="UtilityClass\StringHolder.cs" />
     <Compile Include="WallCube\WallTop.cs" />
     <Compile Include="WallCube\DoorRight.cs" />
     <Compile Include="WallCube\DoorLeft.cs" />

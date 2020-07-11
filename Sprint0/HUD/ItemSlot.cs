@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Sprint0.Interfaces;
 using Sprint0.Player;
 using Sprint0.Sprite;
@@ -7,46 +8,32 @@ namespace Sprint0.HUD
 {
     public class ItemSlot : IHud
     {
-        private HudEmptyHeartSprite empty = SpriteFactory.HudEmptyHeart;
-        private HudHalfHeartSprite half = SpriteFactory.HudHalfHeart;
-        private ItemHeartContainerSprite solid = SpriteFactory.ItemHeartContainer;
+        private static SpriteFont _font;
+        private static SpriteBatch _batch;
         private int xAix;
         private int yAix;
-        private int health;
+
         Player1 _link;
         //private int width;
         //private int height;
-        public ItemSlot(int x, int y, Player1 link)
+        public ItemSlot(int x, int y, Player1 link, SpriteBatch batch, SpriteFont font)
         { 
             xAix = x;
             yAix = y;
-            _link = link;
+            _font = font;
+            _batch = batch;
             //width = w;
             //height = h;
         }
         public void Draw()
         {
             Vector2 location = new Vector2(xAix, yAix);
-            if (_link.linkHp() == 2)
-            {
-                solid.Draw(location, false);
-            }
-            else if (_link.linkHp() == 1)
-            {
-                half.Draw(location, false);
-            }
-            else if (_link.linkHp() == 0)
-            {
-                empty.Draw(location, false);
-            }
-
+            _batch.Begin();
+            _batch.DrawString(_font, "0", location, Color.Black);
+            _batch.End();
         }
 
-        public void GetLinkHp()
-        {
-            //not used yet
-            health = _link.linkHp();
-        }
+
 
 
         public void Update()

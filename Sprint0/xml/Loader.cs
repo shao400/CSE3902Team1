@@ -62,12 +62,12 @@ namespace Sprint0.xml
 
                     switch (type)
                     {
-                        case "HealthBar":
-                            huds.Add(new HealthBar(xpos, ypos, link));
-                            break;
-                        case "WeaponSlot":
-                            huds.Add(new WeaponSlot(xpos, ypos, link));
-                            break;
+                       // case "HealthBar":
+                       //     huds.Add(new HealthBar(xpos, ypos, link));
+                       //     break;
+                       // case "WeaponSlot":
+                       //     huds.Add(new WeaponSlot(xpos, ypos, link));
+                       //     break;
                         case "Empty":
                             enemies.Add(new Empty(xpos, ypos));
                             break;

@@ -10,7 +10,7 @@ namespace Sprint0.Sprite
 {
     public class HudMapPieceSprite : ISprite
     { 
-        //BlockA 323 91 16 16
+
         private static SpriteBatch spritebatch;
         private static Texture2D texture;
         Rectangle sourceRec = new Rectangle(160, 448, 32, 14);

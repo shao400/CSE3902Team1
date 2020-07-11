@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Sprint0.Interfaces;
 using Sprint0.Player;
 using Sprint0.Sprite;
@@ -11,13 +12,14 @@ namespace Sprint0.HUD
         private HudHalfHeartSprite half = SpriteFactory.HudHalfHeart;
         private ItemHeartContainerSprite solid = SpriteFactory.ItemHeartContainer;
         private ItemWoodenSwordSprite woodenSword = SpriteFactory.ItemWoodenSword;
+        private HudWpSlotBorderSprite border = SpriteFactory.HudWpBorder;
         private int xAix;
         private int yAix;
         private string weapon;
         Player1 _link;
         //private int width;
         //private int height;
-        public WeaponSlot(int x, int y, Player1 link)
+        public WeaponSlot(int x, int y, Player1 link, SpriteBatch batch, SpriteFont font)
         { 
             xAix = x;
             yAix = y;
@@ -26,11 +28,18 @@ namespace Sprint0.HUD
             //width = w;
             //height = h;
         }
+
+        private void DrawWpSlotBorder()
+        {
+            Vector2 locationB = new Vector2(xAix-16, yAix-16);
+            border.Draw(locationB, false);
+        }
         public void Draw()
         {
             //None, WoodenSword, WhiteSword, MagicalSword, MagicalRod
             Vector2 location = new Vector2(xAix, yAix);
             //System.Diagnostics.Debug.WriteLine(_link.states.GetCurrentWeapon());
+            DrawWpSlotBorder();
             woodenSword.Draw(location, false);
             if (_link.states.GetCurrentWeapon().Equals("None", System.StringComparison.Ordinal))
             {
