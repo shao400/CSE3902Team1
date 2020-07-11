@@ -40,6 +40,7 @@ namespace Sprint0
         public HealthBar Hpbar;
         public WeaponSlot WpSlot;
         public HudMap map;
+        public HudFrame frame;
         public IGameState currentState;
         public List<IGameState> stateList;
 
@@ -102,6 +103,7 @@ namespace Sprint0
             Hpbar = new HealthBar(150, 50, this.currentRoom.link);
             WpSlot = new WeaponSlot(250, 50, this.currentRoom.link);
             map = new HudMap(450, 70, this);
+            frame = new HudFrame(0,0,this.currentRoom.link);
         }
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
@@ -146,9 +148,11 @@ namespace Sprint0
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             currentState.Draw();
+            frame.Draw();
             Hpbar.Draw();
             WpSlot.Draw();
             map.Draw();
+            
             base.Draw(gameTime);
         }
       
