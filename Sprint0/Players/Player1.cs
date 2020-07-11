@@ -1,7 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Sprint0.Collisions;
-using Sprint0.State;
+using Sprint0.Sprite;
 using System;
+using Sprint0.Projectile;
 using System.Collections.Generic;
 using Sprint0.Interfaces;
 
@@ -10,28 +11,50 @@ namespace Sprint0.Player
 {
     public class Player1 : IPlayer
     {
-        public P1State states;
+        private enum facing
+        {
+            up, down, left, right
+        }
+        private enum weapon
+        {
+            None, WoodenSword, WhiteSword, MagicalSword, MagicalRod
+        }
+        private enum status
+        {
+            standing, walking, attacking, takingDmg, shooting, exploding
+        }
         public int xAxis;
         public int yAxis;
         private int width;
         private int height;
-        private string currentFacing, currentStatus;
+        public ISprite currentSprite;
+        private facing currentFacing;
         private LinkBlockCollision linkBlockCollision;
         private LinkItemCollision linkItemCollision;
         private LinkEnemyCollision linkEnemyCollision;
-        
+        private status currentStatus;
+
+        private string currentStatus1;
+        public IProjectile currentProjectile;
+        private ProjectileCollision projectileCollision;
+        int counter;
         private Sound sound;
         private int hp;
 
         public Player1(int x, int y, int widthG, int heightG, Sound s) 
         {
-            states = new P1State(this);
             xAxis = x;
             yAxis = y;
             width = widthG;
             height = heightG;
             sound = s;
             hp = 2;
+            counter = 0;
+            currentFacing = facing.right;
+            currentProjectile = new WoodenSword(this, 2);
+            currentStatus = status.standing;
+            currentSprite = SpriteFactory.LinkNoneStandingRight;
+            
             linkBlockCollision = new LinkBlockCollision(this);
             linkItemCollision = new LinkItemCollision(this);
             linkEnemyCollision = new LinkEnemyCollision(this);
@@ -39,50 +62,75 @@ namespace Sprint0.Player
 
         public bool isTakingDmg()
         {
-            return currentStatus == "takingDmg";
+            return currentStatus == status.takingDmg;
         }
         public ISprite getSprite()
         {
-            return states.currentSprite;
+            return currentSprite;
+        }
+        public string GetCurrentStatus()
+        {
+
+            return currentStatus.ToString();
+        }
+        public string GetCurrentWeapon()
+        {
+
+            return currentProjectile.GetType().ToString();
         }
 
         public IProjectile getPlayerItem()
         {
-            return states.currentProjectile;
+            return currentProjectile;
         }
         public void Update()
         {
-            currentFacing = states.GetCurrentFacing();
-            currentStatus = states.GetCurrentStatus();
+            
             getPlayerItem().Update();
-            states.Update();
-            if (string.Compare(currentStatus,"walking", new StringComparison()) == 0 && string.Compare(currentFacing, "left", new StringComparison()) == 0)
+            if (currentStatus == status.walking && currentFacing == facing.left)
             {
                 if(xAxis > 96)
                 {
                     xAxis -= 3;
                 }    
             }
-            else if (string.Compare(currentFacing, "right", new StringComparison()) == 0 && string.Compare(currentStatus, "walking", new StringComparison()) == 0)
+            else if (currentFacing == facing.right && currentStatus == status.walking)
             {
                 if (xAxis < 624)
                 {
                     xAxis += 3;
                 }
             }
-            else if (string.Compare(currentFacing, "down", new StringComparison()) == 0 && string.Compare(currentStatus, "walking", new StringComparison()) == 0)
+            else if (currentFacing == facing.down && currentStatus == status.walking)
             {
                 if (yAxis < 552)
                 {
                     yAxis += 3;
                 }                
             }
-            else if (string.Compare(currentFacing, "up", new StringComparison()) == 0 && string.Compare(currentStatus, "walking", new StringComparison()) == 0)
+            else if (currentFacing == facing.up && currentStatus == status.walking)
             {
                 if (yAxis > 264)
                 {
                     yAxis -= 3;
                 }                
+            }
+            currentSprite.Update();
+            if (currentProjectile.IsExplode() == 1 && counter < 20)
+            {
+                currentStatus = status.exploding;
+                counter++;
+                Console.WriteLine(counter);
+            }
+            else if (currentProjectile.IsExplode() == 0)
+            {
+                counter = 0;
+            }
+            if (counter == 20)
+            {
+                currentStatus = status.standing;
+                counter = 21;
+                Console.WriteLine(counter);
             }
 
             //border restrictions
@@ -101,49 +149,83 @@ namespace Sprint0.Player
         }
         public void Right()
         {
-            states.right();
-           // xAxis += 10;
-            
+            currentStatus = status.walking;
+            currentFacing = facing.right;
+            currentSprite = SpriteFactory.LinkNoneMovingRight;
+
         }
         public void Left()
         {
-            states.left();
-            //xAxis -= 10;
-            
+            currentStatus = status.walking;
+            currentFacing = facing.left;
+            currentSprite = SpriteFactory.LinkNoneMovingLeft;
+
         }
         public void Up()
         {
-            states.Up();
-            //yAxis -= 10;
-            
+            currentStatus = status.walking;
+            currentFacing = facing.up;
+            currentSprite = SpriteFactory.LinkNoneMovingUp;
+
         }
         public void Down()
         {
-            states.Down();
-            //yAxis += 10;
-            
+            currentStatus = status.walking;
+            currentFacing = facing.down;
+            currentSprite = SpriteFactory.LinkNoneMovingDown;
+
         }
         public void Stand()
         {
-            states.Stand();
+            currentStatus = status.standing;
+
+            if (currentFacing == facing.up)
+            {
+                currentSprite = SpriteFactory.LinkNoneStandingUp;
+            }
+            if (currentFacing == facing.down)
+            {
+                currentSprite = SpriteFactory.LinkNoneStandingDown;
+            }
+            if (currentFacing == facing.left)
+            {
+                currentSprite = SpriteFactory.LinkNoneStandingLeft;
+            }
+            if (currentFacing == facing.right)
+            {
+                currentSprite = SpriteFactory.LinkNoneStandingRight;
+            }
         }
         public void Attack()
         {
-            states.Attack();
+            currentStatus = status.attacking;
+            if (currentFacing == facing.up) currentProjectile = new WoodenSword(this, 0);
+            else if (currentFacing == facing.down) currentProjectile = new WoodenSword(this, 1);
+            else if (currentFacing == facing.right) currentProjectile = new WoodenSword(this, 2);
+            else if (currentFacing == facing.left) currentProjectile = new WoodenSword(this, 3);
+            currentProjectile.Stab();
             sound.swordSlash();
         }
         public void Shoot() {
-            states.Shoot();
-            
+            currentStatus = status.shooting;
+            if (currentFacing == facing.up) currentProjectile = new WoodenSword(this, 0);
+            else if (currentFacing == facing.down) currentProjectile = new WoodenSword(this, 1);
+            else if (currentFacing == facing.right) currentProjectile = new WoodenSword(this, 2);
+            else if (currentFacing == facing.left) currentProjectile = new WoodenSword(this, 3);
+
+            currentProjectile.Shoot();
+
         }
         public void Explode()
         {
-            states.Explode();
+            currentStatus = status.exploding;
+            currentProjectile = new WoodenSword(this, 0);
+            currentProjectile.Explode();
         }
         public void takeDmg()
         {
             sound.linkHurt();
-            states.takeDmg();
+            currentStatus = status.takingDmg;
             if (hp>0)
             {
                 hp--;
@@ -159,7 +241,10 @@ namespace Sprint0.Player
         }
         public void PlayerReset()
         {
-            states.StateReset();
+            this.currentFacing = facing.right;
+            this.currentProjectile = new WoodenSword(this, 2);
+            this.currentStatus = status.standing;
+            this.currentSprite = SpriteFactory.LinkNoneStandingRight;
             xAxis = 100;
             yAxis = 100;
             hp = 2;
@@ -172,22 +257,18 @@ namespace Sprint0.Player
         public void UseFirstItem()
         {
             sound.swordSlash();
-            states.UseFirstItem();
         }
         public void UseSecondItem()
         {
             sound.swordSlash();
-            states.UseSecondItem();
         }
         public void UseThirdItem()
         {
             sound.swordSlash();
-            states.UseThirdItem();
         }
         public void UseFourthItem()
         {
             sound.magicRod();
-            states.UseFourthItem();
         }
 
         //collision tests
@@ -197,7 +278,8 @@ namespace Sprint0.Player
         }
         public void ProjectileCollisionTest(List<IBlock> blocks)
         {
-            states.ProjectileCollisionTest(blocks);
+            projectileCollision = new ProjectileCollision(currentProjectile);
+            projectileCollision.ProjectileCollisionTest(blocks);
         }
 
         public void EnemyCollisionTest(List<IEnemy> enemies)

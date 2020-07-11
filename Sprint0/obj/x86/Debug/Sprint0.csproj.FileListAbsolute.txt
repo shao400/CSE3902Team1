@@ -241,3 +241,6 @@ C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\De
 C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\game_over.xnb
 C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\pause.xnb
 C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\winning.xnb
+E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\game_over.xnb
+E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\pause.xnb
+E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\winning.xnb

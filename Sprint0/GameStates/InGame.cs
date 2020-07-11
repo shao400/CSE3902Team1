@@ -24,15 +24,15 @@ namespace Sprint0.GameStates
             Console.WriteLine("ingame drawing");
             myGame.currentRoom.Draw();
             myGame.currentRoom.link.getSprite().Draw(new Vector2(myGame.currentRoom.link.xAxis, myGame.currentRoom.link.yAxis), myGame.currentRoom.link.isTakingDmg());
-            if (myGame.currentRoom.link.states.GetCurrentStatus() == "attacking")
+            if (myGame.currentRoom.link.GetCurrentStatus() == "attacking")
             {
                 myGame.currentRoom.link.getPlayerItem().Stab();
             }
-            else if (myGame.currentRoom.link.states.GetCurrentStatus() == "shooting")
+            else if (myGame.currentRoom.link.GetCurrentStatus() == "shooting")
             {
                 myGame.currentRoom.link.getPlayerItem().Shoot();
             }
-            else if (myGame.currentRoom.link.states.GetCurrentStatus() == "exploding")
+            else if (myGame.currentRoom.link.GetCurrentStatus() == "exploding")
             {
                 myGame.currentRoom.link.getPlayerItem().Explode();
             }

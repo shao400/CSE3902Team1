@@ -32,22 +32,22 @@ namespace Sprint0.HUD
             Vector2 location = new Vector2(xAix, yAix);
             //System.Diagnostics.Debug.WriteLine(_link.states.GetCurrentWeapon());
             woodenSword.Draw(location, false);
-            if (_link.states.GetCurrentWeapon().Equals("None", System.StringComparison.Ordinal))
+            if (_link.GetCurrentWeapon().Equals("None", System.StringComparison.Ordinal))
             {
                 woodenSword.Draw(location, false);
             }
-            else if (_link.states.GetCurrentWeapon().Equals("WoodenSword", System.StringComparison.Ordinal))
+            else if (_link.GetCurrentWeapon().Equals("WoodenSword", System.StringComparison.Ordinal))
             {
                 half.Draw(location, false);
             }
-            else if (_link.states.GetCurrentWeapon().Equals("WhiteSword", System.StringComparison.Ordinal))
+            else if (_link.GetCurrentWeapon().Equals("WhiteSword", System.StringComparison.Ordinal))
             {
                 solid.Draw(location, false);
-            }else if (_link.states.GetCurrentWeapon().Equals("MagicalSword", System.StringComparison.Ordinal))
+            }else if (_link.GetCurrentWeapon().Equals("MagicalSword", System.StringComparison.Ordinal))
             {
                 solid.Draw(location, false);
             }
-            else if (_link.states.GetCurrentWeapon().Equals("MagicalRod", System.StringComparison.Ordinal))
+            else if (_link.GetCurrentWeapon().Equals("MagicalRod", System.StringComparison.Ordinal))
             {
                 solid.Draw(location, false);
             }

@@ -10,7 +10,6 @@ using Microsoft.Xna.Framework.Audio;
 using Sprint0.Items;
 using Sprint0.Player;
 using Sprint0.Sprite;
-using Sprint0.State;
 using System.Collections.Generic;
 using System.ComponentModel;
 using Sprint0.xml;
