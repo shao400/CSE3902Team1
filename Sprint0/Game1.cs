@@ -100,9 +100,9 @@ namespace Sprint0
             stateList.Add(new Pause(this, spriteBatch, Content));
             stateList.Add(new BackToGame(this, spriteBatch, Content));
             currentState = stateList[0];
-            Hpbar = new HealthBar(150, 50, this.currentRoom.link);
+            Hpbar = new HealthBar(528, 120, this.currentRoom.link);
             WpSlot = new WeaponSlot(250, 50, this.currentRoom.link);
-            map = new HudMap(450, 70, this);
+            map = new HudMap(83, 118, this);
             frame = new HudFrame(0,0,this.currentRoom.link);
         }
         /// <summary>
