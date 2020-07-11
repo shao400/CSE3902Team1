@@ -57,6 +57,7 @@
     <Compile Include="Collisions\LinkEnemyCollision.cs" />
     <Compile Include="Collisions\LinkItemCollision.cs" />
     <Compile Include="Commands\aLeft.cs" />
+    <Compile Include="Commands\enterPause.cs" />
     <Compile Include="Commands\Explode.cs" />
     <Compile Include="Commands\Shoot.cs" />
     <Compile Include="Commands\D1FirstWeapon.cs" />
@@ -90,8 +91,12 @@
     <Compile Include="Enemies\Wallmaster.cs" />
     <Compile Include="Enemies\Zol.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="GameStates\BackToGame.cs" />
+    <Compile Include="GameStates\Death.cs" />
     <Compile Include="GameStates\InGame.cs" />
+    <Compile Include="GameStates\Pause.cs" />
     <Compile Include="GameStates\Transitioning.cs" />
+    <Compile Include="GameStates\Win.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="HUD\ItemSlot.cs" />
     <Compile Include="HUD\HudMap.cs" />
