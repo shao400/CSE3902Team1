@@ -98,6 +98,7 @@
     <Compile Include="GameStates\Transitioning.cs" />
     <Compile Include="GameStates\Win.cs" />
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="HUD\Hud.cs" />
     <Compile Include="HUD\HudFrame.cs" />
     <Compile Include="HUD\ItemSlot.cs" />
     <Compile Include="HUD\HudMap.cs" />

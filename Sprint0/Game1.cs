@@ -37,10 +37,11 @@ namespace Sprint0
         private Sound soundEffect;
         private Song intro;
         List<object> controllerList; // could also be defined as List <IController>
-        public HealthBar Hpbar;
-        public WeaponSlot WpSlot;
-        public HudMap map;
-        public HudFrame frame;
+        //public HealthBar Hpbar;
+        //public WeaponSlot WpSlot;
+        //public HudMap map;
+        //public HudFrame frame;
+        public Hud hud;
         public IGameState currentState;
         public List<IGameState> stateList;
 
@@ -100,10 +101,11 @@ namespace Sprint0
             stateList.Add(new Pause(this, spriteBatch, Content));
             stateList.Add(new BackToGame(this, spriteBatch, Content));
             currentState = stateList[0];
-            Hpbar = new HealthBar(528, 120, this.currentRoom.link);
-            WpSlot = new WeaponSlot(250, 50, this.currentRoom.link);
-            map = new HudMap(83, 118, this);
-            frame = new HudFrame(0,0,this.currentRoom.link);
+            //Hpbar = new HealthBar(528, 120, this);
+            //WpSlot = new WeaponSlot(460, 72, this);
+            //map = new HudMap(83, 118, this);
+            //frame = new HudFrame(0,0,this);
+            hud = new Hud(0,0,this);
         }
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
@@ -148,10 +150,7 @@ namespace Sprint0
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             currentState.Draw();
-            frame.Draw();
-            Hpbar.Draw();
-            WpSlot.Draw();
-            map.Draw();
+            hud.Draw();
             
             base.Draw(gameTime);
         }

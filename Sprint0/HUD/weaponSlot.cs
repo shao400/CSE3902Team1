@@ -17,11 +17,11 @@ namespace Sprint0.HUD
         Player1 _link;
         //private int width;
         //private int height;
-        public WeaponSlot(int x, int y, Player1 link)
+        public WeaponSlot(int x, int y, Game1 myGame)
         { 
             xAix = x;
             yAix = y;
-            _link = link;
+            _link = myGame.currentRoom.link;
             weapon = "";
             //width = w;
             //height = h;
