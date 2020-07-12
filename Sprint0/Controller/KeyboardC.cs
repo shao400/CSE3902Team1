@@ -44,7 +44,7 @@ namespace Sprint0.Controller
             attackmap.Add(Keys.N, new Shoot(myGame));
             attackmap.Add(Keys.L, new Explode(myGame));
 
-            keymap.Add(Keys.Enter, new enterPause(myGame));
+            attackmap.Add(Keys.Enter, new enterPause(myGame));
         }
 
         //check no keys
