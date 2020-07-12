@@ -233,6 +233,10 @@ namespace Sprint0.Player
             {
                 hp--;
             }
+            else
+            {
+                myGame.currentState = myGame.stateList[5];
+            }
         }
 
         public void getHealed()
@@ -242,6 +246,13 @@ namespace Sprint0.Player
                 hp++;
             }
         }
+
+        public void winGame()
+        {
+            myGame.currentState = myGame.stateList[6];
+        }
+
+
         public void PlayerReset()
         {
             this.currentFacing = facing.right;

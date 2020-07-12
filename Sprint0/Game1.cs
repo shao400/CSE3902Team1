@@ -101,6 +101,8 @@ namespace Sprint0
             stateList.Add(new GoToPause(this, spriteBatch, Content));
             stateList.Add(new BackToGame(this, spriteBatch, Content));
             stateList.Add(new Pause(this, spriteBatch, Content));
+            stateList.Add(new Death(this, spriteBatch, Content));
+            stateList.Add(new Win(this, spriteBatch, Content));
             currentState = stateList[0];
             //Hpbar = new HealthBar(528, 120, this);
             //WpSlot = new WeaponSlot(460, 72, this);

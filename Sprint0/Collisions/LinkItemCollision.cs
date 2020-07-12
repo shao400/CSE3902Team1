@@ -15,6 +15,7 @@ namespace Sprint0.Collisions
     {
         private Player1 myPlayer;
         private HeartContainer heart = new HeartContainer(1, 1);
+        private Triforce triforce;
 
         public LinkItemCollision(Player1 player)
         {
@@ -37,6 +38,11 @@ namespace Sprint0.Collisions
                     {
                         myPlayer.getHealed();
                     }
+                    if (item.GetType() == triforce.GetType() && !item.isPickedUp())
+                    {
+                        myPlayer.winGame();
+                    }
+
                     // check the collison occuring direction
                     if ((intersectionRectangle.Width >= intersectionRectangle.Height)) // from up or down
                     {
