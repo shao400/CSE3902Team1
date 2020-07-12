@@ -17,7 +17,7 @@ namespace Sprint0.Commands
 
         public void Execute()
         {
-            myGame.currentRoom.link.UseThirdItem();
+            myGame.link.UseThirdItem();
         }
     }
 }

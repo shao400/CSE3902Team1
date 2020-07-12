@@ -34,6 +34,7 @@ namespace Sprint0.Player
         private LinkEnemyCollision linkEnemyCollision;
         private status currentStatus;
 
+        Game1 myGame;
         private string currentStatus1;
         public IProjectile currentProjectile;
         private ProjectileCollision projectileCollision;
@@ -41,8 +42,9 @@ namespace Sprint0.Player
         private Sound sound;
         private int hp;
 
-        public Player1(int x, int y, int widthG, int heightG, Sound s) 
+        public Player1(int x, int y, int widthG, int heightG, Sound s, Game1 game) 
         {
+            myGame = game;
             xAxis = x;
             yAxis = y;
             width = widthG;
@@ -54,7 +56,8 @@ namespace Sprint0.Player
             currentProjectile = new WoodenSword(this, 2);
             currentStatus = status.standing;
             currentSprite = SpriteFactory.LinkNoneStandingRight;
-            
+
+
             linkBlockCollision = new LinkBlockCollision(this);
             linkItemCollision = new LinkItemCollision(this);
             linkEnemyCollision = new LinkEnemyCollision(this);
@@ -85,34 +88,34 @@ namespace Sprint0.Player
         }
         public void Update()
         {
-            
+
             getPlayerItem().Update();
             if (currentStatus == status.walking && currentFacing == facing.left)
             {
-                if(xAxis > 96)
+                if(xAxis > 0)
                 {
-                    xAxis -= 3;
+                    xAxis -= 5;
                 }    
             }
             else if (currentFacing == facing.right && currentStatus == status.walking)
             {
-                if (xAxis < 624)
+                if (xAxis < 720)
                 {
-                    xAxis += 3;
+                    xAxis += 5;
                 }
             }
             else if (currentFacing == facing.down && currentStatus == status.walking)
             {
-                if (yAxis < 552)
+                if (yAxis < 648)
                 {
-                    yAxis += 3;
+                    yAxis += 5;
                 }                
             }
             else if (currentFacing == facing.up && currentStatus == status.walking)
             {
-                if (yAxis > 264)
+                if (yAxis > 168)
                 {
-                    yAxis -= 3;
+                    yAxis -= 5;
                 }                
             }
             currentSprite.Update();
@@ -120,7 +123,6 @@ namespace Sprint0.Player
             {
                 currentStatus = status.exploding;
                 counter++;
-                Console.WriteLine(counter);
             }
             else if (currentProjectile.IsExplode() == 0)
             {
@@ -130,14 +132,33 @@ namespace Sprint0.Player
             {
                 currentStatus = status.standing;
                 counter = 21;
-                Console.WriteLine(counter);
             }
-
             //border restrictions
-            if (xAxis < 96) xAxis = 96;
-            if (xAxis > 624) xAxis = 624;
-            if (yAxis < 264) yAxis = 264;
-            if (yAxis > 552) yAxis = 552;
+            if (xAxis <= 0) 
+            { 
+                xAxis = 624;
+                myGame.currentState = myGame.stateList[1];
+                myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[2]);
+            }
+            else if (xAxis >= 720) 
+            {
+                xAxis = 96;
+                myGame.currentState = myGame.stateList[1];
+                myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[3]);
+            }
+            else if (yAxis <= 168)
+            {
+                yAxis = 552;
+                myGame.currentState = myGame.stateList[1];
+                myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[0]);
+
+            }
+            else if (yAxis >= 648)
+            { 
+                yAxis = 264;
+                myGame.currentState = myGame.stateList[1];
+                myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[1]);
+            }
         }
         public void Draw()
         {

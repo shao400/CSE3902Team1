@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Room>
-	<player xpos="100" ypos="100" />
 	<src xpos="515" ypos="532" />
 	<no i="5" />
 	<connect up="9" down="3" left="4" right="6" />
+	<block type="BlockLeft" xpos="0" ypos="264" />
+	<block type="BlockLeft" xpos="0" ypos="458" />
+	<block type="BlockLeft" xpos="672" ypos="264" />
+	<block type="BlockLeft" xpos="672" ypos="458" />
+	<block type="BlockTop" xpos="96" ypos="600" />
+	<block type="BlockTop" xpos="411" ypos="600" />
+	<block type="BlockTop" xpos="96" ypos="168" />
+	<block type="BlockTop" xpos="411" ypos="168" />
 </Room>

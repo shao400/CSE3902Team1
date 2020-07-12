@@ -20,7 +20,7 @@ namespace Sprint0.xml
 {
     public static class Loader
     {
-        static public roomProperties LoadFromReader(XmlReader reader, Sound s)
+        static public roomProperties LoadFromReader(XmlReader reader, Game1 game)
         {
             int roomID = -1;
             List<IEnemy> enemies = new List<IEnemy>();
@@ -29,19 +29,14 @@ namespace Sprint0.xml
             List<IRoom> rooms = new List<IRoom>();
             List<IHud> huds = new List<IHud>();
             List<IWallCube> cubes = new List<IWallCube>();
-            Player1 link = null;
             reader.MoveToContent();
             reader.Read(); // jump over <Room>
             CultureInfo cultures = new CultureInfo("en-US");
             Rectangle source = new Rectangle(0,0,0,0);
             List<int> Con = new List<int>();
             while (reader.Read())
-            {
-                if (reader.Name == "player")
-                {
-                    link = new Player1(Int32.Parse(reader.GetAttribute("xpos"), cultures), Int32.Parse(reader.GetAttribute("ypos"), cultures), 48, 48, s);
-                }
-                else if (reader.Name == "src")
+            {   
+                if (reader.Name == "src")
                 {
                     source = new Rectangle(Int32.Parse(reader.GetAttribute("xpos"), cultures), Int32.Parse(reader.GetAttribute("ypos"), cultures), 256, 176);
                 }else if (reader.Name == "connect")
@@ -79,6 +74,18 @@ namespace Sprint0.xml
                             break;
                         case "BlockB":
                             blocks.Add(new BlockB(xpos, ypos));
+                            break;
+                        case "BlockTop":
+                            blocks.Add(new BlockTop(xpos, ypos));
+                            break;
+                        case "BlockLeft":
+                            blocks.Add(new BlockLeft(xpos, ypos));
+                            break;
+                        case "BlockAllLeft":
+                            blocks.Add(new BlockAllLeft(xpos, ypos));
+                            break;
+                        case "BlockAllTop":
+                            blocks.Add(new BlockAllTop(xpos, ypos));
                             break;
                         case "BlockC":
                             blocks.Add(new BlockC(xpos, ypos));
@@ -180,14 +187,8 @@ namespace Sprint0.xml
 
                 }
             }
-            for (int i = 0; i < Con.Count; i++)
-            {
-                Console.WriteLine("ID: " + roomID);
-                Console.WriteLine("Con" + i + ": " + Con[i]);
 
-            }
-
-            return new roomProperties(roomID, blocks, items, enemies, rooms, huds, cubes, link, source, Con);
+            return new roomProperties(roomID, blocks, items, enemies, rooms, huds, cubes, source, Con);
         }
     }
 }

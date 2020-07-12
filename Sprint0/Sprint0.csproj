@@ -49,6 +49,10 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Block\BlockAllTop.cs" />
+    <Compile Include="Block\BlockAllLeft.cs" />
+    <Compile Include="Block\BlockLeft.cs" />
+    <Compile Include="Block\BlockTop.cs" />
     <Compile Include="Block\BlockA.cs" />
     <Compile Include="Block\BlockB.cs" />
     <Compile Include="Block\BlockC.cs" />

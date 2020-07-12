@@ -21,30 +21,29 @@ namespace Sprint0.GameStates
         }
         public void Draw()
         {
-            Console.WriteLine("ingame drawing");
             myGame.currentRoom.Draw();
-            myGame.currentRoom.link.getSprite().Draw(new Vector2(myGame.currentRoom.link.xAxis, myGame.currentRoom.link.yAxis), myGame.currentRoom.link.isTakingDmg());
-            if (myGame.currentRoom.link.GetCurrentStatus() == "attacking")
+            myGame.link.getSprite().Draw(new Vector2(myGame.link.xAxis, myGame.link.yAxis), myGame.link.isTakingDmg());
+            if (myGame.link.GetCurrentStatus() == "attacking")
             {
-                myGame.currentRoom.link.getPlayerItem().Stab();
+                myGame.link.getPlayerItem().Stab();
             }
-            else if (myGame.currentRoom.link.GetCurrentStatus() == "shooting")
+            else if (myGame.link.GetCurrentStatus() == "shooting")
             {
-                myGame.currentRoom.link.getPlayerItem().Shoot();
+                myGame.link.getPlayerItem().Shoot();
             }
-            else if (myGame.currentRoom.link.GetCurrentStatus() == "exploding")
+            else if (myGame.link.GetCurrentStatus() == "exploding")
             {
-                myGame.currentRoom.link.getPlayerItem().Explode();
+                myGame.link.getPlayerItem().Explode();
             }
         }
 
         public void Update()
         {
-            myGame.currentRoom.link.Update();
-            myGame.currentRoom.link.BlockCollisionTest(myGame.currentRoom.blockList);
-            myGame.currentRoom.link.ProjectileCollisionTest(myGame.currentRoom.blockList);
-            myGame.currentRoom.link.EnemyCollisionTest(myGame.currentRoom.enemyList);
-            myGame.currentRoom.link.ItemCollisionTest(myGame.currentRoom.itemList);
+            myGame.link.Update();
+            myGame.link.BlockCollisionTest(myGame.currentRoom.blockList);
+            myGame.link.ProjectileCollisionTest(myGame.currentRoom.blockList);
+            myGame.link.EnemyCollisionTest(myGame.currentRoom.enemyList);
+            myGame.link.ItemCollisionTest(myGame.currentRoom.itemList);
             myGame.currentRoom.Update();
         }
         public void loadNextRoom(int nextRoom)

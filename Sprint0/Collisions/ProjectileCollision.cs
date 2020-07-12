@@ -25,7 +25,6 @@ namespace Sprint0.Collisions
 
                 blockRectangle = block.GetRectangle();
                 intersectionRectangle = Rectangle.Intersect(thisRectangle, blockRectangle);
-                Console.WriteLine(thisRectangle.ToString());
                 if (!intersectionRectangle.IsEmpty)
                 {
                     // check the collison occuring direction

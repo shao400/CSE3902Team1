@@ -31,7 +31,7 @@ namespace Sprint0
         
         public roomProperties currentRoom;
         public List<roomProperties> roomList;
-        public int roomCount;
+
         private XmlReader reader;
         private List<SoundEffect> sounds;
         private Sound soundEffect;
@@ -44,6 +44,7 @@ namespace Sprint0
         public Hud hud;
         public IGameState currentState;
         public List<IGameState> stateList;
+        public Player1 link;
 
         public Game1()
         {
@@ -77,23 +78,22 @@ namespace Sprint0
             controllerList = new List<object>();
             controllerList.Add(new KeyboardC(this));
             controllerList.Add(new MouseC(this));
-
+            link = new Player1(150, 300, 48, 48, soundEffect, this);
             this.IsMouseVisible = true;
             base.Initialize();
-            roomCount = 0;
             string Room = "Room";
             string xml = ".xml";
             roomList = new List<roomProperties>();
             for (int i = 0; i <= 16; i++)
             {
                 reader = XmlReader.Create(Room + i + xml, new XmlReaderSettings());
-                roomList.Add(Loader.LoadFromReader(reader, soundEffect));
+                roomList.Add(Loader.LoadFromReader(reader, this));
             }
             foreach (roomProperties room in roomList)
             {
                 room.loadBatchAndContent(Content, spriteBatch);
             }
-            currentRoom = roomList[roomCount];
+            currentRoom = roomList[0];
             reader.Close();
             stateList = new List<IGameState>();
             stateList.Add(new InGame(this));

@@ -21,7 +21,7 @@ namespace Sprint0.HUD
         { 
             xAix = x;
             yAix = y;
-            _link = myGame.currentRoom.link;
+            _link = myGame.link;
             weapon = "";
             //width = w;
             //height = h;

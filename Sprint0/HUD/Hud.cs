@@ -21,7 +21,7 @@ namespace Sprint0.HUD
         { 
             xAix = x;
             yAix = y;
-            _link = myGame.currentRoom.link;
+            _link = myGame.link;
             Hpbar = new HealthBar(x+528, y+120, myGame);
             WpSlot = new WeaponSlot(x+460, y+72, myGame);
             map = new HudMap(x+83, y+118, myGame);
