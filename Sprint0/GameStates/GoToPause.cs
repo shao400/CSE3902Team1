@@ -10,18 +10,18 @@ using Microsoft.Xna.Framework.Input;
 using Sprint0.xml;
 using Microsoft.Xna.Framework.Content;
 using Sprint0.Sprite;
+using System.Windows;
 using Sprint0.HUD;
-
 
 namespace Sprint0.GameStates
 {
-    class BackToGame : IGameState
+    class GoToPause : IGameState
     {
         Game1 myGame;
         SpriteBatch myBatch;
         roomProperties myCurrentRoom;
-        Rectangle roomDestRec = new Rectangle(0, 696, 768, 528);
-        Rectangle pauseDestRec = new Rectangle(0, 0, 768, 528);
+        Rectangle roomDestRec = new Rectangle(0, 168, 768, 528);
+        Rectangle pauseDestRec = new Rectangle(0, -528, 768, 528);
         Rectangle roomSourceRec;
         Rectangle pauseSourceRec = new Rectangle(0, 0, 491, 325);
         int frame = 0;
@@ -29,11 +29,11 @@ namespace Sprint0.GameStates
         private HudMap map;
         private Hud myHud;
         int x = 0;
-        int y = 528;
+        int y = 0;
         int mapx = 450;
-        int mapy = 450;
+        int mapy = 450-528;
 
-        public BackToGame(Game1 game, SpriteBatch batch, ContentManager Content)
+        public GoToPause(Game1 game, SpriteBatch batch, ContentManager Content)
         {
             myGame = game;
             myCurrentRoom = game.currentRoom;
@@ -56,8 +56,6 @@ namespace Sprint0.GameStates
             myBatch.End();
             myHud.Draw(x, y);
             map.Draw(mapx, mapy);
-
-
         }
 
         public void Update() 
@@ -65,20 +63,21 @@ namespace Sprint0.GameStates
             frame++;
             if (frame < 89)
             {
-                roomDestRec.Y -= 6;
-                pauseDestRec.Y -= 6;
-                y -= 6;
-                mapy -= 6;
+                roomDestRec.Y += 6;
+                pauseDestRec.Y += 6;
+                y += 6;
+                mapy += 6;
             }
             else
             {
-                myGame.currentState = myGame.stateList[0];
+                myGame.currentState = myGame.stateList[4];
                 frame = 0;
-                y = 528;
-                mapy = 450;
-                roomDestRec = new Rectangle(0, 696, 768, 528);
-                pauseDestRec = new Rectangle(0, 0, 768, 528);
+                y = 0;
+                mapy = 450 - 528;
+                roomDestRec = new Rectangle(0, 168, 768, 528);
+                pauseDestRec = new Rectangle(0, -528, 768, 528);
             }
+               
             
         }
 

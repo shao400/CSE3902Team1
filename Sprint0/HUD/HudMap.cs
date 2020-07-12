@@ -19,16 +19,14 @@ namespace Sprint0.HUD
         private List<int> discovered;
         //private int width;
         //private int height;
-        public HudMap(int x, int y, Game1 myGame)
+        public HudMap( Game1 myGame)
         { 
-            xAix = x;
-            yAix = y;
             _myGame = myGame;
             discovered = new List<int>();
             //width = w;
             //height = h;
         }
-        private void staticMapDraw()
+        private void staticMapDraw(int xAix, int yAix)
         {
             //position trans logic still need change
             discovered.Add(_myGame.currentRoom.roomID);
@@ -146,11 +144,11 @@ namespace Sprint0.HUD
             }
 
         }
-        public void Draw()
+        public void Draw(int x, int y)
         {           
             //position trans logic still need change
-            Vector2 locationP = new Vector2(xAix+16, yAix+7);          
-            staticMapDraw();
+            Vector2 locationP = new Vector2(x+16, y+7);          
+            staticMapDraw(x, y);
             if (_myGame.currentRoom.roomID==0) { 
                 
                     point.Draw(locationP, false);                 
@@ -255,9 +253,9 @@ namespace Sprint0.HUD
 
         }
 
-        public Rectangle GetRectangle()
+        public Rectangle GetRectangle(int x, int y)
         {
-            return new Rectangle(xAix, yAix, 32, 32);
+            return new Rectangle(x, y, 32, 32);
         }
     }
 }

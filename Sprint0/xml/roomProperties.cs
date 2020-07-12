@@ -56,7 +56,7 @@ namespace Sprint0.xml
             myBatch.End();
             for (int i = 0; i < hudList.Count; i++)
             {
-                hudList[i].Draw();
+                //hudList[i].Draw();
             }
             for (int i = 0; i < enemyList.Count; i++)
             {

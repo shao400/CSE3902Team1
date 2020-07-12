@@ -17,19 +17,18 @@ namespace Sprint0.HUD
         Player1 _link;
         //private int width;
         //private int height;
-        public WeaponSlot(int x, int y, Game1 myGame)
+        public WeaponSlot(Game1 myGame)
         { 
-            xAix = x;
-            yAix = y;
+
             _link = myGame.link;
             weapon = "";
             //width = w;
             //height = h;
         }
-        public void Draw()
+        public void Draw(int x, int y)
         {
             //None, WoodenSword, WhiteSword, MagicalSword, MagicalRod
-            Vector2 location = new Vector2(xAix, yAix);
+            Vector2 location = new Vector2(x, y);
             //System.Diagnostics.Debug.WriteLine(_link.states.GetCurrentWeapon());
             woodenSword.Draw(location, false);
             if (_link.GetCurrentWeapon().Equals("None", System.StringComparison.Ordinal))
@@ -65,9 +64,9 @@ namespace Sprint0.HUD
 
         }
 
-        public Rectangle GetRectangle()
+        public Rectangle GetRectangle(int x, int y)
         {
-            return new Rectangle(xAix, yAix, 32, 32);
+            return new Rectangle(x, y, 32, 32);
         }
     }
 }

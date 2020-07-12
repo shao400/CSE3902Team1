@@ -10,7 +10,8 @@ using Microsoft.Xna.Framework.Input;
 using Sprint0.xml;
 using Microsoft.Xna.Framework.Content;
 using Sprint0.Sprite;
-
+using System.Windows;
+using Sprint0.HUD;
 
 namespace Sprint0.GameStates
 {
@@ -19,20 +20,22 @@ namespace Sprint0.GameStates
         Game1 myGame;
         SpriteBatch myBatch;
         roomProperties myCurrentRoom;
-        Rectangle roomDestRec = new Rectangle(0, 168, 768, 528);
-        Rectangle pauseDestRec = new Rectangle(0, -528, 768, 528);
-        Rectangle roomSourceRec;
+        Rectangle pauseDestRec = new Rectangle(0, 0, 768, 528);
         Rectangle pauseSourceRec = new Rectangle(0, 0, 491, 325);
-        int frame = 0;
         ContentManager myContent;
+        private HudMap map;
+        private Hud myHud;
+        int x = 0;
+        int y = 528;
 
         public Pause(Game1 game, SpriteBatch batch, ContentManager Content)
         {
             myGame = game;
             myCurrentRoom = game.currentRoom;
-            roomSourceRec = myCurrentRoom.sourceRec;
             myBatch = batch;
             myContent = Content;
+            myHud = new Hud(myGame);
+            map = new HudMap(myGame);
         }
         public void loadNextRoom(int nextRoom)
         {
@@ -41,22 +44,17 @@ namespace Sprint0.GameStates
 
         public void Draw()
         {
-            myBatch.Begin();
-            myBatch.Draw(myContent.Load<Texture2D>("dungeon"), roomDestRec, roomSourceRec, Color.White);
+            myBatch.Begin();       
             myBatch.Draw(myContent.Load<Texture2D>("pause"), pauseDestRec, pauseSourceRec, Color.White);
-            myBatch.End();      
-            
+            myBatch.End();
+            myHud.Draw(x, y);
+            map.Draw(450, 450);
+
         }
 
         public void Update() 
         {                       
-            frame++;
-                if (frame < 89)
-                {
-                    roomDestRec.Y += 6;
-                    pauseDestRec.Y += 6;
-                }
-            
+                          
         }
 
     }

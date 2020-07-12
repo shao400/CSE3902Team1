@@ -8,21 +8,27 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Sprint0.xml;
+using Sprint0.HUD;
 
 namespace Sprint0.GameStates
 {
     class InGame : IGameState
     {
         Game1 myGame;
+        private Hud myHud;
+        int x = 0;
+        int y = 0;
         //GraphicsDeviceManager myGraphics;
         public InGame(Game1 game)
         {
             myGame = game;
+            myHud = new Hud(myGame);
         }
         public void Draw()
         {
             myGame.currentRoom.Draw();
             myGame.link.getSprite().Draw(new Vector2(myGame.link.xAxis, myGame.link.yAxis), myGame.link.isTakingDmg());
+            myHud.Draw(x, y);
             if (myGame.link.GetCurrentStatus() == "attacking")
             {
                 myGame.link.getPlayerItem().Stab();

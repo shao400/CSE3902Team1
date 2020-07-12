@@ -9,9 +9,9 @@ namespace Sprint0.Interfaces
 {
     public interface IHud
     {
-        void Draw();
+        void Draw(int x, int y);
         void Update();
-        Rectangle GetRectangle();
+        Rectangle GetRectangle(int x, int y);
         
         
     }

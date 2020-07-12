@@ -97,8 +97,9 @@
     <Compile Include="Game1.cs" />
     <Compile Include="GameStates\BackToGame.cs" />
     <Compile Include="GameStates\Death.cs" />
-    <Compile Include="GameStates\InGame.cs" />
     <Compile Include="GameStates\Pause.cs" />
+    <Compile Include="GameStates\InGame.cs" />
+    <Compile Include="GameStates\GoToPause.cs" />
     <Compile Include="GameStates\Transitioning.cs" />
     <Compile Include="GameStates\Win.cs" />
     <Compile Include="GlobalSuppressions.cs" />

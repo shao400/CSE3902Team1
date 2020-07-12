@@ -98,14 +98,15 @@ namespace Sprint0
             stateList = new List<IGameState>();
             stateList.Add(new InGame(this));
             stateList.Add(new Transitioning(this, spriteBatch, Content));
-            stateList.Add(new Pause(this, spriteBatch, Content));
+            stateList.Add(new GoToPause(this, spriteBatch, Content));
             stateList.Add(new BackToGame(this, spriteBatch, Content));
+            stateList.Add(new Pause(this, spriteBatch, Content));
             currentState = stateList[0];
             //Hpbar = new HealthBar(528, 120, this);
             //WpSlot = new WeaponSlot(460, 72, this);
             //map = new HudMap(83, 118, this);
             //frame = new HudFrame(0,0,this);
-            hud = new Hud(0,0,this);
+            hud = new Hud(this);
         }
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
@@ -150,7 +151,7 @@ namespace Sprint0
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             currentState.Draw();
-            hud.Draw();
+            //hud.Draw();
             
             base.Draw(gameTime);
         }

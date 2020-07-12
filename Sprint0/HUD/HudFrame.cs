@@ -15,17 +15,16 @@ namespace Sprint0.HUD
         Player1 _link;
         //private int width;
         //private int height;
-        public HudFrame(int x, int y, Game1 myGame)
+        public HudFrame(Game1 myGame)
         { 
-            xAix = x;
-            yAix = y;
+
             _link = myGame.link;
             //width = w;
             //height = h;
         }
-        public void Draw()
+        public void Draw(int x, int y)
         {
-            Vector2 location = new Vector2(xAix, yAix);
+            Vector2 location = new Vector2(x, y);
             frame.Draw(location,false);
 
         }
@@ -36,9 +35,9 @@ namespace Sprint0.HUD
 
         }
 
-        public Rectangle GetRectangle()
+        public Rectangle GetRectangle(int x, int y)
         {
-            return new Rectangle(xAix, yAix, 32, 32);
+            return new Rectangle(x, y, 32, 32);
         }
     }
 }
