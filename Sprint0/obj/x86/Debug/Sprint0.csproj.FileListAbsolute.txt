@@ -259,3 +259,7 @@ D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\npc.x
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\pause.xnb
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\shoot.xnb
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\winning.xnb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\game_over.xnb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Hud.xnb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\pause.xnb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\winning.xnb

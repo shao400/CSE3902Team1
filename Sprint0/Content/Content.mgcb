@@ -37,18 +37,6 @@
 /processorParam:TextureFormat=Color
 /build:boss.png
 
-#begin C:/Users/danie/Desktop/新建文件夹/pause.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:C:/Users/danie/Desktop/新建文件夹/pause.png;pause.png
-
 #begin Credits1.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
@@ -175,6 +163,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:npc.png
+
+#begin pause.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:pause.jpg
 
 #begin shoot.png
 /importer:TextureImporter
