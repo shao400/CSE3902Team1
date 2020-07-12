@@ -13,7 +13,7 @@ namespace Sprint0.Projectile
     class WoodenSword : AbstractProjectile, IProjectile
     {
         private ISprite WoodenSwordSprite;
-        private int x, y, counter;
+        private int counter;
         int myDirection;
         Vector2 location;
 
@@ -44,6 +44,7 @@ namespace Sprint0.Projectile
             }
             if (counter == 20)
             {
+                this.GetPlayerLoction();
                 currentStatus = status.none;
                 counter = 21;
             }
@@ -57,8 +58,7 @@ namespace Sprint0.Projectile
         }
         public void GetPlayerLoction()
         {
-            x = this.player.GetRectangle().X;
-            y = this.player.GetRectangle().Y;
+            location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);
         }
         public override void Shoot()
         {
@@ -101,7 +101,7 @@ namespace Sprint0.Projectile
             }
             else
             {
-                return -1;
+                return 2;
             }
         }
         public override void explo(int i)

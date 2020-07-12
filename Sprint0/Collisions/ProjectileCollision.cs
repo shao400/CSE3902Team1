@@ -32,24 +32,36 @@ namespace Sprint0.Collisions
                     {
                         if (thisRectangle.Y > blockRectangle.Y) // from down
                         {
-                            thisProjectile.explo(1);
+                            if (thisProjectile.IsExplode() == 0)
+                            {
+                                thisProjectile.explo(1);
+                            }
+                            
                         }
                         else //from up
                         {
-                            thisProjectile.explo(1);
+                            if (thisProjectile.IsExplode() == 0)
+                            {
+                                thisProjectile.explo(1);
+                            }
                         }
                     }
                     else //from right or left
                     {
                         if (thisRectangle.X > blockRectangle.X)//from right
                         {
-                            thisProjectile.explo(1);
-                            Console.WriteLine("xxx");
+                            if (thisProjectile.IsExplode() == 0)
+                            {
+                                thisProjectile.explo(1);
+                            }
                         }
                         else //from left
                         {
-                            thisProjectile.explo(1);
-                            Console.WriteLine("xxxxxxxxx");
+                            if (thisProjectile.IsExplode() == 0)
+                            {
+                                thisProjectile.explo(1);
+                                Console.WriteLine("xxxxx");
+                            }
                         }
                     }
                     break;//once link has collision with one block, no need to detect other blocks
