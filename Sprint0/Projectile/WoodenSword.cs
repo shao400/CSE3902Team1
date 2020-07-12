@@ -13,22 +13,40 @@ namespace Sprint0.Projectile
     class WoodenSword : AbstractProjectile, IProjectile
     {
         private ISprite WoodenSwordSprite;
+        private int x, y, counter;
         int myDirection;
         Vector2 location;
+
         private enum status
         {
-            shoot, stab, explode
+            shoot, stab, explode, none
         }
         private status currentStatus;
         public WoodenSword(Player1 player, int direction)
         {
+            counter = 0;
             this.player = player;
             myDirection = direction;
             this.SetPosition(player.xAxis, player.yAxis);
+            currentStatus = status.none;
             
         }
         public override void Update()
         {
+            if (currentStatus == status.explode && counter < 20)
+            {
+                counter++;
+                Console.WriteLine(counter);
+            }
+            else if (currentStatus == status.shoot)
+            {
+                counter = 0;
+            }
+            if (counter == 20)
+            {
+                currentStatus = status.none;
+                counter = 21;
+            }
             if (currentStatus == status.stab) { }
             else if (currentStatus == status.shoot) { ShotDistance+=5; }
             else if (currentStatus == status.explode) { }
@@ -37,24 +55,28 @@ namespace Sprint0.Projectile
             // Console.WriteLine(this.rec.ToString());
 
         }
+        public void GetPlayerLoction()
+        {
+            x = this.player.GetRectangle().X;
+            y = this.player.GetRectangle().Y;
+        }
         public override void Shoot()
         {
-            currentStatus = status.shoot;
             if (myDirection == 0) { 
                 WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingUp;
-                location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y - ShotDistance);
+                location = new Vector2(position.X, position.Y - ShotDistance);
             }
             else if (myDirection == 1) { 
                 WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingDown;
-                location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y + ShotDistance);
+                location = new Vector2(position.X, position.Y + ShotDistance);
             }
             else if (myDirection == 2) {
                 WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingRight;
-                location = new Vector2(this.player.GetRectangle().X + ShotDistance, this.player.GetRectangle().Y);
+                location = new Vector2(position.X + ShotDistance, position.Y);
             }
             else if (myDirection == 3) { 
                 WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingLeft;
-                location = new Vector2(this.player.GetRectangle().X - ShotDistance, this.player.GetRectangle().Y);
+                location = new Vector2(position.X - ShotDistance, position.Y);
             }
             WoodenSwordSprite.Draw(location, false);
             
@@ -62,7 +84,6 @@ namespace Sprint0.Projectile
         
         public override void Explode()
         {
-            currentStatus = status.explode;
             WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordExploding;
             //location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);
             WoodenSwordSprite.Update();
@@ -89,9 +110,13 @@ namespace Sprint0.Projectile
             {
                 currentStatus = status.explode;
             }
-            else
+            else if (i == 0)
             {
                 currentStatus = status.shoot;
+            }
+            else
+            {
+                currentStatus = status.none;
             }
 
         }

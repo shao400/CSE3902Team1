@@ -21,7 +21,7 @@ namespace Sprint0.Player
         }
         private enum status
         {
-            standing, walking, attacking, takingDmg, shooting, exploding
+            standing, walking, attacking, takingDmg, shooting
         }
         public int xAxis;
         public int yAxis;
@@ -119,20 +119,7 @@ namespace Sprint0.Player
                 }                
             }
             currentSprite.Update();
-            if (currentProjectile.IsExplode() == 1 && counter < 20)
-            {
-                currentStatus = status.exploding;
-                counter++;
-            }
-            else if (currentProjectile.IsExplode() == 0)
-            {
-                counter = 0;
-            }
-            if (counter == 20)
-            {
-                currentStatus = status.standing;
-                counter = 21;
-            }
+            
             //border restrictions
             if (xAxis <= 0) 
             { 
@@ -228,21 +215,16 @@ namespace Sprint0.Player
             sound.swordSlash();
         }
         public void Shoot() {
-            currentStatus = status.shooting;
+            
             if (currentFacing == facing.up) currentProjectile = new WoodenSword(this, 0);
             else if (currentFacing == facing.down) currentProjectile = new WoodenSword(this, 1);
             else if (currentFacing == facing.right) currentProjectile = new WoodenSword(this, 2);
             else if (currentFacing == facing.left) currentProjectile = new WoodenSword(this, 3);
-
+            currentProjectile.explo(0);
             currentProjectile.Shoot();
 
         }
-        public void Explode()
-        {
-            currentStatus = status.exploding;
-            currentProjectile = new WoodenSword(this, 0);
-            currentProjectile.Explode();
-        }
+       
         public void takeDmg()
         {
             sound.linkHurt();

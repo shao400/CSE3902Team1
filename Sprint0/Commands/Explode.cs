@@ -17,7 +17,6 @@ namespace Sprint0.Commands
 
         public void Execute()
         {
-            myGame.link.Explode();
         }
     }
 }
