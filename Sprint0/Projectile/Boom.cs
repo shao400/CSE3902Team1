@@ -46,7 +46,7 @@ namespace Sprint0.Projectile
 
         public override void Explode()
         {
-            BoomSprite = SpriteFactory.PlayerBoomerangSprite;
+            BoomSprite = SpriteFactory.PlayerBoomSprite;
             //location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);
             BoomSprite.Update();
             BoomSprite.Draw(location, false);

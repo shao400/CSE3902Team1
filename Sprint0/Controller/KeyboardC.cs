@@ -42,7 +42,8 @@ namespace Sprint0.Controller
             keymap.Add(Keys.D4, new D4FourthWeapon(myGame));
             attackmap.Add(Keys.Z, new Attack(myGame));
             attackmap.Add(Keys.N, new Shoot(myGame));
-            attackmap.Add(Keys.L, new Explode(myGame));
+            //attackmap.Add(Keys.L, new Boom(myGame));
+
 
             attackmap.Add(Keys.Enter, new enterPause(myGame));
         }

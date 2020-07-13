@@ -9,19 +9,19 @@ using Microsoft.Xna.Framework;
 namespace Sprint0.Sprite
 {
     //Zina
-    public class PlayerBoomerangSprite : ISprite
+    public class PlayerBoomSprite : ISprite
     {
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
         Color myColor = Color.CornflowerBlue;
         Rectangle destinationRec;
-        Rectangle sourceRec = new Rectangle(129, 3, 5, 8);
+        Rectangle sourceRec;
         SpriteEffects myEffect;
-        int finalX = 63;
-        int finalY = 63;
+        int finalX = 0;
+        int finalY = 0;
 
 
-        public PlayerBoomerangSprite(SpriteEffects effect)
+        public PlayerBoomSprite(SpriteEffects effect)
         {
             myEffect = effect;
 
@@ -31,13 +31,17 @@ namespace Sprint0.Sprite
 
         public void Update()
         {
-            if (finalX < 80)
+            if (finalX < 63) { 
+                sourceRec= new Rectangle(129, 3, 5, 8);
+            }
+            else if (finalX < 80)
             {
+                sourceRec= new Rectangle(209, 282, 17, 21);
                 finalX++;
                 finalY++;
-            }
-            else
+            }else if (finalX == 80)
             {
+                sourceRec= new Rectangle(209, 282, 17, 21);
                 finalX = 0;
                 finalY = 0;
             }

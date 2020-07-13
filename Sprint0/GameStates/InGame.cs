@@ -41,6 +41,9 @@ namespace Sprint0.GameStates
             {
                 myGame.link.getPlayerItem().Explode();
             }
+            if (myGame.link.GetCurrentStatus() == "booming") {
+                myGame.link.getPlayerItem().Explode();
+            }
         }
 
         public void Update()
