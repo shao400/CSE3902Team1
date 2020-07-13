@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Room>
-	<block type="BlockA" xpos="284" ypos="310" />
 	<src xpos="515" ypos="886" />
+	<block type="BlockA" xpos="147" ypos="315" />
+    <block type="BlockA" xpos="291" ypos="315" />
+	<block type="BlockA" xpos="147" ypos="411" />
+	<block type="BlockA" xpos="291" ypos="411" />
+	<block type="BlockA" xpos="147" ypos="507" />
+	<block type="BlockA" xpos="291" ypos="507" />
+	<block type="BlockA" xpos="435" ypos="315" />
+	<block type="BlockA" xpos="579" ypos="315" />
+	<block type="BlockA" xpos="435" ypos="411" />
+	<block type="BlockA" xpos="579" ypos="411" />
+	<block type="BlockA" xpos="435" ypos="507" />
+	<block type="BlockA" xpos="579" ypos="507" />
 	<no i="1" />
 	<connect up="3" down="-1" left="0" right="2" />
 	<block type="BlockTop" xpos="96" ypos="168" />
