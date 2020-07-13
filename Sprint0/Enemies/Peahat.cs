@@ -9,7 +9,7 @@ using Sprint0.Interfaces;
 
 namespace Sprint0.Enemies
 {   //Zina
-    public class Peahat : IEnemy
+    public class Peahat : AbstractEnemies, IEnemy
     {
       
 
@@ -30,13 +30,13 @@ namespace Sprint0.Enemies
 
 
 
-        public void Draw()
+        public override void Draw()
         {
             Vector2 location = new Vector2(xPosition, yPosition);
             PeahatSprite.Draw(location, false);
         }
 
-        public void Update()
+        public override void Update()
         {
 
             frame++;
@@ -62,7 +62,7 @@ namespace Sprint0.Enemies
             PeahatSprite.Update();
         }
 
-        public Rectangle GetRectangle()
+        public override Rectangle GetRectangle()
         {
             return destinationRec;
         }

@@ -4,7 +4,7 @@ using Sprint0.Interfaces;
 
 namespace Sprint0.Enemies
 {
-    public class Aqua : IEnemy
+    public class Aqua : AbstractEnemies, IEnemy 
     {
 
 
@@ -26,13 +26,13 @@ namespace Sprint0.Enemies
 
 
 
-        public void Draw()
+        public override void Draw()
         {
             Vector2 location = new Vector2(xPosition, yPosition);
             AquaSprite.Draw(location, false);
         }
 
-        public void Update()
+        public override void Update()
         {
             frame++;
             if (frame >= 20) frame = 0;
@@ -57,7 +57,7 @@ namespace Sprint0.Enemies
             AquaSprite.Update();
         }
 
-        public Rectangle GetRectangle()
+        public override Rectangle GetRectangle()
         {
             return destinationRec;
         }

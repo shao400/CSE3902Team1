@@ -10,6 +10,8 @@ namespace Sprint0.Interfaces
     public interface IEnemy
     {
         void Draw();
+        void Damaged();
+        int GetHealth();
         void Update(/*to be determined*/);
         Rectangle GetRectangle();
         

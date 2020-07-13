@@ -30,7 +30,7 @@ namespace Sprint0.Collisions
                 enemyRectangle = enemy.GetRectangle();
                 intersectionRectangle = Rectangle.Intersect(linkRectangle, enemyRectangle);
 
-                if (!intersectionRectangle.IsEmpty)
+                if (!intersectionRectangle.IsEmpty && enemy.GetHealth() >0)
                 {
                     myPlayer.takeDmg();
                     if (intersectionRectangle.Width >= intersectionRectangle.Height)

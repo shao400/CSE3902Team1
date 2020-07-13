@@ -9,7 +9,7 @@ using Sprint0.Interfaces;
 
 namespace Sprint0.Enemies
 {
-    public class Stalfos : IEnemy
+    public class Stalfos : AbstractEnemies, IEnemy
     {
 
 
@@ -29,18 +29,18 @@ namespace Sprint0.Enemies
 
 
 
-        public void Draw()
+        public override void Draw()
         {
             Vector2 location = new Vector2(xPosition, yPosition);
             StalfosSprite.Draw(location, false);
         }
 
-        public void Update()
+        public override void Update()
         {
             
         }
 
-        public Rectangle GetRectangle()
+        public override Rectangle GetRectangle()
         {
             return destinationRec;
         }

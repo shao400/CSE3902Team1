@@ -4,7 +4,7 @@ using Sprint0.Interfaces;
 
 namespace Sprint0.Enemies
 {
-    public class Moblin : IEnemy
+    public class Moblin : AbstractEnemies, IEnemy
     {
 
 
@@ -26,13 +26,13 @@ namespace Sprint0.Enemies
 
 
 
-        public void Draw()
+        public override void Draw()
         {
             Vector2 location = new Vector2(xPosition,yPosition);
             MoblinSprite.Draw(location, false);
         }
 
-        public void Update()
+        public override void Update()
         {
             frame++;
             if (frame >= 20) frame = 0;
@@ -57,7 +57,7 @@ namespace Sprint0.Enemies
             MoblinSprite.Update();
         }
 
-        public Rectangle GetRectangle()
+        public override Rectangle GetRectangle()
         {
             return destinationRec;
         }

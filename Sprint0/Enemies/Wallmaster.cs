@@ -4,7 +4,7 @@ using Sprint0.Interfaces;
 
 namespace Sprint0.Enemies
 {
-    public class Wallmaster : IEnemy
+    public class Wallmaster : AbstractEnemies, IEnemy
     {
 
 
@@ -21,18 +21,18 @@ namespace Sprint0.Enemies
             destinationRec = new Rectangle(x, y, 45, 45);
         }
 
-        public void Draw()
+        public override void Draw()
         {
             Vector2 location = new Vector2(xPosition, yPosition);
             WallmasterSprite.Draw(location, false);
         }
 
-        public void Update()
+        public override void Update()
         {
             WallmasterSprite.Update();
         }
 
-        public Rectangle GetRectangle()
+        public override Rectangle GetRectangle()
         {
             return destinationRec;
         }

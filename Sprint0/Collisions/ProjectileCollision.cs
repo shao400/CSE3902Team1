@@ -15,7 +15,64 @@ namespace Sprint0.Collisions
         {
             thisProjectile = projectile;
         }
-        public void ProjectileCollisionTest(List<IBlock> blocks)
+        public void ProjectileEnemiesCollisionTest(List<IEnemy> enemies)
+        {
+            Rectangle thisRectangle = thisProjectile.GetHitBox();
+            Rectangle enemyRectangle;
+            Rectangle intersectionRectangle;
+            foreach (IEnemy enemy in enemies)
+            {
+
+                enemyRectangle = enemy.GetRectangle();
+                intersectionRectangle = Rectangle.Intersect(thisRectangle, enemyRectangle);
+                if (!intersectionRectangle.IsEmpty && enemy.GetHealth() > 0)
+                {
+                    enemy.Damaged();
+                    // check the collison occuring direction
+                    if ((intersectionRectangle.Width >= intersectionRectangle.Height)) // from up or down
+                    {
+
+                        if (thisRectangle.Y > enemyRectangle.Y) // from down
+                        {
+                            if (thisProjectile.IsExplode() == 0)
+                            {
+                                thisProjectile.explo(1);
+                               
+                            }
+
+                        }
+                        else //from up
+                        {
+                            if (thisProjectile.IsExplode() == 0)
+                            {
+                                thisProjectile.explo(1);
+                            }
+                        }
+                    }
+                    else //from right or left
+                    {
+                        if (thisRectangle.X > enemyRectangle.X)//from right
+                        {
+                            if (thisProjectile.IsExplode() == 0)
+                            {
+                                thisProjectile.explo(1);
+                            }
+                        }
+                        else //from left
+                        {
+                            if (thisProjectile.IsExplode() == 0)
+                            {
+                                thisProjectile.explo(1);
+                                Console.WriteLine("xxxxx");
+                            }
+                        }
+                    }
+                    break;//once link has collision with one block, no need to detect other blocks
+
+                }
+            }
+        }
+        public void ProjectileBlocksCollisionTest(List<IBlock> blocks)
         {
             Rectangle thisRectangle = thisProjectile.GetHitBox();
             Rectangle blockRectangle;

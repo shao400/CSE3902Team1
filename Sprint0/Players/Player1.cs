@@ -295,10 +295,15 @@ namespace Sprint0.Player
         {
             linkBlockCollision.BlockCollision(blocks);
         }
-        public void ProjectileCollisionTest(List<IBlock> blocks)
+        public void ProjectileBlocksCollisionTest(List<IBlock> blocks)
         {
             projectileCollision = new ProjectileCollision(currentProjectile);
-            projectileCollision.ProjectileCollisionTest(blocks);
+            projectileCollision.ProjectileBlocksCollisionTest(blocks);
+        }
+        public void ProjectileEnemiesCollisionTest(List<IEnemy> enemies)
+        {
+            projectileCollision = new ProjectileCollision(currentProjectile);
+            projectileCollision.ProjectileEnemiesCollisionTest(enemies);
         }
 
         public void EnemyCollisionTest(List<IEnemy> enemies)
