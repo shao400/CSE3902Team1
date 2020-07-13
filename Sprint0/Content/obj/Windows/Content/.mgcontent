@@ -4,26 +4,26 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Blocks.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/boss.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Credits1.spritefont</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/dungeon.jpg</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/enemy.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/enemy2.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/game_over.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Hud.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/items.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/link.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/luigi.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Map.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/npc.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/pause.jpg</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/shoot.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/Intro.mp3</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Link_Hurt.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_MagicalRod.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/SwordSlash.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/winning.png</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Blocks.png</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/boss.png</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Credits1.spritefont</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/dungeon.jpg</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/enemy.png</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/enemy2.png</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/game_over.png</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Hud.png</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/items.png</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/link.png</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/luigi.png</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Map.png</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/npc.png</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/pause.jpg</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/shoot.png</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Sounds/Intro.mp3</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Link_Hurt.wav</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Sounds/LOZ_MagicalRod.wav</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Sounds/SwordSlash.wav</File>
+    <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/winning.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

@@ -21,7 +21,7 @@ namespace Sprint0.Player
         }
         private enum status
         {
-            standing, walking, attacking, takingDmg, shooting, booming
+            standing, walking, attacking, takingDmg, shooting, booming, arrowShooting
         }
         public int xAxis;
         public int yAxis;
@@ -229,7 +229,18 @@ namespace Sprint0.Player
             currentProjectile=new Boom(this,0);
             currentProjectile.Explode();
         }
-       
+        public void Arrow()
+        {
+            currentStatus = status.arrowShooting;
+            if (currentFacing == facing.up) currentProjectile = new Arrow(this, 0);
+            else if (currentFacing == facing.down) currentProjectile = new Arrow(this, 1);
+            else if (currentFacing == facing.right) currentProjectile = new Arrow(this, 2);
+            else if (currentFacing == facing.left) currentProjectile = new Arrow(this, 3);
+            currentProjectile.explo(0);
+            currentProjectile.Shoot();
+
+        }
+
         public void takeDmg()
         {
             sound.linkHurt();
