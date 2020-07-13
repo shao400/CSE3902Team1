@@ -50,7 +50,7 @@ namespace Sprint0.Player
             width = widthG;
             height = heightG;
             sound = s;
-            hp = 2;
+            hp = 6;
             counter = 0;
             currentFacing = facing.right;
             currentProjectile = new WoodenSword(this, 2);
@@ -246,7 +246,7 @@ namespace Sprint0.Player
 
         public void getHealed()
         {
-            if (hp<2)
+            if (hp<6)
             {
                 hp++;
             }
@@ -266,7 +266,7 @@ namespace Sprint0.Player
             this.currentSprite = SpriteFactory.LinkNoneStandingRight;
             xAxis = 100;
             yAxis = 100;
-            hp = 2;
+            hp = 6;
         }
 
         public int linkHp()

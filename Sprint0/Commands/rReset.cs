@@ -21,7 +21,7 @@ namespace Sprint0.Commands
             myGame.link.PlayerReset();
             for (int i = 0; i < myGame.currentRoom.itemList.Count;i++)
             {
-                myGame.currentRoom.itemList[i].ItemReset();
+               myGame.currentRoom.itemList[i].ItemReset();
             }
         }
 

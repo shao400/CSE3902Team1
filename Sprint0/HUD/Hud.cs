@@ -30,8 +30,8 @@ namespace Sprint0.HUD
         public void Draw(int x, int y)
         {
             frame.Draw(x, y);
-            Hpbar.Draw(x + 528, y + 120);
-            WpSlot.Draw(x + 460, y + 72);
+            Hpbar.Draw(x + 530, y + 121);
+            WpSlot.Draw(x + 458, y + 72);
             map.Draw(x + 83, y + 118);
 
         }

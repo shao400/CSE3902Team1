@@ -144,7 +144,9 @@
     <Compile Include="Rooms\ExRoom.cs" />
     <Compile Include="Rooms\RoomItem.cs" />
     <Compile Include="Sound\Sound.cs" />
+    <Compile Include="Sprite\HudSprites\HudWoodenSwordSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudFrameSprite.cs" />
+    <Compile Include="Sprite\HudSprites\HudHeartSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudPointSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudMapPieceSprite.cs" />
     <Compile Include="Sprite\ItemSprites\ItemWoodenSwordSprite.cs" />

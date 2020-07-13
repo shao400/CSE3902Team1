@@ -2,6 +2,7 @@
 <Room>
 	<player xpos="150" ypos="300" />
 	<src xpos="258" ypos="886" />
+	<enemy type="Moblin" xpos="250" ypos="350" />
 	<no i="0" />
 	<connect up="-1" down="-1" left="-1" right="1" />
 	<block type="BlockLeft" xpos="672" ypos="264" />

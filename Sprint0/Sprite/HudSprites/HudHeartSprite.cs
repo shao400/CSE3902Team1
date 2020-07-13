@@ -8,12 +8,12 @@ using Microsoft.Xna.Framework;
 
 namespace Sprint0.Sprite
 {
-    public class HudHalfHeartSprite : ISprite
+    public class HudHeartSprite : ISprite
     {
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
         Color myColor = Color.CornflowerBlue;
-        Rectangle sourceRec = new Rectangle(636, 117, 8, 8);
+        Rectangle sourceRec = new Rectangle(645, 117, 8, 8);
         //Rectangle destinationRec = new Rectangle(300, 100, 22, 32);
         public void Update()
         {

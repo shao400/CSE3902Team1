@@ -10,7 +10,7 @@ namespace Sprint0.HUD
         private HudEmptyHeartSprite empty = SpriteFactory.HudEmptyHeart;
         private HudHalfHeartSprite half = SpriteFactory.HudHalfHeart;
         private ItemHeartContainerSprite solid = SpriteFactory.ItemHeartContainer;
-        private ItemWoodenSwordSprite woodenSword = SpriteFactory.ItemWoodenSword;
+        private HudWoodenSwordSprite woodenSword = SpriteFactory.HudWoodenSword;
         private int xAix;
         private int yAix;
         private string weapon;
