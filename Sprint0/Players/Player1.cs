@@ -21,7 +21,7 @@ namespace Sprint0.Player
         }
         private enum status
         {
-            standing, walking, attacking, takingDmg, shooting
+            standing, walking, attacking, takingDmg, shooting, booming
         }
         public int xAxis;
         public int yAxis;
@@ -223,6 +223,11 @@ namespace Sprint0.Player
             currentProjectile.explo(0);
             currentProjectile.Shoot();
 
+        }
+        public void Boom() {
+            currentStatus = status.booming;
+            currentProjectile=new Boom(this,0);
+            currentProjectile.Explode();
         }
        
         public void takeDmg()

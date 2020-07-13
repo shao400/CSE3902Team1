@@ -45,11 +45,14 @@ namespace Sprint0.Sprite
         public static PlayerWoodenSwordSprite PlayerWoodenSwordUp = new PlayerWoodenSwordSprite(SpriteEffects.None, (float)-1.5708);
         public static PlayerWoodenSwordSprite PlayerWoodenSwordDown = new PlayerWoodenSwordSprite(SpriteEffects.None, (float)1.5708);
 
+
+        //Zina
         public static PlayerWoodenSwordShootingSprite PlayerWoodenSwordShootingRight = new PlayerWoodenSwordShootingSprite(SpriteEffects.None, 0);
         public static PlayerWoodenSwordShootingSprite PlayerWoodenSwordShootingLeft = new PlayerWoodenSwordShootingSprite(SpriteEffects.FlipHorizontally, 0);
         public static PlayerWoodenSwordShootingSprite PlayerWoodenSwordShootingUp = new PlayerWoodenSwordShootingSprite(SpriteEffects.None, (float)-1.5708);
         public static PlayerWoodenSwordShootingSprite PlayerWoodenSwordShootingDown = new PlayerWoodenSwordShootingSprite(SpriteEffects.None, (float)1.5708);
         public static PlayerWoodenSwordExplodingSprite PlayerWoodenSwordExploding = new PlayerWoodenSwordExplodingSprite(SpriteEffects.None);
+        public static PlayerBoomerangSprite PlayerBoomerangSprite = new PlayerBoomerangSprite(SpriteEffects.None);
 
 
         // Items Author: Zhizhou He, Chuwen Sun
@@ -133,6 +136,7 @@ namespace Sprint0.Sprite
             PlayerWoodenSwordShootingUp.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordShootingDown.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordExploding.LoadContent(batch, content.Load<Texture2D>("shoot"));
+            PlayerBoomerangSprite.LoadContent(batch, content.Load<Texture2D>("item"));
         }
 
         private static void LoadItemContent(SpriteBatch batch, ContentManager content)

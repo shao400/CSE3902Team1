@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,23 +9,24 @@ using Microsoft.Xna.Framework;
 namespace Sprint0.Sprite
 {
     //Zina
-    public class PlayerWoodenSwordExplodingSprite : ISprite
+    public class PlayerBoomerangSprite : ISprite
     {
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
         Color myColor = Color.CornflowerBlue;
         Rectangle destinationRec;
-        Rectangle sourceRec = new Rectangle(209, 282, 17, 21);
+        Rectangle sourceRec = new Rectangle(129, 3, 5, 8);
         SpriteEffects myEffect;
         int finalX = 63;
         int finalY = 63;
 
 
-        public PlayerWoodenSwordExplodingSprite(SpriteEffects effect)
+        public PlayerBoomerangSprite(SpriteEffects effect)
         {
             myEffect = effect;
-            
+
         }
+
 
 
         public void Update()
@@ -35,9 +36,10 @@ namespace Sprint0.Sprite
                 finalX++;
                 finalY++;
             }
-            else {
-                finalX = 63;
-                finalY = 63;
+            else
+            {
+                finalX = 0;
+                finalY = 0;
             }
         }
 
@@ -53,7 +55,7 @@ namespace Sprint0.Sprite
 
             destinationRec = new Rectangle((int)location.X, (int)location.Y, finalX, finalY);
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor, 0, new Vector2(0,0), myEffect, 0);
+            mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor, 0, new Vector2(0, 0), myEffect, 0);
             mySpriteBatch.End();
         }
 
