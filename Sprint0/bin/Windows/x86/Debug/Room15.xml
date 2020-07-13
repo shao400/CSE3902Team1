@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Room>
 	<src xpos="258" ypos="1" />
+	<block type="BlockA" xpos="387" ypos="315" />
+	<block type="BlockA" xpos="339" ypos="363" />
+	<block type="BlockA" xpos="291" ypos="411" />
+	<block type="BlockA" xpos="339" ypos="459" />
+	<block type="BlockA" xpos="387" ypos="507" />
+	<block type="BlockA" xpos="435" ypos="459" />
+	<block type="BlockA" xpos="483" ypos="411" />
+	<block type="BlockA" xpos="435" ypos="363" />
 	<no i="15" />
 	<connect up="-1" down="-1" left="-1" right="16" />
 	<block type="BlockLeft" xpos="672" ypos="264" />

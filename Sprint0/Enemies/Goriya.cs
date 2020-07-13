@@ -4,7 +4,7 @@ using Sprint0.Interfaces;
 
 namespace Sprint0.Enemies
 {
-    public class Goriya : IEnemy
+    public class Goriya : AbstractEnemies, IEnemy
     {
 
 
@@ -26,13 +26,17 @@ namespace Sprint0.Enemies
 
 
 
-        public void Draw()
+        public override void Draw()
         {
-            Vector2 location = new Vector2(xPosition, yPosition);
-            GoriyaSprite.Draw(location, false);
+            if (this.GetHealth() > 0)
+            {
+                Vector2 location = new Vector2(xPosition, yPosition);
+                GoriyaSprite.Draw(location, false);
+            }
+            
         }
 
-        public void Update()
+        public override void Update()
         {
             frame++;
             if (frame >= 20) frame = 0;
@@ -57,9 +61,13 @@ namespace Sprint0.Enemies
             GoriyaSprite.Update();
         }
 
-        public Rectangle GetRectangle()
+        public override Rectangle GetRectangle()
         {
-            return destinationRec;
+            
+                return destinationRec;
+            
+            
+            
         }
     }
 }

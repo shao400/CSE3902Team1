@@ -50,8 +50,9 @@ namespace Sprint0.GameStates
         {
             myGame.link.Update();
             myGame.link.BlockCollisionTest(myGame.currentRoom.blockList);
-            myGame.link.ProjectileCollisionTest(myGame.currentRoom.blockList);
+            myGame.link.ProjectileBlocksCollisionTest(myGame.currentRoom.blockList);
             myGame.link.EnemyCollisionTest(myGame.currentRoom.enemyList);
+            myGame.link.ProjectileEnemiesCollisionTest(myGame.currentRoom.enemyList);
             myGame.link.ItemCollisionTest(myGame.currentRoom.itemList);
             myGame.currentRoom.Update();
         }
