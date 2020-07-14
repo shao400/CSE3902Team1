@@ -33,11 +33,11 @@ namespace Sprint0.GameStates
             {
                 myGame.link.getPlayerItem().Stab();
             }
-            if (myGame.link.GetCurrentStatus() == "arrowShooting")
+            else if (myGame.link.GetCurrentStatus() == "arrowShooting")
             {
                 myGame.link.getPlayerItem().Shoot();
             }
-            if (myGame.link.GetCurrentStatus() == "booming")
+            else if (myGame.link.GetCurrentStatus() == "booming")
             {
                 myGame.link.getPlayerItem().Explode();
             }

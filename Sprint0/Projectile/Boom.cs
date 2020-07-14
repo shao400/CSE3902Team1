@@ -27,12 +27,13 @@ namespace Sprint0.Projectile
         }
         public override void Update()
         {
-            if (counter < 20) { counter++; }
-            
-            if (counter == 20)
+            if (counter < 20) { 
+                counter++;
+                BoomSprite = SpriteFactory.PlayerBoomSprite;
+            }            
+            else if (counter == 20)
             {
-                this.GetPlayerLoction();
-                counter = 0;
+                //BoomSprite = SpriteFactory.BombExplodingSprite;
             }
             this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), 45, 23);
 
@@ -46,9 +47,8 @@ namespace Sprint0.Projectile
 
         public override void Explode()
         {
-            BoomSprite = SpriteFactory.PlayerBoomSprite;
-            //location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);
-            BoomSprite.Update();
+            
+            location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);            
             BoomSprite.Draw(location, false);
         }
         public override void explo(int i) { }
