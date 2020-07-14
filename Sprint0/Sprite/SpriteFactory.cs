@@ -107,6 +107,13 @@ namespace Sprint0.Sprite
         public static HudPointSprite HudPoint = new HudPointSprite();
         public static HudFrameSprite HudFrame = new HudFrameSprite();
 
+        //Author: Chuwen Sun
+        public static DoorKLeftSprite DoorKLeft = new DoorKLeftSprite();
+        public static DoorKRightSprite DoorKRight = new DoorKRightSprite();
+        public static DoorKUpSprite DoorKUp = new DoorKUpSprite();
+        public static DoorKDownSprite DoorKDown = new DoorKDownSprite();
+        /* public static DoorBUpSprite DoorBUp = new DoorBUpSprite();
+         public static DoorBDownSprite DoorBDown = new DoorBDownSprite();*/
 
         public static void LoadContent(SpriteBatch batch, ContentManager content)
         {
@@ -117,6 +124,7 @@ namespace Sprint0.Sprite
             LoadRoomContent(batch, content);
             LoadHudContent(batch, content);
             LoadWallCubeContent(batch, content);
+            LoadDoorContent(batch, content);
         }
 
 
@@ -250,6 +258,16 @@ namespace Sprint0.Sprite
             WallCubeList.Add(DoorLeft);
             WallCubeList.Add(DoorRight);
 
+        }
+
+        private static void LoadDoorContent(SpriteBatch batch, ContentManager content)
+        {
+            DoorKLeft.LoadContent(batch, content.Load<Texture2D>("dungeon"));
+            DoorKRight.LoadContent(batch, content.Load<Texture2D>("dungeon"));
+            DoorKUp.LoadContent(batch, content.Load<Texture2D>("dungeon"));
+            DoorKDown.LoadContent(batch, content.Load<Texture2D>("dungeon"));
+            /*            DoorBUp.LoadContent(batch, content.Load<Texture2D>("dungeon"));
+                        DoorBDown.LoadContent(batch, content.Load<Texture2D>("dungeon"));*/
         }
     }
 }

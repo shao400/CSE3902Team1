@@ -27,11 +27,12 @@ namespace Sprint0.xml
         public List<IHud> hudList;
         public Rectangle sourceRec;
         public Rectangle DestRec;
+        public List<IDoor> DoorList;
         //Connectors is a collection of max 4 integers represents rooms connected to the current room in{up, down, left, right} order. 
         //If there is no access to one direction, -1 will be presented.
         public List<int> Connectors;  
         //Constructor method
-        public roomProperties(int id, List<IBlock> b, List<IItem> i, List<IEnemy> e, List<IRoom> r, List<IHud> h, List<IWallCube> w, Rectangle source, List<int> con)
+        public roomProperties(int id, List<IBlock> b, List<IItem> i, List<IEnemy> e, List<IRoom> r, List<IHud> h, List<IWallCube> w, Rectangle source, List<int> con, List<IDoor> d)
         {
             roomID = id;
             itemList = i;
@@ -43,6 +44,7 @@ namespace Sprint0.xml
             sourceRec = source;
             DestRec = new Rectangle(0, 168, 768, 528);
             Connectors = con;
+            DoorList = d;
         }
         public void loadBatchAndContent(ContentManager Content, SpriteBatch Batch)
         {
@@ -93,6 +95,10 @@ namespace Sprint0.xml
             for (int i = 0; i < cubeList.Count; i++)
             {
                 cubeList[i].Update();
+            }
+            for (int i = 0; i < DoorList.Count; i++)
+            {
+                DoorList[i].Update();
             }
         }
     }

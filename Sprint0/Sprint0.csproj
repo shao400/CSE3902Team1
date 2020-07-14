@@ -79,6 +79,12 @@
     <Compile Include="Commands\Attack.cs" />
     <Compile Include="Controller\MouseC.cs" />
     <Compile Include="Controller\KeyboardC.cs" />
+    <Compile Include="Doors\DoorBDown.cs" />
+    <Compile Include="Doors\DoorBUp.cs" />
+    <Compile Include="Doors\DoorKDown.cs" />
+    <Compile Include="Doors\DoorKLeft.cs" />
+    <Compile Include="Doors\DoorKRight.cs" />
+    <Compile Include="Doors\DoorKUp.cs" />
     <Compile Include="Enemies\AbstractEnemies.cs" />
     <Compile Include="Enemies\Empty.cs" />
     <Compile Include="Enemies\Aqua.cs" />
@@ -113,6 +119,7 @@
     <Compile Include="Interfaces\IBlock.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\IController.cs" />
+    <Compile Include="Interfaces\IDoor.cs" />
     <Compile Include="Interfaces\IEnemy.cs" />
     <Compile Include="Interfaces\IGameState.cs" />
     <Compile Include="Interfaces\IHud.cs" />
@@ -146,6 +153,10 @@
     <Compile Include="Rooms\ExRoom.cs" />
     <Compile Include="Rooms\RoomItem.cs" />
     <Compile Include="Sound\Sound.cs" />
+    <Compile Include="Sprite\DoorSprites\DoorKDownSprite.cs" />
+    <Compile Include="Sprite\DoorSprites\DoorKLeftSprite.cs" />
+    <Compile Include="Sprite\DoorSprites\DoorKRightSprite.cs" />
+    <Compile Include="Sprite\DoorSprites\DoorKUpSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudFrameSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudPointSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudMapPieceSprite.cs" />

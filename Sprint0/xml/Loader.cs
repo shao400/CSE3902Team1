@@ -29,6 +29,7 @@ namespace Sprint0.xml
             List<IRoom> rooms = new List<IRoom>();
             List<IHud> huds = new List<IHud>();
             List<IWallCube> cubes = new List<IWallCube>();
+            List<IDoor> doors = new List<IDoor>();
             reader.MoveToContent();
             reader.Read(); // jump over <Room>
             CultureInfo cultures = new CultureInfo("en-US");
@@ -49,7 +50,7 @@ namespace Sprint0.xml
                 {
                     roomID = Int32.Parse(reader.GetAttribute("i"), cultures);
                 }
-                else if(reader.Name == "enemy" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior" || reader.Name == "wallCube" || reader.Name =="hud" || reader.Name == "src")
+                else if(reader.Name == "enemy" || reader.Name == "door" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior" || reader.Name == "wallCube" || reader.Name =="hud" || reader.Name == "src")
                 {                   
                     int xpos = Int32.Parse(reader.GetAttribute("xpos"), cultures);
                     int ypos = Int32.Parse(reader.GetAttribute("ypos"), cultures);
@@ -183,12 +184,24 @@ namespace Sprint0.xml
                         case "Keese":
                             enemies.Add(new Keese(xpos, ypos));
                             break;
+                        case "DoorKLeft":
+                            doors.Add(new DoorKLeft(xpos, ypos));
+                            break;
+                        case "DoorKUp":
+                            doors.Add(new DoorKUp(xpos, ypos));
+                            break;
+                        case "DoorKDown":
+                            doors.Add(new DoorKDown(xpos, ypos));
+                            break;
+                        case "DoorKRight":
+                            doors.Add(new DoorKRight(xpos, ypos));
+                            break;
                     }
 
                 }
             }
 
-            return new roomProperties(roomID, blocks, items, enemies, rooms, huds, cubes, source, Con);
+            return new roomProperties(roomID, blocks, items, enemies, rooms, huds, cubes, source, Con, doors);
         }
     }
 }

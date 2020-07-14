@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Room>
+	<door type="DoorKRight" xpos="696" ypos="384" />
 	<player xpos="150" ypos="300" />
 	<src xpos="258" ypos="886" />
 	<no i="0" />

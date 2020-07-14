@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Room>
+	<door type="DoorKLeft" xpos="0" ypos="384" />
+	<door type="DoorKRight" xpos="696" ypos="384" />
 	<src xpos="772" ypos="355" />
 	<block type="BlockA" xpos="195" ypos="363" />
 	<block type="BlockA" xpos="195" ypos="459" />

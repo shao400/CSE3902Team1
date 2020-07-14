@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Room>
+	<door type="DoorKRight" xpos="696" ypos="384" />
 	<src xpos="1" ypos="355" />
 	<no i="7" />
 	<connect up="-1" down="-1" left="-1" right="8" />
