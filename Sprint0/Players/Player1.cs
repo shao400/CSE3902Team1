@@ -236,6 +236,7 @@ namespace Sprint0.Player
             currentStatus = status.booming;
             currentProjectile=new Bomb(this,0);
             currentProjectile.Shoot();
+            if(bombCount>0) bombCount -= 1;
         }
         public void Arrow()
         {
@@ -327,6 +328,9 @@ namespace Sprint0.Player
             this.currentSprite = SpriteFactory.LinkNoneStandingRight;
             xAxis = 100;
             yAxis = 100;
+            ruppyCount = 0;
+            keyCount = 0;
+            bombCount = 0;
             hp = MaxHealth;
         }
 

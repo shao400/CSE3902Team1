@@ -17,7 +17,7 @@ namespace Sprint0.Commands
 
         public void Execute()
         {
-            myGame.link.Bomb();
+            if(myGame.link.itemCount()[2]>0)myGame.link.Bomb();
         }
     }
 }
