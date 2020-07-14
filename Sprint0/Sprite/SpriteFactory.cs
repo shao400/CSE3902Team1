@@ -107,6 +107,17 @@ namespace Sprint0.Sprite
         public static HudMapPieceSprite HudMapPiece = new HudMapPieceSprite();
         public static HudPointSprite HudPoint = new HudPointSprite();
         public static HudFrameSprite HudFrame = new HudFrameSprite();
+        public static HudXSprite HudX = new HudXSprite();
+        public static HudOneSprite HudOne = new HudOneSprite();
+        public static HudTwoSprite HudTwo = new HudTwoSprite();
+        public static HudThreeSprite HudThree = new HudThreeSprite();
+        public static HudFourSprite HudFour = new HudFourSprite();
+        public static HudFiveSprite HudFive = new HudFiveSprite();
+        public static HudSixSprite HudSix = new HudSixSprite();
+        public static HudSevenSprite HudSeven = new HudSevenSprite();
+        public static HudEightSprite HudEight = new HudEightSprite();
+        public static HudNineSprite HudNine = new HudNineSprite();
+        public static HudZeroSprite HudZero = new HudZeroSprite();
 
         //Author: Chuwen Sun
         public static DoorKLeftSprite DoorKLeft = new DoorKLeftSprite();
@@ -205,6 +216,17 @@ namespace Sprint0.Sprite
             HudMapPiece.LoadContent(batch, content.Load<Texture2D>("Map"));
             HudPoint.LoadContent(batch, content.Load<Texture2D>("dungeon"));
             HudFrame.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudX.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudOne.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudTwo.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudThree.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudFour.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudFive.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudSix.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudSeven.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudEight.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudNine.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudZero.LoadContent(batch, content.Load<Texture2D>("Hud"));
             ItemList.Add(HudHalfHeart);
             ItemList.Add(HudEmptyHeart);
             ItemList.Add(HudHeart);

@@ -18,7 +18,8 @@ namespace Sprint0.Collisions
         private Heart heart = new Heart(0,0);
         private Triforce triforce = new Triforce(0, 0);
         private Ruppy ruppy = new Ruppy(0, 0);
-        private Bomb bomb;
+        private Key key = new Key(0, 0);
+        private Bomb bomb = new Bomb(0,0);
         public LinkItemCollision(Player1 player)
         {
             myPlayer = player;   
@@ -43,14 +44,22 @@ namespace Sprint0.Collisions
                     if (item.GetType() == heart.GetType() && !item.isPickedUp())
                     {
                         myPlayer.getHealed();
-                    }            
-                    if (item.GetType() == ruppy.GetType() && !item.isPickedUp())
-                    {
-                        //myPlayer
-                    }
+                    }                          
                     if (item.GetType() == heartC.GetType() && !item.isPickedUp())
                     {
                         myPlayer.increaseMaxHp();
+                    }
+                    if (item.GetType() == ruppy.GetType() && !item.isPickedUp())
+                    {
+                        myPlayer.getRuppy();
+                    }
+                    if (item.GetType() == key.GetType() && !item.isPickedUp())
+                    {
+                        myPlayer.getKey();
+                    }
+                    if (item.GetType() == bomb.GetType() && !item.isPickedUp())
+                    {
+                        myPlayer.getBomb();
                     }
 
                     // check the collison occuring direction

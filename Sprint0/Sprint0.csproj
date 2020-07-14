@@ -157,6 +157,17 @@
     <Compile Include="Sprite\DoorSprites\DoorKLeftSprite.cs" />
     <Compile Include="Sprite\DoorSprites\DoorKRightSprite.cs" />
     <Compile Include="Sprite\DoorSprites\DoorKUpSprite.cs" />
+    <Compile Include="Sprite\HudSprites\HudOneSprite.cs" />
+    <Compile Include="Sprite\HudSprites\HudZeroSprite.cs" />
+    <Compile Include="Sprite\HudSprites\HudTwoSprite.cs" />
+    <Compile Include="Sprite\HudSprites\HudThreeSprite.cs" />
+    <Compile Include="Sprite\HudSprites\HudFourSprite.cs" />
+    <Compile Include="Sprite\HudSprites\HudFiveSprite.cs" />
+    <Compile Include="Sprite\HudSprites\HudSixSprite.cs" />
+    <Compile Include="Sprite\HudSprites\HudSevenSprite.cs" />
+    <Compile Include="Sprite\HudSprites\HudEightSprite.cs" />
+    <Compile Include="Sprite\HudSprites\HudNineSprite.cs" />
+    <Compile Include="Sprite\HudSprites\HudXSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudFrameSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudPointSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudMapPieceSprite.cs" />

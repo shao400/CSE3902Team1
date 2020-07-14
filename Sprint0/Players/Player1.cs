@@ -42,6 +42,9 @@ namespace Sprint0.Player
         private Sound sound;
         private int hp;
         private int MaxHealth;
+        private int ruppyCount;
+        private int bombCount;
+        private int keyCount;
 
         public Player1(int x, int y, int widthG, int heightG, Sound s, Game1 game) 
         {
@@ -53,6 +56,9 @@ namespace Sprint0.Player
             sound = s;
             MaxHealth = 2;
             hp = MaxHealth;
+            ruppyCount = 0;
+            bombCount = 0;
+            keyCount = 0;
             counter = 0;
             currentFacing = facing.right;
             currentProjectile = new WoodenSword(this, 2);
@@ -272,6 +278,39 @@ namespace Sprint0.Player
                 MaxHealth += 2;
             }
             hp = MaxHealth;
+        }
+
+        public void getRuppy()
+        {
+            if (ruppyCount<999)
+            {
+                ruppyCount++;
+            }
+        }
+
+        public void getBomb()
+        {
+            if (bombCount < 99)
+            {
+                bombCount++;
+            }
+        }
+        public void getKey()
+        {
+            if (ruppyCount < 99)
+            {
+                keyCount++;
+            }
+        }
+
+        public List<int> itemCount()
+        {
+            List<int> itemC = new List<int>();
+            itemC.Add(ruppyCount);
+            itemC.Add(keyCount);
+            itemC.Add(bombCount);
+            
+            return itemC;
         }
 
         public void winGame()

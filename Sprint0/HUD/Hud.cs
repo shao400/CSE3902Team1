@@ -11,6 +11,7 @@ namespace Sprint0.HUD
         private WeaponSlot WpSlot;
         public HudMap map;
         private HudFrame frame;
+        private ItemSlot itemSlot;
         private int xAix;
         private int yAix;
         private int health;
@@ -23,6 +24,7 @@ namespace Sprint0.HUD
             Hpbar = new HealthBar(myGame);
             WpSlot = new WeaponSlot(myGame);
             map = new HudMap(myGame);
+            itemSlot = new ItemSlot(myGame);
             frame = new HudFrame(myGame);
             //width = w;
             //height = h;
@@ -32,6 +34,7 @@ namespace Sprint0.HUD
             frame.Draw(x, y);
             Hpbar.Draw(x + 528, y + 120);
             WpSlot.Draw(x + 460, y + 72);
+            itemSlot.Draw(x+288 ,y+48);
             map.Draw(x + 83, y + 118);
 
         }
