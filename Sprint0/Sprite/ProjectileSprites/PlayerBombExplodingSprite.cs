@@ -30,7 +30,7 @@ namespace Sprint0.Sprite
             if (count < 10) { count++; sourceRec = new Rectangle(138, 185, 16, 16); }
             else if (count < 20) { count++; sourceRec = new Rectangle(155, 185, 16, 16); }
             else if (count < 30) { count++; sourceRec = new Rectangle(172, 185, 16, 16); }
-            else if (count == 30) { sourceRec = new Rectangle(0, 0, 0, 0); }
+            else if (count == 30) { count++; sourceRec = new Rectangle(0, 0, 0, 0); }
             else { count = 0; }
         }
 

@@ -38,15 +38,20 @@ namespace Sprint0.Projectile
                 currentStatus = status.shoot;
                 Console.WriteLine(counter);
             }
-            else if (counter <40)
+            else if (counter < 50)
             {
+                counter++;
                 this.GetPlayerLoction();
                 currentStatus = status.explode;
+            }
+            else if (counter >= 50)
+            {
+                currentStatus = status.none;
             }
             //if (currentStatus == status.wait) { }
             //else if (currentStatus == status.explode) { }
             this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), 45, 23);
-
+            BombSprite.Update();
             // Console.WriteLine(this.rec.ToString());
 
         }
@@ -65,7 +70,7 @@ namespace Sprint0.Projectile
         {
             BombSprite = SpriteFactory.PlayerBombExploding;
             //location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);
-            BombSprite.Update();
+            
             BombSprite.Draw(location, false);
         }
         public override int IsExplode()

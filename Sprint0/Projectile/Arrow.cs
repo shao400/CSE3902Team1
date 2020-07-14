@@ -51,7 +51,7 @@ namespace Sprint0.Projectile
             if (currentStatus == status.shoot) { ShotDistance+=5; }
             else if (currentStatus == status.explode) { }
             this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), 45, 23);
-
+            ArrowSprite.Update();
             // Console.WriteLine(this.rec.ToString());
 
         }
@@ -84,8 +84,7 @@ namespace Sprint0.Projectile
         public override void Explode()
         {
             ArrowSprite = SpriteFactory.PlayerArrowExploding;
-            //location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);
-            ArrowSprite.Update();
+                        
             ArrowSprite.Draw(location, false);
         }
         public override int IsExplode()
