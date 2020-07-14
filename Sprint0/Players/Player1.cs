@@ -41,6 +41,7 @@ namespace Sprint0.Player
         int counter;
         private Sound sound;
         private int hp;
+        private int MaxHealth;
 
         public Player1(int x, int y, int widthG, int heightG, Sound s, Game1 game) 
         {
@@ -50,7 +51,8 @@ namespace Sprint0.Player
             width = widthG;
             height = heightG;
             sound = s;
-            hp = 2;
+            MaxHealth = 2;
+            hp = MaxHealth;
             counter = 0;
             currentFacing = facing.right;
             currentProjectile = new WoodenSword(this, 2);
@@ -245,7 +247,7 @@ namespace Sprint0.Player
         {
             sound.linkHurt();
             currentStatus = status.takingDmg;
-            if (hp>0)
+            if (hp>1)
             {
                 hp--;
             }
@@ -257,10 +259,19 @@ namespace Sprint0.Player
 
         public void getHealed()
         {
-            if (hp<2)
+            if (hp<MaxHealth)
             {
                 hp++;
             }
+        }
+
+        public void increaseMaxHp()
+        {
+            const int HpBound = 6;
+            if (MaxHealth<HpBound) {
+                MaxHealth += 2;
+            }
+            hp = MaxHealth;
         }
 
         public void winGame()
@@ -277,12 +288,17 @@ namespace Sprint0.Player
             this.currentSprite = SpriteFactory.LinkNoneStandingRight;
             xAxis = 100;
             yAxis = 100;
-            hp = 2;
+            hp = MaxHealth;
         }
 
         public int linkHp()
         {
             return hp;
+        }
+
+        public int linkMaxHp()
+        {
+            return MaxHealth;
         }
         public void UseFirstItem()
         {

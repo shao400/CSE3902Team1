@@ -2,6 +2,14 @@
 <Room>
 	<door type="DoorKRight" xpos="696" ypos="384" />
 	<player xpos="150" ypos="300" />
+	<item type="HeartContainer" xpos="150" ypos="354"/>
+	<item type="HeartContainer" xpos="250" ypos="354"/>
+	<item type="Heart" xpos="150" ypos="400"/>
+	<item type="Heart" xpos="250" ypos="400"/>
+	<item type="Key" xpos="150" ypos="254"/>
+	<item type="Key" xpos="250" ypos="254"/>
+	<item type="Bomb" xpos="350" ypos="254"/>
+	<item type="Bomb" xpos="450" ypos="254"/>
 	<src xpos="258" ypos="886" />
 	<no i="0" />
 	<connect up="-1" down="-1" left="-1" right="1" />

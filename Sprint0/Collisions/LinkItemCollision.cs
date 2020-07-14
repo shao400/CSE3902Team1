@@ -14,13 +14,15 @@ namespace Sprint0.Collisions
     class LinkItemCollision
     {
         private Player1 myPlayer;
-        private HeartContainer heart = new HeartContainer(1, 1);
-        private Triforce triforce;
-
+        private HeartContainer heartC = new HeartContainer(0, 0);
+        private Heart heart = new Heart(0,0);
+        private Triforce triforce = new Triforce(0, 0);
+        private Ruppy ruppy = new Ruppy(0, 0);
+        private Bomb bomb;
         public LinkItemCollision(Player1 player)
         {
-            myPlayer = player;
-        }
+            myPlayer = player;   
+    }
 
 
         public void ItemCollision(List<IItem> items)
@@ -34,13 +36,21 @@ namespace Sprint0.Collisions
                 intersectionRectangle = Rectangle.Intersect(linkRectangle, itemRectangle);
                 if (!intersectionRectangle.IsEmpty)
                 {
-                    if (item.GetType() == heart.GetType() && !item.isPickedUp())
-                    {
-                        myPlayer.getHealed();
-                    }
                     if (item.GetType() == triforce.GetType() && !item.isPickedUp())
                     {
                         myPlayer.winGame();
+                    }
+                    if (item.GetType() == heart.GetType() && !item.isPickedUp())
+                    {
+                        myPlayer.getHealed();
+                    }            
+                    if (item.GetType() == ruppy.GetType() && !item.isPickedUp())
+                    {
+                        //myPlayer
+                    }
+                    if (item.GetType() == heartC.GetType() && !item.isPickedUp())
+                    {
+                        myPlayer.increaseMaxHp();
                     }
 
                     // check the collison occuring direction
