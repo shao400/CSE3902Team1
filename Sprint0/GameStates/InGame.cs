@@ -19,10 +19,10 @@ namespace Sprint0.GameStates
         int x = 0;
         int y = 0;
         //GraphicsDeviceManager myGraphics;
-        public InGame(Game1 game)
+        public InGame(Game1 game, Hud hud1)
         {
             myGame = game;
-            myHud = new Hud(myGame);
+            myHud = hud1;
         }
         public void Draw()
         {

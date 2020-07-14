@@ -9,7 +9,7 @@ namespace Sprint0.HUD
     {
         private HealthBar Hpbar;
         private WeaponSlot WpSlot;
-        private HudMap map;
+        public HudMap map;
         private HudFrame frame;
         private int xAix;
         private int yAix;

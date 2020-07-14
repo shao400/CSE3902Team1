@@ -27,14 +27,14 @@ namespace Sprint0.GameStates
         int x = 0;
         int y = 0;
 
-        public Transitioning(Game1 game, SpriteBatch batch, ContentManager Content)
+        public Transitioning(Game1 game, SpriteBatch batch, ContentManager Content, Hud hud1)
         {
             myGame = game;
             myCurrentRoom = game.currentRoom;
             currentSourceRec = myCurrentRoom.sourceRec;
             myBatch = batch;
             myContent = Content;
-            myHud = new Hud(myGame);
+            myHud = hud1;
         }
 
         public void loadNextRoom(int nextRoom)

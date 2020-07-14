@@ -28,14 +28,14 @@ namespace Sprint0.GameStates
         int x = 0;
         int y = 528;
 
-        public Pause(Game1 game, SpriteBatch batch, ContentManager Content)
+        public Pause(Game1 game, SpriteBatch batch, ContentManager Content, Hud hud1)
         {
             myGame = game;
             myCurrentRoom = game.currentRoom;
             myBatch = batch;
             myContent = Content;
-            myHud = new Hud(myGame);
-            map = new HudMap(myGame);
+            myHud = hud1;
+            map = hud1.map;
         }
         public void loadNextRoom(int nextRoom)
         {

@@ -33,15 +33,15 @@ namespace Sprint0.GameStates
         int mapx = 450;
         int mapy = 450;
 
-        public BackToGame(Game1 game, SpriteBatch batch, ContentManager Content)
+        public BackToGame(Game1 game, SpriteBatch batch, ContentManager Content, Hud hud1)
         {
             myGame = game;
             myCurrentRoom = game.currentRoom;
             roomSourceRec = myCurrentRoom.sourceRec;
             myBatch = batch;
             myContent = Content;
-            myHud = new Hud(myGame);
-            map = new HudMap(myGame);
+            myHud = hud1;
+            map = hud1.map;
         }
         public void loadNextRoom(int nextRoom)
         {

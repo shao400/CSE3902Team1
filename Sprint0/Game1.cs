@@ -37,10 +37,6 @@ namespace Sprint0
         private Sound soundEffect;
         private Song intro;
         List<object> controllerList; // could also be defined as List <IController>
-        //public HealthBar Hpbar;
-        //public WeaponSlot WpSlot;
-        //public HudMap map;
-        //public HudFrame frame;
         public Hud hud;
         public IGameState currentState;
         public List<IGameState> stateList;
@@ -79,6 +75,7 @@ namespace Sprint0
             controllerList.Add(new KeyboardC(this));
             controllerList.Add(new MouseC(this));
             link = new Player1(150, 300, 48, 48, soundEffect, this);
+            hud = new Hud(this);
             this.IsMouseVisible = true;
             base.Initialize();
             string Room = "Room";
@@ -96,19 +93,14 @@ namespace Sprint0
             currentRoom = roomList[0];
             reader.Close();
             stateList = new List<IGameState>();
-            stateList.Add(new InGame(this));
-            stateList.Add(new Transitioning(this, spriteBatch, Content));
-            stateList.Add(new GoToPause(this, spriteBatch, Content));
-            stateList.Add(new BackToGame(this, spriteBatch, Content));
-            stateList.Add(new Pause(this, spriteBatch, Content));
+            stateList.Add(new InGame(this, hud));
+            stateList.Add(new Transitioning(this, spriteBatch, Content, hud));
+            stateList.Add(new GoToPause(this, spriteBatch, Content, hud));
+            stateList.Add(new BackToGame(this, spriteBatch, Content, hud));
+            stateList.Add(new Pause(this, spriteBatch, Content, hud));
             stateList.Add(new Death(this, spriteBatch, Content));
             stateList.Add(new Win(this, spriteBatch, Content));
             currentState = stateList[0];
-            //Hpbar = new HealthBar(528, 120, this);
-            //WpSlot = new WeaponSlot(460, 72, this);
-            //map = new HudMap(83, 118, this);
-            //frame = new HudFrame(0,0,this);
-            hud = new Hud(this);
         }
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
@@ -153,8 +145,6 @@ namespace Sprint0
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             currentState.Draw();
-            //hud.Draw();
-            
             base.Draw(gameTime);
         }
       
