@@ -145,11 +145,15 @@ namespace Sprint0.Sprite
             PlayerWoodenSwordUp.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordDown.LoadContent(batch, content.Load<Texture2D>("link"));
 
+
             PlayerWoodenSwordShootingRight.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordShootingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordShootingUp.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordShootingDown.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordExploding.LoadContent(batch, content.Load<Texture2D>("shoot"));
+
+
+            //Zina
             PlayerBombExploding.LoadContent(batch, content.Load<Texture2D>("link")); 
             PlayerBomb.LoadContent(batch, content.Load<Texture2D>("shoot"));
             PlayerArrowShootingRight.LoadContent(batch, content.Load<Texture2D>("shoot"));

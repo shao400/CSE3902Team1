@@ -30,7 +30,7 @@ namespace Sprint0.Sprite
 
         public void Update()
         {
-            if (finalX < 80)
+            if (finalX < 83)
             {
                 finalX++;
                 finalY++;
