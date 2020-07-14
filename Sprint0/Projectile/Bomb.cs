@@ -14,7 +14,6 @@ namespace Sprint0.Projectile
     {
         private ISprite BombSprite;
         private int counter;
-        Vector2 location;
 
         private enum status
         {
@@ -30,18 +29,15 @@ namespace Sprint0.Projectile
 
         }
         public override void Update()
-        {
-            location = new Vector2(position.X, position.Y);
+        {            
             if (counter < 20)
             {
                 counter++;
                 currentStatus = status.shoot;
-                Console.WriteLine(counter);
             }
             else if (counter < 50)
             {
                 counter++;
-                this.GetPlayerLoction();
                 currentStatus = status.explode;
             }
             else if (counter >= 50)
@@ -50,28 +46,26 @@ namespace Sprint0.Projectile
             }
             //if (currentStatus == status.wait) { }
             //else if (currentStatus == status.explode) { }
-            this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), 45, 23);
-            BombSprite.Update();
+            this.hitBox = new Rectangle(Convert.ToInt32(position.X), Convert.ToInt32(position.Y), 45, 23);
+            if (counter >= 20 && counter < 50)
+            {
+                BombSprite.Update();
+            }
             // Console.WriteLine(this.rec.ToString());
 
         }
-        public void GetPlayerLoction()
-        {
-            location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);
-        }
+        
         public override void Shoot()
         {
             BombSprite = SpriteFactory.PlayerBomb;
-            BombSprite.Draw(location, false);
+            BombSprite.Draw(position, false);
 
         }
 
         public override void Explode()
         {
-            BombSprite = SpriteFactory.PlayerBombExploding;
-            //location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);
-            
-            BombSprite.Draw(location, false);
+            BombSprite = SpriteFactory.PlayerBombExploding;        
+            BombSprite.Draw(position, false);
         }
         public override int IsExplode()
         {

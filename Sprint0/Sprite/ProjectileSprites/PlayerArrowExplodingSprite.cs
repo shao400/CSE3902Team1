@@ -23,8 +23,7 @@ namespace Sprint0.Sprite
 
         public PlayerArrowExplodingSprite(SpriteEffects effect)
         {
-            myEffect = effect;
-            
+            myEffect = effect;            
         }
 
 

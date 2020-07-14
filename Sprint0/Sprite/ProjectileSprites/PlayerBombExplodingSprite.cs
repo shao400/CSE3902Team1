@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
@@ -18,10 +14,8 @@ namespace Sprint0.Sprite
         SpriteEffects myEffect;
         int count = 0;
 
-        public PlayerBombExplodingSprite(SpriteEffects effect)
-        {
-            myEffect = effect;
-            
+        public PlayerBombExplodingSprite()
+        {           
         }
 
 
@@ -30,8 +24,8 @@ namespace Sprint0.Sprite
             if (count < 10) { count++; sourceRec = new Rectangle(138, 185, 16, 16); }
             else if (count < 20) { count++; sourceRec = new Rectangle(155, 185, 16, 16); }
             else if (count < 30) { count++; sourceRec = new Rectangle(172, 185, 16, 16); }
-            else if (count == 30) { count++; sourceRec = new Rectangle(0, 0, 0, 0); }
-            else { count = 0; }
+            else if (count == 30) { count = 0; sourceRec = new Rectangle(0, 0, 0, 0); }
+            //else { count = 0; }
         }
 
 

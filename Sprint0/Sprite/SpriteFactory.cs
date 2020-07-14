@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.Content;
 using Sprint0.Interfaces;
 using Sprint0.Items;
 using Microsoft.Xna.Framework;
+using System.Runtime.CompilerServices;
 //Author: Gengyi Qin
 namespace Sprint0.Sprite
 {
@@ -53,7 +54,7 @@ namespace Sprint0.Sprite
         public static PlayerWoodenSwordShootingSprite PlayerWoodenSwordShootingDown = new PlayerWoodenSwordShootingSprite(SpriteEffects.None, (float)1.5708);
         public static PlayerWoodenSwordExplodingSprite PlayerWoodenSwordExploding = new PlayerWoodenSwordExplodingSprite(SpriteEffects.None);
         public static PlayerBombSprite PlayerBomb = new PlayerBombSprite(SpriteEffects.None);
-        public static PlayerBombExplodingSprite PlayerBombExploding = new PlayerBombExplodingSprite(SpriteEffects.None);
+        public static PlayerBombExplodingSprite PlayerBombExploding = new PlayerBombExplodingSprite();
         public static PlayerArrowShootingSprite PlayerArrowShootingRight = new PlayerArrowShootingSprite(SpriteEffects.None, 0);
         public static PlayerArrowShootingSprite PlayerArrowShootingLeft = new PlayerArrowShootingSprite(SpriteEffects.FlipHorizontally, 0);
         public static PlayerArrowShootingSprite PlayerArrowShootingUp = new PlayerArrowShootingSprite(SpriteEffects.None, (float)-1.5708);
