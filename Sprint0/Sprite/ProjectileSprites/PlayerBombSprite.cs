@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework;
 namespace Sprint0.Sprite
 {
     //Zina
-    public class PlayerBoomSprite : ISprite
+    public class PlayerBombSprite : ISprite
     {
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
@@ -19,7 +19,7 @@ namespace Sprint0.Sprite
         SpriteEffects myEffect;
 
 
-        public PlayerBoomSprite(SpriteEffects effect)
+        public PlayerBombSprite(SpriteEffects effect)
         {
             myEffect = effect;
             sourceRec = new Rectangle(364, 226, 8, 14);

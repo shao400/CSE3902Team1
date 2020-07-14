@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Sprint0.Commands
 {
-    class Boom : ICommand
+    class Bomb : ICommand
     {
         private Game1 myGame;
 
-        public Boom(Game1 game)
+        public Bomb(Game1 game)
         {
             myGame = game;
         }
 
         public void Execute()
         {
-            myGame.link.Boom();
+            myGame.link.Bomb();
         }
     }
 }

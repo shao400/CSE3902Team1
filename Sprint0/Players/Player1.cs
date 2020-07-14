@@ -224,9 +224,9 @@ namespace Sprint0.Player
             currentProjectile.Shoot();
 
         }
-        public void Boom() {
+        public void Bomb() {
             currentStatus = status.booming;
-            currentProjectile=new Boom(this,0);
+            currentProjectile=new Bomb(this,0);
             currentProjectile.Explode();
         }
         public void Arrow()

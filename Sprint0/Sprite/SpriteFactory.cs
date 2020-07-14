@@ -52,7 +52,8 @@ namespace Sprint0.Sprite
         public static PlayerWoodenSwordShootingSprite PlayerWoodenSwordShootingUp = new PlayerWoodenSwordShootingSprite(SpriteEffects.None, (float)-1.5708);
         public static PlayerWoodenSwordShootingSprite PlayerWoodenSwordShootingDown = new PlayerWoodenSwordShootingSprite(SpriteEffects.None, (float)1.5708);
         public static PlayerWoodenSwordExplodingSprite PlayerWoodenSwordExploding = new PlayerWoodenSwordExplodingSprite(SpriteEffects.None);
-        public static PlayerBoomSprite PlayerBoomSprite = new PlayerBoomSprite(SpriteEffects.None);
+        public static PlayerBombSprite PlayerBomb = new PlayerBombSprite(SpriteEffects.None);
+        public static PlayerBombExplodingSprite PlayerBombExploding = new PlayerBombExplodingSprite(SpriteEffects.None);
         public static PlayerArrowShootingSprite PlayerArrowShootingRight = new PlayerArrowShootingSprite(SpriteEffects.None, 0);
         public static PlayerArrowShootingSprite PlayerArrowShootingLeft = new PlayerArrowShootingSprite(SpriteEffects.FlipHorizontally, 0);
         public static PlayerArrowShootingSprite PlayerArrowShootingUp = new PlayerArrowShootingSprite(SpriteEffects.None, (float)-1.5708);
@@ -141,7 +142,8 @@ namespace Sprint0.Sprite
             PlayerWoodenSwordShootingUp.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordShootingDown.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordExploding.LoadContent(batch, content.Load<Texture2D>("shoot"));
-            PlayerBoomSprite.LoadContent(batch, content.Load<Texture2D>("shoot"));
+            PlayerBombExploding.LoadContent(batch, content.Load<Texture2D>("link")); 
+            PlayerBomb.LoadContent(batch, content.Load<Texture2D>("shoot"));
             PlayerArrowShootingRight.LoadContent(batch, content.Load<Texture2D>("shoot"));
             PlayerArrowShootingLeft.LoadContent(batch, content.Load<Texture2D>("shoot"));
             PlayerArrowShootingUp.LoadContent(batch, content.Load<Texture2D>("shoot"));

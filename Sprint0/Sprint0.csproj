@@ -62,7 +62,7 @@
     <Compile Include="Collisions\LinkItemCollision.cs" />
     <Compile Include="Commands\aLeft.cs" />
     <Compile Include="Commands\enterPause.cs" />
-    <Compile Include="Commands\Boom.cs" />
+    <Compile Include="Commands\Bomb.cs" />
     <Compile Include="Commands\Explode.cs" />
     <Compile Include="Commands\ArrowShoot.cs" />
     <Compile Include="Commands\Shoot.cs" />
@@ -137,7 +137,7 @@
     <Compile Include="Players\Player1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Projectile\AbstractProjectile.cs" />
-    <Compile Include="Projectile\Boom.cs" />
+    <Compile Include="Projectile\Bomb.cs" />
     <Compile Include="Projectile\Arrow.cs" />
     <Compile Include="Projectile\WoodenSword.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -150,8 +150,9 @@
     <Compile Include="Sprite\HudSprites\HudPointSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudMapPieceSprite.cs" />
     <Compile Include="Sprite\ItemSprites\ItemWoodenSwordSprite.cs" />
-    <Compile Include="Sprite\ProjectileSprites\PlayerBoomSprite.cs" />
+    <Compile Include="Sprite\ProjectileSprites\PlayerBombSprite.cs" />
     <Compile Include="Sprite\ProjectileSprites\PlayerArrowExplodingSprite.cs" />
+    <Compile Include="Sprite\ProjectileSprites\PlayerBombExplodingSprite.cs" />
     <Compile Include="Sprite\ProjectileSprites\PlayerWoodenSwordExplodingSprite.cs" />
     <Compile Include="Sprite\ProjectileSprites\PlayerArrowShootingSprite.cs" />
     <Compile Include="Sprite\ProjectileSprites\PlayerWoodenSwordShootingSprite.cs" />

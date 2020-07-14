@@ -10,16 +10,15 @@ using Sprint0.Sprite;
 
 namespace Sprint0.Projectile
 {
-    public class Boom : AbstractProjectile, IProjectile
+    public class Bomb : AbstractProjectile, IProjectile
     {
-        private ISprite BoomSprite;
-        private int counter;
+        private ISprite BombSprite= SpriteFactory.PlayerBombExploding;
+        private int counter=0;
         int myDirection;
         Vector2 location;
 
-        public Boom(Player1 player, int direction)
+        public Bomb(Player1 player, int direction)
         {
-            counter = 0;
             this.player = player;
             myDirection = direction;
             this.SetPosition(player.xAxis, player.yAxis);
@@ -27,13 +26,14 @@ namespace Sprint0.Projectile
         }
         public override void Update()
         {
+            
             if (counter < 20) { 
                 counter++;
-                BoomSprite = SpriteFactory.PlayerBoomSprite;
+                BombSprite = SpriteFactory.PlayerBomb;
             }            
             else if (counter == 20)
             {
-                //BoomSprite = SpriteFactory.BombExplodingSprite;
+                BombSprite = SpriteFactory.PlayerBombExploding;
             }
             this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), 45, 23);
 
@@ -49,7 +49,7 @@ namespace Sprint0.Projectile
         {
             
             location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);            
-            BoomSprite.Draw(location, false);
+            BombSprite.Draw(location, false);
         }
         public override void explo(int i) { }
         public override int IsExplode() { return 0; }
