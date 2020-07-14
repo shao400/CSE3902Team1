@@ -18,7 +18,7 @@ namespace Sprint0.Projectile
 
         private enum status
         {
-            wait, explode, none
+            shoot, explode, none
         }
         private status currentStatus;
         public Bomb(Player1 player, int direction)
@@ -32,20 +32,16 @@ namespace Sprint0.Projectile
         public override void Update()
         {
             location = new Vector2(position.X, position.Y);
-            if (currentStatus == status.explode && counter < 20)
+            if (counter < 20)
             {
                 counter++;
+                currentStatus = status.shoot;
                 Console.WriteLine(counter);
             }
-            else if (currentStatus == status.wait)
-            {
-                counter = 0;
-            }
-            if (counter == 20)
+            else if (counter <40)
             {
                 this.GetPlayerLoction();
-                currentStatus = status.none;
-                counter = 21;
+                currentStatus = status.explode;
             }
             //if (currentStatus == status.wait) { }
             //else if (currentStatus == status.explode) { }
@@ -78,7 +74,7 @@ namespace Sprint0.Projectile
             {
                 return 1;
             }
-            else if (currentStatus == status.wait)
+            else if (currentStatus == status.shoot)
             {
                 return 0;
             }
@@ -95,7 +91,7 @@ namespace Sprint0.Projectile
             }
             else if (i == 0)
             {
-                currentStatus = status.wait;
+                currentStatus = status.shoot;
             }
             else
             {

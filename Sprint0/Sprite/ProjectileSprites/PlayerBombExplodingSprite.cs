@@ -14,7 +14,6 @@ namespace Sprint0.Sprite
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
         Color myColor = Color.CornflowerBlue;
-        Rectangle destinationRec;
         Rectangle sourceRec;
         SpriteEffects myEffect;
         int count = 0;
@@ -28,11 +27,11 @@ namespace Sprint0.Sprite
 
         public void Update()
         {
-            count++;
-            if (count < 20) { sourceRec = new Rectangle(138, 185, 16, 16); }
-            else if (count < 40) { sourceRec = new Rectangle(155, 185, 16, 16); }
-            else if (count < 60) { sourceRec = new Rectangle(172, 185, 16, 16); }
-            //else { count = 0; }
+            if (count < 10) { count++; sourceRec = new Rectangle(138, 185, 16, 16); }
+            else if (count < 20) { count++; sourceRec = new Rectangle(155, 185, 16, 16); }
+            else if (count < 30) { count++; sourceRec = new Rectangle(172, 185, 16, 16); }
+            else if (count == 30) { sourceRec = new Rectangle(0, 0, 0, 0); }
+            else { count = 0; }
         }
 
 

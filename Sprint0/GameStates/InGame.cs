@@ -43,8 +43,9 @@ namespace Sprint0.GameStates
             }
             else if (myGame.link.GetCurrentStatus() == "booming")
             {
-                myGame.link.getPlayerItem().Explode();
+                myGame.link.getPlayerItem().Shoot();
             }
+
             else if (myGame.link.getPlayerItem().IsExplode() == 0)
             {
                 myGame.link.getPlayerItem().Shoot();
