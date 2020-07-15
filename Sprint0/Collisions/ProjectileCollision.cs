@@ -82,7 +82,7 @@ namespace Sprint0.Collisions
 
                 blockRectangle = block.GetRectangle();
                 intersectionRectangle = Rectangle.Intersect(thisRectangle, blockRectangle);
-                if (!intersectionRectangle.IsEmpty)
+                if (!intersectionRectangle.IsEmpty && block.GetType() !="Water")
                 {
                     // check the collison occuring direction
                     if ((intersectionRectangle.Width >= intersectionRectangle.Height)) // from up or down

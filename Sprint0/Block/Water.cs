@@ -1,26 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Media;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
 using Sprint0.Sprite;
 
 namespace Sprint0.Block
 {
-    class BlockTop : IBlock
+    class Water : IBlock
     {
         private ISprite sprite = SpriteFactory.BlockA;
         private int xpos;
         private int ypos;
         private string type;
-        public BlockTop(int x, int y)
+        public Water(int x, int y)
         {
             xpos = x;
             ypos = y;
-            type = "block";
+            type = "Water";
         }
         public string GetType()
         {
@@ -39,7 +33,7 @@ namespace Sprint0.Block
 
         public Rectangle GetRectangle()
         {
-            return new Rectangle(xpos, ypos, 261, 96);
+            return new Rectangle(xpos, ypos, 48, 48);
         }
 
     }

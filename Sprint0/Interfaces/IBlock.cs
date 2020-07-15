@@ -10,6 +10,7 @@ namespace Sprint0.Interfaces
     {
         void Draw();
         void Update();
+        string GetType();
         Rectangle GetRectangle();
 
     }

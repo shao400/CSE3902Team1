@@ -15,12 +15,17 @@ namespace Sprint0.Block
         private ISprite sprite = SpriteFactory.BlockA;
         private int xpos;
         private int ypos;
+        private string type;
         public BlockA(int x, int y)
         {
             xpos = x;
             ypos = y;
+            type = "block";
         }
-
+        public string GetType()
+        {
+            return type;
+        }
         public void Draw()
         {
             Vector2 location = new Vector2(xpos, ypos);

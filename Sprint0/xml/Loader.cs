@@ -84,6 +84,9 @@ namespace Sprint0.xml
                         case "BlockAllLeft":
                             blocks.Add(new BlockAllLeft(xpos, ypos));
                             break;
+                        case "Water":
+                            blocks.Add(new Water(xpos, ypos));
+                            break;
                         case "BlockAllTop":
                             blocks.Add(new BlockAllTop(xpos, ypos));
                             break;
