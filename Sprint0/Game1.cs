@@ -27,7 +27,7 @@ namespace Sprint0
     public class Game1 : Game
     {
         GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        public SpriteBatch spriteBatch;
         
         public roomProperties currentRoom;
         public List<roomProperties> roomList;
