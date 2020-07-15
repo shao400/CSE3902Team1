@@ -12,6 +12,7 @@ using Sprint0.Interfaces;
 using Sprint0.Rooms;
 using Sprint0.WallCube;
 using Sprint0.HUD;
+using Sprint0.NPCs;
 using System.Globalization;
 using Microsoft.Xna.Framework;
 
@@ -30,6 +31,7 @@ namespace Sprint0.xml
             List<IHud> huds = new List<IHud>();
             List<IWallCube> cubes = new List<IWallCube>();
             List<IDoor> doors = new List<IDoor>();
+            List<INPC> NPCs = new List<INPC>();
             reader.MoveToContent();
             reader.Read(); // jump over <Room>
             CultureInfo cultures = new CultureInfo("en-US");
@@ -152,7 +154,10 @@ namespace Sprint0.xml
                             items.Add(new WBoomerang(xpos, ypos));
                             break;
                         case "Merchant":
-                            enemies.Add(new Merchant(xpos, ypos));
+                            NPCs.Add(new Merchant(xpos, ypos));
+                            break;
+                        case "Flame":
+                            NPCs.Add(new Flame(xpos, ypos));
                             break;
                         case "Oldman":
                             enemies.Add(new Oldman(xpos, ypos));
@@ -205,7 +210,7 @@ namespace Sprint0.xml
                 }
             }
 
-            return new roomProperties(roomID, blocks, items, enemies, rooms, huds, cubes, source, Con, doors);
+            return new roomProperties(roomID, blocks, items, enemies, rooms, huds, cubes, source, Con, doors, NPCs);
         }
     }
 }

@@ -39,7 +39,8 @@ namespace Sprint0.Sprite
         public static EnemyAquaSprite EnemyAqua = new EnemyAquaSprite(0, 0);
         public static EnemyDodongoSprite EnemyDodongo = new EnemyDodongoSprite(0, 0);
         public static EnemyOldmanSprite EnemyOldman = new EnemyOldmanSprite(0, 0);
-        public static EnemyMerchantSprite EnemyMerchant = new EnemyMerchantSprite(0, 0);
+        public static NPCMerchantSprite NPCMerchant = new NPCMerchantSprite(0, 0);
+        public static NPCFlameSprite NPCFlame = new NPCFlameSprite(0, 0);
 
         public static PlayerWoodenSwordSprite PlayerWoodenSwordRight = new PlayerWoodenSwordSprite(SpriteEffects.None, 0);
         public static PlayerWoodenSwordSprite PlayerWoodenSwordLeft = new PlayerWoodenSwordSprite(SpriteEffects.FlipHorizontally, 0);
@@ -157,13 +158,11 @@ namespace Sprint0.Sprite
             PlayerWoodenSwordUp.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordDown.LoadContent(batch, content.Load<Texture2D>("link"));
 
-
             PlayerWoodenSwordShootingRight.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordShootingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordShootingUp.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordShootingDown.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordExploding.LoadContent(batch, content.Load<Texture2D>("shoot"));
-
 
             //Zina
             PlayerBombExploding.LoadContent(batch, content.Load<Texture2D>("link")); 
@@ -250,7 +249,8 @@ namespace Sprint0.Sprite
             EnemyAqua.LoadContent(batch, content.Load<Texture2D>("boss"));
             EnemyDodongo.LoadContent(batch, content.Load<Texture2D>("boss"));
             EnemyOldman.LoadContent(batch, content.Load<Texture2D>("npc"));
-            EnemyMerchant.LoadContent(batch, content.Load<Texture2D>("npc"));
+            NPCMerchant.LoadContent(batch, content.Load<Texture2D>("npc"));
+            NPCFlame.LoadContent(batch, content.Load<Texture2D>("npc"));
         }
 
         private static void LoadBlockContent(SpriteBatch batch, ContentManager content)
@@ -275,7 +275,7 @@ namespace Sprint0.Sprite
             RoomList.Add(RoomEnemy);
             RoomList.Add(RoomExterior);
         }
-            private static void LoadWallCubeContent(SpriteBatch batch, ContentManager content)
+        private static void LoadWallCubeContent(SpriteBatch batch, ContentManager content)
         {
             WallTop.LoadContent(batch, content.Load<Texture2D>("Blocks"));
             WallDown.LoadContent(batch, content.Load<Texture2D>("Blocks"));

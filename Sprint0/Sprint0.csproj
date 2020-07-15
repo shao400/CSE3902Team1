@@ -91,7 +91,8 @@
     <Compile Include="Enemies\Dodongo.cs" />
     <Compile Include="Enemies\Goriya.cs" />
     <Compile Include="Enemies\Keese.cs" />
-    <Compile Include="Enemies\Merchant.cs" />
+    <Compile Include="NPCs\Flame.cs" />
+    <Compile Include="NPCs\Merchant.cs" />
     <Compile Include="Enemies\Moblin.cs" />
     <Compile Include="Enemies\Oldman.cs" />
     <Compile Include="Enemies\Peahat.cs" />
@@ -124,6 +125,7 @@
     <Compile Include="Interfaces\IGameState.cs" />
     <Compile Include="Interfaces\IHud.cs" />
     <Compile Include="Interfaces\IItem.cs" />
+    <Compile Include="Interfaces\INPC.cs" />
     <Compile Include="Interfaces\IProjectile.cs" />
     <Compile Include="Interfaces\IWallCube.cs" />
     <Compile Include="Interfaces\IRoom.cs" />
@@ -175,6 +177,7 @@
     <Compile Include="Sprite\HudSprites\HudPointSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudMapPieceSprite.cs" />
     <Compile Include="Sprite\ItemSprites\ItemWoodenSwordSprite.cs" />
+    <Compile Include="Sprite\NPCSprites\NPCFlameSprite.cs" />
     <Compile Include="Sprite\ProjectileSprites\PlayerBombSprite.cs" />
     <Compile Include="Sprite\ProjectileSprites\PlayerArrowExplodingSprite.cs" />
     <Compile Include="Sprite\ProjectileSprites\PlayerBombExplodingSprite.cs" />
@@ -191,7 +194,7 @@
     <Compile Include="Sprite\EnemySprites\EnemyDodongoSprite.cs" />
     <Compile Include="Sprite\EnemySprites\EnemyGoriyaSprite.cs" />
     <Compile Include="Sprite\EnemySprites\EnemyKeeseSprite.cs" />
-    <Compile Include="Sprite\EnemySprites\EnemyMerchantSprite.cs" />
+    <Compile Include="Sprite\NPCSprites\NPCMerchantSprite.cs" />
     <Compile Include="Sprite\EnemySprites\EnemyOldmanSprite.cs" />
     <Compile Include="Sprite\EnemySprites\EnemyRopeSprite.cs" />
     <Compile Include="Sprite\EnemySprites\EnemyStalfosSprite.cs" />

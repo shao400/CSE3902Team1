@@ -25,6 +25,7 @@ namespace Sprint0.xml
         public List<IWallCube> cubeList;
         public List<IRoom> roomList;
         public List<IHud> hudList;
+        public List<INPC> NPCList;
         public Rectangle sourceRec;
         public Rectangle DestRec;
         public List<IDoor> DoorList;
@@ -32,7 +33,7 @@ namespace Sprint0.xml
         //If there is no access to one direction, -1 will be presented.
         public List<int> Connectors;  
         //Constructor method
-        public roomProperties(int id, List<IBlock> b, List<IItem> i, List<IEnemy> e, List<IRoom> r, List<IHud> h, List<IWallCube> w, Rectangle source, List<int> con, List<IDoor> d)
+        public roomProperties(int id, List<IBlock> b, List<IItem> i, List<IEnemy> e, List<IRoom> r, List<IHud> h, List<IWallCube> w, Rectangle source, List<int> con, List<IDoor> d, List<INPC> n)
         {
             roomID = id;
             itemList = i;
@@ -45,6 +46,7 @@ namespace Sprint0.xml
             DestRec = new Rectangle(0, 168, 768, 528);
             Connectors = con;
             DoorList = d;
+            NPCList = n;
         }
         public void loadBatchAndContent(ContentManager Content, SpriteBatch Batch)
         {
@@ -67,6 +69,10 @@ namespace Sprint0.xml
             for (int i = 0; i < itemList.Count; i++)
             {
                 itemList[i].Draw();
+            }
+            for (int i = 0; i < NPCList.Count; i++)
+            {
+                NPCList[i].Draw();
             }
         }
 
