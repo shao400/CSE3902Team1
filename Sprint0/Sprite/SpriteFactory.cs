@@ -84,7 +84,7 @@ namespace Sprint0.Sprite
         public static ISprite BlockA = new BlockASprite();
         public static ISprite BlockB = new BlockBSprite();
         public static ISprite BlockC = new BlockCSprite();
-
+        public static ISprite Lock = new LockSprite();
 
         //Room Author Zhizhou He
         public static List<ISprite> RoomList = new List<ISprite>();
@@ -258,6 +258,7 @@ namespace Sprint0.Sprite
             BlockA.LoadContent(batch, content.Load<Texture2D>("Blocks"));
             BlockB.LoadContent(batch, content.Load<Texture2D>("Blocks"));
             BlockC.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            Lock.LoadContent(batch, content.Load<Texture2D>("Blocks"));
             BlockList.Add(BlockA);
             BlockList.Add(BlockB);
             BlockList.Add(BlockC);

@@ -129,6 +129,7 @@
     <Compile Include="Interfaces\IRoom.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />
     <Compile Include="Interfaces\ISprite.cs" />
+    <Compile Include="Inventory.cs" />
     <Compile Include="Items\Bomb.cs" />
     <Compile Include="Items\Arrow.cs" />
     <Compile Include="Items\Key.cs" />
@@ -141,6 +142,7 @@
     <Compile Include="Items\Compass.cs" />
     <Compile Include="Items\mClock.cs" />
     <Compile Include="Items\HeartContainer.cs" />
+    <Compile Include="Block\Lock.cs" />
     <Compile Include="Players\Player1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Projectile\AbstractProjectile.cs" />
@@ -153,6 +155,7 @@
     <Compile Include="Rooms\ExRoom.cs" />
     <Compile Include="Rooms\RoomItem.cs" />
     <Compile Include="Sound\Sound.cs" />
+    <Compile Include="Sprite\BlockSprites\LockSprite.cs" />
     <Compile Include="Sprite\DoorSprites\DoorKDownSprite.cs" />
     <Compile Include="Sprite\DoorSprites\DoorKLeftSprite.cs" />
     <Compile Include="Sprite\DoorSprites\DoorKRightSprite.cs" />
