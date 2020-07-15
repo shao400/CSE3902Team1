@@ -50,17 +50,18 @@ namespace Sprint0
         public void addItem(IItem item)
         {
             // when get an item, call it, add it in list[]
+            //TODO [BUG]: collison excute many times 
             myItemList.Add(item);
         }
 
         public void showItem()
         {
             // in pause state, show each item in the List
-            for (int i = 1; i < myItemList.Count; i++)
+            for (int i = 0; i < myItemList.Count; i++)
             {
                 //itemRec = itemList[i].GetRectangle();
                 Vector2 dest = new Vector2(x + i * 5, y);
-                itemSprite = SpriteFactory.ItemList[i - 1];
+                itemSprite = SpriteFactory.ItemList[i];
                 itemSprite.Draw(dest, false);
                 Console.WriteLine("itemlist length: " + myItemList.Count);
             }

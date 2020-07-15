@@ -33,6 +33,7 @@ namespace Sprint0.Player
         private LinkItemCollision linkItemCollision;
         private LinkEnemyCollision linkEnemyCollision;
         private status currentStatus;
+        private Inventory myInventory;
 
         Game1 myGame;
         private string currentStatus1;
@@ -64,7 +65,7 @@ namespace Sprint0.Player
             currentProjectile = new WoodenSword(this, 2);
             currentStatus = status.standing;
             currentSprite = SpriteFactory.LinkNoneStandingRight;
-
+            myInventory = new Inventory(this);
 
             linkBlockCollision = new LinkBlockCollision(this);
             linkItemCollision = new LinkItemCollision(this);
