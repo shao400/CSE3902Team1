@@ -18,7 +18,7 @@ namespace Sprint0.GameStates
         private Hud myHud;
         int x = 0;
         int y = 0;
-        //GraphicsDeviceManager myGraphics;
+
         public InGame(Game1 game, Hud hud1)
         {
             myGame = game;
@@ -26,8 +26,7 @@ namespace Sprint0.GameStates
         }
         public void Draw()
         {
-            myGame.currentRoom.Draw();
-            myGame.link.getSprite().Draw(new Vector2(myGame.link.xAxis, myGame.link.yAxis), myGame.link.isTakingDmg());
+            myGame.currentRoom.Draw();            
             for (int i = 0; i < myGame.currentRoom.DoorList.Count; i++)
             {
                 myGame.currentRoom.DoorList[i].Draw();
@@ -54,6 +53,7 @@ namespace Sprint0.GameStates
             {
                 myGame.link.getPlayerItem().Explode();
             }
+            myGame.link.getSprite().Draw(new Vector2(myGame.link.xAxis, myGame.link.yAxis), myGame.link.isTakingDmg());
         }
 
         public void Update()

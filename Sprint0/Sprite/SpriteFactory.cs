@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Sprint0.Controller;
+﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 using Sprint0.Interfaces;
-using Sprint0.Items;
-using Microsoft.Xna.Framework;
-using System.Runtime.CompilerServices;
+
 //Author: Gengyi Qin
 namespace Sprint0.Sprite
 {
@@ -23,7 +16,11 @@ namespace Sprint0.Sprite
         public static LinkNoneStandingDownSprite LinkNoneStandingDown = new LinkNoneStandingDownSprite();
         public static LinkNoneStandingLeftSprite LinkNoneStandingLeft = new LinkNoneStandingLeftSprite();
         public static LinkNoneStandingRightSprite LinkNoneStandingRight = new LinkNoneStandingRightSprite();
-        public static LinkNoneStandingUpSprite LinkNoneStandingUp = new LinkNoneStandingUpSprite();        
+        public static LinkNoneStandingUpSprite LinkNoneStandingUp = new LinkNoneStandingUpSprite();
+        public static LinkUsingUpSprite LinkUsingUp = new LinkUsingUpSprite();
+        public static LinkUsingLeftSprite LinkUsingLeft = new LinkUsingLeftSprite();
+        public static LinkUsingDownSprite LinkUsingDown = new LinkUsingDownSprite();
+        public static LinkUsingRightSprite LinkUsingRight = new LinkUsingRightSprite();
 
         // Enemy Author: Gengyi Qin
         public static EnemyMoblinSprite EnemyMoblin = new EnemyMoblinSprite(0, 0);
@@ -152,6 +149,11 @@ namespace Sprint0.Sprite
             LinkNoneMovingRight.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkNoneMovingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkNoneMovingUp.LoadContent(batch, content.Load<Texture2D>("link"));
+
+            LinkUsingRight.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkUsingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkUsingDown.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkUsingUp.LoadContent(batch, content.Load<Texture2D>("link"));
 
             PlayerWoodenSwordRight.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordLeft.LoadContent(batch, content.Load<Texture2D>("link"));

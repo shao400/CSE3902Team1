@@ -36,10 +36,8 @@ namespace Sprint0.Player
         private Inventory myInventory;
 
         Game1 myGame;
-        private string currentStatus1;
         public IProjectile currentProjectile;
         private ProjectileCollision projectileCollision;
-        int counter;
         private Sound sound;
         private int hp;
         private int MaxHealth;
@@ -60,7 +58,6 @@ namespace Sprint0.Player
             ruppyCount = 0;
             bombCount = 0;
             keyCount = 0;
-            counter = 0;
             currentFacing = facing.right;
             currentProjectile = new WoodenSword(this, 2);
             currentStatus = status.standing;
@@ -158,7 +155,7 @@ namespace Sprint0.Player
         }
         public void Draw()
         {
-            //states.Draw();
+            
         }
         public Rectangle GetRectangle()
         {
@@ -169,66 +166,49 @@ namespace Sprint0.Player
             currentStatus = status.walking;
             currentFacing = facing.right;
             currentSprite = SpriteFactory.LinkNoneMovingRight;
-
         }
         public void Left()
         {
             currentStatus = status.walking;
             currentFacing = facing.left;
             currentSprite = SpriteFactory.LinkNoneMovingLeft;
-
         }
         public void Up()
         {
             currentStatus = status.walking;
             currentFacing = facing.up;
             currentSprite = SpriteFactory.LinkNoneMovingUp;
-
         }
         public void Down()
         {
             currentStatus = status.walking;
             currentFacing = facing.down;
             currentSprite = SpriteFactory.LinkNoneMovingDown;
-
         }
         public void Stand()
         {
             currentStatus = status.standing;
-
-            if (currentFacing == facing.up)
-            {
-                currentSprite = SpriteFactory.LinkNoneStandingUp;
-            }
-            if (currentFacing == facing.down)
-            {
-                currentSprite = SpriteFactory.LinkNoneStandingDown;
-            }
-            if (currentFacing == facing.left)
-            {
-                currentSprite = SpriteFactory.LinkNoneStandingLeft;
-            }
-            if (currentFacing == facing.right)
-            {
-                currentSprite = SpriteFactory.LinkNoneStandingRight;
-            }
+            if (currentFacing == facing.up) currentSprite = SpriteFactory.LinkNoneStandingUp;
+            if (currentFacing == facing.down) currentSprite = SpriteFactory.LinkNoneStandingDown;
+            if (currentFacing == facing.left) currentSprite = SpriteFactory.LinkNoneStandingLeft;   
+            if (currentFacing == facing.right) currentSprite = SpriteFactory.LinkNoneStandingRight;                                       
         }
         public void Attack()
         {
             currentStatus = status.attacking;
-            if (currentFacing == facing.up) currentProjectile = new WoodenSword(this, 0);
-            else if (currentFacing == facing.down) currentProjectile = new WoodenSword(this, 1);
-            else if (currentFacing == facing.right) currentProjectile = new WoodenSword(this, 2);
-            else if (currentFacing == facing.left) currentProjectile = new WoodenSword(this, 3);
+            if (currentFacing == facing.up) { currentProjectile = new WoodenSword(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
+            else if (currentFacing == facing.down) { currentProjectile = new WoodenSword(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
+            else if (currentFacing == facing.right) { currentProjectile = new WoodenSword(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
+            else if (currentFacing == facing.left) { currentProjectile = new WoodenSword(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
             currentProjectile.Stab();
             sound.swordSlash();
         }
-        public void Shoot() {
-            
-            if (currentFacing == facing.up) currentProjectile = new WoodenSword(this, 0);
-            else if (currentFacing == facing.down) currentProjectile = new WoodenSword(this, 1);
-            else if (currentFacing == facing.right) currentProjectile = new WoodenSword(this, 2);
-            else if (currentFacing == facing.left) currentProjectile = new WoodenSword(this, 3);
+        public void Shoot() 
+        {
+            if (currentFacing == facing.up) { currentProjectile = new WoodenSword(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
+            else if (currentFacing == facing.down) { currentProjectile = new WoodenSword(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
+            else if (currentFacing == facing.right) { currentProjectile = new WoodenSword(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
+            else if (currentFacing == facing.left) { currentProjectile = new WoodenSword(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
             currentProjectile.explo(0);
             currentProjectile.Shoot();
 
@@ -242,10 +222,10 @@ namespace Sprint0.Player
         public void Arrow()
         {
             currentStatus = status.arrowShooting;
-            if (currentFacing == facing.up) currentProjectile = new Arrow(this, 0);
-            else if (currentFacing == facing.down) currentProjectile = new Arrow(this, 1);
-            else if (currentFacing == facing.right) currentProjectile = new Arrow(this, 2);
-            else if (currentFacing == facing.left) currentProjectile = new Arrow(this, 3);
+            if (currentFacing == facing.up) { currentProjectile = new Arrow(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
+            else if (currentFacing == facing.down) { currentProjectile = new Arrow(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
+            else if (currentFacing == facing.right) { currentProjectile = new Arrow(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
+            else if (currentFacing == facing.left) { currentProjectile = new Arrow(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
             currentProjectile.explo(0);
             currentProjectile.Shoot();
 

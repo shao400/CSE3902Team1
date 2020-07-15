@@ -177,6 +177,10 @@
     <Compile Include="Sprite\HudSprites\HudPointSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudMapPieceSprite.cs" />
     <Compile Include="Sprite\ItemSprites\ItemWoodenSwordSprite.cs" />
+    <Compile Include="Sprite\LinkSprites\LinkUsingDownSprite.cs" />
+    <Compile Include="Sprite\LinkSprites\LinkUsingLeftSprite.cs" />
+    <Compile Include="Sprite\LinkSprites\LinkUsingRightSprite.cs" />
+    <Compile Include="Sprite\LinkSprites\LinkUsingUpSprite.cs" />
     <Compile Include="Sprite\NPCSprites\NPCFlameSprite.cs" />
     <Compile Include="Sprite\ProjectileSprites\PlayerBombSprite.cs" />
     <Compile Include="Sprite\ProjectileSprites\PlayerArrowExplodingSprite.cs" />
