@@ -152,6 +152,10 @@ namespace Sprint0
             GraphicsDevice.Clear(Color.CornflowerBlue);
             currentState.Draw();
             base.Draw(gameTime);
+            if(currentState == stateList[3])
+            {
+                //this.link.myInventory.showItem();
+            }           
         }
       
     }

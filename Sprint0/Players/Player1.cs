@@ -44,7 +44,7 @@ namespace Sprint0.Player
         private int hp;
         private int MaxHealth;
         private int ruppyCount;
-        private int bombCount;
+        public int bombCount;
         private int keyCount;
 
         public Player1(int x, int y, int widthG, int heightG, Sound s, Game1 game) 

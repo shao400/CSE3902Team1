@@ -59,12 +59,15 @@ namespace Sprint0.Collisions
                     if (item.GetType() == key.GetType() && !item.isPickedUp())
                     {
                         myPlayer.getKey();
-                        myPlayer.myInventory.addItem(item);
                     }
                     if (item.GetType() == bomb.GetType() && !item.isPickedUp())
                     {
                         myPlayer.getBomb();
-                        myPlayer.myInventory.addItem(item);
+                        if(myPlayer.bombCount < 2)
+                        {
+                            myPlayer.myInventory.addItem(item);
+                        }
+
                     }
                     if (item.GetType() == map.GetType() && !item.isPickedUp())
                     {

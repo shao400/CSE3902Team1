@@ -35,8 +35,8 @@ namespace Sprint0
         Rectangle itemRec;
         IItem selectedItem;
         ISprite itemSprite;
-        int x = 500;
-        int y = 500;
+        int x = 390;
+        int y = 110;
         int frame = 0;
         static int moveCountTot = 0;
 
@@ -61,33 +61,68 @@ namespace Sprint0
             // in pause state, show each item in the List
             for (int i = 0; i < myItemList.Count; i++)
             {
-                itemSprite = getItemSprite(myItemList[i]);
-                Vector2 dest = new Vector2(0, 0);
-                //Vector2 dest = new Vector2(x + i * 16, y);
-                itemSprite.Draw(dest, false);
+                string itemType = getItemType(myItemList[i]);
+                if(itemType.Equals("Sprint0.Items.Bomb") || itemType.Equals("Sprint0.Items.Bow"))
+                {
+                    itemSprite = getItemSprite(myItemList[i]);
+                    if (itemSprite != null)
+                    {
+                        Vector2 dest = new Vector2(x + i * 50, y);
+                        itemSprite.Draw(dest, false);                     
+                    }
+                }
+                if (itemType.Equals("Sprint0.Items.Map"))
+                {
+                    itemSprite = getItemSprite(myItemList[i]);
+                    if (itemSprite != null)
+                    {
+                        Vector2 dest = new Vector2(140, 320);
+                        itemSprite.Draw(dest, false);
+                    }
+                }
+                if (itemType.Equals("Sprint0.Items.Compass"))
+                {
+                    itemSprite = getItemSprite(myItemList[i]);
+                    if (itemSprite != null)
+                    {
+                        Vector2 dest = new Vector2(140, 450);
+                        itemSprite.Draw(dest, false);
+                    }
+                }
             }
+        }
+
+        public string getItemType(IItem item)
+        {
+            return item.GetType().ToString();
         }
 
         public ISprite getItemSprite(IItem item)
         {
-            string itemType = item.GetType().ToString();
+            string itemType = getItemType(item);
             ISprite sprite = null;
             switch (itemType)
             {
-                case "Sprint0.Items.Key":
-                    sprite = new ItemKeySprite();
-                    pickingItem(0);
-                    break;
-
                 case "Sprint0.Items.Bomb":
-                    sprite = new ItemKeySprite();
+                    sprite = new ItemBombSprite();
+                    break;
+                case "Sprint0.Items.Bow":
+                    sprite = new ItemArrowSprite();
+                    break;
+                case "Sprint0.Items.Map":
+                    sprite = new ItemMapSprite();
+                    break;
+                case "Sprint0.Items.Compass":
+                    sprite = new ItemCompassSprite();
                     break;
 
                 default:
+                    sprite = null;
                     break;
             }
             return sprite;
         }
+
 
         public void equipItem(IItem item)
         {
@@ -117,8 +152,8 @@ namespace Sprint0
             //myBatch.End();
 
             // return the current picked item
-            selectedItem = myItemList[moveCount];
-            equipItem(selectedItem);
+            //selectedItem = myItemList[moveCount];
+            //equipItem(selectedItem);
         }
 
         public void Update()
