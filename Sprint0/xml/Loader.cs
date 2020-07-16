@@ -200,6 +200,7 @@ namespace Sprint0.xml
                             break;
                         case "DoorKRight":
                             doors.Add(new DoorKRight(xpos, ypos));
+                            Console.WriteLine("case DoorKRight");
                             //blocks.Add(new Lock(xpos, ypos));
                             break;
                     }

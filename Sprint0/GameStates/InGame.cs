@@ -27,10 +27,6 @@ namespace Sprint0.GameStates
         public void Draw()
         {
             myGame.currentRoom.Draw();            
-            for (int i = 0; i < myGame.currentRoom.DoorList.Count; i++)
-            {
-                myGame.currentRoom.DoorList[i].Draw();
-            }
             myHud.Draw(x, y);
             if (myGame.link.GetCurrentStatus() == "attacking")
             {
@@ -54,6 +50,10 @@ namespace Sprint0.GameStates
                 myGame.link.getPlayerItem().Explode();
             }
             myGame.link.getSprite().Draw(new Vector2(myGame.link.xAxis, myGame.link.yAxis), myGame.link.isTakingDmg());
+            for (int i = 0; i < myGame.currentRoom.DoorList.Count; i++)
+            {
+                myGame.currentRoom.DoorList[i].Draw();
+            }
         }
 
         public void Update()
