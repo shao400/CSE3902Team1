@@ -20,6 +20,9 @@ namespace Sprint0.Collisions
         private Ruppy ruppy = new Ruppy(0, 0);
         private Key key = new Key(0, 0);
         private Bomb bomb = new Bomb(0,0);
+        private Map map = new Map(0,0);
+        private Compass compass = new Compass(0,0);
+        private const int GetCompass = 1;
         public LinkItemCollision(Player1 player)
         {
             myPlayer = player;   
@@ -61,6 +64,16 @@ namespace Sprint0.Collisions
                     if (item.GetType() == bomb.GetType() && !item.isPickedUp())
                     {
                         myPlayer.getBomb();
+                        myPlayer.myInventory.addItem(item);
+                    }
+                    if (item.GetType() == map.GetType() && !item.isPickedUp())
+                    {
+                        myPlayer.MapOrCompassGet(0);
+                        myPlayer.myInventory.addItem(item);
+                    }
+                    if (item.GetType() == compass.GetType() && !item.isPickedUp())
+                    {
+                        myPlayer.MapOrCompassGet(GetCompass);
                         myPlayer.myInventory.addItem(item);
                     }
 

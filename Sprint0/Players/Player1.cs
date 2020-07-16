@@ -34,6 +34,8 @@ namespace Sprint0.Player
         private LinkEnemyCollision linkEnemyCollision;
         private status currentStatus;
         public Inventory myInventory;
+        private Boolean GetMap;
+        private Boolean GetCompass;
 
         Game1 myGame;
         public IProjectile currentProjectile;
@@ -58,6 +60,8 @@ namespace Sprint0.Player
             ruppyCount = 0;
             bombCount = 0;
             keyCount = 0;
+            GetMap = false;
+            GetCompass = false;
             currentFacing = facing.right;
             currentProjectile = new WoodenSword(this, 2);
             currentStatus = status.standing;
@@ -293,6 +297,24 @@ namespace Sprint0.Player
             itemC.Add(bombCount);
             
             return itemC;
+        }
+
+        public void MapOrCompassGet(int MorC)
+        {
+            if (MorC == 0) {
+                GetMap = true;
+            }else if (MorC ==1)
+            {
+                GetCompass = true;
+            }
+        }
+
+        public List<Boolean> HaveMapOrCompass()
+        {
+            List<Boolean> HaveMorC = new List<Boolean>();
+            HaveMorC.Add(GetMap);
+            HaveMorC.Add(GetCompass);
+            return HaveMorC;
         }
 
         public void winGame()

@@ -10,6 +10,8 @@
 	<item type="Key" xpos="250" ypos="254"/>
 	<item type="Bomb" xpos="350" ypos="254"/>
 	<item type="Bomb" xpos="450" ypos="254"/>
+	<item type="Compass" xpos="350" ypos="400"/>
+	<item type="Map" xpos="450" ypos="400"/>
 	<src xpos="258" ypos="886" />
 	<no i="0" />
 	<connect up="-1" down="-1" left="-1" right="1" />

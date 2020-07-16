@@ -147,8 +147,9 @@ namespace Sprint0.HUD
         public void Draw(int x, int y)
         {           
             //position trans logic still need change
-            Vector2 locationP = new Vector2(x+16, y+7);          
-            staticMapDraw(x, y);
+            Vector2 locationP = new Vector2(x+16, y+7);       
+            if(_myGame.link.HaveMapOrCompass()[0] == true) staticMapDraw(x, y);
+
             if (_myGame.currentRoom.roomID==0) { 
                 
                     point.Draw(locationP, false);                 
@@ -243,6 +244,8 @@ namespace Sprint0.HUD
                 locationP.Y -= 5 * dy;
                 point.Draw(locationP, false);
             }
+            Vector2 locationTarget = new Vector2(x,y-5*dy);
+            if (_myGame.link.HaveMapOrCompass()[1]) point.Draw(locationTarget,false);
         }
 
       
