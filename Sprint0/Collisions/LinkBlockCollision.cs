@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using Sprint0.Block;
 using Sprint0.Interfaces;
 using Sprint0.Player;
 
@@ -54,6 +55,12 @@ namespace Sprint0.Collisions
                         {
                             myPlayer.xAxis -= intersectionRectangle.Width;
                         }
+                    }
+                    if (block.GetType() == "lock" && myPlayer.getKeyCount() > 0)
+                    {
+                        blocks.Remove(block);
+                        myPlayer.useKey();
+                        myPlayer.unlockBothLocks();
                     }
                     break;//once link has collision with one block, no need to detect other blocks
                 }

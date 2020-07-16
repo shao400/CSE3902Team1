@@ -289,6 +289,73 @@ namespace Sprint0.Player
             }
         }
 
+        public int getKeyCount()
+        {
+            return keyCount;
+        }
+
+        public void useKey()
+        {
+            if (0 < keyCount)
+            {
+                keyCount--;
+            }
+        }
+
+        public void unlockBothLocks()
+        {
+            int x = -1;
+            int y = -1;
+            switch (currentFacing)
+            {
+                case facing.up:
+                    x = 357;
+                    y = 615;
+                    break;
+                case facing.down:
+                    x = 357;
+                    y = 198;
+                    break;
+                case facing.left:
+                    x = 696;
+                    y = 384;
+                    break;
+                case facing.right:
+                    x = 0;
+                    y = 384;
+                    break;
+            }
+            foreach (IBlock block in myGame.roomList[myGame.currentRoom.Connectors[getFacing()]].blockList)
+            {
+                if (block.GetType() == "lock")
+                {
+                    if (block.GetRectangle().X == x && block.GetRectangle().Y == y)
+                    {
+                        myGame.roomList[myGame.currentRoom.Connectors[getFacing()]].blockList.Remove(block);
+                        break;
+                    }
+                    
+                }
+            }
+                
+        }
+        private int getFacing()
+        {
+            int rt = -1;
+            switch (currentFacing)
+            {
+                case facing.up:
+                    return 0;
+                case facing.down:
+                    return 1;
+                case facing.left:
+                    return 2;
+                case facing.right:
+                    return 3;
+            }
+            return rt;
+        }
+
         public List<int> itemCount()
         {
             List<int> itemC = new List<int>();
