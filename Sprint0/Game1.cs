@@ -141,6 +141,7 @@ namespace Sprint0
 
             currentState.Update();
             base.Update(gameTime);
+            link.myInventory.Update();
         }
         /// <summary>
         /// This is called when the game should draw itself.

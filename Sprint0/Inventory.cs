@@ -25,31 +25,26 @@ namespace Sprint0
 {
     public class Inventory
     {
-        Game1 myGame;
         SpriteBatch myBatch;
         ContentManager myContent;
         GraphicsDeviceManager graphics;
         private Player1 myLink;
-        private List<IItem> myItemList;
-        private ISprite itemSprite;
-        Rectangle PickingSourceRec;
-        Rectangle PickingDestRec;
+        private List<IItem> myItemList = new List<IItem>();
+        Rectangle PickingSourceRec = new Rectangle(519, 137, 16, 16);
+        Rectangle PickingDestRec = new Rectangle(300 + moveCountTot * 16, 300, 16, 16);
         Rectangle itemRec;
         IItem selectedItem;
-        int x;
-        int y;
-        int frame;
+        ISprite itemSprite;
+        int x = 500;
+        int y = 500;
+        int frame = 0;
+        static int moveCountTot = 0;
 
 
-        public Inventory(Player1 link, Game1 mygame)
+        public Inventory(Player1 link, Game1 game)
         {
             myLink = link;
-            myItemList = new List<IItem>();
-            x = 500;
-            y = 500;
-            frame = 0;
-            PickingSourceRec = new Rectangle(519, 137, 16, 16);
-            myBatch = mygame.spriteBatch;
+            myBatch = game.spriteBatch;
         }
 
         public void addItem(IItem item)
@@ -66,43 +61,64 @@ namespace Sprint0
             // in pause state, show each item in the List
             for (int i = 0; i < myItemList.Count; i++)
             {
-                string itemType = myItemList[i].GetType().ToString();
-                switch (itemType)
-                {
-                    case "Sprint0.Items.Key":
-                        itemSprite = new ItemKeySprite();
-                        Console.WriteLine("it's on! ");
-                        pickingItem(0);
-                        break;
-                    case "Sprint0.Items.Bomb":
-                        itemSprite = new ItemKeySprite();
-                        break;
-                    default:
-                        break;
-                }
-                Vector2 dest = new Vector2(x + i * 16, y);
+                itemSprite = getItemSprite(myItemList[i]);
+                Vector2 dest = new Vector2(0, 0);
+                //Vector2 dest = new Vector2(x + i * 16, y);
                 itemSprite.Draw(dest, false);
             }
         }
 
-        public void equipItem()
-
+        public ISprite getItemSprite(IItem item)
         {
-            
-            //add picked item sprite in “B box”, also show it in game HUD
+            string itemType = item.GetType().ToString();
+            ISprite sprite = null;
+            switch (itemType)
+            {
+                case "Sprint0.Items.Key":
+                    sprite = new ItemKeySprite();
+                    pickingItem(0);
+                    break;
+
+                case "Sprint0.Items.Bomb":
+                    sprite = new ItemKeySprite();
+                    break;
+
+                default:
+                    break;
+            }
+            return sprite;
+        }
+
+        public void equipItem(IItem item)
+        {
+            ISprite sprite = getItemSprite(item);
+            Vector2 dest = new Vector2(100, 100); // equipment position
+            sprite.Draw(dest, false);
+            // TODO
+            // make link actually EQUIP this item
 
         }
 
-        public IItem pickingItem(int moveCount)
+        public void pickingItem(int moveCount)
         {
             // when click A&D key(<-& ->), move PickingDestRec, and list[i], i+ or -
             // when click enter, call equipItem(), make int selected = list[i]; 
-            PickingDestRec = new Rectangle(300 + moveCount * 16, 300, 16, 16);
-            myBatch.Begin();
-            myBatch.Draw(myContent.Load<Texture2D>("Hud"), PickingDestRec, PickingSourceRec, Color.White);
-            myBatch.End();
+            moveCountTot += moveCount;
+            if (moveCountTot < 0)
+            {
+                moveCountTot = 0;
+            }
+            if(moveCountTot > 5)
+            {
+                moveCountTot = 5;
+            }                      
+            //myBatch.Begin();
+            //myBatch.Draw(myContent.Load<Texture2D>("Hud"), PickingDestRec, PickingSourceRec, Color.White);
+            //myBatch.End();
+
+            // return the current picked item
             selectedItem = myItemList[moveCount];
-            return selectedItem;
+            equipItem(selectedItem);
         }
 
         public void Update()

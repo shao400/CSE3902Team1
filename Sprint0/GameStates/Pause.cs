@@ -49,6 +49,7 @@ namespace Sprint0.GameStates
             myBatch.End();
             myHud.Draw(x, y);
             map.Draw(450, 450);
+            myGame.link.myInventory.showItem();
 
         }
 
