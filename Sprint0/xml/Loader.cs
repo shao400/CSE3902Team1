@@ -90,6 +90,9 @@ namespace Sprint0.xml
                         case "BlockC":
                             blocks.Add(new BlockC(xpos, ypos));
                             break;
+                        case "Water":
+                            blocks.Add(new Water(xpos, ypos));
+                            break;
                         case "RoomBlock":
                             rooms.Add(new RoomBlock(xpos, ypos));
                             break;

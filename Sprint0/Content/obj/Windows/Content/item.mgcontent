@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/items.png</SourceFile>
-  <SourceTime>2020-07-06T19:25:52.2079866-04:00</SourceTime>
-  <DestFile>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/bin/Windows/Content/item.xnb</DestFile>
-  <DestTime>2020-07-16T13:17:15.9204112-04:00</DestTime>
+  <SourceFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/items.png</SourceFile>
+  <SourceTime>2020-06-25T21:19:20.6305458-04:00</SourceTime>
+  <DestFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/bin/Windows/Content/item.xnb</DestFile>
+  <DestTime>2020-07-16T13:43:09.1355794-04:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

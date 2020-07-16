@@ -1,32 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Media;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
 using Sprint0.Sprite;
 
 namespace Sprint0.Block
 {
-    class Lock : IBlock
+    class Water : IBlock
     {
-        private ISprite sprite = SpriteFactory.Lock;
+        private ISprite sprite = SpriteFactory.BlockA;
         private int xpos;
         private int ypos;
         private string type;
-        public Lock(int x, int y)
+        public Water(int x, int y)
         {
             xpos = x;
             ypos = y;
-            type = "lock";
+            type = "Water";
         }
         public string GetType()
         {
             return type;
         }
-
         public void Draw()
         {
             Vector2 location = new Vector2(xpos, ypos);
@@ -42,5 +35,6 @@ namespace Sprint0.Block
         {
             return new Rectangle(xpos, ypos, 48, 48);
         }
+
     }
 }
