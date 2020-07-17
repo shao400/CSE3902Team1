@@ -38,8 +38,8 @@ namespace Sprint0.Controller
             keymap.Add(Keys.R, new rReset(myGame));
             keymap.Add(Keys.D1, new ArrowShoot(myGame));
             keymap.Add(Keys.D2, new Bomb(myGame));
-            //keymap.Add(Keys.D3, new D3ThirdWeapon(myGame));
-            //keymap.Add(Keys.D4, new D4FourthWeapon(myGame));
+            //keymap.Add(Keys.D3, new BoomrangShoot(myGame));
+            keymap.Add(Keys.D4, new BoomrangShoot(myGame));
             attackmap.Add(Keys.Z, new Attack(myGame));
             attackmap.Add(Keys.N, new Shoot(myGame));
             //attackmap.Add(Keys.L, new Boom(myGame));

@@ -58,6 +58,10 @@ namespace Sprint0.Sprite
         public static PlayerArrowShootingSprite PlayerArrowShootingUp = new PlayerArrowShootingSprite(SpriteEffects.None, (float)-1.5708);
         public static PlayerArrowShootingSprite PlayerArrowShootingDown = new PlayerArrowShootingSprite(SpriteEffects.None, (float)1.5708);
         public static PlayerArrowExplodingSprite PlayerArrowExploding = new PlayerArrowExplodingSprite(SpriteEffects.None);
+        public static PlayerBoomrangShootingSprite PlayerBoomrangShootingRight = new PlayerBoomrangShootingSprite(SpriteEffects.None, 0);
+        public static PlayerBoomrangShootingSprite PlayerBoomrangShootingLeft = new PlayerBoomrangShootingSprite(SpriteEffects.FlipHorizontally, 0);
+        public static PlayerBoomrangShootingSprite PlayerBoomrangShootingUp = new PlayerBoomrangShootingSprite(SpriteEffects.None, (float)-1.5708);
+        public static PlayerBoomrangShootingSprite PlayerBoomrangShootingDown = new PlayerBoomrangShootingSprite(SpriteEffects.None, (float)1.5708);
 
 
         // Items Author: Zhizhou He, Chuwen Sun
@@ -160,6 +164,7 @@ namespace Sprint0.Sprite
             PlayerWoodenSwordUp.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordDown.LoadContent(batch, content.Load<Texture2D>("link"));
 
+
             PlayerWoodenSwordShootingRight.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordShootingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordShootingUp.LoadContent(batch, content.Load<Texture2D>("link"));
@@ -174,6 +179,10 @@ namespace Sprint0.Sprite
             PlayerArrowShootingUp.LoadContent(batch, content.Load<Texture2D>("shoot"));
             PlayerArrowShootingDown.LoadContent(batch, content.Load<Texture2D>("shoot"));
             PlayerArrowExploding.LoadContent(batch, content.Load<Texture2D>("shoot"));
+            PlayerBoomrangShootingRight.LoadContent(batch, content.Load<Texture2D>("link"));
+            PlayerBoomrangShootingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
+            PlayerBoomrangShootingUp.LoadContent(batch, content.Load<Texture2D>("link"));
+            PlayerBoomrangShootingDown.LoadContent(batch, content.Load<Texture2D>("link"));
         }
 
         private static void LoadItemContent(SpriteBatch batch, ContentManager content)

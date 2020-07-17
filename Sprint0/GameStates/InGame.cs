@@ -40,6 +40,10 @@ namespace Sprint0.GameStates
             {
                 myGame.link.getPlayerItem().Shoot();
             }
+            else if (myGame.link.GetCurrentStatus() == "boomrangShooting")
+            {
+                myGame.link.getPlayerItem().Shoot();
+            }
 
             else if (myGame.link.getPlayerItem().IsExplode() == 0)
             {

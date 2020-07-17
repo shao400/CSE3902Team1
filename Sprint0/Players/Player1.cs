@@ -22,7 +22,7 @@ namespace Sprint0.Player
         }
         private enum status
         {
-            standing, walking, attacking, takingDmg, shooting, booming, arrowShooting
+            standing, walking, attacking, takingDmg, shooting, booming, arrowShooting,boomrangShooting
         }
         public int xAxis;
         public int yAxis;
@@ -255,10 +255,17 @@ namespace Sprint0.Player
                 else if (currentFacing == facing.left) { currentProjectile = new Arrow(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
                 currentProjectile.explo(0);
                 currentProjectile.Shoot();
+        }
+        public void Boomrang()
+        {
 
-                
-            
-            
+            currentStatus = status.boomrangShooting;
+            if (currentFacing == facing.up) { currentProjectile = new Boomrang(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
+            else if (currentFacing == facing.down) { currentProjectile = new Boomrang(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
+            else if (currentFacing == facing.right) { currentProjectile = new Boomrang(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
+            else if (currentFacing == facing.left) { currentProjectile = new Boomrang(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
+            currentProjectile.explo(0);
+            currentProjectile.Shoot();
         }
 
         public void takeDmg()
