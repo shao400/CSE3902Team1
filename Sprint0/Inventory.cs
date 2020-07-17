@@ -25,16 +25,17 @@ namespace Sprint0
 {
     public class Inventory
     {
+        Game1 myGame;
         SpriteBatch myBatch;
         ContentManager myContent;
         GraphicsDeviceManager graphics;
         private Player1 myLink;
         private List<IItem> myItemList = new List<IItem>();
-        Rectangle PickingSourceRec = new Rectangle(519, 137, 16, 16);
-        Rectangle PickingDestRec = new Rectangle(300 + moveCountTot * 16, 300, 16, 16);
-        Rectangle itemRec;
-        IItem selectedItem;
+        //Rectangle PickingSourceRec = new Rectangle(519, 137, 16, 16);
+        //Rectangle PickingDestRec = new Rectangle(300 + moveCountTot * 16, 300, 16, 16);
+        //IItem selectedItem;
         ISprite itemSprite;
+        ISprite pickboxSprite = new PickBoxSprite();
         int x = 390;
         int y = 110;
         int frame = 0;
@@ -43,6 +44,7 @@ namespace Sprint0
 
         public Inventory(Player1 link, Game1 game)
         {
+            myGame = game;
             myLink = link;
             myBatch = game.spriteBatch;
         }
@@ -62,6 +64,8 @@ namespace Sprint0
             for (int i = 0; i < myItemList.Count; i++)
             {
                 string itemType = getItemType(myItemList[i]);
+
+                // Draw Item (Bomb, Arrow, Huixuanbiao)
                 if(itemType.Equals("Sprint0.Items.Bomb") || itemType.Equals("Sprint0.Items.Bow"))
                 {
                     itemSprite = getItemSprite(myItemList[i]);
@@ -71,24 +75,20 @@ namespace Sprint0
                         itemSprite.Draw(dest, false);                     
                     }
                 }
-                if (itemType.Equals("Sprint0.Items.Map"))
-                {
-                    itemSprite = getItemSprite(myItemList[i]);
-                    if (itemSprite != null)
-                    {
-                        Vector2 dest = new Vector2(140, 320);
-                        itemSprite.Draw(dest, false);
-                    }
-                }
-                if (itemType.Equals("Sprint0.Items.Compass"))
-                {
-                    itemSprite = getItemSprite(myItemList[i]);
-                    if (itemSprite != null)
-                    {
-                        Vector2 dest = new Vector2(140, 450);
-                        itemSprite.Draw(dest, false);
-                    }
-                }
+            }
+            // Draw Map
+            if (myGame.link.HaveMapOrCompass()[0])
+            {
+                itemSprite = new ItemMapSprite();
+                Vector2 dest = new Vector2(140, 320);
+                itemSprite.Draw(dest, false);
+            }
+            //Draw Compass
+            if (myGame.link.HaveMapOrCompass()[1])
+            {
+                itemSprite = new ItemCompassSprite();
+                Vector2 dest = new Vector2(140, 450);
+                itemSprite.Draw(dest, false);
             }
         }
 
@@ -115,7 +115,6 @@ namespace Sprint0
                 case "Sprint0.Items.Compass":
                     sprite = new ItemCompassSprite();
                     break;
-
                 default:
                     sprite = null;
                     break;
@@ -124,10 +123,11 @@ namespace Sprint0
         }
 
 
-        public void equipItem(IItem item)
+        public void equipItem(int itemNum)
         {
+            IItem item = myItemList[itemNum];
             ISprite sprite = getItemSprite(item);
-            Vector2 dest = new Vector2(100, 100); // equipment position
+            Vector2 dest = new Vector2(210, 120); // equipment position
             sprite.Draw(dest, false);
             // TODO
             // make link actually EQUIP this item
@@ -143,14 +143,14 @@ namespace Sprint0
             {
                 moveCountTot = 0;
             }
-            if(moveCountTot > 5)
+            if(moveCountTot > myItemList.Count-1)
             {
-                moveCountTot = 5;
-            }                      
-            //myBatch.Begin();
-            //myBatch.Draw(myContent.Load<Texture2D>("Hud"), PickingDestRec, PickingSourceRec, Color.White);
-            //myBatch.End();
+                moveCountTot = myItemList.Count-1;
+            }
+            Vector2 dest = new Vector2(390 + moveCountTot * 50, 110);
+            pickboxSprite.Draw(dest, false);
 
+            equipItem(moveCountTot);
             // return the current picked item
             //selectedItem = myItemList[moveCount];
             //equipItem(selectedItem);
@@ -161,15 +161,15 @@ namespace Sprint0
             frame++;
             if (frame == 0)
             {
-                PickingSourceRec = new Rectangle(519, 137, 16, 16);//red box
+                //PickingSourceRec = new Rectangle(519, 137, 16, 16);//red box
             }
             else if (frame == 3)
             {
-                PickingSourceRec = new Rectangle(5, 15, 1, 1); // drak
+                //PickingSourceRec = new Rectangle(5, 15, 1, 1); // drak
             }
             else
             {
-                PickingSourceRec = new Rectangle(536, 137, 16, 16); //blue box
+                //PickingSourceRec = new Rectangle(536, 137, 16, 16); //blue box
                 frame = 0;
             }
         }

@@ -50,6 +50,7 @@ namespace Sprint0.GameStates
             myHud.Draw(x, y);
             map.Draw(450, 450);
             myGame.link.myInventory.showItem();
+            myGame.link.myInventory.pickingItem(0);
 
         }
 

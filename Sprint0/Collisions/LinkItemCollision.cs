@@ -68,22 +68,21 @@ namespace Sprint0.Collisions
                         {
                             myPlayer.myInventory.addItem(item);
                         }
-
                     }
                     if (item.GetType() == map.GetType() && !item.isPickedUp())
                     {
                         myPlayer.MapOrCompassGet(0);
-                        myPlayer.myInventory.addItem(item);
+                        //myPlayer.myInventory.addItem(item);
                     }
                     if (item.GetType() == compass.GetType() && !item.isPickedUp())
                     {
                         myPlayer.MapOrCompassGet(GetCompass);
-                        myPlayer.myInventory.addItem(item);
+                        //myPlayer.myInventory.addItem(item);
                     }
                     if (item.GetType() == woodenSwordItem.GetType() && !item.isPickedUp())
                     {
                         myPlayer.PickBuyWeapon("WoodenSword");
-                        myPlayer.myInventory.addItem(item);
+                        //myPlayer.myInventory.addItem(item);
                     }
 
                     // check the collison occuring direction

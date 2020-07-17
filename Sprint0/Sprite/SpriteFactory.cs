@@ -129,6 +129,8 @@ namespace Sprint0.Sprite
         /* public static DoorBUpSprite DoorBUp = new DoorBUpSprite();
          public static DoorBDownSprite DoorBDown = new DoorBDownSprite();*/
 
+        public static PickBoxSprite PickBox = new PickBoxSprite();
+
         public static void LoadContent(SpriteBatch batch, ContentManager content)
         {
             LoadLinkContent(batch, content);
@@ -240,6 +242,7 @@ namespace Sprint0.Sprite
             ItemList.Add(HudHalfHeart);
             ItemList.Add(HudEmptyHeart);
             ItemList.Add(HudHeart);
+            PickBox.LoadContent(batch, content.Load<Texture2D>("Hud"));
 
         }
 

@@ -93,6 +93,7 @@
     <Compile Include="Enemies\Dodongo.cs" />
     <Compile Include="Enemies\Goriya.cs" />
     <Compile Include="Enemies\Keese.cs" />
+    <Compile Include="Items\PickBox.cs" />
     <Compile Include="Items\WoodenSwordItem.cs" />
     <Compile Include="NPCs\Flame.cs" />
     <Compile Include="NPCs\Merchant.cs" />
@@ -161,6 +162,7 @@
     <Compile Include="Rooms\ExRoom.cs" />
     <Compile Include="Rooms\RoomItem.cs" />
     <Compile Include="Sound\Sound.cs" />
+    <Compile Include="Sprite\Accessory\PickBoxSprite.cs" />
     <Compile Include="Sprite\BlockSprites\LockSprite.cs" />
     <Compile Include="Sprite\DoorSprites\DoorKDownSprite.cs" />
     <Compile Include="Sprite\DoorSprites\DoorKLeftSprite.cs" />
