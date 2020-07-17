@@ -36,8 +36,8 @@ namespace Sprint0.Sprite
         public static EnemyAquaSprite EnemyAqua = new EnemyAquaSprite(0, 0);
         public static EnemyDodongoSprite EnemyDodongo = new EnemyDodongoSprite(0, 0);
         public static EnemyOldmanSprite EnemyOldman = new EnemyOldmanSprite(0, 0);
-        public static NPCMerchantSprite NPCMerchant = new NPCMerchantSprite(0, 0);
-        public static NPCFlameSprite NPCFlame = new NPCFlameSprite(0, 0);
+        public static NPCMerchantSprite NPCMerchant = new NPCMerchantSprite();
+        public static NPCFlameSprite NPCFlame = new NPCFlameSprite();
 
         public static PlayerWoodenSwordSprite PlayerWoodenSwordRight = new PlayerWoodenSwordSprite(SpriteEffects.None, 0);
         public static PlayerWoodenSwordSprite PlayerWoodenSwordLeft = new PlayerWoodenSwordSprite(SpriteEffects.FlipHorizontally, 0);
@@ -231,8 +231,6 @@ namespace Sprint0.Sprite
             ItemList.Add(HudHalfHeart);
             ItemList.Add(HudEmptyHeart);
             ItemList.Add(HudHeart);
-            //ItemList.Add(HudMapPiece);
-            //ItemList.Add(HudPoint);
 
         }
 

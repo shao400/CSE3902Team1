@@ -49,7 +49,7 @@ namespace Sprint0.xml
                 {
                     roomID = Int32.Parse(reader.GetAttribute("i"), cultures);
                 }
-                else if(reader.Name == "enemy" || reader.Name == "door" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior" || reader.Name == "wallCube" || reader.Name =="hud" || reader.Name == "src")
+                else if(reader.Name == "enemy" || reader.Name == "door" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior" || reader.Name == "wallCube" || reader.Name =="hud" || reader.Name == "src" || reader.Name == "NPC")
                 {                   
                     int xpos = Int32.Parse(reader.GetAttribute("xpos"), cultures);
                     int ypos = Int32.Parse(reader.GetAttribute("ypos"), cultures);
