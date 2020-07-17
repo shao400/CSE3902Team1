@@ -12,10 +12,7 @@ namespace Sprint0.Sprite
         Rectangle destinationRec;
 
 
-        public NPCMerchantSprite(int x, int y)
-        {
-            destinationRec = new Rectangle(x, y, 45, 45);
-        }
+        
 
 
 
@@ -32,6 +29,7 @@ namespace Sprint0.Sprite
 
         public void Draw(Vector2 location, bool isDamaged)
         {
+            destinationRec = new Rectangle((int)location.X, (int)location.Y, 45, 45);
             mySpriteBatch.Begin();
             mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor);
             mySpriteBatch.End();

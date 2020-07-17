@@ -8,7 +8,7 @@ namespace Sprint0.NPCs
     {
 
 
-        private static ISprite MerchantSprite;
+        private static ISprite FlameSprite;
         private int xPosition;
         private int yPosition;
         private Rectangle destinationRec;
@@ -17,7 +17,7 @@ namespace Sprint0.NPCs
         {
             xPosition = x;
             yPosition = y;
-            MerchantSprite = new NPCMerchantSprite(x, y);
+            FlameSprite = SpriteFactory.NPCFlame;
             destinationRec = new Rectangle(x, y, 45, 45);
         }
 
@@ -26,7 +26,7 @@ namespace Sprint0.NPCs
         public void Draw()
         {
             Vector2 location = new Vector2(xPosition, yPosition);
-            MerchantSprite.Draw(location, false);
+            FlameSprite.Draw(location, false);
         }
 
         public void Update()

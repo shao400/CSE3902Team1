@@ -17,7 +17,7 @@ namespace Sprint0.NPCs
         {
             xPosition = x;
             yPosition = y;
-            MerchantSprite = new NPCMerchantSprite(x, y);
+            MerchantSprite = SpriteFactory.NPCMerchant;
             destinationRec = new Rectangle(x, y, 45, 45);
         }
 
