@@ -9,6 +9,7 @@
 	<block type="BlockAllLeft" xpos="0" ypos="264" />
 	<block type="BlockLeft" xpos="672" ypos="264" />
 	<block type="BlockLeft" xpos="672" ypos="458" />
+	<item type="WoodenSword" xpos="350" ypos="450"/>
 	<NPC type="Merchant" xpos="350" ypos="350" />
 	<NPC type="Flame" xpos="250" ypos="350" />
 	<NPC type="Flame" xpos="450" ypos="350" />

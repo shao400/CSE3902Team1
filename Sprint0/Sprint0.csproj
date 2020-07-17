@@ -92,6 +92,7 @@
     <Compile Include="Enemies\Dodongo.cs" />
     <Compile Include="Enemies\Goriya.cs" />
     <Compile Include="Enemies\Keese.cs" />
+    <Compile Include="Items\WoodenSwordItem.cs" />
     <Compile Include="NPCs\Flame.cs" />
     <Compile Include="NPCs\Merchant.cs" />
     <Compile Include="Enemies\Moblin.cs" />

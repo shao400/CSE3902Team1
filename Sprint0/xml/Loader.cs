@@ -135,6 +135,9 @@ namespace Sprint0.xml
                         case "Bow":
                             items.Add(new Bow(xpos, ypos));
                             break;
+                        case "WoodenSword":
+                            items.Add(new WoodenSwordItem(xpos, ypos));
+                            break;
                         case "HeartContainer":
                             items.Add(new HeartContainer(xpos, ypos));
                             break;

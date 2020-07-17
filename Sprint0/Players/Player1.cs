@@ -5,6 +5,7 @@ using System;
 using Sprint0.Projectile;
 using System.Collections.Generic;
 using Sprint0.Interfaces;
+using System.Runtime.CompilerServices;
 
 // Author: Lufei Ouyang
 namespace Sprint0.Player
@@ -49,7 +50,7 @@ namespace Sprint0.Player
         private int keyCount;
         public Boolean arrowCdDone;
         public Boolean shootCdDone;
-        private string currentWp;
+        private Queue<string> currentWp;
 
         public Player1(int x, int y, int widthG, int heightG, Sound s, Game1 game) 
         {
@@ -61,7 +62,7 @@ namespace Sprint0.Player
             sound = s;
             MaxHealth = 2;
             hp = MaxHealth;
-            ruppyCount = 0;
+            ruppyCount = 100;
             bombCount = 0;
             keyCount = 0;
             GetMap = false;
@@ -71,7 +72,8 @@ namespace Sprint0.Player
             currentStatus = status.standing;
             currentSprite = SpriteFactory.LinkNoneStandingRight;
             myInventory = new Inventory(this, game);
-            currentWp = "WoodenSword";
+            currentWp = new Queue<string>();
+            currentWp.Enqueue("WoodenSword");
             projectiles = new Queue<IProjectile>();
             projectiles.Enqueue(currentProjectile);
             linkBlockCollision = new LinkBlockCollision(this);
@@ -94,8 +96,19 @@ namespace Sprint0.Player
         }
         public string GetCurrentWeapon()
         {
+            if (currentWp.Count!=0) {
+                return currentWp.Peek();
+            }
+            else
+            {
+                return "None";
+            }
+        }
 
-            return currentWp;
+        public void PickBuyWeapon(String weaponGet)
+        {
+            currentWp.Enqueue(weaponGet);
+            if (weaponGet == "WoodenSword") ruppyCount -= 20;
         }
         public IProjectile getPlayerItem()
         {
@@ -204,7 +217,7 @@ namespace Sprint0.Player
         }
         public void Attack()
         {
-            if (currentWp == "WoodenSword") { 
+            if (currentWp.Peek() == "WoodenSword") { 
             currentStatus = status.attacking;
             if (currentFacing == facing.up) { currentProjectile = new WoodenSword(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
             else if (currentFacing == facing.down) { currentProjectile = new WoodenSword(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
@@ -216,14 +229,14 @@ namespace Sprint0.Player
         }
         public void Shoot() 
         {
-            if (currentWp =="WoodenSword") {
+            if (currentWp.Peek() =="WoodenSword") {
                 if (currentFacing == facing.up) { currentProjectile = new WoodenSword(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
                 else if (currentFacing == facing.down) { currentProjectile = new WoodenSword(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
                 else if (currentFacing == facing.right) { currentProjectile = new WoodenSword(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
                 else if (currentFacing == facing.left) { currentProjectile = new WoodenSword(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
                 currentProjectile.explo(0);
                 currentProjectile.Shoot();
-                currentWp = "None";
+                currentWp.Dequeue();
             }
         }
         public void Bomb() {
