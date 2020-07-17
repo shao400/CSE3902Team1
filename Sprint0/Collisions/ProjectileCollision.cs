@@ -37,7 +37,7 @@ namespace Sprint0.Collisions
                             if (thisProjectile.IsExplode() == 0)
                             {
                                 thisProjectile.explo(1);
-                               
+                              
                             }
 
                         }
@@ -46,6 +46,7 @@ namespace Sprint0.Collisions
                             if (thisProjectile.IsExplode() == 0)
                             {
                                 thisProjectile.explo(1);
+                                
                             }
                         }
                     }
@@ -56,6 +57,7 @@ namespace Sprint0.Collisions
                             if (thisProjectile.IsExplode() == 0)
                             {
                                 thisProjectile.explo(1);
+                               
                             }
                         }
                         else //from left
@@ -63,6 +65,7 @@ namespace Sprint0.Collisions
                             if (thisProjectile.IsExplode() == 0)
                             {
                                 thisProjectile.explo(1);
+                                
                                 Console.WriteLine("xxxxx");
                             }
                         }

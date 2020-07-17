@@ -47,6 +47,7 @@ namespace Sprint0.Projectile
         {
 
         }
+
         public abstract void explo(int i);
         public abstract int IsExplode();
         public abstract void Explode();

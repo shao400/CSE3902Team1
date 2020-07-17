@@ -17,7 +17,8 @@ namespace Sprint0.Commands
 
         public void Execute()
         {
-            myGame.link.Shoot();
+            myGame.link.Shoot(); 
+
         }
     }
 }

@@ -38,6 +38,7 @@ namespace Sprint0.Player
         private Boolean GetCompass;
 
         Game1 myGame;
+        public Queue<IProjectile> projectiles;
         public IProjectile currentProjectile;
         private ProjectileCollision projectileCollision;
         private Sound sound;
@@ -46,6 +47,9 @@ namespace Sprint0.Player
         private int ruppyCount;
         public int bombCount;
         private int keyCount;
+        public Boolean arrowCdDone;
+        public Boolean shootCdDone;
+        private string currentWp;
 
         public Player1(int x, int y, int widthG, int heightG, Sound s, Game1 game) 
         {
@@ -67,7 +71,9 @@ namespace Sprint0.Player
             currentStatus = status.standing;
             currentSprite = SpriteFactory.LinkNoneStandingRight;
             myInventory = new Inventory(this, game);
-
+            currentWp = "WoodenSword";
+            projectiles = new Queue<IProjectile>();
+            projectiles.Enqueue(currentProjectile);
             linkBlockCollision = new LinkBlockCollision(this);
             linkItemCollision = new LinkItemCollision(this);
             linkEnemyCollision = new LinkEnemyCollision(this);
@@ -89,9 +95,8 @@ namespace Sprint0.Player
         public string GetCurrentWeapon()
         {
 
-            return currentProjectile.GetType().ToString();
+            return currentWp;
         }
-
         public IProjectile getPlayerItem()
         {
             return currentProjectile;
@@ -199,6 +204,7 @@ namespace Sprint0.Player
         }
         public void Attack()
         {
+            if (currentWp == "WoodenSword") { 
             currentStatus = status.attacking;
             if (currentFacing == facing.up) { currentProjectile = new WoodenSword(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
             else if (currentFacing == facing.down) { currentProjectile = new WoodenSword(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
@@ -207,15 +213,18 @@ namespace Sprint0.Player
             currentProjectile.Stab();
             sound.swordSlash();
         }
+        }
         public void Shoot() 
         {
-            if (currentFacing == facing.up) { currentProjectile = new WoodenSword(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
-            else if (currentFacing == facing.down) { currentProjectile = new WoodenSword(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
-            else if (currentFacing == facing.right) { currentProjectile = new WoodenSword(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
-            else if (currentFacing == facing.left) { currentProjectile = new WoodenSword(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
-            currentProjectile.explo(0);
-            currentProjectile.Shoot();
-
+            if (currentWp =="WoodenSword") {
+                if (currentFacing == facing.up) { currentProjectile = new WoodenSword(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
+                else if (currentFacing == facing.down) { currentProjectile = new WoodenSword(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
+                else if (currentFacing == facing.right) { currentProjectile = new WoodenSword(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
+                else if (currentFacing == facing.left) { currentProjectile = new WoodenSword(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
+                currentProjectile.explo(0);
+                currentProjectile.Shoot();
+                currentWp = "None";
+            }
         }
         public void Bomb() {
             currentStatus = status.booming;
@@ -225,14 +234,18 @@ namespace Sprint0.Player
         }
         public void Arrow()
         {
-            currentStatus = status.arrowShooting;
-            if (currentFacing == facing.up) { currentProjectile = new Arrow(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
-            else if (currentFacing == facing.down) { currentProjectile = new Arrow(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
-            else if (currentFacing == facing.right) { currentProjectile = new Arrow(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
-            else if (currentFacing == facing.left) { currentProjectile = new Arrow(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
-            currentProjectile.explo(0);
-            currentProjectile.Shoot();
+          
+                currentStatus = status.arrowShooting;
+                if (currentFacing == facing.up) { currentProjectile = new Arrow(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
+                else if (currentFacing == facing.down) { currentProjectile = new Arrow(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
+                else if (currentFacing == facing.right) { currentProjectile = new Arrow(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
+                else if (currentFacing == facing.left) { currentProjectile = new Arrow(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
+                currentProjectile.explo(0);
+                currentProjectile.Shoot();
 
+                
+            
+            
         }
 
         public void takeDmg()

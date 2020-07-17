@@ -14,6 +14,7 @@ namespace Sprint0.Projectile
     {
         private ISprite WoodenSwordSprite;
         private int counter;
+        private const int attackDistance = 15;
         int myDirection;
         Vector2 location;
 
@@ -123,14 +124,33 @@ namespace Sprint0.Projectile
         public override void Stab()
         {
             currentStatus = status.stab;
-            if (myDirection == 0) WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordUp;
-            else if (myDirection == 1) WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordDown;
-            else if (myDirection == 2) WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordRight;
-            else if (myDirection == 3) WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordLeft;
-            Vector2 location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);
+            // if (myDirection == 0) WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordUp;
+            //else if (myDirection == 1) WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordDown;
+            //else if (myDirection == 2) WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordRight;
+            // else if (myDirection == 3) WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordLeft;
+            // Vector2 location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);
+            if (myDirection == 0)
+            {
+                WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingUp;
+                location = new Vector2(position.X, position.Y - attackDistance);
+            }
+            else if (myDirection == 1)
+            {
+                WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingDown;
+                location = new Vector2(position.X, position.Y + attackDistance);
+            }
+            else if (myDirection == 2)
+            {
+                WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingRight;
+                location = new Vector2(position.X + attackDistance, position.Y);
+            }
+            else if (myDirection == 3)
+            {
+                WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingLeft;
+                location = new Vector2(position.X - attackDistance, position.Y);
+            }
             WoodenSwordSprite.Draw(location, false);
         }
-
 
     }
 }

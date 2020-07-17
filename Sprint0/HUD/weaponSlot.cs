@@ -28,7 +28,7 @@ namespace Sprint0.HUD
             //None, WoodenSword, WhiteSword, MagicalSword, MagicalRod
             Vector2 location = new Vector2(x, y);
             //System.Diagnostics.Debug.WriteLine(_link.states.GetCurrentWeapon());
-            woodenSword.Draw(location, false);//temp
+            
             if (_link.GetCurrentWeapon().Equals("None", System.StringComparison.Ordinal))
             {
                 
