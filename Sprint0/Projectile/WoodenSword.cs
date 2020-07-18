@@ -30,7 +30,8 @@ namespace Sprint0.Projectile
             myDirection = direction;
             this.SetPosition(player.xAxis, player.yAxis);
             currentStatus = status.none;
-            
+            this.type = "arrow";
+
         }
         public override void Update()
         {

@@ -19,6 +19,7 @@ namespace Sprint0.Interfaces
         int ShotDistance { get; set; }
         bool IsDone { get; set; }
         void Update();
+        string Type();
 
     }
 }
