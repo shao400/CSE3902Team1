@@ -1,5 +1,6 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
 <<<<<<< HEAD
+<<<<<<< HEAD
 "C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Blocks.png","C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Blocks.xnb","TextureProcessor","Texture2DContent",77269,5826381,0.4569873
 "C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/boss.png","C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/bin/Windows/Content/boss.xnb","TextureProcessor","Texture2DContent",22391,584981,0.0219334
 "C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Credits1.spritefont","C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Credits1.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21521,0.1888162
@@ -34,6 +35,8 @@ Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Siz
 "C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Sounds/SwordSlash.wav","C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Sounds/SwordSlash.xnb","SoundEffectProcessor","SoundEffectContent",8598,8658,0.1112591
 "C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/winning.png","C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/bin/Windows/Content/winning.xnb","TextureProcessor","Texture2DContent",25350,706577,0.0224765
 =======
+=======
+>>>>>>> parent of 7142580... fix bomb bug
 "D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Blocks.png","D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Blocks.xnb","TextureProcessor","Texture2DContent",77269,5826381,0.2354021
 "D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/boss.png","D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/bin/Windows/Content/boss.xnb","TextureProcessor","Texture2DContent",22391,584981,0.0139661
 "D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Credits1.spritefont","D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Credits1.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21521,0.1386241
@@ -67,4 +70,7 @@ Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Siz
 "D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Sword_Shoot.wav","D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Sounds/LOZ_Sword_Shoot.xnb","SoundEffectProcessor","SoundEffectContent",18712,18772,0.0977392
 "D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/SwordSlash.wav","D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Sounds/SwordSlash.xnb","SoundEffectProcessor","SoundEffectContent",8598,8658,0.0987362
 "D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/winning.png","D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/bin/Windows/Content/winning.xnb","TextureProcessor","Texture2DContent",25350,706577,0.0199473
+<<<<<<< HEAD
+>>>>>>> parent of 7142580... fix bomb bug
+=======
 >>>>>>> parent of 7142580... fix bomb bug

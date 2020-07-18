@@ -5,6 +5,7 @@
   <Config />
   <SourceFiles>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Blocks.png</File>
     <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/boss.png</File>
     <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Credits1.spritefont</File>
@@ -39,6 +40,8 @@
     <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/Sounds/SwordSlash.wav</File>
     <File>C:/Users/zina2/Documents/GitHub/CSE3902Team1/Sprint0/Content/winning.png</File>
 =======
+=======
+>>>>>>> parent of 7142580... fix bomb bug
     <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Blocks.png</File>
     <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/boss.png</File>
     <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Credits1.spritefont</File>
@@ -72,6 +75,9 @@
     <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Sword_Shoot.wav</File>
     <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/SwordSlash.wav</File>
     <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/winning.png</File>
+<<<<<<< HEAD
+>>>>>>> parent of 7142580... fix bomb bug
+=======
 >>>>>>> parent of 7142580... fix bomb bug
   </SourceFiles>
   <DestFiles>
