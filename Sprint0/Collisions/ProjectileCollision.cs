@@ -2,6 +2,7 @@
 using Sprint0.Interfaces;
 using System;
 using System.Collections.Generic;
+using Sprint0.Projectile;
 
 //currently not used, since item would not collition with enemy or blocks right now. May update future
 
@@ -43,9 +44,7 @@ namespace Sprint0.Collisions
                         }
                         else
                         {
-                            s.enemyHit();
-                            
-
+                            s.enemyHit();                           
                         }
 
 
@@ -67,10 +66,14 @@ namespace Sprint0.Collisions
                 intersectionRectangle = Rectangle.Intersect(thisRectangle, blockRectangle);
                 if (!intersectionRectangle.IsEmpty && block.GetType() != "Water")
                 {
-                            if (thisProjectile.IsExplode() == 0)
-                            {
-                                thisProjectile.explo(1);
-                            }
+                    if (thisProjectile.IsExplode() == 0)
+                    {
+                        thisProjectile.explo(1);
+                    }
+                    //else if (thisProjectile.IsExplode() == 1)
+                   // {
+                    //    thisProjectile.SetPosition(thisRectangle.X);
+                    //}
                             
                        
                     break;//once link has collision with one block, no need to detect other blocks

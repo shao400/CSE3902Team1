@@ -15,6 +15,8 @@ namespace Sprint0.Interfaces
         void explo(int i);
         int IsExplode();
         Rectangle GetHitBox();
+        Vector2 GetPosition();
+        void SetPosition(int x, int y);
         int Speed { get; set; }
         int ShotDistance { get; set; }
         bool IsDone { get; set; }

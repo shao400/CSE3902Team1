@@ -18,12 +18,13 @@ namespace Sprint0.Projectile
         private const int attackDistance = 15;
         int myDirection;
         Vector2 location;
-        Vector2 moveVector;
         int totalDistance;
+        int moveDistanceY;
+        int moveDistanceX;
 
         private enum status
         {
-            shoot, back, none
+            shoot, explode, none
         }
         private status currentStatus;
         public Boomrang(Player1 player, int direction)
@@ -37,41 +38,25 @@ namespace Sprint0.Projectile
         }
         public override void Update()
         {
-            if (totalDistance <= 300)
-            {
-                currentStatus = status.shoot;
-                BoomrangSprite.Update();
-                counter++;
+            if (currentStatus == status.shoot)
+            { 
+                ShotDistance = 5; 
             }
-            else if (totalDistance <=600)
-            {
-                currentStatus = status.back;
-                BoomrangSprite.Update();
-                counter++;
-            } else { 
-                BoomrangSprite.Update(); 
-                currentStatus = status.none; 
-                counter = 0;
-            }
-            
-            switch (currentStatus)
-            {
-                case status.shoot:
-                    ShotDistance += 5;
-                    totalDistance = totalDistance + ShotDistance;
-                    break;
-                case status.back:
-                    moveVector = new Vector2(player.GetRectangle().X - position.X, player.GetRectangle().Y - position.Y);
-                    position.X += moveVector.X;
-                    position.Y += moveVector.Y;
-                    break;
-                default:
-                    break;
-            }
-            this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), 24, 24);
 
-            // Console.WriteLine(this.rec.ToString());
-
+            else if (currentStatus == status.explode && (int)this.player.GetRectangle().X - (int)position.X <15 && (int)this.player.GetRectangle().X - (int)position.X >-15 && (int)this.player.GetRectangle().Y - (int)position.Y<15&& (int)this.player.GetRectangle().Y - (int)position.Y >-15)
+            {
+                this.GetPlayerLoction();
+                
+                currentStatus = status.none;
+            }
+            else if (currentStatus == status.explode)
+            {                
+                this.GetPlayerLoction();                
+                moveDistanceX = (int)location.X - (int)position.X;
+                moveDistanceY = (int)location.Y - (int)position.Y;
+            }
+            BoomrangSprite.Update();
+            this.hitBox = new Rectangle(Convert.ToInt32(position.X), Convert.ToInt32(position.Y), 24, 24);
         }
         public void GetPlayerLoction()
         {
@@ -79,36 +64,70 @@ namespace Sprint0.Projectile
         }
         public override void Shoot()
         {
+
             if (myDirection == 0) { 
                 BoomrangSprite = SpriteFactory.PlayerBoomrangShootingUp;
-                location = new Vector2(position.X, position.Y - ShotDistance);
+                position.X -=ShotDistance;
             }
             else if (myDirection == 1) {
                 BoomrangSprite = SpriteFactory.PlayerBoomrangShootingDown;
-                location = new Vector2(position.X, position.Y + ShotDistance);
+                position.Y += ShotDistance;
             }
             else if (myDirection == 2) {
                 BoomrangSprite = SpriteFactory.PlayerBoomrangShootingRight;
-                location = new Vector2(position.X + ShotDistance, position.Y);
+                position.X += ShotDistance;
             }
             else if (myDirection == 3) {
                 BoomrangSprite = SpriteFactory.PlayerBoomrangShootingLeft;
-                location = new Vector2(position.X - ShotDistance, position.Y);
+                position.X -= ShotDistance;
             }
-            BoomrangSprite.Draw(location, false);
-            
+            BoomrangSprite.Draw(position, false); 
         }
-        
+
         public override void Explode()
         {
-            /*WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordExploding;
-            //location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);
-            WoodenSwordSprite.Update();
-            WoodenSwordSprite.Draw(location, false);*/
+            if (moveDistanceX > 0)
+            {
+                position.X += 5;
+            }
+            else
+            {
+                position.X -= 5;
+            }
+
+            if (moveDistanceY > 0)
+            {
+                position.Y += 5;
+            }
+            else
+            {
+                position.Y -= 5;
+            }
+            /*if (myDirection == 0)
+            {
+                BoomrangSprite = SpriteFactory.PlayerBoomrangShootingUp; 
+                position = new Vector2(position.X, position.Y - moveDistanceY);
+            }
+            if (myDirection == 1)
+            {
+                BoomrangSprite = SpriteFactory.PlayerBoomrangShootingDown;
+                position = new Vector2(position.X, position.Y + moveDistanceY);
+            }
+            if (myDirection == 2)
+            {
+                BoomrangSprite = SpriteFactory.PlayerBoomrangShootingRight;
+                position = new Vector2(position.X + moveDistanceX, position.Y);
+            }
+            if (myDirection == 3)
+            {
+                BoomrangSprite = SpriteFactory.PlayerBoomrangShootingLeft;
+                position = new Vector2(position.X - moveDistanceX, position.Y);
+            }*/ 
+            BoomrangSprite.Draw(position, false);
         }
         public override int IsExplode()
         {
-            if (currentStatus == status.back)
+            if (currentStatus == status.explode)
             {
                 return 1;
             }
@@ -125,7 +144,7 @@ namespace Sprint0.Projectile
         {
             if (i == 1)
             {
-                currentStatus = status.back;
+                currentStatus = status.explode;
             }
             else if (i == 0)
             {
@@ -139,33 +158,7 @@ namespace Sprint0.Projectile
         }
         public override void Stab()
         {
-            /*currentStatus = status.stab;
-            // if (myDirection == 0) WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordUp;
-            //else if (myDirection == 1) WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordDown;
-            //else if (myDirection == 2) WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordRight;
-            // else if (myDirection == 3) WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordLeft;
-            // Vector2 location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);
-            if (myDirection == 0)
-            {
-                WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingUp;
-                location = new Vector2(position.X, position.Y - attackDistance);
-            }
-            else if (myDirection == 1)
-            {
-                WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingDown;
-                location = new Vector2(position.X, position.Y + attackDistance);
-            }
-            else if (myDirection == 2)
-            {
-                WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingRight;
-                location = new Vector2(position.X + attackDistance, position.Y);
-            }
-            else if (myDirection == 3)
-            {
-                WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingLeft;
-                location = new Vector2(position.X - attackDistance, position.Y);
-            }
-            WoodenSwordSprite.Draw(location, false);*/
+            throw new NotImplementedException();
         }
 
     }

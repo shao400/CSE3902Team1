@@ -41,7 +41,7 @@ namespace Sprint0.Projectile
 
         public Vector2 GetPosition()
         {
-            return this.position;
+            return position;
         }
         public void Stop()
         {
