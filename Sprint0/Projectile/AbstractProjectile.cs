@@ -17,6 +17,7 @@ namespace Sprint0.Projectile
         internal IPlayer player;
         internal Rectangle hitBox;
         internal int damage;
+        internal string type;
 
         public bool IsDone { get; set; }
         public int Size { get; set; }
@@ -27,7 +28,10 @@ namespace Sprint0.Projectile
             this.position.X = x;
             this.position.Y = y;
         }
-
+        public string Type()
+        {
+            return type;
+        }
         public virtual int GetDamage()
         {
             int damage = this.damage;
@@ -41,7 +45,7 @@ namespace Sprint0.Projectile
 
         public Vector2 GetPosition()
         {
-            return position;
+            return this.position;
         }
         public void Stop()
         {

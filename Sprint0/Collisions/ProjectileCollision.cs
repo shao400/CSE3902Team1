@@ -1,8 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
+using Sprint0.Commands;
 using Sprint0.Interfaces;
 using System;
 using System.Collections.Generic;
-using Sprint0.Projectile;
 
 //currently not used, since item would not collition with enemy or blocks right now. May update future
 
@@ -34,7 +34,7 @@ namespace Sprint0.Collisions
 
 
 
-                    if (thisProjectile.IsExplode() == 0)
+                    if (thisProjectile.IsExplode() == 0 && thisProjectile.Type() != "bomb")
                     {
                         enemy.Damaged();
                         thisProjectile.explo(1);
@@ -44,21 +44,24 @@ namespace Sprint0.Collisions
                         }
                         else
                         {
-<<<<<<< HEAD
-                            s.enemyHit();                           
-=======
                             s.enemyHit();
-                            
 
-<<<<<<< HEAD
->>>>>>> parent of 7142580... fix bomb bug
-=======
->>>>>>> parent of 7142580... fix bomb bug
+
                         }
+                    } 
+                    else if (thisProjectile.Type() == "bomb" && thisProjectile.IsExplode() == 1)
+                    {
+                        enemy.Damaged();
+                        if (enemy.GetHealth() == 0)
+                        {
+                            s.enemyDie();
+                        }
+                        else
+                        {
+                            s.enemyHit();
 
 
-                        break;//once link has collision with one block, no need to detect other blocks
-
+                        }
                     }
                 }
             }
@@ -73,16 +76,12 @@ namespace Sprint0.Collisions
 
                 blockRectangle = block.GetRectangle();
                 intersectionRectangle = Rectangle.Intersect(thisRectangle, blockRectangle);
-                if (!intersectionRectangle.IsEmpty && block.GetType() != "Water")
+                if (!intersectionRectangle.IsEmpty && block.GetType() != "Water" && thisProjectile.Type() != "bomb")
                 {
-                    if (thisProjectile.IsExplode() == 0)
-                    {
-                        thisProjectile.explo(1);
-                    }
-                    //else if (thisProjectile.IsExplode() == 1)
-                   // {
-                    //    thisProjectile.SetPosition(thisRectangle.X);
-                    //}
+                            if (thisProjectile.IsExplode() == 0)
+                            {
+                                thisProjectile.explo(1);
+                            }
                             
                        
                     break;//once link has collision with one block, no need to detect other blocks

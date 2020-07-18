@@ -296,17 +296,76 @@ C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\D
 C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Link_Die.xnb
 C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_LowHealth.xnb
 C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Sword_Shoot.xnb
-C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Labyrinth.wma
-C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Labyrinth.xnb
-C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Arrow_Boomerang.xnb
-C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Bomb_Blow.xnb
-C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Bomb_Drop.xnb
-C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Door_Unlock.xnb
-C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Enemy_Die.xnb
-C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Enemy_Hit.xnb
-C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Get_Heart.xnb
-C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Get_Item.xnb
-C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Get_Rupee.xnb
-C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Link_Die.xnb
-C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_LowHealth.xnb
-C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Sword_Shoot.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Labyrinth.wma
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Labyrinth.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Arrow_Boomerang.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Bomb_Blow.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Bomb_Drop.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Door_Unlock.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Enemy_Die.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Enemy_Hit.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Get_Heart.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Get_Item.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Get_Rupee.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Link_Die.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_LowHealth.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Sword_Shoot.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\items.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Intro.wma
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Intro.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Labyrinth.wma
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Labyrinth.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Arrow_Boomerang.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Bomb_Blow.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Bomb_Drop.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Door_Unlock.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Enemy_Die.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Enemy_Hit.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Get_Heart.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Get_Item.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Get_Rupee.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Link_Die.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Link_Hurt.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_LowHealth.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_MagicalRod.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Sword_Shoot.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Sounds\SwordSlash.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Blocks.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\boss.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Credits1.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\dungeon.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\enemy.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\enemy2.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\game_over.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Hud.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\item.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\link.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\luigi.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\Map.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\npc.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\pause.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\shoot.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Content\winning.xnb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Sprint0.exe
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\Sprint0.pdb
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\obj\x86\Debug\Sprint0.csprojAssemblyReference.cache
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\obj\x86\Debug\Sprint0.csproj.CoreCompileInputs.cache
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\obj\x86\Debug\Sprint0.csproj.CopyComplete
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\obj\x86\Debug\Sprint0.exe
+C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\obj\x86\Debug\Sprint0.pdb
