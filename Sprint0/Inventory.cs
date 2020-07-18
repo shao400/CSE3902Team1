@@ -129,6 +129,8 @@ namespace Sprint0
             ISprite sprite = getItemSprite(item);
             Vector2 dest = new Vector2(210, 120); // equipment position
             sprite.Draw(dest, false);
+
+            //equipment item (bomb, bow, huixuanbiao)
             // TODO
             // make link actually EQUIP this item
 
@@ -143,14 +145,14 @@ namespace Sprint0
             {
                 moveCountTot = 0;
             }
-            if(moveCountTot > myItemList.Count-1)
+            if (moveCountTot > myItemList.Count)
             {
-                moveCountTot = myItemList.Count-1;
+                moveCountTot = myItemList.Count;
             }
             Vector2 dest = new Vector2(390 + moveCountTot * 50, 110);
             pickboxSprite.Draw(dest, false);
 
-            equipItem(moveCountTot);
+            if (myItemList.Count != 0) equipItem(moveCountTot);
             // return the current picked item
             //selectedItem = myItemList[moveCount];
             //equipItem(selectedItem);
