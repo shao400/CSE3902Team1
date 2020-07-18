@@ -39,11 +39,13 @@ namespace Sprint0.Projectile
             if (totalDistance <= 300)
             {
                 currentStatus = status.shoot;
+                counter++;
             }
-            else if (totalDistance==300)
+            else if (totalDistance <=600)
             {
                 currentStatus = status.back;
-            }
+                counter++;
+            } else { currentStatus = status.none; counter = 0; }
             
             switch (currentStatus)
             {
