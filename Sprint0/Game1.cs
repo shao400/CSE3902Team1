@@ -35,7 +35,7 @@ namespace Sprint0
         private XmlReader reader;
         private List<SoundEffect> sounds;
         private Sound soundEffect;
-        private Song intro;
+        private Song intro, Labyrinth;
         List<object> controllerList; // could also be defined as List <IController>
         public Hud hud;
         public IGameState currentState;
@@ -81,8 +81,12 @@ namespace Sprint0
             sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Link_Die"));
             sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_LowHealth"));
             sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Sword_Shoot"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Get_Item"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Door_Unlock"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Get_Rupee"));
             intro = Content.Load<Song>("Sounds/intro");
-            MediaPlayer.Play(intro);
+            Labyrinth = Content.Load<Song>("Sounds/Labyrinth");
+            MediaPlayer.Play(Labyrinth);
             MediaPlayer.IsRepeating = true;
             soundEffect = new Sound(sounds);
             controllerList = new List<object>();

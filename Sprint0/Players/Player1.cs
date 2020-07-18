@@ -281,6 +281,7 @@ namespace Sprint0.Player
             else
             {
                 sound.linkDie();
+
                 myGame.currentState = myGame.stateList[5];
             }
         }
@@ -307,6 +308,7 @@ namespace Sprint0.Player
 
         public void getRuppy()
         {
+            sound.getRupee();
             if (ruppyCount<999)
             {
                 ruppyCount++;
@@ -315,6 +317,7 @@ namespace Sprint0.Player
 
         public void getBomb()
         {
+            sound.getItem();
             if (bombCount < 99)
             {
                 bombCount++;
@@ -322,6 +325,7 @@ namespace Sprint0.Player
         }
         public void getKey()
         {
+            sound.getItem();
             if (keyCount < 99)
             {
                 keyCount++;
@@ -371,6 +375,7 @@ namespace Sprint0.Player
                     if (block.GetRectangle().X == x && block.GetRectangle().Y == y)
                     {
                         myGame.roomList[myGame.currentRoom.Connectors[getFacing()]].blockList.Remove(block);
+                        sound.doorUnlock();
                         break;
                     }
                     
@@ -401,12 +406,12 @@ namespace Sprint0.Player
             itemC.Add(ruppyCount);
             itemC.Add(keyCount);
             itemC.Add(bombCount);
-            
             return itemC;
         }
 
         public void MapOrCompassGet(int MorC)
         {
+            sound.getItem();
             if (MorC == 0) {
                 GetMap = true;
             }else if (MorC ==1)

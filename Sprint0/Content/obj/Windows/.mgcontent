@@ -20,12 +20,16 @@
     <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/pause.jpg</File>
     <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/shoot.png</File>
     <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/Intro.mp3</File>
+    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/Labyrinth.mp3</File>
     <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Arrow_Boomerang.wav</File>
     <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Bomb_Blow.wav</File>
     <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Bomb_Drop.wav</File>
+    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Door_Unlock.wav</File>
     <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Enemy_Die.wav</File>
     <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Enemy_Hit.wav</File>
     <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Get_Heart.wav</File>
+    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Get_Item.wav</File>
+    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Get_Rupee.wav</File>
     <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Link_Die.wav</File>
     <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Link_Hurt.wav</File>
     <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_LowHealth.wav</File>
@@ -44,6 +48,10 @@
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File>item.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

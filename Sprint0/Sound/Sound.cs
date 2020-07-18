@@ -23,6 +23,9 @@ namespace Sprint0
         private SoundEffect LinkDie;
         private SoundEffect LowHealth;
         private SoundEffect SwordShoot;
+        private SoundEffect GetItem;
+        private SoundEffect DoorUnlock;
+        private SoundEffect GetRupee;
         public Sound(List<SoundEffect> s)
         {
             if (s != null)
@@ -39,6 +42,9 @@ namespace Sprint0
                 LinkDie = s[9];
                 LowHealth = s[10];
                 SwordShoot = s[11];
+                GetItem = s[12];
+                DoorUnlock = s[13];
+                GetRupee = s[14];
 
             }
             
@@ -92,6 +98,19 @@ namespace Sprint0
         {
             SwordShoot.Play();
         }
+        public void getItem()
+        {
+            GetItem.Play();
+        }
+        public void doorUnlock()
+        {
+            DoorUnlock.Play();
+        }
+        public void getRupee()
+        {
+            GetRupee.Play();
+        }
+
 
     }
 }

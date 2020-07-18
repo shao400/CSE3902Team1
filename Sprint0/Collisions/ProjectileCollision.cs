@@ -27,61 +27,31 @@ namespace Sprint0.Collisions
                 intersectionRectangle = Rectangle.Intersect(thisRectangle, enemyRectangle);
                 if (!intersectionRectangle.IsEmpty && enemy.GetHealth() > 0)
                 {
-                    enemy.Damaged();
-                    
-                    if (enemy.GetHealth() == 0)
-                    {
-                        s.enemyDie();
-                    }
-                    else
-                    {
-                        s.enemyHit();
-                    }
-                    // check the collison occuring direction
-                    if ((intersectionRectangle.Width >= intersectionRectangle.Height)) // from up or down
-                    {
 
-                        if (thisRectangle.Y > enemyRectangle.Y) // from down
+
+
+
+
+
+                    if (thisProjectile.IsExplode() == 0)
+                    {
+                        enemy.Damaged();
+                        thisProjectile.explo(1);
+                        if (enemy.GetHealth() == 0)
                         {
+                            s.enemyDie();
+                        }
+                        else
+                        {
+                            s.enemyHit();
                             
-                            if (thisProjectile.IsExplode() == 0)
-                            {
-                                thisProjectile.explo(1);
-                              
-                            }
 
                         }
-                        else //from up
-                        {
-                            if (thisProjectile.IsExplode() == 0)
-                            {
-                                thisProjectile.explo(1);
-                                
-                            }
-                        }
-                    }
-                    else //from right or left
-                    {
-                        if (thisRectangle.X > enemyRectangle.X)//from right
-                        {
-                            if (thisProjectile.IsExplode() == 0)
-                            {
-                                thisProjectile.explo(1);
-                               
-                            }
-                        }
-                        else //from left
-                        {
-                            if (thisProjectile.IsExplode() == 0)
-                            {
-                                thisProjectile.explo(1);
-                                
-                                Console.WriteLine("xxxxx");
-                            }
-                        }
-                    }
-                    break;//once link has collision with one block, no need to detect other blocks
 
+
+                        break;//once link has collision with one block, no need to detect other blocks
+
+                    }
                 }
             }
         }
@@ -97,43 +67,12 @@ namespace Sprint0.Collisions
                 intersectionRectangle = Rectangle.Intersect(thisRectangle, blockRectangle);
                 if (!intersectionRectangle.IsEmpty && block.GetType() != "Water")
                 {
-                    // check the collison occuring direction
-                    if ((intersectionRectangle.Width >= intersectionRectangle.Height)) // from up or down
-                    {
-                        if (thisRectangle.Y > blockRectangle.Y) // from down
-                        {
                             if (thisProjectile.IsExplode() == 0)
                             {
                                 thisProjectile.explo(1);
                             }
                             
-                        }
-                        else //from up
-                        {
-                            if (thisProjectile.IsExplode() == 0)
-                            {
-                                thisProjectile.explo(1);
-                            }
-                        }
-                    }
-                    else //from right or left
-                    {
-                        if (thisRectangle.X > blockRectangle.X)//from right
-                        {
-                            if (thisProjectile.IsExplode() == 0)
-                            {
-                                thisProjectile.explo(1);
-                            }
-                        }
-                        else //from left
-                        {
-                            if (thisProjectile.IsExplode() == 0)
-                            {
-                                thisProjectile.explo(1);
-                                Console.WriteLine("xxxxx");
-                            }
-                        }
-                    }
+                       
                     break;//once link has collision with one block, no need to detect other blocks
                 
             }

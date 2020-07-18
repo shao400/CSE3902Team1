@@ -28,8 +28,11 @@ namespace Sprint0.Enemies
 
         public override void Draw()
         {
-            Vector2 location = new Vector2(xPosition, yPosition);
-            ZolSprite.Draw(location, false);
+            if (this.GetHealth() > 0)
+            {
+                Vector2 location = new Vector2(xPosition, yPosition);
+                ZolSprite.Draw(location, false);
+            }
         }
 
         public override void Update()
