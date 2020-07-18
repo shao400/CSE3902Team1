@@ -15,7 +15,7 @@ namespace Sprint0.Collisions
         {
             thisProjectile = projectile;
         }
-        public void ProjectileEnemiesCollisionTest(List<IEnemy> enemies)
+        public void ProjectileEnemiesCollisionTest(List<IEnemy> enemies, Sound s)
         {
             Rectangle thisRectangle = thisProjectile.GetHitBox();
             Rectangle enemyRectangle;
@@ -28,12 +28,22 @@ namespace Sprint0.Collisions
                 if (!intersectionRectangle.IsEmpty && enemy.GetHealth() > 0)
                 {
                     enemy.Damaged();
+                    
+                    if (enemy.GetHealth() == 0)
+                    {
+                        s.enemyDie();
+                    }
+                    else
+                    {
+                        s.enemyHit();
+                    }
                     // check the collison occuring direction
                     if ((intersectionRectangle.Width >= intersectionRectangle.Height)) // from up or down
                     {
 
                         if (thisRectangle.Y > enemyRectangle.Y) // from down
                         {
+                            
                             if (thisProjectile.IsExplode() == 0)
                             {
                                 thisProjectile.explo(1);

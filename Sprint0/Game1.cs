@@ -72,6 +72,15 @@ namespace Sprint0
             sounds.Add(Content.Load<SoundEffect>("Sounds/SwordSlash"));
             sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Link_Hurt"));
             sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_MagicalRod"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Arrow_Boomerang"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Bomb_Blow"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Bomb_Drop"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Enemy_Die"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Enemy_Hit"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Get_Heart"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Link_Die"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_LowHealth"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Sword_Shoot"));
             intro = Content.Load<Song>("Sounds/intro");
             MediaPlayer.Play(intro);
             MediaPlayer.IsRepeating = true;

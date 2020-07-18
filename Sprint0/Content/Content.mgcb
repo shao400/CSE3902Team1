@@ -194,17 +194,71 @@
 /processorParam:Quality=Best
 /build:Sounds/Intro.mp3
 
+#begin Sounds/LOZ_Arrow_Boomerang.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/LOZ_Arrow_Boomerang.wav
+
+#begin Sounds/LOZ_Bomb_Blow.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/LOZ_Bomb_Blow.wav
+
+#begin Sounds/LOZ_Bomb_Drop.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/LOZ_Bomb_Drop.wav
+
+#begin Sounds/LOZ_Enemy_Die.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/LOZ_Enemy_Die.wav
+
+#begin Sounds/LOZ_Enemy_Hit.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/LOZ_Enemy_Hit.wav
+
+#begin Sounds/LOZ_Get_Heart.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/LOZ_Get_Heart.wav
+
+#begin Sounds/LOZ_Link_Die.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/LOZ_Link_Die.wav
+
 #begin Sounds/LOZ_Link_Hurt.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:Sounds/LOZ_Link_Hurt.wav
 
+#begin Sounds/LOZ_LowHealth.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/LOZ_LowHealth.wav
+
 #begin Sounds/LOZ_MagicalRod.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:Sounds/LOZ_MagicalRod.wav
+
+#begin Sounds/LOZ_Sword_Shoot.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/LOZ_Sword_Shoot.wav
 
 #begin Sounds/SwordSlash.wav
 /importer:WavImporter

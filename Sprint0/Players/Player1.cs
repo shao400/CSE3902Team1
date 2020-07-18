@@ -229,6 +229,7 @@ namespace Sprint0.Player
         }
         public void Shoot() 
         {
+            sound.swordShoot();
             if (currentWp.Peek() =="WoodenSword") {
                 if (currentFacing == facing.up) { currentProjectile = new WoodenSword(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
                 else if (currentFacing == facing.down) { currentProjectile = new WoodenSword(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
@@ -240,6 +241,7 @@ namespace Sprint0.Player
             }
         }
         public void Bomb() {
+            sound.bombDrop();
             currentStatus = status.booming;
             currentProjectile=new Bomb(this,0);
             currentProjectile.Shoot();
@@ -247,7 +249,7 @@ namespace Sprint0.Player
         }
         public void Arrow()
         {
-          
+                 sound.arrowAndBoomerang();
                 currentStatus = status.arrowShooting;
                 if (currentFacing == facing.up) { currentProjectile = new Arrow(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
                 else if (currentFacing == facing.down) { currentProjectile = new Arrow(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
@@ -258,7 +260,7 @@ namespace Sprint0.Player
         }
         public void Boomrang()
         {
-
+            sound.arrowAndBoomerang();
             currentStatus = status.boomrangShooting;
             if (currentFacing == facing.up) { currentProjectile = new Boomrang(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
             else if (currentFacing == facing.down) { currentProjectile = new Boomrang(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
@@ -278,20 +280,24 @@ namespace Sprint0.Player
             }
             else
             {
+                sound.linkDie();
                 myGame.currentState = myGame.stateList[5];
             }
         }
 
         public void getHealed()
         {
+            sound.getHeart();
             if (hp<MaxHealth)
             {
+                
                 hp++;
             }
         }
 
         public void increaseMaxHp()
         {
+            sound.getHeart();
             const int HpBound = 6;
             if (MaxHealth<HpBound) {
                 MaxHealth += 2;
@@ -448,19 +454,23 @@ namespace Sprint0.Player
         }
         public void UseFirstItem()
         {
-            sound.swordSlash();
+            
         }
         public void UseSecondItem()
         {
-            sound.swordSlash();
+            
         }
         public void UseThirdItem()
         {
-            sound.swordSlash();
+           
         }
         public void UseFourthItem()
         {
-            sound.magicRod();
+           
+        }
+        public Sound GetSound()
+        {
+            return sound;
         }
 
         //collision tests
@@ -476,7 +486,7 @@ namespace Sprint0.Player
         public void ProjectileEnemiesCollisionTest(List<IEnemy> enemies)
         {
             projectileCollision = new ProjectileCollision(currentProjectile);
-            projectileCollision.ProjectileEnemiesCollisionTest(enemies);
+            projectileCollision.ProjectileEnemiesCollisionTest(enemies, sound);
         }
 
         public void EnemyCollisionTest(List<IEnemy> enemies)

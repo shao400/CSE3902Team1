@@ -64,6 +64,7 @@ namespace Sprint0.Projectile
 
         public override void Explode()
         {
+            player.GetSound().bombBlow();
             BombSprite = SpriteFactory.PlayerBombExploding;        
             BombSprite.Draw(position, false);
         }
@@ -71,6 +72,7 @@ namespace Sprint0.Projectile
         {
             if (currentStatus == status.explode)
             {
+
                 return 1;
             }
             else if (currentStatus == status.shoot)
@@ -84,8 +86,10 @@ namespace Sprint0.Projectile
         }
         public override void explo(int i)
         {
+
             if (i == 1)
             {
+                
                 currentStatus = status.explode;
             }
             else if (i == 0)

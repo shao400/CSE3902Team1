@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/shao4/Documents/GitHub/CSE3902Team1/Sprint0/Content/Credits1.spritefont</SourceFile>
-  <SourceTime>2020-07-12T01:42:44.2711671+08:00</SourceTime>
-  <DestFile>C:/Users/shao4/Documents/GitHub/CSE3902Team1/Sprint0/Content/bin/Windows/Credits1.xnb</DestFile>
-  <DestTime>2020-07-12T01:58:10.7419642+08:00</DestTime>
+  <SourceFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Credits1.spritefont</SourceFile>
+  <SourceTime>2020-07-11T04:18:30.5719707-04:00</SourceTime>
+  <DestFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/bin/Windows/Credits1.xnb</DestFile>
+  <DestTime>2020-07-18T02:22:00.8377256-04:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
-  <ImporterTime>2018-12-09T00:35:54+08:00</ImporterTime>
+  <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>
-  <ProcessorTime>2018-12-09T00:35:54+08:00</ProcessorTime>
+  <ProcessorTime>2018-12-08T11:35:54-05:00</ProcessorTime>
   <Parameters>
     <Key>PremultiplyAlpha</Key>
     <Value>True</Value>

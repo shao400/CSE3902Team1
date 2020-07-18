@@ -17,6 +17,7 @@ namespace Sprint0
         void Up();
         void Down();
         void Attack();
+        Sound GetSound();
         void UseFirstItem();
         void UseSecondItem();
         void UseThirdItem();  //number of methods depends on number of items

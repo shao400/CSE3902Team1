@@ -9,6 +9,7 @@ namespace Sprint0.Enemies
         public void Damaged()
         {
             health--;
+            
         }
         public int GetHealth()
         {

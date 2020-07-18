@@ -268,3 +268,12 @@ C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Conte
 C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Hud.xnb
 C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\pause.xnb
 C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\winning.xnb
+E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Arrow_Boomerang.xnb
+E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Bomb_Blow.xnb
+E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Bomb_Drop.xnb
+E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Enemy_Die.xnb
+E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Enemy_Hit.xnb
+E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Get_Heart.xnb
+E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Link_Die.xnb
+E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_LowHealth.xnb
+E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Sword_Shoot.xnb
