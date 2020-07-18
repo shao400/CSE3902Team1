@@ -5,7 +5,7 @@ namespace Sprint0.Enemies
 {
     public abstract class AbstractEnemies : IEnemy
     {
-        internal int health = 2;
+        internal int health = 1;
         public void Damaged()
         {
             health--;
