@@ -316,7 +316,7 @@ namespace Sprint0.Player
         }
         public void getKey()
         {
-            if (ruppyCount < 99)
+            if (keyCount < 99)
             {
                 keyCount++;
             }
