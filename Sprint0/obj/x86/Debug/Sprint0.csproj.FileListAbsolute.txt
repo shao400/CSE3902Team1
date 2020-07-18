@@ -369,3 +369,17 @@ C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6e
 C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\obj\x86\Debug\Sprint0.csproj.CopyComplete
 C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\obj\x86\Debug\Sprint0.exe
 C:\Users\zina2\Desktop\CSE3902Team1\CSE3902Team1-7142580e0826f414aeb566ec5a46c6ea778b86d2\Sprint0\obj\x86\Debug\Sprint0.pdb
+C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Labyrinth.wma
+C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Labyrinth.xnb
+C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Arrow_Boomerang.xnb
+C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Bomb_Blow.xnb
+C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Bomb_Drop.xnb
+C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Door_Unlock.xnb
+C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Enemy_Die.xnb
+C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Enemy_Hit.xnb
+C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Get_Heart.xnb
+C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Get_Item.xnb
+C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Get_Rupee.xnb
+C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Link_Die.xnb
+C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_LowHealth.xnb
+C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Sword_Shoot.xnb
