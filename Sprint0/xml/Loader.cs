@@ -6,8 +6,6 @@ using Sprint0.Enemies;
 using Sprint0.Block;
 using Sprint0.Items;
 using Sprint0.Interfaces;
-using Sprint0.Rooms;
-using Sprint0.WallCube;
 using Sprint0.HUD;
 using Sprint0.NPCs;
 using System.Globalization;
@@ -24,9 +22,9 @@ namespace Sprint0.xml
             List<IEnemy> enemies = new List<IEnemy>();
             List<IBlock> blocks = new List<IBlock>();
             List<IItem> items = new List<IItem>();
-            List<IRoom> rooms = new List<IRoom>();
+            //List<IRoom> rooms = new List<IRoom>();
             List<IHud> huds = new List<IHud>();
-            List<IWallCube> cubes = new List<IWallCube>();
+            //List<IWallCube> cubes = new List<IWallCube>();
             List<IDoor> doors = new List<IDoor>();
             List<INPC> NPCs = new List<INPC>();
             reader.MoveToContent();
@@ -92,30 +90,6 @@ namespace Sprint0.xml
                             break;
                         case "Water":
                             blocks.Add(new Water(xpos, ypos));
-                            break;
-                        case "RoomBlock":
-                            rooms.Add(new RoomBlock(xpos, ypos));
-                            break;
-                        case "RoomEnemy":
-                            rooms.Add(new RoomEnemy(xpos, ypos));
-                            break;
-                        case "RoomItem":
-                            rooms.Add(new RoomItem(xpos, ypos));
-                            break;
-                        case "exRoom":
-                            rooms.Add(new ExRoom(xpos, ypos));
-                            break;
-                        case "WallTop":
-                            cubes.Add(new WallTop(xpos, ypos));
-                            break;
-                        case "WallDown":
-                            cubes.Add(new WallDown(xpos, ypos));
-                            break;
-                        case "DoorLeft":
-                            cubes.Add(new DoorLeft(xpos, ypos));
-                            break;
-                        case "DoorRight":
-                            cubes.Add(new DoorRight(xpos, ypos));
                             break;
                         case "Heart":
                             items.Add(new Heart(xpos, ypos));
@@ -213,7 +187,7 @@ namespace Sprint0.xml
                 }
             }
 
-            return new roomProperties(roomID, blocks, items, enemies, rooms, huds, cubes, source, Con, doors, NPCs);
+            return new roomProperties(roomID, blocks, items, enemies, huds, source, Con, doors, NPCs);
         }
     }
 }

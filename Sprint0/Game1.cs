@@ -155,6 +155,7 @@ namespace Sprint0
             currentState.Update();
             base.Update(gameTime);
             //link.myInventory.Update();
+            //put this line into update() of pause.cs so Game1 can be simple
         }
         /// <summary>
         /// This is called when the game should draw itself.
@@ -168,6 +169,7 @@ namespace Sprint0
             if(currentState == stateList[3])
             {
                 //this.link.myInventory.showItem();
+                //put this line into draw() of pause.cs so Game1 can be simple
             }           
         }
       

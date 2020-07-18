@@ -89,17 +89,17 @@ namespace Sprint0.Sprite
         public static ISprite Lock = new LockSprite();
 
         //Room Author Zhizhou He
-        public static List<ISprite> RoomList = new List<ISprite>();
+/*        public static List<ISprite> RoomList = new List<ISprite>();
         public static ISprite RoomBlock = new RoomBlockSprite();
         public static ISprite RoomItem = new RoomItemSprite();
         public static ISprite RoomEnemy = new RoomEnemySprite();
-        public static ISprite RoomExterior = new RoomExteriorSprite();
+        public static ISprite RoomExterior = new RoomExteriorSprite();*/
 
-        public static List<ISprite> WallCubeList = new List<ISprite>();
+/*        public static List<ISprite> WallCubeList = new List<ISprite>();
         public static ISprite WallTop = new WallTopSprite();
         public static ISprite WallDown = new WallDownSprite();
         public static ISprite DoorLeft = new DoorLeftSprite();
-        public static ISprite DoorRight = new DoorRightSprite();
+        public static ISprite DoorRight = new DoorRightSprite();*/
 
         //Hud Author: Zilin Shao
         public static List<IHud> HudList = new List<IHud>();
@@ -137,9 +137,9 @@ namespace Sprint0.Sprite
             LoadItemContent(batch, content);
             LoadEnemyContent(batch, content);
             LoadBlockContent(batch, content);
-            LoadRoomContent(batch, content);
+            //LoadRoomContent(batch, content);
             LoadHudContent(batch, content);
-            LoadWallCubeContent(batch, content);
+            //LoadWallCubeContent(batch, content);
             LoadDoorContent(batch, content);
         }
 
@@ -276,7 +276,7 @@ namespace Sprint0.Sprite
             BlockList.Add(BlockC);
         }
 
-        private static void LoadRoomContent(SpriteBatch batch, ContentManager content)
+/*        private static void LoadRoomContent(SpriteBatch batch, ContentManager content)
         {
             RoomBlock.LoadContent(batch, content.Load<Texture2D>("Blocks"));
             RoomItem.LoadContent(batch, content.Load<Texture2D>("Blocks"));
@@ -286,8 +286,8 @@ namespace Sprint0.Sprite
             RoomList.Add(RoomItem);
             RoomList.Add(RoomEnemy);
             RoomList.Add(RoomExterior);
-        }
-        private static void LoadWallCubeContent(SpriteBatch batch, ContentManager content)
+        }*/
+/*        private static void LoadWallCubeContent(SpriteBatch batch, ContentManager content)
         {
             WallTop.LoadContent(batch, content.Load<Texture2D>("Blocks"));
             WallDown.LoadContent(batch, content.Load<Texture2D>("Blocks"));
@@ -298,7 +298,7 @@ namespace Sprint0.Sprite
             WallCubeList.Add(DoorLeft);
             WallCubeList.Add(DoorRight);
 
-        }
+        }*/
 
         private static void LoadDoorContent(SpriteBatch batch, ContentManager content)
         {
