@@ -34,8 +34,7 @@ namespace Sprint0.Projectile
             myDirection = direction;
             this.SetPosition(player.xAxis, player.yAxis);
             currentStatus = status.none;
-            this.type = "Boomrang";
-
+            
         }
         public override void Update()
         {

@@ -44,7 +44,13 @@ namespace Sprint0.Collisions
                         }
                         else
                         {
+<<<<<<< HEAD
                             s.enemyHit();                           
+=======
+                            s.enemyHit();
+                            
+
+>>>>>>> parent of 7142580... fix bomb bug
                         }
 
 

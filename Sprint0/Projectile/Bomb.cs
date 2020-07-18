@@ -26,9 +26,8 @@ namespace Sprint0.Projectile
             this.player = player;
             this.SetPosition(player.xAxis, player.yAxis);
             currentStatus = status.none;
-            type = "bomb";
 
-        }  
+        }
         public override void Update()
         {            
             if (counter < 20)
@@ -47,7 +46,7 @@ namespace Sprint0.Projectile
             }
             //if (currentStatus == status.wait) { }
             //else if (currentStatus == status.explode) { }
-            this.hitBox = new Rectangle(Convert.ToInt32(position.X), Convert.ToInt32(position.Y), 135, 135);
+            this.hitBox = new Rectangle(Convert.ToInt32(position.X), Convert.ToInt32(position.Y), 45, 23);
             if (counter >= 20 && counter < 50)
             {
                 BombSprite.Update();
