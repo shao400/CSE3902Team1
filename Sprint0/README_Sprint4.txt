@@ -5,27 +5,25 @@ Author: Chuwen Sun, Gengyi Qin, Ouyang Lufei, Zhizhou He, Zinan Zhang, Zilin Sha
 Date: 6/27/2020
 
 
-Overview of Sprint3: 
+Overview of Sprint4: 
 -----------------------------------
-1. Collisions between player and enemy, player and blocks. 
-2. Xml loader for loading room into the game.
-3. New concrete classes for enemy, item and block.
-4. Started to work on HUDs and sounds(Sprint 4).
+1. HUD/Inventory and maps
+2. First level of the game
+3. Projectile classes and collisions
+4. Sounds added
 5. Warnings fixes, redundant code deleted and adjusted.
-
-We added and adjusted many things in this project in one day according to the feedback on Sprint 2. We probably don't have enough time to complete everything mentioned in the feedback before Sprint 3 is 
-due, but we will make them up in sprint 4.
 
 Program Control: 
 -----------------------------------
 W,A,S,D and arrow keys---Walk
-Z/N---Attack
+Z---Stab
+N---Shoot the sword  //may be a bit different from the original game.
 1,2,3---Switch weapons
 
 LeftClick(Mouse)---Previous Room
-RightClick(Mouse)---Next Room
-R---Reset game
-Q---Quit game
+RightClick(Mouse)---Next Room  //Left for test purposes
+R---Restart game
+Q/Esc---Quit game
 
 Suppressed Warnings:
 -----------------------------------
@@ -46,5 +44,4 @@ Known bugs for Sprint3
 TO-DOs:
 -----------------------------------
 1. Several enemy sprite sheets need to be updated and reversed
-2. Boss/Dragon fireballs and Flame need to be added, they are not in any sprite sheets that's currently available
-3. Need NPC/Boss interface and sort some of the enemy classes into them, as NPC/Boss may have different behavior from enemies
+2. Boss/Dragon fireballs need to be added, they are not in any sprite sheets that's currently available
