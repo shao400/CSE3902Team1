@@ -26,26 +26,30 @@ namespace Sprint0.GameStates
         }
         public void Draw()
         {
-            myGame.currentRoom.Draw();            
+            myGame.currentRoom.Draw();
             myHud.Draw(x, y);
-            if (myGame.link.GetCurrentStatus() == "attacking")
-            {
-                myGame.link.getPlayerItem().Stab();
-            }
-            else if (myGame.link.GetCurrentStatus() == "arrowShooting")
-            {
-                myGame.link.getPlayerItem().Shoot();
-            }
-            else if (myGame.link.GetCurrentStatus() == "booming")
-            {
-                myGame.link.getPlayerItem().Shoot();
-            }
-            else if (myGame.link.GetCurrentStatus() == "boomrangShooting")
-            {
-                myGame.link.getPlayerItem().Shoot();
-            }
+            if (myGame.link.GetCurrentStatus() == "attacking") { myGame.link.getPlayerItem().Stab(); }
+            if (myGame.link.GetCurrentStatus() == "arrowShooting") { myGame.link.getPlayerItem().Shoot(); }
+            if (myGame.link.GetCurrentStatus() == "booming") { myGame.link.getPlayerItem().Shoot(); }
+            if (myGame.link.GetCurrentStatus() == "boomrangShooting") { myGame.link.getPlayerItem().Shoot(); }
+            /*switch (myGame.link.GetCurrentStatus()) {
+                case "attacking":
+                    myGame.link.getPlayerItem().Stab();
+                    break;
+                case "arrowShooting":
+                    myGame.link.getPlayerItem().Shoot();
+                    break;
+                case "booming":
+                    myGame.link.getPlayerItem().Shoot();
+                    break;
+                case "boomrangShooting":
+                    myGame.link.getPlayerItem().Shoot();
+                    break;
+                default:
+                    break;
+            } */
 
-            else if (myGame.link.getPlayerItem().IsExplode() == 0)
+            if (myGame.link.getPlayerItem().IsExplode() == 0)
             {
                 myGame.link.getPlayerItem().Shoot();
             }

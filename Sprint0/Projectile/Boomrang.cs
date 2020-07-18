@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using Sprint0.Commands;
 using Sprint0.Interfaces;
 using Sprint0.Player;
 using Sprint0.Sprite;
@@ -39,19 +40,25 @@ namespace Sprint0.Projectile
             if (totalDistance <= 300)
             {
                 currentStatus = status.shoot;
+                BoomrangSprite.Update();
                 counter++;
             }
             else if (totalDistance <=600)
             {
                 currentStatus = status.back;
+                BoomrangSprite.Update();
                 counter++;
-            } else { currentStatus = status.none; counter = 0; }
+            } else { 
+                BoomrangSprite.Update(); 
+                currentStatus = status.none; 
+                counter = 0;
+            }
             
             switch (currentStatus)
             {
                 case status.shoot:
-                        ShotDistance += 5;
-                        totalDistance = totalDistance + ShotDistance;
+                    ShotDistance += 5;
+                    totalDistance = totalDistance + ShotDistance;
                     break;
                 case status.back:
                     moveVector = new Vector2(player.GetRectangle().X - position.X, player.GetRectangle().Y - position.Y);
@@ -61,7 +68,7 @@ namespace Sprint0.Projectile
                 default:
                     break;
             }
-            this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), 45, 23);
+            this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), 24, 24);
 
             // Console.WriteLine(this.rec.ToString());
 
