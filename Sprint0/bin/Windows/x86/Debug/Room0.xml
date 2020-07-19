@@ -4,6 +4,11 @@
 	<player xpos="150" ypos="300" />
 	<item type="HeartContainer" xpos="150" ypos="354"/>
 	<item type="HeartContainer" xpos="250" ypos="354"/>
+	<item type="HeartContainer" xpos="350" ypos="354"/>
+	<item type="HeartContainer" xpos="450" ypos="354"/>
+	<item type="HeartContainer" xpos="550" ypos="354"/>
+	<item type="HeartContainer" xpos="650" ypos="354"/>
+	<item type="HeartContainer" xpos="550" ypos="454"/>
 	<item type="Heart" xpos="150" ypos="400"/>
 	<item type="Bow" xpos="250" ypos="400"/>
 	<item type="Key" xpos="150" ypos="254"/>

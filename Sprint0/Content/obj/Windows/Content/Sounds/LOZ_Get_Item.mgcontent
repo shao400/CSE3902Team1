@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Get_Item.wav</SourceFile>
-  <SourceTime>2020-07-18T03:20:23.6913097-04:00</SourceTime>
-  <DestFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Sounds/LOZ_Get_Item.xnb</DestFile>
-  <DestTime>2020-07-19T01:48:21.4320753-04:00</DestTime>
+  <SourceFile>C:/Users/shao4/Documents/GitHub/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Get_Item.wav</SourceFile>
+  <SourceTime>2020-07-18T22:17:12.7414894+08:00</SourceTime>
+  <DestFile>C:/Users/shao4/Documents/GitHub/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Sounds/LOZ_Get_Item.xnb</DestFile>
+  <DestTime>2020-07-20T01:45:07.8414366+08:00</DestTime>
   <Importer>WavImporter</Importer>
-  <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
+  <ImporterTime>2018-12-09T00:35:54+08:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>
-  <ProcessorTime>2018-12-08T11:35:54-05:00</ProcessorTime>
+  <ProcessorTime>2018-12-09T00:35:54+08:00</ProcessorTime>
   <Parameters>
     <Key>Quality</Key>
     <Value>Best</Value>

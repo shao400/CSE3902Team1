@@ -318,7 +318,7 @@ namespace Sprint0.Player
         public void increaseMaxHp()
         {
             sound.getHeart();
-            const int HpBound = 6;
+            const int HpBound = 16;
             if (MaxHealth < HpBound)
             {
                 MaxHealth += 2;
