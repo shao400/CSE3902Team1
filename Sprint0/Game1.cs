@@ -92,7 +92,7 @@ namespace Sprint0
             controllerList = new List<object>();
             controllerList.Add(new KeyboardC(this));
             controllerList.Add(new MouseC(this));
-            link = new Player1(150, 300, 48, 48, soundEffect, this);
+            link = new Player1(150, 300, 20, 20, soundEffect, this);
             hud = new Hud(this);
             this.IsMouseVisible = true;
             base.Initialize();
