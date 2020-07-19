@@ -63,8 +63,8 @@ namespace Sprint0.Player
             MaxHealth = 2;
             hp = MaxHealth;
             ruppyCount = 100;
-            bombCount = 0;
-            keyCount = 0;
+            bombCount = 50;
+            keyCount = 50;
             GetMap = false;
             GetCompass = false;
             currentFacing = facing.right;
