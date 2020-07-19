@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
 using Sprint0.Player;
 using Sprint0.Sprite;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Projectile
 {
@@ -29,7 +30,7 @@ namespace Sprint0.Projectile
             myDirection = direction;
             this.SetPosition(player.xAxis, player.yAxis);
             currentStatus = status.none;
-            this.type = "arrow";
+            this.type = StringHolder.Arrow;
             
         }
         public override void Update()

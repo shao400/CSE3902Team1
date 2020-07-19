@@ -3,6 +3,7 @@ using Sprint0.Commands;
 using Sprint0.Interfaces;
 using System;
 using System.Collections.Generic;
+using Sprint0.UtilityClass;
 
 //currently not used, since item would not collition with enemy or blocks right now. May update future
 
@@ -34,7 +35,7 @@ namespace Sprint0.Collisions
 
 
 
-                    if (thisProjectile.IsExplode() == 0 && thisProjectile.Type() != "bomb")
+                    if (thisProjectile.IsExplode() == 0 && thisProjectile.Type() != StringHolder.Bomb)
                     {
                         enemy.Damaged();
                         thisProjectile.explo(1);
@@ -49,7 +50,7 @@ namespace Sprint0.Collisions
 
                         }
                     } 
-                    else if (thisProjectile.Type() == "bomb" && thisProjectile.IsExplode() == 1)
+                    else if (thisProjectile.Type() == StringHolder.Bomb && thisProjectile.IsExplode() == 1)
                     {
                         enemy.Damaged();
                         if (enemy.GetHealth() == 0)
@@ -76,7 +77,7 @@ namespace Sprint0.Collisions
 
                 blockRectangle = block.GetRectangle();
                 intersectionRectangle = Rectangle.Intersect(thisRectangle, blockRectangle);
-                if (!intersectionRectangle.IsEmpty && block.GetType() != "Water" && thisProjectile.Type() != "bomb")
+                if (!intersectionRectangle.IsEmpty && block.GetType() != StringHolder.WaterType && thisProjectile.Type() != StringHolder.Bomb)
                 {
                             if (thisProjectile.IsExplode() == 0)
                             {

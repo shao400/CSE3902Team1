@@ -10,7 +10,7 @@ namespace Sprint0.Commands
     class enterPause : ICommand
     {
         private Game1 myGame;
-        static int count = 0;
+        int count = 0;
 
         public enterPause(Game1 game)
         {

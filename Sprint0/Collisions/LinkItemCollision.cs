@@ -8,6 +8,7 @@ using Sprint0.HUD;
 using Sprint0.Interfaces;
 using Sprint0.Items;
 using Sprint0.Player;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Collisions
 {
@@ -91,7 +92,7 @@ namespace Sprint0.Collisions
                     }
                     if (item.GetType() == woodenSwordItem.GetType() && !item.isPickedUp())
                     {
-                        myPlayer.PickBuyWeapon("WoodenSword");
+                        myPlayer.PickBuyWeapon(StringHolder.WoodenSword);
                         //myPlayer.myInventory.addItem(item);
                     }
 

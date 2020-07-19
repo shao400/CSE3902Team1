@@ -177,7 +177,7 @@ namespace Sprint0
             {
                 moveCountTot = 0;
             }
-            if (moveCountTot == myItemList.Count)
+            if (moveCountTot == myItemList.Count && myItemList.Count != 0)
             {
                 moveCountTot = myItemList.Count - 1;
             }

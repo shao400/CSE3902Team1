@@ -6,6 +6,7 @@ using Sprint0.Projectile;
 using System.Collections.Generic;
 using Sprint0.Interfaces;
 using System.Runtime.CompilerServices;
+using Sprint0.UtilityClass;
 
 // Author: Lufei Ouyang
 namespace Sprint0.Player
@@ -73,7 +74,7 @@ namespace Sprint0.Player
             currentSprite = SpriteFactory.LinkNoneStandingRight;
             myInventory = new Inventory(this);
             currentWp = new Queue<string>();
-            currentWp.Enqueue("WoodenSword");
+            currentWp.Enqueue(StringHolder.WoodenSword);
             projectiles = new Queue<IProjectile>();
             projectiles.Enqueue(currentProjectile);
             linkBlockCollision = new LinkBlockCollision(this);
@@ -102,14 +103,14 @@ namespace Sprint0.Player
             }
             else
             {
-                return "None";
+                return StringHolder.None;
             }
         }
 
         public void PickBuyWeapon(String weaponGet)
         {
             currentWp.Enqueue(weaponGet);
-            if (weaponGet == "WoodenSword") ruppyCount -= 20;
+            if (weaponGet == StringHolder.WoodenSword) ruppyCount -= 20;
         }
         public IProjectile getPlayerItem()
         {
@@ -218,7 +219,7 @@ namespace Sprint0.Player
         }
         public void Attack()
         {
-            if (currentWp.Count!=0&&currentWp.Peek() == "WoodenSword")
+            if (currentWp.Count!=0&&currentWp.Peek() == StringHolder.WoodenSword)
             {
                 currentStatus = status.attacking;
                 if (currentFacing == facing.up) { currentProjectile = new WoodenSword(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
@@ -232,7 +233,7 @@ namespace Sprint0.Player
         public void Shoot()
         {
             sound.swordShoot();
-            if (currentWp.Count != 0 && currentWp.Peek() == "WoodenSword")
+            if (currentWp.Count != 0 && currentWp.Peek() == StringHolder.WoodenSword)
             {
                 if (currentFacing == facing.up) { currentProjectile = new WoodenSword(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
                 else if (currentFacing == facing.down) { currentProjectile = new WoodenSword(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
@@ -374,7 +375,7 @@ namespace Sprint0.Player
             }
             foreach (IBlock block in myGame.roomList[myGame.currentRoom.Connectors[getFacing()]].blockList)
             {
-                if (block.GetType() == "lock")
+                if (block.GetType() == StringHolder.LockType)
                 {
                     if (block.GetRectangle().X == x && block.GetRectangle().Y == y)
                     {
