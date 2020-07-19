@@ -17,6 +17,7 @@ using System.Xml;
 using Microsoft.Xna.Framework.Media;
 using Sprint0.GameStates;
 using Sprint0.HUD;
+using Sprint0.UtilityClass;
 
 namespace Sprint0
 {
@@ -92,7 +93,7 @@ namespace Sprint0
             controllerList = new List<object>();
             controllerList.Add(new KeyboardC(this));
             controllerList.Add(new MouseC(this));
-            link = new Player1(150, 300, 20, 20, soundEffect, this);
+            link = new Player1(IntegerHolder.linkInitialX, IntegerHolder.linkInitialY, IntegerHolder.linkHitBoxSize, IntegerHolder.linkHitBoxSize, soundEffect, this);
             hud = new Hud(this);
             this.IsMouseVisible = true;
             base.Initialize();
