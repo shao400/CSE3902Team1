@@ -218,7 +218,7 @@ namespace Sprint0.Player
         }
         public void Attack()
         {
-            if (currentWp.Peek() == "WoodenSword")
+            if (currentWp.Count!=0&&currentWp.Peek() == "WoodenSword")
             {
                 currentStatus = status.attacking;
                 if (currentFacing == facing.up) { currentProjectile = new WoodenSword(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
@@ -232,7 +232,7 @@ namespace Sprint0.Player
         public void Shoot()
         {
             sound.swordShoot();
-            if (currentWp.Peek() == "WoodenSword")
+            if (currentWp.Count != 0 && currentWp.Peek() == "WoodenSword")
             {
                 if (currentFacing == facing.up) { currentProjectile = new WoodenSword(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
                 else if (currentFacing == facing.down) { currentProjectile = new WoodenSword(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
