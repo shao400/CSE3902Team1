@@ -22,6 +22,7 @@ namespace Sprint0.Collisions
         private Bomb bomb = new Bomb(0, 0);
         private Bow bow = new Bow(0, 0);
         private Map map = new Map(0, 0);
+        private Boomerang boomerang = new Boomerang(0, 0);
         private Compass compass = new Compass(0, 0);
         private WoodenSwordItem woodenSwordItem = new WoodenSwordItem(0, 0);
         private const int GetCompass = 1;
@@ -74,7 +75,10 @@ namespace Sprint0.Collisions
                     {
                         myPlayer.myInventory.addItem(item);
                     }
-
+                    if (item.GetType() == boomerang.GetType() && !item.isPickedUp())
+                    {
+                        myPlayer.myInventory.addItem(item);
+                    }
                     if (item.GetType() == map.GetType() && !item.isPickedUp())
                     {
                         myPlayer.MapOrCompassGet(0);

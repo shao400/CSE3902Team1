@@ -8,7 +8,7 @@
 	<item type="Bow" xpos="250" ypos="400"/>
 	<item type="Key" xpos="150" ypos="254"/>
 	<item type="Arrow" xpos="250" ypos="254"/>
-	<item type="Bomb" xpos="350" ypos="254"/>
+	<item type="Boomerang" xpos="350" ypos="254"/>
 	<item type="Bomb" xpos="450" ypos="254"/>
 	<item type="Compass" xpos="350" ypos="400"/>
 	<item type="Map" xpos="450" ypos="400"/>

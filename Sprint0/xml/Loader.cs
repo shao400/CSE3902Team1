@@ -127,8 +127,8 @@ namespace Sprint0.xml
                         case "Triforce":
                             items.Add(new Triforce(xpos, ypos));
                             break;
-                        case "WBoomerang":
-                            items.Add(new WBoomerang(xpos, ypos));
+                        case "Boomerang":
+                            items.Add(new Boomerang(xpos, ypos));
                             break;
                         case "Merchant":
                             NPCs.Add(new Merchant(xpos, ypos));

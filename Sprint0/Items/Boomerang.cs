@@ -10,14 +10,14 @@ using Sprint0.Sprite;
 
 namespace Sprint0.Items
 {
-    class WBoomerang : IItem
+    class Boomerang : IItem
     {
-        private ItemWBoomerangSprite sprite = SpriteFactory.ItemWBoomerang;
+        private ItemBoomerangSprite sprite = SpriteFactory.ItemBoomerang;
         private int xAix;
         private int yAix;
         private bool picked;
 
-        public WBoomerang(int x, int y)
+        public Boomerang(int x, int y)
         {
             xAix = x;
             yAix = y;
