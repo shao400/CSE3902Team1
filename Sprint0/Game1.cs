@@ -35,6 +35,7 @@ namespace Sprint0
 
         private XmlReader reader;
         private List<SoundEffect> sounds;
+        private List<Song> songs;
         private Sound soundEffect;
         private Song intro, Labyrinth;
         List<object> controllerList; // could also be defined as List <IController>
@@ -70,6 +71,7 @@ namespace Sprint0
             graphics.ApplyChanges();
             //a way to modify screen size, better way probably exists
             sounds = new List<SoundEffect>();
+            songs = new List<Song>();
             sounds.Add(Content.Load<SoundEffect>("Sounds/SwordSlash"));
             sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Link_Hurt"));
             sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_MagicalRod"));
@@ -85,11 +87,28 @@ namespace Sprint0
             sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Get_Item"));
             sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Door_Unlock"));
             sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Get_Rupee"));
-            intro = Content.Load<Song>("Sounds/intro");
-            Labyrinth = Content.Load<Song>("Sounds/Labyrinth");
-            MediaPlayer.Play(Labyrinth);
-            MediaPlayer.IsRepeating = true;
-            soundEffect = new Sound(sounds);
+
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Boss_Scream1"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Boss_Scream2"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Boss_Scream3"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Fanfare"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Key_Appear"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Recorder"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Refill_Loop"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Secret"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Shield"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Shore"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Stairs"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Sword_Combined"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Text"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Text_Slow"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/Triforce"));
+            sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Candle"));
+
+            songs.Add(Content.Load<Song>("Sounds/intro"));
+            songs.Add(Content.Load<Song>("Sounds/Labyrinth"));
+            soundEffect = new Sound(sounds, songs);
+            soundEffect.labyrinth();
             controllerList = new List<object>();
             controllerList.Add(new KeyboardC(this));
             controllerList.Add(new MouseC(this));

@@ -299,7 +299,9 @@ namespace Sprint0.Player
             }
             else
             {
+                sound.pause();
                 sound.linkDie();
+
 
                 myGame.currentState = myGame.stateList[5];
             }
@@ -451,6 +453,8 @@ namespace Sprint0.Player
 
         public void winGame()
         {
+            sound.getTriforce();
+            sound.pause();
             myGame.currentState = myGame.stateList[6];
         }
 
@@ -526,7 +530,7 @@ namespace Sprint0.Player
 
         public void ItemCollisionTest(List<IItem> items)
         {
-            linkItemCollision.ItemCollision(items);
+            linkItemCollision.ItemCollision(items, sound);
         }
     }
 }
