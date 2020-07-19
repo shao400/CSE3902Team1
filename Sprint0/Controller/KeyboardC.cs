@@ -11,11 +11,11 @@ namespace Sprint0.Controller
 {
     class KeyboardC : IController
     {
-        
+
         private Game1 myGame;
         private Dictionary<Keys, ICommand> keymap, attackmap;
         private KeyboardState prevKeyState, prevAttackState, state;
-       
+
 
         public KeyboardC(Game1 game)
         {
@@ -36,7 +36,7 @@ namespace Sprint0.Controller
 
             keymap.Add(Keys.Q, new qQuit(myGame));
             keymap.Add(Keys.R, new rReset(myGame));
-            keymap.Add(Keys.D1, new ArrowShoot(myGame));
+            keymap.Add(Keys.D1, new D1UseItem(myGame));
             keymap.Add(Keys.D2, new Bomb(myGame));
             keymap.Add(Keys.D3, new BoomrangShoot(myGame));
             //keymap.Add(Keys.D4, new BoomrangShoot(myGame));
@@ -76,12 +76,13 @@ namespace Sprint0.Controller
                 {
                     attackmap[key].Execute();
                     prevAttackState = state;
-                } else if (prevAttackState.IsKeyDown(key))
+                }
+                else if (prevAttackState.IsKeyDown(key))
                 {
                     prevAttackState = state;
-                } 
+                }
             }
-            
+
         }
     }
 }

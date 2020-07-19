@@ -22,7 +22,7 @@ namespace Sprint0.Player
         }
         private enum status
         {
-            standing, walking, attacking, takingDmg, shooting, booming, arrowShooting,boomrangShooting
+            standing, walking, attacking, takingDmg, shooting, booming, arrowShooting, boomrangShooting
         }
         public int xAxis;
         public int yAxis;
@@ -52,7 +52,7 @@ namespace Sprint0.Player
         public Boolean shootCdDone;
         private Queue<string> currentWp;
 
-        public Player1(int x, int y, int widthG, int heightG, Sound s, Game1 game) 
+        public Player1(int x, int y, int widthG, int heightG, Sound s, Game1 game)
         {
             myGame = game;
             xAxis = x;
@@ -64,14 +64,14 @@ namespace Sprint0.Player
             hp = MaxHealth;
             ruppyCount = 100;
             bombCount = 0;
-            keyCount = 50;
+            keyCount = 0;
             GetMap = false;
             GetCompass = false;
             currentFacing = facing.right;
             currentProjectile = new WoodenSword(this, 2);
             currentStatus = status.standing;
             currentSprite = SpriteFactory.LinkNoneStandingRight;
-            myInventory = new Inventory(this, game);
+            myInventory = new Inventory(this);
             currentWp = new Queue<string>();
             currentWp.Enqueue("WoodenSword");
             projectiles = new Queue<IProjectile>();
@@ -96,7 +96,8 @@ namespace Sprint0.Player
         }
         public string GetCurrentWeapon()
         {
-            if (currentWp.Count!=0) {
+            if (currentWp.Count != 0)
+            {
                 return currentWp.Peek();
             }
             else
@@ -120,10 +121,10 @@ namespace Sprint0.Player
             getPlayerItem().Update();
             if (currentStatus == status.walking && currentFacing == facing.left)
             {
-                if(xAxis > 0)
+                if (xAxis > 0)
                 {
                     xAxis -= 5;
-                }    
+                }
             }
             else if (currentFacing == facing.right && currentStatus == status.walking)
             {
@@ -137,25 +138,25 @@ namespace Sprint0.Player
                 if (yAxis < 648)
                 {
                     yAxis += 5;
-                }                
+                }
             }
             else if (currentFacing == facing.up && currentStatus == status.walking)
             {
                 if (yAxis > 168)
                 {
                     yAxis -= 5;
-                }                
+                }
             }
             currentSprite.Update();
-            
+
             //border restrictions
-            if (xAxis <= 0) 
-            { 
+            if (xAxis <= 0)
+            {
                 xAxis = 624;
                 myGame.currentState = myGame.stateList[1];
                 myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[2]);
             }
-            else if (xAxis >= 720) 
+            else if (xAxis >= 720)
             {
                 xAxis = 96;
                 myGame.currentState = myGame.stateList[1];
@@ -169,7 +170,7 @@ namespace Sprint0.Player
 
             }
             else if (yAxis >= 648)
-            { 
+            {
                 yAxis = 264;
                 myGame.currentState = myGame.stateList[1];
                 myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[1]);
@@ -177,7 +178,7 @@ namespace Sprint0.Player
         }
         public void Draw()
         {
-            
+
         }
         public Rectangle GetRectangle()
         {
@@ -212,25 +213,27 @@ namespace Sprint0.Player
             currentStatus = status.standing;
             if (currentFacing == facing.up) currentSprite = SpriteFactory.LinkNoneStandingUp;
             if (currentFacing == facing.down) currentSprite = SpriteFactory.LinkNoneStandingDown;
-            if (currentFacing == facing.left) currentSprite = SpriteFactory.LinkNoneStandingLeft;   
-            if (currentFacing == facing.right) currentSprite = SpriteFactory.LinkNoneStandingRight;                                       
+            if (currentFacing == facing.left) currentSprite = SpriteFactory.LinkNoneStandingLeft;
+            if (currentFacing == facing.right) currentSprite = SpriteFactory.LinkNoneStandingRight;
         }
         public void Attack()
         {
-            if (currentWp.Peek() == "WoodenSword") { 
-            currentStatus = status.attacking;
-            if (currentFacing == facing.up) { currentProjectile = new WoodenSword(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
-            else if (currentFacing == facing.down) { currentProjectile = new WoodenSword(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
-            else if (currentFacing == facing.right) { currentProjectile = new WoodenSword(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
-            else if (currentFacing == facing.left) { currentProjectile = new WoodenSword(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
-            currentProjectile.Stab();
-            sound.swordSlash();
+            if (currentWp.Peek() == "WoodenSword")
+            {
+                currentStatus = status.attacking;
+                if (currentFacing == facing.up) { currentProjectile = new WoodenSword(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
+                else if (currentFacing == facing.down) { currentProjectile = new WoodenSword(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
+                else if (currentFacing == facing.right) { currentProjectile = new WoodenSword(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
+                else if (currentFacing == facing.left) { currentProjectile = new WoodenSword(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
+                currentProjectile.Stab();
+                sound.swordSlash();
+            }
         }
-        }
-        public void Shoot() 
+        public void Shoot()
         {
             sound.swordShoot();
-            if (currentWp.Peek() =="WoodenSword") {
+            if (currentWp.Peek() == "WoodenSword")
+            {
                 if (currentFacing == facing.up) { currentProjectile = new WoodenSword(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
                 else if (currentFacing == facing.down) { currentProjectile = new WoodenSword(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
                 else if (currentFacing == facing.right) { currentProjectile = new WoodenSword(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
@@ -240,23 +243,24 @@ namespace Sprint0.Player
                 currentWp.Dequeue();
             }
         }
-        public void Bomb() {
+        public void Bomb()
+        {
             sound.bombDrop();
             currentStatus = status.booming;
-            currentProjectile=new Bomb(this,0);
+            currentProjectile = new Bomb(this, 0);
             currentProjectile.Shoot();
-            if(bombCount>0) bombCount -= 1;
+            if (bombCount > 0) bombCount -= 1;
         }
         public void Arrow()
         {
-                 sound.arrowAndBoomerang();
-                currentStatus = status.arrowShooting;
-                if (currentFacing == facing.up) { currentProjectile = new Arrow(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
-                else if (currentFacing == facing.down) { currentProjectile = new Arrow(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
-                else if (currentFacing == facing.right) { currentProjectile = new Arrow(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
-                else if (currentFacing == facing.left) { currentProjectile = new Arrow(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
-                currentProjectile.explo(0);
-                currentProjectile.Shoot();
+            sound.arrowAndBoomerang();
+            currentStatus = status.arrowShooting;
+            if (currentFacing == facing.up) { currentProjectile = new Arrow(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
+            else if (currentFacing == facing.down) { currentProjectile = new Arrow(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
+            else if (currentFacing == facing.right) { currentProjectile = new Arrow(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
+            else if (currentFacing == facing.left) { currentProjectile = new Arrow(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
+            currentProjectile.explo(0);
+            currentProjectile.Shoot();
         }
         public void Boomrang()
         {
@@ -274,7 +278,7 @@ namespace Sprint0.Player
         {
             sound.linkHurt();
             currentStatus = status.takingDmg;
-            if (hp>1)
+            if (hp > 1)
             {
                 hp--;
             }
@@ -289,9 +293,9 @@ namespace Sprint0.Player
         public void getHealed()
         {
             sound.getHeart();
-            if (hp<MaxHealth)
+            if (hp < MaxHealth)
             {
-                
+
                 hp++;
             }
         }
@@ -300,16 +304,16 @@ namespace Sprint0.Player
         {
             sound.getHeart();
             const int HpBound = 6;
-            if (MaxHealth<HpBound) {
+            if (MaxHealth < HpBound)
+            {
                 MaxHealth += 2;
             }
             hp = MaxHealth;
         }
-
         public void getRuppy()
         {
             sound.getRupee();
-            if (ruppyCount<999)
+            if (ruppyCount < 999)
             {
                 ruppyCount++;
             }
@@ -378,10 +382,10 @@ namespace Sprint0.Player
                         sound.doorUnlock();
                         break;
                     }
-                    
+
                 }
             }
-                
+
         }
         private int getFacing()
         {
@@ -412,9 +416,11 @@ namespace Sprint0.Player
         public void MapOrCompassGet(int MorC)
         {
             sound.getItem();
-            if (MorC == 0) {
+            if (MorC == 0)
+            {
                 GetMap = true;
-            }else if (MorC ==1)
+            }
+            else if (MorC == 1)
             {
                 GetCompass = true;
             }
@@ -459,19 +465,19 @@ namespace Sprint0.Player
         }
         public void UseFirstItem()
         {
-            
+
         }
         public void UseSecondItem()
         {
-            
+
         }
         public void UseThirdItem()
         {
-           
+
         }
         public void UseFourthItem()
         {
-           
+
         }
         public Sound GetSound()
         {

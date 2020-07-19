@@ -15,19 +15,20 @@ namespace Sprint0.Collisions
     {
         private Player1 myPlayer;
         private HeartContainer heartC = new HeartContainer(0, 0);
-        private Heart heart = new Heart(0,0);
+        private Heart heart = new Heart(0, 0);
         private Triforce triforce = new Triforce(0, 0);
         private Ruppy ruppy = new Ruppy(0, 0);
         private Key key = new Key(0, 0);
-        private Bomb bomb = new Bomb(0,0);
-        private Map map = new Map(0,0);
-        private Compass compass = new Compass(0,0);
+        private Bomb bomb = new Bomb(0, 0);
+        private Bow bow = new Bow(0, 0);
+        private Map map = new Map(0, 0);
+        private Compass compass = new Compass(0, 0);
         private WoodenSwordItem woodenSwordItem = new WoodenSwordItem(0, 0);
         private const int GetCompass = 1;
         public LinkItemCollision(Player1 player)
         {
-            myPlayer = player;   
-    }
+            myPlayer = player;
+        }
 
 
         public void ItemCollision(List<IItem> items)
@@ -48,7 +49,7 @@ namespace Sprint0.Collisions
                     if (item.GetType() == heart.GetType() && !item.isPickedUp())
                     {
                         myPlayer.getHealed();
-                    }                          
+                    }
                     if (item.GetType() == heartC.GetType() && !item.isPickedUp())
                     {
                         myPlayer.increaseMaxHp();
@@ -64,11 +65,16 @@ namespace Sprint0.Collisions
                     if (item.GetType() == bomb.GetType() && !item.isPickedUp())
                     {
                         myPlayer.getBomb();
-                        if(myPlayer.bombCount < 2)
+                        if (myPlayer.bombCount < 2)
                         {
                             myPlayer.myInventory.addItem(item);
                         }
                     }
+                    if (item.GetType() == bow.GetType() && !item.isPickedUp())
+                    {
+                        myPlayer.myInventory.addItem(item);
+                    }
+
                     if (item.GetType() == map.GetType() && !item.isPickedUp())
                     {
                         myPlayer.MapOrCompassGet(0);

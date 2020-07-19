@@ -2,11 +2,8 @@
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Sprint0.Block;
 using Sprint0.Controller;
-using Sprint0.Enemies;
 using Sprint0.Interfaces;
-using Microsoft.Xna.Framework.Audio;
 using Sprint0.Items;
 using Sprint0.Player;
 using Sprint0.Sprite;
@@ -25,10 +22,6 @@ namespace Sprint0
 {
     public class Inventory
     {
-        Game1 myGame;
-        SpriteBatch myBatch;
-        ContentManager myContent;
-        GraphicsDeviceManager graphics;
         private Player1 myLink;
         private List<IItem> myItemList = new List<IItem>();
         //Rectangle PickingSourceRec = new Rectangle(519, 137, 16, 16);
@@ -40,19 +33,17 @@ namespace Sprint0
         int y = 110;
         int frame = 0;
         static int moveCountTot = 0;
+        public int currentItem = 0;
 
 
-        public Inventory(Player1 link, Game1 game)
+        public Inventory(Player1 link)
         {
-            myGame = game;
             myLink = link;
-            myBatch = game.spriteBatch;
         }
 
         public void addItem(IItem item)
         {
-            //OK
-            // when get an item, call it, add it in list[]
+            // add gotten items into list
             myItemList.Add(item);
             Console.WriteLine("obtain new item: " + item.GetType());
             Console.WriteLine("current have " + myItemList.Count + " item");
@@ -60,31 +51,28 @@ namespace Sprint0
 
         public void showItem()
         {
-            // in pause state, show each item in the List
+            // In pause state, show items, Map, and Compass
+            checkRemain();
             for (int i = 0; i < myItemList.Count; i++)
             {
                 string itemType = getItemType(myItemList[i]);
-
-                // Draw Item (Bomb, Arrow, Huixuanbiao)
-                if(itemType.Equals("Sprint0.Items.Bomb") || itemType.Equals("Sprint0.Items.Bow"))
+                if (itemType.Equals("Sprint0.Items.Bomb") || itemType.Equals("Sprint0.Items.Bow"))
                 {
                     itemSprite = getItemSprite(myItemList[i]);
                     if (itemSprite != null)
                     {
                         Vector2 dest = new Vector2(x + i * 50, y);
-                        itemSprite.Draw(dest, false);                     
+                        itemSprite.Draw(dest, false);
                     }
                 }
             }
-            // Draw Map
-            if (myGame.link.HaveMapOrCompass()[0])
+            if (myLink.HaveMapOrCompass()[0])
             {
                 itemSprite = new ItemMapSprite();
                 Vector2 dest = new Vector2(140, 320);
                 itemSprite.Draw(dest, false);
             }
-            //Draw Compass
-            if (myGame.link.HaveMapOrCompass()[1])
+            if (myLink.HaveMapOrCompass()[1])
             {
                 itemSprite = new ItemCompassSprite();
                 Vector2 dest = new Vector2(140, 450);
@@ -107,7 +95,7 @@ namespace Sprint0
                     sprite = new ItemBombSprite();
                     break;
                 case "Sprint0.Items.Bow":
-                    sprite = new ItemArrowSprite();
+                    sprite = new ItemBowSprite();
                     break;
                 case "Sprint0.Items.Map":
                     sprite = new ItemMapSprite();
@@ -125,21 +113,62 @@ namespace Sprint0
 
         public void equipItem(int itemNum)
         {
+            // show picked item and actually equip it on player
             IItem item = myItemList[itemNum];
             ISprite sprite = getItemSprite(item);
-            Vector2 dest = new Vector2(210, 120); // equipment position
+            Vector2 dest = new Vector2(210, 120);
             sprite.Draw(dest, false);
 
-            //equipment item (bomb, bow, huixuanbiao)
-            // TODO
-            // make link actually EQUIP this item
+            string itemType = getItemType(item);
+            switch (itemType)
+            {
+                case "Sprint0.Items.Bomb":
+                    currentItem = 1;
+                    break;
+                case "Sprint0.Items.Bow":
+                    currentItem = 2;
+                    break;
+                case "Sprint0.Items.Boomrang":
+                    currentItem = 3;
+                    break;
+                default:
+                    break;
+            }
+            Console.WriteLine("current item: " + currentItem);
+        }
 
+        public void checkRemain()
+        {
+            // if item count = 0, move it out from item list
+            for (int i = 0; i < myItemList.Count; i++)
+            {
+                IItem item = myItemList[i];
+                string itemType = getItemType(item);
+                switch (itemType)
+                {
+                    case "Sprint0.Items.Bomb":
+                        if (myLink.bombCount == 0)
+                        {
+                            myItemList.RemoveAt(i);
+                        }
+                        break;
+                    /*
+                                        case "Sprint0.Items.Arrow":
+                                            if (myLink.bombCount == 0)
+                                            {
+                                                myItemList.RemoveAt(i);
+                                            }
+                                            break;
+                    */
+                    default:
+                        break;
+                }
+            }
         }
 
         public void pickingItem(int moveCount)
         {
-            // when click A&D key(<-& ->), move PickingDestRec, and list[i], i+ or -
-            // when click enter, call equipItem(), make int selected = list[i]; 
+            // A / D for picking item, when itemList is not null, equip the picked item
             moveCountTot += moveCount;
             if (moveCountTot < 0)
             {
@@ -147,17 +176,16 @@ namespace Sprint0
             }
             if (moveCountTot == myItemList.Count)
             {
-                moveCountTot = myItemList.Count-1;
+                moveCountTot = myItemList.Count - 1;
             }
             Vector2 dest = new Vector2(380 + moveCountTot * 50, 105);
             pickboxSprite.Draw(dest, false);
 
-            if (myItemList.Count != 0) equipItem(moveCountTot);
-            // return the current picked item
-            //selectedItem = myItemList[moveCount];
-            //equipItem(selectedItem);
+            if (myItemList.Count != 0)
+            {
+                equipItem(moveCountTot);
+            }
         }
-
         public void Update()
         {
             frame++;
@@ -175,7 +203,5 @@ namespace Sprint0
                 frame = 0;
             }
         }
-
-
     }
 }
