@@ -38,6 +38,8 @@ namespace Sprint0.UtilityClass
         //public const string WoodenSword = "WoodenSword";
         public const string WhiteSword = "WhiteSword";
         public const string MagicalSword = "MagicalSword";
+        public const string MagicalRod = "MagicalRod";
+        public const string Boomrang= "Boomrang";
         //public const string Attacking = "Attacking";
 
         //StringHolders for Projectile Folder
