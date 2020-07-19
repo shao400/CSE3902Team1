@@ -27,7 +27,7 @@ Q/Esc---Quit game
 
 Suppressed Warnings:
 -----------------------------------
-1. X and Y coordinate in Player1.cs: Link's position need to be updated by other classes
+1. X and Y coordinate and some variables in Player1.cs: Link's position and current state need to be updated or accessed by other classes
 2. Lists and Link objects in roomProperties: need to be accessed by other classes to update Link and rooms
 3. Sprite objects in SpriteFactory: they need to be accessed by other classes to draw sprites
 4. Room-related and GameState variables in Game1: they need to be accessed when switching the room

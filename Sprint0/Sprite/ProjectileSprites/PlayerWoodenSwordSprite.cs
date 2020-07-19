@@ -25,8 +25,7 @@ namespace Sprint0.Sprite
         public PlayerWoodenSwordSprite(SpriteEffects effect, float rotation)
         {
             myEffect = effect;
-            myRotation = rotation;
-            
+            myRotation = rotation;            
         }
 
 
