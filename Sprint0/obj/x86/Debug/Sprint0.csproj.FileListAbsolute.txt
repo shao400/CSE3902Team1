@@ -429,3 +429,19 @@ D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sound
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Text.xnb
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Text_Slow.xnb
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Triforce.xnb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Boss_Scream1.xnb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Boss_Scream2.xnb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Boss_Scream3.xnb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Candle.xnb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Fanfare.xnb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Key_Appear.xnb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Recorder.xnb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Refill_Loop.xnb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Secret.xnb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Shield.xnb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Shore.xnb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Stairs.xnb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Sword_Combined.xnb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Text.xnb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Text_Slow.xnb
+C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Triforce.xnb

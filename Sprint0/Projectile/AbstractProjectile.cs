@@ -8,10 +8,6 @@ namespace Sprint0.Projectile
 {
     public abstract class AbstractProjectile : IProjectile
     {
-        internal bool shooting;
-        internal bool exploding;
-        internal ISprite sprite;
-        internal IEnemy enemy;
         internal Vector2 position;
         internal int explodeTimer;
         internal IPlayer player;
@@ -46,10 +42,6 @@ namespace Sprint0.Projectile
         public Vector2 GetPosition()
         {
             return this.position;
-        }
-        public void Stop()
-        {
-
         }
 
         public abstract void explo(int i);

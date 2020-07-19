@@ -66,8 +66,6 @@
     <Compile Include="Commands\BoomrangShoot.cs" />
     <Compile Include="Commands\enterPause.cs" />
     <Compile Include="Commands\Bomb.cs" />
-    <Compile Include="Commands\Explode.cs" />
-    <Compile Include="Commands\ArrowShoot.cs" />
     <Compile Include="Commands\Shoot.cs" />
     <Compile Include="Commands\D4FourthWeapon.cs" />
     <Compile Include="Commands\D3ThirdWeapon.cs" />
