@@ -177,10 +177,11 @@ namespace Sprint0
             {
                 moveCountTot = 0;
             }
-            if (moveCountTot == myItemList.Count && myItemList.Count != 0)
+            if (moveCountTot == myItemList.Count && moveCountTot != 0)
             {
                 moveCountTot = myItemList.Count - 1;
             }
+            if (myItemList.Count == 0) moveCountTot = 0;
             Vector2 dest = new Vector2(380 + moveCountTot * 50, 105);
             pickboxSprite.Draw(dest, false);
 

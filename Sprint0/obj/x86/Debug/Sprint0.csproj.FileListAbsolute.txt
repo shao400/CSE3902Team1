@@ -413,3 +413,19 @@ E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Conten
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Text.xnb
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Text_Slow.xnb
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Triforce.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Boss_Scream1.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Boss_Scream2.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Boss_Scream3.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Candle.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Fanfare.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Key_Appear.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Recorder.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Refill_Loop.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Secret.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Shield.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Shore.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Stairs.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Sword_Combined.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Text.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Text_Slow.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Triforce.xnb

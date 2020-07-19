@@ -4,55 +4,55 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Blocks.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/boss.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Credits1.spritefont</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/dungeon.jpg</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/enemy.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/enemy2.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/game_over.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Hud.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/items.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/link.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/luigi.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Map.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/npc.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/pause.jpg</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/shoot.png</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/Intro.mp3</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/Labyrinth.mp3</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Arrow_Boomerang.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Bomb_Blow.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Bomb_Drop.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Boss_Scream1.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Boss_Scream2.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Boss_Scream3.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Candle.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Door_Unlock.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Enemy_Die.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Enemy_Hit.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Fanfare.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Get_Heart.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Get_Item.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Get_Rupee.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Key_Appear.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Link_Die.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Link_Hurt.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_LowHealth.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_MagicalRod.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Recorder.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Refill_Loop.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Secret.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Shield.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Shore.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Stairs.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Sword_Combined.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Sword_Shoot.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Text.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Text_Slow.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/SwordSlash.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/Triforce.wav</File>
-    <File>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/winning.png</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Blocks.png</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/boss.png</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Credits1.spritefont</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/dungeon.jpg</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/enemy.png</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/enemy2.png</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/game_over.png</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Hud.png</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/items.png</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/link.png</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/luigi.png</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Map.png</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/npc.png</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/pause.jpg</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/shoot.png</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/Intro.mp3</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/Labyrinth.mp3</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Arrow_Boomerang.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Bomb_Blow.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Bomb_Drop.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Boss_Scream1.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Boss_Scream2.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Boss_Scream3.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Candle.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Door_Unlock.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Enemy_Die.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Enemy_Hit.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Fanfare.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Get_Heart.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Get_Item.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Get_Rupee.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Key_Appear.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Link_Die.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Link_Hurt.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_LowHealth.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_MagicalRod.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Recorder.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Refill_Loop.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Secret.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Shield.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Shore.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Stairs.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Sword_Combined.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Sword_Shoot.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Text.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Text_Slow.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/SwordSlash.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/Triforce.wav</File>
+    <File>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/winning.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
