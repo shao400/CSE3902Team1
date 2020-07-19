@@ -8,7 +8,7 @@ namespace Sprint0.Enemies
     {
 
 
-        private static ISprite WallmasterSprite;
+        private ISprite WallmasterSprite;
         private int xPosition;
         private int yPosition;
         private Rectangle destinationRec;

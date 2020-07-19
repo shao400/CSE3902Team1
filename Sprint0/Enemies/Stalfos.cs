@@ -13,7 +13,7 @@ namespace Sprint0.Enemies
     {
 
 
-        private static ISprite StalfosSprite;
+        private ISprite StalfosSprite;
         private int xPosition;
         private int yPosition;
         private Rectangle destinationRec;

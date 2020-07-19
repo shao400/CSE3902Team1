@@ -8,7 +8,7 @@ namespace Sprint0.Enemies
     {
 
 
-        private static ISprite GoriyaSprite;
+        private ISprite GoriyaSprite;
         private int xPosition;
         private int yPosition;
         private int frame = 0;
