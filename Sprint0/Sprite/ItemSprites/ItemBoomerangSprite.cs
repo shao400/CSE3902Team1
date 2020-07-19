@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework;
 
 namespace Sprint0.Sprite
 {
-    public class ItemWBoomerangSprite : ISprite
+    public class ItemBoomerangSprite : ISprite
     {
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;

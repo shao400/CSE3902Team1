@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Sprint0.xml;
 using Microsoft.Xna.Framework.Content;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.GameStates
 {
@@ -41,7 +42,7 @@ namespace Sprint0.GameStates
         public void Draw()
         {
             myBatch.Begin();
-            myBatch.Draw(myContent.Load<Texture2D>("winning"), DestRec, SourceRec, Color.White);
+            myBatch.Draw(myContent.Load<Texture2D>(StringHolder.Winning), DestRec, SourceRec, Color.White);
             myBatch.End();
         }
 

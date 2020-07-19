@@ -12,6 +12,7 @@ using Microsoft.Xna.Framework.Content;
 using Sprint0.Sprite;
 using System.Windows;
 using Sprint0.HUD;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.GameStates
 {
@@ -44,8 +45,8 @@ namespace Sprint0.GameStates
 
         public void Draw()
         {
-            myBatch.Begin();       
-            myBatch.Draw(myContent.Load<Texture2D>("pause"), pauseDestRec, pauseSourceRec, Color.White);
+            myBatch.Begin();
+            myBatch.Draw(myContent.Load<Texture2D>(StringHolder.Pause), pauseDestRec, pauseSourceRec, Color.White); ;
             myBatch.End();
             myHud.Draw(x, y);
             map.Draw(450, 450);

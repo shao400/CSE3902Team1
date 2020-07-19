@@ -8,6 +8,7 @@ using Sprint0.Commands;
 using Sprint0.Interfaces;
 using Sprint0.Player;
 using Sprint0.Sprite;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Projectile
 {
@@ -34,7 +35,7 @@ namespace Sprint0.Projectile
             myDirection = direction;
             this.SetPosition(player.xAxis, player.yAxis);
             currentStatus = status.none;
-            this.type = "Boomrang";
+            this.type = StringHolder.Boomrang;
 
         }
         public override void Update()

@@ -75,7 +75,7 @@ namespace Sprint0.Sprite
         public static ItemMapSprite ItemMap = new ItemMapSprite();
         public static ItemKeySprite ItemKey = new ItemKeySprite();
         public static ItemTriforceSprite ItemTriforce = new ItemTriforceSprite();
-        public static ItemWBoomerangSprite ItemWBoomerang = new ItemWBoomerangSprite();
+        public static ItemBoomerangSprite ItemBoomerang = new ItemBoomerangSprite();
         public static ItemBowSprite ItemBow = new ItemBowSprite();
         public static ItemRuppySprite ItemRuppy = new ItemRuppySprite();
         public static ItemArrowSprite ItemArrow = new ItemArrowSprite();
@@ -197,7 +197,7 @@ namespace Sprint0.Sprite
             ItemCompass.LoadContent(batch, content.Load<Texture2D>("item"));
             ItemKey.LoadContent(batch, content.Load<Texture2D>("item"));
             ItemTriforce.LoadContent(batch, content.Load<Texture2D>("item"));
-            ItemWBoomerang.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemBoomerang.LoadContent(batch, content.Load<Texture2D>("item"));
             ItemBow.LoadContent(batch, content.Load<Texture2D>("item"));
             ItemRuppy.LoadContent(batch, content.Load<Texture2D>("item"));
             ItemArrow.LoadContent(batch, content.Load<Texture2D>("item"));
@@ -212,7 +212,7 @@ namespace Sprint0.Sprite
             ItemList.Add(ItemCompass);
             ItemList.Add(ItemKey);
             ItemList.Add(ItemTriforce);
-            ItemList.Add(ItemWBoomerang);
+            ItemList.Add(ItemBoomerang);
             ItemList.Add(ItemBow);
             ItemList.Add(ItemRuppy);
             ItemList.Add(ItemArrow);

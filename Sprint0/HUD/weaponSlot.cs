@@ -2,6 +2,7 @@
 using Sprint0.Interfaces;
 using Sprint0.Player;
 using Sprint0.Sprite;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.HUD
 {
@@ -29,22 +30,22 @@ namespace Sprint0.HUD
             Vector2 location = new Vector2(x, y);
             //System.Diagnostics.Debug.WriteLine(_link.states.GetCurrentWeapon());
             
-            if (_link.GetCurrentWeapon().Equals("None", System.StringComparison.Ordinal))
+            if (_link.GetCurrentWeapon().Equals(StringHolder.None, System.StringComparison.Ordinal))
             {
                 
             }
-            else if (_link.GetCurrentWeapon().Equals("WoodenSword", System.StringComparison.Ordinal))
+            else if (_link.GetCurrentWeapon().Equals(StringHolder.WoodenSword, System.StringComparison.Ordinal))
             {
                 woodenSword.Draw(location, false);
             }
-            else if (_link.GetCurrentWeapon().Equals("WhiteSword", System.StringComparison.Ordinal))
+            else if (_link.GetCurrentWeapon().Equals(StringHolder.WhiteSword, System.StringComparison.Ordinal))
             {
                 
-            }else if (_link.GetCurrentWeapon().Equals("MagicalSword", System.StringComparison.Ordinal))
+            }else if (_link.GetCurrentWeapon().Equals(StringHolder.MagicalSword, System.StringComparison.Ordinal))
             {
                 
             }
-            else if (_link.GetCurrentWeapon().Equals("MagicalRod", System.StringComparison.Ordinal))
+            else if (_link.GetCurrentWeapon().Equals(StringHolder.MagicalRod, System.StringComparison.Ordinal))
             {
                 
             }

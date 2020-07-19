@@ -8,6 +8,7 @@ using Sprint0.HUD;
 using Sprint0.Interfaces;
 using Sprint0.Items;
 using Sprint0.Player;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Collisions
 {
@@ -22,6 +23,7 @@ namespace Sprint0.Collisions
         private Bomb bomb = new Bomb(0, 0);
         private Bow bow = new Bow(0, 0);
         private Map map = new Map(0, 0);
+        private Boomerang boomerang = new Boomerang(0, 0);
         private Compass compass = new Compass(0, 0);
         private WoodenSwordItem woodenSwordItem = new WoodenSwordItem(0, 0);
         private const int GetCompass = 1;
@@ -74,7 +76,10 @@ namespace Sprint0.Collisions
                     {
                         myPlayer.myInventory.addItem(item);
                     }
-
+                    if (item.GetType() == boomerang.GetType() && !item.isPickedUp())
+                    {
+                        myPlayer.myInventory.addItem(item);
+                    }
                     if (item.GetType() == map.GetType() && !item.isPickedUp())
                     {
                         myPlayer.MapOrCompassGet(0);
@@ -87,7 +92,7 @@ namespace Sprint0.Collisions
                     }
                     if (item.GetType() == woodenSwordItem.GetType() && !item.isPickedUp())
                     {
-                        myPlayer.PickBuyWeapon("WoodenSword");
+                        myPlayer.PickBuyWeapon(StringHolder.WoodenSword);
                         //myPlayer.myInventory.addItem(item);
                     }
 

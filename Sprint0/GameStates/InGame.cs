@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Sprint0.xml;
 using Sprint0.HUD;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.GameStates
 {
@@ -28,10 +29,10 @@ namespace Sprint0.GameStates
         {
             myGame.currentRoom.Draw();
             myHud.Draw(x, y);
-            if (myGame.link.GetCurrentStatus() == "attacking") { myGame.link.getPlayerItem().Stab(); }
-            if (myGame.link.GetCurrentStatus() == "arrowShooting") { myGame.link.getPlayerItem().Shoot(); }
-            if (myGame.link.GetCurrentStatus() == "booming") { myGame.link.getPlayerItem().Shoot(); }
-            if (myGame.link.GetCurrentStatus() == "boomrangShooting") { myGame.link.getPlayerItem().Shoot(); }
+            if (myGame.link.GetCurrentStatus() == StringHolder.Attacking) { myGame.link.getPlayerItem().Stab(); }
+            if (myGame.link.GetCurrentStatus() == StringHolder.ArrowShooting) { myGame.link.getPlayerItem().Shoot(); }
+            if (myGame.link.GetCurrentStatus() == StringHolder.Booming) { myGame.link.getPlayerItem().Shoot(); }
+            if (myGame.link.GetCurrentStatus() == StringHolder.BoomrangShooting) { myGame.link.getPlayerItem().Shoot(); }
             /*switch (myGame.link.GetCurrentStatus()) {
                 case "attacking":
                     myGame.link.getPlayerItem().Stab();

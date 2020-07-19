@@ -11,7 +11,7 @@ using Sprint0.xml;
 using Microsoft.Xna.Framework.Content;
 using Sprint0.Sprite;
 using Sprint0.HUD;
-
+using Sprint0.UtilityClass;
 
 namespace Sprint0.GameStates
 {
@@ -51,8 +51,8 @@ namespace Sprint0.GameStates
         public void Draw()
         {
             myBatch.Begin();
-            myBatch.Draw(myContent.Load<Texture2D>("dungeon"), roomDestRec, roomSourceRec, Color.White);
-            myBatch.Draw(myContent.Load<Texture2D>("pause"), pauseDestRec, pauseSourceRec, Color.White);
+            myBatch.Draw(myContent.Load<Texture2D>(StringHolder.Dungeon), roomDestRec, roomSourceRec, Color.White);
+            myBatch.Draw(myContent.Load<Texture2D>(StringHolder.Pause), pauseDestRec, pauseSourceRec, Color.White);
             myBatch.End();
             myHud.Draw(x, y);
             map.Draw(mapx, mapy);

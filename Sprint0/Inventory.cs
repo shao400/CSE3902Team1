@@ -56,7 +56,8 @@ namespace Sprint0
             for (int i = 0; i < myItemList.Count; i++)
             {
                 string itemType = getItemType(myItemList[i]);
-                if (itemType.Equals("Sprint0.Items.Bomb") || itemType.Equals("Sprint0.Items.Bow"))
+                if (itemType.Equals("Sprint0.Items.Bomb") || itemType.Equals("Sprint0.Items.Bow")
+                    || itemType.Equals("Sprint0.Items.Boomerang"))
                 {
                     itemSprite = getItemSprite(myItemList[i]);
                     if (itemSprite != null)
@@ -97,6 +98,9 @@ namespace Sprint0
                 case "Sprint0.Items.Bow":
                     sprite = new ItemBowSprite();
                     break;
+                case "Sprint0.Items.Boomerang":
+                    sprite = new ItemBoomerangSprite();
+                    break;
                 case "Sprint0.Items.Map":
                     sprite = new ItemMapSprite();
                     break;
@@ -109,7 +113,6 @@ namespace Sprint0
             }
             return sprite;
         }
-
 
         public void equipItem(int itemNum)
         {
@@ -128,7 +131,7 @@ namespace Sprint0
                 case "Sprint0.Items.Bow":
                     currentItem = 2;
                     break;
-                case "Sprint0.Items.Boomrang":
+                case "Sprint0.Items.Boomerang":
                     currentItem = 3;
                     break;
                 default:
@@ -174,7 +177,7 @@ namespace Sprint0
             {
                 moveCountTot = 0;
             }
-            if (moveCountTot == myItemList.Count)
+            if (moveCountTot == myItemList.Count && myItemList.Count != 0)
             {
                 moveCountTot = myItemList.Count - 1;
             }

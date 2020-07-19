@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Sprint0.Sprite;
-
+using Sprint0.UtilityClass;
 namespace Sprint0.Commands
 {
     class MouseLeftLastRM : ICommand
@@ -21,7 +21,7 @@ namespace Sprint0.Commands
             if (myGame.currentRoom.roomID > 0)
             {
                 myGame.currentState = myGame.stateList[1];
-                Console.WriteLine("nextroom: " + myGame.currentRoom.roomID + "-1");
+                Console.WriteLine(StringHolder.NextRoom + myGame.currentRoom.roomID + StringHolder.MinusOne);
                 myGame.currentState.loadNextRoom(myGame.currentRoom.roomID - 1);
             }
         }

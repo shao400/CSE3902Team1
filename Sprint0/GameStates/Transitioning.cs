@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework.Input;
 using Sprint0.xml;
 using Microsoft.Xna.Framework.Content;
 using Sprint0.HUD;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.GameStates
 {
@@ -45,7 +46,7 @@ namespace Sprint0.GameStates
         public void Draw()
         {
             myBatch.Begin();
-            myBatch.Draw(myContent.Load<Texture2D>("dungeon"), DestRec, currentSourceRec, Color.White);
+            myBatch.Draw(myContent.Load<Texture2D>(StringHolder.Dungeon), DestRec, currentSourceRec, Color.White);
             myBatch.End();
             myHud.Draw(x, y);
         }

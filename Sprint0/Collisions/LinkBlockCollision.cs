@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using Sprint0.Block;
 using Sprint0.Interfaces;
 using Sprint0.Player;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Collisions
 {
@@ -56,7 +57,7 @@ namespace Sprint0.Collisions
                             myPlayer.xAxis -= intersectionRectangle.Width;
                         }
                     }
-                    if (block.GetType() == "lock" && myPlayer.getKeyCount() > 0)
+                    if (block.GetType() == StringHolder.LockType && myPlayer.getKeyCount() > 0)
                     {
                         blocks.Remove(block);
                         myPlayer.useKey();

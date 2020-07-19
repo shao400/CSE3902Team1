@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
 using Sprint0.Sprite;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Block
 {
@@ -14,7 +15,7 @@ namespace Sprint0.Block
         {
             xpos = x;
             ypos = y;
-            type = "Water";
+            type = StringHolder.WaterType;
         }
         public string GetType()
         {

@@ -142,7 +142,7 @@
     <Compile Include="Items\Ruppy.cs" />
     <Compile Include="Items\Triforce.cs" />
     <Compile Include="Items\Bow.cs" />
-    <Compile Include="Items\WBoomerang.cs" />
+    <Compile Include="Items\Boomerang.cs" />
     <Compile Include="Items\Heart.cs" />
     <Compile Include="Items\Compass.cs" />
     <Compile Include="Items\mClock.cs" />
@@ -211,7 +211,7 @@
     <Compile Include="Sprite\ItemSprites\ItemRuppySprite.cs" />
     <Compile Include="Sprite\ItemSprites\ItemBowSprite.cs" />
     <Compile Include="Sprite\ItemSprites\ItemArrowSprite.cs" />
-    <Compile Include="Sprite\ItemSprites\ItemWBoomerangSprite.cs" />
+    <Compile Include="Sprite\ItemSprites\ItemBoomerangSprite.cs" />
     <Compile Include="Sprite\ItemSprites\ItemTriforceSprite.cs" />
     <Compile Include="Sprite\ItemSprites\ItemMapSprite.cs" />
     <Compile Include="Sprite\ItemSprites\ItemKeySprite.cs" />
