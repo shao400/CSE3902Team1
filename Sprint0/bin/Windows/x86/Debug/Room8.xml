@@ -14,16 +14,9 @@
 	<block type="BlockLeft" xpos="0" ypos="458" />
 	<block type="BlockLeft" xpos="672" ypos="264" />
 	<block type="BlockLeft" xpos="672" ypos="458" />
-	<enemy type="Moblin" xpos="147" ypos="411" />
-	<enemy type="Peahat" xpos="147" ypos="411" />
-	<enemy type="Tektite" xpos="147" ypos="411" />
-	<enemy type="Dodongo" xpos="147" ypos="411" />
-	<enemy type="Aqua" xpos="147" ypos="411" />
-	<enemy type="Rope" xpos="147" ypos="411" />
-	<enemy type="Trap" xpos="147" ypos="411" />
-	<enemy type="Wallmaster" xpos="147" ypos="411" />
-	<enemy type="Zol" xpos="147" ypos="411" />
-	<enemy type="Goriya" xpos="147" ypos="411" />
-	<enemy type="Stalfos" xpos="147" ypos="411" />
-	<enemy type="Keese" xpos="147" ypos="411" />
+	<enemy type="Moblin" xpos="147" ypos="363" />
+	<enemy type="Peahat" xpos="147" ypos="315" />
+	<enemy type="Tektite" xpos="579" ypos="449" />
+	<enemy type="Aqua" xpos="147" ypos="545" />
+	
 </Room>

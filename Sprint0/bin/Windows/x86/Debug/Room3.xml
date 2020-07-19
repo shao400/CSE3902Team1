@@ -3,6 +3,9 @@
 	<door type="DoorKUp" xpos="312" ypos="168" />
 	<door type="DoorKDown" xpos="312" ypos="624" />
 	<src xpos="515" ypos="709" />
+	<enemy type="Dodongo" xpos="627" ypos="267" />
+	<enemy type="Keese" xpos="627" ypos="545" />
+	<enemy type="Peahat" xpos="99" ypos="267" />
 	<block type="BlockA" xpos="339" ypos="363" />
 	<block type="BlockA" xpos="387" ypos="363" />
 	<block type="BlockA" xpos="339" ypos="411" />

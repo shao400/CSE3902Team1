@@ -3,6 +3,10 @@
 	<door type="DoorKLeft" xpos="0" ypos="384" />
 	<src xpos="1286" ypos="178" />
 	<no i="14" />
+	<enemy type="Moblin" xpos="99" ypos="545" />
+	<enemy type="Rope" xpos="627" ypos="545" />
+	<enemy type="Aqua" xpos="99" ypos="267" />
+	<enemy type="Keese" xpos="627" ypos="411" />
 	<block type="BlockA" xpos="147" ypos="315" />
 	<block type="BlockA" xpos="195" ypos="315" />
 	<block type="BlockA" xpos="243" ypos="315" />

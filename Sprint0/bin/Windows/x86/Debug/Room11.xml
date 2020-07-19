@@ -3,6 +3,10 @@
 	<door type="DoorKLeft" xpos="0" ypos="384" />
 	<door type="DoorKUp" xpos="312" ypos="168" />
 	<src xpos="1029" ypos="355" />
+	<enemy type="Stalfos" xpos="339" ypos="267" />
+	<enemy type="Stalfos" xpos="387" ypos="267" />
+	<enemy type="Moblin" xpos="627" ypos="363" />
+	<enemy type="Dodongo" xpos="99" ypos="449" />
 	<block type="BlockA" xpos="147" ypos="315" />
 	<block type="BlockA" xpos="243" ypos="315" />
 	<block type="BlockA" xpos="339" ypos="315" />

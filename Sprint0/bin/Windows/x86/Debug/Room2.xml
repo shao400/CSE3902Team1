@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Room>
 	<door type="DoorKLeft" xpos="0" ypos="384" />
+	<enemy type="Moblin" xpos="483" ypos="267" />
+	<enemy type="Keese" xpos="339" ypos="545" />
+	<enemy type="Moblin" xpos="627" ypos="545" />
     <block type="BlockA" xpos="195" ypos="363" />
 	<block type="BlockA" xpos="243" ypos="363" />
 	<block type="BlockA" xpos="195" ypos="411" />
