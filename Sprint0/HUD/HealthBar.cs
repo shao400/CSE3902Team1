@@ -48,6 +48,14 @@ namespace Sprint0.HUD
         }
         public void Draw(int x, int y)
         {
+            const int Max2H = 1;
+            const int Max3H = 2;
+            const int Max4H = 3;
+            const int Max5H = 4;
+            const int Max6H = 5;
+            const int Max7H = 6;
+            const int Max8H = 7;
+
             Vector2 location = new Vector2(x, y);
             cover.Draw(location,false);
             location.Y +=dx;
@@ -58,79 +66,79 @@ namespace Sprint0.HUD
               
                 location.X += dx;
                 DrawMultiEmpty((int)location.X, (int)location.Y, (_link.linkMaxHp()-2) / 2);
-            }else if (_link.linkHp() >2 && _link.linkHp()<=4)
+            }else if (_link.linkHp() >2 * Max2H && _link.linkHp()<= 2 * Max2H + 2)
             {
-                DrawMultiSolid((int)location.X, (int)location.Y, 1);
-                location.X += dx;
+                DrawMultiSolid((int)location.X, (int)location.Y, Max2H);
+                location.X += Max2H * dx;
 
-                if (_link.linkHp() == 3) half.Draw(location, false);            
-                else if (_link.linkHp() == 4) solid.Draw(location, false);
+                if (_link.linkHp() == 2 * Max2H + 1) half.Draw(location, false);
+                else if (_link.linkHp() == 2 * Max2H + 2) solid.Draw(location, false);
 
                 location.X += dx;
-                DrawMultiEmpty((int)location.X, (int)location.Y, (_link.linkMaxHp() - 4) / 2);
+                DrawMultiEmpty((int)location.X, (int)location.Y, (_link.linkMaxHp() - 2 * Max2H - 2) / 2);
             }
-            else if (_link.linkHp() > 4 && _link.linkHp() <= 6)
+            else if (_link.linkHp() > 2 * Max3H && _link.linkHp() <= 2 * Max3H + 2)
             {
-                DrawMultiSolid((int)location.X, (int)location.Y, 2);
-                location.X += 2*dx;
+                DrawMultiSolid((int)location.X, (int)location.Y, Max3H);
+                location.X += Max3H * dx;
 
-                if (_link.linkHp() == 5) half.Draw(location, false);
-                else if (_link.linkHp() == 6) solid.Draw(location, false);
+                if (_link.linkHp() == 2 * Max3H + 1) half.Draw(location, false);
+                else if (_link.linkHp() == 2 * Max3H + 2) solid.Draw(location, false);
 
                 location.X += dx;
-                DrawMultiEmpty((int)location.X, (int)location.Y, (_link.linkMaxHp() - 6) / 2);
+                DrawMultiEmpty((int)location.X, (int)location.Y, (_link.linkMaxHp() - 2 * Max3H - 2) / 2);
             }
-            else if (_link.linkHp() > 6 && _link.linkHp() <= 8)
+            else if (_link.linkHp() > 2 * Max4H && _link.linkHp() <= 2 * Max4H + 2)
             {
-                DrawMultiSolid((int)location.X, (int)location.Y, 3);
-                location.X += 3 * dx;
+                DrawMultiSolid((int)location.X, (int)location.Y, Max4H);
+                location.X += Max4H * dx;
 
-                if (_link.linkHp() == 7) half.Draw(location, false);
-                else if (_link.linkHp() == 8) solid.Draw(location, false);
+                if (_link.linkHp() == 2 * Max4H + 1) half.Draw(location, false);
+                else if (_link.linkHp() == 2 * Max4H + 2) solid.Draw(location, false);
 
                 location.X += dx;
-                DrawMultiEmpty((int)location.X, (int)location.Y, (_link.linkMaxHp() - 8) / 2);
+                DrawMultiEmpty((int)location.X, (int)location.Y, (_link.linkMaxHp() - 2 * Max4H - 2) / 2);
             }
-            else if (_link.linkHp() > 8 && _link.linkHp() <= 10)
+            else if (_link.linkHp() > 2 * Max5H && _link.linkHp() <= 2 * Max5H + 2)
             {
-                DrawMultiSolid((int)location.X, (int)location.Y, 4);
-                location.X += 4 * dx;
+                DrawMultiSolid((int)location.X, (int)location.Y, Max5H);
+                location.X += Max5H * dx;
 
-                if (_link.linkHp() == 9) half.Draw(location, false);
-                else if (_link.linkHp() == 10) solid.Draw(location, false);
+                if (_link.linkHp() == 2 * Max5H + 1) half.Draw(location, false);
+                else if (_link.linkHp() == 2 * Max5H + 2) solid.Draw(location, false);
 
                 location.X += dx;
-                DrawMultiEmpty((int)location.X, (int)location.Y, (_link.linkMaxHp() - 10) / 2);
+                DrawMultiEmpty((int)location.X, (int)location.Y, (_link.linkMaxHp() - 2 * Max5H - 2) / 2);
             }
-            else if (_link.linkHp() > 10 && _link.linkHp() <= 12)
+            else if (_link.linkHp() > 2*Max6H && _link.linkHp() <= 2 * Max6H + 2)
             {
-                DrawMultiSolid((int)location.X, (int)location.Y, 5);
-                location.X += 5 * dx;
+                DrawMultiSolid((int)location.X, (int)location.Y, Max6H);
+                location.X += Max6H * dx;
 
-                if (_link.linkHp() == 11) half.Draw(location, false);
-                else if (_link.linkHp() == 12) solid.Draw(location, false);
+                if (_link.linkHp() == 2 * Max6H + 1) half.Draw(location, false);
+                else if (_link.linkHp() == 2 * Max6H + 2) solid.Draw(location, false);
 
                 location.X += dx;
-                DrawMultiEmpty((int)location.X, (int)location.Y, (_link.linkMaxHp() - 12) / 2);
+                DrawMultiEmpty((int)location.X, (int)location.Y, (_link.linkMaxHp() - 2 * Max6H - 2) / 2);
             }
-            else if (_link.linkHp() > 12 && _link.linkHp() <= 14)
+            else if (_link.linkHp() > 2 * Max7H && _link.linkHp() <= 2 * Max7H + 2)
             {
-                DrawMultiSolid((int)location.X, (int)location.Y, 6);
-                location.X += 6 * dx;
+                DrawMultiSolid((int)location.X, (int)location.Y, Max7H);
+                location.X += Max7H * dx;
 
-                if (_link.linkHp() == 13) half.Draw(location, false);
-                else if (_link.linkHp() == 14) solid.Draw(location, false);
+                if (_link.linkHp() == 2 * Max7H + 1) half.Draw(location, false);
+                else if (_link.linkHp() == 2 * Max7H + 2) solid.Draw(location, false);
 
                 location.X += dx;
-                DrawMultiEmpty((int)location.X, (int)location.Y, (_link.linkMaxHp() - 14) / 2);
+                DrawMultiEmpty((int)location.X, (int)location.Y, (_link.linkMaxHp() - 2 * Max7H - 2) / 2);
             }
-            else if (_link.linkHp() > 14 && _link.linkHp() <= 16)
+            else if (_link.linkHp() > 2 * Max8H && _link.linkHp() <= 2 * Max8H + 2)
             {
-                DrawMultiSolid((int)location.X, (int)location.Y, 7);
-                location.X += 7 * dx;
+                DrawMultiSolid((int)location.X, (int)location.Y,  Max8H);
+                location.X += Max8H * dx;
 
-                if (_link.linkHp() == 15) half.Draw(location, false);
-                else if (_link.linkHp() == 16) solid.Draw(location, false);
+                if (_link.linkHp() == 2 * Max8H+1) half.Draw(location, false);
+                else if (_link.linkHp() == 2 * Max8H+2) solid.Draw(location, false);
 
             }
 
