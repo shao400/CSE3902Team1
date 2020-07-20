@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sprint0.UtilityClass
 {
-    public static class IntegerHolder
+    public class IntegerHolder
     {
         public const int linkInitialX = 150; //in Game1
         public const int linkInitialY = 300; //in Game1

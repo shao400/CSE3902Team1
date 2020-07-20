@@ -46,7 +46,7 @@ namespace Sprint0
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
+            Content.RootDirectory = StringHolder.Content;
         }
 
         public void Reset()

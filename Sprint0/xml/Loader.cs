@@ -10,6 +10,7 @@ using Sprint0.HUDs;
 using Sprint0.NPCs;
 using System.Globalization;
 using Microsoft.Xna.Framework;
+using Sprint0.UtilityClass;
 
 // Author: Chuwen Sun
 namespace Sprint0.xml
@@ -29,15 +30,15 @@ namespace Sprint0.xml
             List<INPC> NPCs = new List<INPC>();
             reader.MoveToContent();
             reader.Read(); // jump over <Room>
-            CultureInfo cultures = new CultureInfo("en-US");
+            CultureInfo cultures = new CultureInfo(StringHolder.Culture);
             Rectangle source = new Rectangle(0,0,0,0);
             List<int> Con = new List<int>();
             while (reader.Read())
             {   
-                if (reader.Name == "src")
+                if (reader.Name == StringHolder.Src)
                 {
-                    source = new Rectangle(Int32.Parse(reader.GetAttribute("xpos"), cultures), Int32.Parse(reader.GetAttribute("ypos"), cultures), 256, 176);
-                }else if (reader.Name == "connect")
+                    source = new Rectangle(Int32.Parse(reader.GetAttribute(StringHolder.XPos), cultures), Int32.Parse(reader.GetAttribute(StringHolder.YPos), cultures), 256, 176);
+                }else if (reader.Name == StringHolder.Connect)
                 {
                     Con.Add(Int32.Parse(reader.GetAttribute("up"), cultures));
                     Con.Add(Int32.Parse(reader.GetAttribute("down"), cultures));
@@ -47,7 +48,7 @@ namespace Sprint0.xml
                 {
                     roomID = Int32.Parse(reader.GetAttribute("i"), cultures);
                 }
-                else if(reader.Name == "enemy" || reader.Name == "door" || reader.Name == "item" || reader.Name == "block" || reader.Name == "interior" || reader.Name == "exterior" || reader.Name == "wallCube" || reader.Name =="hud" || reader.Name == "src" || reader.Name == "NPC")
+                else if(reader.Name == "enemy" || reader.Name == "door" || reader.Name == "item" || reader.Name == "block" || reader.Name == StringHolder.Src || reader.Name == "NPC")
                 {                   
                     int xpos = Int32.Parse(reader.GetAttribute("xpos"), cultures);
                     int ypos = Int32.Parse(reader.GetAttribute("ypos"), cultures);

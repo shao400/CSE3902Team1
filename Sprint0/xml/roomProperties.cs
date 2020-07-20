@@ -9,6 +9,7 @@ using Sprint0.Player;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Content;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.xml
 {
@@ -52,7 +53,7 @@ namespace Sprint0.xml
         public void Draw()
         {
             myBatch.Begin();
-            myBatch.Draw(myContent.Load<Texture2D>("dungeon"), DestRec, sourceRec, Color.White);
+            myBatch.Draw(myContent.Load<Texture2D>(StringHolder.Dungeon), DestRec, sourceRec, Color.White);
             myBatch.End();
             for (int i = 0; i < hudList.Count; i++)
             {

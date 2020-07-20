@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/SwordSlash.wav</SourceFile>
-  <SourceTime>2020-06-24T19:40:13.3590541-04:00</SourceTime>
-  <DestFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Sounds/SwordSlash.xnb</DestFile>
-  <DestTime>2020-07-20T15:29:35.6278495-04:00</DestTime>
+  <SourceFile>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/Sounds/SwordSlash.wav</SourceFile>
+  <SourceTime>2020-07-06T19:25:52.0865896-04:00</SourceTime>
+  <DestFile>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Sounds/SwordSlash.xnb</DestFile>
+  <DestTime>2020-07-20T16:25:43.1334604-04:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

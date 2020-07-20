@@ -45,5 +45,24 @@ namespace Sprint0.UtilityClass
         //StringHolders for Projectile Folder
         public const string Arrow = "arrow";
 
+        //StringHolders for sprites Folder
+        public const string Link = "link";
+        public const string Shoot = "shoot";
+        public const string Item = "item";
+        public const string Map = "Map";
+        public const string Hud = "Hud";
+        public const string Enemy = "enemy";
+        public const string Enemy2 = "enemy2";
+        public const string Boss = "boss";
+        public const string NPC =  "npc";
+        public const string Blocks = "Blocks";
+        //StringHolders for xml Folder
+        public const string Culture = "en-US";
+        public const string XPos = "xpos";
+        public const string YPos = "ypos";
+        public const string Src = "src";
+        public const string Connect = "connect";
+        public const string Content = "Content";
+
     }
 }
