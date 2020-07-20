@@ -29,10 +29,6 @@ namespace Sprint0.Collisions
                 intersectionRectangle = Rectangle.Intersect(thisRectangle, enemyRectangle);
                 if (!intersectionRectangle.IsEmpty && enemy.GetHealth() > 0)
                 {
-
-
-
-
                     if (thisProjectile.IsExplode() == 0 && thisProjectile.Type() != StringHolder.Bomb)
                     {
                         enemy.Damaged();
@@ -80,8 +76,6 @@ namespace Sprint0.Collisions
                     }
                     
                 }
-                Console.WriteLine(thisProjectile.IsExplode());
-                thisProjectile.setExplo(3);
             }
         }
         public void ProjectileBlocksCollisionTest(List<IBlock> blocks)

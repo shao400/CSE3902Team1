@@ -528,6 +528,7 @@ namespace Sprint0.Player
             projectileCollision2.ProjectileEnemiesCollisionTest(enemies, sound);
             projectileCollision3 = new ProjectileCollision(currentAttack);
             projectileCollision3.ProjectileEnemiesCollisionTest(enemies, sound);
+            currentAttack.setExplo(3);
         }
 
         public void EnemyCollisionTest(List<IEnemy> enemies)
