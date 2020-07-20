@@ -110,7 +110,7 @@ namespace Sprint0.Projectile
                 return 2;
             }
         }
-        public override void explo(int i)
+        public override void setExplo(int i)
         {
             if (i == 1)
             {
@@ -119,6 +119,10 @@ namespace Sprint0.Projectile
             else if (i == 0)
             {
                 currentStatus = status.shoot;
+            }
+            else if (i == 2)
+            {
+                currentStatus = status.stab;
             }
             else
             {
@@ -160,7 +164,7 @@ namespace Sprint0.Projectile
             }
             WoodenSwordSprite.Draw(location, false);
             this.hitBox = new Rectangle(Convert.ToInt32(location2.X), Convert.ToInt32(location2.Y), 35, 23);
-            Console.WriteLine(this.hitBox.ToString());
+            
         }
 
     }

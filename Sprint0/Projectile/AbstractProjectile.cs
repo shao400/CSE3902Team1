@@ -43,7 +43,7 @@ namespace Sprint0.Projectile
             return this.position;
         }
 
-        public abstract void explo(int i);
+        public abstract void setExplo(int i);
         public abstract int IsExplode();
         public abstract void Explode();
         public abstract void Shoot();

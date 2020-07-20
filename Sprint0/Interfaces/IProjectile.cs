@@ -12,7 +12,7 @@ namespace Sprint0.Interfaces
         void Shoot();
         void Explode();
         void Stab();
-        void explo(int i);
+        void setExplo(int i);
         int IsExplode();
         Rectangle GetHitBox();
         Vector2 GetPosition();

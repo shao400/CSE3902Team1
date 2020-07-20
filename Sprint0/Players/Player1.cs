@@ -257,7 +257,7 @@ namespace Sprint0.Player
                 else if (currentFacing == facing.down) { currentProjectile = new WoodenSword(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
                 else if (currentFacing == facing.right) { currentProjectile = new WoodenSword(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
                 else if (currentFacing == facing.left) { currentProjectile = new WoodenSword(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
-                currentProjectile.explo(0);
+                currentProjectile.setExplo(0);
                 currentProjectile.Shoot();
                 sound.swordShoot();
             }
@@ -286,7 +286,7 @@ namespace Sprint0.Player
                 else if (currentFacing == facing.down) { secondProjectile = new Arrow(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
                 else if (currentFacing == facing.right) { secondProjectile = new Arrow(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
                 else if (currentFacing == facing.left) { secondProjectile = new Arrow(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
-                secondProjectile.explo(0);
+                secondProjectile.setExplo(0);
                 secondProjectile.Shoot();
             }
         }
@@ -300,7 +300,7 @@ namespace Sprint0.Player
                 else if (currentFacing == facing.down) { secondProjectile = new Boomrang(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
                 else if (currentFacing == facing.right) { secondProjectile = new Boomrang(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
                 else if (currentFacing == facing.left) { secondProjectile = new Boomrang(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
-                secondProjectile.explo(0);
+                secondProjectile.setExplo(0);
                 secondProjectile.Shoot();
             }
         }

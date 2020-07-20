@@ -36,7 +36,7 @@ namespace Sprint0.Collisions
                     if (thisProjectile.IsExplode() == 0 && thisProjectile.Type() != StringHolder.Bomb)
                     {
                         enemy.Damaged();
-                        thisProjectile.explo(1);
+                        thisProjectile.setExplo(1);
                         if (enemy.GetHealth() == 0)
                         {
                             s.enemyDie();
@@ -62,7 +62,8 @@ namespace Sprint0.Collisions
 
                         }
                     
-                    }else if (thisProjectile.IsExplode() == 3)
+                    }
+                    else if (thisProjectile.IsExplode() == 3)
                     {
                         enemy.Damaged();
                         if (enemy.GetHealth() == 0)
@@ -75,9 +76,12 @@ namespace Sprint0.Collisions
 
 
                         }
-                        thisProjectile.explo(3);
+                        
                     }
+                    
                 }
+                Console.WriteLine(thisProjectile.IsExplode());
+                thisProjectile.setExplo(3);
             }
         }
         public void ProjectileBlocksCollisionTest(List<IBlock> blocks)
@@ -94,7 +98,7 @@ namespace Sprint0.Collisions
                 {
                             if (thisProjectile.IsExplode() == 0)
                             {
-                                thisProjectile.explo(1);
+                                thisProjectile.setExplo(1);
                             }
                             
                        

@@ -103,7 +103,7 @@ namespace Sprint0.Projectile
                 return 2;
             }
         }
-        public override void explo(int i)
+        public override void setExplo(int i)
         {
             if (i == 1)
             {
