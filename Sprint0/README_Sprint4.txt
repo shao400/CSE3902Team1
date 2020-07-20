@@ -20,7 +20,8 @@ Program Control:
 W,A,S,D and arrow keys---Walk
 Z---Stab
 N---Shoot the sword  //may be a bit different from the original game.
-1,2,3---Switch weapons
+
+( In Pause screen, Z & N for picking item to equip )  
 
 LeftClick(Mouse)---Previous Room
 RightClick(Mouse)---Next Room  //Left for test purposes

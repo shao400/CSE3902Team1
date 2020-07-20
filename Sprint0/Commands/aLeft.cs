@@ -18,14 +18,7 @@ namespace Sprint0.Commands
 
         public void Execute()
         {
-            if(myGame.currentState == myGame.stateList[4])
-            {
-                myGame.link.myInventory.pickingItem(-1);
-            }
-            else
-            {
-                myGame.link.Left();
-            }
+           myGame.link.Left();
         }
 
     }

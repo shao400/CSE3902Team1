@@ -64,7 +64,7 @@ namespace Sprint0.Player
             MaxHealth = 6;
             hp = MaxHealth;
             ruppyCount = 100;
-            bombCount = 50;
+            bombCount = 0;
             keyCount = 50;
             GetMap = false;
             GetCompass = false;
