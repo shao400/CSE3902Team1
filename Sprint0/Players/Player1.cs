@@ -42,9 +42,9 @@ namespace Sprint0.Player
         Game1 myGame;
         public Queue<IProjectile> projectiles;
         public IProjectile currentProjectile, secondProjectile, currentAttack;
-        private ProjectileCollision projectileCollision1, projectileCollision2;
+        private ProjectileCollision projectileCollision1, projectileCollision2, projectileCollision3;
         private Sound sound;
-        private int hp;
+        private int hp, dmgCounter;
         private int MaxHealth;
         private int ruppyCount;
         public int bombCount;
@@ -61,15 +61,17 @@ namespace Sprint0.Player
             width = widthG;
             height = heightG;
             sound = s;
-            MaxHealth = 2;
+            MaxHealth = 6;
             hp = MaxHealth;
             ruppyCount = 100;
             bombCount = 50;
             keyCount = 50;
             GetMap = false;
             GetCompass = false;
+            dmgCounter = 18;
             currentFacing = facing.right;
             currentProjectile = new WoodenSword(this, 2);
+            currentAttack = new WoodenSword(this, 2);
             secondProjectile = new Bomb(this, 0);
             currentStatus = status.standing;
             currentSprite = SpriteFactory.LinkNoneStandingRight;
@@ -187,6 +189,11 @@ namespace Sprint0.Player
                 myGame.currentState = myGame.stateList[1];
                 myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[1]);
             }
+            if (dmgCounter < 18)
+            {
+                dmgCounter++;
+
+            }
         }
         public void Draw()
         {
@@ -260,51 +267,65 @@ namespace Sprint0.Player
         }
         public void Bomb()
         {
-            sound.bombDrop();
-            currentStatus = status.booming;
-            secondProjectile = new Bomb(this, 0);
-            secondProjectile.Shoot();
-            if (bombCount > 0) bombCount -= 1;
+            if (secondProjectile.IsExplode() == 2)
+            {
+                sound.bombDrop();
+                currentStatus = status.booming;
+                secondProjectile = new Bomb(this, 0);
+                secondProjectile.Shoot();
+                if (bombCount > 0) bombCount -= 1;
+            }
         }
         public void Arrow()
         {
-            sound.arrowAndBoomerang();
-            currentStatus = status.arrowShooting;
-            if (currentFacing == facing.up) { secondProjectile = new Arrow(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
-            else if (currentFacing == facing.down) { secondProjectile = new Arrow(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
-            else if (currentFacing == facing.right) { secondProjectile = new Arrow(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
-            else if (currentFacing == facing.left) { secondProjectile = new Arrow(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
-            secondProjectile.explo(0);
-            secondProjectile.Shoot();
+            if (secondProjectile.IsExplode() == 2)
+            {
+                sound.arrowAndBoomerang();
+                currentStatus = status.arrowShooting;
+                if (currentFacing == facing.up) { secondProjectile = new Arrow(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
+                else if (currentFacing == facing.down) { secondProjectile = new Arrow(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
+                else if (currentFacing == facing.right) { secondProjectile = new Arrow(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
+                else if (currentFacing == facing.left) { secondProjectile = new Arrow(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
+                secondProjectile.explo(0);
+                secondProjectile.Shoot();
+            }
         }
         public void Boomrang()
         {
-            sound.arrowAndBoomerang();
-            currentStatus = status.boomrangShooting;
-            if (currentFacing == facing.up) { secondProjectile = new Boomrang(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
-            else if (currentFacing == facing.down) { secondProjectile = new Boomrang(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
-            else if (currentFacing == facing.right) { secondProjectile = new Boomrang(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
-            else if (currentFacing == facing.left) { secondProjectile = new Boomrang(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
-            secondProjectile.explo(0);
-            secondProjectile.Shoot();
+            if (secondProjectile.IsExplode() == 2)
+            {
+                sound.arrowAndBoomerang();
+                currentStatus = status.boomrangShooting;
+                if (currentFacing == facing.up) { secondProjectile = new Boomrang(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
+                else if (currentFacing == facing.down) { secondProjectile = new Boomrang(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
+                else if (currentFacing == facing.right) { secondProjectile = new Boomrang(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
+                else if (currentFacing == facing.left) { secondProjectile = new Boomrang(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
+                secondProjectile.explo(0);
+                secondProjectile.Shoot();
+            }
         }
 
         public void takeDmg()
         {
-            sound.linkHurt();
-            currentStatus = status.takingDmg;
-            if (hp > 1)
+            if (dmgCounter == 18)
             {
-                hp--;
-            }
-            else
-            {
-                sound.pause();
-                sound.linkDie();
+                sound.linkHurt();
+                currentStatus = status.takingDmg;
+                if (hp > 1)
+                {
+                    hp--;
+                }
+                else
+                {
+                    sound.pause();
+                    sound.linkDie();
 
 
-                myGame.currentState = myGame.stateList[5];
+                    myGame.currentState = myGame.stateList[5];
+                }
+                dmgCounter = 0;
             }
+            
         }
 
         public void getHealed()
@@ -521,6 +542,8 @@ namespace Sprint0.Player
             projectileCollision1.ProjectileEnemiesCollisionTest(enemies, sound);
             projectileCollision2 = new ProjectileCollision(secondProjectile);
             projectileCollision2.ProjectileEnemiesCollisionTest(enemies, sound);
+            projectileCollision3 = new ProjectileCollision(currentAttack);
+            projectileCollision3.ProjectileEnemiesCollisionTest(enemies, sound);
         }
 
         public void EnemyCollisionTest(List<IEnemy> enemies)

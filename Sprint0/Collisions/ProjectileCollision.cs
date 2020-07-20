@@ -33,8 +33,6 @@ namespace Sprint0.Collisions
 
 
 
-
-
                     if (thisProjectile.IsExplode() == 0 && thisProjectile.Type() != StringHolder.Bomb)
                     {
                         enemy.Damaged();
@@ -51,6 +49,19 @@ namespace Sprint0.Collisions
                         }
                     } 
                     else if (thisProjectile.Type() == StringHolder.Bomb && thisProjectile.IsExplode() == 1)
+                    {
+                        enemy.Damaged();
+                        if (enemy.GetHealth() == 0)
+                        {
+                            s.enemyDie();
+                        }
+                        else
+                        {
+                            s.enemyHit();
+
+
+                        }
+                    }else if (thisProjectile.IsExplode() == 2)
                     {
                         enemy.Damaged();
                         if (enemy.GetHealth() == 0)
