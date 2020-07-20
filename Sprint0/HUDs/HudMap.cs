@@ -24,7 +24,7 @@ namespace Sprint0.HUDs
             //position trans logic still need change
             discovered.Add(_myGame.currentRoom.roomID);
             Vector2 location = new Vector2(xAix, yAix);
-            Vector2 restore = new Vector2(xAix, yAix);
+            Vector2 restore = new Vector2(xAix ,yAix);
             if (discovered.Contains(0)) {
                 room.Draw(location, false);
             }
@@ -138,10 +138,13 @@ namespace Sprint0.HUDs
 
         }
         public void Draw(int x, int y)
-        {           
+        {
             //position trans logic still need change
-            Vector2 locationP = new Vector2(x+16, y+7);       
-            if(_myGame.link.HaveMapOrCompass()[0] == true) staticMapDraw(x, y);
+            const int posModi1 = 16;
+            const int posModi2 = 7;
+            const int posModi3 = 5;
+            Vector2 locationP = new Vector2(x+posModi1, y+posModi2);       
+            if(_myGame.link.HaveMapOrCompass()[0] == true) staticMapDraw(x+posModi3, y+posModi3);
 
             if (_myGame.currentRoom.roomID==0) { 
                 
@@ -237,7 +240,7 @@ namespace Sprint0.HUDs
                 locationP.Y -= 5 * dy;
                 point.Draw(locationP, false);
             }
-            Vector2 locationTarget = new Vector2(x,y-5*dy);
+            Vector2 locationTarget = new Vector2(x+posModi1+4*dx,y+posModi2-4*dy);
             if (_myGame.link.HaveMapOrCompass()[1]) point.Draw(locationTarget,false);
         }
      

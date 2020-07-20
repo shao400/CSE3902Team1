@@ -5,6 +5,7 @@
 	<src xpos="258" ypos="532" />
 	<enemy type="Goriya" xpos="99" ypos="267" />
 	<enemy type="Tekitite" xpos="99" ypos="545" />
+	<item type="HeartContainer" xpos="350" ypos="300"/>
 	<block type="BlockA" xpos="339" ypos="363" />
 	<block type="BlockA" xpos="387" ypos="363" />
 	<block type="BlockA" xpos="339" ypos="411" />

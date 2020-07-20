@@ -311,18 +311,17 @@ namespace Sprint0.Player
             {
                 sound.linkHurt();
                 currentStatus = status.takingDmg;
-                if (hp > 1)
+                if (hp > 0)
                 {
                     hp-=d;
+                    if (hp <= 0)
+                    {
+                        sound.pause();
+                        sound.linkDie();
+                        myGame.currentState = myGame.stateList[5];
+                    }
                 }
-                else
-                {
-                    sound.pause();
-                    sound.linkDie();
 
-
-                    myGame.currentState = myGame.stateList[5];
-                }
                 dmgCounter = 0;
             }
             

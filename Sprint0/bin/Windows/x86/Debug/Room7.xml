@@ -4,6 +4,8 @@
 	<src xpos="1" ypos="355" />
 	<no i="7" />
 	<connect up="-1" down="-1" left="-1" right="8" />
+	<item type="HeartContainer" xpos="150" ypos="354"/>
+	<item type="HeartContainer" xpos="550" ypos="354"/>
 	<block type="BlockAllTop" xpos="96" ypos="168" />
 	<block type="BlockAllTop" xpos="96" ypos="600" />
 	<block type="BlockAllLeft" xpos="0" ypos="264" />

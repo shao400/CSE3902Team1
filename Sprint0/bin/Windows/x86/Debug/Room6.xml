@@ -7,6 +7,8 @@
 	<enemy type="Peahat" xpos="483" ypos="267" />
 	<enemy type="Tektite" xpos="243" ypos="545" />
 	<enemy type="Zol" xpos="147" ypos="267" />
+	<enemy type="Stalfos" xpos="387" ypos="267" />
+	<enemy type="Stalfos" xpos="339" ypos="267" />
 	<block type="BlockA" xpos="195" ypos="315" />
 	<block type="BlockA" xpos="195" ypos="507" />
 	<block type="BlockA" xpos="531" ypos="315" />
