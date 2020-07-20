@@ -66,8 +66,6 @@
     <Compile Include="Commands\BoomrangShoot.cs" />
     <Compile Include="Commands\enterPause.cs" />
     <Compile Include="Commands\Bomb.cs" />
-    <Compile Include="Commands\Explode.cs" />
-    <Compile Include="Commands\ArrowShoot.cs" />
     <Compile Include="Commands\Shoot.cs" />
     <Compile Include="Commands\D4FourthWeapon.cs" />
     <Compile Include="Commands\D3ThirdWeapon.cs" />
@@ -159,6 +157,8 @@
     <Compile Include="Sound\Sound.cs" />
     <Compile Include="Sprite\Accessory\PickBoxSprite.cs" />
     <Compile Include="Sprite\BlockSprites\LockSprite.cs" />
+    <Compile Include="Sprite\DoorSprites\DoorBDownSprite.cs" />
+    <Compile Include="Sprite\DoorSprites\DoorBUpSprite.cs" />
     <Compile Include="Sprite\DoorSprites\DoorKDownSprite.cs" />
     <Compile Include="Sprite\DoorSprites\DoorKLeftSprite.cs" />
     <Compile Include="Sprite\DoorSprites\DoorKRightSprite.cs" />

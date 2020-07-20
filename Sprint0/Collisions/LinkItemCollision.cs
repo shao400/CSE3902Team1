@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Sprint0.HUD;
 using Sprint0.Interfaces;
 using Sprint0.Items;
@@ -33,7 +34,7 @@ namespace Sprint0.Collisions
         }
 
 
-        public void ItemCollision(List<IItem> items)
+        public void ItemCollision(List<IItem> items, Sound s)
         {
             Rectangle linkRectangle = myPlayer.GetRectangle();
             Rectangle itemRectangle;
@@ -74,10 +75,14 @@ namespace Sprint0.Collisions
                     }
                     if (item.GetType() == bow.GetType() && !item.isPickedUp())
                     {
+                        s.getItem();
+                        s.fanfare();
                         myPlayer.myInventory.addItem(item);
                     }
                     if (item.GetType() == boomerang.GetType() && !item.isPickedUp())
                     {
+                        s.getItem();
+                        s.fanfare();
                         myPlayer.myInventory.addItem(item);
                     }
                     if (item.GetType() == map.GetType() && !item.isPickedUp())
@@ -92,6 +97,8 @@ namespace Sprint0.Collisions
                     }
                     if (item.GetType() == woodenSwordItem.GetType() && !item.isPickedUp())
                     {
+                        s.getItem();
+                        s.fanfare();
                         myPlayer.PickBuyWeapon(StringHolder.WoodenSword);
                         //myPlayer.myInventory.addItem(item);
                     }

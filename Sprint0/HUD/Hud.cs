@@ -12,9 +12,9 @@ namespace Sprint0.HUD
         public HudMap map;
         private HudFrame frame;
         private ItemSlot itemSlot;
-        private int xAix;
-        private int yAix;
-        private int health;
+        //private int xAix;
+        //private int yAix;
+        //private int health;
         Player1 _link;
         //private int width;
         //private int height;

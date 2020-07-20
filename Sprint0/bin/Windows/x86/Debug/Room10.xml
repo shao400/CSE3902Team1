@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Room>
+	<door type="DoorBDown" xpos="312" ypos="609" />
 	<door type="DoorKLeft" xpos="0" ypos="384" />
 	<door type="DoorKRight" xpos="696" ypos="384" />
 	<src xpos="772" ypos="355" />

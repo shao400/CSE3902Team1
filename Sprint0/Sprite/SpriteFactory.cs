@@ -127,8 +127,8 @@ namespace Sprint0.Sprite
         public static DoorKRightSprite DoorKRight = new DoorKRightSprite();
         public static DoorKUpSprite DoorKUp = new DoorKUpSprite();
         public static DoorKDownSprite DoorKDown = new DoorKDownSprite();
-        /* public static DoorBUpSprite DoorBUp = new DoorBUpSprite();
-         public static DoorBDownSprite DoorBDown = new DoorBDownSprite();*/
+        public static DoorBUpSprite DoorBUp = new DoorBUpSprite();
+        public static DoorBDownSprite DoorBDown = new DoorBDownSprite();
 
         public static PickBoxSprite PickBox = new PickBoxSprite();
 
@@ -308,8 +308,8 @@ namespace Sprint0.Sprite
             DoorKRight.LoadContent(batch, content.Load<Texture2D>("dungeon"));
             DoorKUp.LoadContent(batch, content.Load<Texture2D>("dungeon"));
             DoorKDown.LoadContent(batch, content.Load<Texture2D>("dungeon"));
-            /*            DoorBUp.LoadContent(batch, content.Load<Texture2D>("dungeon"));
-                        DoorBDown.LoadContent(batch, content.Load<Texture2D>("dungeon"));*/
+            DoorBUp.LoadContent(batch, content.Load<Texture2D>("dungeon"));
+            DoorBDown.LoadContent(batch, content.Load<Texture2D>("dungeon"));
         }
     }
 }

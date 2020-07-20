@@ -23,7 +23,7 @@ namespace Sprint0.Block
             ypos = y;
             type = StringHolder.LockType;
         }
-        public string GetType()
+        public string getType()
         {
             return type;
         }

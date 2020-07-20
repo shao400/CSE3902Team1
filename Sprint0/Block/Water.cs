@@ -17,7 +17,7 @@ namespace Sprint0.Block
             ypos = y;
             type = StringHolder.WaterType;
         }
-        public string GetType()
+        public string getType()
         {
             return type;
         }

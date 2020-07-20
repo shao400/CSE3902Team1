@@ -57,7 +57,7 @@ namespace Sprint0.Collisions
                             myPlayer.xAxis -= intersectionRectangle.Width;
                         }
                     }
-                    if (block.GetType() == StringHolder.LockType && myPlayer.getKeyCount() > 0)
+                    if (block.getType() == StringHolder.LockType && myPlayer.getKeyCount() > 0)
                     {
                         blocks.Remove(block);
                         myPlayer.useKey();
