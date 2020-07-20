@@ -33,22 +33,6 @@ namespace Sprint0.GameStates
             if (myGame.link.GetCurrentStatus() == StringHolder.ArrowShooting) { myGame.link.getPlayerItem2().Shoot(); }
             if (myGame.link.GetCurrentStatus() == StringHolder.Booming) { myGame.link.getPlayerItem2().Shoot(); }
             if (myGame.link.GetCurrentStatus() == StringHolder.BoomrangShooting) { myGame.link.getPlayerItem2().Shoot(); }
-            /*switch (myGame.link.GetCurrentStatus()) {
-                case "attacking":
-                    myGame.link.getPlayerItem().Stab();
-                    break;
-                case "arrowShooting":
-                    myGame.link.getPlayerItem().Shoot();
-                    break;
-                case "booming":
-                    myGame.link.getPlayerItem().Shoot();
-                    break;
-                case "boomrangShooting":
-                    myGame.link.getPlayerItem().Shoot();
-                    break;
-                default:
-                    break;
-            } */
 
             if (myGame.link.getPlayerItem1().IsExplode() == 0)
             {

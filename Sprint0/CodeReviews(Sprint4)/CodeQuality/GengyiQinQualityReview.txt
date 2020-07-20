@@ -1,0 +1,10 @@
+Gengyi Qin
+7/20/2020
+Sprint4
+InGame.cs
+Main Author: Zhizhou He
+Time: 8 min
+
+The quality of the code is high, as the linkages are clear, which is good for future updates. This class is mainly responsible for updates and drawing during game time. 
+The if statements and logic in Draw method is a little bit long, but it is understandable and practical overall in my opinion. Maybe the logic in Draw and Update, including
+the collision logic, can be summed up in other methods so that these two methods can be simplified.

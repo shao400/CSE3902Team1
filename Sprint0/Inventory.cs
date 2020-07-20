@@ -128,7 +128,7 @@ namespace Sprint0
             {
                 IItem item = myItemList[i];
                 string itemType = getItemType(item);
-                if(itemType.Equals("Sprint0.Items.Bomb")) 
+                if(itemType.Equals("Sprint0.Items.Bomb", StringComparison.CurrentCulture)) 
                 {            
                         if (myLink.bombCount == 0)
                         {
@@ -159,7 +159,7 @@ namespace Sprint0
                 equipItem(moveCountTot);
             }
         }
-        public void Update()
+        public static void Update()
         {
 
         }

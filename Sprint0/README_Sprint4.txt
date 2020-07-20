@@ -1,8 +1,8 @@
 CSE3902 SU2020
-The Legend of Zelda --Sprint3
+The Legend of Zelda --Sprint4
 
 Author: Chuwen Sun, Gengyi Qin, Ouyang Lufei, Zhizhou He, Zinan Zhang, Zilin Shao
-Date: 6/27/2020
+Date: 7/20/2020
 
 
 Overview of Sprint4: 
@@ -13,7 +13,7 @@ Overview of Sprint4:
 4. Sounds added
 5. Warnings fixes, redundant code deleted and adjusted.
 
-Bombs, keys and gems are set to a larger number for testing purpose.
+Keys and gems are set to a large number for testing purpose.
 
 Program Control: 
 -----------------------------------
@@ -49,3 +49,4 @@ Known bugs / TO-DOs for Sprint4
 3. Smaller doors are not covered by sprites so when Link walk through it he seems to be floating above the door
 4. Some of the enemy/NPC/items are not implemented, or not added to the game, as the Level-1 don't contain them.
 5. Several enemy sprite sheets need to be updated and reversed / Oldman is still an IEnemy class, which should be INPC
+6. Utility classes are not finished yet and need future updates.

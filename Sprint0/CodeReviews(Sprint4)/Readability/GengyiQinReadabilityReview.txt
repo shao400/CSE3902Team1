@@ -1,0 +1,9 @@
+Gengyi Qin
+7/20/2020
+Sprint4
+InGame.cs
+Main Author: Zhizhou He
+Time: 8 min
+
+Generally speaking the code is readable, but the if-else statements are a bit too long and complex for Draw and Update methods.
+The loadNextRoom method is unused and maybe can be deleted in future updates.

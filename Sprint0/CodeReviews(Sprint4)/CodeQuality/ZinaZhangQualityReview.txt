@@ -1,0 +1,9 @@
+Zina Zhang
+7/20/2020
+Sprint3
+HUD package
+Main Author: Zilin Shao
+Time: 10 min
+Logical is great. He added health bar and slots for item and weapon. I feel like he use switch case in a good way instead of if else statement. It is represented much more like cases rather than if else logic. 
+in HealthBar.cs, he did a good job to use if else statement. It cannot be a switch cases since there are too much variable here. 
+In HudMap, it might be a better way if the if else cases switch to the switch cases for clearer code understanding.

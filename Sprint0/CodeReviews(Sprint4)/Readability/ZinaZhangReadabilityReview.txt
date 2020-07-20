@@ -1,0 +1,15 @@
+Zina Zhang
+7/20/2020
+Sprint4
+HUD package
+Main Author:Zilin Shao
+Time: 10 min
+
+The code might be bettwe if more comments added. It tooks me some time to read his code. 
+Every varilable is named properly.
+Swich case is better than if else statement, where he did a good job on this to seperate several cases. (In itemSlot)
+There might be a way to combine those cases together for a shorter code.
+In HudFrame, it might be better if _link can be naned as link for a better look.
+
+
+
