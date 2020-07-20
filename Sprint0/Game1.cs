@@ -121,13 +121,13 @@ namespace Sprint0
             for (int i = 0; i <= 16; i++)
             {
                 reader = XmlReader.Create(Room + i + xml, new XmlReaderSettings());
-                roomList.Add(Loader.LoadFromReader(reader));
+                roomList.Add(Loader.LoadFromReader(reader, this));
             }
             foreach (roomProperties room in roomList)
             {
                 room.loadBatchAndContent(Content, spriteBatch);
             }
-            currentRoom = roomList[0];
+            currentRoom = roomList[5];
             reader.Close();
             stateList = new List<IGameState>();
             stateList.Add(new InGame(this, hud));

@@ -159,6 +159,7 @@
     <Compile Include="Sprite\DoorSprites\DoorKLeftSprite.cs" />
     <Compile Include="Sprite\DoorSprites\DoorKRightSprite.cs" />
     <Compile Include="Sprite\DoorSprites\DoorKUpSprite.cs" />
+    <Compile Include="Sprite\EnemySprites\EnemyBlastSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudCoverSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudHeartSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudOneSprite.cs" />

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using Sprint0.Enemies;
 using Sprint0.Interfaces;
 using Sprint0.Player;
 
@@ -12,13 +13,14 @@ namespace Sprint0.Collisions
     class LinkEnemyCollision
     {
         private Player1 myPlayer;
-
+        private Oldman oldman;
         public LinkEnemyCollision(Player1 player)
         {
             myPlayer = player;
+            oldman = new Oldman(0, 0, player);
         }
 
-        public void EnemyCollisionTest(List<IEnemy> enemies)
+        public void EnemyCollisionTest(List<IEnemy> enemies, Sound s)
         {
             Rectangle linkRectangle = myPlayer.GetRectangle();
             Rectangle enemyRectangle;
@@ -32,7 +34,24 @@ namespace Sprint0.Collisions
 
                 if (!intersectionRectangle.IsEmpty && enemy.GetHealth() >0)
                 {
-                    myPlayer.takeDmg();
+                    //Special Case for Oldman
+                    if (enemy.GetType() == oldman.GetType() && oldman.health!=0)
+                    {
+                        myPlayer.takeDmg(4);
+                        enemy.Damaged();
+                        if (enemy.GetHealth() == 0)
+                        {
+                            s.enemyDie();
+                        }
+                        else
+                        {
+                            s.enemyHit();
+
+
+                        }                   
+                    }
+                    //Normal Cases
+                    myPlayer.takeDmg(1);
                     if (intersectionRectangle.Width >= intersectionRectangle.Height)
                     {                     
                         if (linkRectangle.Y > enemyRectangle.Y && linkRectangle.Y > 0) // from down

@@ -8,6 +8,7 @@
 	<enemy type="Moblin" xpos="99" ypos="267" />
 	<enemy type="Wallmaster" xpos="99" ypos="411" />
 	<enemy type="Keese" xpos="627" ypos="411" />
+	<enemy type="Oldman" xpos="627" ypos="411" />
 	<block type="BlockA" xpos="195" ypos="363" />
 	<block type="BlockA" xpos="195" ypos="459" />
 	<block type="BlockA" xpos="531" ypos="363" />

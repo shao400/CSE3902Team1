@@ -11,13 +11,14 @@ using Sprint0.NPCs;
 using System.Globalization;
 using Microsoft.Xna.Framework;
 using Sprint0.UtilityClass;
+using System.Runtime.CompilerServices;
 
 // Author: Chuwen Sun
 namespace Sprint0.xml
 {
     public static class Loader
     {
-        static public roomProperties LoadFromReader(XmlReader reader)
+        static public roomProperties LoadFromReader(XmlReader reader, Game1 game)
         {
             int roomID = -1;
             List<IEnemy> enemies = new List<IEnemy>();
@@ -138,7 +139,7 @@ namespace Sprint0.xml
                             NPCs.Add(new Flame(xpos, ypos));
                             break;
                         case "Oldman":
-                            enemies.Add(new Oldman(xpos, ypos));
+                            enemies.Add(new Oldman(xpos, ypos, game.link));
                             break;
                         case "Dodongo":
                             enemies.Add(new Dodongo(xpos, ypos));

@@ -305,7 +305,7 @@ namespace Sprint0.Player
             }
         }
 
-        public void takeDmg()
+        public void takeDmg(int d)
         {
             if (dmgCounter == 18)
             {
@@ -313,7 +313,7 @@ namespace Sprint0.Player
                 currentStatus = status.takingDmg;
                 if (hp > 1)
                 {
-                    hp--;
+                    hp-=d;
                 }
                 else
                 {
@@ -533,7 +533,7 @@ namespace Sprint0.Player
 
         public void EnemyCollisionTest(List<IEnemy> enemies)
         {
-            linkEnemyCollision.EnemyCollisionTest(enemies);
+            linkEnemyCollision.EnemyCollisionTest(enemies, sound);
         }
 
         public void ItemCollisionTest(List<IItem> items)

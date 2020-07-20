@@ -2,7 +2,6 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 using Sprint0.Interfaces;
-using Sprint0.UtilityClass;
 
 //Author: Gengyi Qin
 namespace Sprint0.Sprite
@@ -37,6 +36,7 @@ namespace Sprint0.Sprite
         public static EnemyAquaSprite EnemyAqua = new EnemyAquaSprite(0, 0);
         public static EnemyDodongoSprite EnemyDodongo = new EnemyDodongoSprite(0, 0);
         public static EnemyOldmanSprite EnemyOldman = new EnemyOldmanSprite(0, 0);
+        public static EnemyBlastSprite EnemyBlast = new EnemyBlastSprite(0, 0);
         public static NPCMerchantSprite NPCMerchant = new NPCMerchantSprite();
         public static NPCFlameSprite NPCFlame = new NPCFlameSprite();
 
@@ -89,6 +89,19 @@ namespace Sprint0.Sprite
         public static ISprite BlockC = new BlockCSprite();
         public static ISprite Lock = new LockSprite();
 
+        //Room Author Zhizhou He
+/*        public static List<ISprite> RoomList = new List<ISprite>();
+        public static ISprite RoomBlock = new RoomBlockSprite();
+        public static ISprite RoomItem = new RoomItemSprite();
+        public static ISprite RoomEnemy = new RoomEnemySprite();
+        public static ISprite RoomExterior = new RoomExteriorSprite();*/
+
+/*        public static List<ISprite> WallCubeList = new List<ISprite>();
+        public static ISprite WallTop = new WallTopSprite();
+        public static ISprite WallDown = new WallDownSprite();
+        public static ISprite DoorLeft = new DoorLeftSprite();
+        public static ISprite DoorRight = new DoorRightSprite();*/
+
         //Hud Author: Zilin Shao
         public static List<IHud> HudList = new List<IHud>();
         public static HudHalfHeartSprite HudHalfHeart = new HudHalfHeartSprite();
@@ -126,7 +139,9 @@ namespace Sprint0.Sprite
             LoadItemContent(batch, content);
             LoadEnemyContent(batch, content);
             LoadBlockContent(batch, content);
+            //LoadRoomContent(batch, content);
             LoadHudContent(batch, content);
+            //LoadWallCubeContent(batch, content);
             LoadDoorContent(batch, content);
         }
 
@@ -134,62 +149,62 @@ namespace Sprint0.Sprite
 
         private static void LoadLinkContent(SpriteBatch batch, ContentManager content)
         {
-            LinkNoneStandingDown.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
-            LinkNoneStandingLeft.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
-            LinkNoneStandingRight.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
-            LinkNoneStandingUp.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
-            LinkNoneMovingDown.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
-            LinkNoneMovingRight.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
-            LinkNoneMovingLeft.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
-            LinkNoneMovingUp.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
+            LinkNoneStandingDown.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkNoneStandingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkNoneStandingRight.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkNoneStandingUp.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkNoneMovingDown.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkNoneMovingRight.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkNoneMovingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkNoneMovingUp.LoadContent(batch, content.Load<Texture2D>("link"));
 
-            LinkUsingRight.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
-            LinkUsingLeft.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
-            LinkUsingDown.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
-            LinkUsingUp.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
+            LinkUsingRight.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkUsingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkUsingDown.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkUsingUp.LoadContent(batch, content.Load<Texture2D>("link"));
 
-            PlayerWoodenSwordRight.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
-            PlayerWoodenSwordLeft.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
-            PlayerWoodenSwordUp.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
-            PlayerWoodenSwordDown.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
+            PlayerWoodenSwordRight.LoadContent(batch, content.Load<Texture2D>("link"));
+            PlayerWoodenSwordLeft.LoadContent(batch, content.Load<Texture2D>("link"));
+            PlayerWoodenSwordUp.LoadContent(batch, content.Load<Texture2D>("link"));
+            PlayerWoodenSwordDown.LoadContent(batch, content.Load<Texture2D>("link"));
 
 
-            PlayerWoodenSwordShootingRight.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
-            PlayerWoodenSwordShootingLeft.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
-            PlayerWoodenSwordShootingUp.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
-            PlayerWoodenSwordShootingDown.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
-            PlayerWoodenSwordExploding.LoadContent(batch, content.Load<Texture2D>(StringHolder.Shoot));
+            PlayerWoodenSwordShootingRight.LoadContent(batch, content.Load<Texture2D>("link"));
+            PlayerWoodenSwordShootingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
+            PlayerWoodenSwordShootingUp.LoadContent(batch, content.Load<Texture2D>("link"));
+            PlayerWoodenSwordShootingDown.LoadContent(batch, content.Load<Texture2D>("link"));
+            PlayerWoodenSwordExploding.LoadContent(batch, content.Load<Texture2D>("shoot"));
 
             //Zina
-            PlayerBombExploding.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link)); 
-            PlayerBomb.LoadContent(batch, content.Load<Texture2D>(StringHolder.Shoot));
-            PlayerArrowShootingRight.LoadContent(batch, content.Load<Texture2D>(StringHolder.Shoot));
-            PlayerArrowShootingLeft.LoadContent(batch, content.Load<Texture2D>(StringHolder.Shoot));
-            PlayerArrowShootingUp.LoadContent(batch, content.Load<Texture2D>(StringHolder.Shoot));
-            PlayerArrowShootingDown.LoadContent(batch, content.Load<Texture2D>(StringHolder.Shoot));
-            PlayerArrowExploding.LoadContent(batch, content.Load<Texture2D>(StringHolder.Shoot));
-            PlayerBoomrangShootingRight.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
-            PlayerBoomrangShootingLeft.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
-            PlayerBoomrangShootingUp.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
-            PlayerBoomrangShootingDown.LoadContent(batch, content.Load<Texture2D>(StringHolder.Link));
+            PlayerBombExploding.LoadContent(batch, content.Load<Texture2D>("link")); 
+            PlayerBomb.LoadContent(batch, content.Load<Texture2D>("shoot"));
+            PlayerArrowShootingRight.LoadContent(batch, content.Load<Texture2D>("shoot"));
+            PlayerArrowShootingLeft.LoadContent(batch, content.Load<Texture2D>("shoot"));
+            PlayerArrowShootingUp.LoadContent(batch, content.Load<Texture2D>("shoot"));
+            PlayerArrowShootingDown.LoadContent(batch, content.Load<Texture2D>("shoot"));
+            PlayerArrowExploding.LoadContent(batch, content.Load<Texture2D>("shoot"));
+            PlayerBoomrangShootingRight.LoadContent(batch, content.Load<Texture2D>("link"));
+            PlayerBoomrangShootingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
+            PlayerBoomrangShootingUp.LoadContent(batch, content.Load<Texture2D>("link"));
+            PlayerBoomrangShootingDown.LoadContent(batch, content.Load<Texture2D>("link"));
         }
 
         private static void LoadItemContent(SpriteBatch batch, ContentManager content)
         {
-            ItemHeartContainer.LoadContent(batch, content.Load<Texture2D>(StringHolder.Item));
-            ItemGirl.LoadContent(batch, content.Load<Texture2D>(StringHolder.Item));
-            ItemClock.LoadContent(batch, content.Load<Texture2D>(StringHolder.Item));
-            ItemBomb.LoadContent(batch, content.Load<Texture2D>(StringHolder.Item));
-            ItemHeart.LoadContent(batch, content.Load<Texture2D>(StringHolder.Item));
-            ItemCompass.LoadContent(batch, content.Load<Texture2D>(StringHolder.Item));
-            ItemKey.LoadContent(batch, content.Load<Texture2D>(StringHolder.Item));
-            ItemTriforce.LoadContent(batch, content.Load<Texture2D>(StringHolder.Item));
-            ItemBoomerang.LoadContent(batch, content.Load<Texture2D>(StringHolder.Item));
-            ItemBow.LoadContent(batch, content.Load<Texture2D>(StringHolder.Item));
-            ItemRuppy.LoadContent(batch, content.Load<Texture2D>(StringHolder.Item));
-            ItemArrow.LoadContent(batch, content.Load<Texture2D>(StringHolder.Item));
-            ItemMap.LoadContent(batch, content.Load<Texture2D>(StringHolder.Item));
-            ItemWoodenSword.LoadContent(batch, content.Load<Texture2D>(StringHolder.Item));
+            ItemHeartContainer.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemGirl.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemClock.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemBomb.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemHeart.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemCompass.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemKey.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemTriforce.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemBoomerang.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemBow.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemRuppy.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemArrow.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemMap.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemWoodenSword.LoadContent(batch, content.Load<Texture2D>("item"));
 
             ItemList.Add(ItemHeartContainer);
             ItemList.Add(ItemGirl);
@@ -209,69 +224,94 @@ namespace Sprint0.Sprite
 
         private static void LoadHudContent(SpriteBatch batch, ContentManager content)
         {
-            HudHalfHeart.LoadContent(batch, content.Load<Texture2D>(StringHolder.Hud));
-            HudEmptyHeart.LoadContent(batch, content.Load<Texture2D>(StringHolder.Hud));
-            HudHeart.LoadContent(batch, content.Load<Texture2D>(StringHolder.Hud));
-            HudMapPiece.LoadContent(batch, content.Load<Texture2D>(StringHolder.Map));
-            HudPoint.LoadContent(batch, content.Load<Texture2D>(StringHolder.Dungeon));
-            HudFrame.LoadContent(batch, content.Load<Texture2D>(StringHolder.Hud));
-            HudX.LoadContent(batch, content.Load<Texture2D>(StringHolder.Hud));
-            HudOne.LoadContent(batch, content.Load<Texture2D>(StringHolder.Hud));
-            HudTwo.LoadContent(batch, content.Load<Texture2D>(StringHolder.Hud));
-            HudThree.LoadContent(batch, content.Load<Texture2D>(StringHolder.Hud));
-            HudFour.LoadContent(batch, content.Load<Texture2D>(StringHolder.Hud));
-            HudFive.LoadContent(batch, content.Load<Texture2D>(StringHolder.Hud));
-            HudSix.LoadContent(batch, content.Load<Texture2D>(StringHolder.Hud));
-            HudSeven.LoadContent(batch, content.Load<Texture2D>(StringHolder.Hud));
-            HudEight.LoadContent(batch, content.Load<Texture2D>(StringHolder.Hud));
-            HudNine.LoadContent(batch, content.Load<Texture2D>(StringHolder.Hud));
-            HudZero.LoadContent(batch, content.Load<Texture2D>(StringHolder.Hud));
-            HudCover.LoadContent(batch, content.Load<Texture2D>(StringHolder.Hud));
+            HudHalfHeart.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudEmptyHeart.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudHeart.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudMapPiece.LoadContent(batch, content.Load<Texture2D>("Map"));
+            HudPoint.LoadContent(batch, content.Load<Texture2D>("dungeon"));
+            HudFrame.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudX.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudOne.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudTwo.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudThree.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudFour.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudFive.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudSix.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudSeven.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudEight.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudNine.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudZero.LoadContent(batch, content.Load<Texture2D>("Hud"));
+            HudCover.LoadContent(batch, content.Load<Texture2D>("Hud"));
             ItemList.Add(HudHalfHeart);
             ItemList.Add(HudEmptyHeart);
             ItemList.Add(HudHeart);
-            PickBox.LoadContent(batch, content.Load<Texture2D>(StringHolder.Hud));
+            PickBox.LoadContent(batch, content.Load<Texture2D>("Hud"));
 
         }
 
         private static void LoadEnemyContent(SpriteBatch batch, ContentManager content)
         {
-            EnemyPeahat.LoadContent(batch, content.Load<Texture2D>(StringHolder.Enemy));
-            EnemyMoblin.LoadContent(batch, content.Load<Texture2D>(StringHolder.Enemy));
-            EnemyTektite.LoadContent(batch, content.Load<Texture2D>(StringHolder.Enemy));
-            EnemyKeese.LoadContent(batch, content.Load<Texture2D>(StringHolder.Enemy2));
-            EnemyStalfos.LoadContent(batch, content.Load<Texture2D>(StringHolder.Enemy2));
-            EnemyGoriya.LoadContent(batch, content.Load<Texture2D>(StringHolder.Enemy2));
-            EnemyZol.LoadContent(batch, content.Load<Texture2D>(StringHolder.Enemy2));
-            EnemyWallmaster.LoadContent(batch, content.Load<Texture2D>(StringHolder.Enemy2));
-            EnemyTrap.LoadContent(batch, content.Load<Texture2D>(StringHolder.Enemy2));
-            EnemyRope.LoadContent(batch, content.Load<Texture2D>(StringHolder.Enemy2));
-            EnemyAqua.LoadContent(batch, content.Load<Texture2D>(StringHolder.Boss));
-            EnemyDodongo.LoadContent(batch, content.Load<Texture2D>(StringHolder.Boss));
-            EnemyOldman.LoadContent(batch, content.Load<Texture2D>(StringHolder.NPC));
-            NPCMerchant.LoadContent(batch, content.Load<Texture2D>(StringHolder.NPC));
-            NPCFlame.LoadContent(batch, content.Load<Texture2D>(StringHolder.NPC));
+            EnemyPeahat.LoadContent(batch, content.Load<Texture2D>("enemy"));
+            EnemyMoblin.LoadContent(batch, content.Load<Texture2D>("enemy"));
+            EnemyTektite.LoadContent(batch, content.Load<Texture2D>("enemy"));
+            EnemyKeese.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            EnemyStalfos.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            EnemyGoriya.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            EnemyZol.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            EnemyWallmaster.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            EnemyTrap.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            EnemyRope.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            EnemyAqua.LoadContent(batch, content.Load<Texture2D>("boss"));
+            EnemyDodongo.LoadContent(batch, content.Load<Texture2D>("boss"));
+            EnemyOldman.LoadContent(batch, content.Load<Texture2D>("npc"));
+            EnemyBlast.LoadContent(batch, content.Load<Texture2D>("enemy"));
+            NPCMerchant.LoadContent(batch, content.Load<Texture2D>("npc"));
+            NPCFlame.LoadContent(batch, content.Load<Texture2D>("npc"));
         }
 
         private static void LoadBlockContent(SpriteBatch batch, ContentManager content)
         {
-            BlockA.LoadContent(batch, content.Load<Texture2D>(StringHolder.Blocks));
-            BlockB.LoadContent(batch, content.Load<Texture2D>(StringHolder.Blocks));
-            BlockC.LoadContent(batch, content.Load<Texture2D>(StringHolder.Blocks));
-            Lock.LoadContent(batch, content.Load<Texture2D>(StringHolder.Blocks));
+            BlockA.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            BlockB.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            BlockC.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            Lock.LoadContent(batch, content.Load<Texture2D>("Blocks"));
             BlockList.Add(BlockA);
             BlockList.Add(BlockB);
             BlockList.Add(BlockC);
         }
 
+/*        private static void LoadRoomContent(SpriteBatch batch, ContentManager content)
+        {
+            RoomBlock.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            RoomItem.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            RoomEnemy.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            RoomExterior.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            RoomList.Add(RoomBlock);
+            RoomList.Add(RoomItem);
+            RoomList.Add(RoomEnemy);
+            RoomList.Add(RoomExterior);
+        }*/
+/*        private static void LoadWallCubeContent(SpriteBatch batch, ContentManager content)
+        {
+            WallTop.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            WallDown.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            DoorLeft.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            DoorRight.LoadContent(batch, content.Load<Texture2D>("Blocks"));
+            WallCubeList.Add(WallTop);
+            WallCubeList.Add(WallDown);
+            WallCubeList.Add(DoorLeft);
+            WallCubeList.Add(DoorRight);
+
+        }*/
+
         private static void LoadDoorContent(SpriteBatch batch, ContentManager content)
         {
-            DoorKLeft.LoadContent(batch, content.Load<Texture2D>(StringHolder.Dungeon));
-            DoorKRight.LoadContent(batch, content.Load<Texture2D>(StringHolder.Dungeon));
-            DoorKUp.LoadContent(batch, content.Load<Texture2D>(StringHolder.Dungeon));
-            DoorKDown.LoadContent(batch, content.Load<Texture2D>(StringHolder.Dungeon));
-            DoorBUp.LoadContent(batch, content.Load<Texture2D>(StringHolder.Dungeon));
-            DoorBDown.LoadContent(batch, content.Load<Texture2D>(StringHolder.Dungeon));
+            DoorKLeft.LoadContent(batch, content.Load<Texture2D>("dungeon"));
+            DoorKRight.LoadContent(batch, content.Load<Texture2D>("dungeon"));
+            DoorKUp.LoadContent(batch, content.Load<Texture2D>("dungeon"));
+            DoorKDown.LoadContent(batch, content.Load<Texture2D>("dungeon"));
+            DoorBUp.LoadContent(batch, content.Load<Texture2D>("dungeon"));
+            DoorBDown.LoadContent(batch, content.Load<Texture2D>("dungeon"));
         }
     }
 }
