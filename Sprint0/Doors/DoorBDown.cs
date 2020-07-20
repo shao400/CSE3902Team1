@@ -12,7 +12,7 @@ namespace Sprint0.Block
 {
     class DoorBDown : IDoor
     {
-        private ISprite sprite = SpriteFactory.BlockA;
+        private ISprite sprite = SpriteFactory.DoorBDown;
         private int xpos;
         private int ypos;
         public DoorBDown(int x, int y)

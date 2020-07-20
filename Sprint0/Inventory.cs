@@ -23,7 +23,7 @@ namespace Sprint0
     public class Inventory
     {
         private Player1 myLink;
-        private List<IItem> myItemList = new List<IItem>();
+        public List<IItem> myItemList = new List<IItem>();
         //Rectangle PickingSourceRec = new Rectangle(519, 137, 16, 16);
         //Rectangle PickingDestRec = new Rectangle(300 + moveCountTot * 16, 300, 16, 16);
         //IItem selectedItem;
@@ -32,7 +32,7 @@ namespace Sprint0
         int x = 390;
         int y = 110;
         int frame = 0;
-        static int moveCountTot = 0;
+        public int moveCountTot = 0;
         public int currentItem = 0;
 
 

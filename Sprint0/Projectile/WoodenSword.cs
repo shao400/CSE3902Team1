@@ -53,7 +53,7 @@ namespace Sprint0.Projectile
             if (currentStatus == status.stab) { }
             else if (currentStatus == status.shoot) { ShotDistance+=5; }
             else if (currentStatus == status.explode) { }
-            this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), 45, 23);
+            this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), 35, 23);
 
             // Console.WriteLine(this.rec.ToString());
 

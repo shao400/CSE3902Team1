@@ -8,8 +8,9 @@ namespace Sprint0.HUD
 {
     public class WeaponSlot : IHud
     {
-        private ItemBowSprite bow = SpriteFactory.ItemBow;
         private ItemWoodenSwordSprite woodenSword = SpriteFactory.ItemWoodenSword;
+        private IItem equipedItem;
+        private ISprite equipedItemSprite;
         private int xAix;
         private int yAix;
         private string weapon;
@@ -50,11 +51,17 @@ namespace Sprint0.HUD
                 
             }
 
-            //linkGetCurrentBow?
             location.X -= 72;
-            bow.Draw(location,false);
+            if(_link.myInventory.currentItem != 0)
+            {
+                int itemNum = _link.myInventory.moveCountTot;
+                equipedItem = _link.myInventory.myItemList[itemNum];
+                equipedItemSprite = _link.myInventory.getItemSprite(equipedItem);
+                equipedItemSprite.Draw(location, false);
+            }
+            
 
-        }
+    }
 
         public void GetLinkItem()
         {

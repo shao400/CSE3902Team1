@@ -157,6 +157,8 @@
     <Compile Include="Sound\Sound.cs" />
     <Compile Include="Sprite\Accessory\PickBoxSprite.cs" />
     <Compile Include="Sprite\BlockSprites\LockSprite.cs" />
+    <Compile Include="Sprite\DoorSprites\DoorBDownSprite.cs" />
+    <Compile Include="Sprite\DoorSprites\DoorBUpSprite.cs" />
     <Compile Include="Sprite\DoorSprites\DoorKDownSprite.cs" />
     <Compile Include="Sprite\DoorSprites\DoorKLeftSprite.cs" />
     <Compile Include="Sprite\DoorSprites\DoorKRightSprite.cs" />

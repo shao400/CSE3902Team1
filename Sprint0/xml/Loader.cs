@@ -182,6 +182,12 @@ namespace Sprint0.xml
                             doors.Add(new DoorKRight(xpos, ypos));
                             blocks.Add(new Lock(xpos, ypos));
                             break;
+                        case "DoorBUp":
+                            doors.Add(new DoorBUp(xpos, ypos));
+                            break;
+                        case "DoorBDown":
+                            doors.Add(new DoorBDown(xpos, ypos));
+                            break;
                     }
 
                 }

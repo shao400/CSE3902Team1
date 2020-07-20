@@ -48,7 +48,7 @@ namespace Sprint0.Projectile
             }
             //if (currentStatus == status.wait) { }
             //else if (currentStatus == status.explode) { }
-            this.hitBox = new Rectangle(Convert.ToInt32(position.X), Convert.ToInt32(position.Y), 135, 135);
+            this.hitBox = new Rectangle(Convert.ToInt32(position.X - 50), Convert.ToInt32(position.Y - 50), 135, 135);
             if (counter >= 20 && counter < 50)
             {
                 BombSprite.Update();
