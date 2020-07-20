@@ -391,7 +391,7 @@ namespace Sprint0.Player
             }
             foreach (IBlock block in myGame.roomList[myGame.currentRoom.Connectors[getFacing()]].blockList)
             {
-                if (block.GetType() == StringHolder.LockType)
+                if (block.getType() == StringHolder.LockType)
                 {
                     if (block.GetRectangle().X == x && block.GetRectangle().Y == y)
                     {

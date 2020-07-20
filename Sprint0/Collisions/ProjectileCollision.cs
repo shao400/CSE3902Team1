@@ -77,7 +77,7 @@ namespace Sprint0.Collisions
 
                 blockRectangle = block.GetRectangle();
                 intersectionRectangle = Rectangle.Intersect(thisRectangle, blockRectangle);
-                if (!intersectionRectangle.IsEmpty && block.GetType() != StringHolder.WaterType && thisProjectile.Type() != StringHolder.Bomb)
+                if (!intersectionRectangle.IsEmpty && block.getType() != StringHolder.WaterType && thisProjectile.Type() != StringHolder.Bomb)
                 {
                             if (thisProjectile.IsExplode() == 0)
                             {

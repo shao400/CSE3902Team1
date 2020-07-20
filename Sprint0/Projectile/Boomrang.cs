@@ -15,11 +15,8 @@ namespace Sprint0.Projectile
     class Boomrang : AbstractProjectile, IProjectile
     {
         private ISprite BoomrangSprite;
-        private int counter;
-        private const int attackDistance = 15;
         int myDirection;
         Vector2 location;
-        int totalDistance;
         int moveDistanceY;
         int moveDistanceX;
 
@@ -30,7 +27,6 @@ namespace Sprint0.Projectile
         private status currentStatus;
         public Boomrang(Player1 player, int direction)
         {
-            counter = 0;
             this.player = player;
             myDirection = direction;
             this.SetPosition(player.xAxis, player.yAxis);
