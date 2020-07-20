@@ -54,6 +54,10 @@ namespace Sprint0.Projectile
             else if (currentStatus == status.explode) { }
             this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), 45, 23);
             ArrowSprite.Update();
+            if (this.hitBox.X < 0 || this.hitBox.X > 720 || this.hitBox.Y < 168 || this.hitBox.Y > 648)
+            {
+                currentStatus = status.none;
+            }
 
         }
         public void GetPlayerLoction()

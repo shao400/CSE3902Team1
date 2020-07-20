@@ -50,6 +50,10 @@ namespace Sprint0.Projectile
             }
             BoomrangSprite.Update();
             this.hitBox = new Rectangle(Convert.ToInt32(position.X), Convert.ToInt32(position.Y), 24, 24);
+            if (this.hitBox.X < 0 || this.hitBox.X > 720 || this.hitBox.Y < 168 || this.hitBox.Y > 648)
+            {
+                currentStatus = status.none;
+            }
         }
         public void GetPlayerLoction()
         {

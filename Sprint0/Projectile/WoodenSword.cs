@@ -54,6 +54,10 @@ namespace Sprint0.Projectile
                 this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), 35, 23);
             }
             else if (currentStatus == status.explode) { }
+            if (this.hitBox.X <0 || this.hitBox.X > 720 || this.hitBox.Y < 168 || this.hitBox.Y >648)
+            {
+                currentStatus = status.none;
+            }
 
             
 
