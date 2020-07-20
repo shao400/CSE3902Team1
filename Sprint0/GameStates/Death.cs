@@ -15,21 +15,14 @@ namespace Sprint0.GameStates
 {
     class Death : IGameState
     {
-        Game1 myGame;
         SpriteBatch myBatch;
-        //roomProperties myCurrentRoom;
-        //int myNextRoom;
         Rectangle DestRec = new Rectangle(0, 0, 768, 708);
         Rectangle SourceRec = new Rectangle(0, 0, 767, 430);
-        //Rectangle currentSourceRec;
-        //int frame = 0;
+
         ContentManager myContent;
 
-        public Death(Game1 game, SpriteBatch batch, ContentManager Content)
+        public Death(SpriteBatch batch, ContentManager Content)
         {
-            //myGame = game;
-            //myCurrentRoom = game.currentRoom;
-            //currentSourceRec = myCurrentRoom.sourceRec;
             myBatch = batch;
             myContent = Content;
         }

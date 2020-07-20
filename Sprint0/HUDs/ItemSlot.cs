@@ -2,9 +2,8 @@
 using Sprint0.Interfaces;
 using Sprint0.Player;
 using Sprint0.Sprite;
-using System.Globalization;
 
-namespace Sprint0.HUD
+namespace Sprint0.HUDs
 {
     public class ItemSlot : IHud
     {
@@ -19,18 +18,13 @@ namespace Sprint0.HUD
         private HudEightSprite Eight = SpriteFactory.HudEight;
         private HudNineSprite Nine = SpriteFactory.HudNine;
         private HudZeroSprite Zero = SpriteFactory.HudZero;
-        private int xAix;
-        private int yAix;
+
         private int health;
         private int dx = 25;
         Player1 _link;
-        //private int width;
-        //private int height;
         public ItemSlot(Game1 myGame)
         { 
             _link = myGame.link;
-            //width = w;
-            //height = h;
         }
 
         public void DrawRuppyC(int x, int y)

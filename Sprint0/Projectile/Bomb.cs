@@ -21,7 +21,7 @@ namespace Sprint0.Projectile
             shoot, explode, none
         }
         private status currentStatus;
-        public Bomb(Player1 player, int direction)
+        public Bomb(Player1 player)
         {
             counter = 0;
             this.player = player;
@@ -50,8 +50,6 @@ namespace Sprint0.Projectile
             {
                 player.GetSound().bombBlow();
             }
-            //if (currentStatus == status.wait) { }
-            //else if (currentStatus == status.explode) { }
             this.hitBox = new Rectangle(Convert.ToInt32(position.X - 50), Convert.ToInt32(position.Y - 50), 135, 135);
             if (counter >= 20 && counter < 50)
             {
@@ -64,12 +62,10 @@ namespace Sprint0.Projectile
         {
             BombSprite = SpriteFactory.PlayerBomb;
             BombSprite.Draw(position, false);
-
         }
 
         public override void Explode()
-        {
-            
+        {           
             BombSprite = SpriteFactory.PlayerBombExploding;        
             BombSprite.Draw(position, false);
         }

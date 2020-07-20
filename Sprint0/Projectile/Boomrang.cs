@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
-using Sprint0.Commands;
 using Sprint0.Interfaces;
 using Sprint0.Player;
 using Sprint0.Sprite;
@@ -65,7 +60,7 @@ namespace Sprint0.Projectile
 
             if (myDirection == 0) { 
                 BoomrangSprite = SpriteFactory.PlayerBoomrangShootingUp;
-                position.X -=ShotDistance;
+                position.Y -=ShotDistance;
             }
             else if (myDirection == 1) {
                 BoomrangSprite = SpriteFactory.PlayerBoomrangShootingDown;
@@ -101,26 +96,6 @@ namespace Sprint0.Projectile
             {
                 position.Y -= 5;
             }
-            /*if (myDirection == 0)
-            {
-                BoomrangSprite = SpriteFactory.PlayerBoomrangShootingUp; 
-                position = new Vector2(position.X, position.Y - moveDistanceY);
-            }
-            if (myDirection == 1)
-            {
-                BoomrangSprite = SpriteFactory.PlayerBoomrangShootingDown;
-                position = new Vector2(position.X, position.Y + moveDistanceY);
-            }
-            if (myDirection == 2)
-            {
-                BoomrangSprite = SpriteFactory.PlayerBoomrangShootingRight;
-                position = new Vector2(position.X + moveDistanceX, position.Y);
-            }
-            if (myDirection == 3)
-            {
-                BoomrangSprite = SpriteFactory.PlayerBoomrangShootingLeft;
-                position = new Vector2(position.X - moveDistanceX, position.Y);
-            }*/ 
             BoomrangSprite.Draw(position, false);
         }
         public override int IsExplode()

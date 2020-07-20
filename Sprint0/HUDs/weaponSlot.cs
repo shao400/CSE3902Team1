@@ -4,26 +4,17 @@ using Sprint0.Player;
 using Sprint0.Sprite;
 using Sprint0.UtilityClass;
 
-namespace Sprint0.HUD
+namespace Sprint0.HUDs
 {
     public class WeaponSlot : IHud
     {
         private ItemWoodenSwordSprite woodenSword = SpriteFactory.ItemWoodenSword;
         private IItem equipedItem;
         private ISprite equipedItemSprite;
-        private int xAix;
-        private int yAix;
-        private string weapon;
         Player1 _link;
-        //private int width;
-        //private int height;
         public WeaponSlot(Game1 myGame)
         { 
-
-            _link = myGame.link;
-            weapon = "";
-            //width = w;
-            //height = h;
+            _link = myGame.link;            
         }
         public void Draw(int x, int y)
         {
@@ -63,9 +54,9 @@ namespace Sprint0.HUD
 
     }
 
-        public void GetLinkItem()
+        public static void GetLinkItem()
         {
-            //weapon = _link.states.GetCurrentWeapon();        
+                    
         }
 
 

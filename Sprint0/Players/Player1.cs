@@ -271,7 +271,7 @@ namespace Sprint0.Player
             {
                 sound.bombDrop();
                 currentStatus = status.booming;
-                secondProjectile = new Bomb(this, 0);
+                secondProjectile = new Bomb(this);
                 secondProjectile.Shoot();
                 if (bombCount > 0) bombCount -= 1;
             }
@@ -502,22 +502,6 @@ namespace Sprint0.Player
         public int linkMaxHp()
         {
             return MaxHealth;
-        }
-        public void UseFirstItem()
-        {
-
-        }
-        public void UseSecondItem()
-        {
-
-        }
-        public void UseThirdItem()
-        {
-
-        }
-        public void UseFourthItem()
-        {
-
         }
         public Sound GetSound()
         {

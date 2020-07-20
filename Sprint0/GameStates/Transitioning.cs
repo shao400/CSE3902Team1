@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Sprint0.xml;
 using Microsoft.Xna.Framework.Content;
-using Sprint0.HUD;
+using Sprint0.HUDs;
 using Sprint0.UtilityClass;
 
 namespace Sprint0.GameStates

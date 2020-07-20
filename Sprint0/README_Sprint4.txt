@@ -13,6 +13,8 @@ Overview of Sprint4:
 4. Sounds added
 5. Warnings fixes, redundant code deleted and adjusted.
 
+Bombs, keys and gems are set to a larger number for testing purpose.
+
 Program Control: 
 -----------------------------------
 W,A,S,D and arrow keys---Walk
@@ -34,16 +36,15 @@ Suppressed Warnings:
 5. Content object in SpriteFactory: it is initialized and loaded in Game1 class so no need to handle the exception
 6. Lists in Player1: these lists will be initiated by Game1 class
 7. Reader object in Loader class: reader will be initiated in Game1 class
+8. GameState-related variables in Game1.cs: need to be accessed by other classes
+9. List/ Item counter in Inventory.cs: need to be updated or accessed by player classes
+10. Some null-exception warning: they are instantiated elsewhere 
 
 
-Known bugs / TO-DOs for Sprint3
+Known bugs / TO-DOs for Sprint4
 -----------------------------------
 1. When Link have collision with enemy on the top of the room, Link will be pushed to unexpected positions. 
 2. Every room has its own health bar instead of having the only one.
 3. Smaller doors are not covered by sprites so when Link walk through it he seems to be floating above the door
 4. Some of the enemy/NPC/items are not implemented, or not added to the game, as the Level-1 don't contain them.
-
-TO-DOs:
------------------------------------
-1. Several enemy sprite sheets need to be updated and reversed
-2. Boss/Dragon fireballs need to be added, they are not in any sprite sheets that's currently available
+5. Several enemy sprite sheets need to be updated and reversed / Oldman is still an IEnemy class, which should be INPC

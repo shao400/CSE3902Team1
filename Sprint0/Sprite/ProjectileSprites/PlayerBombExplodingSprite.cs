@@ -11,7 +11,6 @@ namespace Sprint0.Sprite
         private static Texture2D myTexture;
         Color myColor = Color.CornflowerBlue;
         Rectangle sourceRec;
-        SpriteEffects myEffect;
         int count = 0;
 
         public PlayerBombExplodingSprite()
@@ -39,13 +38,13 @@ namespace Sprint0.Sprite
         {
 
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 48, 48), sourceRec, myColor, 0, new Vector2(0,0), myEffect, 0);
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X - 48, (int)location.Y, 48, 48), sourceRec, myColor, 0, new Vector2(0, 0), myEffect, 0);
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X + 48, (int)location.Y, 48, 48), sourceRec, myColor, 0, new Vector2(0, 0), myEffect, 0);
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X - 36, (int)location.Y - 48, 48, 48), sourceRec, myColor, 0, new Vector2(0, 0), myEffect, 0);
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X + 36, (int)location.Y - 48, 48, 48), sourceRec, myColor, 0, new Vector2(0, 0), myEffect, 0);
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X - 36, (int)location.Y + 48, 48, 48), sourceRec, myColor, 0, new Vector2(0, 0), myEffect, 0);
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X + 36, (int)location.Y + 48, 48, 48), sourceRec, myColor, 0, new Vector2(0, 0), myEffect, 0);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 48, 48), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X - 48, (int)location.Y, 48, 48), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X + 48, (int)location.Y, 48, 48), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X - 36, (int)location.Y - 48, 48, 48), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X + 36, (int)location.Y - 48, 48, 48), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X - 36, (int)location.Y + 48, 48, 48), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X + 36, (int)location.Y + 48, 48, 48), sourceRec, myColor);
             mySpriteBatch.End();
         }
 

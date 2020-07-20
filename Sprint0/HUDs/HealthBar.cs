@@ -2,9 +2,8 @@
 using Sprint0.Interfaces;
 using Sprint0.Player;
 using Sprint0.Sprite;
-using System.Runtime.CompilerServices;
 
-namespace Sprint0.HUD
+namespace Sprint0.HUDs
 {
     public class HealthBar : IHud
     {
@@ -12,18 +11,13 @@ namespace Sprint0.HUD
         private HudHalfHeartSprite half = SpriteFactory.HudHalfHeart;
         private HudHeartSprite solid = SpriteFactory.HudHeart;
         private HudCoverSprite cover = SpriteFactory.HudCover;
-        private int xAix;
-        private int yAix;
-        private int health;
         Player1 _link;
         private const int dx = 25;
 
 
         public HealthBar(Game1 myGame)
         {
-
-            _link = myGame.link;
-         
+            _link = myGame.link;         
         }
 
         private void DrawMultiEmpty(int x, int y ,int count)
@@ -143,7 +137,6 @@ namespace Sprint0.HUD
 
 
         }
-
 
         public void Update()
         {

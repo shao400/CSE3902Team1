@@ -16,7 +16,7 @@ using Sprint0.xml;
 using System.Xml;
 using Microsoft.Xna.Framework.Media;
 using Sprint0.GameStates;
-using Sprint0.HUD;
+using Sprint0.HUDs;
 using Sprint0.UtilityClass;
 
 namespace Sprint0
@@ -37,7 +37,6 @@ namespace Sprint0
         private List<SoundEffect> sounds;
         private List<Song> songs;
         private Sound soundEffect;
-        private Song intro, Labyrinth;
         List<object> controllerList; // could also be defined as List <IController>
         public Hud hud;
         public IGameState currentState;
@@ -122,13 +121,13 @@ namespace Sprint0
             for (int i = 0; i <= 16; i++)
             {
                 reader = XmlReader.Create(Room + i + xml, new XmlReaderSettings());
-                roomList.Add(Loader.LoadFromReader(reader, this));
+                roomList.Add(Loader.LoadFromReader(reader));
             }
             foreach (roomProperties room in roomList)
             {
                 room.loadBatchAndContent(Content, spriteBatch);
             }
-            currentRoom = roomList[5];
+            currentRoom = roomList[0];
             reader.Close();
             stateList = new List<IGameState>();
             stateList.Add(new InGame(this, hud));
@@ -136,31 +135,21 @@ namespace Sprint0
             stateList.Add(new GoToPause(this, spriteBatch, Content, hud));
             stateList.Add(new BackToGame(this, spriteBatch, Content, hud));
             stateList.Add(new Pause(this, spriteBatch, Content, hud));
-            stateList.Add(new Death(this, spriteBatch, Content));
-            stateList.Add(new Win(this, spriteBatch, Content));
+            stateList.Add(new Death(spriteBatch, Content));
+            stateList.Add(new Win(spriteBatch, Content));
             currentState = stateList[0];
         }
-        /// <summary>
-        /// LoadContent will be called once per game and is the place to load
-        /// all of your content.
-        /// </summary>
+
         protected override void LoadContent()
         {
             
         }
-        /// <summary>
-        /// UnloadContent will be called once per game and is the place to unload
-        /// game-specific content.
-        /// </summary>
+
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
         }
-        /// <summary>
-        /// Allows the game to run logic such as updating the world,
-        /// checking for collisions, gathering input, and playing audio.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
@@ -177,10 +166,7 @@ namespace Sprint0
             //link.myInventory.Update();
             //put this line into update() of pause.cs so Game1 can be simple
         }
-        /// <summary>
-        /// This is called when the game should draw itself.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);

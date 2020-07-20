@@ -9,7 +9,6 @@ namespace Sprint0.Projectile
     public abstract class AbstractProjectile : IProjectile
     {
         internal Vector2 position;
-        internal int explodeTimer;
         internal IPlayer player;
         internal Rectangle hitBox;
         internal int damage;

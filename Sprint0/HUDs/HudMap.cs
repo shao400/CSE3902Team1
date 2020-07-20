@@ -1,30 +1,23 @@
 ﻿using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
-using Sprint0.Player;
 using Sprint0.Sprite;
 using System.Collections.Generic;
 
-namespace Sprint0.HUD
+namespace Sprint0.HUDs
 {
     public class HudMap : IHud
     {
         private HudMapPieceSprite room = SpriteFactory.HudMapPiece;     
         private HudPointSprite point = SpriteFactory.HudPoint;
-        private int xAix;
-        private int yAix;
-        private int currentRoom;
         Game1 _myGame;
         private const int dx = 31;
         private const int dy = 14;
         private List<int> discovered;
-        //private int width;
-        //private int height;
-        public HudMap( Game1 myGame)
+
+        public HudMap(Game1 myGame)
         { 
             _myGame = myGame;
             discovered = new List<int>();
-            //width = w;
-            //height = h;
         }
         private void staticMapDraw(int xAix, int yAix)
         {
@@ -247,10 +240,7 @@ namespace Sprint0.HUD
             Vector2 locationTarget = new Vector2(x,y-5*dy);
             if (_myGame.link.HaveMapOrCompass()[1]) point.Draw(locationTarget,false);
         }
-
-      
-
-
+     
         public void Update()
         {
 

@@ -1,21 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Sprint0.Controller;
 using Sprint0.Interfaces;
-using Sprint0.Items;
 using Sprint0.Player;
 using Sprint0.Sprite;
 using System.Collections.Generic;
-using System.ComponentModel;
-using Sprint0.xml;
-using System.Xml;
-using Microsoft.Xna.Framework.Media;
-using Sprint0.GameStates;
-using Sprint0.HUD;
-using Sprint0.Collisions;
-using Sprint0.Sprite;
 using System;
 
 namespace Sprint0
@@ -24,9 +11,6 @@ namespace Sprint0
     {
         private Player1 myLink;
         public List<IItem> myItemList = new List<IItem>();
-        //Rectangle PickingSourceRec = new Rectangle(519, 137, 16, 16);
-        //Rectangle PickingDestRec = new Rectangle(300 + moveCountTot * 16, 300, 16, 16);
-        //IItem selectedItem;
         ISprite itemSprite;
         ISprite pickboxSprite = new PickBoxSprite();
         int x = 390;
@@ -43,7 +27,6 @@ namespace Sprint0
 
         public void addItem(IItem item)
         {
-            // add gotten items into list
             myItemList.Add(item);
             Console.WriteLine("obtain new item: " + item.GetType());
             Console.WriteLine("current have " + myItemList.Count + " item");
@@ -51,13 +34,12 @@ namespace Sprint0
 
         public void showItem()
         {
-            // In pause state, show items, Map, and Compass
             checkRemain();
             for (int i = 0; i < myItemList.Count; i++)
             {
                 string itemType = getItemType(myItemList[i]);
-                if (itemType.Equals("Sprint0.Items.Bomb") || itemType.Equals("Sprint0.Items.Bow")
-                    || itemType.Equals("Sprint0.Items.Boomerang"))
+                if (itemType.Equals("Sprint0.Items.Bomb", System.StringComparison.CurrentCulture) || itemType.Equals("Sprint0.Items.Bow", System.StringComparison.CurrentCulture)
+                    || itemType.Equals("Sprint0.Items.Boomerang", System.StringComparison.CurrentCulture))
                 {
                     itemSprite = getItemSprite(myItemList[i]);
                     if (itemSprite != null)

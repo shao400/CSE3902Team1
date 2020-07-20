@@ -11,8 +11,6 @@ namespace Sprint0.Enemies
         private ISprite AquaSprite;
         private int xPosition;
         private int yPosition;
-        private int frame = 0;
-        bool backmove = false;
         private Rectangle destinationRec;
 
         public Empty(int x, int y)
@@ -28,8 +26,7 @@ namespace Sprint0.Enemies
 
         public override void Draw()
         {
-            //Vector2 location = new Vector2(xPosition, yPosition);
-            //AquaSprite.Draw(location, false);
+
         }
 
         public override void Update()

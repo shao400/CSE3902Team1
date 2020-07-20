@@ -6,7 +6,7 @@ using Sprint0.Enemies;
 using Sprint0.Block;
 using Sprint0.Items;
 using Sprint0.Interfaces;
-using Sprint0.HUD;
+using Sprint0.HUDs;
 using Sprint0.NPCs;
 using System.Globalization;
 using Microsoft.Xna.Framework;
@@ -16,7 +16,7 @@ namespace Sprint0.xml
 {
     public static class Loader
     {
-        static public roomProperties LoadFromReader(XmlReader reader, Game1 game)
+        static public roomProperties LoadFromReader(XmlReader reader)
         {
             int roomID = -1;
             List<IEnemy> enemies = new List<IEnemy>();

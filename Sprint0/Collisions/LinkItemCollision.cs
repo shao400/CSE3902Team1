@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
-using Sprint0.HUD;
+using Sprint0.HUDs;
 using Sprint0.Interfaces;
 using Sprint0.Items;
 using Sprint0.Player;
