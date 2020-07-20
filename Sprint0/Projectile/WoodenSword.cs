@@ -49,7 +49,7 @@ namespace Sprint0.Projectile
                 currentStatus = status.none;
                 counter = 21;
             }
-            if (currentStatus == status.stab) { }
+            if (currentStatus == status.stab) { this.GetPlayerLoction(); }
             else if (currentStatus == status.shoot) { ShotDistance+=5;
                 this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), 35, 23);
             }
@@ -100,6 +100,10 @@ namespace Sprint0.Projectile
             else if (currentStatus == status.shoot)
             {
                 return 0;
+            }
+            else if(currentStatus == status.stab)
+            {
+                return 3;
             }
             else
             {

@@ -72,7 +72,7 @@ namespace Sprint0.Player
             currentFacing = facing.right;
             currentProjectile = new WoodenSword(this, 2);
             currentAttack = new WoodenSword(this, 2);
-            secondProjectile = new Bomb(this, 0);
+            secondProjectile = new WoodenSword(this, 2);
             currentStatus = status.standing;
             currentSprite = SpriteFactory.LinkNoneStandingRight;
             myInventory = new Inventory(this);
@@ -245,7 +245,7 @@ namespace Sprint0.Player
                 else if (currentFacing == facing.left) { currentAttack = new WoodenSword(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
                 currentAttack.Stab();
                 sound.swordSlash();
-            
+
 
         }
         public void Shoot()

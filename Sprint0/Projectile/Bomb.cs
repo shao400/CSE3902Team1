@@ -77,7 +77,6 @@ namespace Sprint0.Projectile
         {
             if (currentStatus == status.explode)
             {
-
                 return 1;
             }
             else if (currentStatus == status.shoot)

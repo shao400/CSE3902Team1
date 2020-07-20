@@ -61,7 +61,8 @@ namespace Sprint0.Collisions
 
 
                         }
-                    }else if (thisProjectile.IsExplode() == 2)
+                    
+                    }else if (thisProjectile.IsExplode() == 3)
                     {
                         enemy.Damaged();
                         if (enemy.GetHealth() == 0)
@@ -74,6 +75,7 @@ namespace Sprint0.Collisions
 
 
                         }
+                        thisProjectile.explo(3);
                     }
                 }
             }
