@@ -17,6 +17,5 @@
 	<enemy type="Moblin" xpos="147" ypos="363" />
 	<enemy type="Peahat" xpos="147" ypos="315" />
 	<enemy type="Tektite" xpos="579" ypos="449" />
-	<enemy type="Aqua" xpos="147" ypos="545" />
 	
 </Room>

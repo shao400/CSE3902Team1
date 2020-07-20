@@ -1,10 +1,15 @@
 Zhizhou He
-6/29/2020
-Sprint3
-LinkEnemyCollision
-Main Author: Gengyi Qin
-Time: 8 min
-I think this file has good readability. The stucture of this file is coherent.
-First it use a big IF statement to determine if Player has collison. Then it use an IF-ELSE statement to determine the direction: From Up or Down, or Left or Right.
-And then it deals with specific conditions. 
-This file's idea and structure also be used in other collision related file and it works well. So I think it has good portability.
+7/20/2020
+Sprint4
+HudMap.cs
+Main Author: Zilin Shao
+Time: 5 min
+
+In the first glance, the file has very neat layout so it is very easy to check its functionality .
+
+The code stucture is relatively easy. The staticMapDraw funtion is for drawing the visited map and it is sepearted from
+the Draw() method, so it is easy for maintence and any modification. 
+
+The code uses good names for variable so it is easy to know what they do. 
+
+In conclusion, I think the readability of this code is good.

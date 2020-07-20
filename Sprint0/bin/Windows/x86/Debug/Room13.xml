@@ -5,7 +5,7 @@
 	<src xpos="1029" ypos="178" />
 	<enemy type="Trap" xpos="579" ypos="411" />
 	<enemy type="Moblin" xpos="99" ypos="411" />
-	<enemy type="Keese" xpos="627" ypos="411" />
+	<enemy type="Keese" xpos="127" ypos="411" />
 	<block type="BlockA" xpos="435" ypos="267" />
 	<block type="BlockA" xpos="483" ypos="267" />
 	<block type="BlockA" xpos="531" ypos="267" />

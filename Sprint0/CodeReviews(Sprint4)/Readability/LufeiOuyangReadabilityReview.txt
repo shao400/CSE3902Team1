@@ -1,13 +1,12 @@
 Lufei Ouyang
-6/29/2020
-Sprint3
-LinkItemCollision.cs, HealthBar.cs
-Main Author: Zilin Shao
+7/20/2020
+Sprint4
+Inventory.cs
+Main Author: Zhizhou He
 Time: 5 min
 
-The nested structure reduces the readability of the code, but the logic behind this is relatively clear so it is easy to understand.
-The author adds a comment after each if-else statement to make the code easier to understand. Also, all the variables follows the PascalCase, 
-which makes reading more seamless.
-
-The HealthBar almost as same good as LinkItemCollision, but this code needs more comments. The idea behind this class is simple and concise. 
-The code tries to be as humble and simple as possible. The logic is clear.
+The logic of Inventory.cs is very clear. Not too many nesting conditions can improve the readability of the entire document.
+Zhizhou also uses comments for each condition,
+this makes the code easier to understand. Furthermore, the name of each variable is Pascal naming convention,
+Therefore, it improves the readability of the entire code. 
+Overall, Inventory.cs is a great class. It is very easy to understand the meaning of the code.

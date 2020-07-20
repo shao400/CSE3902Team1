@@ -15,7 +15,6 @@ namespace Sprint0
         ISprite pickboxSprite = new PickBoxSprite();
         int x = 390;
         int y = 110;
-        int frame = 0;
         public int moveCountTot = 0;
         public int currentItem = 0;
 
@@ -129,24 +128,12 @@ namespace Sprint0
             {
                 IItem item = myItemList[i];
                 string itemType = getItemType(item);
-                switch (itemType)
-                {
-                    case "Sprint0.Items.Bomb":
+                if(itemType.Equals("Sprint0.Items.Bomb")) 
+                {            
                         if (myLink.bombCount == 0)
                         {
                             myItemList.RemoveAt(i);
                         }
-                        break;
-                    /*
-                                        case "Sprint0.Items.Arrow":
-                                            if (myLink.bombCount == 0)
-                                            {
-                                                myItemList.RemoveAt(i);
-                                            }
-                                            break;
-                    */
-                    default:
-                        break;
                 }
             }
         }
@@ -174,20 +161,7 @@ namespace Sprint0
         }
         public void Update()
         {
-            frame++;
-            if (frame == 0)
-            {
-                //PickingSourceRec = new Rectangle(519, 137, 16, 16);//red box
-            }
-            else if (frame == 3)
-            {
-                //PickingSourceRec = new Rectangle(5, 15, 1, 1); // drak
-            }
-            else
-            {
-                //PickingSourceRec = new Rectangle(536, 137, 16, 16); //blue box
-                frame = 0;
-            }
+
         }
     }
 }

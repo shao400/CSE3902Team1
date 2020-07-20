@@ -1,9 +1,9 @@
 Chuwen Sun
-6/29/2020
-Sprint3
-LinkEnemyCollision.cs
-Main Author: Zilin Shao
+7/20/2020
+Sprint4
+Inventory.cs
+Main Author: Zhizhou He
 Time: 10 min
 
-This code is highly readable, since those if-else brackets are clear with obivious purpose. The code not only make the Link character
-not walk into enemies, but also push the character backwards. Comments for helping future updates are presented at the end of the file.
+This code is highly readable, since variables names are clear with obivious purpose. Using switch statement makes the code's purpose more obivious since it is just switching
+basic item types. And functions are not redundant with clear purpose.

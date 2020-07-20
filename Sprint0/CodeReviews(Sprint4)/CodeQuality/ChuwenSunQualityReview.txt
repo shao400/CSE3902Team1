@@ -1,9 +1,9 @@
 Chuwen Sun
-6/29/2020
-Sprint3
-LinkBlockCollision.cs
-Main Author: Zilin Shao
+7/20/2020
+Sprint4
+Arrow.cs
+Main Author: Lufei Ouyang
 Time: 10 min
 
-The code quality is high, linkages are clear, which is good for future updates. The class uses intersection rectangle of Link and Block
-so the link character will not walk into blocks and get blocked by them.
+The code quality is high, linkages are clear, and there is a abstract class in the folder to reference. This class has has reference to the player so it could get player's position
+when it needed. Functions are clear and not redundant.

@@ -8,7 +8,7 @@
 	<enemy type="Stalfos" xpos="627" ypos="411" />
 	<enemy type="Stalfos" xpos="99" ypos="411" />
 	<enemy type="Keese" xpos="291" ypos="545" />
-	<enemy type="Peahat" xpos="531" ypos="267" />
+	<enemy type="Peahat" xpos="481" ypos="267" />
 	<block type="BlockA" xpos="195" ypos="363" />
 	<block type="BlockA" xpos="195" ypos="459" />
 	<block type="BlockA" xpos="531" ypos="363" />

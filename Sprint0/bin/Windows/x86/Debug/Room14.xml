@@ -41,4 +41,5 @@
 	<block type="BlockAllTop" xpos="96" ypos="168" />
 	<block type="BlockAllTop" xpos="96" ypos="600" />
 	<block type="BlockAllLeft" xpos="672" ypos="264" />
+	<item type="Triforce" xpos="400" ypos="420" />
 </Room>
