@@ -17,14 +17,13 @@ namespace Sprint0.HUD
         private int health;
         Player1 _link;
         private const int dx = 25;
-        //private int width;
-        //private int height;
+
+
         public HealthBar(Game1 myGame)
         {
 
             _link = myGame.link;
-            //width = w;
-            //height = h;
+         
         }
 
         private void DrawMultiEmpty(int x, int y ,int count)

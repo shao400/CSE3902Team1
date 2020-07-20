@@ -109,3 +109,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Usage", "CA2211:Non-constant fields should not be visible", Justification = "<Pending>", Scope = "member", Target = "~F:Sprint0.Sprite.SpriteFactory.ItemRuppy")]
 [assembly: SuppressMessage("Usage", "CA2211:Non-constant fields should not be visible", Justification = "<Pending>", Scope = "member", Target = "~F:Sprint0.Sprite.SpriteFactory.ItemTriforce")]
 [assembly: SuppressMessage("Usage", "CA2211:Non-constant fields should not be visible", Justification = "<Pending>", Scope = "member", Target = "~F:Sprint0.Sprite.SpriteFactory.ItemWBoomerang")]
+[assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "<Pending>", Scope = "member", Target = "~M:Sprint0.HUD.HealthBar.#ctor(Sprint0.Game1)")]
