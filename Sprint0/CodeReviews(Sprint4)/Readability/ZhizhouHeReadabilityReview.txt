@@ -1,0 +1,10 @@
+Zhizhou He
+6/29/2020
+Sprint3
+LinkEnemyCollision
+Main Author: Gengyi Qin
+Time: 8 min
+I think this file has good readability. The stucture of this file is coherent.
+First it use a big IF statement to determine if Player has collison. Then it use an IF-ELSE statement to determine the direction: From Up or Down, or Left or Right.
+And then it deals with specific conditions. 
+This file's idea and structure also be used in other collision related file and it works well. So I think it has good portability.

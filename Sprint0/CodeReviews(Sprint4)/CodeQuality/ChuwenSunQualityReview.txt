@@ -1,0 +1,9 @@
+Chuwen Sun
+6/29/2020
+Sprint3
+LinkBlockCollision.cs
+Main Author: Zilin Shao
+Time: 10 min
+
+The code quality is high, linkages are clear, which is good for future updates. The class uses intersection rectangle of Link and Block
+so the link character will not walk into blocks and get blocked by them.
