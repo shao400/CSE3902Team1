@@ -1,0 +1,9 @@
+Chuwen Sun
+6/29/2020
+Sprint3
+LinkEnemyCollision.cs
+Main Author: Zilin Shao
+Time: 10 min
+
+This code is highly readable, since those if-else brackets are clear with obivious purpose. The code not only make the Link character
+not walk into enemies, but also push the character backwards. Comments for helping future updates are presented at the end of the file.

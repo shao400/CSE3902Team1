@@ -1,0 +1,11 @@
+Zilin Shao
+7/20/2020
+Sprint4
+Loader.cs
+Main Author: Lufei Ouyang
+Time: 8 min
+The Player1 class has been created by Ouyang since Sprint2, here I refer to his new implementation of player's
+projectiles. In last Sprint, our weapons and link are combined, and we detached them in this sprint. Places of
+execellence of Ouyang's implementation of Projectiles are its complete functions of collisions and shooting CD.
+And he implementated these functions successfully mainly owe to Player1 class's high cohesion and low coupling.
+That is to say, Player1 class's code has high maintainbility.

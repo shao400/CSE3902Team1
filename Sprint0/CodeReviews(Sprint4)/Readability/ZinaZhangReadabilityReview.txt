@@ -1,0 +1,12 @@
+Zina Zhang
+6/29/2020
+Sprint3
+Sound.cs Player1.cs 
+Main Author: Lufei Ouyang
+Time: 10 min
+
+The code is highly readable with comments and empty line to seperate different parts. 
+Specific names are defined in good way in Sound.cs
+Added proper method with proper name in Player1.cs
+Everything looks orderly. 
+Might be bettwe if use comments with slash. 

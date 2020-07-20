@@ -1,0 +1,11 @@
+Zilin Shao
+7/20/2020
+Sprint4
+Inventory
+Main Author: Zhizhou He
+Time: 7 min
+The readability of this file is high. Due to its name of functions and variables, I can easily
+understand and collaborate with his class. It also has some brief comments to help read. 
+Its readability also reflects during runtime, since a few codes of "Console.WriteLine" exist,
+which can make player or tester know what part of Inventory's functions have been called just
+now.
