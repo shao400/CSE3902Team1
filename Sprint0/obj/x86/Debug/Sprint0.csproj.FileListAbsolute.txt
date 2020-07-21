@@ -1,29 +1,3 @@
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Credits1.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\luigi.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Sprint0.exe
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Sprint0.pdb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\MonoGame.Framework.dll
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\SharpDX.dll
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\SharpDX.DXGI.dll
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\SharpDX.XInput.dll
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\MonoGame.Framework.xml
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\SharpDX.xml
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\SharpDX.DXGI.xml
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\SharpDX.XInput.xml
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\obj\x86\Debug\Sprint0.csprojAssemblyReference.cache
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\obj\x86\Debug\Sprint0.csproj.CoreCompileInputs.cache
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\obj\x86\Debug\Sprint0.csproj.CopyComplete
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\obj\x86\Debug\Sprint0.exe
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\obj\x86\Debug\Sprint0.pdb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\link.xnb
 C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Credits1.xnb
 C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\link.xnb
 C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\luigi.xnb
@@ -76,14 +50,10 @@ E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.csproj
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.csproj.CopyComplete
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.exe
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.pdb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\enemy.xnb
 C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.csprojAssemblyReference.cache
 C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.csproj.CoreCompileInputs.cache
 C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.exe
 C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\obj\x86\Debug\Sprint0.pdb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\items.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Blocks.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\item.xnb
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\items.xnb
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Blocks.xnb
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Credits1.xnb
@@ -193,11 +163,6 @@ D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sound
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Link_Hurt.xnb
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_MagicalRod.xnb
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\SwordSlash.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Intro.wma
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Intro.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Link_Hurt.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_MagicalRod.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\SwordSlash.xnb
 C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Intro.wma
 C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Intro.xnb
 C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Link_Hurt.xnb
@@ -206,9 +171,6 @@ C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\De
 C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\boss.xnb
 C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\enemy2.xnb
 C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\npc.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\boss.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\enemy2.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\npc.xnb
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\boss.xnb
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\enemy2.xnb
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\npc.xnb
@@ -224,10 +186,8 @@ C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Conte
 C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\enemy2.xnb
 C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\npc.xnb
 C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\dungeon.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\dungeon.xnb
 C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\dungeon.xnb
 C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Map.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Map.xnb
 C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\dungeon.xnb
 C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Map.xnb
 C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\shoot.xnb
@@ -235,7 +195,6 @@ E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Conten
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Map.xnb
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\shoot.xnb
 C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\shoot.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\shoot.xnb
 C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Map.xnb
 C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\shoot.xnb
 C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\game_over.xnb
@@ -259,10 +218,6 @@ D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\npc.x
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\pause.xnb
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\shoot.xnb
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\winning.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\game_over.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Hud.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\pause.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\winning.xnb
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Hud.xnb
 C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\game_over.xnb
 C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Hud.xnb
@@ -282,20 +237,6 @@ E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Conten
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Get_Rupee.xnb
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Labyrinth.wma
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Labyrinth.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Labyrinth.wma
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Labyrinth.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Arrow_Boomerang.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Bomb_Blow.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Bomb_Drop.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Door_Unlock.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Enemy_Die.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Enemy_Hit.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Get_Heart.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Get_Item.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Get_Rupee.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Link_Die.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_LowHealth.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Sword_Shoot.xnb
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Labyrinth.wma
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Labyrinth.xnb
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Arrow_Boomerang.xnb
@@ -429,22 +370,6 @@ D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sound
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Text.xnb
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Text_Slow.xnb
 D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Triforce.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Boss_Scream1.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Boss_Scream2.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Boss_Scream3.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Candle.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Fanfare.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Key_Appear.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Recorder.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Refill_Loop.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Secret.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Shield.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Shore.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Stairs.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Sword_Combined.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Text.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Text_Slow.xnb
-C:\Users\99376\OneDrive\CSE3902\Workspace\Team1Project\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Triforce.xnb
 C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Boss_Scream1.xnb
 C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Boss_Scream2.xnb
 C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\LOZ_Boss_Scream3.xnb

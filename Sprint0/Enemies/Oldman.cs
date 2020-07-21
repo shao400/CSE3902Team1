@@ -23,7 +23,7 @@ namespace Sprint0.Enemies
             xPosition = x;
             yPosition = y;
             OldmanSprite = new EnemyOldmanSprite(x, y);
-            BlastSprite = new EnemyBlastSprite(x,y);
+            BlastSprite = new EnemyBlastSprite();
             destinationRec = new Rectangle(x, y, 45, 45);
             locationB = new Vector2(x, y);
             _link = link;

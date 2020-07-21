@@ -36,7 +36,7 @@ namespace Sprint0.Sprite
         public static EnemyAquaSprite EnemyAqua = new EnemyAquaSprite(0, 0);
         public static EnemyDodongoSprite EnemyDodongo = new EnemyDodongoSprite(0, 0);
         public static EnemyOldmanSprite EnemyOldman = new EnemyOldmanSprite(0, 0);
-        public static EnemyBlastSprite EnemyBlast = new EnemyBlastSprite(0, 0);
+        public static EnemyBlastSprite EnemyBlast = new EnemyBlastSprite();
         public static NPCMerchantSprite NPCMerchant = new NPCMerchantSprite();
         public static NPCFlameSprite NPCFlame = new NPCFlameSprite();
 

@@ -208,3 +208,5 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "<Pending>", Scope = "member", Target = "~M:Sprint0.HUDs.HudFrame.#ctor(Sprint0.Game1)")]
 [assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "<Pending>", Scope = "member", Target = "~M:Sprint0.HUDs.ItemSlot.#ctor(Sprint0.Game1)")]
 [assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "<Pending>", Scope = "member", Target = "~M:Sprint0.HUDs.WeaponSlot.#ctor(Sprint0.Game1)")]
+[assembly: SuppressMessage("Usage", "CA2211:Non-constant fields should not be visible", Justification = "<Pending>", Scope = "member", Target = "~F:Sprint0.Sprite.SpriteFactory.EnemyBlast")]
+[assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "<Pending>", Scope = "member", Target = "~M:Sprint0.xml.Loader.LoadFromReader(System.Xml.XmlReader,Sprint0.Game1)~Sprint0.xml.roomProperties")]

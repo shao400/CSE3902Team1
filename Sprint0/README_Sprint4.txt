@@ -50,3 +50,4 @@ Known bugs / TO-DOs for Sprint4
 4. Some of the enemy/NPC/items are not implemented, or not added to the game, as the Level-1 don't contain them.
 5. Several enemy sprite sheets need to be updated and reversed / Oldman is still an IEnemy class, which should be INPC
 6. Utility classes are not finished yet and need future updates.
+7. Player class need to be divided as it is too long

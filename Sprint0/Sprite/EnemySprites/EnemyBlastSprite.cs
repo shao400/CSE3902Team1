@@ -11,7 +11,7 @@ namespace Sprint0.Sprite
         Rectangle sourceRec;
 
 
-        public EnemyBlastSprite(int x, int y)
+        public EnemyBlastSprite()
         {
         }
 

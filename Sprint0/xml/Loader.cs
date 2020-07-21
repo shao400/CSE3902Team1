@@ -24,9 +24,7 @@ namespace Sprint0.xml
             List<IEnemy> enemies = new List<IEnemy>();
             List<IBlock> blocks = new List<IBlock>();
             List<IItem> items = new List<IItem>();
-            //List<IRoom> rooms = new List<IRoom>();
             List<IHud> huds = new List<IHud>();
-            //List<IWallCube> cubes = new List<IWallCube>();
             List<IDoor> doors = new List<IDoor>();
             List<INPC> NPCs = new List<INPC>();
             reader.MoveToContent();
