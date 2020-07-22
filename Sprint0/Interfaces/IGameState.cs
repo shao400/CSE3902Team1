@@ -13,5 +13,9 @@ namespace Sprint0.Interfaces
         void Update();
 
         void loadNextRoom(int nextRoom);
+
+        void NextOption();
+
+        void LastOption();
     }
 }

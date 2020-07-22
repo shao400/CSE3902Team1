@@ -17,7 +17,12 @@ namespace Sprint0.Commands
 
         public void Execute()
         {
-            myGame.link.Up();
+            if (myGame.currentState == myGame.stateList[7])
+            {
+                myGame.currentState.LastOption();
+            }
+            else
+                myGame.link.Up();
         }
 
     }

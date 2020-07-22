@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/99376/OneDrive/CSE3902/Workspace/Team1Project/Sprint0/Content/Sounds/LOZ_Enemy_Die.wav</SourceFile>
-  <SourceTime>2020-07-18T13:07:29.0865844-04:00</SourceTime>
-  <DestFile>C:/Users/99376/OneDrive/CSE3902/Workspace/Team1Project/Sprint0/Content/bin/Windows/Content/Sounds/LOZ_Enemy_Die.xnb</DestFile>
-  <DestTime>2020-07-20T21:09:40.1808623-04:00</DestTime>
+  <SourceFile>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Enemy_Die.wav</SourceFile>
+  <SourceTime>2020-07-18T17:07:20.6089721-04:00</SourceTime>
+  <DestFile>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Sounds/LOZ_Enemy_Die.xnb</DestFile>
+  <DestTime>2020-07-22T14:27:51.4268724-04:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

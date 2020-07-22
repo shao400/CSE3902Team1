@@ -137,6 +137,7 @@ namespace Sprint0
             stateList.Add(new Pause(this, spriteBatch, Content, hud));
             stateList.Add(new Death(spriteBatch, Content));
             stateList.Add(new Win(spriteBatch, Content));
+            stateList.Add(new Menu(this, spriteBatch, Content));
             currentState = stateList[0];
         }
 

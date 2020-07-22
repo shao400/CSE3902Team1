@@ -95,5 +95,14 @@ namespace Sprint0.GameStates
                 }
             }
         }
+
+        public void NextOption()
+        {
+
+        }
+        public void LastOption()
+        {
+
+        }
     }
 }

@@ -64,5 +64,9 @@ namespace Sprint0.UtilityClass
         public const string Connect = "connect";
         public const string Content = "Content";
 
+        //StringHolders for Menu
+        public const string Play = "PLAY FIRST LEVEL";
+        public const string NightmareMode = "NIGHTMARE MODE";
+
     }
 }

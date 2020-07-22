@@ -152,6 +152,13 @@
 /processorParam:TextureFormat=Color
 /build:Map.png
 
+#begin myFont.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:myFont.spritefont
+
 #begin npc.png
 /importer:TextureImporter
 /processor:TextureProcessor
