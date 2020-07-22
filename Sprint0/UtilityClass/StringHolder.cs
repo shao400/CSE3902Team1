@@ -67,6 +67,8 @@ namespace Sprint0.UtilityClass
         //StringHolders for Menu
         public const string Play = "PLAY FIRST LEVEL";
         public const string NightmareMode = "NIGHTMARE MODE";
+        public const string Restart = "RESTART";
+        public const string Instruction = "PRESS SPACE TO SELECT";
 
     }
 }

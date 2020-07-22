@@ -104,5 +104,10 @@ namespace Sprint0.GameStates
         {
 
         }
+
+        public void Select()
+        {
+
+        }
     }
 }

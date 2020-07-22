@@ -16,6 +16,7 @@
     <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/link.png</File>
     <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/luigi.png</File>
     <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/Map.png</File>
+    <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/menu.png</File>
     <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/myFont.spritefont</File>
     <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/npc.png</File>
     <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/pause.jpg</File>
@@ -65,6 +66,7 @@
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File>item.png</File>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

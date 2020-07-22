@@ -138,7 +138,7 @@ namespace Sprint0
             stateList.Add(new Death(spriteBatch, Content));
             stateList.Add(new Win(spriteBatch, Content));
             stateList.Add(new Menu(this, spriteBatch, Content));
-            currentState = stateList[0];
+            currentState = stateList[7];
         }
 
         protected override void LoadContent()
@@ -170,7 +170,11 @@ namespace Sprint0
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            if (currentState == stateList[7])
+                GraphicsDevice.Clear(Color.Pink);
+            else
+                GraphicsDevice.Clear(Color.CornflowerBlue);
+
             currentState.Draw();
             base.Draw(gameTime);
             if(currentState == stateList[3])

@@ -63,6 +63,7 @@
     <Compile Include="Collisions\LinkItemCollision.cs" />
     <Compile Include="Commands\D1UseItem.cs" />
     <Compile Include="Commands\aLeft.cs" />
+    <Compile Include="Commands\spaceSelect.cs" />
     <Compile Include="Commands\enterPause.cs" />
     <Compile Include="Commands\Bomb.cs" />
     <Compile Include="Commands\Shoot.cs" />

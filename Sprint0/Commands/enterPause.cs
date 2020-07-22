@@ -19,7 +19,6 @@ namespace Sprint0.Commands
 
         public void Execute()
         {
-            
             if(count == 0)
             {
                 myGame.currentState = myGame.stateList[2];

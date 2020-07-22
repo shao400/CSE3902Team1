@@ -17,5 +17,7 @@ namespace Sprint0.Interfaces
         void NextOption();
 
         void LastOption();
+
+        void Select();
     }
 }
