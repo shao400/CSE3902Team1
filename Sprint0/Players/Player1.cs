@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using Sprint0.Interfaces;
 using System.Runtime.CompilerServices;
 using Sprint0.UtilityClass;
+using Sprint0.Inventories;
+using Sprint0.GameStates;
 
 // Author: Lufei Ouyang
 namespace Sprint0.Player
@@ -37,6 +39,7 @@ namespace Sprint0.Player
         private LinkNpcCollision linkNpcCollision;
         private status currentStatus;
         public Inventory myInventory;
+        public StoreStock myStock;
         private Boolean GetMap;
         private Boolean GetCompass;
 
@@ -77,6 +80,7 @@ namespace Sprint0.Player
             currentStatus = status.standing;
             currentSprite = SpriteFactory.LinkNoneStandingRight;
             myInventory = new Inventory(this);
+            myStock = new StoreStock(this);
             currentWp = new Queue<string>();
             currentWp.Enqueue(StringHolder.WoodenSword);
             projectiles = new Queue<IProjectile>();

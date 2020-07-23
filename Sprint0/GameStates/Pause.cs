@@ -13,6 +13,7 @@ using Sprint0.Sprite;
 using System.Windows;
 using Sprint0.HUDs;
 using Sprint0.UtilityClass;
+using Sprint0.Inventories;
 
 namespace Sprint0.GameStates
 {
@@ -20,27 +21,21 @@ namespace Sprint0.GameStates
     {
         Game1 myGame;
         SpriteBatch myBatch;
-        roomProperties myCurrentRoom;
         Rectangle pauseDestRec = new Rectangle(0, 0, 768, 528);
         Rectangle pauseSourceRec = new Rectangle(0, 0, 491, 325);
         ContentManager myContent;
+        Inventory myInventory;
         private HudMap map;
         private Hud myHud;
-        int x = 0;
-        int y = 528;
 
         public Pause(Game1 game, SpriteBatch batch, ContentManager Content, Hud hud1)
         {
             myGame = game;
-            myCurrentRoom = game.currentRoom;
             myBatch = batch;
             myContent = Content;
             myHud = hud1;
             map = hud1.map;
-        }
-        public void loadNextRoom(int nextRoom)
-        {
-            // nothing
+            myInventory = game.link.myInventory;
         }
 
         public void Draw()
@@ -48,10 +43,15 @@ namespace Sprint0.GameStates
             myBatch.Begin();
             myBatch.Draw(myContent.Load<Texture2D>(StringHolder.Pause), pauseDestRec, pauseSourceRec, Color.White); ;
             myBatch.End();
-            myHud.Draw(x, y);
+            myHud.Draw(0, 528);
             map.Draw(450, 450);
-            myGame.link.myInventory.showItem();
-            myGame.link.myInventory.pickingItem(0);
+            myInventory.showItem();
+            myInventory.pickingItem(0);
+
+        }
+
+        public void loadNextRoom(int nextRoom)
+        {
 
         }
 

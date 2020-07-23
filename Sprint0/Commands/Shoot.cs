@@ -21,6 +21,10 @@ namespace Sprint0.Commands
             {
                 myGame.link.myInventory.pickingItem(1);
             }
+            else if (myGame.currentState == myGame.stateList[8])
+            {
+                myGame.link.myStock.pickingItem(1);
+            }
             else
             {
                 myGame.link.Shoot();

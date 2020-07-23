@@ -16,41 +16,27 @@ using Sprint0.UtilityClass;
 using Sprint0.Items;
 using Sprint0.Player;
 using Sprint0.HUDs;
+using Sprint0.Inventories;
 
 namespace Sprint0.GameStates
 {
     class Store : IGameState
     {
         Game1 myGame;
-        Player1 myLink;
-        SpriteBatch myBatch;
-        Hud myHud;
+        SpriteBatch myBatch;     
         Rectangle storeDestRec = new Rectangle(0, 168, 768, 528);
         Rectangle storeSourceRec = new Rectangle(0, 0, 768, 529);
-        ISprite pickboxSprite = new PickBoxSprite();
         ContentManager myContent;
-        Inventory myInventory;
-        ISprite itemSprite, itemInfoSprite;
-        public List<IItem> storeList = new List<IItem>();
-        private Bomb bomb = new Bomb(0, 0);
-        private HeartContainer heartC = new HeartContainer(0, 0);
-        public int moveCountTot = 0;
-        public int currentItem = 0;
-        int x = 340;
-        int y = 340;
+        StoreStock myStock;
+        private Hud myHud;
 
-        //donot need that difficult, because item index is fixed
-
-        public Store(Game1 game, SpriteBatch batch, ContentManager Content)
+        public Store(Game1 game, SpriteBatch batch, ContentManager Content, Hud hud1)
         {
             myGame = game;
-            myLink = game.link;
             myBatch = batch;
             myContent = Content;
-            myInventory = myGame.link.myInventory;
-            myHud = game.hud;
-            storeList.Add(bomb);
-            storeList.Add(heartC);
+            myHud = hud1;
+            myStock = game.link.myStock;
         }
         public void Draw()
         {
@@ -58,59 +44,13 @@ namespace Sprint0.GameStates
             myBatch.Draw(myContent.Load<Texture2D>(StringHolder.Store), storeDestRec, storeSourceRec, Color.White); ;
             myBatch.End();
             myHud.Draw(0,0);
-            showItem();
-            pickingItem(0);
+            myStock.showItem();
+            myStock.pickingItem(0);
         }
-        public void showItem()
-        {
-            for (int i = 0; i < storeList.Count; i++)
-            {
-                string itemType = myInventory.getItemType(storeList[i]);
-                itemSprite = myInventory.getItemSprite(storeList[i]);
-                if (itemSprite != null)
-                {
-                    Vector2 dest = new Vector2(x + i * 50, y);
-                    itemSprite.Draw(dest, false);
-                }                
-            }
-        }
-        public void pickingItem(int moveCount)
-        {
-            // Use Z & N to pick item
-            moveCountTot += moveCount;
-            if (moveCountTot < 0)
-            {
-                moveCountTot = 0;
-            }
-            if (moveCountTot == storeList.Count && moveCountTot != 0)
-            {
-                moveCountTot = storeList.Count - 1;
-            }
-            if (storeList.Count == 0) moveCountTot = 0;
-            Vector2 dest = new Vector2(331 + moveCountTot * 50, 335);
-            pickboxSprite.Draw(dest, false);
-
-            //TODO show item's info
-        }
-
-        public void drawInfo(int moveCount)
-        {
-            
-        }
-
-        public void buyItem()
-        {
-            // use 1 to buy item
-            // add purchase sound
-            IItem selectedItem = storeList[moveCountTot];
-            myInventory.addItem(selectedItem);
-            myLink.ruppyCount -= selectedItem.getPrice();
-
-        }
-
+        
         public void loadNextRoom(int nextRoom)
         {
-            // nothing
+
         }
 
         public void Update() 

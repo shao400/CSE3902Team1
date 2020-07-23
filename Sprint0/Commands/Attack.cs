@@ -24,7 +24,7 @@ namespace Sprint0.Commands
             }
             else if (myGame.currentState == myGame.stateList[8])
             {
-                //myGame.store
+                myGame.link.myStock.pickingItem(-1);
             }
             else
             {

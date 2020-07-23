@@ -17,7 +17,10 @@ namespace Sprint0.Commands
 
         public void Execute()
         {
-
+            if (myGame.currentState == myGame.stateList[8])
+            {
+                myGame.currentState = myGame.stateList[0];
+            }
             myGame.link.Right();
 
         }

@@ -42,7 +42,6 @@ namespace Sprint0
         public IGameState currentState;
         public List<IGameState> stateList;
         public Player1 link;
-        public IGameState store;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -113,7 +112,6 @@ namespace Sprint0
             controllerList.Add(new MouseC(this));
             link = new Player1(IntegerHolder.linkInitialX, IntegerHolder.linkInitialY, IntegerHolder.linkHitBoxSize, IntegerHolder.linkHitBoxSize, soundEffect, this);
             hud = new Hud(this);
-            store = new Store(this, spriteBatch, Content);
             this.IsMouseVisible = true;
             base.Initialize();
             string Room = "Room";
@@ -128,7 +126,7 @@ namespace Sprint0
             {
                 room.loadBatchAndContent(Content, spriteBatch);
             }
-            currentRoom = roomList[0];
+            currentRoom = roomList[7];
             reader.Close();
             stateList = new List<IGameState>();
             stateList.Add(new InGame(this, hud));
@@ -139,7 +137,7 @@ namespace Sprint0
             stateList.Add(new Death(spriteBatch, Content));
             stateList.Add(new Win(spriteBatch, Content));
             stateList.Add(new Menu(this, spriteBatch, Content));
-            stateList.Add(new Store(this, spriteBatch, Content));
+            stateList.Add(new Store(this, spriteBatch, Content, hud));
             currentState = stateList[7];
         }
 

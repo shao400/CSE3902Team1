@@ -20,7 +20,7 @@ namespace Sprint0.Commands
         {
            if(myGame.currentState == myGame.stateList[8])
             {
-               
+                myGame.link.myStock.buyItem();
             }
             myGame.link.Left();
         }

@@ -81,6 +81,8 @@ namespace Sprint0.Sprite
         public static ItemRuppySprite ItemRuppy = new ItemRuppySprite();
         public static ItemArrowSprite ItemArrow = new ItemArrowSprite();
         public static ItemWoodenSwordSprite ItemWoodenSword = new ItemWoodenSwordSprite();
+        public static BombInfoSprite BombInfo = new BombInfoSprite();
+        public static HeartCInfoSprite HeartCInfo = new HeartCInfoSprite();
 
         // Block Author: Zilin Shao
         public static List<ISprite> BlockList = new List<ISprite>();
@@ -205,6 +207,8 @@ namespace Sprint0.Sprite
             ItemArrow.LoadContent(batch, content.Load<Texture2D>("item"));
             ItemMap.LoadContent(batch, content.Load<Texture2D>("item"));
             ItemWoodenSword.LoadContent(batch, content.Load<Texture2D>("item"));
+            BombInfo.LoadContent(batch, content.Load<Texture2D>("store"));
+            HeartCInfo.LoadContent(batch, content.Load<Texture2D>("store"));
 
             ItemList.Add(ItemHeartContainer);
             ItemList.Add(ItemGirl);
@@ -220,6 +224,8 @@ namespace Sprint0.Sprite
             ItemList.Add(ItemArrow);
             ItemList.Add(ItemMap);
             ItemList.Add(ItemWoodenSword);
+            ItemList.Add(BombInfo);
+            ItemList.Add(HeartCInfo);
         }
 
         private static void LoadHudContent(SpriteBatch batch, ContentManager content)

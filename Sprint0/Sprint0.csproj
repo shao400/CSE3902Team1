@@ -93,6 +93,7 @@
     <Compile Include="Enemies\Keese.cs" />
     <Compile Include="GameStates\Menu.cs" />
     <Compile Include="GameStates\Store.cs" />
+    <Compile Include="Inventories\StoreStock.cs" />
     <Compile Include="Items\WoodenSwordItem.cs" />
     <Compile Include="NPCs\Flame.cs" />
     <Compile Include="NPCs\Merchant.cs" />
@@ -132,7 +133,7 @@
     <Compile Include="Interfaces\IProjectile.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />
     <Compile Include="Interfaces\ISprite.cs" />
-    <Compile Include="Inventory.cs" />
+    <Compile Include="Inventories\Inventory.cs" />
     <Compile Include="Items\Bomb.cs" />
     <Compile Include="Items\Arrow.cs" />
     <Compile Include="Items\Key.cs" />
@@ -180,6 +181,8 @@
     <Compile Include="Sprite\HudSprites\HudFrameSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudPointSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudMapPieceSprite.cs" />
+    <Compile Include="Sprite\ItemSprites\HeartCInfoSprite.cs" />
+    <Compile Include="Sprite\ItemSprites\BombInfoSprite.cs" />
     <Compile Include="Sprite\ItemSprites\ItemWoodenSwordSprite.cs" />
     <Compile Include="Sprite\LinkSprites\LinkUsingDownSprite.cs" />
     <Compile Include="Sprite\LinkSprites\LinkUsingLeftSprite.cs" />
