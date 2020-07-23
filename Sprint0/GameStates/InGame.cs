@@ -65,6 +65,7 @@ namespace Sprint0.GameStates
             myGame.link.EnemyCollisionTest(myGame.currentRoom.enemyList);
             myGame.link.ProjectileEnemiesCollisionTest(myGame.currentRoom.enemyList);
             myGame.link.ItemCollisionTest(myGame.currentRoom.itemList);
+            myGame.link.NpcCollisionTest(myGame.currentRoom.NPCList);
             myGame.currentRoom.Update();
         }
         public void loadNextRoom(int nextRoom)

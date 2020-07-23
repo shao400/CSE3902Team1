@@ -15,6 +15,7 @@ using Sprint0.HUDs;
 using Sprint0.UtilityClass;
 using Sprint0.Items;
 using Sprint0.Player;
+using Sprint0.HUDs;
 
 namespace Sprint0.GameStates
 {
@@ -23,7 +24,8 @@ namespace Sprint0.GameStates
         Game1 myGame;
         Player1 myLink;
         SpriteBatch myBatch;
-        Rectangle storeDestRec = new Rectangle(0, 0, 768, 528);
+        Hud myHud;
+        Rectangle storeDestRec = new Rectangle(0, 168, 768, 528);
         Rectangle storeSourceRec = new Rectangle(0, 0, 768, 529);
         ISprite pickboxSprite = new PickBoxSprite();
         ContentManager myContent;
@@ -34,8 +36,10 @@ namespace Sprint0.GameStates
         private HeartContainer heartC = new HeartContainer(0, 0);
         public int moveCountTot = 0;
         public int currentItem = 0;
-        int x = 390;
-        int y = 110;
+        int x = 340;
+        int y = 340;
+
+        //donot need that difficult, because item index is fixed
 
         public Store(Game1 game, SpriteBatch batch, ContentManager Content)
         {
@@ -44,6 +48,7 @@ namespace Sprint0.GameStates
             myBatch = batch;
             myContent = Content;
             myInventory = myGame.link.myInventory;
+            myHud = game.hud;
             storeList.Add(bomb);
             storeList.Add(heartC);
         }
@@ -52,6 +57,7 @@ namespace Sprint0.GameStates
             myBatch.Begin();
             myBatch.Draw(myContent.Load<Texture2D>(StringHolder.Store), storeDestRec, storeSourceRec, Color.White); ;
             myBatch.End();
+            myHud.Draw(0,0);
             showItem();
             pickingItem(0);
         }
@@ -81,10 +87,15 @@ namespace Sprint0.GameStates
                 moveCountTot = storeList.Count - 1;
             }
             if (storeList.Count == 0) moveCountTot = 0;
-            Vector2 dest = new Vector2(380 + moveCountTot * 50, 105);
+            Vector2 dest = new Vector2(331 + moveCountTot * 50, 335);
             pickboxSprite.Draw(dest, false);
 
             //TODO show item's info
+        }
+
+        public void drawInfo(int moveCount)
+        {
+            
         }
 
         public void buyItem()

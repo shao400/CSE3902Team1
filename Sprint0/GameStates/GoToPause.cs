@@ -61,24 +61,24 @@ namespace Sprint0.GameStates
 
         public void Update() 
         {                       
-            frame++;
-            if (frame < 89)
-            {
-                roomDestRec.Y += 6;
-                pauseDestRec.Y += 6;
-                y += 6;
-                mapy += 6;
-            }
-            else
-            {
-                myGame.currentState = myGame.stateList[4];
-                frame = 0;
-                y = 0;
-                mapy = 450 - 528;
-                roomDestRec = new Rectangle(0, 168, 768, 528);
-                pauseDestRec = new Rectangle(0, -528, 768, 528);
-            }
-               
+                frame++;
+                if (frame < 89)
+                {
+                    roomDestRec.Y += 6;
+                    pauseDestRec.Y += 6;
+                    y += 6;
+                    mapy += 6;
+                }
+                else
+                {
+                    myGame.currentState = myGame.stateList[4];
+                    frame = 0;
+                    y = 0;
+                    mapy = 450 - 528;
+                    roomDestRec = new Rectangle(0, 168, 768, 528);
+                    pauseDestRec = new Rectangle(0, -528, 768, 528);
+                }
+                          
             
         }
 

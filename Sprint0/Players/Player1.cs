@@ -34,6 +34,7 @@ namespace Sprint0.Player
         private LinkBlockCollision linkBlockCollision;
         private LinkItemCollision linkItemCollision;
         private LinkEnemyCollision linkEnemyCollision;
+        private LinkNpcCollision linkNpcCollision;
         private status currentStatus;
         public Inventory myInventory;
         private Boolean GetMap;
@@ -83,6 +84,7 @@ namespace Sprint0.Player
             linkBlockCollision = new LinkBlockCollision(this);
             linkItemCollision = new LinkItemCollision(this);
             linkEnemyCollision = new LinkEnemyCollision(this);
+            linkNpcCollision = new LinkNpcCollision(this,myGame);
         }
 
         public bool isTakingDmg()
@@ -538,6 +540,11 @@ namespace Sprint0.Player
         public void ItemCollisionTest(List<IItem> items)
         {
             linkItemCollision.ItemCollision(items, sound);
+        }
+
+        public void NpcCollisionTest(List<INPC> npcs)
+        {
+            linkNpcCollision.NpcCollision(npcs);                
         }
     }
 }

@@ -42,11 +42,11 @@ namespace Sprint0
         public IGameState currentState;
         public List<IGameState> stateList;
         public Player1 link;
-
+        public IGameState store;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = StringHolder.Content;
+            Content.RootDirectory = StringHolder.Content;           
         }
 
         public void Reset()
@@ -113,6 +113,7 @@ namespace Sprint0
             controllerList.Add(new MouseC(this));
             link = new Player1(IntegerHolder.linkInitialX, IntegerHolder.linkInitialY, IntegerHolder.linkHitBoxSize, IntegerHolder.linkHitBoxSize, soundEffect, this);
             hud = new Hud(this);
+            store = new Store(this, spriteBatch, Content);
             this.IsMouseVisible = true;
             base.Initialize();
             string Room = "Room";

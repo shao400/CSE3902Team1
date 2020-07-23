@@ -7,7 +7,6 @@ namespace Sprint0.NPCs
     public class Merchant : INPC
     {
 
-
         private static ISprite MerchantSprite;
         private int xPosition;
         private int yPosition;
@@ -20,8 +19,6 @@ namespace Sprint0.NPCs
             MerchantSprite = SpriteFactory.NPCMerchant;
             destinationRec = new Rectangle(x, y, 45, 45);
         }
-
-
 
         public void Draw()
         {
