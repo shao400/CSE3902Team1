@@ -13,10 +13,9 @@ namespace Sprint0.Interfaces
         void Update();
         Rectangle GetRectangle();
         void PickedUp();
-
         Boolean isPickedUp();
-
         void ItemReset();
+        int getPrice();
         
     }
 }

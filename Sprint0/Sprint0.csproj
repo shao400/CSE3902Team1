@@ -91,6 +91,7 @@
     <Compile Include="Enemies\Goriya.cs" />
     <Compile Include="Enemies\Keese.cs" />
     <Compile Include="GameStates\Menu.cs" />
+    <Compile Include="GameStates\Store.cs" />
     <Compile Include="Items\WoodenSwordItem.cs" />
     <Compile Include="NPCs\Flame.cs" />
     <Compile Include="NPCs\Merchant.cs" />

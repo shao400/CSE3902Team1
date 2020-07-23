@@ -16,6 +16,7 @@ namespace Sprint0.Items
         private int xAix;
         private int yAix;
         private bool picked;
+        private int price;
         //private int width;
         //private int height;
         public HeartContainer(int x, int y)
@@ -23,6 +24,7 @@ namespace Sprint0.Items
             xAix = x;
             yAix = y;
             picked = false;
+            price = 15;
             //width = w;
             //height = h;
         }
@@ -60,6 +62,10 @@ namespace Sprint0.Items
         public Rectangle GetRectangle()
         {
             return new Rectangle(xAix, yAix, 32, 32);
+        }
+        public int getPrice()
+        {
+            return price;
         }
     }
 }

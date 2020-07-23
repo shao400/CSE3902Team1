@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Boss_Scream1.wav</SourceFile>
-  <SourceTime>2020-07-19T20:06:18.5065317-04:00</SourceTime>
-  <DestFile>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Sounds/LOZ_Boss_Scream1.xnb</DestFile>
-  <DestTime>2020-07-22T14:27:50.7706256-04:00</DestTime>
+  <SourceFile>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Boss_Scream1.wav</SourceFile>
+  <SourceTime>2020-07-19T19:03:26.0871421-04:00</SourceTime>
+  <DestFile>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Sounds/LOZ_Boss_Scream1.xnb</DestFile>
+  <DestTime>2020-07-22T21:27:03.9925447-04:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

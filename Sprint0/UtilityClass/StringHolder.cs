@@ -56,6 +56,7 @@ namespace Sprint0.UtilityClass
         public const string Boss = "boss";
         public const string NPC =  "npc";
         public const string Blocks = "Blocks";
+        public const string Store = "Store";
         //StringHolders for xml Folder
         public const string Culture = "en-US";
         public const string XPos = "xpos";

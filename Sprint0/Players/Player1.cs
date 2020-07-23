@@ -46,7 +46,7 @@ namespace Sprint0.Player
         private Sound sound;
         private int hp, dmgCounter;
         private int MaxHealth;
-        private int ruppyCount;
+        public int ruppyCount;
         public int bombCount;
         private int keyCount;
         public Boolean arrowCdDone;

@@ -404,3 +404,6 @@ C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Conte
 C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\Sounds\Triforce.xnb
 C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\myFont.xnb
 C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\menu.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\menu.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\myFont.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\store.xnb

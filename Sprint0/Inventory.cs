@@ -88,6 +88,9 @@ namespace Sprint0
                 case "Sprint0.Items.Compass":
                     sprite = new ItemCompassSprite();
                     break;
+                case "Sprint0.Items.HeartContainer":
+                    sprite = new ItemHeartContainerSprite();
+                    break;
                 default:
                     sprite = null;
                     break;

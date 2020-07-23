@@ -16,12 +16,14 @@ namespace Sprint0.Items
         private int xAix;
         private int yAix;
         private bool picked;
+        private int price;
 
         public Compass(int x, int y)
         {
             xAix = x;
             yAix = y;
             picked = false;
+            price = 0;
         }
         public void Draw()
         {
@@ -55,6 +57,10 @@ namespace Sprint0.Items
         public Rectangle GetRectangle()
         {
             return new Rectangle(xAix, yAix, 32, 32);
+        }
+        public int getPrice()
+        {
+            return price;
         }
     }
 }

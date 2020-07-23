@@ -18,11 +18,13 @@ namespace Sprint0.Items
         private bool picked;
         //private int width;
         //private int height;
+        private int price;
         public mClock(int x, int y)
         {
             xAix = x;
             yAix = y;
             picked = false;
+            price = 0;
             //width = w;
             //height = h;
         }
@@ -58,6 +60,10 @@ namespace Sprint0.Items
         public Rectangle GetRectangle()
         {
             return new Rectangle(xAix, yAix, 32, 32);
+        }
+        public int getPrice()
+        {
+            return price;
         }
     }
 }

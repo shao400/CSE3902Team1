@@ -18,6 +18,7 @@ namespace Sprint0.Items
         private int xSize;
         private int ySize;
         private bool picked;
+        private int price;
 
         public Arrow(int x, int y)
         {
@@ -26,6 +27,7 @@ namespace Sprint0.Items
             xSize = 32;
             ySize = 32;
             picked = false;
+            price = 2;
         }
         public void Draw()
         {
@@ -60,6 +62,11 @@ namespace Sprint0.Items
         public Rectangle GetRectangle()
         {
             return new Rectangle(xAix, yAix, xSize, ySize);
+        }
+
+        public int getPrice()
+        {
+            return price;
         }
     }
 }

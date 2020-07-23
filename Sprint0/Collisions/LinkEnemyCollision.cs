@@ -46,8 +46,6 @@ namespace Sprint0.Collisions
                         else
                         {
                             s.enemyHit();
-
-
                         }                   
                     }
                     //Normal Cases
