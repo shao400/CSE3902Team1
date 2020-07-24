@@ -13,7 +13,7 @@ using Sprint0.UtilityClass;
 
 namespace Sprint0.GameStates
 {
-    class Fog : IGameState
+    class Fog
     {
         SpriteBatch myBatch;
         ContentManager myContent;
@@ -24,8 +24,9 @@ namespace Sprint0.GameStates
             myContent = Content;
         }
 
-        public void loadNextRoom(int nextRoom)
+        public void GetPlayerLoction()
         {
+            location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);
         }
 
         public void Draw()
