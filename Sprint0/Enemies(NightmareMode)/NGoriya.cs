@@ -1,26 +1,27 @@
 ﻿using Microsoft.Xna.Framework;
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
+using System;
 
 namespace Sprint0.Enemies
 {
     public class NGoriya : AbstractEnemies, IEnemy
     {
 
-
+        private IPlayer myPlayer;
         private ISprite GoriyaSprite;
-        private int xPosition;
-        private int yPosition;
+        private int xPosition, yPosition, xDif, yDif;
         private int frame = 0;
         bool backmove = false;
-        private Rectangle destinationRec;
+        private Rectangle destinationRec, targetRectangle;
+        
 
-        public NGoriya(int x, int y)
+        public NGoriya(int x, int y, IPlayer player)
         {
-
+            myPlayer = player;
             xPosition = x;
             yPosition = y;
-            GoriyaSprite = new EnemyGoriyaSprite(x, y);
+            GoriyaSprite = new NGoriyaSprite(x, y);
             destinationRec = new Rectangle(x, y, 45, 45);
         }
 
@@ -38,24 +39,20 @@ namespace Sprint0.Enemies
 
         public override void Update()
         {
-            frame++;
-            if (frame >= 20) frame = 0;
-            if (frame < 10 && !backmove)
+            targetRectangle = myPlayer.GetRectangle();
+            xDif = targetRectangle.X - xPosition;
+            yDif = targetRectangle.Y - yPosition;
+            if (Math.Abs(xDif) > Math.Abs(yDif))
             {
-                destinationRec.X += 5;
+                if (xDif > 0) xPosition += 5;
+                else xPosition -= 5;
             }
-            else if (frame > 10 && !backmove)
+            else
             {
-                destinationRec.X += 5;
+                if (yDif > 0) yPosition += 5;
+                else yPosition -= 5;
             }
-            else if (frame < 10 && backmove)
-            {
-                destinationRec.X -= 5;
-            }
-            else if (frame > 10 && backmove)
-            {
-                destinationRec.X -= 5;
-            }
+            
             if (destinationRec.X > 627) backmove = true;
             if (destinationRec.X < 96) backmove = false;
             GoriyaSprite.Update();
@@ -63,11 +60,8 @@ namespace Sprint0.Enemies
 
         public override Rectangle GetRectangle()
         {
-            
-                return destinationRec;
-            
-            
-            
+            destinationRec = new Rectangle(xPosition, yPosition, 45, 45);
+            return destinationRec;                                  
         }
     }
 }

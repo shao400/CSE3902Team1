@@ -201,6 +201,7 @@
     <Compile Include="Sprite\LinkSprites\LinkUsingLeftSprite.cs" />
     <Compile Include="Sprite\LinkSprites\LinkUsingRightSprite.cs" />
     <Compile Include="Sprite\LinkSprites\LinkUsingUpSprite.cs" />
+    <Compile Include="Sprite\NightmareEnemySprites\NGoriyaSprite.cs" />
     <Compile Include="Sprite\NPCSprites\NPCFlameSprite.cs" />
     <Compile Include="Sprite\ProjectileSprites\BoomrangShootingSprite.cs" />
     <Compile Include="Sprite\ProjectileSprites\PlayerBombSprite.cs" />
