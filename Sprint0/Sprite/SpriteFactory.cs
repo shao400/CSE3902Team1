@@ -64,6 +64,12 @@ namespace Sprint0.Sprite
         public static PlayerBoomrangShootingSprite PlayerBoomrangShootingUp = new PlayerBoomrangShootingSprite(SpriteEffects.None, (float)-1.5708);
         public static PlayerBoomrangShootingSprite PlayerBoomrangShootingDown = new PlayerBoomrangShootingSprite(SpriteEffects.None, (float)1.5708);
 
+        //Zina, FogSprite
+        public static FogSprite FogSpriteRight = new FogSprite(SpriteEffects.None, 0);
+        public static FogSprite FogSpriteLeft = new FogSprite(SpriteEffects.FlipHorizontally, 0);
+        public static FogSprite FogSpriteUp = new FogSprite(SpriteEffects.None, (float)-1.5708);
+        public static FogSprite FogSpriteDown = new FogSprite(SpriteEffects.None, (float)1.5708);
+
 
         // Items Author: Zhizhou He, Chuwen Sun
         public static List<ISprite> ItemList = new List<ISprite>();
@@ -189,6 +195,12 @@ namespace Sprint0.Sprite
             PlayerBoomrangShootingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerBoomrangShootingUp.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerBoomrangShootingDown.LoadContent(batch, content.Load<Texture2D>("link"));
+
+            //Zina Fog Sprite
+            FogSpriteRight.LoadContent(batch, content.Load<Texture2D>("fog"));
+            FogSpriteLeft.LoadContent(batch, content.Load<Texture2D>("fog"));
+            FogSpriteUp.LoadContent(batch, content.Load<Texture2D>("fog"));
+            FogSpriteDown.LoadContent(batch, content.Load<Texture2D>("fog"));
         }
 
         private static void LoadItemContent(SpriteBatch batch, ContentManager content)
