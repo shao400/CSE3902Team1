@@ -49,7 +49,7 @@ namespace Sprint0.Player
         private ProjectileCollision projectileCollision1, projectileCollision2, projectileCollision3;
         private Sound sound;
         private int hp, dmgCounter;
-        private int MaxHealth;
+        public int MaxHealth;
         public int ruppyCount;
         public int bombCount;
         private int keyCount;

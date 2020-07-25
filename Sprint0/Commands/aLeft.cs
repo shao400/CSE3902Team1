@@ -18,10 +18,6 @@ namespace Sprint0.Commands
 
         public void Execute()
         {
-           if(myGame.currentState == myGame.stateList[8])
-            {
-                myGame.link.myStock.buyItem();
-            }
             myGame.link.Left();
         }
 

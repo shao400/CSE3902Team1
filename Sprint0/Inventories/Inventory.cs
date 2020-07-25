@@ -27,7 +27,15 @@ namespace Sprint0.Inventories
 
         public void addItem(IItem item)
         {
-            myItemList.Add(item);
+            Console.WriteLine(item.GetType());
+            if (getItemType(item).Equals("Sprint0.Items.Bomb"))
+            {
+                if (myLink.bombCount < 2) myItemList.Add(item);
+            }
+            else
+            {
+                myItemList.Add(item);
+            }
             Console.WriteLine("obtain new item: " + item.GetType());
             Console.WriteLine("current have " + myItemList.Count + " item");
         }
@@ -89,9 +97,6 @@ namespace Sprint0.Inventories
                 case "Sprint0.Items.Compass":
                     sprite = new ItemCompassSprite();
                     break;
-                case "Sprint0.Items.HeartContainer":
-                    sprite = new ItemHeartContainerSprite();
-                    break;
                 default:
                     sprite = null;
                     break;
@@ -120,6 +125,7 @@ namespace Sprint0.Inventories
                     currentItem = 3;
                     break;
                 default:
+                    currentItem = 0;
                     break;
             }
             Console.WriteLine("current item: " + currentItem);
@@ -137,6 +143,7 @@ namespace Sprint0.Inventories
                         if (myLink.bombCount == 0)
                         {
                             myItemList.RemoveAt(i);
+                            currentItem = 0;
                         }
                 }
             }

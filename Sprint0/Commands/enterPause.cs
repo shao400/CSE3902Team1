@@ -19,15 +19,24 @@ namespace Sprint0.Commands
 
         public void Execute()
         {
-            if(count == 0)
+
+            if (myGame.currentState == myGame.stateList[8])
             {
-                myGame.currentState = myGame.stateList[2];
-                count++;
+                myGame.currentState = myGame.stateList[0];
             }
-            else
+            else if (myGame.currentState == myGame.stateList[0]
+                || myGame.currentState == myGame.stateList[4])
             {
-                myGame.currentState = myGame.stateList[3];
-                count = 0;
+                if (count == 0)
+                {
+                    myGame.currentState = myGame.stateList[2];
+                    count++;
+                }
+                else
+                {
+                    myGame.currentState = myGame.stateList[3];
+                    count = 0;
+                }
             }                       
         }
 

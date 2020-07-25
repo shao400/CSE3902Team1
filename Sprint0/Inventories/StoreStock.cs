@@ -42,10 +42,10 @@ namespace Sprint0.Inventories
         }
         public void showItem()
         {
+            // show items in store interface
             for (int i = 0; i < storeList.Count; i++)
-            {
-                string itemType = myInventory.getItemType(storeList[i]);
-                itemSprite = myInventory.getItemSprite(storeList[i]);
+            {               
+                itemSprite = getItemSprite(storeList[i]);
                 if (itemSprite != null)
                 {
                     Vector2 dest = new Vector2(x + i * 50, y);
@@ -53,23 +53,40 @@ namespace Sprint0.Inventories
                 }
             }
         }
+        public ISprite getItemSprite(IItem item)
+        {
+            // get item's sprite
+            string itemType = item.GetType().ToString();
+            ISprite sprite = null;
+            switch (itemType)
+            {
+                case "Sprint0.Items.Bomb":
+                    sprite = new ItemBombSprite();
+                    break;
+                case "Sprint0.Items.HeartContainer":
+                    sprite = new ItemHeartContainerSprite();
+                    break;
+                default:
+                    sprite = null;
+                    break;
+            }
+            return sprite;
+        }
+
+
         public void pickingItem(int moveCount)
         {
-            // Use Z & N to pick item
+            // Use N to pick item
             moveCountTot += moveCount;
-            if (moveCountTot < 0)
+            if (moveCountTot > storeList.Count-1)
             {
                 moveCountTot = 0;
             }
-            if (moveCountTot == storeList.Count && moveCountTot != 0)
-            {
-                moveCountTot = storeList.Count - 1;
-            }
-            if (storeList.Count == 0) moveCountTot = 0;
             Vector2 dest1 = new Vector2(331 + moveCountTot * 54, 335);
             pickboxSprite.Draw(dest1, false);
             Vector2 dest2 = new Vector2(330, 510);
-            drawInfo(moveCountTot).Draw(dest2,false);
+            drawInfo(moveCountTot).Draw(dest2, false);
+
         }
 
         public ISprite drawInfo(int index)
@@ -91,11 +108,22 @@ namespace Sprint0.Inventories
 
         public void buyItem()
         {
-            // use A to buy item
-            // add purchase sound
+            // use Z to buy item
+            // add purchase sound?
             IItem selectedItem = storeList[moveCountTot];
-            myInventory.addItem(selectedItem);
-            myLink.ruppyCount -= selectedItem.getPrice();
+            if(!(selectedItem.getPrice() > myLink.ruppyCount))
+            {
+                if (moveCountTot == 0)
+                {
+                    myLink.bombCount++;
+                    myInventory.addItem(bomb);
+                }
+                else if (moveCountTot == 1)
+                {
+                    myLink.MaxHealth++;
+                }
+                myLink.ruppyCount -= selectedItem.getPrice();
+            }          
 
         }
     }

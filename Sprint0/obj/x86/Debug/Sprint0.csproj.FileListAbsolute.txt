@@ -413,3 +413,4 @@ E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Conten
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\menu.xnb
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\myFont.xnb
 E:\CSE3902\Sprint\CSE3902Team1\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\store.xnb
+D:\CSE 3902\GitHub_Zone\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\link-cover.xnb
