@@ -6,13 +6,15 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
+using Sprint0.Projectile;
+using Sprint0.Projectile_Enemy_;
 
 namespace Sprint0.Enemies
 {   //Zina
     public class Peahat : AbstractEnemies, IEnemy
     {
-      
 
+        private IProjectile energyBall;
         private ISprite PeahatSprite;
         private int xPosition;
         private int yPosition;
@@ -25,6 +27,7 @@ namespace Sprint0.Enemies
             xPosition = x;
             yPosition = y;
             PeahatSprite = new EnemyPeahatSprite(x, y);
+            energyBall = new EnergyBall(this);
             destinationRec = new Rectangle(x, y, 45, 45);
         }
 
@@ -36,12 +39,13 @@ namespace Sprint0.Enemies
             {
                 Vector2 location = new Vector2(xPosition, yPosition);
                 PeahatSprite.Draw(location, false);
+                energyBall.Shoot();
             }
         }
 
         public override void Update()
         {
-
+            energyBall.Update();
             frame++;
             if (frame >= 20) frame = 0;
             if (frame < 10 && !backmove)
