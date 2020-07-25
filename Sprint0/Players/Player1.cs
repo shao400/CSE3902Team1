@@ -520,20 +520,30 @@ namespace Sprint0.Player
         }
         public void ProjectileBlocksCollisionTest(List<IBlock> blocks)
         {
-            projectileCollision1 = new ProjectileCollision(currentProjectile);
+            projectileCollision1 = new ProjectileCollision(currentProjectile, this);
             projectileCollision1.ProjectileBlocksCollisionTest(blocks);
-            projectileCollision2 = new ProjectileCollision(secondProjectile);
+            projectileCollision2 = new ProjectileCollision(secondProjectile, this);
             projectileCollision2.ProjectileBlocksCollisionTest(blocks);
         }
         public void ProjectileEnemiesCollisionTest(List<IEnemy> enemies)
         {
-            projectileCollision1 = new ProjectileCollision(currentProjectile);
+            projectileCollision1 = new ProjectileCollision(currentProjectile, this);
             projectileCollision1.ProjectileEnemiesCollisionTest(enemies, sound);
-            projectileCollision2 = new ProjectileCollision(secondProjectile);
+            projectileCollision2 = new ProjectileCollision(secondProjectile, this);
             projectileCollision2.ProjectileEnemiesCollisionTest(enemies, sound);
-            projectileCollision3 = new ProjectileCollision(currentAttack);
+            projectileCollision3 = new ProjectileCollision(currentAttack, this);
             projectileCollision3.ProjectileEnemiesCollisionTest(enemies, sound);
             currentAttack.setExplo(3);
+        }
+
+        public void ProjectileLinkCollisionTest(Sound s)
+        {
+            projectileCollision1 = new ProjectileCollision(currentProjectile, this);
+            projectileCollision1.ProjectileLinkCollisionTest(sound);
+            projectileCollision2 = new ProjectileCollision(secondProjectile, this);
+            projectileCollision2.ProjectileLinkCollisionTest(sound);
+            projectileCollision3 = new ProjectileCollision(secondProjectile, this);
+            projectileCollision3.ProjectileLinkCollisionTest(sound);
         }
 
         public void EnemyCollisionTest(List<IEnemy> enemies)
