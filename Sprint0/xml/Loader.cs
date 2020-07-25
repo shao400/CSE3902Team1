@@ -55,6 +55,9 @@ namespace Sprint0.xml
 
                     switch (type)
                     {
+                        case "NGoriya":
+                            enemies.Add(new NGoriya(xpos, ypos, game.link));
+                            break;
                         case "Empty":
                             enemies.Add(new Empty(xpos, ypos));
                             break;

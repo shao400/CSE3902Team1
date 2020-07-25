@@ -12,7 +12,7 @@ namespace Sprint0.Enemies
         private ISprite GoriyaSprite;
         private int xPosition, yPosition, xDif, yDif;
         private int frame = 0;
-        bool backmove = false;
+        bool leftmove = false;
         private Rectangle destinationRec, targetRectangle;
         
 
@@ -21,7 +21,7 @@ namespace Sprint0.Enemies
             myPlayer = player;
             xPosition = x;
             yPosition = y;
-            GoriyaSprite = new NGoriyaSprite(x, y);
+            GoriyaSprite = new NGoriyaSprite();
             destinationRec = new Rectangle(x, y, 45, 45);
         }
 
@@ -32,7 +32,7 @@ namespace Sprint0.Enemies
             if (this.GetHealth() > 0)
             {
                 Vector2 location = new Vector2(xPosition, yPosition);
-                GoriyaSprite.Draw(location, false);
+                GoriyaSprite.Draw(location, leftmove);
             }
             
         }
@@ -44,17 +44,17 @@ namespace Sprint0.Enemies
             yDif = targetRectangle.Y - yPosition;
             if (Math.Abs(xDif) > Math.Abs(yDif))
             {
-                if (xDif > 0) xPosition += 5;
-                else xPosition -= 5;
+                if (xDif > 0) { xPosition += 3; leftmove = false; }
+                else { xPosition -= 3; leftmove = true; }
             }
             else
             {
-                if (yDif > 0) yPosition += 5;
-                else yPosition -= 5;
+                if (yDif > 0) yPosition += 3;
+                else yPosition -= 3;
             }
             
-            if (destinationRec.X > 627) backmove = true;
-            if (destinationRec.X < 96) backmove = false;
+            if (xPosition > 627) leftmove = true;
+            if (xPosition < 96) leftmove = false;
             GoriyaSprite.Update();
         }
 

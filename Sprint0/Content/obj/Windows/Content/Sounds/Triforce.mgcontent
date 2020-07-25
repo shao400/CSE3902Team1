@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/Sounds/Triforce.wav</SourceFile>
-  <SourceTime>2020-07-19T19:03:26.1001066-04:00</SourceTime>
-  <DestFile>D:/CSE 3902/GitHub_Zone/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Sounds/Triforce.xnb</DestFile>
-  <DestTime>2020-07-25T12:07:58.2071822-04:00</DestTime>
+  <SourceFile>C:/Users/99376/OneDrive/CSE3902/Workspace/Team1Project/Sprint0/Content/Sounds/Triforce.wav</SourceFile>
+  <SourceTime>2020-07-19T19:30:16.5426276-04:00</SourceTime>
+  <DestFile>C:/Users/99376/OneDrive/CSE3902/Workspace/Team1Project/Sprint0/Content/bin/Windows/Content/Sounds/Triforce.xnb</DestFile>
+  <DestTime>2020-07-25T15:08:24.7554649-04:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

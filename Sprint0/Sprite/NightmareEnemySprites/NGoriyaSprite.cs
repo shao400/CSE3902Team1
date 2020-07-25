@@ -11,11 +11,12 @@ namespace Sprint0.Sprite
         Rectangle sourceRec;
         Rectangle destinationRec;
         int frame = 0;
+        SpriteEffects myEffect;
         bool backmove = false;
 
-        public NGoriyaSprite(int x, int y)
+        public NGoriyaSprite()
         {
-            destinationRec = new Rectangle(x, y, 45, 45);
+            
         }
 
 
@@ -45,8 +46,10 @@ namespace Sprint0.Sprite
 
         public void Draw(Vector2 location, bool isDamaged)
         {
+            if (isDamaged == true) myEffect = SpriteEffects.FlipHorizontally;
+            else myEffect = SpriteEffects.None;
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 45, 45), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 45, 45), sourceRec, myColor, 0, new Vector2(0,0), myEffect, 0);
             mySpriteBatch.End();
         }
     }

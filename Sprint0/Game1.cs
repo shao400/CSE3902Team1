@@ -126,7 +126,7 @@ namespace Sprint0
             {
                 room.loadBatchAndContent(Content, spriteBatch);
             }
-            currentRoom = roomList[7];
+            currentRoom = roomList[0];
             reader.Close();
             stateList = new List<IGameState>();
             stateList.Add(new InGame(this, hud));

@@ -39,6 +39,7 @@ namespace Sprint0.Sprite
         public static EnemyBlastSprite EnemyBlast = new EnemyBlastSprite();
         public static NPCMerchantSprite NPCMerchant = new NPCMerchantSprite();
         public static NPCFlameSprite NPCFlame = new NPCFlameSprite();
+        public static NGoriyaSprite NGoriya = new NGoriyaSprite();
 
         public static PlayerWoodenSwordSprite PlayerWoodenSwordRight = new PlayerWoodenSwordSprite(SpriteEffects.None, 0);
         public static PlayerWoodenSwordSprite PlayerWoodenSwordLeft = new PlayerWoodenSwordSprite(SpriteEffects.FlipHorizontally, 0);
@@ -285,6 +286,7 @@ namespace Sprint0.Sprite
             EnemyBlast.LoadContent(batch, content.Load<Texture2D>("enemy"));
             NPCMerchant.LoadContent(batch, content.Load<Texture2D>("npc"));
             NPCFlame.LoadContent(batch, content.Load<Texture2D>("npc"));
+            NGoriya.LoadContent(batch, content.Load<Texture2D>("enemy2"));
         }
 
         private static void LoadBlockContent(SpriteBatch batch, ContentManager content)
