@@ -10,50 +10,36 @@ using Microsoft.Xna.Framework.Input;
 using Sprint0.xml;
 using Microsoft.Xna.Framework.Content;
 using Sprint0.UtilityClass;
+using Sprint0.Player;
 
 namespace Sprint0.GameStates
 {
     class Fog
     {
-        SpriteBatch myBatch;
-        ContentManager myContent;
+        private Player1 myplayer;
+        private Vector2 location;
+        private ISprite mySprite;
 
-        public Fog(SpriteBatch batch, ContentManager Content)
+        public Fog(Player1 link)
         {
-            myBatch = batch;
-            myContent = Content;
+            myplayer = link;
+            mySprite = new FogSprite();
         }
 
         public void GetPlayerLoction()
         {
-            location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);
+            location = new Vector2(myplayer.GetRectangle().X, myplayer.GetRectangle().Y);
         }
 
         public void Draw()
         {
-            myBatch.Begin();
-            //?string holder
-            myBatch.Draw(myContent.Load<Texture2D>(StringHolder.GameOver), DestRec, SourceRec, Color.White);
-            myBatch.End();
+            mySprite.Draw(location,false);
         }
 
         public void Update()
         {
-            
+            GetPlayerLoction();
         }
 
-        public void NextOption()
-        {
-
-        }
-        public void LastOption()
-        {
-
-        }
-
-        public void Select()
-        {
-
-        }
     }
 }

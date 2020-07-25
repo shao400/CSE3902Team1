@@ -42,6 +42,7 @@ namespace Sprint0.Player
         public StoreStock myStock;
         private Boolean GetMap;
         private Boolean GetCompass;
+        private Fog myFog;
 
         Game1 myGame;
         public Queue<IProjectile> projectiles;
@@ -89,6 +90,7 @@ namespace Sprint0.Player
             linkItemCollision = new LinkItemCollision(this);
             linkEnemyCollision = new LinkEnemyCollision(this);
             linkNpcCollision = new LinkNpcCollision(this,myGame);
+            myFog = new Fog(this);
         }
 
         public bool isTakingDmg()
@@ -200,6 +202,7 @@ namespace Sprint0.Player
                 dmgCounter++;
 
             }
+            myFog.Update();
         }
         public void Draw()
         {

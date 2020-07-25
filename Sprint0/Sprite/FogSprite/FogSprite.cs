@@ -19,12 +19,6 @@ namespace Sprint0
         SpriteEffects myEffect;
         float myRotation;
         Rectangle destinationRec;
-        public FogSprite(SpriteEffects effect, float rotation)
-        {
-            myEffect = effect;
-            myRotation = rotation;
-
-        }
         public void Update()
         {
             shownFrame++;

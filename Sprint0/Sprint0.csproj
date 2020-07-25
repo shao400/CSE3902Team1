@@ -104,6 +104,7 @@
     <Compile Include="Enemies\Dodongo.cs" />
     <Compile Include="Enemies\Goriya.cs" />
     <Compile Include="Enemies\Keese.cs" />
+    <Compile Include="Fog.cs" />
     <Compile Include="GameStates\Menu.cs" />
     <Compile Include="GameStates\Store.cs" />
     <Compile Include="Inventories\StoreStock.cs" />
