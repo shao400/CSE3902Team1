@@ -2,7 +2,7 @@
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
 
-namespace Sprint0.Enemies;
+namespace Sprint0.Enemies
 {
     public class NAqua : AbstractEnemies, IEnemy 
     {

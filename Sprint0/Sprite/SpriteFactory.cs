@@ -197,10 +197,10 @@ namespace Sprint0.Sprite
             PlayerBoomrangShootingDown.LoadContent(batch, content.Load<Texture2D>("link"));
 
             //Zina Fog Sprite
-            FogSpriteRight.LoadContent(batch, content.Load<Texture2D>("fog"));
+/*            FogSpriteRight.LoadContent(batch, content.Load<Texture2D>("fog"));
             FogSpriteLeft.LoadContent(batch, content.Load<Texture2D>("fog"));
             FogSpriteUp.LoadContent(batch, content.Load<Texture2D>("fog"));
-            FogSpriteDown.LoadContent(batch, content.Load<Texture2D>("fog"));
+            FogSpriteDown.LoadContent(batch, content.Load<Texture2D>("fog"));*/
         }
 
         private static void LoadItemContent(SpriteBatch batch, ContentManager content)
