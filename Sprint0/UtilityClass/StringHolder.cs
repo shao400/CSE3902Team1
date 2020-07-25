@@ -69,7 +69,7 @@ namespace Sprint0.UtilityClass
         public const string Play = "PLAY FIRST LEVEL";
         public const string NightmareMode = "NIGHTMARE MODE";
         public const string Restart = "RESTART";
-        public const string Instruction = "PRESS SPACE TO SELECT";
+        public const string Instruction = "PRESS SPACE TO SELECT, PRESS M TO SWITCH OPTION";
 
     }
 }

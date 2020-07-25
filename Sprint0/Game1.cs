@@ -31,8 +31,9 @@ namespace Sprint0
         public SpriteBatch spriteBatch;
         
         public roomProperties currentRoom;
+        public roomProperties NcurrentRoom;
         public List<roomProperties> roomList;
-
+        public List<roomProperties> NroomList;
         private XmlReader reader;
         private List<SoundEffect> sounds;
         private List<Song> songs;
@@ -116,7 +117,9 @@ namespace Sprint0
             base.Initialize();
             string Room = "Room";
             string xml = ".xml";
+            string capitalN = "N";
             roomList = new List<roomProperties>();
+            NroomList = new List<roomProperties>();
             for (int i = 0; i <= 16; i++)
             {
                 reader = XmlReader.Create(Room + i + xml, new XmlReaderSettings());
@@ -126,7 +129,18 @@ namespace Sprint0
             {
                 room.loadBatchAndContent(Content, spriteBatch);
             }
+
+            for (int i = 0; i <= 16; i++)
+            {
+                reader = XmlReader.Create(capitalN + Room + i + xml, new XmlReaderSettings());
+                NroomList.Add(NLoader.LoadFromReader(reader, this));
+            }
+            foreach (roomProperties room in NroomList)
+            {
+                room.loadBatchAndContent(Content, spriteBatch);
+            }
             currentRoom = roomList[0];
+            NcurrentRoom = NroomList[0];
             reader.Close();
             stateList = new List<IGameState>();
             stateList.Add(new InGame(this, hud));
@@ -138,6 +152,7 @@ namespace Sprint0
             stateList.Add(new Win(spriteBatch, Content));
             stateList.Add(new Menu(this, spriteBatch, Content));
             stateList.Add(new Store(this, spriteBatch, Content, hud));
+            stateList.Add(new NInGame(this, hud));
             currentState = stateList[7];
         }
 
@@ -176,12 +191,7 @@ namespace Sprint0
                 GraphicsDevice.Clear(Color.CornflowerBlue);
 
             currentState.Draw();
-            base.Draw(gameTime);
-            if(currentState == stateList[3])
-            {
-                //this.link.myInventory.showItem();
-                //put this line into draw() of pause.cs so Game1 can be simple
-            }           
+            base.Draw(gameTime);    
         }
       
     }

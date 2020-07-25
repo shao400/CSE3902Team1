@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Room>
+	<door type="DoorBDown" xpos="312" ypos="609" />
+	<door type="DoorKLeft" xpos="0" ypos="384" />
+	<door type="DoorKRight" xpos="696" ypos="384" />
+	<src xpos="772" ypos="355" />
+	<enemy type="Moblin" xpos="99" ypos="315" />
+	<enemy type="Stalfos" xpos="627" ypos="411" />
+	<enemy type="Stalfos" xpos="99" ypos="411" />
+	<enemy type="Keese" xpos="291" ypos="545" />
+	<enemy type="Peahat" xpos="481" ypos="267" />
+	<block type="BlockA" xpos="195" ypos="363" />
+	<block type="BlockA" xpos="195" ypos="459" />
+	<block type="BlockA" xpos="531" ypos="363" />
+	<block type="BlockA" xpos="531" ypos="459" />
+	<no i="10" />
+	<connect up="-1" down="6" left="9" right="11" />
+	<block type="BlockTop" xpos="96" ypos="600" />
+	<block type="BlockTop" xpos="411" ypos="600" />
+	<block type="BlockAllTop" xpos="96" ypos="168" />
+	<block type="BlockLeft" xpos="0" ypos="264" />
+	<block type="BlockLeft" xpos="0" ypos="458" />
+	<block type="BlockLeft" xpos="672" ypos="264" />
+	<block type="BlockLeft" xpos="672" ypos="458" />
+</Room>

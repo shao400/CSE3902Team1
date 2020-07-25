@@ -95,10 +95,10 @@ namespace Sprint0.GameStates
                     myGame.currentState = myGame.stateList[0];
                     break;
                 case 1:
-                    myGame.currentState = myGame.stateList[0];
+                    myGame.currentState = myGame.stateList[9];
                     break;
                 case 2:
-                    myGame.currentState = myGame.stateList[0];
+                    myGame.Reset();
                     break;
             }
         }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Room>
+	<door type="DoorKLeft" xpos="0" ypos="384" />
+	<enemy type="Moblin" xpos="483" ypos="267" />
+	<enemy type="Keese" xpos="339" ypos="545" />
+	<enemy type="Moblin" xpos="627" ypos="545" />
+	<item type="HeartContainer" xpos="250" ypos="254"/>
+    <block type="BlockA" xpos="195" ypos="363" />
+	<block type="BlockA" xpos="243" ypos="363" />
+	<block type="BlockA" xpos="195" ypos="411" />
+	<block type="BlockA" xpos="243" ypos="411" />
+	<block type="BlockA" xpos="195" ypos="459" />
+	<block type="BlockA" xpos="243" ypos="459" />
+	<block type="BlockA" xpos="483" ypos="363" />
+	<block type="BlockA" xpos="531" ypos="363" />
+	<block type="BlockA" xpos="483" ypos="411" />
+	<block type="BlockA" xpos="531" ypos="411" />
+	<block type="BlockA" xpos="483" ypos="459" />
+	<block type="BlockA" xpos="531" ypos="459" />
+	<src xpos="772" ypos="886" />
+	<no i="2" />
+	<connect up="-1" down="-1" left="1" right="-1" />
+	<block type="BlockLeft" xpos="0" ypos="264" />
+	<block type="BlockLeft" xpos="0" ypos="458" />
+	<block type="BlockAllTop" xpos="96" ypos="168" />
+	<block type="BlockAllTop" xpos="96" ypos="600" />
+	<block type="BlockAllLeft" xpos="672" ypos="264" />
+</Room>

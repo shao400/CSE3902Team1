@@ -103,6 +103,7 @@
     <Compile Include="Enemies\Goriya.cs" />
     <Compile Include="Enemies\Keese.cs" />
     <Compile Include="Fog.cs" />
+    <Compile Include="GameStates\NInGame.cs" />
     <Compile Include="GameStates\Menu.cs" />
     <Compile Include="GameStates\Store.cs" />
     <Compile Include="Inventories\StoreStock.cs" />
@@ -270,6 +271,7 @@
     <Compile Include="Sprite\SpriteFactory.cs" />
     <Compile Include="UtilityClass\IntegerHolder.cs" />
     <Compile Include="UtilityClass\StringHolder.cs" />
+    <Compile Include="xml\NLoader.cs" />
     <Compile Include="xml\Loader.cs" />
     <Compile Include="xml\roomProperties.cs" />
   </ItemGroup>

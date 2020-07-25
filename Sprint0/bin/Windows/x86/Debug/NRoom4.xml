@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Room>
+	<door type="DoorKUp" xpos="312" ypos="168" />
+	<door type="DoorKRight" xpos="696" ypos="384" />
+	<src xpos="258" ypos="532" />
+	<enemy type="Goriya" xpos="99" ypos="267" />
+	<enemy type="Tekitite" xpos="99" ypos="545" />
+	<item type="HeartContainer" xpos="350" ypos="300"/>
+	<block type="BlockA" xpos="339" ypos="363" />
+	<block type="BlockA" xpos="387" ypos="363" />
+	<block type="BlockA" xpos="339" ypos="411" />
+	<block type="BlockA" xpos="387" ypos="411" />
+	<block type="BlockA" xpos="339" ypos="459" />
+	<block type="BlockA" xpos="387" ypos="459" />
+	<no i="4" />
+	<connect up="8" down="-1" left="-1" right="5" />
+	<block type="BlockTop" xpos="96" ypos="168" />
+	<block type="BlockTop" xpos="411" ypos="168" />
+	<block type="BlockLeft" xpos="672" ypos="264" />
+	<block type="BlockLeft" xpos="672" ypos="458" />
+	<block type="BlockAllTop" xpos="96" ypos="600" />
+	<block type="BlockAllLeft" xpos="0" ypos="264" />
+</Room>

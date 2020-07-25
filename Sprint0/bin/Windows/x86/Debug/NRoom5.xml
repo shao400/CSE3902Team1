@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Room>
+	<door type="DoorBUp" xpos="312" ypos="168" />
+	<door type="DoorKLeft" xpos="0" ypos="384" />
+	<door type="DoorKDown" xpos="312" ypos="624" />
+	<door type="DoorKRight" xpos="696" ypos="384" />
+	<src xpos="515" ypos="532" />
+	<enemy type="Rope" xpos="99" ypos="267" />
+	<enemy type="Wallmaster" xpos="99" ypos="411" />
+	<enemy type="Oldman" xpos="627" ypos="411" />
+	<block type="BlockA" xpos="195" ypos="363" />
+	<block type="BlockA" xpos="195" ypos="459" />
+	<block type="BlockA" xpos="531" ypos="363" />
+	<block type="BlockA" xpos="531" ypos="459" />
+	<no i="5" />
+	<connect up="9" down="3" left="4" right="6" />
+	<block type="BlockLeft" xpos="0" ypos="264" />
+	<block type="BlockLeft" xpos="0" ypos="458" />
+	<block type="BlockLeft" xpos="672" ypos="264" />
+	<block type="BlockLeft" xpos="672" ypos="458" />
+	<block type="BlockTop" xpos="96" ypos="600" />
+	<block type="BlockTop" xpos="411" ypos="600" />
+	<block type="BlockTop" xpos="96" ypos="168" />
+	<block type="BlockTop" xpos="411" ypos="168" />
+</Room>
