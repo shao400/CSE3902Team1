@@ -40,6 +40,15 @@ namespace Sprint0.Sprite
         public static NPCMerchantSprite NPCMerchant = new NPCMerchantSprite();
         public static NPCFlameSprite NPCFlame = new NPCFlameSprite();
         public static NGoriyaSprite NGoriya = new NGoriyaSprite();
+        public static NAquaSprite NAqua = new NAquaSprite();
+        public static NDodongoSprite NDodongo = new NDodongoSprite();
+        public static NKeeseSprite NKeese = new NKeeseSprite();
+        public static NMoblinSprite NMoblin = new NMoblinSprite();
+        public static NPeahatSprite NPeahat = new NPeahatSprite();
+        public static NRopeSprite NRope = new NRopeSprite();
+        public static NTektiteSprite NTektite = new NTektiteSprite();
+        public static NZolSprite NZol = new NZolSprite();
+        public static NStalfosSprite NStalfos = new NStalfosSprite();
 
         public static PlayerWoodenSwordSprite PlayerWoodenSwordRight = new PlayerWoodenSwordSprite(SpriteEffects.None, 0);
         public static PlayerWoodenSwordSprite PlayerWoodenSwordLeft = new PlayerWoodenSwordSprite(SpriteEffects.FlipHorizontally, 0);
@@ -282,6 +291,15 @@ namespace Sprint0.Sprite
             NPCMerchant.LoadContent(batch, content.Load<Texture2D>("npc"));
             NPCFlame.LoadContent(batch, content.Load<Texture2D>("npc"));
             NGoriya.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            NAqua.LoadContent(batch, content.Load<Texture2D>("boss"));
+            NDodongo.LoadContent(batch, content.Load<Texture2D>("boss"));
+            NKeese.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            NMoblin.LoadContent(batch, content.Load<Texture2D>("enemy"));
+            NPeahat.LoadContent(batch, content.Load<Texture2D>("enemy"));
+            NRope.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            NTektite.LoadContent(batch, content.Load<Texture2D>("enemy"));
+            NZol.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            NStalfos.LoadContent(batch, content.Load<Texture2D>("enemy2"));
         }
 
         private static void LoadBlockContent(SpriteBatch batch, ContentManager content)

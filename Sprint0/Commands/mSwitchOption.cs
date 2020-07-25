@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace Sprint0.Commands
 {
-    class wUp : ICommand
+    class mSwitchOption : ICommand
     {
         private Game1 myGame;
 
-        public wUp(Game1 game)
+        public mSwitchOption(Game1 game)
         {
             myGame = game;
         }
 
         public void Execute()
         {
-                myGame.link.Up();
+            if (myGame.currentState == myGame.stateList[7])
+                myGame.currentState.NextOption();
         }
-
     }
 }

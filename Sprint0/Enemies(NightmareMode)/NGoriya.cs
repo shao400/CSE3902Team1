@@ -7,11 +7,9 @@ namespace Sprint0.Enemies
 {
     public class NGoriya : AbstractEnemies, IEnemy
     {
-
         private IPlayer myPlayer;
         private ISprite GoriyaSprite;
         private int xPosition, yPosition, xDif, yDif;
-        private int frame = 0;
         bool leftmove = false;
         private Rectangle destinationRec, targetRectangle;
         
@@ -51,10 +49,7 @@ namespace Sprint0.Enemies
             {
                 if (yDif > 0) yPosition += 3;
                 else yPosition -= 3;
-            }
-            
-            if (xPosition > 627) leftmove = true;
-            if (xPosition < 96) leftmove = false;
+            }           
             GoriyaSprite.Update();
         }
 

@@ -1,26 +1,25 @@
 ﻿using Microsoft.Xna.Framework;
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
+using System;
 
 namespace Sprint0.Enemies
 {
     public class NAqua : AbstractEnemies, IEnemy 
     {
 
-
+        private IPlayer myPlayer;
         private ISprite AquaSprite;
-        private int xPosition;
-        private int yPosition;
-        private int frame = 0;
-        bool backmove = false;
-        private Rectangle destinationRec;
+        private int xPosition, yPosition, xDif, yDif;
+        bool leftmove = false;
+        private Rectangle destinationRec, targetRectangle;
 
-        public NAqua(int x, int y)
+        public NAqua(int x, int y, IPlayer player)
         {
-
+            myPlayer = player;
             xPosition = x;
             yPosition = y;
-            AquaSprite = new EnemyAquaSprite(x, y);
+            AquaSprite = new NAquaSprite();
             destinationRec = new Rectangle(x, y, 45, 60);
         }
 
@@ -31,37 +30,33 @@ namespace Sprint0.Enemies
             if (this.GetHealth() > 0)
             {
                 Vector2 location = new Vector2(xPosition, yPosition);
-                AquaSprite.Draw(location, false);
+                AquaSprite.Draw(location, leftmove);
             }
         }
 
         public override void Update()
         {
-            frame++;
-            if (frame >= 20) frame = 0;
-            if (frame < 10 && !backmove)
+            targetRectangle = myPlayer.GetRectangle();
+            xDif = targetRectangle.X - xPosition;
+            yDif = targetRectangle.Y - yPosition;
+            if (Math.Abs(xDif) > Math.Abs(yDif))
             {
-                destinationRec.X += 5;
+                if (xDif > 0) { xPosition += 3; leftmove = false; }
+                else { xPosition -= 3; leftmove = true; }
             }
-            else if (frame > 10 && !backmove)
+            else
             {
-                destinationRec.X += 5;
+                if (yDif > 0) yPosition += 3;
+                else yPosition -= 3;
             }
-            else if (frame < 10 && backmove)
-            {
-                destinationRec.X -= 5;
-            }
-            else if (frame > 10 && backmove)
-            {
-                destinationRec.X -= 5;
-            }
-            if (destinationRec.X > 627) backmove = true;
-            if (destinationRec.X < 96) backmove = false;
+            if (xPosition > 627) leftmove = true;
+            if (xPosition < 96) leftmove = false;
             AquaSprite.Update();
         }
 
         public override Rectangle GetRectangle()
         {
+            destinationRec = new Rectangle(xPosition, yPosition, 45, 45);
             return destinationRec;
         }
     }

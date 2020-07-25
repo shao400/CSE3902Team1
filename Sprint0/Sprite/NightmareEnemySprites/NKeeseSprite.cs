@@ -3,18 +3,16 @@ using Microsoft.Xna.Framework;
 
 namespace Sprint0.Sprite
 {
-    public class NGoriyaSprite : ISprite
+    public class NKeeseSprite : ISprite
     {
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
         Color myColor = Color.CornflowerBlue;
         Rectangle sourceRec;
         int frame = 0;
-        SpriteEffects myEffect;
 
-        public NGoriyaSprite()
+        public NKeeseSprite()
         {
-            
         }
 
 
@@ -25,11 +23,11 @@ namespace Sprint0.Sprite
             if (frame >= 20) frame = 0;
             if (frame < 10)
             {
-                sourceRec = new Rectangle(256, 11, 16, 16);
+                sourceRec = new Rectangle(183, 11, 16, 16);
             }
             else if (frame > 10)
             {
-                sourceRec = new Rectangle(273, 11, 16, 16);
+                sourceRec = new Rectangle(200, 11, 16, 16);
             }
         }
 
@@ -41,10 +39,8 @@ namespace Sprint0.Sprite
 
         public void Draw(Vector2 location, bool isDamaged)
         {
-            if (isDamaged == true) myEffect = SpriteEffects.FlipHorizontally;
-            else myEffect = SpriteEffects.None;
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 45, 45), sourceRec, myColor, 0, new Vector2(0,0), myEffect, 0);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 45, 45), sourceRec, myColor);
             mySpriteBatch.End();
         }
     }

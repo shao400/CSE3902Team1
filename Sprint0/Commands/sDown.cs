@@ -17,10 +17,6 @@ namespace Sprint0.Commands
 
         public void Execute()
         {
-            if (myGame.currentState == myGame.stateList[7])
-            {
-                myGame.currentState.NextOption();
-            }else 
             myGame.link.Down();
         }
 

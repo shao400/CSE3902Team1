@@ -43,8 +43,9 @@ namespace Sprint0.Controller
             //keymap.Add(Keys.D4, new BoomrangShoot(myGame));
             attackmap.Add(Keys.Z, new Attack(myGame));
             attackmap.Add(Keys.N, new Shoot(myGame));
-            //attackmap.Add(Keys.L, new Boom(myGame));
 
+            //attackmap.Add(Keys.L, new Boom(myGame));
+            attackmap.Add(Keys.M, new mSwitchOption(myGame));
 
             attackmap.Add(Keys.Enter, new enterPause(myGame));
         }

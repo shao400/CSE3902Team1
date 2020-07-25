@@ -64,6 +64,7 @@
     <Compile Include="Collisions\LinkItemCollision.cs" />
     <Compile Include="Commands\D1UseItem.cs" />
     <Compile Include="Commands\aLeft.cs" />
+    <Compile Include="Commands\mSwitchOption.cs" />
     <Compile Include="Commands\spaceSelect.cs" />
     <Compile Include="Commands\enterPause.cs" />
     <Compile Include="Commands\Bomb.cs" />
@@ -90,13 +91,10 @@
     <Compile Include="Enemies%28NightmareMode%29\NGoriya.cs" />
     <Compile Include="Enemies%28NightmareMode%29\NKeese.cs" />
     <Compile Include="Enemies%28NightmareMode%29\NMoblin.cs" />
-    <Compile Include="Enemies%28NightmareMode%29\NOldman.cs" />
     <Compile Include="Enemies%28NightmareMode%29\NPeahat.cs" />
     <Compile Include="Enemies%28NightmareMode%29\NRope.cs" />
     <Compile Include="Enemies%28NightmareMode%29\NStalfos.cs" />
     <Compile Include="Enemies%28NightmareMode%29\NTektite.cs" />
-    <Compile Include="Enemies%28NightmareMode%29\NTrap.cs" />
-    <Compile Include="Enemies%28NightmareMode%29\NWallmaster.cs" />
     <Compile Include="Enemies%28NightmareMode%29\NZol.cs" />
     <Compile Include="Enemies\AbstractEnemies.cs" />
     <Compile Include="Enemies\Empty.cs" />
@@ -204,6 +202,15 @@
     <Compile Include="Sprite\LinkSprites\LinkUsingLeftSprite.cs" />
     <Compile Include="Sprite\LinkSprites\LinkUsingRightSprite.cs" />
     <Compile Include="Sprite\LinkSprites\LinkUsingUpSprite.cs" />
+    <Compile Include="Sprite\NightmareEnemySprites\NStalfosSprite.cs" />
+    <Compile Include="Sprite\NightmareEnemySprites\NZolSprite.cs" />
+    <Compile Include="Sprite\NightmareEnemySprites\NTektiteSprite.cs" />
+    <Compile Include="Sprite\NightmareEnemySprites\NRopeSprite.cs" />
+    <Compile Include="Sprite\NightmareEnemySprites\NPeahatSprite.cs" />
+    <Compile Include="Sprite\NightmareEnemySprites\NMoblinSprite.cs" />
+    <Compile Include="Sprite\NightmareEnemySprites\NKeeseSprite.cs" />
+    <Compile Include="Sprite\NightmareEnemySprites\NDodongoSprite.cs" />
+    <Compile Include="Sprite\NightmareEnemySprites\NAquaSprite.cs" />
     <Compile Include="Sprite\NightmareEnemySprites\NGoriyaSprite.cs" />
     <Compile Include="Sprite\NPCSprites\NPCFlameSprite.cs" />
     <Compile Include="Sprite\ProjectileSprites\BoomrangShootingSprite.cs" />

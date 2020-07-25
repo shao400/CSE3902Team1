@@ -1,15 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
 using Sprint0.Player;
@@ -19,20 +9,19 @@ namespace Sprint0.Enemies
     public class NStalfos : AbstractEnemies, IEnemy
     {
 
-
+        private IPlayer myPlayer;
         private ISprite StalfosSprite;
         private int xPosition;
         private int yPosition;
         private Rectangle destinationRec, targetRectangle;
-        private int counter = 0;
-        private Player1 _link;
         private int xDif, yDif;
+        private bool leftmove = false;
         public NStalfos(int x, int y, Player1 link)
         {
-            _link = link;
+            myPlayer = link;
             xPosition = x;
             yPosition = y;
-            StalfosSprite = new EnemyStalfosSprite(x, y);
+            StalfosSprite = new NStalfosSprite();
             destinationRec = new Rectangle(x, y, 45, 45);
         }
 
@@ -43,43 +32,42 @@ namespace Sprint0.Enemies
             if (this.GetHealth() > 0)
             {
                 Vector2 location = new Vector2(xPosition, yPosition);
-                StalfosSprite.Draw(location, false);
+                StalfosSprite.Draw(location, leftmove);
             }
         }
 
         public override void Update()
         {
 
-            targetRectangle = _link.GetRectangle();
+            targetRectangle = myPlayer.GetRectangle();
             xDif = targetRectangle.X - xPosition;
             yDif = targetRectangle.Y - yPosition;
             if (Math.Abs(xDif) > Math.Abs(yDif))
             {
-                if (xDif > 0) xPosition += 2;
-                else xPosition -= 2;
+                if (xDif > 0) { xPosition += 3; leftmove = false; }
+                else { xPosition -= 3; leftmove = true; }
             }
             else
             {
-                if (yDif > 0) yPosition += 2;
-                else yPosition -= 2;
+                if (yDif > 0) yPosition += 3;
+                else yPosition -= 3;
             }
-
-            if (Math.Abs(xDif) > 200 || Math.Abs(yDif) > 200) Flash();
 
 
             StalfosSprite.Update();
         }
 
-        private void Flash()
+        /*private void Flash()
         {
             //A counter needed
             targetRectangle = _link.GetRectangle();
             xPosition = targetRectangle.X;
             yPosition = targetRectangle.Y;
-        }
+        }*/
 
         public override Rectangle GetRectangle()
         {
+            destinationRec = new Rectangle(xPosition, yPosition, 45, 45);
             return destinationRec;
         }
     }

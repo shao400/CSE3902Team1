@@ -1,30 +1,23 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
 
 namespace Sprint0.Enemies
-{   //Zina
+{   //Zina, Gengyi
     public class NPeahat : AbstractEnemies, IEnemy
     {
-      
-
+        private IPlayer myPlayer;
         private ISprite PeahatSprite;
-        private int xPosition;
-        private int yPosition;
-        private int frame = 0;
-        bool backmove = false;
-        private Rectangle destinationRec;
+        private int xPosition, yPosition, xDif, yDif;
+        private Rectangle destinationRec, targetRectangle;
 
-        public NPeahat(int x, int y)
+        public NPeahat(int x, int y, IPlayer player)
         {
+            myPlayer = player;
             xPosition = x;
             yPosition = y;
-            PeahatSprite = new EnemyPeahatSprite(x, y);
+            PeahatSprite = new NPeahatSprite();
             destinationRec = new Rectangle(x, y, 45, 45);
         }
 
@@ -41,32 +34,25 @@ namespace Sprint0.Enemies
 
         public override void Update()
         {
-
-            frame++;
-            if (frame >= 20) frame = 0;
-            if (frame < 10 && !backmove)
+            targetRectangle = myPlayer.GetRectangle();
+            xDif = targetRectangle.X - xPosition;
+            yDif = targetRectangle.Y - yPosition;
+            if (Math.Abs(xDif) > Math.Abs(yDif))
             {
-                destinationRec.Y += 5;
+                if (xDif > 0) xPosition += 3;
+                else xPosition -= 3;
             }
-            else if (frame > 10 && !backmove)
+            else
             {
-                destinationRec.Y += 5;
+                if (yDif > 0) yPosition += 3;
+                else yPosition -= 3;
             }
-            else if (frame < 10 && backmove)
-            {
-                destinationRec.Y -= 5;
-            }
-            else if (frame > 10 && backmove)
-            {
-                destinationRec.Y -= 5;
-            }
-            if (destinationRec.Y > 555) backmove = true;
-            if (destinationRec.Y < 264) backmove = false;
             PeahatSprite.Update();
         }
 
         public override Rectangle GetRectangle()
         {
+            destinationRec = new Rectangle(xPosition, yPosition, 45, 45);
             return destinationRec;
         }
     }
