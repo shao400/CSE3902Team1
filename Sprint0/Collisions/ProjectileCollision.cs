@@ -4,6 +4,7 @@ using Sprint0.Interfaces;
 using System;
 using System.Collections.Generic;
 using Sprint0.UtilityClass;
+using Sprint0.Player;
 
 //currently not used, since item would not collition with enemy or blocks right now. May update future
 
@@ -12,10 +13,11 @@ namespace Sprint0.Collisions
     class ProjectileCollision
     {
         private IProjectile thisProjectile;
-
-        public ProjectileCollision(IProjectile projectile)
+        private Player1 myPlayer;
+        public ProjectileCollision(IProjectile projectile, Player1 link)
         {
             thisProjectile = projectile;
+            myPlayer = link;
         }
         public void ProjectileEnemiesCollisionTest(List<IEnemy> enemies, Sound s)
         {
@@ -100,6 +102,27 @@ namespace Sprint0.Collisions
                 
             }
             }
+        }
+
+        public void ProjectileLinkCollisionTest(Sound s)
+        {
+            Rectangle thisRectangle = thisProjectile.GetHitBox();
+            Rectangle linkRectangle;
+            Rectangle intersectionRectangle;
+      
+                linkRectangle = myPlayer.GetRectangle();
+                intersectionRectangle = Rectangle.Intersect(thisRectangle, linkRectangle);
+                if (!intersectionRectangle.IsEmpty)
+                {
+                    s.linkHurt();
+                    myPlayer.takeDmg(1);
+                    if (thisProjectile.IsExplode() == 0)
+                    {
+                        thisProjectile.setExplo(1);
+                    }
+
+
+                }           
         }
     }
 }
