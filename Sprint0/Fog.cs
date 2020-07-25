@@ -14,7 +14,7 @@ using Sprint0.Player;
 
 namespace Sprint0.GameStates
 {
-    class Fog
+    public class Fog
     {
         private Player1 myplayer;
         private Vector2 location;

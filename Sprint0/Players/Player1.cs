@@ -42,7 +42,7 @@ namespace Sprint0.Player
         public StoreStock myStock;
         private Boolean GetMap;
         private Boolean GetCompass;
-        private Fog myFog;
+        public Fog myFog;
 
         Game1 myGame;
         public Queue<IProjectile> projectiles;
@@ -136,6 +136,10 @@ namespace Sprint0.Player
             return currentAttack;
         }
 
+        public Fog GetFog() 
+        {
+            return myFog;
+        }
         public void Update()
         {
 
