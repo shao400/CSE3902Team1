@@ -527,3 +527,7 @@ C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Conte
 C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\menu.xnb
 C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\myFont.xnb
 C:\Users\zina2\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\store.xnb
+C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\link-cover.xnb
+C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\menu.xnb
+C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\myFont.xnb
+C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\store.xnb

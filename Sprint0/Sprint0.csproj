@@ -57,6 +57,7 @@
     <Compile Include="Block\BlockB.cs" />
     <Compile Include="Block\BlockC.cs" />
     <Compile Include="Block\Water.cs" />
+    <Compile Include="Collisions\EnemyAllCollision.cs" />
     <Compile Include="Collisions\LinkNpcCollision.cs" />
     <Compile Include="Collisions\ProjectileCollision.cs" />
     <Compile Include="Collisions\LinkBlockCollision.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Doors\DoorKLeft.cs" />
     <Compile Include="Doors\DoorKRight.cs" />
     <Compile Include="Doors\DoorKUp.cs" />
+    <Compile Include="Enemies%28NightmareMode%29\NAbstractEnemies.cs" />
     <Compile Include="Enemies%28NightmareMode%29\NAqua.cs" />
     <Compile Include="Enemies%28NightmareMode%29\NDodongo.cs" />
     <Compile Include="Enemies%28NightmareMode%29\NGoriya.cs" />
@@ -106,6 +108,7 @@
     <Compile Include="GameStates\NInGame.cs" />
     <Compile Include="GameStates\Menu.cs" />
     <Compile Include="GameStates\Store.cs" />
+    <Compile Include="Interfaces\INEnemy.cs" />
     <Compile Include="Inventories\StoreStock.cs" />
     <Compile Include="Items\WoodenSwordItem.cs" />
     <Compile Include="NPCs\Flame.cs" />
