@@ -18,13 +18,14 @@ namespace Sprint0.Enemies
 
         public NGoriya(int x, int y, IPlayer player)
         {
-            energyBall = new EnergyBall(this, myPlayer);
+           
             myPlayer = player;
             xPosition = x;
             yPosition = y;
             GoriyaSprite = new NGoriyaSprite();
             destinationRec = new Rectangle(x, y, 45, 45);
             enemyAllCollision = new EnemyAllCollision(this);
+            energyBall = new EnergyBall(this, myPlayer);
         }
 
 

@@ -9,7 +9,7 @@ namespace Sprint0.Projectile
     {
         private ISprite energyBall;
         private IEnemy enemy;
-        private IPlayer player;
+        private IPlayer mPlayer;
         private int counter;
         private int ex, ey, ShotX, ShotY, ShotDistanceX, ShotDistanceY;
         Vector2 location;
@@ -23,7 +23,7 @@ namespace Sprint0.Projectile
         {
             counter = 140;
             this.enemy = enemy;
-            this.player = player;
+            this.mPlayer = player;
             currentStatus = status.none;
             ShotDistance = 0;
             this.type = "energyBall";
@@ -67,8 +67,8 @@ namespace Sprint0.Projectile
             {
                 ey = this.enemy.GetRectangle().Y;
                 ex = this.enemy.GetRectangle().X;
-                ShotX = (ex - this.player.GetRectangle().X) / 25;
-                ShotY = (ey - this.player.GetRectangle().Y) / 25;
+                ShotX = (ex - mPlayer.GetRectangle().X) / 25;
+                ShotY = (ey - mPlayer.GetRectangle().Y) / 25;
                 energyBall = SpriteFactory.EnemyBlast;
 
             }
