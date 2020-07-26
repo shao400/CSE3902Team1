@@ -18,6 +18,7 @@ using Microsoft.Xna.Framework.Media;
 using Sprint0.GameStates;
 using Sprint0.HUDs;
 using Sprint0.UtilityClass;
+using System;
 
 namespace Sprint0
 {
@@ -140,7 +141,7 @@ namespace Sprint0
                 room.loadBatchAndContent(Content, spriteBatch);
             }
             currentRoom = roomList[0];
-            NcurrentRoom = NroomList[6];
+            NcurrentRoom = NroomList[0];
             reader.Close();
             stateList = new List<IGameState>();
             stateList.Add(new InGame(this, hud));
@@ -153,6 +154,7 @@ namespace Sprint0
             stateList.Add(new Menu(this, spriteBatch, Content));
             stateList.Add(new Store(this, spriteBatch, Content, hud));
             stateList.Add(new NInGame(this, hud));
+            stateList.Add(new NTransitioning(this, spriteBatch, Content, hud));
             currentState = stateList[7];
         }
 
@@ -178,6 +180,7 @@ namespace Sprint0
             }
 
             currentState.Update();
+
             base.Update(gameTime);
             //link.myInventory.Update();
             //put this line into update() of pause.cs so Game1 can be simple

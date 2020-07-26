@@ -108,6 +108,7 @@
     <Compile Include="GameStates\NInGame.cs" />
     <Compile Include="GameStates\Menu.cs" />
     <Compile Include="GameStates\Store.cs" />
+    <Compile Include="GameStates\NTransitioning.cs" />
     <Compile Include="Interfaces\INEnemy.cs" />
     <Compile Include="Inventories\StoreStock.cs" />
     <Compile Include="Items\WoodenSwordItem.cs" />

@@ -176,35 +176,68 @@ namespace Sprint0.Player
             currentSprite.Update();
 
             //border restrictions
-            if (xAxis <= 0)
+            if (myGame.currentState == myGame.stateList[0])
             {
-                xAxis = 624;
-                myGame.currentState = myGame.stateList[1];
-                myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[2]);
-            }
-            else if (xAxis >= 720)
-            {
-                xAxis = 96;
-                myGame.currentState = myGame.stateList[1];
-                myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[3]);
-            }
-            else if (yAxis <= 168)
-            {
-                yAxis = 552;
-                myGame.currentState = myGame.stateList[1];
-                myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[0]);
+                if (xAxis <= 0)
+                {
+                    xAxis = 624;
+                    myGame.currentState = myGame.stateList[1];
+                    myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[2]);
+                }
+                else if (xAxis >= 720)
+                {
+                    xAxis = 96;
+                    myGame.currentState = myGame.stateList[1];
+                    myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[3]);
+                }
+                else if (yAxis <= 168)
+                {
+                    yAxis = 552;
+                    myGame.currentState = myGame.stateList[1];
+                    myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[0]);
 
+                }
+                else if (yAxis >= 648)
+                {
+                    yAxis = 264;
+                    myGame.currentState = myGame.stateList[1];
+                    myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[1]);
+                }
             }
-            else if (yAxis >= 648)
+            else
             {
-                yAxis = 264;
-                myGame.currentState = myGame.stateList[1];
-                myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[1]);
+                if (xAxis <= 0)
+                {
+                    xAxis = 624;
+                    myGame.currentState = myGame.stateList[10];
+                    myGame.currentState.loadNextRoom(myGame.NcurrentRoom.Connectors[2]);
+                }
+                else if (xAxis >= 720)
+                {
+                    xAxis = 96;
+                    myGame.currentState = myGame.stateList[10];
+                    myGame.currentState.loadNextRoom(myGame.NcurrentRoom.Connectors[3]);
+                }
+                else if (yAxis <= 168)
+                {
+                    yAxis = 552;
+                    myGame.currentState = myGame.stateList[10];
+                    myGame.currentState.loadNextRoom(myGame.NcurrentRoom.Connectors[0]);
+
+                }
+                else if (yAxis >= 648)
+                {
+                    yAxis = 264;
+                    myGame.currentState = myGame.stateList[10];
+                    myGame.currentState.loadNextRoom(myGame.NcurrentRoom.Connectors[1]);
+                }
             }
+
+
+
             if (dmgCounter < 18)
             {
                 dmgCounter++;
-
             }
             myFog.Update();
         }
@@ -257,7 +290,7 @@ namespace Sprint0.Player
                 else if (currentFacing == facing.right) { currentAttack = new WoodenSword(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
                 else if (currentFacing == facing.left) { currentAttack = new WoodenSword(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
                 currentAttack.Stab();
-                sound.swordSlash();
+                sound.swordSlash(); 
 
 
         }
@@ -422,19 +455,38 @@ namespace Sprint0.Player
                     y = 384;
                     break;
             }
-            foreach (IBlock block in myGame.roomList[myGame.currentRoom.Connectors[getFacing()]].blockList)
+            if (myGame.currentState == myGame.stateList[0])
             {
-                if (block.getType() == StringHolder.LockType)
+                foreach (IBlock block in myGame.roomList[myGame.currentRoom.Connectors[getFacing()]].blockList)
                 {
-                    if (block.GetRectangle().X == x && block.GetRectangle().Y == y)
+                    if (block.getType() == StringHolder.LockType)
                     {
-                        myGame.roomList[myGame.currentRoom.Connectors[getFacing()]].blockList.Remove(block);
-                        sound.doorUnlock();
-                        break;
-                    }
+                        if (block.GetRectangle().X == x && block.GetRectangle().Y == y)
+                        {
+                            myGame.roomList[myGame.currentRoom.Connectors[getFacing()]].blockList.Remove(block);
+                            sound.doorUnlock();
+                            break;
+                        }
 
+                    }
                 }
             }
+            else
+            {
+                foreach (IBlock block in myGame.NroomList[myGame.NcurrentRoom.Connectors[getFacing()]].blockList)
+                {
+                    if (block.getType() == StringHolder.LockType)
+                    {
+                        if (block.GetRectangle().X == x && block.GetRectangle().Y == y)
+                        {
+                            myGame.NroomList[myGame.NcurrentRoom.Connectors[getFacing()]].blockList.Remove(block);
+                            sound.doorUnlock();
+                            break;
+                        }
+                    }
+                }
+            }
+
 
         }
         private int getFacing()

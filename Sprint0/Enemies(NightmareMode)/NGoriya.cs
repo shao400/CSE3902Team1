@@ -3,7 +3,7 @@ using Sprint0.Sprite;
 using Sprint0.Interfaces;
 using System;
 using Sprint0.Collisions;
-
+using Sprint0.Projectile;
 namespace Sprint0.Enemies
 {
     public class NGoriya : NAbstractEnemies, INEnemy
@@ -14,9 +14,11 @@ namespace Sprint0.Enemies
         bool leftmove = false;
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
+        private IProjectile energyBall;
 
         public NGoriya(int x, int y, IPlayer player)
         {
+            energyBall = new EnergyBall(this, myPlayer);
             myPlayer = player;
             xPosition = x;
             yPosition = y;
@@ -31,6 +33,7 @@ namespace Sprint0.Enemies
         {
             if (this.GetHealth() > 0)
             {
+                energyBall.Shoot();
                 Vector2 location = new Vector2(xPosition, yPosition);
                 GoriyaSprite.Draw(location, leftmove);
             }
@@ -39,6 +42,7 @@ namespace Sprint0.Enemies
 
         public override void Update()
         {
+            energyBall.Update();
             targetRectangle = myPlayer.GetRectangle();
             xDif = targetRectangle.X - xPosition;
             yDif = targetRectangle.Y - yPosition;

@@ -14,12 +14,12 @@ using Sprint0.UtilityClass;
 
 namespace Sprint0.GameStates
 {
-    class Transitioning : IGameState
+    class NTransitioning : IGameState
     {
         Game1 myGame;
         SpriteBatch myBatch;
-        roomProperties myCurrentRoom;
-        int myNextRoom;
+        roomProperties myNCurrentRoom;
+        int myNextNRoom;
         Rectangle DestRec = new Rectangle(0, 168, 768, 528);
         Rectangle currentSourceRec;
         int frame = 0;
@@ -28,11 +28,11 @@ namespace Sprint0.GameStates
         int x = 0;
         int y = 0;
 
-        public Transitioning(Game1 game, SpriteBatch batch, ContentManager Content, Hud hud1)
+        public NTransitioning(Game1 game, SpriteBatch batch, ContentManager Content, Hud hud1)
         {
             myGame = game;
-            myCurrentRoom = game.currentRoom;
-            currentSourceRec = myCurrentRoom.sourceRec;
+            myNCurrentRoom = game.NcurrentRoom;
+            currentSourceRec = myNCurrentRoom.sourceRec;
             myBatch = batch;
             myContent = Content;
             myHud = hud1;
@@ -40,7 +40,7 @@ namespace Sprint0.GameStates
 
         public void loadNextRoom(int nextRoom)
         {
-            myNextRoom = nextRoom;
+            myNextNRoom = nextRoom;
         }
 
         public void Draw()
@@ -56,14 +56,14 @@ namespace Sprint0.GameStates
             frame++;
             if (frame >= 33)
             {
-                myGame.currentRoom = myGame.roomList[myNextRoom];
-                myGame.currentState = myGame.stateList[0];
+                myGame.NcurrentRoom = myGame.NroomList[myNextNRoom];
+                myGame.currentState = myGame.stateList[9];
                 frame = 0;
-                currentSourceRec = myGame.currentRoom.sourceRec;
-                myCurrentRoom = myGame.currentRoom;
+                currentSourceRec = myGame.NcurrentRoom.sourceRec;
+                myNCurrentRoom = myGame.NcurrentRoom;
             }
             else {
-                switch (myCurrentRoom.Connectors.IndexOf(myNextRoom))
+                switch (myNCurrentRoom.Connectors.IndexOf(myNextNRoom))
                 {
                     case 0:
                         if (frame % 2 == 0)
