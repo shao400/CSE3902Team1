@@ -2,17 +2,18 @@
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
 using System;
+using Sprint0.Collisions;
 
 namespace Sprint0.Enemies
 {
-    public class NGoriya : AbstractEnemies, IEnemy
+    public class NGoriya : NAbstractEnemies, INEnemy
     {
         private IPlayer myPlayer;
         private ISprite GoriyaSprite;
         private int xPosition, yPosition, xDif, yDif;
         bool leftmove = false;
         private Rectangle destinationRec, targetRectangle;
-        
+        private EnemyAllCollision enemyAllCollision;
 
         public NGoriya(int x, int y, IPlayer player)
         {
@@ -21,6 +22,7 @@ namespace Sprint0.Enemies
             yPosition = y;
             GoriyaSprite = new NGoriyaSprite();
             destinationRec = new Rectangle(x, y, 45, 45);
+            enemyAllCollision = new EnemyAllCollision(this);
         }
 
 
@@ -57,6 +59,18 @@ namespace Sprint0.Enemies
         {
             destinationRec = new Rectangle(xPosition, yPosition, 45, 45);
             return destinationRec;                                  
+        }
+
+        public override void xReverse(int distance, bool plus)
+        {
+            if (plus) xPosition += distance;
+            else { xPosition -= distance; }
+        }
+
+        public override void yReverse(int distance, bool plus)
+        {
+            if (plus) yPosition += distance;
+            else { yPosition -= distance; }
         }
     }
 }

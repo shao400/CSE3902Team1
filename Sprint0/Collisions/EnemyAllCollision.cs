@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Sprint0.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,9 @@ namespace Sprint0.Collisions
     public class EnemyAllCollision
     {
 
-        private IEnemy myEnemy;
+        private INEnemy myEnemy;
 
-        public EnemyAllCollision(IEnemy enemy)
+        public EnemyAllCollision(INEnemy enemy)
         {
             myEnemy = enemy;
         }
@@ -31,34 +32,66 @@ namespace Sprint0.Collisions
 
                 if (!intersectionRectangle.IsEmpty)
                 {
-                   
-                    if (myRectangle.X <= blockRectangle.X)
+                    /*
+                     if (myRectangle.X <= blockRectangle.X)
+                     {
+                         if (myRectangle.Y >= blockRectangle.Y)
+                         {
+                             myEnemy.Reverse(intersectionRectangle.Width);
+                         }
+                     }
+                     else if (myRectangle.X >= blockRectangle.X)
+                     {
+                         if (myRectangle.Y >= blockRectangle.Y)
+                         {
+                             myEnemy.Reverse(intersectionRectangle.Width);
+                         }
+                     }*/
+                    if (!intersectionRectangle.IsEmpty)
                     {
-                        if (myRectangle.Y >= blockRectangle.Y)
+                        // check the collison occuring direction
+                        if ((intersectionRectangle.Width >= intersectionRectangle.Height)) // from up or down
                         {
-                            myEnemy.Reverse(intersectionRectangle.Width);
+                            if (myRectangle.Y > blockRectangle.Y) // from down
+                            {
+                                myEnemy.xReverse(intersectionRectangle.Height, true);
+                                //myEnemy.x += intersectionRectangle.Height;
+                            }
+                            else //from up
+                            {
+                                myEnemy.xReverse(intersectionRectangle.Height, false);
+                                //myEnemy.yAxis -= intersectionRectangle.Height;
+                            }
+                        }
+                        else //from right or left
+                        {
+                            if (myRectangle.X > blockRectangle.X)//from right
+                            {
+                                myEnemy.yReverse(intersectionRectangle.Height, true);
+                                //myEnemy.xAxis += intersectionRectangle.Width;
+                            }
+                            else //from left
+                            {
+                                myEnemy.yReverse(intersectionRectangle.Height, false);
+                                //myEnemy.xAxis -= intersectionRectangle.Width;
+                            }
                         }
                     }
-                    else if (myRectangle.X >= blockRectangle.X)
-                    {
-                        if (myRectangle.Y >= blockRectangle.Y)
-                        {
-                            myEnemy.Reverse(intersectionRectangle.Width);
-                        }
-                    }
+
+
                 }
-
-
             }
-        }
 
-        public void EnemyCollisionTest(IList<IEnemy> enemies)
-        {
-            Rectangle myRectangle = myEnemy.GetRectangle();
-            Rectangle enemyRectangle;
-            Rectangle intersectionRectangle;
+            /*
+            public void EnemyCollisionTest(IList<IEnemy> enemies)
+            {
+                Rectangle myRectangle = myEnemy.GetRectangle();
+                Rectangle enemyRectangle;
+                Rectangle intersectionRectangle;
 
-            /*wait for implementation as we still have only one enemy*/
+                wait for implementation as we still have only one enemy
+
+            }*/
 
         }
     }

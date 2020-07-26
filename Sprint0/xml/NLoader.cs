@@ -161,7 +161,7 @@ namespace Sprint0.xml
                             enemies.Add(new Zol(xpos, ypos));
                             break;
                         case "Stalfos":
-                            enemies.Add(new Stalfos(xpos, ypos));
+                            enemies.Add(new NStalfos(xpos, ypos, game.link));
                             break;
                         case "Keese":
                             enemies.Add(new Keese(xpos, ypos));
