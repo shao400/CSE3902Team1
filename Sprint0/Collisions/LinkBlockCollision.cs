@@ -62,6 +62,7 @@ namespace Sprint0.Collisions
                         blocks.Remove(block);
                         myPlayer.useKey();
                         myPlayer.unlockBothLocks();
+                        myPlayer.removeBothLockSprite();
                     }
                     break;//once link has collision with one block, no need to detect other blocks
                 }

@@ -146,6 +146,10 @@ namespace Sprint0.Sprite
         public static DoorKDownSprite DoorKDown = new DoorKDownSprite();
         public static DoorBUpSprite DoorBUp = new DoorBUpSprite();
         public static DoorBDownSprite DoorBDown = new DoorBDownSprite();
+        public static KeyholeUpSprite KeyholeUp = new KeyholeUpSprite();
+        public static KeyholeDownSprite KeyholeDown = new KeyholeDownSprite();
+        public static KeyholeLeftSprite KeyholeLeft = new KeyholeLeftSprite();
+        public static KeyholeRightSprite KeyholeRight = new KeyholeRightSprite();
 
         public static PickBoxSprite PickBox = new PickBoxSprite();
 
@@ -155,9 +159,7 @@ namespace Sprint0.Sprite
             LoadItemContent(batch, content);
             LoadEnemyContent(batch, content);
             LoadBlockContent(batch, content);
-            //LoadRoomContent(batch, content);
             LoadHudContent(batch, content);
-            //LoadWallCubeContent(batch, content);
             LoadDoorContent(batch, content);
         }
 
@@ -345,6 +347,10 @@ namespace Sprint0.Sprite
             DoorKDown.LoadContent(batch, content.Load<Texture2D>("dungeon"));
             DoorBUp.LoadContent(batch, content.Load<Texture2D>("dungeon"));
             DoorBDown.LoadContent(batch, content.Load<Texture2D>("dungeon"));
+            KeyholeDown.LoadContent(batch, content.Load<Texture2D>("lock"));
+            KeyholeUp.LoadContent(batch, content.Load<Texture2D>("lock"));
+            KeyholeLeft.LoadContent(batch, content.Load<Texture2D>("lock"));
+            KeyholeRight.LoadContent(batch, content.Load<Texture2D>("lock"));
         }
     }
 }

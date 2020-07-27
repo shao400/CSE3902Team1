@@ -12,5 +12,6 @@ namespace Sprint0.Interfaces
         void Update();
         Rectangle GetRectangle();
 
+        bool IsKeyhole();
     }
 }

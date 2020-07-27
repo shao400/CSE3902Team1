@@ -37,5 +37,9 @@ namespace Sprint0.Block
             return new Rectangle(xpos, ypos, 48, 48);
         }
 
+        public bool IsKeyhole()
+        {
+            return false;
+        }
     }
 }

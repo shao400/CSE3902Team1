@@ -86,6 +86,10 @@
     <Compile Include="Doors\DoorKDown.cs" />
     <Compile Include="Doors\DoorKLeft.cs" />
     <Compile Include="Doors\DoorKRight.cs" />
+    <Compile Include="Doors\KeyholeDown.cs" />
+    <Compile Include="Doors\KeyholeLeft.cs" />
+    <Compile Include="Doors\KeyholeRight.cs" />
+    <Compile Include="Doors\KeyholeUp.cs" />
     <Compile Include="Doors\DoorKUp.cs" />
     <Compile Include="Enemies%28NightmareMode%29\NAbstractEnemies.cs" />
     <Compile Include="Enemies%28NightmareMode%29\NAqua.cs" />
@@ -176,6 +180,10 @@
     <Compile Include="Sound\Sound.cs" />
     <Compile Include="Sprite\Accessory\PickBoxSprite.cs" />
     <Compile Include="Sprite\BlockSprites\LockSprite.cs" />
+    <Compile Include="Sprite\DoorSprites\KeyholeRightSprite.cs" />
+    <Compile Include="Sprite\DoorSprites\KeyholeLeftSprite.cs" />
+    <Compile Include="Sprite\DoorSprites\KeyholeDownSprite.cs" />
+    <Compile Include="Sprite\DoorSprites\KeyholeUpSprite.cs" />
     <Compile Include="Sprite\DoorSprites\DoorBDownSprite.cs" />
     <Compile Include="Sprite\DoorSprites\DoorBUpSprite.cs" />
     <Compile Include="Sprite\DoorSprites\DoorKDownSprite.cs" />

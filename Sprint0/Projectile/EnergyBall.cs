@@ -27,10 +27,6 @@ namespace Sprint0.Projectile
             currentStatus = status.none;
             ShotDistance = 0;
             this.type = "energyBall";
-
-
-
-
         }
         public override void Update()
         {
@@ -70,7 +66,6 @@ namespace Sprint0.Projectile
                 ShotX = (ex - mPlayer.GetRectangle().X) / 25;
                 ShotY = (ey - mPlayer.GetRectangle().Y) / 25;
                 energyBall = SpriteFactory.EnemyBlast;
-
             }
 
 

@@ -168,19 +168,23 @@ namespace Sprint0.xml
                             break;
                         case "DoorKLeft":
                             doors.Add(new DoorKLeft(xpos, ypos));
-                            blocks.Add(new Lock(xpos, ypos));
+                            blocks.Add(new Lock(45, 384));
+                            doors.Add(new KeyholeLeft(0, 384));
                             break;
                         case "DoorKUp":
                             doors.Add(new DoorKUp(xpos, ypos));
-                            blocks.Add(new Lock(357, 195));
+                            blocks.Add(new Lock(357, 212));
+                            doors.Add(new KeyholeUp(336, 168));
                             break;
                         case "DoorKDown":
                             doors.Add(new DoorKDown(xpos, ypos));
-                            blocks.Add(new Lock(357, 615));
+                            blocks.Add(new Lock(357, 596));
+                            doors.Add(new KeyholeDown(336, 600));
                             break;
                         case "DoorKRight":
                             doors.Add(new DoorKRight(xpos, ypos));
-                            blocks.Add(new Lock(xpos, ypos));
+                            blocks.Add(new Lock(675, 384));
+                            doors.Add(new KeyholeRight(672, 384));
                             break;
                         case "DoorBUp":
                             doors.Add(new DoorBUp(xpos, ypos));

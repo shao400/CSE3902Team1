@@ -55,7 +55,7 @@ namespace Sprint0.GameStates
             {
                 myGame.currentRoom.DoorList[i].Draw();
             }
-            myGame.link.GetFog().Draw();
+            //myGame.link.GetFog().Draw();
         }
 
         public void Update()

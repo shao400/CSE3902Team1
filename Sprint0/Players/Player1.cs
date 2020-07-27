@@ -440,18 +440,18 @@ namespace Sprint0.Player
             {
                 case facing.up:
                     x = 357;
-                    y = 615;
+                    y = 596;
                     break;
                 case facing.down:
                     x = 357;
-                    y = 198;
+                    y = 212;
                     break;
                 case facing.left:
-                    x = 696;
+                    x = 675;
                     y = 384;
                     break;
                 case facing.right:
-                    x = 0;
+                    x = 45;
                     y = 384;
                     break;
             }
@@ -489,6 +489,94 @@ namespace Sprint0.Player
 
 
         }
+
+        public void removeBothLockSprite()
+        {
+            int x = -1;
+            int y = -1;
+            int otherX = -1;
+            int otherY = -1;
+            switch (currentFacing)
+            {
+                case facing.up:
+                    x = 336;
+                    y = 168;
+                    otherX = 336;
+                    otherY = 600;
+                    break;
+                case facing.down:
+                    x = 336;
+                    y = 600;
+                    otherX = 336;
+                    otherY = 168;
+                    break;
+                case facing.left:
+                    x = 0;
+                    y = 384;
+                    otherX = 672;
+                    otherY = 384;
+                    break;
+                case facing.right:
+                    x = 672;
+                    y = 384;
+                    otherX = 0;
+                    otherY = 384;
+                    break;
+            }
+            if (myGame.currentState == myGame.stateList[0])
+            {
+                foreach (IDoor door in myGame.currentRoom.DoorList)
+                {
+                    if (door.IsKeyhole())
+                    {
+                        if (door.GetRectangle().X == x && door.GetRectangle().Y == y)
+                        {
+                            myGame.currentRoom.DoorList.Remove(door);
+                            break;
+                        }
+                    }
+                }
+                    foreach (IDoor door in myGame.roomList[myGame.currentRoom.Connectors[getFacing()]].DoorList)
+                {
+                    if (door.IsKeyhole())
+                    {
+                        if (door.GetRectangle().X == otherX && door.GetRectangle().Y == otherY)
+                        {
+                            myGame.roomList[myGame.currentRoom.Connectors[getFacing()]].DoorList.Remove(door);
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                foreach (IDoor door in myGame.NcurrentRoom.DoorList)
+                {
+                    if (door.IsKeyhole())
+                    {
+                        if (door.GetRectangle().X == x && door.GetRectangle().Y == y)
+                        {
+                            myGame.NcurrentRoom.DoorList.Remove(door);
+                            break;
+                        }
+                    }
+                }
+                foreach (IDoor door in myGame.NroomList[myGame.NcurrentRoom.Connectors[getFacing()]].DoorList)
+                {
+                    if (door.IsKeyhole())
+                    {
+                        if (door.GetRectangle().X == otherX && door.GetRectangle().Y == otherY)
+                        {
+                            myGame.NroomList[myGame.NcurrentRoom.Connectors[getFacing()]].DoorList.Remove(door);
+                            break;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
         private int getFacing()
         {
             int rt = -1;
