@@ -21,7 +21,7 @@ namespace Sprint0.Enemies
             xPosition = x;
             yPosition = y;
             KeeseSprite = new NKeeseSprite();
-            destinationRec = new Rectangle(x, y, 45, 45);
+            destinationRec = new Rectangle(x, y, 35, 35);
             enemyAllCollision = new EnemyAllCollision(this);
         }
 
@@ -56,7 +56,7 @@ namespace Sprint0.Enemies
 
         public override Rectangle GetRectangle()
         {
-            destinationRec = new Rectangle(xPosition, yPosition, 45, 45);
+            destinationRec = new Rectangle(xPosition, yPosition, 35, 35);
             return destinationRec;
         }
 
