@@ -17,7 +17,7 @@ namespace Sprint0.Enemies
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
         private IProjectile energyBall;
-        private int health = 1;
+
         public NGoriya(int x, int y, IPlayer player)
         {
            
@@ -30,15 +30,7 @@ namespace Sprint0.Enemies
             energyBall = new EnergyBall(this, myPlayer);
         }
 
-        public void Damaged()
-        {
-            health--;
 
-        }
-        public int GetHealth()
-        {
-            return health;
-        }
 
         public override void Draw()
         {

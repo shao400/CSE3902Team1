@@ -16,7 +16,6 @@ namespace Sprint0.Enemies
         bool leftmove = false;
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
-        private int health = 1;
         public NZol(int x, int y, IPlayer player)
         {
             myPlayer = player;
@@ -27,15 +26,7 @@ namespace Sprint0.Enemies
             enemyAllCollision = new EnemyAllCollision(this);
         }
 
-        public void Damaged()
-        {
-            health--;
 
-        }
-        public int GetHealth()
-        {
-            return health;
-        }
 
         public override void Draw()
         {

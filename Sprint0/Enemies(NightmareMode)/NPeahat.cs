@@ -14,7 +14,6 @@ namespace Sprint0.Enemies
         private int xPosition, yPosition, xDif, yDif;
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
-        private int health = 1;
         public NPeahat(int x, int y, IPlayer player)
         {
             myPlayer = player;
@@ -26,15 +25,7 @@ namespace Sprint0.Enemies
         }
 
 
-        public void Damaged()
-        {
-            health--;
 
-        }
-        public int GetHealth()
-        {
-            return health;
-        }
         public override void Draw()
         {
             if (this.GetHealth() > 0)

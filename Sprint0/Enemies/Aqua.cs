@@ -15,7 +15,6 @@ namespace Sprint0.Enemies
         private int frame = 0;
         bool backmove = false;
         private Rectangle destinationRec;
-        private int health = 1;
 
         public Aqua(int x, int y)
         {
@@ -25,15 +24,8 @@ namespace Sprint0.Enemies
             AquaSprite = new EnemyAquaSprite(x, y);
             destinationRec = new Rectangle(x, y, 45, 60);
         }
-        public void Damaged()
-        {
-            health--;
 
-        }
-        public int GetHealth()
-        {
-            return health;
-        }
+
 
         public override void Draw()
         {

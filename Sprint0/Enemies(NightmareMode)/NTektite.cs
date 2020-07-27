@@ -19,7 +19,6 @@ namespace Sprint0.Enemies
         private int frame = 0;
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
-        private int health = 1;
         public NTektite(int x, int y, IPlayer player)
         {
             myPlayer = player;
@@ -30,15 +29,7 @@ namespace Sprint0.Enemies
             enemyAllCollision = new EnemyAllCollision(this);
         }
 
-        public void Damaged()
-        {
-            health--;
 
-        }
-        public int GetHealth()
-        {
-            return health;
-        }
 
         public override void Draw()
         {

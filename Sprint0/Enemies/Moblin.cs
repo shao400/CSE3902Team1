@@ -15,7 +15,6 @@ namespace Sprint0.Enemies
         private int frame = 0;
         bool backmove = false;
         private Rectangle destinationRec;
-        private int health = 1;
 
         public Moblin(int x, int y)
         {
@@ -26,15 +25,7 @@ namespace Sprint0.Enemies
             destinationRec = new Rectangle(x, y, 45, 45);
         }
 
-        public void Damaged()
-        {
-            health--;
 
-        }
-        public int GetHealth()
-        {
-            return health;
-        }
 
         public override void Draw()
         {
