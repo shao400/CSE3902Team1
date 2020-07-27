@@ -76,6 +76,9 @@ namespace Sprint0.xml
                         case "BlockB":
                             blocks.Add(new BlockB(xpos, ypos));
                             break;
+                        case "BlockX":
+                            blocks.Add(new BlockX(xpos, ypos));
+                            break;
                         case "BlockTop":
                             blocks.Add(new BlockTop(xpos, ypos));
                             break;

@@ -11,17 +11,17 @@ using Sprint0.UtilityClass;
 
 namespace Sprint0.Block
 {
-    class BlockB : IBlock
+    class BlockX : IBlock
     {
-        private ISprite sprite = SpriteFactory.BlockB;
+        private ISprite sprite = SpriteFactory.BlockA;
         private int xpos;
         private int ypos;
         private string type;
-        public BlockB(int x, int y)
+        public BlockX(int x, int y)
         {
             xpos = x;
             ypos = y;
-            type = StringHolder.BlockType;
+            type = StringHolder.BlockXType;
         }
         public string getType()
         {
@@ -36,7 +36,7 @@ namespace Sprint0.Block
 
         public void Update()
         {
-            
+            ypos++;
         }
 
         public Rectangle GetRectangle()

@@ -85,7 +85,7 @@ namespace Sprint0.xml
             }
             for (int i = 0; i < blockList.Count; i++)
             {
-                blockList[i].Update();
+                //blockList[i].Update();
             }
             for (int i = 0; i < hudList.Count; i++)
             {

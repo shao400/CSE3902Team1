@@ -594,6 +594,15 @@ namespace Sprint0.Player
             return rt;
         }
 
+        public void pushBlock(IBlock blockX)
+        {
+            if (yAxis < 420)
+            {
+                blockX.Update();
+                yAxis++;
+            }
+
+        }
         public List<int> itemCount()
         {
             List<int> itemC = new List<int>();

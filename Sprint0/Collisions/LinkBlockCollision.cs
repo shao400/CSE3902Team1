@@ -43,6 +43,10 @@ namespace Sprint0.Collisions
                         }
                         else //from up
                         {
+                            if (block.getType() == StringHolder.BlockXType)
+                            {
+                                myPlayer.pushBlock(block);
+                            }
                             myPlayer.yAxis -= intersectionRectangle.Height;
                         }
                     }

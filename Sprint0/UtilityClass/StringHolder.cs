@@ -13,6 +13,7 @@ namespace Sprint0.UtilityClass
         public const string BlockType = "block";
         public const string LockType = "lock";  // Also used for LinkBlockCollision.cs
         public const string WaterType = "water";
+        public const string BlockXType = "BlockX";
 
         // StringHolders for Collisions Folder
         public const string WoodenSword = "WoodenSword";
