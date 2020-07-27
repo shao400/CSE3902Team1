@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
+using Sprint0.Collisions;
 
 namespace Sprint0.Enemies
 {   //Zina
@@ -17,7 +18,7 @@ namespace Sprint0.Enemies
         private int xPosition, yPosition, xDif, yDif;
         private int frame = 0;
         private Rectangle destinationRec, targetRectangle;
-
+        private EnemyAllCollision enemyAllCollision;
         public NTektite(int x, int y, IPlayer player)
         {
             myPlayer = player;
@@ -25,6 +26,7 @@ namespace Sprint0.Enemies
             yPosition = y;
             TektiteSprite = new NTektiteSprite();
             destinationRec = new Rectangle(x, y, 45, 45);
+            enemyAllCollision = new EnemyAllCollision(this);
         }
 
 
@@ -61,5 +63,19 @@ namespace Sprint0.Enemies
             destinationRec = new Rectangle(xPosition, yPosition, 45, 45);
             return destinationRec;
         }
+
+        public override void xReverse(int distance, bool plus)
+        {
+            if (plus) xPosition += distance;
+            else { xPosition -= distance; }
+        }
+
+        public override void yReverse(int distance, bool plus)
+        {
+            if (plus) yPosition += distance;
+            else { yPosition -= distance; }
+        }
+
+        public override void blockCollisionTest(List<IBlock> blocks) { enemyAllCollision.BlockCollisionTest(blocks); }
     }
 }

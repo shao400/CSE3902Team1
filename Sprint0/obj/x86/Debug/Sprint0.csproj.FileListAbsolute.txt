@@ -532,3 +532,4 @@ C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Conte
 C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\myFont.xnb
 C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\store.xnb
 C:\Users\User\Desktop\cse\3902\shaozilin\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\lock.xnb
+C:\Users\shao4\Documents\GitHub\CSE3902Team1\Sprint0\bin\Windows\x86\Debug\Content\lock.xnb

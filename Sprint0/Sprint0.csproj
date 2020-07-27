@@ -92,7 +92,6 @@
     <Compile Include="Doors\KeyholeRight.cs" />
     <Compile Include="Doors\KeyholeUp.cs" />
     <Compile Include="Doors\DoorKUp.cs" />
-    <Compile Include="Enemies%28NightmareMode%29\NAbstractEnemies.cs" />
     <Compile Include="Enemies%28NightmareMode%29\NAqua.cs" />
     <Compile Include="Enemies%28NightmareMode%29\NDodongo.cs" />
     <Compile Include="Enemies%28NightmareMode%29\NGoriya.cs" />
@@ -114,7 +113,7 @@
     <Compile Include="GameStates\Menu.cs" />
     <Compile Include="GameStates\Store.cs" />
     <Compile Include="GameStates\NTransitioning.cs" />
-    <Compile Include="Interfaces\INEnemy.cs" />
+    <Compile Include="Interfaces\IEnemy.cs" />
     <Compile Include="Inventories\StoreStock.cs" />
     <Compile Include="Items\WoodenSwordItem.cs" />
     <Compile Include="NPCs\Flame.cs" />
@@ -147,7 +146,6 @@
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\IController.cs" />
     <Compile Include="Interfaces\IDoor.cs" />
-    <Compile Include="Interfaces\IEnemy.cs" />
     <Compile Include="Interfaces\IGameState.cs" />
     <Compile Include="Interfaces\IHud.cs" />
     <Compile Include="Interfaces\IItem.cs" />

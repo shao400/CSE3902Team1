@@ -2,6 +2,7 @@
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
 using Sprint0.Player;
+using System.Collections.Generic;
 
 namespace Sprint0.Enemies
 {
@@ -56,6 +57,20 @@ namespace Sprint0.Enemies
         {
             Rectangle destinationRecB = new Rectangle((int)locationB.X, (int)locationB.Y ,32,40);
             return destinationRecB;
+        }
+
+        public override void xReverse(int distance, bool plus)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void yReverse(int distance, bool plus)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void blockCollisionTest(List<IBlock> blocks)
+        {
         }
     }
 }

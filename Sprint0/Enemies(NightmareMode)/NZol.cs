@@ -2,6 +2,8 @@
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
 using System;
+using System.Collections.Generic;
+using Sprint0.Collisions;
 
 namespace Sprint0.Enemies
 {
@@ -13,7 +15,7 @@ namespace Sprint0.Enemies
         private int xPosition, yPosition, xDif, yDif;
         bool leftmove = false;
         private Rectangle destinationRec, targetRectangle;
-
+        private EnemyAllCollision enemyAllCollision;
         public NZol(int x, int y, IPlayer player)
         {
             myPlayer = player;
@@ -21,6 +23,7 @@ namespace Sprint0.Enemies
             yPosition = y;
             ZolSprite = new NZolSprite();
             destinationRec = new Rectangle(x, y, 45, 45);
+            enemyAllCollision = new EnemyAllCollision(this);
         }
 
 
@@ -57,5 +60,19 @@ namespace Sprint0.Enemies
             destinationRec = new Rectangle(xPosition, yPosition, 45, 45);
             return destinationRec;
         }
+
+        public override void xReverse(int distance, bool plus)
+        {
+            if (plus) xPosition += distance;
+            else { xPosition -= distance; }
+        }
+
+        public override void yReverse(int distance, bool plus)
+        {
+            if (plus) yPosition += distance;
+            else { yPosition -= distance; }
+        }
+
+        public override void blockCollisionTest(List<IBlock> blocks) { enemyAllCollision.BlockCollisionTest(blocks); }
     }
 }

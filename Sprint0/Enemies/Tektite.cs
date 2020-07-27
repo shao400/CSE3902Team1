@@ -69,5 +69,20 @@ namespace Sprint0.Enemies
         {
             return destinationRec;
         }
+
+        public override void xReverse(int distance, bool plus)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void yReverse(int distance, bool plus)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void blockCollisionTest(List<IBlock> blocks)
+        {
+
+        }
     }
 }

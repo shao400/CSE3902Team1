@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace Sprint0.Enemies
 {
-    public class NStalfos : NAbstractEnemies, INEnemy
+    public class NStalfos : AbstractEnemies, IEnemy
     {
 
         private IPlayer myPlayer;
@@ -46,13 +46,13 @@ namespace Sprint0.Enemies
             yDif = targetRectangle.Y - yPosition;
             if (Math.Abs(xDif) > Math.Abs(yDif))
             {
-                if (xDif > 0) { xPosition += 2; leftmove = false; }
-                else { xPosition -= 2; leftmove = true; }
+                if (xDif > 0) { xPosition += 1; leftmove = false; }
+                else { xPosition -= 1; leftmove = true; }
             }
             else
             {
-                if (yDif > 0) yPosition += 2;
-                else yPosition -= 2;
+                if (yDif > 0) yPosition += 1;
+                else yPosition -= 1;
             }
             if (Math.Abs(xDif) > 300 || Math.Abs(yDif) > 300) Flash();
             StalfosSprite.Update();
@@ -84,6 +84,7 @@ namespace Sprint0.Enemies
             else { yPosition -= distance; }
         }
 
-        public void blockCollisionTest(List<IBlock> blocks) { enemyAllCollision.BlockCollisionTest(blocks); }
+        public override void blockCollisionTest(List<IBlock> blocks) { enemyAllCollision.BlockCollisionTest(blocks); }
+
     }
 }

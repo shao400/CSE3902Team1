@@ -4,9 +4,11 @@ using Sprint0.Interfaces;
 using System;
 using Sprint0.Collisions;
 using Sprint0.Projectile;
+using System.Collections.Generic;
+
 namespace Sprint0.Enemies
 {
-    public class NGoriya : NAbstractEnemies, INEnemy
+    public class NGoriya : AbstractEnemies, IEnemy
     {
         private IPlayer myPlayer;
         private ISprite GoriyaSprite;
@@ -77,5 +79,7 @@ namespace Sprint0.Enemies
             if (plus) yPosition += distance;
             else { yPosition -= distance; }
         }
+
+        public override void blockCollisionTest(List<IBlock> blocks) { enemyAllCollision.BlockCollisionTest(blocks); }
     }
 }

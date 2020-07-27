@@ -2,6 +2,8 @@ using System;
 using Microsoft.Xna.Framework;
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
+using System.Collections.Generic;
+using Sprint0.Collisions;
 
 namespace Sprint0.Enemies
 {   //Zina, Gengyi
@@ -11,7 +13,7 @@ namespace Sprint0.Enemies
         private ISprite PeahatSprite;
         private int xPosition, yPosition, xDif, yDif;
         private Rectangle destinationRec, targetRectangle;
-
+        private EnemyAllCollision enemyAllCollision;
         public NPeahat(int x, int y, IPlayer player)
         {
             myPlayer = player;
@@ -19,6 +21,7 @@ namespace Sprint0.Enemies
             yPosition = y;
             PeahatSprite = new NPeahatSprite();
             destinationRec = new Rectangle(x, y, 45, 45);
+            enemyAllCollision = new EnemyAllCollision(this);
         }
 
 
@@ -55,5 +58,19 @@ namespace Sprint0.Enemies
             destinationRec = new Rectangle(xPosition, yPosition, 45, 45);
             return destinationRec;
         }
+
+        public override void xReverse(int distance, bool plus)
+        {
+            if (plus) xPosition += distance;
+            else { xPosition -= distance; }
+        }
+
+        public override void yReverse(int distance, bool plus)
+        {
+            if (plus) yPosition += distance;
+            else { yPosition -= distance; }
+        }
+
+        public override void blockCollisionTest(List<IBlock> blocks) { enemyAllCollision.BlockCollisionTest(blocks); }
     }
 }

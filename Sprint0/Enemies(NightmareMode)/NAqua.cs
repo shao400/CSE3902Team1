@@ -3,10 +3,11 @@ using Sprint0.Sprite;
 using Sprint0.Interfaces;
 using System;
 using Sprint0.Collisions;
+using System.Collections.Generic;
 
 namespace Sprint0.Enemies
 {
-    public class NAqua : NAbstractEnemies, INEnemy 
+    public class NAqua : AbstractEnemies, IEnemy 
     {
 
         private IPlayer myPlayer;
@@ -73,5 +74,7 @@ namespace Sprint0.Enemies
             if (plus) yPosition += distance;
             else { yPosition -= distance; }
         }
+
+        public override void blockCollisionTest(List<IBlock> blocks) { enemyAllCollision.BlockCollisionTest(blocks); }
     }
 }

@@ -227,3 +227,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Usage", "CA2211:Non-constant fields should not be visible", Justification = "<Pending>", Scope = "member", Target = "~F:Sprint0.Sprite.SpriteFactory.NStalfos")]
 [assembly: SuppressMessage("Usage", "CA2211:Non-constant fields should not be visible", Justification = "<Pending>", Scope = "member", Target = "~F:Sprint0.Sprite.SpriteFactory.NTektite")]
 [assembly: SuppressMessage("Usage", "CA2211:Non-constant fields should not be visible", Justification = "<Pending>", Scope = "member", Target = "~F:Sprint0.Sprite.SpriteFactory.NZol")]
+[assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "<Pending>", Scope = "member", Target = "~M:Sprint0.Collisions.EnemyAllCollision.BlockCollisionTest(System.Collections.Generic.IList{Sprint0.Interfaces.IBlock})")]

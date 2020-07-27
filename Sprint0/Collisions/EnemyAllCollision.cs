@@ -10,9 +10,9 @@ namespace Sprint0.Collisions
     public class EnemyAllCollision
     {
 
-        private INEnemy myEnemy;
+        private IEnemy myEnemy;
 
-        public EnemyAllCollision(INEnemy enemy)
+        public EnemyAllCollision(IEnemy enemy)
         {
             myEnemy = enemy;
         }
@@ -47,8 +47,6 @@ namespace Sprint0.Collisions
                              myEnemy.Reverse(intersectionRectangle.Width);
                          }
                      }*/
-                    if (!intersectionRectangle.IsEmpty)
-                    {
                         // check the collison occuring direction
                         if ((intersectionRectangle.Width >= intersectionRectangle.Height)) // from up or down
                         {
@@ -76,7 +74,7 @@ namespace Sprint0.Collisions
                                 //myEnemy.xAxis -= intersectionRectangle.Width;
                             }
                         }
-                    }
+                 }
 
 
                 }
@@ -93,6 +91,6 @@ namespace Sprint0.Collisions
 
             }*/
 
-        }
-    }
-}
+                }
+            }
+    

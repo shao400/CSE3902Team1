@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
+using System.Collections.Generic;
 
 namespace Sprint0.Enemies
 {
@@ -63,6 +64,20 @@ namespace Sprint0.Enemies
         public override Rectangle GetRectangle()
         {
             return destinationRec;
+        }
+
+        public override void xReverse(int distance, bool plus)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void yReverse(int distance, bool plus)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void blockCollisionTest(List<IBlock> blocks)
+        {
         }
     }
 }

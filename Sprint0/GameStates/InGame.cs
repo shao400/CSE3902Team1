@@ -60,6 +60,11 @@ namespace Sprint0.GameStates
 
         public void Update()
         {
+            //foreach (IEnemy enemy in myGame.currentRoom.enemyList)
+            //{
+            //    enemy.blockCollisionTest(myGame.currentRoom.blockList);
+            //}
+            //The above code did not work here but work when I put them in Roomproperties' Update
             myGame.link.Update();
             myGame.link.BlockCollisionTest(myGame.currentRoom.blockList);
             myGame.link.ProjectileBlocksCollisionTest(myGame.currentRoom.blockList);
@@ -68,6 +73,7 @@ namespace Sprint0.GameStates
             myGame.link.ItemCollisionTest(myGame.currentRoom.itemList);
             myGame.link.NpcCollisionTest(myGame.currentRoom.NPCList);
             myGame.currentRoom.Update();
+
         }
         public void loadNextRoom(int nextRoom)
         {

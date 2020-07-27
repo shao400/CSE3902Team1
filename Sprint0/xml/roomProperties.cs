@@ -77,6 +77,7 @@ namespace Sprint0.xml
         {
             for (int i = 0; i < enemyList.Count; i++)
             {
+                enemyList[i].blockCollisionTest(blockList);
                 enemyList[i].Update();
             }
             for (int i = 0; i < itemList.Count; i++)

@@ -58,17 +58,17 @@ namespace Sprint0.xml
                         case "Goriya":
                             enemies.Add(new NGoriya(xpos, ypos, game.link));
                             break;
-                        case "Empty":
-                            enemies.Add(new Empty(xpos, ypos));
-                            break;
+                        //case "Empty":
+                            //enemies.Add(new Empty(xpos, ypos));
+                            //break;
                         case "Moblin":
-                            enemies.Add(new Moblin(xpos, ypos));
+                            enemies.Add(new NMoblin(xpos, ypos,game.link));
                             break;
                         case "Peahat":
-                            enemies.Add(new Peahat(xpos, ypos));
+                            enemies.Add(new NPeahat(xpos, ypos,game.link));
                             break;
                         case "Tektite":
-                            enemies.Add(new Tektite(xpos, ypos));
+                            enemies.Add(new NTektite(xpos, ypos,game.link));
                             break;
                         case "BlockA":
                             blocks.Add(new BlockA(xpos, ypos));
@@ -142,32 +142,32 @@ namespace Sprint0.xml
                         case "Flame":
                             NPCs.Add(new Flame(xpos, ypos));
                             break;
-                        case "Oldman":
-                            enemies.Add(new Oldman(xpos, ypos, game.link));
-                            break;
+                        //case "Oldman":
+                            //enemies.Add(new Oldman(xpos, ypos, game.link));
+                            //break;
                         case "Dodongo":
-                            enemies.Add(new Dodongo(xpos, ypos));
+                            enemies.Add(new NDodongo(xpos, ypos,game.link));
                             break;
                         case "Aqua":
-                            enemies.Add(new Aqua(xpos, ypos));
+                            enemies.Add(new NAqua(xpos, ypos, game.link));
                             break;
                         case "Rope":
-                            enemies.Add(new Rope(xpos, ypos));
+                            enemies.Add(new NRope(xpos, ypos, game.link));
                             break;
-                        case "Trap":
-                            enemies.Add(new Trap(xpos, ypos));
-                            break;
-                        case "Wallmaster":
-                            enemies.Add(new Wallmaster(xpos, ypos));
-                            break;
+                        //case "Trap":
+                            //enemies.Add(new NTrap(xpos, ypos));
+                            //break;
+                        //case "Wallmaster":
+                            //enemies.Add(new NWallmaster(xpos, ypos, game.link));
+                            //break;
                         case "Zol":
-                            enemies.Add(new Zol(xpos, ypos));
+                            enemies.Add(new NZol(xpos, ypos, game.link));
                             break;
                         case "Stalfos":
                             enemies.Add(new NStalfos(xpos, ypos, game.link));
                             break;
                         case "Keese":
-                            enemies.Add(new Keese(xpos, ypos));
+                            enemies.Add(new NKeese(xpos, ypos, game.link));
                             break;
                         case "DoorKLeft":
                             doors.Add(new DoorKLeft(xpos, ypos));
