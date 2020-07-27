@@ -18,6 +18,7 @@ namespace Sprint0.Enemies
         private Player1 _link;
         private Vector2 locationB;
         private const int shotDistance = 4;
+        private int health = 1;
         public Oldman(int x, int y,Player1 link)
         {
 
@@ -29,7 +30,15 @@ namespace Sprint0.Enemies
             locationB = new Vector2(x, y);
             _link = link;
         }
+        public void Damaged()
+        {
+            health--;
 
+        }
+        public int GetHealth()
+        {
+            return health;
+        }
 
 
         public override void Draw()

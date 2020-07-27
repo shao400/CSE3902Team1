@@ -17,7 +17,8 @@ namespace Sprint0.Enemies
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
         private List<Boolean> UdLrCollid;
-        
+        private int health = 1;
+
         public NMoblin(int x, int y, IPlayer player)
         {
             myPlayer = player;
@@ -29,7 +30,15 @@ namespace Sprint0.Enemies
             UdLrCollid = new List<bool>();
         }
 
+        public void Damaged()
+        {
+            health--;
 
+        }
+        public int GetHealth()
+        {
+            return health;
+        }
 
         public override void Draw()
         {

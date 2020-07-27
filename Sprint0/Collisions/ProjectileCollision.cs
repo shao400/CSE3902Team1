@@ -18,6 +18,7 @@ namespace Sprint0.Collisions
         {
             thisProjectile = projectile;
             myPlayer = link;
+            myPlayer = link;
         }
         public void ProjectileEnemiesCollisionTest(List<IEnemy> enemies, Sound s)
         {

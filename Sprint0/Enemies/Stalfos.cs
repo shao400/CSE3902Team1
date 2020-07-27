@@ -17,6 +17,7 @@ namespace Sprint0.Enemies
         private int xPosition;
         private int yPosition;
         private Rectangle destinationRec;
+        private int health = 1;
 
         public Stalfos(int x, int y)
         {
@@ -28,7 +29,15 @@ namespace Sprint0.Enemies
         }
 
 
+        public void Damaged()
+        {
+            health--;
 
+        }
+        public int GetHealth()
+        {
+            return health;
+        }
         public override void Draw()
         {
             if (this.GetHealth() > 0)

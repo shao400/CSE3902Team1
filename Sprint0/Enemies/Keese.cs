@@ -2,6 +2,7 @@
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
 using System.Collections.Generic;
+using System;
 
 namespace Sprint0.Enemies
 {
@@ -15,6 +16,7 @@ namespace Sprint0.Enemies
         private int frame = 0;
         bool backmove = false;
         private Rectangle destinationRec;
+        private int health = 3;
 
         public Keese(int x, int y)
         {
@@ -25,7 +27,16 @@ namespace Sprint0.Enemies
             destinationRec = new Rectangle(x, y, 45, 45);
         }
 
+        public void Damaged()
+        {
+           Console.WriteLine(health);
+           health--;
 
+        }
+        public int GetHealth()
+        {
+            return health;
+        }
 
         public override void Draw()
         {
