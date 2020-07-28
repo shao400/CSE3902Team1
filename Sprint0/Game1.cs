@@ -155,6 +155,7 @@ namespace Sprint0
             stateList.Add(new Store(this, spriteBatch, Content, hud));
             stateList.Add(new NInGame(this, hud));
             stateList.Add(new NTransitioning(this, spriteBatch, Content, hud));
+            stateList.Add(new HandbookState(this, spriteBatch, Content, hud));
             currentState = stateList[7];
         }
 
