@@ -43,6 +43,7 @@ namespace Sprint0.Player
         private Boolean GetMap;
         private Boolean GetCompass;
         public Fog myFog;
+        public Handbook myHandbook;
 
         Game1 myGame;
         public Queue<IProjectile> projectiles;
@@ -91,6 +92,7 @@ namespace Sprint0.Player
             linkEnemyCollision = new LinkEnemyCollision(this);
             linkNpcCollision = new LinkNpcCollision(this,myGame);
             myFog = new Fog(this);
+            myHandbook = new Handbook(this);
         }
 
         public bool isTakingDmg()
@@ -105,6 +107,10 @@ namespace Sprint0.Player
         {
 
             return currentStatus.ToString();
+        }
+        public Game1 GetGame()
+        {
+            return myGame;
         }
         public string GetCurrentWeapon()
         {

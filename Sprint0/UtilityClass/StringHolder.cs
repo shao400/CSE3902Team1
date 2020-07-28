@@ -33,6 +33,7 @@ namespace Sprint0.UtilityClass
         public const string Booming = "booming";
         public const string BoomrangShooting = "boomrangShooting";
         public const string Winning = "winning";
+        public const string Handbook = "handbook";
 
         //StringHolders for HUD Folder
         public const string None = "None";

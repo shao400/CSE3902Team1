@@ -25,6 +25,10 @@ namespace Sprint0.Commands
             {
                 myGame.link.myStock.pickingItem(1);
             }
+            else if (myGame.currentState == myGame.stateList[11])
+            {
+                myGame.link.myHandbook.pickingIcon(1);
+            }
             else
             {
                 myGame.link.Shoot();

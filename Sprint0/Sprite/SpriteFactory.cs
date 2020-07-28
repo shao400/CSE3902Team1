@@ -55,6 +55,14 @@ namespace Sprint0.Sprite
         public static PlayerWoodenSwordSprite PlayerWoodenSwordUp = new PlayerWoodenSwordSprite(SpriteEffects.None, (float)-1.5708);
         public static PlayerWoodenSwordSprite PlayerWoodenSwordDown = new PlayerWoodenSwordSprite(SpriteEffects.None, (float)1.5708);
 
+        public static InfoGoriyaSprite InfoGoriya = new InfoGoriyaSprite();
+        public static InfoWallmasterSprite InfoWallmaster = new InfoWallmasterSprite();
+        public static InfoMoblinSprite InfoMoblin = new InfoMoblinSprite();
+        public static InfoPeahatSprite InfoPeahat = new InfoPeahatSprite();
+        public static InfoTektiteSprite InfoTektite = new InfoTektiteSprite();
+        public static InfoKeeseSprite InfoKeese = new InfoKeeseSprite();
+        public static InfoRopeSprite InfoRope = new InfoRopeSprite();
+        public static InfoStalfosSprite InfoStalfos = new InfoStalfosSprite();
 
         //Zina
         public static PlayerWoodenSwordShootingSprite PlayerWoodenSwordShootingRight = new PlayerWoodenSwordShootingSprite(SpriteEffects.None, 0);
@@ -302,6 +310,14 @@ namespace Sprint0.Sprite
             NTektite.LoadContent(batch, content.Load<Texture2D>("enemy"));
             NZol.LoadContent(batch, content.Load<Texture2D>("enemy2"));
             NStalfos.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            InfoGoriya.LoadContent(batch, content.Load<Texture2D>("handbook"));
+            InfoRope.LoadContent(batch, content.Load<Texture2D>("handbook"));
+            InfoStalfos.LoadContent(batch, content.Load<Texture2D>("handbook"));
+            InfoWallmaster.LoadContent(batch, content.Load<Texture2D>("handbook"));
+            InfoMoblin.LoadContent(batch, content.Load<Texture2D>("handbook"));
+            InfoPeahat.LoadContent(batch, content.Load<Texture2D>("handbook"));
+            InfoTektite.LoadContent(batch, content.Load<Texture2D>("handbook"));
+            InfoKeese.LoadContent(batch, content.Load<Texture2D>("handbook"));
         }
 
         private static void LoadBlockContent(SpriteBatch batch, ContentManager content)
