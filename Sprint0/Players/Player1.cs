@@ -106,6 +106,10 @@ namespace Sprint0.Player
 
             return currentStatus.ToString();
         }
+        public Game1 GetGame()
+        {
+            return myGame;
+        }
         public string GetCurrentWeapon()
         {
             if (currentWp.Count != 0)

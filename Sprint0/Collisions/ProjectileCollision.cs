@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using Sprint0.UtilityClass;
 using Sprint0.Player;
+using Sprint0.Items;
 
 //currently not used, since item would not collition with enemy or blocks right now. May update future
 
@@ -38,6 +39,7 @@ namespace Sprint0.Collisions
                         thisProjectile.setExplo(1);
                         if (enemy.GetHealth() == 0)
                         {
+                            myPlayer.GetGame().currentRoom.itemList.Add(new Ruppy(enemy.GetRectangle().X, enemy.GetRectangle().Y));
                             s.enemyDie();
                         }
                         else
@@ -52,6 +54,7 @@ namespace Sprint0.Collisions
                         enemy.Damaged();
                         if (enemy.GetHealth() == 0)
                         {
+                            myPlayer.GetGame().currentRoom.itemList.Add(new Ruppy(enemy.GetRectangle().X, enemy.GetRectangle().Y));
                             s.enemyDie();
                         }
                         else
@@ -68,6 +71,7 @@ namespace Sprint0.Collisions
                         thisProjectile.setExplo(3);
                         if (enemy.GetHealth() == 0)
                         {
+                            myPlayer.GetGame().currentRoom.itemList.Add(new Ruppy(enemy.GetRectangle().X, enemy.GetRectangle().Y));
                             s.enemyDie();
                         }
                         else
