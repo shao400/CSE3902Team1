@@ -37,17 +37,17 @@ namespace Sprint0.Inventories
         public void pickingIcon(int moveCount)
         {
             // Use N to pick icon
-            Vector2 dest1 = new Vector2(331 + moveCountTot * 54, 335);
+            Vector2 dest1 = new Vector2(238 + moveCountTot * 90, 90);
             Vector2 dest2 = new Vector2(240, 320);
             moveCountTot += moveCount;
             if (moveCountTot > 3)
             {
-                dest1 = new Vector2(331 + moveCountTot * 54, 350);
+                dest1 = new Vector2(-120 + moveCountTot * 90, 153);
             }
             if (moveCountTot > 7)
             {
                 moveCountTot = 0;
-                dest1 = new Vector2(331 + moveCountTot * 54, 335);
+                dest1 = new Vector2(238 + moveCountTot * 90, 90);
             }
             pickboxSprite.Draw(dest1, false);
             drawInfo(moveCountTot).Draw(dest2, false);

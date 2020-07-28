@@ -2,6 +2,8 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Sprint0.Commands;
+using Sprint0.GameStates;
+using Sprint0.Inventories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,6 +45,7 @@ namespace Sprint0.Controller
             //keymap.Add(Keys.D4, new BoomrangShoot(myGame));
             attackmap.Add(Keys.Z, new Attack(myGame));
             attackmap.Add(Keys.N, new Shoot(myGame));
+            attackmap.Add(Keys.B, new bHandbook(myGame));
 
             //attackmap.Add(Keys.L, new Boom(myGame));
             attackmap.Add(Keys.M, new mSwitchOption(myGame));

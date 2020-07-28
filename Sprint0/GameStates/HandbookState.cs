@@ -37,12 +37,13 @@ namespace Sprint0.GameStates
         }
 
         public void Draw()
-        {
+        {            
             myBatch.Begin();
             myBatch.Draw(myContent.Load<Texture2D>(StringHolder.Handbook), pauseDestRec, pauseSourceRec, Color.White); ;
             myBatch.End();
             myHud.Draw(0, 528);
             myHandbook.pickingIcon(0);
+
 
         }
 

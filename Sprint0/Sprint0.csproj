@@ -110,6 +110,8 @@
     <Compile Include="Enemies\Goriya.cs" />
     <Compile Include="Enemies\Keese.cs" />
     <Compile Include="Fog.cs" />
+    <Compile Include="GameStates\BackToGame4Handbook.cs" />
+    <Compile Include="GameStates\GoToHandbook.cs" />
     <Compile Include="GameStates\HandbookState.cs" />
     <Compile Include="GameStates\NInGame.cs" />
     <Compile Include="GameStates\Menu.cs" />
