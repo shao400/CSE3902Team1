@@ -22,7 +22,7 @@ namespace Sprint0.Enemies
             xPosition = x;
             yPosition = y;
             AquaSprite = new EnemyAquaSprite(x, y);
-            destinationRec = new Rectangle(x, y, 45, 60);
+            destinationRec = new Rectangle(x, y, 100, 100);
         }
 
 
@@ -39,25 +39,25 @@ namespace Sprint0.Enemies
         public override void Update()
         {
             frame++;
-            if (frame >= 20) frame = 0;
-            if (frame < 10 && !backmove)
+            if (frame >= 5) frame = 0;
+            if (frame < 2 && !backmove)
             {
-                destinationRec.X += 5;
+                destinationRec.X += 1;
             }
-            else if (frame > 10 && !backmove)
+            else if (frame > 2 && !backmove)
             {
-                destinationRec.X += 5;
+                destinationRec.X += 1;
             }
-            else if (frame < 10 && backmove)
+            else if (frame < 2 && backmove)
             {
-                destinationRec.X -= 5;
+                destinationRec.X -= 1;
             }
-            else if (frame > 10 && backmove)
+            else if (frame > 2 && backmove)
             {
-                destinationRec.X -= 5;
+                destinationRec.X -= 1;
             }
-            if (destinationRec.X > 627) backmove = true;
-            if (destinationRec.X < 96) backmove = false;
+            if (destinationRec.X > 470) backmove = true;
+            if (destinationRec.X < 440) backmove = false;
             AquaSprite.Update();
         }
 

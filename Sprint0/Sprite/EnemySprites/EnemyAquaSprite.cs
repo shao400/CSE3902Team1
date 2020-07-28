@@ -15,7 +15,7 @@ namespace Sprint0.Sprite
 
         public EnemyAquaSprite(int x, int y)
         {
-            destinationRec = new Rectangle(x, y, 45, 60);
+            destinationRec = new Rectangle(x, y, 100, 100);
         }
 
 
@@ -27,28 +27,28 @@ namespace Sprint0.Sprite
             if (frame < 10 && !backmove)
             {
                 sourceRec = new Rectangle(1, 11, 24, 32);
-                destinationRec.X += 5;
+                destinationRec.X += 1;
             }
             else if (frame > 10 && !backmove)
             {
                 sourceRec = new Rectangle(26, 11, 24, 32);
-                destinationRec.X += 5;
+                destinationRec.X += 1;
             }
             else if (frame < 10 && backmove)
             {
 
                 sourceRec = new Rectangle(1, 11, 24, 32);
-                destinationRec.X -= 5;
+                destinationRec.X -= 1;
             }
             else if (frame > 10 && backmove)
             {
 
                 sourceRec = new Rectangle(26, 11, 24, 32);
-                destinationRec.X -= 5;
+                destinationRec.X -= 1;
             }
 
-            if (destinationRec.X > 627) backmove = true;
-            if (destinationRec.X < 96) backmove = false;
+            if (destinationRec.X > 470) backmove = true;
+            if (destinationRec.X < 440) backmove = false;
         }
 
         public void LoadContent(SpriteBatch batch, Texture2D texture)

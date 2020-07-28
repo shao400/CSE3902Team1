@@ -3,9 +3,7 @@
 	<door type="DoorKDown" xpos="312" ypos="624" />
 	<door type="DoorKRight" xpos="696" ypos="384" />
 	<src xpos="1029" ypos="178" />
-	<enemy type="Trap" xpos="579" ypos="411" />
-	<enemy type="Moblin" xpos="99" ypos="411" />
-	<enemy type="Keese" xpos="127" ypos="411" />
+	<enemy type="Aqua" xpos="450" ypos="365" />
 	<block type="BlockA" xpos="435" ypos="267" />
 	<block type="BlockA" xpos="483" ypos="267" />
 	<block type="BlockA" xpos="531" ypos="267" />
