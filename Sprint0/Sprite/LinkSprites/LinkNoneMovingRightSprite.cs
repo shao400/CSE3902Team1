@@ -12,7 +12,7 @@ namespace Sprint0
     {
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
-        Color myColor = Color.CornflowerBlue;
+        Color myColor = Color.GreenYellow;
         Rectangle sourceRec;
         int frame = 0;
         int shownFrame = 0;
@@ -35,11 +35,11 @@ namespace Sprint0
         {
             if (isDamaged)
             {
-                myColor = Color.GreenYellow;
+                myColor = Color.Red;
             }
             else
             {
-                myColor = Color.CornflowerBlue;
+                myColor = Color.GreenYellow;
             }
             if (frame == 0)
                 sourceRec = new Rectangle(35, 11, 16, 16);

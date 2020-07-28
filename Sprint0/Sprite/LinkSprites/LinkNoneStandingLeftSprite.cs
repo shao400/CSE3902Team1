@@ -13,7 +13,7 @@ namespace Sprint0
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
         Rectangle sourceRec = new Rectangle(35, 11, 16, 16);
-        Color myColor = Color.CornflowerBlue;
+        Color myColor = Color.GreenYellow;
         public void Update()
         {
 
@@ -27,11 +27,11 @@ namespace Sprint0
         {
             if (isDamaged)
             {
-                myColor = Color.GreenYellow;
+                myColor = Color.Red;
             }
             else
             {
-                myColor = Color.CornflowerBlue;
+                myColor = Color.GreenYellow;
             }
             SpriteEffects effect = SpriteEffects.FlipHorizontally;
             mySpriteBatch.Begin();
