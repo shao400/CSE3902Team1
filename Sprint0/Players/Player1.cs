@@ -283,14 +283,18 @@ namespace Sprint0.Player
         }
         public void Attack()
         {
-            
+            if (currentAttack.IsExplode() == 2)
+            {
                 currentStatus = status.attacking;
                 if (currentFacing == facing.up) { currentAttack = new WoodenSword(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
                 else if (currentFacing == facing.down) { currentAttack = new WoodenSword(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
                 else if (currentFacing == facing.right) { currentAttack = new WoodenSword(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
                 else if (currentFacing == facing.left) { currentAttack = new WoodenSword(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
                 currentAttack.Stab();
-                sound.swordSlash(); 
+                currentAttack.setExplo(2);
+                sound.swordSlash();
+            }
+               
 
 
         }

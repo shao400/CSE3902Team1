@@ -49,7 +49,7 @@ namespace Sprint0.Projectile
                 currentStatus = status.none;
                 counter = 21;
             }
-            if (currentStatus == status.stab) { this.GetPlayerLoction(); }
+            if (currentStatus == status.stab) { this.GetPlayerLoction(); counter++; }
             else if (currentStatus == status.shoot) { ShotDistance+=5;
                 this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), 35, 23);
             }
@@ -136,12 +136,7 @@ namespace Sprint0.Projectile
         }
         public override void Stab()
         {
-            currentStatus = status.stab;
-            // if (myDirection == 0) WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordUp;
-            //else if (myDirection == 1) WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordDown;
-            //else if (myDirection == 2) WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordRight;
-            // else if (myDirection == 3) WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordLeft;
-            // Vector2 location = new Vector2(this.player.GetRectangle().X, this.player.GetRectangle().Y);
+           
             if (myDirection == 0)
             {
                 WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingUp;
@@ -171,5 +166,9 @@ namespace Sprint0.Projectile
             
         }
 
+        public override int getCounter()
+        {
+            return counter;
+        }
     }
 }

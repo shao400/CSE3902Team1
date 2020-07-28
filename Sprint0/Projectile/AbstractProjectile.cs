@@ -49,5 +49,6 @@ namespace Sprint0.Projectile
         public abstract void Shoot();
         public abstract void Stab();
         public abstract void Update();
+        public abstract int getCounter();
     }
 }

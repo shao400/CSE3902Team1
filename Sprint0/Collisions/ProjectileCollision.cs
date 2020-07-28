@@ -62,9 +62,10 @@ namespace Sprint0.Collisions
                         }
                     
                     }
-                    else if (thisProjectile.IsExplode() == 3)
+                    else if (thisProjectile.IsExplode() == 3 )
                     {
                         enemy.Damaged();
+                        thisProjectile.setExplo(3);
                         if (enemy.GetHealth() == 0)
                         {
                             s.enemyDie();

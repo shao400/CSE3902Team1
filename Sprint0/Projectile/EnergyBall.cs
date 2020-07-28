@@ -98,5 +98,10 @@ namespace Sprint0.Projectile
         {
             throw new NotImplementedException();
         }
+
+        public override int getCounter()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

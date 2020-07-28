@@ -10,6 +10,7 @@ namespace Sprint0.Interfaces
     public interface IProjectile
     {
         void Shoot();
+        int getCounter();
         void Explode();
         void Stab();
         void setExplo(int i);
