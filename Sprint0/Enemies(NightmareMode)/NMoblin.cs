@@ -12,13 +12,13 @@ namespace Sprint0.Enemies
         private IPlayer myPlayer;
         private ISprite MoblinSprite;
         private int xPosition, yPosition, xDif, yDif;
-        private int frame = 0;
         bool leftmove = false;
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
         private List<Boolean> UdLrCollid;
-        
-        public NMoblin(int x, int y, IPlayer player)
+        private List<IBlock> blocksSet;
+        private const int md = 3;
+        public NMoblin(int x, int y, IPlayer player, List<IBlock> blocks)
         {
             myPlayer = player;
             xPosition = x;
@@ -26,6 +26,7 @@ namespace Sprint0.Enemies
             MoblinSprite = new NMoblinSprite();
             destinationRec = new Rectangle(x, y, 35, 35);
             enemyAllCollision = new EnemyAllCollision(this);
+            blocksSet = blocks;
             UdLrCollid = new List<bool>();
         }
 
@@ -56,30 +57,46 @@ namespace Sprint0.Enemies
             if (Math.Abs(xDif) > Math.Abs(yDif))//Horizontal Chasing Link
             {
                 if (!UdLrCollid[1]) { 
-                    if (xDif > 0) { xPosition += 3; leftmove = false; }
-                    else { xPosition -= 3; leftmove = true; }
+                    if (xDif > 0) { xPosition += md; leftmove = false; }
+                    else { xPosition -= md; leftmove = true; }
                 }
                 else if (UdLrCollid[1])//Should HorizontalChasing But Collid with Blocks
                 {
-                    if (yDif > 0) yPosition += 3;
-                    else yPosition -= 3;
+                    if (yDif > 0) yPosition += md;
+                    else yPosition -= md;
                 }
             }
             else//UpDown Chasing Link
             {
                 if (!UdLrCollid[0]) {
-                    if (yDif > 0) yPosition += 3;
-                    else yPosition -= 3;
+                    if (yDif > 0) yPosition += md;
+                    else yPosition -= md;
                 }
                 else if(UdLrCollid[0])
                 {
-                    if (xDif > 0) { xPosition += 3; leftmove = false; }
-                    else { xPosition -= 3; leftmove = true; }
+                    if (xDif > 0) { xPosition += md; leftmove = false; }
+                    else { xPosition -= md; leftmove = true; }
                 }
             }
             MoblinSprite.Update();
         }
 
+        /*Return the Heristiric... Value of a position*/
+        private int PathScore(int x, int y)
+        {
+            const int infi = 99999;
+            int h = 0;
+            if (!enemyAllCollision.BlockCollisionDetect(blocksSet, x,y,35))
+            {
+                h += Math.Abs(targetRectangle.X - xPosition);
+                h += Math.Abs(targetRectangle.Y - yPosition);
+            }
+            else
+            {
+                h = infi;
+            }
+            return h;
+        }
         public override Rectangle GetRectangle()
         {
             destinationRec = new Rectangle(xPosition, yPosition, 35, 35);

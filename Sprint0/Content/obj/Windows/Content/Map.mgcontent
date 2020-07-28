@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Map.png</SourceFile>
-  <SourceTime>2020-07-07T19:45:06.7250042-04:00</SourceTime>
-  <DestFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Map.xnb</DestFile>
-  <DestTime>2020-07-28T11:04:53.8142701-04:00</DestTime>
+  <SourceFile>C:/Users/shao4/Documents/GitHub/CSE3902Team1/Sprint0/Content/Map.png</SourceFile>
+  <SourceTime>2020-07-21T06:38:56.880956+08:00</SourceTime>
+  <DestFile>C:/Users/shao4/Documents/GitHub/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Map.xnb</DestFile>
+  <DestTime>2020-07-29T05:18:47.2183188+08:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
+  <ImporterTime>2018-12-09T00:35:54+08:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2018-12-08T11:35:54-05:00</ProcessorTime>
+  <ProcessorTime>2018-12-09T00:35:54+08:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>

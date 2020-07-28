@@ -33,55 +33,62 @@ namespace Sprint0.Collisions
                 intersectionRectangle = Rectangle.Intersect(myRectangle, blockRectangle);
 
                 if (!intersectionRectangle.IsEmpty)
-                {                
-                        // check the collison occuring direction
-                        if ((intersectionRectangle.Width >= intersectionRectangle.Height)) // from up or down
+                {
+                    // check the collison occuring direction
+                    if ((intersectionRectangle.Width >= intersectionRectangle.Height)) // from up or down
+                    {
+                        UpDownCollid = true;
+                        if (myRectangle.Y > blockRectangle.Y) // from down
                         {
-                            UpDownCollid = true;
-                            if (myRectangle.Y > blockRectangle.Y) // from down
-                            {
-                                myEnemy.xReverse(intersectionRectangle.Height, true);
-                                //myEnemy.x += intersectionRectangle.Height;
-                            }
-                            else //from up
-                            {
-                                myEnemy.xReverse(intersectionRectangle.Height, false);
-                                //myEnemy.yAxis -= intersectionRectangle.Height;
-                            }
+                            myEnemy.xReverse(intersectionRectangle.Height, true);
+                            //myEnemy.x += intersectionRectangle.Height;
                         }
-                        else //from right or left
+                        else //from up
                         {
-                            LeftRightCollid = true;
-                            if (myRectangle.X > blockRectangle.X)//from right
-                            {
-                                myEnemy.yReverse(intersectionRectangle.Height, true);
-                                //myEnemy.xAxis += intersectionRectangle.Width;
-                            }
-                            else //from left
-                            {
-                                myEnemy.yReverse(intersectionRectangle.Height, false);
-                                //myEnemy.xAxis -= intersectionRectangle.Width;
-                            }
+                            myEnemy.xReverse(intersectionRectangle.Height, false);
+                            //myEnemy.yAxis -= intersectionRectangle.Height;
                         }
-                 }            
+                    }
+                    else //from right or left
+                    {
+                        LeftRightCollid = true;
+                        if (myRectangle.X > blockRectangle.X)//from right
+                        {
+                            myEnemy.yReverse(intersectionRectangle.Height, true);
+                            //myEnemy.xAxis += intersectionRectangle.Width;
+                        }
+                        else //from left
+                        {
+                            myEnemy.yReverse(intersectionRectangle.Height, false);
+                            //myEnemy.xAxis -= intersectionRectangle.Width;
+                        }
+                    }
                 }
+            }
             List<Boolean> UDLRCollid = new List<bool>();
             UDLRCollid.Add(UpDownCollid);
             UDLRCollid.Add(LeftRightCollid);
             return UDLRCollid;
         }
 
-            /*
-            public void EnemyCollisionTest(IList<IEnemy> enemies)
+
+        public Boolean BlockCollisionDetect(List<IBlock> blocks, int x, int y, int size)
+        {
+            Rectangle blockRectangle;
+            Rectangle myRectangle = new Rectangle(x, y, size, size);
+            Rectangle intersectionRectangle;
+            Boolean collid = false;
+            foreach (IBlock block in blocks)
             {
-                Rectangle myRectangle = myEnemy.GetRectangle();
-                Rectangle enemyRectangle;
-                Rectangle intersectionRectangle;
-
-                wait for implementation as we still have only one enemy
-
-            }*/
-
-                }
+                blockRectangle = block.GetRectangle();
+                intersectionRectangle = Rectangle.Intersect(myRectangle, blockRectangle);
+                if (!intersectionRectangle.IsEmpty) collid = true;                           
             }
+            return collid;
+        }
+
+
+
+    }
+}
     

@@ -16,10 +16,7 @@ namespace Sprint0.GameStates
 {
     class Menu : IGameState
     {
-        Game1 myGame;
-        
-        int x = 0;
-        int y = 0;
+        Game1 myGame;      
         SpriteFont myFont;
         SpriteBatch myBatch;
         List<string> options;
