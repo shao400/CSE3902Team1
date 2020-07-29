@@ -52,25 +52,36 @@ namespace Sprint0.xml
         }
         public void Draw()
         {
-            myBatch.Begin();
-            myBatch.Draw(myContent.Load<Texture2D>(StringHolder.Dungeon), DestRec, sourceRec, Color.White);
-            myBatch.End();
-            for (int i = 0; i < hudList.Count; i++)
-            {
-                //hudList[i].Draw();
-            }
-            for (int i = 0; i < enemyList.Count; i++)
-            {
-                enemyList[i].Draw();
-            }
-            for (int i = 0; i < itemList.Count; i++)
-            {
-                itemList[i].Draw();
-            }
-            for (int i = 0; i < NPCList.Count; i++)
-            {
-                NPCList[i].Draw();
-            }
+            if (roomID == 17)
+                ChangeSrc();
+
+                myBatch.Begin();
+                myBatch.Draw(myContent.Load<Texture2D>(StringHolder.Dungeon), DestRec, sourceRec, Color.White);
+                myBatch.End();
+                foreach (IBlock Block in blockList)
+                {
+                    if (Block.getType() == StringHolder.BlockXType || Block.getType() == StringHolder.BlockYType)
+                    {
+                        Block.Draw();
+                    }
+/*                if (Block.getType() == StringHolder.BlockType)
+                {
+                    Block.Draw();
+                }*/
+                }
+                for (int i = 0; i < enemyList.Count; i++)
+                {
+                    enemyList[i].Draw();
+                }
+                for (int i = 0; i < itemList.Count; i++)
+                {
+                    itemList[i].Draw();
+                }
+                for (int i = 0; i < NPCList.Count; i++)
+                {
+                    NPCList[i].Draw();
+                }
+            
         }
 
         public void Update()
@@ -96,6 +107,11 @@ namespace Sprint0.xml
             {
                 DoorList[i].Update();
             }
+        }
+
+        private void ChangeSrc()
+        {
+            sourceRec = new Rectangle(1, 1, 256, 160);
         }
     }
 }

@@ -68,6 +68,12 @@ namespace Sprint0.Collisions
                         myPlayer.unlockBothLocks();
                         myPlayer.removeBothLockSprite();
                     }
+                    if (block.getType() == StringHolder.BlockYType)
+                    {
+                        myPlayer.xAxis = IntegerHolder.linkInitialX;
+                        myPlayer.yAxis = 175;
+                        myPlayer.GoRoom17();
+                    }
                     break;//once link has collision with one block, no need to detect other blocks
                 }
             }

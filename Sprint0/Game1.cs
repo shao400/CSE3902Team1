@@ -121,7 +121,7 @@ namespace Sprint0
             string capitalN = "N";
             roomList = new List<roomProperties>();
             NroomList = new List<roomProperties>();
-            for (int i = 0; i <= 16; i++)
+            for (int i = 0; i <= 17; i++)
             {
                 reader = XmlReader.Create(Room + i + xml, new XmlReaderSettings());
                 roomList.Add(Loader.LoadFromReader(reader, this));
@@ -131,7 +131,7 @@ namespace Sprint0
                 room.loadBatchAndContent(Content, spriteBatch);
             }
 
-            for (int i = 0; i <= 16; i++)
+            for (int i = 0; i <= 17; i++)
             {
                 reader = XmlReader.Create(capitalN + Room + i + xml, new XmlReaderSettings());
                 NroomList.Add(NLoader.LoadFromReader(reader, this));
