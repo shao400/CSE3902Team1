@@ -28,7 +28,6 @@ namespace Sprint0.GameStates
         public void Draw()
         {
             myGame.NcurrentRoom.Draw();
-            myHud.Draw(x, y);
             if (myGame.link.GetCurrentStatus() == StringHolder.Attacking) { myGame.link.getAttacking().Stab(); }
             if (myGame.link.GetCurrentStatus() == StringHolder.ArrowShooting) { myGame.link.getPlayerItem2().Shoot(); }
             if (myGame.link.GetCurrentStatus() == StringHolder.Booming) { myGame.link.getPlayerItem2().Shoot(); }
@@ -56,6 +55,7 @@ namespace Sprint0.GameStates
                 myGame.NcurrentRoom.DoorList[i].Draw();
             }
             myGame.link.GetFog().Draw();
+            myHud.Draw(x, y);
         }
 
         public void Update()

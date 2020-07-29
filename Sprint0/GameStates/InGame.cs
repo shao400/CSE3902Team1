@@ -54,7 +54,7 @@ namespace Sprint0.GameStates
             for (int i = 0; i < myGame.currentRoom.DoorList.Count; i++)
             {
                 myGame.currentRoom.DoorList[i].Draw();
-            }
+            }       
             //myGame.link.GetFog().Draw();
         }
 
@@ -72,8 +72,7 @@ namespace Sprint0.GameStates
             myGame.link.ProjectileEnemiesCollisionTest(myGame.currentRoom.enemyList);
             myGame.link.ItemCollisionTest(myGame.currentRoom.itemList);
             myGame.link.NpcCollisionTest(myGame.currentRoom.NPCList);
-            myGame.currentRoom.Update();
-
+            myGame.currentRoom.Update();           
         }
         public void loadNextRoom(int nextRoom)
         {

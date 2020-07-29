@@ -212,7 +212,7 @@ namespace Sprint0.xml
                 }
             }
 
-            return new roomProperties(roomID, blocks, items, enemies, huds, source, Con, doors, NPCs);
+            return new roomProperties(roomID, blocks, items, enemies, source, Con, doors, NPCs);
         }
     }
 }

@@ -24,7 +24,6 @@ namespace Sprint0.xml
             List<IEnemy> enemies = new List<IEnemy>();
             List<IBlock> blocks = new List<IBlock>();
             List<IItem> items = new List<IItem>();
-            List<IHud> huds = new List<IHud>();
             List<IDoor> doors = new List<IDoor>();
             List<INPC> NPCs = new List<INPC>();
             reader.MoveToContent();
@@ -203,7 +202,7 @@ namespace Sprint0.xml
                 }
             }
 
-            return new roomProperties(roomID, blocks, items, enemies, huds, source, Con, doors, NPCs);
+            return new roomProperties(roomID, blocks, items, enemies, source, Con, doors, NPCs);
         }
     }
 }

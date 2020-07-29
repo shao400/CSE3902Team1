@@ -193,8 +193,8 @@ namespace Sprint0
         {
             if (currentState == stateList[7])
                 GraphicsDevice.Clear(Color.Pink);
-            else
-                GraphicsDevice.Clear(Color.CornflowerBlue);
+          else
+              GraphicsDevice.Clear(Color.CornflowerBlue);
 
             currentState.Draw();
             base.Draw(gameTime);    
