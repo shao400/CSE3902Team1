@@ -15,22 +15,15 @@ using Sprint0.Inventories;
 namespace Sprint0.Inventories
 {
     public class Handbook
-    {
-        Player1 myLink;
-        Handbook myHandbook;
+    {       
         ISprite pickboxSprite = new PickBoxSprite();
-        ISprite iconSprite;
 
         public int moveCountTot = 0;
         public int currentItem = 0;
-        int x = 340;
-        int y = 340;
-        public Boolean getBook = false;
 
         public Handbook(Player1 link)
         {
-            myLink = link;
-            myHandbook = link.myHandbook;
+
         }
 
         public void pickingIcon(int moveCount)
@@ -52,7 +45,7 @@ namespace Sprint0.Inventories
             drawInfo(moveCountTot).Draw(dest2, false);
         }
 
-        public ISprite drawInfo(int index)
+        public static ISprite drawInfo(int index)
         {
             ISprite enemyInfoSprite = null;
             switch (index)
@@ -85,10 +78,6 @@ namespace Sprint0.Inventories
                     break;
             }
             return enemyInfoSprite;
-        }
-        public Boolean isGetBook()
-        {
-            return getBook;
         }
     }
 }
