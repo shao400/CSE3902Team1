@@ -12,6 +12,7 @@ namespace Sprint0.Sprite
         Rectangle destinationRec;
         int frame = 0;
         bool backmove = false;
+        SpriteEffects myEffect;
 
         public EnemyDodongoSprite(int x, int y)
         {
@@ -27,24 +28,24 @@ namespace Sprint0.Sprite
             if (frame < 10 && !backmove)
             {
                 sourceRec = new Rectangle(69, 58, 32, 16);
-                destinationRec.X += 5;
+                destinationRec.X += 1;
             }
             else if (frame > 10 && !backmove)
             {
                 sourceRec = new Rectangle(102, 58, 32, 16);
-                destinationRec.X += 5;
+                destinationRec.X += 1;
             }
             else if (frame < 10 && backmove)
             {
 
                 sourceRec = new Rectangle(69, 58, 32, 16);
-                destinationRec.X -= 5;
+                destinationRec.X -= 1;
             }
             else if (frame > 10 && backmove)
             {
 
                 sourceRec = new Rectangle(102, 58, 32, 16);
-                destinationRec.X -= 5;
+                destinationRec.X -= 1;
             }
 
             if (destinationRec.X > 582) backmove = true;
@@ -59,9 +60,10 @@ namespace Sprint0.Sprite
 
         public void Draw(Vector2 location, bool isDamaged)
         {
-
+            if (backmove) myEffect = SpriteEffects.FlipHorizontally;
+            else myEffect = SpriteEffects.None;
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor, 0, new Vector2(0,0), myEffect, 0);
             mySpriteBatch.End();
         }
     }

@@ -10,8 +10,6 @@ namespace Sprint0
         private static Texture2D myTexture;
         Color myColor = Color.CornflowerBlue;
         Rectangle sourceRec = new Rectangle(384, 348, 768, 696);
-        SpriteEffects myEffect;
-        float myRotation;
         Rectangle destinationRec;
         public void Update()
         {
@@ -27,7 +25,7 @@ namespace Sprint0
 
             destinationRec = new Rectangle((int)location.X - 2300, (int)location.Y - 2300, 4600, 4600);
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor, myRotation, new Vector2(0, 0), myEffect, 0);
+            mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor);
             mySpriteBatch.End();
         }
     }

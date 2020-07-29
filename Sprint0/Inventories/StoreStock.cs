@@ -2,15 +2,11 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Content;
 using Sprint0.Sprite;
 using Sprint0.HUDs;
 using Sprint0.UtilityClass;
 using Sprint0.Items;
 using Sprint0.Player;
-using Sprint0.HUDs;
-using Sprint0.Inventories;
 
 
 namespace Sprint0.Inventories
