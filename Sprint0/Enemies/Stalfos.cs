@@ -16,8 +16,10 @@ namespace Sprint0.Enemies
         private ISprite StalfosSprite;
         private int xPosition;
         private int yPosition;
+        private int frame = 0;
+        bool backmove = false;
         private Rectangle destinationRec;
-
+        private int health = 1;
         public Stalfos(int x, int y)
         {
 
@@ -27,7 +29,15 @@ namespace Sprint0.Enemies
             destinationRec = new Rectangle(x, y, 45, 45);
         }
 
+        public void Damaged()
+        {
+            health--;
 
+        }
+        public int GetHealth()
+        {
+            return health;
+        }
 
         public override void Draw()
         {
@@ -40,7 +50,27 @@ namespace Sprint0.Enemies
 
         public override void Update()
         {
-            
+            frame++;
+            if (frame >= 20) frame = 0;
+            if (frame < 10 && !backmove)
+            {
+                destinationRec.X += 5;
+            }
+            else if (frame > 10 && !backmove)
+            {
+                destinationRec.X += 5;
+            }
+            else if (frame < 10 && backmove)
+            {
+                destinationRec.X -= 5;
+            }
+            else if (frame > 10 && backmove)
+            {
+                destinationRec.X -= 5;
+            }
+            if (destinationRec.X > 627) backmove = true;
+            if (destinationRec.X < 96) backmove = false;
+            StalfosSprite.Update();
         }
 
         public override Rectangle GetRectangle()

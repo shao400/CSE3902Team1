@@ -17,6 +17,7 @@ namespace Sprint0.Enemies
         private Rectangle destinationRec, targetRectangle;
         private bool leftmove = false;
         private EnemyAllCollision enemyAllCollision;
+        private int health = 1;
         public NStalfos(int x, int y, IPlayer link)
         {
             myPlayer = link;
@@ -28,7 +29,15 @@ namespace Sprint0.Enemies
         }
 
 
+        public void Damaged()
+        {
+            health--;
 
+        }
+        public int GetHealth()
+        {
+            return health;
+        }
         public override void Draw()
         {
             if (this.GetHealth() > 0)

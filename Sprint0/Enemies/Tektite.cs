@@ -19,6 +19,7 @@ namespace Sprint0.Enemies
         private int frame = 0;
         bool backmove = false;
         private Rectangle destinationRec;
+        private int health = 1;
 
         public Tektite(int x, int y)
         {
@@ -28,7 +29,15 @@ namespace Sprint0.Enemies
             destinationRec = new Rectangle(x, y, 45, 45);
         }
 
+        public void Damaged()
+        {
+            health--;
 
+        }
+        public int GetHealth()
+        {
+            return health;
+        }
 
         public override void Draw()
         {
@@ -46,19 +55,19 @@ namespace Sprint0.Enemies
             if (frame >= 20) frame = 0;
             if (frame < 10 && !backmove)
             {
-                destinationRec.Y += 5;
+                destinationRec.Y += 3;
             }
             else if (frame > 10 && !backmove)
             {
-                destinationRec.Y += 5;
+                destinationRec.Y += 3;
             }
             else if (frame < 10 && backmove)
             {
-                destinationRec.Y -= 5;
+                destinationRec.Y -= 3;
             }
             else if (frame > 10 && backmove)
             {
-                destinationRec.Y -= 5;
+                destinationRec.Y -= 3;
             }
             if (destinationRec.Y > 555) backmove = true;
             if (destinationRec.Y < 264) backmove = false;

@@ -26,12 +26,9 @@ namespace Sprint0.GameStates
         Rectangle handbookSourceRec = new Rectangle(0, 0, 797, 536);
         int frame = 0;
         ContentManager myContent;
-        private HudMap map;
         private Hud myHud;
         int x = 0;
         int y = 528;
-        int mapx = 450;
-        int mapy = 450;
 
         public BackToGame4Handbook(Game1 game, SpriteBatch batch, ContentManager Content, Hud hud1)
         {
@@ -41,7 +38,6 @@ namespace Sprint0.GameStates
             myBatch = batch;
             myContent = Content;
             myHud = hud1;
-            map = hud1.map;
         }
         public void loadNextRoom(int nextRoom)
         {
@@ -55,7 +51,6 @@ namespace Sprint0.GameStates
             myBatch.Draw(myContent.Load<Texture2D>(StringHolder.Handbook), handbookDestRec, handbookSourceRec, Color.White);
             myBatch.End();
             myHud.Draw(x, y);
-            map.Draw(mapx, mapy);
 
 
         }
@@ -69,14 +64,14 @@ namespace Sprint0.GameStates
                     roomDestRec.Y -= 6;
                     handbookDestRec.Y -= 6;
                     y -= 6;
-                    mapy -= 6;
+
                 }
                 else
                 {
                     myGame.currentState = myGame.stateList[0];
                     frame = 0;
                     y = 528;
-                    mapy = 450;
+
                     roomDestRec = new Rectangle(0, 696, 768, 528);
                     handbookDestRec = new Rectangle(0, 0, 768, 528);
                 }

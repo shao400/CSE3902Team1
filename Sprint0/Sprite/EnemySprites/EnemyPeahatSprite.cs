@@ -29,23 +29,23 @@ namespace Sprint0.Sprite
             if (frame < 10 && !backmove)
             {
                 sourceRec = new Rectangle(162, 59, 16, 16);
-                destinationRec.Y += 5;
+                destinationRec.Y += 2;
             }
             else if (frame > 10 && !backmove)
             {
                 sourceRec = new Rectangle(179, 59, 16, 16);
-                destinationRec.Y += 5;
+                destinationRec.Y += 2;
             }
             else if (frame < 10 && backmove)
             {
                 sourceRec = new Rectangle(107, 260, 16, 16);
-                destinationRec.Y -= 5;
+                destinationRec.Y -= 2;
             }
             else if (frame > 10 && backmove)
             {
 
                 sourceRec = new Rectangle(124, 260, 16, 16);
-                destinationRec.Y -= 5;
+                destinationRec.Y -= 2;
             }
             if (destinationRec.Y > 555) backmove = true;
             if (destinationRec.Y < 264) backmove = false;

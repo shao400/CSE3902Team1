@@ -13,6 +13,7 @@ namespace Sprint0.Enemies
         private int xPosition;
         private int yPosition;
         private Rectangle destinationRec;
+        private int health = 5;
 
         public Wallmaster(int x, int y)
         {
@@ -22,7 +23,15 @@ namespace Sprint0.Enemies
             destinationRec = new Rectangle(x, y, 45, 45);
         }
 
+        public void Damaged()
+        {
+            health--;
 
+        }
+        public int GetHealth()
+        {
+            return health;
+        }
         public override void Draw()
         {
             if (this.GetHealth() > 0)

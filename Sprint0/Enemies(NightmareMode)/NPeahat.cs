@@ -14,6 +14,7 @@ namespace Sprint0.Enemies
         private int xPosition, yPosition, xDif, yDif;
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
+        private int health = 2;
         public NPeahat(int x, int y, IPlayer player)
         {
             myPlayer = player;
@@ -24,7 +25,15 @@ namespace Sprint0.Enemies
             enemyAllCollision = new EnemyAllCollision(this);
         }
 
+        public void Damaged()
+        {
+            health--;
 
+        }
+        public int GetHealth()
+        {
+            return health;
+        }
 
         public override void Draw()
         {
@@ -42,13 +51,13 @@ namespace Sprint0.Enemies
             yDif = targetRectangle.Y - yPosition;
             if (Math.Abs(xDif) > Math.Abs(yDif))
             {
-                if (xDif > 0) xPosition += 3;
-                else xPosition -= 3;
+                if (xDif > 0) xPosition += 2;
+                else xPosition -= 2;
             }
             else
             {
-                if (yDif > 0) yPosition += 3;
-                else yPosition -= 3;
+                if (yDif > 0) yPosition += 2;
+                else yPosition -= 2;
             }
             PeahatSprite.Update();
         }

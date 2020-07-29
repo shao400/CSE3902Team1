@@ -17,6 +17,7 @@ namespace Sprint0.Enemies
         bool leftmove = false;
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
+        private int health = 5;
         public NDodongo(int x, int y, IPlayer player)
         {
             myPlayer = player;
@@ -28,7 +29,15 @@ namespace Sprint0.Enemies
         }
 
 
+        public void Damaged()
+        {
+            health--;
 
+        }
+        public int GetHealth()
+        {
+            return health;
+        }
         public override void Draw()
         {
             if (this.GetHealth() > 0)

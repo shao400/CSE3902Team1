@@ -15,7 +15,7 @@ namespace Sprint0.Enemies
         private int frame = 0;
         bool backmove = false;
         private Rectangle destinationRec;
-
+        private int health = 5;
         public Dodongo(int x, int y)
         {
 
@@ -25,7 +25,15 @@ namespace Sprint0.Enemies
             destinationRec = new Rectangle(x, y, 90, 45);
         }
 
+        public void Damaged()
+        {
+            health--;
 
+        }
+        public int GetHealth()
+        {
+            return health;
+        }
 
         public override void Draw()
         {
@@ -42,19 +50,19 @@ namespace Sprint0.Enemies
             if (frame >= 20) frame = 0;
             if (frame < 10 && !backmove)
             {
-                destinationRec.X += 5;
+                destinationRec.X += 1;
             }
             else if (frame > 10 && !backmove)
             {
-                destinationRec.X += 5;
+                destinationRec.X += 1;
             }
             else if (frame < 10 && backmove)
             {
-                destinationRec.X -= 5;
+                destinationRec.X -= 1;
             }
             else if (frame > 10 && backmove)
             {
-                destinationRec.X -= 5;
+                destinationRec.X -= 1;
             }
             if (destinationRec.X > 627) backmove = true;
             if (destinationRec.X < 96) backmove = false;

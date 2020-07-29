@@ -17,6 +17,7 @@ namespace Sprint0.Enemies
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
         private IProjectile energyBall;
+        private int health = 4;
 
         public NGoriya(int x, int y, IPlayer player)
         {
@@ -30,7 +31,15 @@ namespace Sprint0.Enemies
             energyBall = new EnergyBall(this, myPlayer);
         }
 
+        public void Damaged()
+        {
+            health--;
 
+        }
+        public int GetHealth()
+        {
+            return health;
+        }
 
         public override void Draw()
         {
@@ -51,13 +60,13 @@ namespace Sprint0.Enemies
             yDif = targetRectangle.Y - yPosition;
             if (Math.Abs(xDif) > Math.Abs(yDif))
             {
-                if (xDif > 0) { xPosition += 3; leftmove = false; }
-                else { xPosition -= 3; leftmove = true; }
+                if (xDif > 0) { xPosition += 1; leftmove = false; }
+                else { xPosition -= 1; leftmove = true; }
             }
             else
             {
-                if (yDif > 0) yPosition += 3;
-                else yPosition -= 3;
+                if (yDif > 0) yPosition += 1;
+                else yPosition -= 1;
             }           
             GoriyaSprite.Update();
         }
