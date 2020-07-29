@@ -104,6 +104,18 @@
 /processorParam:TextureFormat=Color
 /build:handbook.png
 
+#begin hidden.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:hidden.png
+
 #begin Hud.png
 /importer:TextureImporter
 /processor:TextureProcessor

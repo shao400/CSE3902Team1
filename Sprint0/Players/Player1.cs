@@ -199,6 +199,11 @@ namespace Sprint0.Player
                 else if (yAxis <= 168)
                 {
                     yAxis = 552;
+                    if (myGame.currentRoom == myGame.roomList[17])
+                    {
+                        xAxis = 339;
+                        yAxis = 411;
+                    }
                     myGame.currentState = myGame.stateList[1];
                     myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[0]);
 
@@ -227,6 +232,11 @@ namespace Sprint0.Player
                 else if (yAxis <= 168)
                 {
                     yAxis = 552;
+                    if (myGame.NcurrentRoom == myGame.NroomList[17])
+                    {
+                        xAxis = 339;
+                        yAxis = 411;
+                    }
                     myGame.currentState = myGame.stateList[10];
                     myGame.currentState.loadNextRoom(myGame.NcurrentRoom.Connectors[0]);
 
@@ -587,6 +597,11 @@ namespace Sprint0.Player
 
         }
 
+        public void GoRoom17()
+        {
+            myGame.currentRoom = myGame.roomList[17];
+            myGame.NcurrentRoom = myGame.NroomList[17];
+        }
         private int getFacing()
         {
             int rt = -1;
@@ -606,7 +621,7 @@ namespace Sprint0.Player
 
         public void pushBlock(IBlock blockX)
         {
-            if (yAxis < 420)
+            if (yAxis < 428)
             {
                 blockX.Update();
                 yAxis++;

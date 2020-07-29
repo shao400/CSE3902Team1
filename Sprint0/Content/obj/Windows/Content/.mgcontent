@@ -12,6 +12,7 @@
     <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/enemy2.png</File>
     <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/game_over.png</File>
     <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/handbook.png</File>
+    <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/hidden.png</File>
     <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/Hud.png</File>
     <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/items.png</File>
     <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/link.png</File>
@@ -61,6 +62,7 @@
     <File>C:/Users/User/Desktop/cse/3902/shaozilin/CSE3902Team1/Sprint0/Content/winning.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

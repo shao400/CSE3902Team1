@@ -10,6 +10,7 @@
 	<block type="BlockA" xpos="435" ypos="459" />
 	<block type="BlockA" xpos="483" ypos="411" />
 	<block type="BlockA" xpos="435" ypos="363" />
+	<block type="BlockY" xpos="387" ypos="411" />
 	<no i="15" />
 	<connect up="-1" down="-1" left="-1" right="16" />
 	<block type="BlockLeft" xpos="672" ypos="264" />
