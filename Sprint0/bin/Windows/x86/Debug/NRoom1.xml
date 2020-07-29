@@ -4,7 +4,6 @@
 	<door type="DoorKUp" xpos="312" ypos="168" />
 	<door type="DoorKRight" xpos="696" ypos="384" />
 	<src xpos="515" ypos="886" />
-	<enemy type="Aqua" xpos="99" ypos="267" />
 	<enemy type="Moblin" xpos="627" ypos="545" />
 	<enemy type="Keese" xpos="243" ypos="267" />
 	<item type="HeartContainer" xpos="250" ypos="354"/>

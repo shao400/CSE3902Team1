@@ -4,6 +4,7 @@ using Sprint0.Interfaces;
 using System;
 using Sprint0.Collisions;
 using System.Collections.Generic;
+using Sprint0.Projectile;
 
 namespace Sprint0.Enemies
 {
@@ -11,71 +12,91 @@ namespace Sprint0.Enemies
     {
 
         private IPlayer myPlayer;
+        private ProjectileCollision projectileCollision;
         private ISprite AquaSprite;
-        private int xPosition, yPosition, xDif, yDif;
-        bool leftmove = false;
-        private Rectangle destinationRec, targetRectangle;
-        private EnemyAllCollision enemyAllCollision;
+        private IProjectile energyBall;
+        private int xPosition;
+        private int yPosition;
+        private int frame = 0;
+        bool backmove = false;
+        private Rectangle destinationRec;
+        private int health = 1;
 
         public NAqua(int x, int y, IPlayer player)
         {
             myPlayer = player;
             xPosition = x;
             yPosition = y;
-            AquaSprite = new NAquaSprite();
-            destinationRec = new Rectangle(x, y, 45, 60);
-            enemyAllCollision = new EnemyAllCollision(this);
+            AquaSprite = new EnemyAquaSprite(x, y);
+            destinationRec = new Rectangle(x, y, 100, 100);
+            energyBall = new EnergyBall(this, myPlayer);
+            projectileCollision = new ProjectileCollision(energyBall, myPlayer);
         }
 
 
+        public void Damaged()
+        {
+            health--;
 
+        }
+        public int GetHealth()
+        {
+            return health;
+        }
         public override void Draw()
         {
             if (this.GetHealth() > 0)
             {
+                energyBall.Shoot();
                 Vector2 location = new Vector2(xPosition, yPosition);
-                AquaSprite.Draw(location, leftmove);
+                AquaSprite.Draw(location, false);
             }
         }
 
         public override void Update()
         {
-            targetRectangle = myPlayer.GetRectangle();
-            xDif = targetRectangle.X - xPosition;
-            yDif = targetRectangle.Y - yPosition;
-            if (Math.Abs(xDif) > Math.Abs(yDif))
+            energyBall.Update();
+            projectileCollision.ProjectileLinkCollisionTest();
+            frame++;
+            if (frame >= 5) frame = 0;
+            if (frame < 2 && !backmove)
             {
-                if (xDif > 0) { xPosition += 3; leftmove = false; }
-                else { xPosition -= 3; leftmove = true; }
+                destinationRec.X += 1;
             }
-            else
+            else if (frame > 2 && !backmove)
             {
-                if (yDif > 0) yPosition += 3;
-                else yPosition -= 3;
+                destinationRec.X += 1;
             }
-            if (xPosition > 627) leftmove = true;
-            if (xPosition < 96) leftmove = false;
+            else if (frame < 2 && backmove)
+            {
+                destinationRec.X -= 1;
+            }
+            else if (frame > 2 && backmove)
+            {
+                destinationRec.X -= 1;
+            }
+            if (destinationRec.X > 470) backmove = true;
+            if (destinationRec.X < 440) backmove = false;
             AquaSprite.Update();
         }
 
         public override Rectangle GetRectangle()
         {
-            destinationRec = new Rectangle(xPosition, yPosition, 45, 45);
             return destinationRec;
         }
 
         public override void xReverse(int distance, bool plus)
         {
-            if (plus) xPosition += distance;
-            else { xPosition -= distance; }
+            throw new System.NotImplementedException();
         }
 
         public override void yReverse(int distance, bool plus)
         {
-            if (plus) yPosition += distance;
-            else { yPosition -= distance; }
+            throw new System.NotImplementedException();
         }
 
-        public override void blockCollisionTest(List<IBlock> blocks) { enemyAllCollision.BlockCollisionTest(blocks); }
+        public override void blockCollisionTest(List<IBlock> blocks)
+        {
+        }
     }
 }
