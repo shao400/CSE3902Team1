@@ -23,6 +23,8 @@ namespace Sprint0.Sprite
         public static LinkUsingRightSprite LinkUsingRight = new LinkUsingRightSprite();
 
         // Enemy Author: Gengyi Qin
+        public static EnemyBornSprite EnemyBorn = new EnemyBornSprite();
+        public static EnemyDeathSprite EnemyDeath = new EnemyDeathSprite();
         public static EnemyMoblinSprite EnemyMoblin = new EnemyMoblinSprite(0, 0);
         public static EnemyPeahatSprite EnemyPeahat = new EnemyPeahatSprite(0, 0);
         public static EnemyTektiteSprite EnemyTektite = new EnemyTektiteSprite(0, 0);
@@ -284,6 +286,8 @@ namespace Sprint0.Sprite
 
         private static void LoadEnemyContent(SpriteBatch batch, ContentManager content)
         {
+            EnemyBorn.LoadContent(batch, content.Load<Texture2D>("link"));
+            EnemyDeath.LoadContent(batch, content.Load<Texture2D>("link"));
             EnemyPeahat.LoadContent(batch, content.Load<Texture2D>("enemy"));
             EnemyMoblin.LoadContent(batch, content.Load<Texture2D>("enemy"));
             EnemyTektite.LoadContent(batch, content.Load<Texture2D>("enemy"));
