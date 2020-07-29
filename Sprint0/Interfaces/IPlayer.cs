@@ -18,6 +18,7 @@ namespace Sprint0
         void Down();
         void Attack();
         Sound GetSound();
-
+        void takeDmg(int v);
+        Game1 GetGame();
     }
 }

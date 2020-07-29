@@ -16,7 +16,7 @@ namespace Sprint0.Projectile
 
         private enum status
         {
-            shoot, none
+            shoot, none, explode
         }
         private status currentStatus;
         public EnergyBall(IEnemy enemy, IPlayer player)
@@ -42,9 +42,10 @@ namespace Sprint0.Projectile
 
             }
             Console.WriteLine(this.hitBox);
-            if (this.hitBox.X < 0 || this.hitBox.X > 720 || this.hitBox.Y < 168 || this.hitBox.Y > 648)
+            if (this.hitBox.X < 0 || this.hitBox.X > 720 || this.hitBox.Y < 168 || this.hitBox.Y > 648 || this.IsExplode() == 1)
             {
                 counter = 0;
+                currentStatus = status.none;
                 ShotDistanceX = 0;
                 ShotDistanceY = 0;
                 location = new Vector2(enemy.GetRectangle().X, enemy.GetRectangle().Y);
@@ -61,6 +62,7 @@ namespace Sprint0.Projectile
         {
             if (counter == 150)
             {
+                currentStatus = status.shoot;
                 ey = this.enemy.GetRectangle().Y;
                 ex = this.enemy.GetRectangle().X;
                 ShotX = (ex - mPlayer.GetRectangle().X) / 25;
@@ -69,7 +71,7 @@ namespace Sprint0.Projectile
             }
 
 
-            if (counter >= 150)
+            if (counter >= 150 && currentStatus == status.shoot)
             {
                 location = new Vector2(ex - ShotDistanceX, ey - ShotDistanceY);
                 energyBall.Draw(location, false);
@@ -81,12 +83,37 @@ namespace Sprint0.Projectile
 
         public override void setExplo(int i)
         {
-            throw new NotImplementedException();
-        }
+            if (i == 1)
+            {
+                currentStatus = status.explode;
+            }
+            else if (i == 0)
+            {
+                currentStatus = status.shoot;
+            }
+            else
+            {
+                currentStatus = status.none;
+            }
+
+        
+    }
 
         public override int IsExplode()
         {
-            throw new NotImplementedException();
+            if (currentStatus == status.explode)
+            {
+                return 1;
+            }
+            else if (currentStatus == status.shoot)
+            {
+                return 0;
+            }
+            
+            else
+            {
+                return 2;
+            }
         }
 
         public override void Explode()

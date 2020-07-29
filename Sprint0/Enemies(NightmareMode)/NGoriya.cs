@@ -5,12 +5,14 @@ using System;
 using Sprint0.Collisions;
 using Sprint0.Projectile;
 using System.Collections.Generic;
+using System.Runtime.Remoting.Messaging;
 
 namespace Sprint0.Enemies
 {
     public class NGoriya : AbstractEnemies, IEnemy
     {
         private IPlayer myPlayer;
+        private ProjectileCollision projectileCollision;
         private ISprite GoriyaSprite;
         private int xPosition, yPosition, xDif, yDif;
         bool leftmove = false;
@@ -29,6 +31,7 @@ namespace Sprint0.Enemies
             destinationRec = new Rectangle(x, y, 45, 45);
             enemyAllCollision = new EnemyAllCollision(this);
             energyBall = new EnergyBall(this, myPlayer);
+            projectileCollision = new ProjectileCollision(energyBall, myPlayer);
         }
 
         public void Damaged()
@@ -55,6 +58,7 @@ namespace Sprint0.Enemies
         public override void Update()
         {
             energyBall.Update();
+            projectileCollision.ProjectileLinkCollisionTest();
             targetRectangle = myPlayer.GetRectangle();
             xDif = targetRectangle.X - xPosition;
             yDif = targetRectangle.Y - yPosition;

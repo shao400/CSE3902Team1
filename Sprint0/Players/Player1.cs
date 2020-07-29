@@ -717,15 +717,7 @@ namespace Sprint0.Player
             currentAttack.setExplo(3);
         }
 
-        public void ProjectileLinkCollisionTest(Sound s)
-        {
-            projectileCollision1 = new ProjectileCollision(currentProjectile, this);
-            projectileCollision1.ProjectileLinkCollisionTest(sound);
-            projectileCollision2 = new ProjectileCollision(secondProjectile, this);
-            projectileCollision2.ProjectileLinkCollisionTest(sound);
-            projectileCollision3 = new ProjectileCollision(secondProjectile, this);
-            projectileCollision3.ProjectileLinkCollisionTest(sound);
-        }
+      
 
         public void EnemyCollisionTest(List<IEnemy> enemies)
         {

@@ -14,8 +14,8 @@ namespace Sprint0.Collisions
     class ProjectileCollision
     {
         private IProjectile thisProjectile;
-        private Player1 myPlayer;
-        public ProjectileCollision(IProjectile projectile, Player1 link)
+        private IPlayer myPlayer;
+        public ProjectileCollision(IProjectile projectile, IPlayer link)
         {
             thisProjectile = projectile;
             myPlayer = link;
@@ -40,6 +40,7 @@ namespace Sprint0.Collisions
                         if (enemy.GetHealth() == 0)
                         {
                             myPlayer.GetGame().currentRoom.itemList.Add(new Ruppy(enemy.GetRectangle().X, enemy.GetRectangle().Y));
+                            myPlayer.GetGame().NcurrentRoom.itemList.Add(new Ruppy(enemy.GetRectangle().X, enemy.GetRectangle().Y));
                             s.enemyDie();
                         }
                         else
@@ -55,6 +56,7 @@ namespace Sprint0.Collisions
                         if (enemy.GetHealth() == 0)
                         {
                             myPlayer.GetGame().currentRoom.itemList.Add(new Ruppy(enemy.GetRectangle().X, enemy.GetRectangle().Y));
+                            myPlayer.GetGame().NcurrentRoom.itemList.Add(new Ruppy(enemy.GetRectangle().X, enemy.GetRectangle().Y));
                             s.enemyDie();
                         }
                         else
@@ -72,6 +74,7 @@ namespace Sprint0.Collisions
                         if (enemy.GetHealth() == 0)
                         {
                             myPlayer.GetGame().currentRoom.itemList.Add(new Ruppy(enemy.GetRectangle().X, enemy.GetRectangle().Y));
+                            myPlayer.GetGame().NcurrentRoom.itemList.Add(new Ruppy(enemy.GetRectangle().X, enemy.GetRectangle().Y));
                             s.enemyDie();
                         }
                         else
@@ -110,7 +113,7 @@ namespace Sprint0.Collisions
             }
         }
 
-        public void ProjectileLinkCollisionTest(Sound s)
+        public void ProjectileLinkCollisionTest()
         {
             Rectangle thisRectangle = thisProjectile.GetHitBox();
             Rectangle linkRectangle;
@@ -118,14 +121,12 @@ namespace Sprint0.Collisions
       
                 linkRectangle = myPlayer.GetRectangle();
                 intersectionRectangle = Rectangle.Intersect(thisRectangle, linkRectangle);
-                if (!intersectionRectangle.IsEmpty)
+                if (!intersectionRectangle.IsEmpty && thisProjectile.IsExplode() == 0)
                 {
-                    s.linkHurt();
+                    myPlayer.GetSound().linkHurt();
                     myPlayer.takeDmg(1);
-                    if (thisProjectile.IsExplode() == 0)
-                    {
                         thisProjectile.setExplo(1);
-                    }
+                    
 
 
                 }           
