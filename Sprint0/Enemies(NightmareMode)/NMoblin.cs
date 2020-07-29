@@ -9,6 +9,15 @@ namespace Sprint0.Enemies
 {
     public class NMoblin : AbstractEnemies, IEnemy
     {
+
+        class Position
+        {
+            public int x, y;
+            public Position parent = null;
+            public Position(int _x, int _y) { x = _x; y = _y; }
+
+        }
+
         private IPlayer myPlayer;
         private ISprite MoblinSprite;
         private int xPosition, yPosition, xDif, yDif;
@@ -18,6 +27,9 @@ namespace Sprint0.Enemies
         private List<Boolean> UdLrCollid;
         private List<IBlock> blocksSet;
         private const int md = 3;
+        private Position nextStep;
+        private int counter = 0;
+        private Boolean chaseLink = false;
         public NMoblin(int x, int y, IPlayer player, List<IBlock> blocks)
         {
             myPlayer = player;
@@ -28,6 +40,7 @@ namespace Sprint0.Enemies
             enemyAllCollision = new EnemyAllCollision(this);
             blocksSet = blocks;
             UdLrCollid = new List<bool>();
+            nextStep = null;
         }
 
         public void Damaged()
@@ -54,48 +67,100 @@ namespace Sprint0.Enemies
             targetRectangle = myPlayer.GetRectangle();
             xDif = targetRectangle.X - xPosition;
             yDif = targetRectangle.Y - yPosition;
-            if (Math.Abs(xDif) > Math.Abs(yDif))//Horizontal Chasing Link
+
+            if (seeLink() && !chaseLink) counter++;
+            if (!seeLink() && chaseLink) counter--;
+            if (counter > 18) { counter = 18; chaseLink = true; }
+            else if (counter<0) { counter = 0; chaseLink = false; }
+            if (chaseLink) { 
+            if (Math.Abs(xDif) > Math.Abs(yDif))
             {
-                if (!UdLrCollid[1]) { 
-                    if (xDif > 0) { xPosition += md; leftmove = false; }
-                    else { xPosition -= md; leftmove = true; }
-                }
-                else if (UdLrCollid[1])//Should HorizontalChasing But Collid with Blocks
-                {
-                    if (yDif > 0) yPosition += md;
-                    else yPosition -= md;
-                }
+                if (xDif > 0) { xPosition += 3; leftmove = false; }
+                else { xPosition -= 3; leftmove = true; }
             }
-            else//UpDown Chasing Link
+            else
             {
-                if (!UdLrCollid[0]) {
-                    if (yDif > 0) yPosition += md;
-                    else yPosition -= md;
-                }
-                else if(UdLrCollid[0])
-                {
-                    if (xDif > 0) { xPosition += md; leftmove = false; }
-                    else { xPosition -= md; leftmove = true; }
-                }
+                if (yDif > 0) yPosition += 3;
+                else yPosition -= 3;
             }
+        }
             MoblinSprite.Update();
         }
 
+        private Boolean seeLink()
+        {
+            Boolean detected = true;
+            int dx = xDif/2;
+            int dy = yDif /2;
+
+                if (xPosition > targetRectangle.X && yPosition > targetRectangle.Y)
+                { 
+                if (enemyAllCollision.BlockCollisionDetect(blocksSet, xPosition - dx, yPosition - dy, 1)) detected = false;
+                else detected = true;
+                }
+                if (xPosition <= targetRectangle.X && yPosition > targetRectangle.Y)
+                {
+                if (enemyAllCollision.BlockCollisionDetect(blocksSet, xPosition + dx, yPosition - dy, 1)) detected = false;
+                else detected = true;
+                }
+                 if (xPosition <= targetRectangle.X && yPosition <= targetRectangle.Y)
+                { 
+                if(enemyAllCollision.BlockCollisionDetect(blocksSet, xPosition +  dx, yPosition +  dy, 1)) detected = false; 
+                else detected = true; 
+                }
+                 if (xPosition > targetRectangle.X && yPosition <= targetRectangle.Y)
+                {
+                if( enemyAllCollision.BlockCollisionDetect(blocksSet, xPosition - dx, yPosition +  dy, 1)) detected = false; 
+                else detected = true; 
+                }
+
+            return detected;
+        }
+
+        private List<Position> GetAdjacentPos(Position p)
+        {
+            List<Position> adj = new List<Position>();
+            Position left = new Position(p.x -md, p.y);
+            Position right= new Position(p.x + md, p.y);
+            Position up = new Position(p.x, p.y+md);
+            Position down = new Position(p.x, p.y-md);
+            adj.Add(left);
+            adj.Add(right);
+            adj.Add(up);
+            adj.Add(down);
+            return adj;
+        }
+
         /*Return the Heristiric... Value of a position*/
-        private int PathScore(int x, int y)
+        private int FScore(int x, int y)
         {
             const int infi = 99999;
             int h = 0;
-            if (!enemyAllCollision.BlockCollisionDetect(blocksSet, x,y,35))
+            if (!enemyAllCollision.BlockCollisionDetect(blocksSet, x,y,45) && x>99 & x<669 && y<597 && y>267)
             {
-                h += Math.Abs(targetRectangle.X - xPosition);
-                h += Math.Abs(targetRectangle.Y - yPosition);
-            }
+                h += Math.Abs(targetRectangle.X - x);
+                h += Math.Abs(targetRectangle.Y - y);
+                h += Math.Abs(xPosition - x);
+                h += Math.Abs(yPosition - y);
+           }
             else
             {
                 h = infi;
             }
             return h;
+        }
+
+        private Position itemWithLowestFScore(List<Position> path)
+        {
+            int minIndex = 0;
+            for (int i =0;i<path.Count;i++)
+            {
+                if (FScore(path[i].x,path[i].y)< FScore(path[minIndex].x, path[minIndex].y))
+                {
+                    minIndex = i;
+                }
+            }
+            return path[minIndex];
         }
         public override Rectangle GetRectangle()
         {
