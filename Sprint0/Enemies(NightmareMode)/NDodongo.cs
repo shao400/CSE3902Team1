@@ -13,7 +13,6 @@ namespace Sprint0.Enemies
         private IPlayer myPlayer;
         private ISprite DodongoSprite;
         private int xPosition, yPosition, xDif, yDif;
-        private int frame = 0;
         bool leftmove = false;
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;

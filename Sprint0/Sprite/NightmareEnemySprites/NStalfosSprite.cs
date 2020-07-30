@@ -9,7 +9,6 @@ namespace Sprint0.Sprite
         private static Texture2D myTexture;
         Color myColor = Color.CornflowerBlue;
         Rectangle sourceRec;
-        Rectangle destinationRec;
         SpriteEffects myEffect;
 
         public NStalfosSprite()

@@ -27,7 +27,6 @@ namespace Sprint0.Enemies
         private List<Boolean> UdLrCollid;
         private List<IBlock> blocksSet;
         private const int md = 3;
-        private Position nextStep;
         private int counter = 0;
         private Boolean chaseLink = false;
         private int health = 3;
@@ -41,7 +40,6 @@ namespace Sprint0.Enemies
             enemyAllCollision = new EnemyAllCollision(this);
             blocksSet = blocks;
             UdLrCollid = new List<bool>();
-            nextStep = null;
         }
 
         public void Damaged()

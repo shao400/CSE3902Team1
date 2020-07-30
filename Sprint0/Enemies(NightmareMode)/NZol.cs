@@ -13,7 +13,6 @@ namespace Sprint0.Enemies
         private IPlayer myPlayer;
         private ISprite ZolSprite;
         private int xPosition, yPosition, xDif, yDif;
-        bool leftmove = false;
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
         private int health = 5;
@@ -53,8 +52,8 @@ namespace Sprint0.Enemies
             yDif = targetRectangle.Y - yPosition;
             if (Math.Abs(xDif) > Math.Abs(yDif))
             {
-                if (xDif > 0) { xPosition += 3; leftmove = false; }
-                else { xPosition -= 3; leftmove = true; }
+                if (xDif > 0) { xPosition += 3; }
+                else { xPosition -= 3; }
             }
             else
             {

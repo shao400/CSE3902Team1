@@ -28,7 +28,7 @@ namespace Sprint0.Inventories
         public void addItem(IItem item)
         {
             Console.WriteLine(item.GetType());
-            if (getItemType(item).Equals("Sprint0.Items.Bomb"))
+            if (getItemType(item).Equals("Sprint0.Items.Bomb", StringComparison.CurrentCulture))
             {
                 if (myLink.bombCount < 2) myItemList.Add(item);
             }
@@ -71,7 +71,7 @@ namespace Sprint0.Inventories
             }
         }
 
-        public string getItemType(IItem item)
+        public static string getItemType(IItem item)
         {
             return item.GetType().ToString();
         }

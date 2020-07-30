@@ -17,8 +17,6 @@ namespace Sprint0.Enemies
         private IProjectile energyBall;
         private int xPosition;
         private int yPosition;
-        private int frame = 0;
-        bool backmove = false;
         private Rectangle destinationRec, targetRec;
         private int health = 20;
         private EnemyAllCollision enemyAllCollision;
