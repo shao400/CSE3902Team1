@@ -49,7 +49,7 @@ namespace Sprint0.Inventories
                 }
             }
         }
-        public ISprite getItemSprite(IItem item)
+        public static ISprite getItemSprite(IItem item)
         {
             // get item's sprite
             string itemType = item.GetType().ToString();
@@ -85,7 +85,7 @@ namespace Sprint0.Inventories
 
         }
 
-        public ISprite drawInfo(int index)
+        public static ISprite drawInfo(int index)
         {
             ISprite itemInfoSprite = null;
             switch (index)

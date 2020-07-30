@@ -21,9 +21,8 @@ namespace Sprint0.Inventories
         public int moveCountTot = 0;
         public int currentItem = 0;
 
-        public Handbook(Player1 link)
+        public Handbook()
         {
-
         }
 
         public void pickingIcon(int moveCount)

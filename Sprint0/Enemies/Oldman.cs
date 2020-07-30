@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Sprint0.Enemies
 {
-    public class Oldman : AbstractEnemies, IEnemy
+    public class Oldman : IEnemy
     {
 
 
@@ -18,7 +18,7 @@ namespace Sprint0.Enemies
         private Player1 _link;
         private Vector2 locationB;
         private const int shotDistance = 4;
-        private int health = 1;
+        public int health = 1;
         public Oldman(int x, int y,Player1 link)
         {
 
@@ -41,7 +41,7 @@ namespace Sprint0.Enemies
             return health;
         }
 
-        public override void Draw()
+        public void Draw()
         {
             
             if (this.GetHealth() > 0)
@@ -53,7 +53,7 @@ namespace Sprint0.Enemies
             }
         }
 
-        public override void Update()
+        public void Update()
         {
             if (locationB.X > _link.GetRectangle().X) locationB.X -= shotDistance;
             if (locationB.X < _link.GetRectangle().X) locationB.X += shotDistance;
@@ -62,24 +62,24 @@ namespace Sprint0.Enemies
         }
 
 
-        public override Rectangle GetRectangle()
+        public Rectangle GetRectangle()
         {
-            Rectangle destinationRecB = new Rectangle((int)locationB.X, (int)locationB.Y ,32,40);
-            return destinationRecB;
+            return destinationRec;
         }
 
-        public override void xReverse(int distance, bool plus)
+        public void xReverse(int distance, bool plus)
         {
             throw new System.NotImplementedException();
         }
 
-        public override void yReverse(int distance, bool plus)
+        public void yReverse(int distance, bool plus)
         {
             throw new System.NotImplementedException();
         }
 
-        public override void blockCollisionTest(List<IBlock> blocks)
+        public void blockCollisionTest(List<IBlock> blocks)
         {
+
         }
     }
 }

@@ -9,15 +9,15 @@ using Sprint0.Interfaces;
 
 namespace Sprint0.Enemies
 {
-    public class Stalfos : AbstractEnemies, IEnemy
+    public class Stalfos : IEnemy
     {
 
 
         private ISprite StalfosSprite;
         private int xPosition;
         private int yPosition;
-        private int frame = 0;
-        bool backmove = false;
+        //private int frame = 0;
+        //bool backmove = false;
         private Rectangle destinationRec;
         private int health = 1;
         public Stalfos(int x, int y)
@@ -39,7 +39,7 @@ namespace Sprint0.Enemies
             return health;
         }
 
-        public override void Draw()
+        public void Draw()
         {
             if (this.GetHealth() > 0)
             {
@@ -48,47 +48,31 @@ namespace Sprint0.Enemies
             }
         }
 
-        public override void Update()
+        public void Update()
         {
-            frame++;
-            if (frame >= 20) frame = 0;
-            if (frame < 10 && !backmove)
+            if (this.GetHealth() > 0)
             {
-                destinationRec.X += 5;
+                Vector2 location = new Vector2(xPosition, yPosition);
+                StalfosSprite.Draw(location, false);
             }
-            else if (frame > 10 && !backmove)
-            {
-                destinationRec.X += 5;
-            }
-            else if (frame < 10 && backmove)
-            {
-                destinationRec.X -= 5;
-            }
-            else if (frame > 10 && backmove)
-            {
-                destinationRec.X -= 5;
-            }
-            if (destinationRec.X > 627) backmove = true;
-            if (destinationRec.X < 96) backmove = false;
-            StalfosSprite.Update();
         }
 
-        public override Rectangle GetRectangle()
+        public Rectangle GetRectangle()
         {
             return destinationRec;
         }
 
-        public override void xReverse(int distance, bool plus)
+        public void xReverse(int distance, bool plus)
         {
             throw new System.NotImplementedException();
         }
 
-        public override void yReverse(int distance, bool plus)
+        public void yReverse(int distance, bool plus)
         {
             throw new System.NotImplementedException();
         }
 
-        public override void blockCollisionTest(List<IBlock> blocks)
+        public void blockCollisionTest(List<IBlock> blocks)
         {
 
         }

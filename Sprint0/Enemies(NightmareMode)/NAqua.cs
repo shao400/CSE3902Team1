@@ -8,7 +8,7 @@ using Sprint0.Projectile;
 
 namespace Sprint0.Enemies
 {
-    public class NAqua : AbstractEnemies, IEnemy 
+    public class NAqua : IEnemy 
     {
 
         private IPlayer myPlayer;
@@ -43,7 +43,7 @@ namespace Sprint0.Enemies
         {
             return health;
         }
-        public override void Draw()
+        public void Draw()
         {
             if (this.GetHealth() > 0)
             {
@@ -53,7 +53,7 @@ namespace Sprint0.Enemies
             }
         }
 
-        public override void Update()
+        public void Update()
         {
             energyBall.Update();
             projectileCollision.ProjectileLinkCollisionTest();
@@ -80,22 +80,22 @@ namespace Sprint0.Enemies
             AquaSprite.Update();
         }
 
-        public override Rectangle GetRectangle()
+        public  Rectangle GetRectangle()
         {
             return destinationRec;
         }
 
-        public override void xReverse(int distance, bool plus)
+        public  void xReverse(int distance, bool plus)
         {
             throw new System.NotImplementedException();
         }
 
-        public override void yReverse(int distance, bool plus)
+        public  void yReverse(int distance, bool plus)
         {
             throw new System.NotImplementedException();
         }
 
-        public override void blockCollisionTest(List<IBlock> blocks)
+        public void blockCollisionTest(List<IBlock> blocks)
         {
         }
     }

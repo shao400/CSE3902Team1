@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Sprint0.Enemies
 {
-    public class Moblin : AbstractEnemies, IEnemy
+    public class Moblin : IEnemy
     {
 
 
@@ -35,7 +35,7 @@ namespace Sprint0.Enemies
             return health;
         }
 
-        public override void Draw()
+        public void Draw()
         {
             if (this.GetHealth() > 0)
             {
@@ -44,7 +44,7 @@ namespace Sprint0.Enemies
             }
         }
 
-        public override void Update()
+        public void Update()
         {
             frame++;
             if (frame >= 20) frame = 0;
@@ -69,23 +69,24 @@ namespace Sprint0.Enemies
             MoblinSprite.Update();
         }
 
-        public override Rectangle GetRectangle()
+        public Rectangle GetRectangle()
         {
             return destinationRec;
         }
 
-        public override void xReverse(int distance, bool plus)
+        public void xReverse(int distance, bool plus)
         {
             throw new System.NotImplementedException();
         }
 
-        public override void yReverse(int distance, bool plus)
+        public void yReverse(int distance, bool plus)
         {
             throw new System.NotImplementedException();
         }
 
-        public override void blockCollisionTest(List<IBlock> blocks)
+        public void blockCollisionTest(List<IBlock> blocks)
         {
+
         }
     }
 }

@@ -7,7 +7,7 @@ using Sprint0.Collisions;
 
 namespace Sprint0.Enemies
 {
-    public class NRope : AbstractEnemies, IEnemy
+    public class NRope : IEnemy
     {
 
         private IPlayer myPlayer;
@@ -37,7 +37,7 @@ namespace Sprint0.Enemies
         {
             return health;
         }
-        public override void Draw()
+        public void Draw()
         {
             if (this.GetHealth() > 0)
             {
@@ -46,7 +46,7 @@ namespace Sprint0.Enemies
             }
         }
 
-        public override void Update()
+        public void Update()
         {
             targetRectangle = myPlayer.GetRectangle();
             xDif = targetRectangle.X - xPosition;
@@ -64,24 +64,24 @@ namespace Sprint0.Enemies
             RopeSprite.Update();
         }
 
-        public override Rectangle GetRectangle()
+        public Rectangle GetRectangle()
         {
-            destinationRec = new Rectangle(xPosition, yPosition, 45, 45);
+            destinationRec = new Rectangle(xPosition, yPosition, 35, 35);
             return destinationRec;
         }
 
-        public override void xReverse(int distance, bool plus)
+        public void xReverse(int distance, bool plus)
         {
             if (plus) xPosition += distance;
             else { xPosition -= distance; }
         }
 
-        public override void yReverse(int distance, bool plus)
+        public void yReverse(int distance, bool plus)
         {
             if (plus) yPosition += distance;
             else { yPosition -= distance; }
         }
 
-        public override void blockCollisionTest(List<IBlock> blocks) { enemyAllCollision.BlockCollisionTest(blocks); }
+        public void blockCollisionTest(List<IBlock> blocks) { enemyAllCollision.BlockCollisionTest(blocks); }
     }
 }

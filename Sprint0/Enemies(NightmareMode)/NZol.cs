@@ -7,7 +7,7 @@ using Sprint0.Collisions;
 
 namespace Sprint0.Enemies
 {
-    public class NZol : AbstractEnemies, IEnemy
+    public class NZol : IEnemy
     {
 
         private IPlayer myPlayer;
@@ -16,6 +16,7 @@ namespace Sprint0.Enemies
         bool leftmove = false;
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
+        private int health = 5;
         public NZol(int x, int y, IPlayer player)
         {
             myPlayer = player;
@@ -26,9 +27,17 @@ namespace Sprint0.Enemies
             enemyAllCollision = new EnemyAllCollision(this);
         }
 
+        public void Damaged()
+        {
+            health--;
 
+        }
+        public int GetHealth()
+        {
+            return health;
+        }
 
-        public override void Draw()
+        public void Draw()
         {
             if (this.GetHealth() > 0)
             {
@@ -37,7 +46,7 @@ namespace Sprint0.Enemies
             }
         }
 
-        public override void Update()
+        public void Update()
         {
             targetRectangle = myPlayer.GetRectangle();
             xDif = targetRectangle.X - xPosition;
@@ -55,24 +64,24 @@ namespace Sprint0.Enemies
             ZolSprite.Update();
         }
 
-        public override Rectangle GetRectangle()
+        public Rectangle GetRectangle()
         {
-            destinationRec = new Rectangle(xPosition, yPosition, 45, 45);
+            destinationRec = new Rectangle(xPosition, yPosition, 35, 35);
             return destinationRec;
         }
 
-        public override void xReverse(int distance, bool plus)
+        public void xReverse(int distance, bool plus)
         {
             if (plus) xPosition += distance;
             else { xPosition -= distance; }
         }
 
-        public override void yReverse(int distance, bool plus)
+        public void yReverse(int distance, bool plus)
         {
             if (plus) yPosition += distance;
             else { yPosition -= distance; }
         }
 
-        public override void blockCollisionTest(List<IBlock> blocks) { enemyAllCollision.BlockCollisionTest(blocks); }
+        public void blockCollisionTest(List<IBlock> blocks) { enemyAllCollision.BlockCollisionTest(blocks); }
     }
 }

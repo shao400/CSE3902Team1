@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Sprint0.Enemies
 {
-    public class Empty : AbstractEnemies, IEnemy
+    public class Empty :IEnemy
     {
 
 
@@ -13,6 +13,7 @@ namespace Sprint0.Enemies
         private int xPosition;
         private int yPosition;
         private Rectangle destinationRec;
+        private int health = 5;
 
         public Empty(int x, int y)
         {
@@ -23,34 +24,42 @@ namespace Sprint0.Enemies
             destinationRec = new Rectangle(x, y, 45, 60);
         }
 
+        public void Damaged()
+        {
+            health--;
 
+        }
+        public int GetHealth()
+        {
+            return health;
+        }
 
-        public override void Draw()
+        public void Draw()
         {
 
         }
 
-        public override void Update()
+        public void Update()
         {
            
         }
 
-        public override Rectangle GetRectangle()
+        public Rectangle GetRectangle()
         {
             return destinationRec;
         }
 
-        public override void xReverse(int distance, bool plus)
+        public void xReverse(int distance, bool plus)
         {
             throw new System.NotImplementedException();
         }
 
-        public override void yReverse(int distance, bool plus)
+        public void yReverse(int distance, bool plus)
         {
             throw new System.NotImplementedException();
         }
 
-        public override void blockCollisionTest(List<IBlock> blocks)
+        public void blockCollisionTest(List<IBlock> blocks)
         {
 
         }

@@ -10,13 +10,13 @@ using Sprint0.Collisions;
 
 namespace Sprint0.Enemies
 {   //Zina
-    public class NTektite : AbstractEnemies, IEnemy
+    public class NTektite :  IEnemy
     {
 
         private IPlayer myPlayer;
         private ISprite TektiteSprite;
         private int xPosition, yPosition, xDif, yDif;
-        private int frame = 0;
+        //private int frame = 0;
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
         private int health = 1;
@@ -40,7 +40,7 @@ namespace Sprint0.Enemies
             return health;
         }
 
-        public override void Draw()
+        public  void Draw()
         {
             if (this.GetHealth() > 0)
             {
@@ -49,7 +49,7 @@ namespace Sprint0.Enemies
             }
         }
 
-        public override void Update()
+        public  void Update()
         {
             targetRectangle = myPlayer.GetRectangle();
             xDif = targetRectangle.X - xPosition;
@@ -67,24 +67,24 @@ namespace Sprint0.Enemies
             TektiteSprite.Update();
         }
 
-        public override Rectangle GetRectangle()
+        public Rectangle GetRectangle()
         {
-            destinationRec = new Rectangle(xPosition, yPosition, 45, 45);
+            destinationRec = new Rectangle(xPosition, yPosition, 35, 35);
             return destinationRec;
         }
 
-        public override void xReverse(int distance, bool plus)
+        public void xReverse(int distance, bool plus)
         {
             if (plus) xPosition += distance;
             else { xPosition -= distance; }
         }
 
-        public override void yReverse(int distance, bool plus)
+        public void yReverse(int distance, bool plus)
         {
             if (plus) yPosition += distance;
             else { yPosition -= distance; }
         }
 
-        public override void blockCollisionTest(List<IBlock> blocks) { enemyAllCollision.BlockCollisionTest(blocks); }
+        public void blockCollisionTest(List<IBlock> blocks) { enemyAllCollision.BlockCollisionTest(blocks); }
     }
 }

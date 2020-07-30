@@ -10,7 +10,7 @@ using Sprint0.Projectile;
 
 namespace Sprint0.Enemies
 {   //Zina
-    public class Peahat : AbstractEnemies, IEnemy
+    public class Peahat : IEnemy
     {
 
         private ISprite PeahatSprite;
@@ -39,7 +39,7 @@ namespace Sprint0.Enemies
             return health;
         }
 
-        public override void Draw()
+        public void Draw()
         {
             if (this.GetHealth() > 0)
             {
@@ -48,7 +48,7 @@ namespace Sprint0.Enemies
             }
         }
 
-        public override void Update()
+        public void Update()
         {
             frame++;
             if (frame >= 20) frame = 0;
@@ -73,23 +73,24 @@ namespace Sprint0.Enemies
             PeahatSprite.Update();
         }
 
-        public override Rectangle GetRectangle()
+        public Rectangle GetRectangle()
         {
             return destinationRec;
         }
 
-        public override void xReverse(int distance, bool plus)
+        public void xReverse(int distance, bool plus)
         {
             throw new System.NotImplementedException();
         }
 
-        public override void yReverse(int distance, bool plus)
+        public void yReverse(int distance, bool plus)
         {
             throw new System.NotImplementedException();
         }
 
-        public override void blockCollisionTest(List<IBlock> blocks)
+        public void blockCollisionTest(List<IBlock> blocks)
         {
+
         }
     }
 }

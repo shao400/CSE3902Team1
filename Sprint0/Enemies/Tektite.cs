@@ -9,7 +9,7 @@ using Sprint0.Interfaces;
 
 namespace Sprint0.Enemies
 {   //Zina
-    public class Tektite : AbstractEnemies, IEnemy
+    public class Tektite : IEnemy
     {
 
 
@@ -39,7 +39,7 @@ namespace Sprint0.Enemies
             return health;
         }
 
-        public override void Draw()
+        public void Draw()
         {
             if (this.GetHealth() > 0)
             {
@@ -48,7 +48,7 @@ namespace Sprint0.Enemies
             }
         }
 
-        public override void Update()
+        public void Update()
         {
 
             frame++;
@@ -74,22 +74,22 @@ namespace Sprint0.Enemies
             TektiteSprite.Update();
         }
 
-        public override Rectangle GetRectangle()
+        public Rectangle GetRectangle()
         {
             return destinationRec;
         }
 
-        public override void xReverse(int distance, bool plus)
+        public void xReverse(int distance, bool plus)
         {
             throw new System.NotImplementedException();
         }
 
-        public override void yReverse(int distance, bool plus)
+        public void yReverse(int distance, bool plus)
         {
             throw new System.NotImplementedException();
         }
 
-        public override void blockCollisionTest(List<IBlock> blocks)
+        public void blockCollisionTest(List<IBlock> blocks)
         {
 
         }

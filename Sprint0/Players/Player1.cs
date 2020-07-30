@@ -92,7 +92,7 @@ namespace Sprint0.Player
             linkEnemyCollision = new LinkEnemyCollision(this);
             linkNpcCollision = new LinkNpcCollision(this,myGame);
             myFog = new Fog(this);
-            myHandbook = new Handbook(this);
+            myHandbook = new Handbook();
         }
 
         public bool isTakingDmg()
