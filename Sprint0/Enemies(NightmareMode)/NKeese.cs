@@ -81,6 +81,8 @@ namespace Sprint0.Enemies
             else { yPosition -= distance; }
         }
 
-        public void blockCollisionTest(List<IBlock> blocks) { enemyAllCollision.BlockCollisionTest(blocks); }
+        public void blockCollisionTest(List<IBlock> blocks) { 
+            //enemyAllCollision.BlockCollisionTest(blocks); Keese can fly
+        }
     }
 }

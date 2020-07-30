@@ -21,6 +21,7 @@ namespace Sprint0.Sprite
         public static LinkUsingLeftSprite LinkUsingLeft = new LinkUsingLeftSprite();
         public static LinkUsingDownSprite LinkUsingDown = new LinkUsingDownSprite();
         public static LinkUsingRightSprite LinkUsingRight = new LinkUsingRightSprite();
+        public static LinkPickUpItemSprite LinkPickUpItem = new LinkPickUpItemSprite();
 
         // Enemy Author: Gengyi Qin
         public static EnemyBornSprite EnemyBorn = new EnemyBornSprite();
@@ -190,6 +191,7 @@ namespace Sprint0.Sprite
             LinkUsingLeft.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkUsingDown.LoadContent(batch, content.Load<Texture2D>("link"));
             LinkUsingUp.LoadContent(batch, content.Load<Texture2D>("link"));
+            LinkPickUpItem.LoadContent(batch, content.Load<Texture2D>("link"));
 
             PlayerWoodenSwordRight.LoadContent(batch, content.Load<Texture2D>("link"));
             PlayerWoodenSwordLeft.LoadContent(batch, content.Load<Texture2D>("link"));

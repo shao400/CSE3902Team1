@@ -225,6 +225,7 @@
     <Compile Include="Sprite\ItemSprites\HeartCInfoSprite.cs" />
     <Compile Include="Sprite\ItemSprites\BombInfoSprite.cs" />
     <Compile Include="Sprite\ItemSprites\ItemWoodenSwordSprite.cs" />
+    <Compile Include="Sprite\LinkSprites\LinkPickUpItemSprite.cs" />
     <Compile Include="Sprite\LinkSprites\LinkUsingDownSprite.cs" />
     <Compile Include="Sprite\LinkSprites\LinkUsingLeftSprite.cs" />
     <Compile Include="Sprite\LinkSprites\LinkUsingRightSprite.cs" />

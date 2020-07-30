@@ -8,7 +8,7 @@ using Sprint0.Projectile;
 
 namespace Sprint0.Enemies
 {
-    public class NAqua : IEnemy 
+    public class NAqua : IEnemy
     {
 
         private IPlayer myPlayer;
@@ -19,18 +19,21 @@ namespace Sprint0.Enemies
         private int yPosition;
         private int frame = 0;
         bool backmove = false;
-        private Rectangle destinationRec;
-        private int health = 1;
-
+        private Rectangle destinationRec, targetRec;
+        private int health = 20;
+        private EnemyAllCollision enemyAllCollision;
+        private int initialX;
         public NAqua(int x, int y, IPlayer player)
         {
             myPlayer = player;
             xPosition = x;
             yPosition = y;
+            initialX = x;
             AquaSprite = new EnemyAquaSprite(x, y);
-            destinationRec = new Rectangle(x, y, 100, 100);
+            destinationRec = new Rectangle(xPosition, yPosition, 100, 100);
             energyBall = new EnergyBall(this, myPlayer);
             projectileCollision = new ProjectileCollision(energyBall, myPlayer);
+            enemyAllCollision = new EnemyAllCollision(this);
         }
 
 
@@ -57,46 +60,40 @@ namespace Sprint0.Enemies
         {
             energyBall.Update();
             projectileCollision.ProjectileLinkCollisionTest();
-            frame++;
-            if (frame >= 5) frame = 0;
-            if (frame < 2 && !backmove)
+            targetRec = myPlayer.GetRectangle();
+            if (xPosition - targetRec.X < 250 && targetRec.Y > destinationRec.Y && targetRec.Y < destinationRec.Y + 100 && xPosition > initialX - 250)
             {
-                destinationRec.X += 1;
+                xPosition -= 5;
             }
-            else if (frame > 2 && !backmove)
+            else if (targetRec.Y <= destinationRec.Y || targetRec.Y >= destinationRec.Y + 100)
             {
-                destinationRec.X += 1;
+                if (xPosition < initialX) xPosition += 3;
             }
-            else if (frame < 2 && backmove)
-            {
-                destinationRec.X -= 1;
-            }
-            else if (frame > 2 && backmove)
-            {
-                destinationRec.X -= 1;
-            }
-            if (destinationRec.X > 470) backmove = true;
-            if (destinationRec.X < 440) backmove = false;
+
             AquaSprite.Update();
         }
 
-        public  Rectangle GetRectangle()
+        public Rectangle GetRectangle()
         {
+            destinationRec = new Rectangle(xPosition, yPosition, 100, 100);
             return destinationRec;
         }
 
-        public  void xReverse(int distance, bool plus)
+        public void xReverse(int distance, bool plus)
         {
-            throw new System.NotImplementedException();
+            if (plus) xPosition += distance;
+            else { xPosition -= distance; }
         }
 
-        public  void yReverse(int distance, bool plus)
+        public void yReverse(int distance, bool plus)
         {
-            throw new System.NotImplementedException();
+            if (plus) yPosition += distance;
+            else { yPosition -= distance; }
         }
 
         public void blockCollisionTest(List<IBlock> blocks)
         {
+            //enemyAllCollision.BlockCollisionTest(blocks);
         }
     }
 }

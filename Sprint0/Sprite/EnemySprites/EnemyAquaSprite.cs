@@ -59,8 +59,8 @@ namespace Sprint0.Sprite
 
         public void Draw(Vector2 location, bool isDamaged)
         {
-
             mySpriteBatch.Begin();
+            destinationRec = new Rectangle((int)location.X, (int)location.Y, 100, 100);
             mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor);
             mySpriteBatch.End();
         }
