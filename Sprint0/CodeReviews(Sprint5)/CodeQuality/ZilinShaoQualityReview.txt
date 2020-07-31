@@ -1,0 +1,10 @@
+Zilin Shao
+7/31/2020
+Sprint5
+StoreStocks.cs
+Main Author: ZhiZhou He
+Time: 8 min
+In Sprint5, we added NPC Merchant's store. The class coordinates and has information flow with
+Player, IItem, Sprite class and so on. But He did not couple each modules over tightly. 
+With the low coupling implementation, He's code has high maintainability, making it easy
+for debugging and code reuse. Hence I would say He's code has good quality.

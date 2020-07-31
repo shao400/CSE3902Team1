@@ -139,13 +139,5 @@ namespace Sprint0.HUDs
 
         }
 
-        public void Update()
-        {
-
-        }
-        public Rectangle GetRectangle(int x, int y)
-        {
-            return new Rectangle(x, y, 32, 32);
-        }
     }
 }

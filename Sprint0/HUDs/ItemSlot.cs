@@ -7,6 +7,7 @@ namespace Sprint0.HUDs
 {
     public class ItemSlot : IHud
     {
+        //List of Hud Sprites
         private HudXSprite X = SpriteFactory.HudX;
         private HudOneSprite One = SpriteFactory.HudOne;
         private HudTwoSprite Two = SpriteFactory.HudTwo;
@@ -230,15 +231,5 @@ namespace Sprint0.HUDs
             health = _link.linkHp();
         }
 
-
-        public void Update()
-        {
-
-        }
-
-        public Rectangle GetRectangle(int x, int y)
-        {
-            return new Rectangle(x, y, 32, 32);
-        }
     }
 }

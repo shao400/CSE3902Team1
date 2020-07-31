@@ -1,0 +1,11 @@
+Zilin Shao
+7/31/2020
+Sprint5
+AbstractProjectile.cs
+Main Author: Ouyang Lufei
+Time: 7 min
+The readability of this file is high. Due to its names of functions. First for coordinations
+with other class, it has GetDamage(), GetHitBox(), GetPosition(). Then it has a list of
+instance methods to perform projectiles' behaviors like Shoot, Explode. Besides, a function
+named isExplode return an integer to present the kind of behavior this projectile does.
+As whole, Lufei's code is brief and easy to read.

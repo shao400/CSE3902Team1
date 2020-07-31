@@ -70,7 +70,7 @@ namespace Sprint0.Enemies
                 if (frame < IntegerHolder.Ten && !backmove) destinationRec.Y += IntegerHolder.Two;
                 else if (frame > IntegerHolder.Ten && !backmove) destinationRec.Y += IntegerHolder.Two;
                 else if (frame < IntegerHolder.Ten && backmove) destinationRec.Y -= IntegerHolder.Two;
-                else if (frame > IntegerHolder.Ten && backmove) destinationRec.Y -= IIntegerHolder.Two;
+                else if (frame > IntegerHolder.Ten && backmove) destinationRec.Y -= IntegerHolder.Two;
 
                 if (destinationRec.Y > 555) backmove = true;
                 if (destinationRec.Y < IntegerHolder.TwoSixFour) backmove = false;

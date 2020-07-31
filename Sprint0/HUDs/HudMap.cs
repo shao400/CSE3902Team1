@@ -22,7 +22,6 @@ namespace Sprint0.HUDs
         }
         private void staticMapDraw(int xAix, int yAix)
         {
-            //position trans logic still need change
             discovered.Add(_myGame.currentRoom.roomID);
             Vector2 location = new Vector2(xAix, yAix);
             Vector2 restore = new Vector2(xAix ,yAix);
@@ -140,7 +139,6 @@ namespace Sprint0.HUDs
         }
         public void Draw(int x, int y)
         {
-            //position trans logic still need change
             const int posModi1 = 16;
             const int posModi2 = IntegerHolder.Seven;
             const int posModi3 = IntegerHolder.Five;
@@ -242,17 +240,10 @@ namespace Sprint0.HUDs
                 point.Draw(locationP, false);
             }
             Vector2 locationTarget = new Vector2(x+posModi1+IntegerHolder.Four*dx,y+posModi2-IntegerHolder.Four*dy);
+            //Coordinate with Item Map and Compass
             if (_myGame.link.HaveMapOrCompass()[1]) point.Draw(locationTarget,false);
         }
      
-        public void Update()
-        {
 
-        }
-
-        public Rectangle GetRectangle(int x, int y)
-        {
-            return new Rectangle(x, y, 32, 32);
-        }
     }
 }
