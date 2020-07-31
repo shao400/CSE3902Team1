@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
-using Sprint0.UtilityClass;
 
 namespace Sprint0.Sprite
 {
@@ -23,13 +22,13 @@ namespace Sprint0.Sprite
         {
             frame++;
             if (frame >= 20) frame = 0;
-            if(frame < IntegerHolder.Ten)
+            if(frame < 10)
             {
-                sourceRec = new Rectangle(0, 0, IntegerHolder.Seven, IntegerHolder.Eight);
+                sourceRec = new Rectangle(0, 0, 7, 8);
             } 
-            else if(frame >IntegerHolder.Ten)
+            else if(frame >10)
             {
-                sourceRec = new Rectangle(0, IntegerHolder.Eight, IntegerHolder.Seven, IntegerHolder.Eight);
+                sourceRec = new Rectangle(0, 8, 7, 8);
             }
          }
 

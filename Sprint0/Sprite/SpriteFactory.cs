@@ -106,8 +106,14 @@ namespace Sprint0.Sprite
         public static ItemRuppySprite ItemRuppy = new ItemRuppySprite();
         public static ItemArrowSprite ItemArrow = new ItemArrowSprite();
         public static ItemWoodenSwordSprite ItemWoodenSword = new ItemWoodenSwordSprite();
+        public static ItemBlueCandleSprite ItemBlueCandle = new ItemBlueCandleSprite();
+        public static ItemBlueRingSprite ItemBlueRing = new ItemBlueRingSprite();
+        public static ItemBluePotionSprite ItemBluePotion = new ItemBluePotionSprite();
         public static BombInfoSprite BombInfo = new BombInfoSprite();
         public static HeartCInfoSprite HeartCInfo = new HeartCInfoSprite();
+        public static RingInfoSprite RingInfo = new RingInfoSprite();
+        public static PotionInfoSprite PotionInfo = new PotionInfoSprite();
+        public static CandleInfoSprite CandleInfo = new CandleInfoSprite();
 
         // Block Author: Zilin Shao
         public static List<ISprite> BlockList = new List<ISprite>();
@@ -238,8 +244,14 @@ namespace Sprint0.Sprite
             ItemArrow.LoadContent(batch, content.Load<Texture2D>("item"));
             ItemMap.LoadContent(batch, content.Load<Texture2D>("item"));
             ItemWoodenSword.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemBlueCandle.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemBluePotion.LoadContent(batch, content.Load<Texture2D>("item"));
+            ItemBlueRing.LoadContent(batch, content.Load<Texture2D>("item"));
             BombInfo.LoadContent(batch, content.Load<Texture2D>("store"));
             HeartCInfo.LoadContent(batch, content.Load<Texture2D>("store"));
+            RingInfo.LoadContent(batch, content.Load<Texture2D>("store"));
+            CandleInfo.LoadContent(batch, content.Load<Texture2D>("store"));
+            PotionInfo.LoadContent(batch, content.Load<Texture2D>("store"));
 
             ItemList.Add(ItemHeartContainer);
             ItemList.Add(ItemGirl);
@@ -257,6 +269,12 @@ namespace Sprint0.Sprite
             ItemList.Add(ItemWoodenSword);
             ItemList.Add(BombInfo);
             ItemList.Add(HeartCInfo);
+            ItemList.Add(ItemBluePotion);
+            ItemList.Add(ItemBlueRing);
+            ItemList.Add(ItemBlueCandle);
+            ItemList.Add(RingInfo);
+            ItemList.Add(CandleInfo);
+            ItemList.Add(PotionInfo);
         }
 
         private static void LoadHudContent(SpriteBatch batch, ContentManager content)

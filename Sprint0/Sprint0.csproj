@@ -120,6 +120,9 @@
     <Compile Include="Interfaces\IEnemy.cs" />
     <Compile Include="Inventories\Handbook.cs" />
     <Compile Include="Inventories\StoreStock.cs" />
+    <Compile Include="Items\blue_potion.cs" />
+    <Compile Include="Items\blue_candle.cs" />
+    <Compile Include="Items\blue_ring.cs" />
     <Compile Include="Items\WoodenSwordItem.cs" />
     <Compile Include="NPCs\Flame.cs" />
     <Compile Include="NPCs\Merchant.cs" />
@@ -223,9 +226,15 @@
     <Compile Include="Sprite\HudSprites\HudFrameSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudPointSprite.cs" />
     <Compile Include="Sprite\HudSprites\HudMapPieceSprite.cs" />
+    <Compile Include="Sprite\ItemSprites\CandleInfoSprite.cs" />
     <Compile Include="Sprite\ItemSprites\HeartCInfoSprite.cs" />
     <Compile Include="Sprite\ItemSprites\BombInfoSprite.cs" />
+    <Compile Include="Sprite\ItemSprites\ItemBlueCandleSprite.cs" />
+    <Compile Include="Sprite\ItemSprites\ItemBluePotionSprite.cs" />
+    <Compile Include="Sprite\ItemSprites\ItemBlueRingSprite.cs" />
     <Compile Include="Sprite\ItemSprites\ItemWoodenSwordSprite.cs" />
+    <Compile Include="Sprite\ItemSprites\PotionInfoSprite.cs" />
+    <Compile Include="Sprite\ItemSprites\RingInfoSprite.cs" />
     <Compile Include="Sprite\LinkSprites\LinkPickUpItemSprite.cs" />
     <Compile Include="Sprite\LinkSprites\LinkUsingDownSprite.cs" />
     <Compile Include="Sprite\LinkSprites\LinkUsingLeftSprite.cs" />

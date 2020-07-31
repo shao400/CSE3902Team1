@@ -18,6 +18,9 @@ namespace Sprint0.Inventories
         public List<IItem> storeList = new List<IItem>();
         private Bomb bomb = new Bomb(0, 0);
         private HeartContainer heartC = new HeartContainer(0, 0);
+        private blue_candle candle = new blue_candle(0,0);
+        private blue_potion potion = new blue_potion(0, 0);
+        private blue_ring ring = new blue_ring(0, 0);
         ISprite pickboxSprite = new PickBoxSprite();
         ISprite itemSprite;
 
@@ -34,7 +37,9 @@ namespace Sprint0.Inventories
             myInventory = link.myInventory;
             storeList.Add(bomb);
             storeList.Add(heartC);
-
+            storeList.Add(candle);
+            storeList.Add(potion);
+            storeList.Add(ring);
         }
         public void showItem()
         {
@@ -62,6 +67,15 @@ namespace Sprint0.Inventories
                 case "Sprint0.Items.HeartContainer":
                     sprite = new ItemHeartContainerSprite();
                     break;
+                case "Sprint0.Items.blue_candle":
+                    sprite = new ItemBlueCandleSprite();
+                    break;
+                case "Sprint0.Items.blue_potion":
+                    sprite = new ItemBluePotionSprite();
+                    break;
+                case "Sprint0.Items.blue_ring":
+                    sprite = new ItemBlueRingSprite();
+                    break;
                 default:
                     sprite = null;
                     break;
@@ -78,7 +92,7 @@ namespace Sprint0.Inventories
             {
                 moveCountTot = 0;
             }
-            Vector2 dest1 = new Vector2(331 + moveCountTot * 54, 335);
+            Vector2 dest1 = new Vector2(331 + moveCountTot * 52, 335);
             pickboxSprite.Draw(dest1, false);
             Vector2 dest2 = new Vector2(330, 510);
             drawInfo(moveCountTot).Draw(dest2, false);
@@ -96,6 +110,16 @@ namespace Sprint0.Inventories
                 case 1:
                     itemInfoSprite = new HeartCInfoSprite();
                     break;
+                case 2:
+                    itemInfoSprite = new CandleInfoSprite();
+                    break;
+                case 3:
+                    itemInfoSprite = new PotionInfoSprite();
+                    break;
+                case 4:
+                    itemInfoSprite = new RingInfoSprite();
+                    break;
+
                 default:
                     break;
             }
@@ -115,6 +139,18 @@ namespace Sprint0.Inventories
                     myInventory.addItem(bomb);
                 }
                 else if (moveCountTot == 1)
+                {
+                    myLink.MaxHealth++;
+                }
+                else if (moveCountTot == 2)//candle
+                {
+                    myLink.MaxHealth++;
+                }
+                else if (moveCountTot == 3)//potion
+                {
+                    myLink.MaxHealth+=4;
+                }
+                else if (moveCountTot == 4)//ring
                 {
                     myLink.MaxHealth++;
                 }

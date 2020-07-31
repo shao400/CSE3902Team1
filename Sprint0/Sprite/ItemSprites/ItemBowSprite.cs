@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
-using Sprint0.UtilityClass;
 
 namespace Sprint0.Sprite
 {
@@ -14,7 +13,7 @@ namespace Sprint0.Sprite
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
         Color myColor = Color.CornflowerBlue;
-        Rectangle sourceRec = new Rectangle(IntegerHolder.oneFourtyFour, 0, IntegerHolder.Eight, 16);
+        Rectangle sourceRec = new Rectangle(144, 0, 8, 16);
 
         public void Update()
         {
@@ -29,7 +28,7 @@ namespace Sprint0.Sprite
 
         public void Draw(Vector2 location, Boolean isDamaged)
         {
-            Rectangle destinationRec = new Rectangle((int)location.X, (int)location.Y, 24, IntegerHolder.fourtyEight);
+            Rectangle destinationRec = new Rectangle((int)location.X, (int)location.Y, 24, 48);
             mySpriteBatch.Begin();
             mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor);
             mySpriteBatch.End();
