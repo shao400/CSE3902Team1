@@ -8,11 +8,14 @@ namespace Sprint0.Sprite
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
         Color myColor = Color.CornflowerBlue;
-        Rectangle sourceRec=new Rectangle(118,189,8,8);
+        Rectangle sourceRec;
         Rectangle destinationRec;
+        int frame = 0;
         public void Update()
         {
-            
+            if (frame < 5) { sourceRec= new Rectangle(118, 189, 8, 8); }
+            if (frame < 10) { sourceRec= new Rectangle(118, 189, 0, 0); }
+            if (frame < 15) { sourceRec= new Rectangle(118, 189, 8, 8); frame = 0; }
         }
 
         public void LoadContent(SpriteBatch batch, Texture2D texture)
