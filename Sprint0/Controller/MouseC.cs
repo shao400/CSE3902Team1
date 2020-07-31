@@ -26,12 +26,12 @@ namespace Sprint0.Controller
         {
             state = Mouse.GetState();
 
-            if (state.LeftButton == ButtonState.Pressed && prev.LeftButton == ButtonState.Released)
+            if (state.LeftButton == ButtonState.Pressed && prev.LeftButton == ButtonState.Released && myGame.currentState == myGame.stateList[0])
             {
                 new MouseLeftLastRM(myGame).Execute();
                 prev = state;
             }
-            else if (state.RightButton == ButtonState.Pressed && prev.RightButton == ButtonState.Released)
+            else if (state.RightButton == ButtonState.Pressed && prev.RightButton == ButtonState.Released && myGame.currentState == myGame.stateList[0])
             {
                 new MouseRightNextRM(myGame).Execute();
                 prev = state;

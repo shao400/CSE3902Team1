@@ -66,6 +66,8 @@
     <Compile Include="Collisions\LinkEnemyCollision.cs" />
     <Compile Include="Collisions\LinkItemCollision.cs" />
     <Compile Include="Commands\bHandbook.cs" />
+    <Compile Include="Commands\MouseRightNextRM.cs" />
+    <Compile Include="Commands\MouseLeftLastRM.cs" />
     <Compile Include="Commands\D1UseItem.cs" />
     <Compile Include="Commands\aLeft.cs" />
     <Compile Include="Commands\mSwitchOption.cs" />
@@ -81,6 +83,7 @@
     <Compile Include="Commands\wUp.cs" />
     <Compile Include="Commands\Attack.cs" />
     <Compile Include="Controller\KeyboardC.cs" />
+    <Compile Include="Controller\MouseC.cs" />
     <Compile Include="Doors\DoorBDown.cs" />
     <Compile Include="Doors\DoorBUp.cs" />
     <Compile Include="Doors\DoorKDown.cs" />
