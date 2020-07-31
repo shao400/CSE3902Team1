@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Sprite
 {
@@ -15,7 +16,7 @@ namespace Sprint0.Sprite
 
         public EnemyAquaSprite(int x, int y)
         {
-            destinationRec = new Rectangle(x, y, 100, 100);
+            destinationRec = new Rectangle(x, y, IntegerHolder.OneOO, IntegerHolder.OneOO);
         }
 
 
@@ -24,23 +25,23 @@ namespace Sprint0.Sprite
         {
             frame++;
             if (frame >= 20) frame = 0;
-            if (frame < 10 && !backmove)
+            if (frame < IntegerHolder.Ten && !backmove)
             {
                 sourceRec = new Rectangle(1, 11, 24, 32);
                 destinationRec.X += 1;
             }
-            else if (frame > 10 && !backmove)
+            else if (frame > IntegerHolder.Ten && !backmove)
             {
                 sourceRec = new Rectangle(26, 11, 24, 32);
                 destinationRec.X += 1;
             }
-            else if (frame < 10 && backmove)
+            else if (frame < IntegerHolder.Ten && backmove)
             {
 
                 sourceRec = new Rectangle(1, 11, 24, 32);
                 destinationRec.X -= 1;
             }
-            else if (frame > 10 && backmove)
+            else if (frame > IntegerHolder.Ten && backmove)
             {
 
                 sourceRec = new Rectangle(26, 11, 24, 32);
@@ -60,7 +61,7 @@ namespace Sprint0.Sprite
         public void Draw(Vector2 location, bool isDamaged)
         {
             mySpriteBatch.Begin();
-            destinationRec = new Rectangle((int)location.X, (int)location.Y, 100, 100);
+            destinationRec = new Rectangle((int)location.X, (int)location.Y, IntegerHolder.OneOO, IntegerHolder.OneOO);
             mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor);
             mySpriteBatch.End();
         }

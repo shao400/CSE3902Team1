@@ -20,8 +20,8 @@ namespace Sprint0.GameStates
         Game1 myGame;
         SpriteBatch myBatch;
         roomProperties myCurrentRoom;
-        Rectangle roomDestRec = new Rectangle(0, 696, 768, 528);
-        Rectangle pauseDestRec = new Rectangle(0, 0, 768, 528);
+        Rectangle roomDestRec = new Rectangle(0, 696, IntegerHolder.SevenSixEight, IntegerHolder.FiveTwoEight);
+        Rectangle pauseDestRec = new Rectangle(0, 0, IntegerHolder.SevenSixEight, IntegerHolder.FiveTwoEight);
         Rectangle roomSourceRec;
         Rectangle pauseSourceRec = new Rectangle(0, 0, 491, 325);
         int frame = 0;
@@ -29,7 +29,7 @@ namespace Sprint0.GameStates
         private HudMap map;
         private Hud myHud;
         int x = 0;
-        int y = 528;
+        int y = IntegerHolder.FiveTwoEight;
         int mapx = 450;
         int mapy = 450;
 
@@ -66,19 +66,19 @@ namespace Sprint0.GameStates
                 frame++;
                 if (frame < 89)
                 {
-                    roomDestRec.Y -= 6;
-                    pauseDestRec.Y -= 6;
-                    y -= 6;
-                    mapy -= 6;
+                    roomDestRec.Y -= IntegerHolder.Six;
+                    pauseDestRec.Y -= IntegerHolder.Six;
+                    y -= IntegerHolder.Six;
+                    mapy -= IntegerHolder.Six;
                 }
                 else
                 {
                     myGame.currentState = myGame.stateList[0];
                     frame = 0;
-                    y = 528;
+                    y = IntegerHolder.FiveTwoEight;
                     mapy = 450;
-                    roomDestRec = new Rectangle(0, 696, 768, 528);
-                    pauseDestRec = new Rectangle(0, 0, 768, 528);
+                    roomDestRec = new Rectangle(0, 696, IntegerHolder.SevenSixEight, IntegerHolder.FiveTwoEight);
+                    pauseDestRec = new Rectangle(0, 0, IntegerHolder.SevenSixEight, IntegerHolder.FiveTwoEight);
                 }
          
             

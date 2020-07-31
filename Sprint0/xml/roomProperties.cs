@@ -28,7 +28,7 @@ namespace Sprint0.xml
         public Rectangle sourceRec;
         public Rectangle DestRec;
         public List<IDoor> DoorList;
-        //Connectors is a collection of max 4 integers represents rooms connected to the current room in{up, down, left, right} order. 
+        //Connectors is a collection of max IntegerHolder.Four integers represents rooms connected to the current room in{up, down, left, right} order. 
         //If there is no access to one direction, -1 will be presented.
         public List<int> Connectors;  
         //Constructor method
@@ -40,7 +40,7 @@ namespace Sprint0.xml
             blockList = b;
             
             sourceRec = source;
-            DestRec = new Rectangle(0, 168, 768, 528);
+            DestRec = new Rectangle(0, IntegerHolder.OneSixEight, IntegerHolder.SevenSixEight, IntegerHolder.FiveTwoEight);
             Connectors = con;
             DoorList = d;
             NPCList = n;

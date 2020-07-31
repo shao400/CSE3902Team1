@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Media;
 using Sprint0.GameStates;
 using Sprint0.Items;
+using Sprint0.UtilityClass;
 
 
 
@@ -54,14 +55,14 @@ namespace Sprint0
                 SwordSlash = s[0];
                 LinkHurt = s[1];
                 MagicRod = s[2];
-                ArrowAndBoomerang = s[3];
-                BombBlow = s[4];
-                BombDrop = s[5];
-                EnemyDie = s[6];
-                EnemyHit = s[7];
-                GetHeart = s[8];
-                LinkDie = s[9];
-                LowHealth = s[10];
+                ArrowAndBoomerang = s[IntegerHolder.Three];
+                BombBlow = s[IntegerHolder.Four];
+                BombDrop = s[IntegerHolder.Five];
+                EnemyDie = s[IntegerHolder.Six];
+                EnemyHit = s[IntegerHolder.Seven];
+                GetHeart = s[IntegerHolder.Eight];
+                LinkDie = s[IntegerHolder.Nine];
+                LowHealth = s[IntegerHolder.Ten];
                 SwordShoot = s[11];
                 GetItem = s[12];
                 DoorUnlock = s[13];
@@ -81,7 +82,7 @@ namespace Sprint0
                 Text = s[27];
                 TextShow = s[28];
                 GetTriforce = s[29];
-                Candle = s[30];
+                Candle = s[IntegerHolder.Thirty];
 
                 Intro = song[0];
                 Labyrinth = song[1];

@@ -7,7 +7,7 @@ using System.Windows.Media;
 using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
 using Sprint0.Sprite;
-
+using Sprint0.UtilityClass;
 namespace Sprint0.Block
 {
     class KeyholeRight : IDoor
@@ -34,7 +34,7 @@ namespace Sprint0.Block
 
         public Rectangle GetRectangle()
         {
-            return new Rectangle(xpos, ypos, 48, 48);
+            return new Rectangle(xpos, ypos, IntegerHolder.fourtyEight, IntegerHolder.fourtyEight);
         }
 
         public bool IsKeyhole()

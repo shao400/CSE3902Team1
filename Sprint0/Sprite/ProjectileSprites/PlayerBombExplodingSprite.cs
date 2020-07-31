@@ -1,6 +1,7 @@
 using System;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Sprite
 {
@@ -20,10 +21,10 @@ namespace Sprint0.Sprite
 
         public void Update()
         {
-            if (count < 10) { count++; sourceRec = new Rectangle(138, 185, 16, 16); }
+            if (count < IntegerHolder.Ten) { count++; sourceRec = new Rectangle(138, 185, 16, 16); }
             else if (count < 20) { count++; sourceRec = new Rectangle(155, 185, 16, 16); }
-            else if (count < 30) { count++; sourceRec = new Rectangle(172, 185, 16, 16); }
-            else if (count == 30) { count = 0; sourceRec = new Rectangle(0, 0, 0, 0); }
+            else if (count < IntegerHolder.Thirty) { count++; sourceRec = new Rectangle(172, 185, 16, 16); }
+            else if (count == IntegerHolder.Thirty) { count = 0; sourceRec = new Rectangle(0, 0, 0, 0); }
             //else { count = 0; }
         }
 
@@ -38,13 +39,13 @@ namespace Sprint0.Sprite
         {
 
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 48, 48), sourceRec, myColor);
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X - 48, (int)location.Y, 48, 48), sourceRec, myColor);
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X + 48, (int)location.Y, 48, 48), sourceRec, myColor);
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X - 36, (int)location.Y - 48, 48, 48), sourceRec, myColor);
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X + 36, (int)location.Y - 48, 48, 48), sourceRec, myColor);
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X - 36, (int)location.Y + 48, 48, 48), sourceRec, myColor);
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X + 36, (int)location.Y + 48, 48, 48), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, IntegerHolder.fourtyEight, IntegerHolder.fourtyEight), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X - IntegerHolder.fourtyEight, (int)location.Y, IntegerHolder.fourtyEight, IntegerHolder.fourtyEight), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X + IntegerHolder.fourtyEight, (int)location.Y, IntegerHolder.fourtyEight, IntegerHolder.fourtyEight), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X - 36, (int)location.Y - IntegerHolder.fourtyEight, IntegerHolder.fourtyEight, IntegerHolder.fourtyEight), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X + 36, (int)location.Y - IntegerHolder.fourtyEight, IntegerHolder.fourtyEight, IntegerHolder.fourtyEight), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X - 36, (int)location.Y + IntegerHolder.fourtyEight, IntegerHolder.fourtyEight, IntegerHolder.fourtyEight), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X + 36, (int)location.Y + IntegerHolder.fourtyEight, IntegerHolder.fourtyEight, IntegerHolder.fourtyEight), sourceRec, myColor);
             mySpriteBatch.End();
         }
 

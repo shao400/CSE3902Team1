@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Sprint0.UtilityClass;
 
 namespace Sprint0
 {
@@ -23,7 +24,7 @@ namespace Sprint0
         {
             if (isDamaged) myColor = Color.Red;
             else myColor = Color.GreenYellow;
-            Rectangle desRectangle = new Rectangle((int)location.X, (int)location.Y, 45, 45);
+            Rectangle desRectangle = new Rectangle((int)location.X, (int)location.Y, IntegerHolder.FoutyFive, IntegerHolder.FoutyFive);
             mySpriteBatch.Begin();
             mySpriteBatch.Draw(myTexture, desRectangle, sourceRec, myColor, 0, new Vector2(0,0), SpriteEffects.FlipHorizontally, 0);
             mySpriteBatch.End();

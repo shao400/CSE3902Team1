@@ -16,7 +16,7 @@ namespace Sprint0.GameStates
     class Death : IGameState
     {
         SpriteBatch myBatch;
-        Rectangle DestRec = new Rectangle(0, 0, 768, 708);
+        Rectangle DestRec = new Rectangle(0, 0, IntegerHolder.SevenSixEight, 708);
         Rectangle SourceRec = new Rectangle(0, 0, 767, 430);
 
         ContentManager myContent;

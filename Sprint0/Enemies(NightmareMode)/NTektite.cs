@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
 using Sprint0.Collisions;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Enemies
 {   //Zina
@@ -29,7 +30,7 @@ namespace Sprint0.Enemies
             xPosition = x;
             yPosition = y;
             TektiteSprite = new NTektiteSprite();
-            destinationRec = new Rectangle(x, y, 45, 45);
+            destinationRec = new Rectangle(x, y, IntegerHolder.FoutyFive, IntegerHolder.FoutyFive);
             enemyAllCollision = new EnemyAllCollision(this);
             Born = SpriteFactory.EnemyBorn;
             Death = SpriteFactory.EnemyDeath;
@@ -47,17 +48,17 @@ namespace Sprint0.Enemies
 
         public  void Draw()
         {
-            if (counter < 34)
+            if (counter < IntegerHolder.ThirtyFour)
             {
                 Born.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
             }
 
-            if (this.GetHealth() > 0 && counter == 34)
+            if (this.GetHealth() > 0 && counter == IntegerHolder.ThirtyFour)
             {
                 Vector2 location = new Vector2(xPosition, yPosition);
                 TektiteSprite.Draw(location, false);
             }
-            if (counter < 70 && this.GetHealth() == 0)
+            if (counter < IntegerHolder.Seventy && this.GetHealth() == 0)
             {
                 Death.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
             }
@@ -65,12 +66,12 @@ namespace Sprint0.Enemies
 
         public  void Update()
         {
-            if (counter < 34)
+            if (counter < IntegerHolder.ThirtyFour)
             {
                 Born.Update();
                 counter++;
             }
-            else if (counter >= 34 && this.GetHealth() == 0 && counter < 70)
+            else if (counter >= IntegerHolder.ThirtyFour && this.GetHealth() == 0 && counter < IntegerHolder.Seventy)
             {
                 Death.Update();
                 counter++;
@@ -82,13 +83,13 @@ namespace Sprint0.Enemies
             yDif = targetRectangle.Y - yPosition;
             if (Math.Abs(xDif) > Math.Abs(yDif))
             {
-                if (xDif > 0) xPosition += 3;
-                else xPosition -= 3;
+                if (xDif > 0) xPosition += IntegerHolder.Three;
+                else xPosition -= IntegerHolder.Three;
             }
             else
             {
-                if (yDif > 0) yPosition += 3;
-                else yPosition -= 3;
+                if (yDif > 0) yPosition += IntegerHolder.Three;
+                else yPosition -= IntegerHolder.Three;
             }
             TektiteSprite.Update();
             }
@@ -96,7 +97,7 @@ namespace Sprint0.Enemies
 
         public Rectangle GetRectangle()
         {
-            destinationRec = new Rectangle(xPosition, yPosition, 35, 35);
+            destinationRec = new Rectangle(xPosition, yPosition, IntegerHolder.ThirtyFive, IntegerHolder.ThirtyFive);
             return destinationRec;
         }
 

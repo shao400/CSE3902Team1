@@ -33,7 +33,7 @@ namespace Sprint0.Projectile
         {
             if (currentStatus == status.shoot)
             { 
-                ShotDistance = 5; 
+                ShotDistance = IntegerHolder.Five; 
             }
 
             else if (currentStatus == status.explode && (int)this.player.GetRectangle().X - (int)position.X <15 && (int)this.player.GetRectangle().X - (int)position.X >-15 && (int)this.player.GetRectangle().Y - (int)position.Y<15&& (int)this.player.GetRectangle().Y - (int)position.Y >-15)
@@ -50,7 +50,7 @@ namespace Sprint0.Projectile
             }
             BoomrangSprite.Update();
             this.hitBox = new Rectangle(Convert.ToInt32(position.X), Convert.ToInt32(position.Y), 24, 24);
-            if (this.hitBox.X < 0 || this.hitBox.X > 720 || this.hitBox.Y < 168 || this.hitBox.Y > 648)
+            if (this.hitBox.X < 0 || this.hitBox.X > 720 || this.hitBox.Y < IntegerHolder.OneSixEight || this.hitBox.Y > 648)
             {
                 currentStatus = status.none;
             }
@@ -74,7 +74,7 @@ namespace Sprint0.Projectile
                 BoomrangSprite = SpriteFactory.PlayerBoomrangShootingRight;
                 position.X += ShotDistance;
             }
-            else if (myDirection == 3) {
+            else if (myDirection == IntegerHolder.Three) {
                 BoomrangSprite = SpriteFactory.PlayerBoomrangShootingLeft;
                 position.X -= ShotDistance;
             }
@@ -85,20 +85,20 @@ namespace Sprint0.Projectile
         {
             if (moveDistanceX > 0)
             {
-                position.X += 5;
+                position.X += IntegerHolder.Five;
             }
             else
             {
-                position.X -= 5;
+                position.X -= IntegerHolder.Five;
             }
 
             if (moveDistanceY > 0)
             {
-                position.Y += 5;
+                position.Y += IntegerHolder.Five;
             }
             else
             {
-                position.Y -= 5;
+                position.Y -= IntegerHolder.Five;
             }
             BoomrangSprite.Draw(position, false);
         }

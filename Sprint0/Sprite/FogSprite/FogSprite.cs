@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Sprint0.UtilityClass;
 
 namespace Sprint0
 {
@@ -9,7 +10,7 @@ namespace Sprint0
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
         Color myColor = Color.CornflowerBlue;
-        Rectangle sourceRec = new Rectangle(384, 348, 768, 696);
+        Rectangle sourceRec = new Rectangle(384, 348, IntegerHolder.SevenSixEight, 696);
         Rectangle destinationRec;
         public void Update()
         {

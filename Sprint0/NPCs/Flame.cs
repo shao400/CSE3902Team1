@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.NPCs
 {
@@ -18,7 +19,7 @@ namespace Sprint0.NPCs
             xPosition = x;
             yPosition = y;
             FlameSprite = SpriteFactory.NPCFlame;
-            destinationRec = new Rectangle(x, y, 45, 45);
+            destinationRec = new Rectangle(x, y, IntegerHolder.FoutyFive, IntegerHolder.FoutyFive);
         }
 
 

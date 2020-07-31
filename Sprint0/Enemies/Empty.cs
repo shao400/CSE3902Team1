@@ -2,6 +2,7 @@
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
 using System.Collections.Generic;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Enemies
 {
@@ -13,10 +14,9 @@ namespace Sprint0.Enemies
         private int xPosition;
         private int yPosition;
         private Rectangle destinationRec;
-        private int health = 5;
+        private int health = IntegerHolder.Five;
         private ISprite Born;
         private ISprite Death;
-        private int counter = 0;
 
         public Empty(int x, int y)
         {
@@ -24,7 +24,7 @@ namespace Sprint0.Enemies
             xPosition = x;
             yPosition = y;
             AquaSprite = new EnemyAquaSprite(x, y);
-            destinationRec = new Rectangle(x, y, 45, 60);
+            destinationRec = new Rectangle(x, y, IntegerHolder.FoutyFive, 60);
             Born = SpriteFactory.EnemyBorn;
             Death = SpriteFactory.EnemyDeath;
         }

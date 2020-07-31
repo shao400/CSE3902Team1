@@ -16,7 +16,7 @@ namespace Sprint0.GameStates
     class Win : IGameState
     {
         SpriteBatch myBatch;
-        Rectangle DestRec = new Rectangle(0, 0, 768, 708);
+        Rectangle DestRec = new Rectangle(0, 0, IntegerHolder.SevenSixEight, 708);
         Rectangle SourceRec = new Rectangle(0, 0, 509, 347);
         ContentManager myContent;
 

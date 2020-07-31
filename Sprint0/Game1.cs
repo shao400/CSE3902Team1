@@ -67,7 +67,7 @@ namespace Sprint0
 
             // TODO: Add your initialization logic here
             graphics.PreferredBackBufferHeight = 696;
-            graphics.PreferredBackBufferWidth = 768;
+            graphics.PreferredBackBufferWidth = IntegerHolder.SevenSixEight;
             graphics.ApplyChanges();
             //a way to modify screen size, better way probably exists
             sounds = new List<SoundEffect>();
@@ -158,7 +158,7 @@ namespace Sprint0
             stateList.Add(new HandbookState(this, spriteBatch, Content, hud));
             stateList.Add(new GoToHandbook(this, spriteBatch, Content, hud));
             stateList.Add(new BackToGame4Handbook(this, spriteBatch, Content, hud));
-            currentState = stateList[7];
+            currentState = stateList[IntegerHolder.Seven];
         }
 
         protected override void LoadContent()
@@ -191,7 +191,7 @@ namespace Sprint0
 
         protected override void Draw(GameTime gameTime)
         {
-            if (currentState == stateList[7])
+            if (currentState == stateList[IntegerHolder.Seven])
                 GraphicsDevice.Clear(Color.Pink);
           else
               GraphicsDevice.Clear(Color.CornflowerBlue);

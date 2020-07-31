@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Commands
 {
@@ -29,7 +30,7 @@ namespace Sprint0.Commands
             {
                 myGame.link.Arrow();
             }
-            else if (myGame.link.myInventory.currentItem == 3)
+            else if (myGame.link.myInventory.currentItem == IntegerHolder.Three)
             {
                 myGame.link.Boomrang();
             }

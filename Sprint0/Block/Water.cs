@@ -34,7 +34,7 @@ namespace Sprint0.Block
 
         public Rectangle GetRectangle()
         {
-            return new Rectangle(xpos, ypos, 48, 48);
+            return new Rectangle(xpos, ypos, IntegerHolder.fourtyEight, IntegerHolder.fourtyEight);
         }
 
     }

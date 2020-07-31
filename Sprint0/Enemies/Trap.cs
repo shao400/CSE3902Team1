@@ -2,6 +2,7 @@
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
 using System.Collections.Generic;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Enemies
 {
@@ -24,7 +25,7 @@ namespace Sprint0.Enemies
             xPosition = x;
             yPosition = y;
             TrapSprite = new EnemyTrapSprite(x, y);
-            destinationRec = new Rectangle(x, y, 45, 45);
+            destinationRec = new Rectangle(x, y, IntegerHolder.FoutyFive, IntegerHolder.FoutyFive);
             Born = SpriteFactory.EnemyBorn;
             Death = SpriteFactory.EnemyDeath;
         }
@@ -41,17 +42,17 @@ namespace Sprint0.Enemies
 
         public  void Draw()
         {
-            if (counter < 34)
+            if (counter < IntegerHolder.ThirtyFour)
             {
                 Born.Draw(new Vector2(destinationRec.X, yPosition), false);
             }
 
-            if (this.GetHealth() > 0 && counter == 34)
+            if (this.GetHealth() > 0 && counter == IntegerHolder.ThirtyFour)
             {
                 Vector2 location = new Vector2(xPosition, yPosition);
                     TrapSprite.Draw(location, false);
                 }
-            if (counter < 70 && this.GetHealth() == 0)
+            if (counter < IntegerHolder.Seventy && this.GetHealth() == 0)
             {
                 Death.Draw(new Vector2(destinationRec.X, yPosition), false);
             }
@@ -60,12 +61,12 @@ namespace Sprint0.Enemies
 
         public void Update()
         {
-            if (counter < 34)
+            if (counter < IntegerHolder.ThirtyFour)
             {
                 Born.Update();
                 counter++;
             }
-            else if (counter >= 34 && this.GetHealth() == 0 && counter < 70)
+            else if (counter >= IntegerHolder.ThirtyFour && this.GetHealth() == 0 && counter < IntegerHolder.Seventy)
             {
                 Death.Update();
                 counter++;

@@ -3,6 +3,7 @@ using Sprint0.Sprite;
 using Sprint0.Interfaces;
 using Sprint0.Player;
 using System.Collections.Generic;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Enemies
 {
@@ -16,7 +17,7 @@ namespace Sprint0.Enemies
         private Rectangle destinationRec;
         private Player1 _link;
         private Vector2 locationB;
-        private const int shotDistance = 4;
+        private const int shotDistance = IntegerHolder.Four;
         public int health = 1;
         private ISprite Born;
         private ISprite Death;
@@ -27,7 +28,7 @@ namespace Sprint0.Enemies
             xPosition = x;
             yPosition = y;
             OldmanSprite = new EnemyOldmanSprite(x, y);
-            destinationRec = new Rectangle(x, y, 45, 45);
+            destinationRec = new Rectangle(x, y, IntegerHolder.FoutyFive, IntegerHolder.FoutyFive);
             locationB = new Vector2(x, y);
             _link = link;
             Born = SpriteFactory.EnemyBorn;
@@ -46,18 +47,18 @@ namespace Sprint0.Enemies
 
         public void Draw()
         {
-            if (counter < 34)
+            if (counter < IntegerHolder.ThirtyFour)
             {
                 Born.Draw(new Vector2(destinationRec.X, yPosition), false);
             }
 
-            if (this.GetHealth() > 0 && counter == 34)
+            if (this.GetHealth() > 0 && counter == IntegerHolder.ThirtyFour)
             {
 
                 Vector2 locationO = new Vector2(xPosition, yPosition);
                 OldmanSprite.Draw(locationO, false);
             }
-            if (counter < 70 && this.GetHealth() == 0)
+            if (counter < IntegerHolder.Seventy && this.GetHealth() == 0)
             {
                 Death.Draw(new Vector2(destinationRec.X, yPosition), false);
             }
@@ -65,12 +66,12 @@ namespace Sprint0.Enemies
 
         public void Update()
         {
-            if (counter < 34)
+            if (counter < IntegerHolder.ThirtyFour)
             {
                 Born.Update();
                 counter++;
             }
-            else if (counter >= 34 && this.GetHealth() == 0 && counter < 70)
+            else if (counter >= IntegerHolder.ThirtyFour && this.GetHealth() == 0 && counter < IntegerHolder.Seventy)
             {
                 Death.Update();
                 counter++;

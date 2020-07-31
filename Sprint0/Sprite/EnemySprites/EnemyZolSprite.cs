@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Sprite
 {
@@ -15,7 +16,7 @@ namespace Sprint0.Sprite
 
         public EnemyZolSprite(int x, int y)
         {
-            destinationRec = new Rectangle(x, y, 45, 45);
+            destinationRec = new Rectangle(x, y, IntegerHolder.FoutyFive, IntegerHolder.FoutyFive);
         }
 
 
@@ -24,31 +25,31 @@ namespace Sprint0.Sprite
         {
             frame++;
             if (frame >= 20) frame = 0;
-            if (frame < 10 && !backmove)
+            if (frame < IntegerHolder.Ten && !backmove)
             {
                 sourceRec = new Rectangle(77, 11, 16, 16);
-                destinationRec.Y += 5;
+                destinationRec.Y += IntegerHolder.Five;
             }
-            else if (frame > 10 && !backmove)
+            else if (frame > IntegerHolder.Ten && !backmove)
             {
                 sourceRec = new Rectangle(94, 11, 16, 16);
-                destinationRec.Y += 5;
+                destinationRec.Y += IntegerHolder.Five;
             }
-            else if (frame < 10 && backmove)
+            else if (frame < IntegerHolder.Ten && backmove)
             {
 
                 sourceRec = new Rectangle(77, 11, 16, 16);
-                destinationRec.Y -= 5;
+                destinationRec.Y -= IntegerHolder.Five;
             }
-            else if (frame > 10 && backmove)
+            else if (frame > IntegerHolder.Ten && backmove)
             {
 
                 sourceRec = new Rectangle(94, 11, 16, 16);
-                destinationRec.Y -= 5;
+                destinationRec.Y -= IntegerHolder.Five;
             }
 
             if (destinationRec.Y > 555) backmove = true;
-            if (destinationRec.Y < 264) backmove = false;
+            if (destinationRec.Y < IntegerHolder.TwoSixFour) backmove = false;
         }
 
         public void LoadContent(SpriteBatch batch, Texture2D texture)

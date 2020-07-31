@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Commands
 {
@@ -17,7 +18,7 @@ namespace Sprint0.Commands
 
         public void Execute()
         {
-            if (myGame.currentState == myGame.stateList[7])
+            if (myGame.currentState == myGame.stateList[IntegerHolder.Seven])
                 myGame.currentState.NextOption();
         }
     }

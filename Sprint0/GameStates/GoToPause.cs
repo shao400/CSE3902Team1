@@ -21,8 +21,8 @@ namespace Sprint0.GameStates
         Game1 myGame;
         SpriteBatch myBatch;
         roomProperties myCurrentRoom;
-        Rectangle roomDestRec = new Rectangle(0, 168, 768, 528);
-        Rectangle pauseDestRec = new Rectangle(0, -528, 768, 528);
+        Rectangle roomDestRec = new Rectangle(0, IntegerHolder.OneSixEight, IntegerHolder.SevenSixEight, IntegerHolder.FiveTwoEight);
+        Rectangle pauseDestRec = new Rectangle(0, -IntegerHolder.FiveTwoEight, IntegerHolder.SevenSixEight, IntegerHolder.FiveTwoEight);
         Rectangle roomSourceRec;
         Rectangle pauseSourceRec = new Rectangle(0, 0, 491, 325);
         int frame = 0;
@@ -32,7 +32,7 @@ namespace Sprint0.GameStates
         int x = 0;
         int y = 0;
         int mapx = 450;
-        int mapy = 450-528;
+        int mapy = 450-IntegerHolder.FiveTwoEight;
 
         public GoToPause(Game1 game, SpriteBatch batch, ContentManager Content, Hud hud1)
         {
@@ -64,19 +64,19 @@ namespace Sprint0.GameStates
                 frame++;
                 if (frame < 89)
                 {
-                    roomDestRec.Y += 6;
-                    pauseDestRec.Y += 6;
-                    y += 6;
-                    mapy += 6;
+                    roomDestRec.Y += IntegerHolder.Six;
+                    pauseDestRec.Y += IntegerHolder.Six;
+                    y += IntegerHolder.Six;
+                    mapy += IntegerHolder.Six;
                 }
                 else
                 {
-                    myGame.currentState = myGame.stateList[4];
+                    myGame.currentState = myGame.stateList[IntegerHolder.Four];
                     frame = 0;
                     y = 0;
-                    mapy = 450 - 528;
-                    roomDestRec = new Rectangle(0, 168, 768, 528);
-                    pauseDestRec = new Rectangle(0, -528, 768, 528);
+                    mapy = 450 - IntegerHolder.FiveTwoEight;
+                    roomDestRec = new Rectangle(0, IntegerHolder.OneSixEight, IntegerHolder.SevenSixEight, IntegerHolder.FiveTwoEight);
+                    pauseDestRec = new Rectangle(0, -IntegerHolder.FiveTwoEight, IntegerHolder.SevenSixEight, IntegerHolder.FiveTwoEight);
                 }
                           
             

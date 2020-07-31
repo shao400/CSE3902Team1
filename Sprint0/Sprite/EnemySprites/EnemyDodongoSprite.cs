@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Sprite
 {
@@ -16,7 +17,7 @@ namespace Sprint0.Sprite
 
         public EnemyDodongoSprite(int x, int y)
         {
-            destinationRec = new Rectangle(x, y, 90, 45);
+            destinationRec = new Rectangle(x, y, IntegerHolder.Ninety, IntegerHolder.FoutyFive);
         }
 
 
@@ -25,23 +26,23 @@ namespace Sprint0.Sprite
         {
             frame++;
             if (frame >= 20) frame = 0;
-            if (frame < 10 && !backmove)
+            if (frame < IntegerHolder.Ten && !backmove)
             {
                 sourceRec = new Rectangle(69, 58, 32, 16);
                 destinationRec.X += 1;
             }
-            else if (frame > 10 && !backmove)
+            else if (frame > IntegerHolder.Ten && !backmove)
             {
                 sourceRec = new Rectangle(102, 58, 32, 16);
                 destinationRec.X += 1;
             }
-            else if (frame < 10 && backmove)
+            else if (frame < IntegerHolder.Ten && backmove)
             {
 
                 sourceRec = new Rectangle(69, 58, 32, 16);
                 destinationRec.X -= 1;
             }
-            else if (frame > 10 && backmove)
+            else if (frame > IntegerHolder.Ten && backmove)
             {
 
                 sourceRec = new Rectangle(102, 58, 32, 16);
@@ -49,7 +50,7 @@ namespace Sprint0.Sprite
             }
 
             if (destinationRec.X > 582) backmove = true;
-            if (destinationRec.X < 96) backmove = false;
+            if (destinationRec.X < IntegerHolder.NinetySix) backmove = false;
         }
 
         public void LoadContent(SpriteBatch batch, Texture2D texture)

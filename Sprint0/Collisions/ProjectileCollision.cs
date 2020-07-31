@@ -67,10 +67,10 @@ namespace Sprint0.Collisions
                         }
                     
                     }
-                    else if (thisProjectile.IsExplode() == 3 )
+                    else if (thisProjectile.IsExplode() == IntegerHolder.Three )
                     {
                         enemy.Damaged();
-                        thisProjectile.setExplo(3);
+                        thisProjectile.setExplo(IntegerHolder.Three);
                         if (enemy.GetHealth() == 0)
                         {
                             myPlayer.GetGame().currentRoom.itemList.Add(new Ruppy(enemy.GetRectangle().X, enemy.GetRectangle().Y));

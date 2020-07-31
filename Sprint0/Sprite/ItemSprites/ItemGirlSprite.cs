@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Sprite
 {
@@ -14,19 +15,19 @@ namespace Sprint0.Sprite
         private static Texture2D myTexture;
         Color myColor = Color.CornflowerBlue;
         Rectangle sourceRec;
-        Rectangle destinationRec = new Rectangle(300, 100, 30, 60);
+        Rectangle destinationRec = new Rectangle(300, IntegerHolder.OneOO, IntegerHolder.Thirty, 60);
         int frame = 0;
         public void Update()
         {
             frame++;
             if (frame >= 20) frame = 0;
-            if(frame < 10)
+            if(frame < IntegerHolder.Ten)
             {
-                sourceRec = new Rectangle(40, 0, 8, 16);
+                sourceRec = new Rectangle(IntegerHolder.Fourty, 0, IntegerHolder.Eight, 16);
             } 
             else
             {
-                sourceRec = new Rectangle(48, 0, 8, 16);
+                sourceRec = new Rectangle(IntegerHolder.fourtyEight, 0, IntegerHolder.Eight, 16);
             }
         }
 

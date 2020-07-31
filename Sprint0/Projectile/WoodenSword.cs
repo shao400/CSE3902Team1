@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
 using Sprint0.Player;
 using Sprint0.Sprite;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Projectile
 {
@@ -50,11 +51,11 @@ namespace Sprint0.Projectile
                 counter = 21;
             }
             if (currentStatus == status.stab) { this.GetPlayerLoction(); counter++; }
-            else if (currentStatus == status.shoot) { ShotDistance+=5;
-                this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), 35, 23);
+            else if (currentStatus == status.shoot) { ShotDistance+=IntegerHolder.Five;
+                this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), IntegerHolder.ThirtyFive, 23);
             }
             else if (currentStatus == status.explode) { }
-            if (this.hitBox.X <0 || this.hitBox.X > 720 || this.hitBox.Y < 168 || this.hitBox.Y >648)
+            if (this.hitBox.X <0 || this.hitBox.X > 720 || this.hitBox.Y < IntegerHolder.OneSixEight || this.hitBox.Y >648)
             {
                 currentStatus = status.none;
             }
@@ -80,7 +81,7 @@ namespace Sprint0.Projectile
                 WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingRight;
                 location = new Vector2(position.X + ShotDistance, position.Y);
             }
-            else if (myDirection == 3) { 
+            else if (myDirection == IntegerHolder.Three) { 
                 WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingLeft;
                 location = new Vector2(position.X - ShotDistance, position.Y);
             }
@@ -107,7 +108,7 @@ namespace Sprint0.Projectile
             }
             else if(currentStatus == status.stab)
             {
-                return 3;
+                return IntegerHolder.Three;
             }
             else
             {
@@ -141,7 +142,7 @@ namespace Sprint0.Projectile
             {
                 WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingUp;
                 location = new Vector2(position.X, position.Y - attackDistance);
-                location2 = new Vector2(position.X, position.Y - 45);
+                location2 = new Vector2(position.X, position.Y - IntegerHolder.FoutyFive);
             }
             else if (myDirection == 1)
             {
@@ -153,16 +154,16 @@ namespace Sprint0.Projectile
             {
                 WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingRight;
                 location = new Vector2(position.X + attackDistance, position.Y);
-                location2 = new Vector2(position.X + 45, position.Y);
+                location2 = new Vector2(position.X + IntegerHolder.FoutyFive, position.Y);
             }
-            else if (myDirection == 3)
+            else if (myDirection == IntegerHolder.Three)
             {
                 WoodenSwordSprite = SpriteFactory.PlayerWoodenSwordShootingLeft;
                 location = new Vector2(position.X - attackDistance, position.Y);
-                location2 = new Vector2(position.X - 45, position.Y);
+                location2 = new Vector2(position.X - IntegerHolder.FoutyFive, position.Y);
             }
             WoodenSwordSprite.Draw(location, false);
-            this.hitBox = new Rectangle(Convert.ToInt32(location2.X), Convert.ToInt32(location2.Y), 35, 23);
+            this.hitBox = new Rectangle(Convert.ToInt32(location2.X), Convert.ToInt32(location2.Y), IntegerHolder.ThirtyFive, 23);
             
         }
 

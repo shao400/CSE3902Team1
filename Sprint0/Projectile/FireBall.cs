@@ -2,6 +2,7 @@
 using Sprint0.Interfaces;
 using Microsoft.Xna.Framework;
 using Sprint0.Sprite;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Projectile
 {
@@ -34,7 +35,7 @@ namespace Sprint0.Projectile
         {
             counter++;
 
-            this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), 35, 23);
+            this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), IntegerHolder.ThirtyFive, 23);
 
             if (counter > 150)
             {
@@ -44,7 +45,7 @@ namespace Sprint0.Projectile
 
             }
             Console.WriteLine(this.hitBox);
-            if (this.hitBox.X < 0 || this.hitBox.X > 720 || this.hitBox.Y < 168 || this.hitBox.Y > 648 || this.IsExplode() == 1)
+            if (this.hitBox.X < 0 || this.hitBox.X > 720 || this.hitBox.Y < IntegerHolder.OneSixEight || this.hitBox.Y > 648 || this.IsExplode() == 1)
             {
                 counter = 0;
                 currentStatus = status.none;
@@ -70,10 +71,10 @@ namespace Sprint0.Projectile
                 ShotX = (ex - mPlayer.GetRectangle().X) / 27;
                 if (UpOrDown == 0)
                 {
-                    ShotY = (ey - mPlayer.GetRectangle().Y) / 27 - 10;
+                    ShotY = (ey - mPlayer.GetRectangle().Y) / 27 - IntegerHolder.Ten;
                 }else
                 {
-                    ShotY = (ey - mPlayer.GetRectangle().Y) / 27 + 10;
+                    ShotY = (ey - mPlayer.GetRectangle().Y) / 27 + IntegerHolder.Ten;
                 }
                 
                 energyBall = SpriteFactory.EnemyBlast;

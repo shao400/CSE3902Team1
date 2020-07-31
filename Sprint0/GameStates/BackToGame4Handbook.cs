@@ -20,15 +20,15 @@ namespace Sprint0.GameStates
         Game1 myGame;
         SpriteBatch myBatch;
         roomProperties myCurrentRoom;
-        Rectangle roomDestRec = new Rectangle(0, 696, 768, 528);
-        Rectangle handbookDestRec = new Rectangle(0, 0, 768, 528);
+        Rectangle roomDestRec = new Rectangle(0, 696, IntegerHolder.SevenSixEight, IntegerHolder.FiveTwoEight);
+        Rectangle handbookDestRec = new Rectangle(0, 0, IntegerHolder.SevenSixEight, IntegerHolder.FiveTwoEight);
         Rectangle roomSourceRec;
         Rectangle handbookSourceRec = new Rectangle(0, 0, 797, 536);
         int frame = 0;
         ContentManager myContent;
         private Hud myHud;
         int x = 0;
-        int y = 528;
+        int y = IntegerHolder.FiveTwoEight;
 
         public BackToGame4Handbook(Game1 game, SpriteBatch batch, ContentManager Content, Hud hud1)
         {
@@ -61,19 +61,19 @@ namespace Sprint0.GameStates
                 frame++;
                 if (frame < 89)
                 {
-                    roomDestRec.Y -= 6;
-                    handbookDestRec.Y -= 6;
-                    y -= 6;
+                    roomDestRec.Y -= IntegerHolder.Six;
+                    handbookDestRec.Y -= IntegerHolder.Six;
+                    y -= IntegerHolder.Six;
 
                 }
                 else
                 {
                     myGame.currentState = myGame.stateList[0];
                     frame = 0;
-                    y = 528;
+                    y = IntegerHolder.FiveTwoEight;
 
-                    roomDestRec = new Rectangle(0, 696, 768, 528);
-                    handbookDestRec = new Rectangle(0, 0, 768, 528);
+                    roomDestRec = new Rectangle(0, 696, IntegerHolder.SevenSixEight, IntegerHolder.FiveTwoEight);
+                    handbookDestRec = new Rectangle(0, 0, IntegerHolder.SevenSixEight, IntegerHolder.FiveTwoEight);
                 }
          
             

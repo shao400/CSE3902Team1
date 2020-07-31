@@ -31,14 +31,14 @@ namespace Sprint0.GameStates
         public void Draw()
         {
             myBatch.Begin();
-            myBatch.Draw(myContent.Load<Texture2D>("menu"), new Rectangle(114, 43, 540, 288), new Rectangle(37, 43, 180, 96), Color.White);
+            myBatch.Draw(myContent.Load<Texture2D>("menu"), new Rectangle(114, 43, 540, 288), new Rectangle(37, 43, 180, IntegerHolder.NinetySix), Color.White);
             for (int i = 0; i < options.Count; i++)
             {
                 Color color = Color.White;
                 if (i == currentOpt)
                     color = Color.Black;
                 
-                myBatch.DrawString(myFont, options[i], new Vector2(768 / 2 - myFont.MeasureString(options[i]).X / 2, 500 + i * 36), color);
+                myBatch.DrawString(myFont, options[i], new Vector2(IntegerHolder.SevenSixEight / 2 - myFont.MeasureString(options[i]).X / 2, 500 + i * 36), color);
             }
             myBatch.DrawString(myFont, StringHolder.Instruction, new Vector2(0, 678), Color.Black);
             myBatch.End();
@@ -86,7 +86,7 @@ namespace Sprint0.GameStates
                     myGame.link.GetSound().labyrinth();
                     break;
                 case 1:
-                    myGame.currentState = myGame.stateList[9];
+                    myGame.currentState = myGame.stateList[IntegerHolder.Nine];
                     myGame.link.GetSound().labyrinth();
                     break;
                 case 2:

@@ -71,7 +71,7 @@ namespace Sprint0.Collisions
                     if (block.getType() == StringHolder.BlockYType)
                     {
                         myPlayer.xAxis = IntegerHolder.linkInitialX;
-                        myPlayer.yAxis = 175;
+                        myPlayer.yAxis = IntegerHolder.oneSeventyFive;
                         myPlayer.GoRoom17();
                     }
                     break;//once link has collision with one block, no need to detect other blocks

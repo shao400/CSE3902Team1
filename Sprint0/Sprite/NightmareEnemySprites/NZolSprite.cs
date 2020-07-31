@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Sprite
 {
@@ -22,11 +23,11 @@ namespace Sprint0.Sprite
         {
             frame++;
             if (frame >= 20) frame = 0;
-            if (frame < 10)
+            if (frame < IntegerHolder.Ten)
             {
                 sourceRec = new Rectangle(77, 11, 16, 16);
             }
-            else if (frame > 10)
+            else if (frame > IntegerHolder.Ten)
             {
                 sourceRec = new Rectangle(94, 11, 16, 16);
             }
@@ -43,7 +44,7 @@ namespace Sprint0.Sprite
         {
 
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 45, 45), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, IntegerHolder.FoutyFive, IntegerHolder.FoutyFive), sourceRec, myColor);
             mySpriteBatch.End();
         }
     }

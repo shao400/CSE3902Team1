@@ -28,17 +28,17 @@ namespace Sprint0.Inventories
         public void pickingIcon(int moveCount)
         {
             // Use N to pick icon
-            Vector2 dest1 = new Vector2(238 + moveCountTot * 90, 90);
+            Vector2 dest1 = new Vector2(238 + moveCountTot * IntegerHolder.Ninety, IntegerHolder.Ninety);
             Vector2 dest2 = new Vector2(240, 320);
             moveCountTot += moveCount;
-            if (moveCountTot > 3)
+            if (moveCountTot > IntegerHolder.Three)
             {
-                dest1 = new Vector2(-120 + moveCountTot * 90, 153);
+                dest1 = new Vector2(-120 + moveCountTot * IntegerHolder.Ninety, 153);
             }
-            if (moveCountTot > 7)
+            if (moveCountTot > IntegerHolder.Seven)
             {
                 moveCountTot = 0;
-                dest1 = new Vector2(238 + moveCountTot * 90, 90);
+                dest1 = new Vector2(238 + moveCountTot * IntegerHolder.Ninety, IntegerHolder.Ninety);
             }
             pickboxSprite.Draw(dest1, false);
             drawInfo(moveCountTot).Draw(dest2, false);
@@ -58,19 +58,19 @@ namespace Sprint0.Inventories
                 case 2:
                     enemyInfoSprite = new InfoStalfosSprite();
                     break;
-                case 3:
+                case IntegerHolder.Three:
                     enemyInfoSprite = new InfoWallmasterSprite();
                     break;
-                case 4:
+                case IntegerHolder.Four:
                     enemyInfoSprite = new InfoMoblinSprite();
                     break;
-                case 5:
+                case IntegerHolder.Five:
                     enemyInfoSprite = new InfoPeahatSprite();
                     break;
-                case 6:
+                case IntegerHolder.Six:
                     enemyInfoSprite = new InfoTektiteSprite();
                     break;
-                case 7:
+                case IntegerHolder.Seven:
                     enemyInfoSprite = new InfoKeeseSprite();
                     break;
                 default:

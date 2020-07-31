@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Sprite
 {
@@ -22,13 +23,13 @@ namespace Sprint0.Sprite
         {
             frame++;
             if (frame >= 20) frame = 0;
-            if(frame < 10)
+            if(frame < IntegerHolder.Ten)
             {
-                sourceRec = new Rectangle(275, 3, 10, 10);
+                sourceRec = new Rectangle(275, IntegerHolder.Three, IntegerHolder.Ten, IntegerHolder.Ten);
             } 
-            else if(frame >10)
+            else if(frame >IntegerHolder.Ten)
             {
-                sourceRec = new Rectangle(275, 19, 10, 10);
+                sourceRec = new Rectangle(275, 19, IntegerHolder.Ten, IntegerHolder.Ten);
             }
          }
 
@@ -40,7 +41,7 @@ namespace Sprint0.Sprite
 
         public void Draw(Vector2 location, bool isDamaged)
         {
-            Rectangle destinationRec = new Rectangle((int)location.X, (int)location.Y, 30, 30);
+            Rectangle destinationRec = new Rectangle((int)location.X, (int)location.Y, IntegerHolder.Thirty, IntegerHolder.Thirty);
             mySpriteBatch.Begin();
             mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor);
             mySpriteBatch.End();

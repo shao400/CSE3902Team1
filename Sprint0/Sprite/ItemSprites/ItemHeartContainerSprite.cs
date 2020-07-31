@@ -14,7 +14,7 @@ namespace Sprint0.Sprite
         private static Texture2D myTexture;
         Color myColor = Color.CornflowerBlue;
         Rectangle sourceRec = new Rectangle(25, 1, 13, 13);
-        //Rectangle destinationRec = new Rectangle(300, 100, 32, 32);
+        //Rectangle destinationRec = new Rectangle(300, IntegerHolder.OneOO, 32, 32);
         public void Update()
         {
 

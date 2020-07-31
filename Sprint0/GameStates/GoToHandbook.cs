@@ -21,8 +21,8 @@ namespace Sprint0.GameStates
         Game1 myGame;
         SpriteBatch myBatch;
         roomProperties myCurrentRoom;
-        Rectangle roomDestRec = new Rectangle(0, 168, 768, 528);
-        Rectangle handbookDestRec = new Rectangle(0, -528, 768, 528);
+        Rectangle roomDestRec = new Rectangle(0, IntegerHolder.OneSixEight, IntegerHolder.SevenSixEight, IntegerHolder.FiveTwoEight);
+        Rectangle handbookDestRec = new Rectangle(0, -IntegerHolder.FiveTwoEight, IntegerHolder.SevenSixEight, IntegerHolder.FiveTwoEight);
         Rectangle roomSourceRec;
         Rectangle handbookSourceRec = new Rectangle(0, 0, 797, 536);
         int frame = 0;
@@ -63,9 +63,9 @@ namespace Sprint0.GameStates
                 frame++;
                 if (frame < 89)
                 {
-                    roomDestRec.Y += 6;
-                    handbookDestRec.Y += 6;
-                    y += 6;
+                    roomDestRec.Y += IntegerHolder.Six;
+                    handbookDestRec.Y += IntegerHolder.Six;
+                    y += IntegerHolder.Six;
 
                 }
                 else
@@ -74,8 +74,8 @@ namespace Sprint0.GameStates
                     frame = 0;
                     y = 0;
 
-                    roomDestRec = new Rectangle(0, 168, 768, 528);
-                    handbookDestRec = new Rectangle(0, -528, 768, 528);
+                    roomDestRec = new Rectangle(0, IntegerHolder.OneSixEight, IntegerHolder.SevenSixEight, IntegerHolder.FiveTwoEight);
+                    handbookDestRec = new Rectangle(0, -IntegerHolder.FiveTwoEight, IntegerHolder.SevenSixEight, IntegerHolder.FiveTwoEight);
                 }
                           
             

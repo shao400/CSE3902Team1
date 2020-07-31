@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using Sprint0.Enemies;
 using Sprint0.Interfaces;
 using Sprint0.Player;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Collisions
 {
@@ -37,7 +38,7 @@ namespace Sprint0.Collisions
                     //Special Case for Oldman
                     if (enemy.GetType() == oldman.GetType() && oldman.health!=0)
                     {
-                        myPlayer.takeDmg(4);
+                        myPlayer.takeDmg(IntegerHolder.Four);
                         enemy.Damaged();
                         if (enemy.GetHealth() == 0)
                         {
@@ -55,15 +56,15 @@ namespace Sprint0.Collisions
                         if (linkRectangle.Y > enemyRectangle.Y && linkRectangle.Y > 0) // from down
                         {
 
-                            if (myPlayer.yAxis < 552 - intersectionRectangle.Height)
+                            if (myPlayer.yAxis < IntegerHolder.FiveFiveTwo - intersectionRectangle.Height)
                             {
                                 myPlayer.yAxis += intersectionRectangle.Height;
                             }
                             else
                             {
-                                myPlayer.yAxis = 552;
+                                myPlayer.yAxis = IntegerHolder.FiveFiveTwo;
                             }
-                            if (myPlayer.yAxis < 512) { myPlayer.yAxis += 40; } else { myPlayer.yAxis = 552; }
+                            if (myPlayer.yAxis < IntegerHolder.FiveOneTwo) { myPlayer.yAxis += IntegerHolder.Fourty; } else { myPlayer.yAxis = IntegerHolder.FiveFiveTwo; }
                             
                         }
                         else if (linkRectangle.Y < enemyRectangle.Y) //from up
@@ -74,25 +75,25 @@ namespace Sprint0.Collisions
                             }
                             else
                             {
-                                myPlayer.yAxis = 264;
+                                myPlayer.yAxis = IntegerHolder.TwoSixFour;
                             }
                             
-                            if (myPlayer.yAxis > 304) { myPlayer.yAxis -= 40; } else { myPlayer.yAxis = 264; }
+                            if (myPlayer.yAxis > 304) { myPlayer.yAxis -= IntegerHolder.Fourty; } else { myPlayer.yAxis = IntegerHolder.TwoSixFour; }
                         }
                     }
                     else
                     {
                         if (linkRectangle.X > enemyRectangle.X)//from right
                         {
-                            if (myPlayer.xAxis < 624 - intersectionRectangle.Width)
+                            if (myPlayer.xAxis < IntegerHolder.SixTwoFour - intersectionRectangle.Width)
                             {
                                 myPlayer.xAxis += intersectionRectangle.Width;
                             }
                             else
                             {
-                                myPlayer.xAxis = 624;
+                                myPlayer.xAxis = IntegerHolder.SixTwoFour;
                             }
-                            if (myPlayer.xAxis < 584) { myPlayer.xAxis += 40; } else { myPlayer.xAxis = 624; }
+                            if (myPlayer.xAxis < 584) { myPlayer.xAxis += IntegerHolder.Fourty; } else { myPlayer.xAxis = IntegerHolder.SixTwoFour; }
                         }
                         else //from left
                         {
@@ -102,9 +103,9 @@ namespace Sprint0.Collisions
                             }
                             else
                             {
-                                myPlayer.xAxis = 96;
+                                myPlayer.xAxis = IntegerHolder.NinetySix;
                             }
-                            if (myPlayer.xAxis > 136) { myPlayer.xAxis -= 40; } else { myPlayer.xAxis = 96; }
+                            if (myPlayer.xAxis > 136) { myPlayer.xAxis -= IntegerHolder.Fourty; } else { myPlayer.xAxis = IntegerHolder.NinetySix; }
                         }
                     }
                 }

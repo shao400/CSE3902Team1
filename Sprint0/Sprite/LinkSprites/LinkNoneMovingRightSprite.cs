@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sprint0.UtilityClass;
 
 namespace Sprint0
 {
@@ -23,7 +24,7 @@ namespace Sprint0
             {
                 shownFrame = 0;
             }
-            if (shownFrame < 10)
+            if (shownFrame < IntegerHolder.Ten)
             {
                 frame = 0;
             }
@@ -42,13 +43,13 @@ namespace Sprint0
                 myColor = Color.GreenYellow;
             }
             if (frame == 0)
-                sourceRec = new Rectangle(35, 11, 16, 16);
+                sourceRec = new Rectangle(IntegerHolder.ThirtyFive, 11, 16, 16);
             if (frame == 1)
                 sourceRec = new Rectangle(52, 11, 16, 16);
             
 
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 45, 45), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, IntegerHolder.FoutyFive, IntegerHolder.FoutyFive), sourceRec, myColor);
             mySpriteBatch.End();
 
         }

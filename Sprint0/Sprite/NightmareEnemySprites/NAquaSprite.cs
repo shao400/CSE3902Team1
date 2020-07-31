@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Sprite
 {
@@ -22,11 +23,11 @@ namespace Sprint0.Sprite
         {
             frame++;
             if (frame >= 20) frame = 0;
-            if (frame < 10)
+            if (frame < IntegerHolder.Ten)
             {
                 sourceRec = new Rectangle(1, 11, 24, 32);
             }
-            else if (frame > 10)
+            else if (frame > IntegerHolder.Ten)
             {
                 sourceRec = new Rectangle(26, 11, 24, 32);
             }
@@ -44,7 +45,7 @@ namespace Sprint0.Sprite
             if (isDamaged == true) myEffect = SpriteEffects.FlipHorizontally;
             else myEffect = SpriteEffects.None;
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 45, 45), sourceRec, myColor, 0, new Vector2(0, 0), myEffect, 0);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, IntegerHolder.FoutyFive, IntegerHolder.FoutyFive), sourceRec, myColor, 0, new Vector2(0, 0), myEffect, 0);
             mySpriteBatch.End();
         }
     }

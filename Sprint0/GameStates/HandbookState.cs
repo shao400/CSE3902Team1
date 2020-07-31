@@ -21,7 +21,7 @@ namespace Sprint0.GameStates
     {
         Game1 myGame;
         SpriteBatch myBatch;
-        Rectangle pauseDestRec = new Rectangle(0, 0, 768, 528);
+        Rectangle pauseDestRec = new Rectangle(0, 0, IntegerHolder.SevenSixEight, IntegerHolder.FiveTwoEight);
         Rectangle pauseSourceRec = new Rectangle(0, 0, 797, 536);
         ContentManager myContent;
         Handbook myHandbook;
@@ -41,7 +41,7 @@ namespace Sprint0.GameStates
             myBatch.Begin();
             myBatch.Draw(myContent.Load<Texture2D>(StringHolder.Handbook), pauseDestRec, pauseSourceRec, Color.White); ;
             myBatch.End();
-            myHud.Draw(0, 528);
+            myHud.Draw(0, IntegerHolder.FiveTwoEight);
             myHandbook.pickingIcon(0);
 
 

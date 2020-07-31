@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Sprint0.UtilityClass;
 
 namespace Sprint0
 {
@@ -23,7 +24,7 @@ namespace Sprint0
             {
                 shownFrame = 0;
             }
-            if (shownFrame < 10)
+            if (shownFrame < IntegerHolder.Ten)
             {
                 frame = 0;
             }
@@ -35,7 +36,7 @@ namespace Sprint0
             switch (frame)
             {
                 case 0:
-                    sourceRec = new Rectangle(35, 11, 16, 16);
+                    sourceRec = new Rectangle(IntegerHolder.ThirtyFive, 11, 16, 16);
                     
                     break;
                 case 1:
@@ -58,7 +59,7 @@ namespace Sprint0
             }
             SpriteEffects effect = SpriteEffects.FlipHorizontally;
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 45, 45), sourceRec, myColor, 0, new Vector2(0,0), effect, 0);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, IntegerHolder.FoutyFive, IntegerHolder.FoutyFive), sourceRec, myColor, 0, new Vector2(0,0), effect, 0);
             mySpriteBatch.End();
 
         }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Sprite
 {
@@ -14,7 +15,7 @@ namespace Sprint0.Sprite
 
         public EnemyWallmasterSprite(int x, int y)
         {
-            destinationRec = new Rectangle(x, y, 45, 45);
+            destinationRec = new Rectangle(x, y, IntegerHolder.FoutyFive, IntegerHolder.FoutyFive);
         }
 
 
@@ -23,11 +24,11 @@ namespace Sprint0.Sprite
         {
             frame++;
             if (frame >= 20) frame = 0;
-            if (frame < 10)
+            if (frame < IntegerHolder.Ten)
             {
                 sourceRec = new Rectangle(393, 11, 16, 16);
             }
-            else if (frame > 10)
+            else if (frame > IntegerHolder.Ten)
             {
                 sourceRec = new Rectangle(410, 11, 16, 16);
             }

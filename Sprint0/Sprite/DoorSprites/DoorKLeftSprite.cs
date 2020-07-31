@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Sprite
 {
@@ -12,7 +13,7 @@ namespace Sprint0.Sprite
     { 
         private static SpriteBatch spritebatch;
         private static Texture2D texture;
-        Rectangle sourceRec = new Rectangle(515, 427, 24, 33);
+        Rectangle sourceRec = new Rectangle(515, 427, 24, IntegerHolder.ThirtyThree);
         
 
         public void Update()

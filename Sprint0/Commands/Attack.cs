@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Commands
 {
@@ -18,11 +19,11 @@ namespace Sprint0.Commands
         public void Execute()
 
         {
-            if (myGame.currentState == myGame.stateList[4])
+            if (myGame.currentState == myGame.stateList[IntegerHolder.Four])
             {
                 myGame.link.myInventory.pickingItem(-1);
             }
-            else if (myGame.currentState == myGame.stateList[8])
+            else if (myGame.currentState == myGame.stateList[IntegerHolder.Eight])
             {
                 myGame.link.myStock.buyItem();
             }

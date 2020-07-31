@@ -39,7 +39,7 @@ namespace Sprint0.Collisions
                 {
                     if (npc.GetType() == merchant.GetType())
                     {
-                        myGame.currentState = myGame.stateList[8];
+                        myGame.currentState = myGame.stateList[IntegerHolder.Eight];
                     }
                     // check the collison occuring direction
                     if ((intersectionRectangle.Width >= intersectionRectangle.Height)) // from up or down

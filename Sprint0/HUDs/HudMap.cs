@@ -2,6 +2,7 @@
 using Sprint0.Interfaces;
 using Sprint0.Sprite;
 using System.Collections.Generic;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.HUDs
 {
@@ -40,98 +41,98 @@ namespace Sprint0.HUDs
                 room.Draw(location, false);
                 location = restore;
             }
-            if (discovered.Contains(3))
+            if (discovered.Contains(IntegerHolder.Three))
             {
                 location.X += dx;
                 location.Y -= dy;
                 room.Draw(location, false);
                 location = restore;
             }
-            if (discovered.Contains(4))
+            if (discovered.Contains(IntegerHolder.Four))
             {
                 location.Y -= 2 * dy;
                 room.Draw(location, false);
                 location = restore;
             }
-            if (discovered.Contains(5))
+            if (discovered.Contains(IntegerHolder.Five))
             {
                 location.X += dx;
                 location.Y -= 2 * dy;          
                 room.Draw(location, false);
                 location = restore;
             }
-            if (discovered.Contains(6))
+            if (discovered.Contains(IntegerHolder.Six))
             {
                 location.X += 2 * dx;
                 location.Y -= 2 * dy;             
                 room.Draw(location, false);
                 location = restore;
             }
-            if (discovered.Contains(7))
+            if (discovered.Contains(IntegerHolder.Seven))
             {
                 location.X -= dx;
-                location.Y -= 3 * dy;             
+                location.Y -= IntegerHolder.Three * dy;             
                 room.Draw(location, false);
                 location = restore;
             }
-            if (discovered.Contains(8))
+            if (discovered.Contains(IntegerHolder.Eight))
             {
-                location.Y -= 3 * dy;
+                location.Y -= IntegerHolder.Three * dy;
                 room.Draw(location, false);
                 location = restore;
             }
-            if (discovered.Contains(9))
+            if (discovered.Contains(IntegerHolder.Nine))
             {
                 location.X += dx;
-                location.Y -= 3 * dy;
+                location.Y -= IntegerHolder.Three * dy;
                 room.Draw(location, false);
                 location = restore;
             }
-            if (discovered.Contains(10))
+            if (discovered.Contains(IntegerHolder.Ten))
             {
                 location.X += 2*dx;
-                location.Y -= 3 * dy;
+                location.Y -= IntegerHolder.Three * dy;
                 room.Draw(location, false);
                 location = restore;
             }
             if (discovered.Contains(11))
             {
-                location.X += 3*dx;
-                location.Y -= 3 * dy;
+                location.X += IntegerHolder.Three*dx;
+                location.Y -= IntegerHolder.Three * dy;
                 room.Draw(location, false);
                 location = restore;
             }
             if (discovered.Contains(12))
             {
                 location.X += dx;
-                location.Y -= 4 * dy;
+                location.Y -= IntegerHolder.Four * dy;
                 room.Draw(location, false);
                 location = restore;
             }
             if (discovered.Contains(13))
             {
-                location.X += 3*dx;
-                location.Y -= 4 * dy;
+                location.X += IntegerHolder.Three*dx;
+                location.Y -= IntegerHolder.Four * dy;
                 room.Draw(location, false);
                 location = restore;
             }
             if (discovered.Contains(14))
             {
-                location.X += 4*dx;
-                location.Y -= 4 * dy;
+                location.X += IntegerHolder.Four*dx;
+                location.Y -= IntegerHolder.Four * dy;
                 room.Draw(location, false);
                 location = restore;
             }
             if (discovered.Contains(15))
             {
-                location.Y -= 5 * dy;
+                location.Y -= IntegerHolder.Five * dy;
                 room.Draw(location, false);
                 location = restore;
             }
             if (discovered.Contains(16))
             {
                 location.X += dx;
-                location.Y -= 5 * dy;
+                location.Y -= IntegerHolder.Five * dy;
                 room.Draw(location, false);
                 location = restore;
             }
@@ -141,8 +142,8 @@ namespace Sprint0.HUDs
         {
             //position trans logic still need change
             const int posModi1 = 16;
-            const int posModi2 = 7;
-            const int posModi3 = 5;
+            const int posModi2 = IntegerHolder.Seven;
+            const int posModi3 = IntegerHolder.Five;
             Vector2 locationP = new Vector2(x+posModi1, y+posModi2);       
             if(_myGame.link.HaveMapOrCompass()[0] == true) staticMapDraw(x+posModi3, y+posModi3);
 
@@ -159,88 +160,88 @@ namespace Sprint0.HUDs
                 locationP.X += 2*dx;
                 point.Draw(locationP, false);
             }
-            else if (_myGame.currentRoom.roomID == 3)
+            else if (_myGame.currentRoom.roomID == IntegerHolder.Three)
             {
                 locationP.X += dx;
                 locationP.Y -= dy;
                 point.Draw(locationP, false);
             }
-            else if (_myGame.currentRoom.roomID == 4)
+            else if (_myGame.currentRoom.roomID == IntegerHolder.Four)
             {
                 locationP.Y -= 2*dy;
                 point.Draw(locationP, false);
             }
-            else if (_myGame.currentRoom.roomID == 5)
+            else if (_myGame.currentRoom.roomID == IntegerHolder.Five)
             {
                 locationP.X += dx;
                 locationP.Y -= 2*dy;
                 point.Draw(locationP, false);
             }
-            else if (_myGame.currentRoom.roomID == 6)
+            else if (_myGame.currentRoom.roomID == IntegerHolder.Six)
             {
                 locationP.X += 2*dx;
                 locationP.Y -= 2*dy;
                 point.Draw(locationP, false);
             }
-            else if (_myGame.currentRoom.roomID == 7)
+            else if (_myGame.currentRoom.roomID == IntegerHolder.Seven)
             {
                 locationP.X -= dx;
-                locationP.Y -= 3*dy;
+                locationP.Y -= IntegerHolder.Three*dy;
                 point.Draw(locationP, false);
             }
-            else if (_myGame.currentRoom.roomID == 8)
+            else if (_myGame.currentRoom.roomID == IntegerHolder.Eight)
             {
-                locationP.Y -= 3*dy;
+                locationP.Y -= IntegerHolder.Three*dy;
                 point.Draw(locationP, false);
             }
-            else if (_myGame.currentRoom.roomID == 9)
+            else if (_myGame.currentRoom.roomID == IntegerHolder.Nine)
             {
                 locationP.X += dx;
-                locationP.Y -= 3*dy;
+                locationP.Y -= IntegerHolder.Three*dy;
                 point.Draw(locationP, false);
             }
-            else if (_myGame.currentRoom.roomID == 10)
+            else if (_myGame.currentRoom.roomID == IntegerHolder.Ten)
             {
                 locationP.X += 2*dx;
-                locationP.Y -= 3 * dy;
+                locationP.Y -= IntegerHolder.Three * dy;
                 point.Draw(locationP, false);
             }
             else if (_myGame.currentRoom.roomID == 11)
             {
-                locationP.X += 3*dx;
-                locationP.Y -= 3 * dy;
+                locationP.X += IntegerHolder.Three*dx;
+                locationP.Y -= IntegerHolder.Three * dy;
                 point.Draw(locationP, false);
             }
             else if (_myGame.currentRoom.roomID == 12)
             {
                 locationP.X += dx;
-                locationP.Y -= 4 * dy;
+                locationP.Y -= IntegerHolder.Four * dy;
                 point.Draw(locationP, false);
             }
             else if (_myGame.currentRoom.roomID ==13)
             {
-                locationP.X += 3*dx;
-                locationP.Y -= 4 * dy;
+                locationP.X += IntegerHolder.Three*dx;
+                locationP.Y -= IntegerHolder.Four * dy;
                 point.Draw(locationP, false);
             }
             else if (_myGame.currentRoom.roomID == 14)
             {
-                locationP.X += 4 * dx;
-                locationP.Y -= 4 * dy;
+                locationP.X += IntegerHolder.Four * dx;
+                locationP.Y -= IntegerHolder.Four * dy;
                 point.Draw(locationP, false);
             }
             else if (_myGame.currentRoom.roomID == 15)
             {
-                locationP.Y -= 5 * dy;
+                locationP.Y -= IntegerHolder.Five * dy;
                 point.Draw(locationP, false);
             }
             else if (_myGame.currentRoom.roomID == 16)
             {
                 locationP.X += dx;
-                locationP.Y -= 5 * dy;
+                locationP.Y -= IntegerHolder.Five * dy;
                 point.Draw(locationP, false);
             }
-            Vector2 locationTarget = new Vector2(x+posModi1+4*dx,y+posModi2-4*dy);
+            Vector2 locationTarget = new Vector2(x+posModi1+IntegerHolder.Four*dx,y+posModi2-IntegerHolder.Four*dy);
             if (_myGame.link.HaveMapOrCompass()[1]) point.Draw(locationTarget,false);
         }
      

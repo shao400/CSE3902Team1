@@ -23,8 +23,8 @@ namespace Sprint0.GameStates
     {
         Game1 myGame;
         SpriteBatch myBatch;     
-        Rectangle storeDestRec = new Rectangle(0, 168, 768, 528);
-        Rectangle storeSourceRec = new Rectangle(0, 0, 768, 529);
+        Rectangle storeDestRec = new Rectangle(0, IntegerHolder.OneSixEight, IntegerHolder.SevenSixEight, IntegerHolder.FiveTwoEight);
+        Rectangle storeSourceRec = new Rectangle(0, 0, IntegerHolder.SevenSixEight, 529);
         ContentManager myContent;
         StoreStock myStock;
         private Hud myHud;

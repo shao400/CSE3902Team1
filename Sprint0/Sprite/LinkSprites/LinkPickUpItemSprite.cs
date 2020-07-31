@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sprint0.UtilityClass;
 
 namespace Sprint0
 {
@@ -20,7 +21,7 @@ namespace Sprint0
             frame++;
 
             switch (frame) { 
-                case 10:
+                case IntegerHolder.Ten:
                     sourceRec = new Rectangle(214, 11, 13, 16);
                     break;
                 case 20:
@@ -43,7 +44,7 @@ namespace Sprint0
             }
 
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, 45, 45), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, IntegerHolder.FoutyFive, IntegerHolder.FoutyFive), sourceRec, myColor);
             mySpriteBatch.End();
 
         }

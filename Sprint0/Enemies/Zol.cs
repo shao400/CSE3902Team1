@@ -2,6 +2,7 @@
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
 using System.Collections.Generic;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Enemies
 {
@@ -15,7 +16,7 @@ namespace Sprint0.Enemies
         private int frame = 0;
         bool backmove = false;
         private Rectangle destinationRec;
-        private int health = 5;
+        private int health = IntegerHolder.Five;
         private ISprite Born;
         private ISprite Death;
         private int counter = 0;
@@ -26,7 +27,7 @@ namespace Sprint0.Enemies
             xPosition = x;
             yPosition = y;
             ZolSprite = new EnemyZolSprite(x, y);
-            destinationRec = new Rectangle(x, y, 45, 45);
+            destinationRec = new Rectangle(x, y, IntegerHolder.FoutyFive, IntegerHolder.FoutyFive);
             Born = SpriteFactory.EnemyBorn;
             Death = SpriteFactory.EnemyDeath;
         }
@@ -43,17 +44,17 @@ namespace Sprint0.Enemies
 
         public void Draw()
         {
-            if (counter < 34)
+            if (counter < IntegerHolder.ThirtyFour)
             {
                 Born.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
             }
 
-            if (this.GetHealth() > 0 && counter == 34)
+            if (this.GetHealth() > 0 && counter == IntegerHolder.ThirtyFour)
             {
                 Vector2 location = new Vector2(xPosition, yPosition);
                 ZolSprite.Draw(location, false);
             }
-            if (counter < 70 && this.GetHealth() == 0)
+            if (counter < IntegerHolder.Seventy && this.GetHealth() == 0)
             {
                 Death.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
             }
@@ -61,12 +62,12 @@ namespace Sprint0.Enemies
 
         public void Update()
         {
-            if (counter < 34)
+            if (counter < IntegerHolder.ThirtyFour)
             {
                 Born.Update();
                 counter++;
             }
-            else if (counter >= 34 && this.GetHealth() == 0 && counter < 70)
+            else if (counter >= IntegerHolder.ThirtyFour && this.GetHealth() == 0 && counter < IntegerHolder.Seventy)
             {
                 Death.Update();
                 counter++;
@@ -75,25 +76,25 @@ namespace Sprint0.Enemies
             {
                 frame++;
                 if (frame >= 20) frame = 0;
-                if (frame < 10 && !backmove)
+                if (frame < IntegerHolder.Ten && !backmove)
                 {
-                    destinationRec.Y += 5;
+                    destinationRec.Y += IntegerHolder.Five;
                 }
-                else if (frame > 10 && !backmove)
+                else if (frame > IntegerHolder.Ten && !backmove)
                 {
-                    destinationRec.Y += 5;
+                    destinationRec.Y += IntegerHolder.Five;
                 }
-                else if (frame < 10 && backmove)
+                else if (frame < IntegerHolder.Ten && backmove)
                 {
-                    destinationRec.Y -= 5;
+                    destinationRec.Y -= IntegerHolder.Five;
                 }
-                else if (frame > 10 && backmove)
+                else if (frame > IntegerHolder.Ten && backmove)
                 {
-                    destinationRec.Y -= 5;
+                    destinationRec.Y -= IntegerHolder.Five;
                 }
 
                 if (destinationRec.Y > 555) backmove = true;
-                if (destinationRec.Y < 264) backmove = false;
+                if (destinationRec.Y < IntegerHolder.TwoSixFour) backmove = false;
                 ZolSprite.Update();
             }
         }

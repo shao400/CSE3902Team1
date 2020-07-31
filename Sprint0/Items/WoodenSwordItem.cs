@@ -7,6 +7,7 @@ using System.Windows.Media;
 using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
 using Sprint0.Sprite;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Items
 {
@@ -27,7 +28,7 @@ namespace Sprint0.Items
             xSize = 32;
             ySize = 32;
             picked = false;
-            price = 30;
+            price = IntegerHolder.Thirty;
         }
         public void Draw()
         {

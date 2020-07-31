@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Sprint0.Player;
 using Sprint0.Collisions;
 using Sprint0.Projectile;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Enemies
 {
@@ -35,7 +36,7 @@ namespace Sprint0.Enemies
             xPosition = x;
             yPosition = y;
             AquaSprite = new EnemyAquaSprite(x, y);
-            destinationRec = new Rectangle(x, y, 100, 100);
+            destinationRec = new Rectangle(x, y, IntegerHolder.OneOO, IntegerHolder.OneOO);
             Born = SpriteFactory.EnemyBorn;
             Death = SpriteFactory.EnemyDeath;
             energyBall = new EnergyBall(this, myPlayer);
@@ -59,12 +60,12 @@ namespace Sprint0.Enemies
         }
         public void Draw()
         {
-            if (counter < 34)
+            if (counter < IntegerHolder.ThirtyFour)
             {
                 Born.Draw(new Vector2(destinationRec.X, yPosition), false);
             }
 
-            if (this.GetHealth() > 0 && counter == 34)
+            if (this.GetHealth() > 0 && counter == IntegerHolder.ThirtyFour)
             {
                 energyBall.Shoot();
                 fireBallDown.Shoot();
@@ -72,15 +73,15 @@ namespace Sprint0.Enemies
                 Vector2 location = new Vector2(xPosition, yPosition);
                 AquaSprite.Draw(location, false);
             }
-            if (counter < 70 && this.GetHealth() == 0)
+            if (counter < IntegerHolder.Seventy && this.GetHealth() == 0)
             {
                 Death.Draw(new Vector2(destinationRec.X, yPosition), false);
             }
-            if (counter == 33)
+            if (counter == IntegerHolder.ThirtyThree)
             {
                 myPlayer.GetSound().bossScream1();
             }
-            if (counter == 35)
+            if (counter == IntegerHolder.ThirtyFive)
             {
                 myPlayer.GetSound().bossScream3();
             }
@@ -88,12 +89,12 @@ namespace Sprint0.Enemies
 
         public void Update()
         {
-            if (counter < 34)
+            if (counter < IntegerHolder.ThirtyFour)
             {
                 Born.Update();
                 counter++;
             }
-            else if (counter >= 34 && this.GetHealth() == 0 && counter < 70)
+            else if (counter >= IntegerHolder.ThirtyFour && this.GetHealth() == 0 && counter < IntegerHolder.Seventy)
             {
                 Death.Update();
                 counter++;
@@ -107,7 +108,7 @@ namespace Sprint0.Enemies
                 projectileCollision2.ProjectileLinkCollisionTest();
                 projectileCollision3.ProjectileLinkCollisionTest();
                 frame++;
-                if (frame >= 5) frame = 0;
+                if (frame >= IntegerHolder.Five) frame = 0;
                 if (frame < 2 && !backmove)
                 {
                     destinationRec.X += 1;

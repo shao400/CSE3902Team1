@@ -50,11 +50,11 @@ namespace Sprint0.Projectile
                 currentStatus = status.none;
                 counter = 21;
             }
-            if (currentStatus == status.shoot) { ShotDistance+=5; }
+            if (currentStatus == status.shoot) { ShotDistance+=IntegerHolder.Five; }
             else if (currentStatus == status.explode) { }
-            this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), 45, 23);
+            this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), IntegerHolder.FoutyFive, 23);
             ArrowSprite.Update();
-            if (this.hitBox.X < 0 || this.hitBox.X > 720 || this.hitBox.Y < 168 || this.hitBox.Y > 648)
+            if (this.hitBox.X < 0 || this.hitBox.X > 720 || this.hitBox.Y < IntegerHolder.OneSixEight || this.hitBox.Y > 648)
             {
                 currentStatus = status.none;
             }
@@ -78,7 +78,7 @@ namespace Sprint0.Projectile
                 ArrowSprite = SpriteFactory.PlayerArrowShootingRight;
                 location = new Vector2(position.X + ShotDistance, position.Y);
             }
-            else if (myDirection == 3) { 
+            else if (myDirection == IntegerHolder.Three) { 
                 ArrowSprite = SpriteFactory.PlayerArrowShootingLeft;
                 location = new Vector2(position.X - ShotDistance, position.Y);
             }

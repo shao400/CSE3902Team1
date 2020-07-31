@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sprint0.UtilityClass;
 
 namespace Sprint0
 {
@@ -29,7 +30,7 @@ namespace Sprint0
                 myColor = Color.GreenYellow;
             }
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y,45,45), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y,IntegerHolder.FoutyFive,IntegerHolder.FoutyFive), sourceRec, myColor);
             mySpriteBatch.End();
 
         }

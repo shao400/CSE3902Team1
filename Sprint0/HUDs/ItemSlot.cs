@@ -2,7 +2,7 @@
 using Sprint0.Interfaces;
 using Sprint0.Player;
 using Sprint0.Sprite;
-
+using Sprint0.UtilityClass;
 namespace Sprint0.HUDs
 {
     public class ItemSlot : IHud
@@ -30,8 +30,8 @@ namespace Sprint0.HUDs
         public void DrawRuppyC(int x, int y)
         {
             Vector2 locationR = new Vector2(x, y);
-            int HundredC = _link.itemCount()[0] / 100;
-            int remain = _link.itemCount()[0] % 100;
+            int HundredC = _link.itemCount()[0] / IntegerHolder.OneOO;
+            int remain = _link.itemCount()[0] % IntegerHolder.OneOO;
             switch (HundredC) {
                 case 0:
                     Zero.Draw(locationR, false);
@@ -42,30 +42,30 @@ namespace Sprint0.HUDs
                 case 2:
                     Two.Draw(locationR, false);
                     break;
-                case 3:
+                case IntegerHolder.Three:
                     Three.Draw(locationR, false);
                     break;
-                case 4:
+                case IntegerHolder.Four:
                     Four.Draw(locationR, false);
                     break;
-                case 5:
+                case IntegerHolder.Five:
                     Five.Draw(locationR, false);
                     break;
-                case 6:
+                case IntegerHolder.Six:
                     Six.Draw(locationR, false);
                     break;
-                case 7:
+                case IntegerHolder.Seven:
                     Seven.Draw(locationR, false);
                     break;
-                case 8:
+                case IntegerHolder.Eight:
                     Eight.Draw(locationR, false);
                     break;
-                case 9:
+                case IntegerHolder.Nine:
                     Nine.Draw(locationR, false);
                     break;
             }
-            int TenC = remain / 10;
-            remain = remain % 10;
+            int TenC = remain / IntegerHolder.Ten;
+            remain = remain % IntegerHolder.Ten;
             locationR.X += dx;
             switch (TenC)
             {
@@ -78,25 +78,25 @@ namespace Sprint0.HUDs
                 case 2:
                     Two.Draw(locationR, false);
                     break;
-                case 3:
+                case IntegerHolder.Three:
                     Three.Draw(locationR, false);
                     break;
-                case 4:
+                case IntegerHolder.Four:
                     Four.Draw(locationR, false);
                     break;
-                case 5:
+                case IntegerHolder.Five:
                     Five.Draw(locationR, false);
                     break;
-                case 6:
+                case IntegerHolder.Six:
                     Six.Draw(locationR, false);
                     break;
-                case 7:
+                case IntegerHolder.Seven:
                     Seven.Draw(locationR, false);
                     break;
-                case 8:
+                case IntegerHolder.Eight:
                     Eight.Draw(locationR, false);
                     break;
-                case 9:
+                case IntegerHolder.Nine:
                     Nine.Draw(locationR, false);
                     break;
             }
@@ -113,25 +113,25 @@ namespace Sprint0.HUDs
                 case 2:
                     Two.Draw(locationR, false);
                     break;
-                case 3:
+                case IntegerHolder.Three:
                     Three.Draw(locationR, false);
                     break;
-                case 4:
+                case IntegerHolder.Four:
                     Four.Draw(locationR, false);
                     break;
-                case 5:
+                case IntegerHolder.Five:
                     Five.Draw(locationR, false);
                     break;
-                case 6:
+                case IntegerHolder.Six:
                     Six.Draw(locationR, false);
                     break;
-                case 7:
+                case IntegerHolder.Seven:
                     Seven.Draw(locationR, false);
                     break;
-                case 8:
+                case IntegerHolder.Eight:
                     Eight.Draw(locationR, false);
                     break;
-                case 9:
+                case IntegerHolder.Nine:
                     Nine.Draw(locationR, false);
                     break;
             }
@@ -142,8 +142,8 @@ namespace Sprint0.HUDs
             Vector2 locationKB = new Vector2(x, y);
             X.Draw(locationKB,false);
             locationKB.X += dx;
-            int TenC = _link.itemCount()[C] / 10;
-            int remain = _link.itemCount()[C] % 10;
+            int TenC = _link.itemCount()[C] / IntegerHolder.Ten;
+            int remain = _link.itemCount()[C] % IntegerHolder.Ten;
             switch (TenC)
             {
                 case 0:
@@ -155,25 +155,25 @@ namespace Sprint0.HUDs
                 case 2:
                     Two.Draw(locationKB, false);
                     break;
-                case 3:
+                case IntegerHolder.Three:
                     Three.Draw(locationKB, false);
                     break;
-                case 4:
+                case IntegerHolder.Four:
                     Four.Draw(locationKB, false);
                     break;
-                case 5:
+                case IntegerHolder.Five:
                     Five.Draw(locationKB, false);
                     break;
-                case 6:
+                case IntegerHolder.Six:
                     Six.Draw(locationKB, false);
                     break;
-                case 7:
+                case IntegerHolder.Seven:
                     Seven.Draw(locationKB, false);
                     break;
-                case 8:
+                case IntegerHolder.Eight:
                     Eight.Draw(locationKB, false);
                     break;
-                case 9:
+                case IntegerHolder.Nine:
                     Nine.Draw(locationKB, false);
                     break;
             }
@@ -190,25 +190,25 @@ namespace Sprint0.HUDs
                 case 2:
                     Two.Draw(locationKB, false);
                     break;
-                case 3:
+                case IntegerHolder.Three:
                     Three.Draw(locationKB, false);
                     break;
-                case 4:
+                case IntegerHolder.Four:
                     Four.Draw(locationKB, false);
                     break;
-                case 5:
+                case IntegerHolder.Five:
                     Five.Draw(locationKB, false);
                     break;
-                case 6:
+                case IntegerHolder.Six:
                     Six.Draw(locationKB, false);
                     break;
-                case 7:
+                case IntegerHolder.Seven:
                     Seven.Draw(locationKB, false);
                     break;
-                case 8:
+                case IntegerHolder.Eight:
                     Eight.Draw(locationKB, false);
                     break;
-                case 9:
+                case IntegerHolder.Nine:
                     Nine.Draw(locationKB, false);
                     break;
             }
@@ -217,7 +217,7 @@ namespace Sprint0.HUDs
 
         public void Draw(int x, int y)
         {
-            const int dy1 = 48;
+            const int dy1 = IntegerHolder.fourtyEight;
             const int dy2 = 24;
             DrawRuppyC(x, y);
             DrawKeyBombC(x, y+dy1,1 );

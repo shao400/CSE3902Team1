@@ -4,6 +4,7 @@ using Sprint0.Player;
 using Sprint0.Sprite;
 using System.Collections.Generic;
 using System;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Inventories
 
@@ -122,7 +123,7 @@ namespace Sprint0.Inventories
                     currentItem = 2;
                     break;
                 case "Sprint0.Items.Boomerang":
-                    currentItem = 3;
+                    currentItem = IntegerHolder.Three;
                     break;
                 default:
                     currentItem = 0;

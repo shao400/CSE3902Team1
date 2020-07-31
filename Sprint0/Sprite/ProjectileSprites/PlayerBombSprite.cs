@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Sprite
 {
@@ -22,7 +23,7 @@ namespace Sprint0.Sprite
         public PlayerBombSprite(SpriteEffects effect)
         {
             myEffect = effect;
-            sourceRec = new Rectangle(364, 226, 8, 14);
+            sourceRec = new Rectangle(364, 226, IntegerHolder.Eight, 14);
         }
 
 

@@ -4,6 +4,7 @@ using Sprint0.Interfaces;
 using System;
 using System.Collections.Generic;
 using Sprint0.Collisions;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Enemies
 {
@@ -26,10 +27,10 @@ namespace Sprint0.Enemies
         private EnemyAllCollision enemyAllCollision;
         private List<Boolean> UdLrCollid;
         private List<IBlock> blocksSet;
-        private const int md = 3;
+        private const int md = IntegerHolder.Three;
         private int counter = 0;
         private Boolean chaseLink = false;
-        private int health = 3; 
+        private int health = IntegerHolder.Three; 
         private ISprite Born;
         private ISprite Death;
         private int counter2 = 0;
@@ -39,7 +40,7 @@ namespace Sprint0.Enemies
             xPosition = x;
             yPosition = y;
             MoblinSprite = new NMoblinSprite();
-            destinationRec = new Rectangle(x, y, 35, 35);
+            destinationRec = new Rectangle(x, y, IntegerHolder.ThirtyFive, IntegerHolder.ThirtyFive);
             enemyAllCollision = new EnemyAllCollision(this);
             blocksSet = blocks;
             UdLrCollid = new List<bool>();
@@ -59,17 +60,17 @@ namespace Sprint0.Enemies
 
         public void Draw()
         {
-            if (counter2 < 34)
+            if (counter2 < IntegerHolder.ThirtyFour)
             {
                 Born.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
             }
 
-            if (this.GetHealth() > 0 && counter2 == 34)
+            if (this.GetHealth() > 0 && counter2 == IntegerHolder.ThirtyFour)
             {
                 Vector2 location = new Vector2(xPosition, yPosition);
                 MoblinSprite.Draw(location, leftmove);
             }
-            if (counter2 < 70 && this.GetHealth() == 0)
+            if (counter2 < IntegerHolder.Seventy && this.GetHealth() == 0)
             {
                 Death.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
             }
@@ -77,12 +78,12 @@ namespace Sprint0.Enemies
 
         public void Update()
         {
-            if (counter2 < 34)
+            if (counter2 < IntegerHolder.ThirtyFour)
             {
                 Born.Update();
                 counter2++;
             }
-            else if (counter2 >= 34 && this.GetHealth() == 0 && counter2 < 70)
+            else if (counter2 >= IntegerHolder.ThirtyFour && this.GetHealth() == 0 && counter2 < IntegerHolder.Seventy)
             {
                 Death.Update();
                 counter2++;
@@ -163,7 +164,7 @@ namespace Sprint0.Enemies
         {
             const int infi = 99999;
             int h = 0;
-            if (!enemyAllCollision.BlockCollisionDetect(blocksSet, x,y,45) && x>99 & x<669 && y<597 && y>267)
+            if (!enemyAllCollision.BlockCollisionDetect(blocksSet, x,y,IntegerHolder.FoutyFive) && x>99 & x<669 && y<597 && y>267)
             {
                 h += Math.Abs(targetRectangle.X - x);
                 h += Math.Abs(targetRectangle.Y - y);
@@ -191,7 +192,7 @@ namespace Sprint0.Enemies
         }
         public Rectangle GetRectangle()
         {
-            destinationRec = new Rectangle(xPosition, yPosition, 35, 35);
+            destinationRec = new Rectangle(xPosition, yPosition, IntegerHolder.ThirtyFive, IntegerHolder.ThirtyFive);
             return destinationRec;
         }
 

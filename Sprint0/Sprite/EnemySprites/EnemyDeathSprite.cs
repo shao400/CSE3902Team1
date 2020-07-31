@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
-
+using Sprint0.UtilityClass;
 namespace Sprint0.Sprite
 {
     public class EnemyDeathSprite : ISprite
@@ -13,9 +13,9 @@ namespace Sprint0.Sprite
         int frame = 0;
         public void Update()
         {
-            if (frame < 5) { sourceRec= new Rectangle(118, 189, 8, 8); }
-            if (frame < 10) { sourceRec= new Rectangle(118, 189, 0, 0); }
-            if (frame < 15) { sourceRec= new Rectangle(118, 189, 8, 8); frame = 0; }
+            if (frame < IntegerHolder.Five) { sourceRec= new Rectangle(118, 189, IntegerHolder.Eight, IntegerHolder.Eight); }
+            if (frame < IntegerHolder.Ten) { sourceRec= new Rectangle(118, 189, 0, 0); }
+            if (frame < 15) { sourceRec= new Rectangle(118, 189, IntegerHolder.Eight, IntegerHolder.Eight); frame = 0; }
         }
 
         public void LoadContent(SpriteBatch batch, Texture2D texture)
@@ -26,7 +26,7 @@ namespace Sprint0.Sprite
 
         public void Draw(Vector2 location, bool isDamaged)
         {
-            destinationRec = new Rectangle((int)location.X,(int)location.Y,70,70);
+            destinationRec = new Rectangle((int)location.X,(int)location.Y, IntegerHolder.Seventy, IntegerHolder.Seventy);
             mySpriteBatch.Begin();
             mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor);
             mySpriteBatch.End();

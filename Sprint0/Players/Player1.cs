@@ -67,9 +67,9 @@ namespace Sprint0.Player
             width = widthG;
             height = heightG;
             sound = s;
-            MaxHealth = 6;
+            MaxHealth = IntegerHolder.Six;
             hp = MaxHealth;
-            ruppyCount = 100;
+            ruppyCount = IntegerHolder.OneOO;
             bombCount = 0;
             keyCount = 50;
             GetMap = false;
@@ -155,28 +155,28 @@ namespace Sprint0.Player
             {
                 if (xAxis > 0)
                 {
-                    xAxis -= 5;
+                    xAxis -= IntegerHolder.Five;
                 }
             }
             else if (currentFacing == facing.right && currentStatus == status.walking)
             {
                 if (xAxis < 720)
                 {
-                    xAxis += 5;
+                    xAxis += IntegerHolder.Five;
                 }
             }
             else if (currentFacing == facing.down && currentStatus == status.walking)
             {
                 if (yAxis < 648)
                 {
-                    yAxis += 5;
+                    yAxis += IntegerHolder.Five;
                 }
             }
             else if (currentFacing == facing.up && currentStatus == status.walking)
             {
-                if (yAxis > 168)
+                if (yAxis > IntegerHolder.OneSixEight)
                 {
-                    yAxis -= 5;
+                    yAxis -= IntegerHolder.Five;
                 }
             }
             currentSprite.Update();
@@ -186,19 +186,19 @@ namespace Sprint0.Player
             {
                 if (xAxis <= 0)
                 {
-                    xAxis = 624;
+                    xAxis = IntegerHolder.SixTwoFour;
                     myGame.currentState = myGame.stateList[1];
                     myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[2]);
                 }
                 else if (xAxis >= 720)
                 {
-                    xAxis = 96;
+                    xAxis = IntegerHolder.NinetySix;
                     myGame.currentState = myGame.stateList[1];
-                    myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[3]);
+                    myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[IntegerHolder.Three]);
                 }
-                else if (yAxis <= 168)
+                else if (yAxis <= IntegerHolder.OneSixEight)
                 {
-                    yAxis = 552;
+                    yAxis = IntegerHolder.FiveFiveTwo;
                     if (myGame.currentRoom == myGame.roomList[17])
                     {
                         xAxis = 339;
@@ -210,7 +210,7 @@ namespace Sprint0.Player
                 }
                 else if (yAxis >= 648)
                 {
-                    yAxis = 264;
+                    yAxis = IntegerHolder.TwoSixFour;
                     myGame.currentState = myGame.stateList[1];
                     myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[1]);
                 }
@@ -219,32 +219,32 @@ namespace Sprint0.Player
             {
                 if (xAxis <= 0)
                 {
-                    xAxis = 624;
-                    myGame.currentState = myGame.stateList[10];
+                    xAxis = IntegerHolder.SixTwoFour;
+                    myGame.currentState = myGame.stateList[IntegerHolder.Ten];
                     myGame.currentState.loadNextRoom(myGame.NcurrentRoom.Connectors[2]);
                 }
                 else if (xAxis >= 720)
                 {
-                    xAxis = 96;
-                    myGame.currentState = myGame.stateList[10];
-                    myGame.currentState.loadNextRoom(myGame.NcurrentRoom.Connectors[3]);
+                    xAxis = IntegerHolder.NinetySix;
+                    myGame.currentState = myGame.stateList[IntegerHolder.Ten];
+                    myGame.currentState.loadNextRoom(myGame.NcurrentRoom.Connectors[IntegerHolder.Three]);
                 }
-                else if (yAxis <= 168)
+                else if (yAxis <= IntegerHolder.OneSixEight)
                 {
-                    yAxis = 552;
+                    yAxis = IntegerHolder.FiveFiveTwo;
                     if (myGame.NcurrentRoom == myGame.NroomList[17])
                     {
                         xAxis = 339;
                         yAxis = 411;
                     }
-                    myGame.currentState = myGame.stateList[10];
+                    myGame.currentState = myGame.stateList[IntegerHolder.Ten];
                     myGame.currentState.loadNextRoom(myGame.NcurrentRoom.Connectors[0]);
 
                 }
                 else if (yAxis >= 648)
                 {
-                    yAxis = 264;
-                    myGame.currentState = myGame.stateList[10];
+                    yAxis = IntegerHolder.TwoSixFour;
+                    myGame.currentState = myGame.stateList[IntegerHolder.Ten];
                     myGame.currentState.loadNextRoom(myGame.NcurrentRoom.Connectors[1]);
                 }
             }
@@ -305,7 +305,7 @@ namespace Sprint0.Player
                 if (currentFacing == facing.up) { currentAttack = new WoodenSword(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
                 else if (currentFacing == facing.down) { currentAttack = new WoodenSword(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
                 else if (currentFacing == facing.right) { currentAttack = new WoodenSword(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
-                else if (currentFacing == facing.left) { currentAttack = new WoodenSword(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
+                else if (currentFacing == facing.left) { currentAttack = new WoodenSword(this, IntegerHolder.Three); currentSprite = SpriteFactory.LinkUsingLeft; }
                 currentAttack.Stab();
                 currentAttack.setExplo(2);
                 sound.swordSlash();
@@ -322,7 +322,7 @@ namespace Sprint0.Player
                 if (currentFacing == facing.up) { currentProjectile = new WoodenSword(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
                 else if (currentFacing == facing.down) { currentProjectile = new WoodenSword(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
                 else if (currentFacing == facing.right) { currentProjectile = new WoodenSword(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
-                else if (currentFacing == facing.left) { currentProjectile = new WoodenSword(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
+                else if (currentFacing == facing.left) { currentProjectile = new WoodenSword(this, IntegerHolder.Three); currentSprite = SpriteFactory.LinkUsingLeft; }
                 currentProjectile.setExplo(0);
                 currentProjectile.Shoot();
                 sound.swordShoot();
@@ -351,7 +351,7 @@ namespace Sprint0.Player
                 if (currentFacing == facing.up) { secondProjectile = new Arrow(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
                 else if (currentFacing == facing.down) { secondProjectile = new Arrow(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
                 else if (currentFacing == facing.right) { secondProjectile = new Arrow(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
-                else if (currentFacing == facing.left) { secondProjectile = new Arrow(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
+                else if (currentFacing == facing.left) { secondProjectile = new Arrow(this, IntegerHolder.Three); currentSprite = SpriteFactory.LinkUsingLeft; }
                 secondProjectile.setExplo(0);
                 secondProjectile.Shoot();
             }
@@ -365,7 +365,7 @@ namespace Sprint0.Player
                 if (currentFacing == facing.up) { secondProjectile = new Boomrang(this, 0); currentSprite = SpriteFactory.LinkUsingUp; }
                 else if (currentFacing == facing.down) { secondProjectile = new Boomrang(this, 1); currentSprite = SpriteFactory.LinkUsingDown; }
                 else if (currentFacing == facing.right) { secondProjectile = new Boomrang(this, 2); currentSprite = SpriteFactory.LinkUsingRight; }
-                else if (currentFacing == facing.left) { secondProjectile = new Boomrang(this, 3); currentSprite = SpriteFactory.LinkUsingLeft; }
+                else if (currentFacing == facing.left) { secondProjectile = new Boomrang(this, IntegerHolder.Three); currentSprite = SpriteFactory.LinkUsingLeft; }
                 secondProjectile.setExplo(0);
                 secondProjectile.Shoot();
             }
@@ -384,7 +384,7 @@ namespace Sprint0.Player
                     {
                         sound.pause();
                         sound.linkDie();
-                        myGame.currentState = myGame.stateList[5];
+                        myGame.currentState = myGame.stateList[IntegerHolder.Five];
                     }
                 }
 
@@ -471,7 +471,7 @@ namespace Sprint0.Player
                     y = 384;
                     break;
                 case facing.right:
-                    x = 45;
+                    x = IntegerHolder.FoutyFive;
                     y = 384;
                     break;
             }
@@ -520,7 +520,7 @@ namespace Sprint0.Player
             {
                 case facing.up:
                     x = 336;
-                    y = 168;
+                    y = IntegerHolder.OneSixEight;
                     otherX = 336;
                     otherY = 600;
                     break;
@@ -528,7 +528,7 @@ namespace Sprint0.Player
                     x = 336;
                     y = 600;
                     otherX = 336;
-                    otherY = 168;
+                    otherY = IntegerHolder.OneSixEight;
                     break;
                 case facing.left:
                     x = 0;
@@ -614,7 +614,7 @@ namespace Sprint0.Player
                 case facing.left:
                     return 2;
                 case facing.right:
-                    return 3;
+                    return IntegerHolder.Three;
             }
             return rt;
         }
@@ -662,7 +662,7 @@ namespace Sprint0.Player
         {
             sound.getTriforce();
             sound.pause();
-            myGame.currentState = myGame.stateList[6];
+            myGame.currentState = myGame.stateList[IntegerHolder.Six];
         }
 
 
@@ -672,8 +672,8 @@ namespace Sprint0.Player
             this.currentProjectile = new WoodenSword(this, 2);
             this.currentStatus = status.standing;
             this.currentSprite = SpriteFactory.LinkNoneStandingRight;
-            xAxis = 100;
-            yAxis = 100;
+            xAxis = IntegerHolder.OneOO;
+            yAxis = IntegerHolder.OneOO;
             ruppyCount = 0;
             keyCount = 0;
             bombCount = 0;
@@ -714,7 +714,7 @@ namespace Sprint0.Player
             projectileCollision2.ProjectileEnemiesCollisionTest(enemies, sound);
             projectileCollision3 = new ProjectileCollision(currentAttack, this);
             projectileCollision3.ProjectileEnemiesCollisionTest(enemies, sound);
-            currentAttack.setExplo(3);
+            currentAttack.setExplo(IntegerHolder.Three);
         }
 
       

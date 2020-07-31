@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Sprite
 {
@@ -30,8 +31,8 @@ namespace Sprint0.Sprite
 
         public void Draw(Vector2 location, bool isDamaged)
         {
-            Rectangle destinationRec = new Rectangle((int)location.X, (int)location.Y, 32, 40);
-            sourceRec = new Rectangle(10, 215, 8, 10);
+            Rectangle destinationRec = new Rectangle((int)location.X, (int)location.Y, 32, IntegerHolder.Fourty);
+            sourceRec = new Rectangle(IntegerHolder.Ten, 215, IntegerHolder.Eight, IntegerHolder.Ten);
             mySpriteBatch.Begin();
             mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor);
             mySpriteBatch.End();

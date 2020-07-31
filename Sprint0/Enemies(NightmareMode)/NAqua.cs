@@ -5,6 +5,7 @@ using System;
 using Sprint0.Collisions;
 using System.Collections.Generic;
 using Sprint0.Projectile;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Enemies
 {
@@ -32,7 +33,7 @@ namespace Sprint0.Enemies
             yPosition = y;
             initialX = x;
             AquaSprite = new EnemyAquaSprite(x, y);
-            destinationRec = new Rectangle(xPosition, yPosition, 100, 100);
+            destinationRec = new Rectangle(xPosition, yPosition, IntegerHolder.OneOO, IntegerHolder.OneOO);
             energyBall = new EnergyBall(this, myPlayer);
             projectileCollision = new ProjectileCollision(energyBall, myPlayer);
             enemyAllCollision = new EnemyAllCollision(this);
@@ -53,26 +54,26 @@ namespace Sprint0.Enemies
         }
         public void Draw()
         {
-            if (counter < 34)
+            if (counter < IntegerHolder.ThirtyFour)
             {
                 Born.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
                 
             }
-            if (counter == 33)
+            if (counter == IntegerHolder.ThirtyThree)
             {
                 myPlayer.GetSound().bossScream1();
             }
-            if (counter == 35)
+            if (counter == IntegerHolder.ThirtyFive)
             {
                 myPlayer.GetSound().bossScream3();
             }
-            if (this.GetHealth() > 0 && counter == 34)
+            if (this.GetHealth() > 0 && counter == IntegerHolder.ThirtyFour)
             {
                 energyBall.Shoot();
                 Vector2 location = new Vector2(xPosition, yPosition);
                 AquaSprite.Draw(location, false);
             }
-            if (counter < 70 && this.GetHealth() == 0)
+            if (counter < IntegerHolder.Seventy && this.GetHealth() == 0)
             {
                 Death.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
             }
@@ -80,12 +81,12 @@ namespace Sprint0.Enemies
 
         public void Update()
         {
-            if (counter < 34)
+            if (counter < IntegerHolder.ThirtyFour)
             {
                 Born.Update();
                 counter++;
             }
-            else if (counter >= 34 && this.GetHealth() == 0 && counter < 70)
+            else if (counter >= IntegerHolder.ThirtyFour && this.GetHealth() == 0 && counter < IntegerHolder.Seventy)
             {
                 Death.Update();
                 counter++;
@@ -95,13 +96,13 @@ namespace Sprint0.Enemies
                 energyBall.Update();
                 projectileCollision.ProjectileLinkCollisionTest();
                 targetRec = myPlayer.GetRectangle();
-                if (xPosition - targetRec.X < 250 && targetRec.Y > destinationRec.Y && targetRec.Y < destinationRec.Y + 100 && xPosition > initialX - 250)
+                if (xPosition - targetRec.X < 250 && targetRec.Y > destinationRec.Y && targetRec.Y < destinationRec.Y + IntegerHolder.OneOO && xPosition > initialX - 250)
                 {
-                    xPosition -= 5;
+                    xPosition -= IntegerHolder.Five;
                 }
-                else if (targetRec.Y <= destinationRec.Y || targetRec.Y >= destinationRec.Y + 100)
+                else if (targetRec.Y <= destinationRec.Y || targetRec.Y >= destinationRec.Y + IntegerHolder.OneOO)
                 {
-                    if (xPosition < initialX) xPosition += 3;
+                    if (xPosition < initialX) xPosition += IntegerHolder.Three;
                 }
 
                 AquaSprite.Update();
@@ -110,7 +111,7 @@ namespace Sprint0.Enemies
 
         public Rectangle GetRectangle()
         {
-            destinationRec = new Rectangle(xPosition, yPosition, 100, 100);
+            destinationRec = new Rectangle(xPosition, yPosition, IntegerHolder.OneOO, IntegerHolder.OneOO);
             return destinationRec;
         }
 

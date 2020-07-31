@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
 using Sprint0.Player;
-
+using Sprint0.UtilityClass;
 namespace Sprint0.HUDs
 {
     public class Hud : IHud
@@ -27,7 +27,7 @@ namespace Sprint0.HUDs
             frame.Draw(x, y);
             Hpbar.Draw(x + 529, y + 72);
             WpSlot.Draw(x + 460, y + 72);
-            itemSlot.Draw(x+288 ,y+48);
+            itemSlot.Draw(x+288 ,y+IntegerHolder.fourtyEight);
             map.Draw(x + 83, y + 118);
         }
 

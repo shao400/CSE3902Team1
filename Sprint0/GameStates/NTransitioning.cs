@@ -20,7 +20,7 @@ namespace Sprint0.GameStates
         SpriteBatch myBatch;
         roomProperties myNCurrentRoom;
         int myNextNRoom;
-        Rectangle DestRec = new Rectangle(0, 168, 768, 528);
+        Rectangle DestRec = new Rectangle(0, IntegerHolder.OneSixEight, IntegerHolder.SevenSixEight, IntegerHolder.FiveTwoEight);
         Rectangle currentSourceRec;
         int frame = 0;
         ContentManager myContent;
@@ -54,10 +54,10 @@ namespace Sprint0.GameStates
         public void Update()
         {
             frame++;
-            if (frame >= 33)
+            if (frame >= IntegerHolder.ThirtyThree)
             {
                 myGame.NcurrentRoom = myGame.NroomList[myNextNRoom];
-                myGame.currentState = myGame.stateList[9];
+                myGame.currentState = myGame.stateList[IntegerHolder.Nine];
                 frame = 0;
                 currentSourceRec = myGame.NcurrentRoom.sourceRec;
                 myNCurrentRoom = myGame.NcurrentRoom;
@@ -68,28 +68,28 @@ namespace Sprint0.GameStates
                     case 0:
                         if (frame % 2 == 0)
                         {
-                            currentSourceRec.Y -= 6;
+                            currentSourceRec.Y -= IntegerHolder.Six;
                         }
                         else
                         {
-                            currentSourceRec.Y -= 5;
+                            currentSourceRec.Y -= IntegerHolder.Five;
                         }
                         break;
                     case 1:
                         if (frame % 2 == 0)
                         {
-                            currentSourceRec.Y += 6;
+                            currentSourceRec.Y += IntegerHolder.Six;
                         }
                         else
                         {
-                            currentSourceRec.Y += 5;
+                            currentSourceRec.Y += IntegerHolder.Five;
                         }
                         break;
                     case 2:
-                        currentSourceRec.X -= 8;
+                        currentSourceRec.X -= IntegerHolder.Eight;
                         break;
-                    case 3:
-                        currentSourceRec.X += 8;
+                    case IntegerHolder.Three:
+                        currentSourceRec.X += IntegerHolder.Eight;
                         break;
                 }
             }

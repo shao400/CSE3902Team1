@@ -5,6 +5,7 @@ using Sprint0.Interfaces;
 using Sprint0.Player;
 using Sprint0.Collisions;
 using System.Collections.Generic;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.Enemies
 {
@@ -27,7 +28,7 @@ namespace Sprint0.Enemies
             xPosition = x;
             yPosition = y;
             StalfosSprite = new NStalfosSprite();
-            destinationRec = new Rectangle(x, y, 45, 45);
+            destinationRec = new Rectangle(x, y, IntegerHolder.FoutyFive, IntegerHolder.FoutyFive);
             enemyAllCollision = new EnemyAllCollision(this);
             Born = SpriteFactory.EnemyBorn;
             Death = SpriteFactory.EnemyDeath;
@@ -45,17 +46,17 @@ namespace Sprint0.Enemies
         }
         public void Draw()
         {
-            if (counter < 34)
+            if (counter < IntegerHolder.ThirtyFour)
             {
                 Born.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
             }
 
-            if (this.GetHealth() > 0 && counter == 34)
+            if (this.GetHealth() > 0 && counter == IntegerHolder.ThirtyFour)
             {
                 Vector2 location = new Vector2(xPosition, yPosition);
                 StalfosSprite.Draw(location, leftmove);
             }
-            if (counter < 70 && this.GetHealth() == 0)
+            if (counter < IntegerHolder.Seventy && this.GetHealth() == 0)
             {
                 Death.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
             }
@@ -63,12 +64,12 @@ namespace Sprint0.Enemies
 
         public void Update()
         {
-            if (counter < 34)
+            if (counter < IntegerHolder.ThirtyFour)
             {
                 Born.Update();
                 counter++;
             }
-            else if (counter >= 34 && this.GetHealth() == 0 && counter < 70)
+            else if (counter >= IntegerHolder.ThirtyFour && this.GetHealth() == 0 && counter < IntegerHolder.Seventy)
             {
                 Death.Update();
                 counter++;
@@ -103,7 +104,7 @@ namespace Sprint0.Enemies
 
         public Rectangle GetRectangle()
         {
-            destinationRec = new Rectangle(xPosition, yPosition, 35, 35);
+            destinationRec = new Rectangle(xPosition, yPosition, IntegerHolder.ThirtyFive, IntegerHolder.ThirtyFive);
             return destinationRec;
         }
 

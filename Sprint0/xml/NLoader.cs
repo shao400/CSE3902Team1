@@ -144,13 +144,13 @@ namespace Sprint0.xml
                             //break;                       
                         case "DoorKLeft":
                             doors.Add(new DoorKLeft(xpos, ypos));
-                            blocks.Add(new Lock(45, 384));
+                            blocks.Add(new Lock(IntegerHolder.FoutyFive, 384));
                             doors.Add(new KeyholeLeft(0, 384));
                             break;
                         case "DoorKUp":
                             doors.Add(new DoorKUp(xpos, ypos));
                             blocks.Add(new Lock(357, 212));
-                            doors.Add(new KeyholeUp(336, 168));
+                            doors.Add(new KeyholeUp(336, IntegerHolder.OneSixEight));
                             break;
                         case "DoorKDown":
                             doors.Add(new DoorKDown(xpos, ypos));

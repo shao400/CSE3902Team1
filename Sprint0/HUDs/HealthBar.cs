@@ -2,6 +2,7 @@
 using Sprint0.Interfaces;
 using Sprint0.Player;
 using Sprint0.Sprite;
+using Sprint0.UtilityClass;
 
 namespace Sprint0.HUDs
 {
@@ -43,11 +44,11 @@ namespace Sprint0.HUDs
         {
             const int Max2H = 1;
             const int Max3H = 2;
-            const int Max4H = 3;
-            const int Max5H = 4;
-            const int Max6H = 5;
-            const int Max7H = 6;
-            const int Max8H = 7;
+            const int Max4H = IntegerHolder.Three;
+            const int Max5H = IntegerHolder.Four;
+            const int Max6H = IntegerHolder.Five;
+            const int Max7H = IntegerHolder.Six;
+            const int Max8H = IntegerHolder.Seven;
 
             Vector2 location = new Vector2(x, y);
             cover.Draw(location,false);
