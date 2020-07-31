@@ -1,0 +1,10 @@
+Chuwen Sun
+7/31/2020
+Sprint5
+LinkNpcCollision.cs
+Main Author: Lufei Ouyang
+Time: 10 min
+
+The code quality is high, linkages are clear, using foreach to iterate through all the elements in the npc list to see if the specific
+NPC has collision with Link so the game create specific reaction. And the use of if-else statement produced the different possibilities
+of different directions of the collisions.

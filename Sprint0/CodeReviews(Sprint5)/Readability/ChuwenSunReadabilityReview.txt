@@ -1,0 +1,9 @@
+Chuwen Sun
+7/31/2020
+Sprint5
+LinkNpcCollision.cs
+Main Author: Lufei Ouyang
+Time: 10 min
+
+The code is highly readable. Private variables' names are clear to read with its purpose. Enough but not excessive comments are added
+to show the meaning of the code. Functionality of functions are clear too.
