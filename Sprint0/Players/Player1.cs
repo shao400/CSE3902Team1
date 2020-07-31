@@ -44,6 +44,7 @@ namespace Sprint0.Player
         public Fog myFog;
         public Handbook myHandbook;
         public bool isChangeColor;
+        public bool isGetCandle = false;
 
         Game1 myGame;
         public Queue<IProjectile> projectiles;
@@ -94,6 +95,7 @@ namespace Sprint0.Player
             myFog = new Fog(this);
             myHandbook = new Handbook();
             isChangeColor = false;
+            isGetCandle = false;
         }
 
         public bool isTakingDmg()

@@ -46,7 +46,10 @@ namespace Sprint0.GameStates
             {
                 myGame.NcurrentRoom.DoorList[i].Draw();
             }
-            myGame.link.GetFog().Draw();
+            if(myGame.link.isGetCandle == false)
+            {
+                myGame.link.GetFog().Draw();
+            }
             myHud.Draw(x, y);
         }
 

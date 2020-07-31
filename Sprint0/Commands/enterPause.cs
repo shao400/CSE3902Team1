@@ -24,7 +24,14 @@ namespace Sprint0.Commands
 
             if (myGame.currentState == myGame.stateList[IntegerHolder.Eight])
             {
-                myGame.currentState = myGame.stateList[0];
+                if (myGame.normalOrNight == 0)
+                {
+                    myGame.currentState = myGame.stateList[0];
+                }
+                else
+                {
+                    myGame.currentState = myGame.stateList[9];
+                }
             }
             else if (myGame.currentState == myGame.stateList[0]
                 || myGame.currentState == myGame.stateList[IntegerHolder.Four]
