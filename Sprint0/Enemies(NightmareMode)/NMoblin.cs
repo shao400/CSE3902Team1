@@ -61,7 +61,7 @@ namespace Sprint0.Enemies
         {
             if (counter2 < 34)
             {
-                Born.Draw(new Vector2(destinationRec.X, yPosition), false);
+                Born.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
             }
 
             if (this.GetHealth() > 0 && counter2 == 34)
@@ -71,7 +71,7 @@ namespace Sprint0.Enemies
             }
             if (counter2 < 70 && this.GetHealth() == 0)
             {
-                Death.Draw(new Vector2(destinationRec.X, yPosition), false);
+                Death.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
             }
         }
 

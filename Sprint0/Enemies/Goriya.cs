@@ -43,9 +43,10 @@ namespace Sprint0.Enemies
 
         public  void Draw()
         {
+            
             if (counter < 34)
             {
-                Born.Draw(new Vector2(destinationRec.X, yPosition), false);
+                Born.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
             }
             
             if (this.GetHealth() > 0 && counter == 34)
@@ -54,7 +55,7 @@ namespace Sprint0.Enemies
                 GoriyaSprite.Draw(location, false);
             }if (counter < 70 && this.GetHealth() ==0)
             {
-                Death.Draw(new Vector2(destinationRec.X, yPosition), false);
+                Death.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
             }
             
         }
