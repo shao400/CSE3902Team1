@@ -152,7 +152,7 @@ namespace Sprint0.Inventories
                 }
                 else if (moveCountTot == 4)//ring
                 {
-                    myLink.MaxHealth++;
+                    myLink.isChangeColor = true;
                 }
                 myLink.ruppyCount -= selectedItem.getPrice();
             }          

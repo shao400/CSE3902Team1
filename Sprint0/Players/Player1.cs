@@ -44,6 +44,7 @@ namespace Sprint0.Player
         private Boolean GetCompass;
         public Fog myFog;
         public Handbook myHandbook;
+        public bool isChangeColor;
 
         Game1 myGame;
         public Queue<IProjectile> projectiles;
@@ -93,6 +94,7 @@ namespace Sprint0.Player
             linkNpcCollision = new LinkNpcCollision(this,myGame);
             myFog = new Fog(this);
             myHandbook = new Handbook();
+            isChangeColor = false;
         }
 
         public bool isTakingDmg()

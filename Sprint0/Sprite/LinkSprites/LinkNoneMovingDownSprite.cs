@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Sprint0.UtilityClass;
+using Sprint0.Player;
 
 namespace Sprint0
 {
@@ -53,6 +54,7 @@ namespace Sprint0
             }
             else
             {
+                
                 myColor = Color.GreenYellow;
             }
             mySpriteBatch.Begin();
@@ -64,6 +66,10 @@ namespace Sprint0
         {
             mySpriteBatch = spriteBatch;
             myTexture = texture;
+        }
+        public bool isChangeColor(Player1 link)
+        {
+            return link.isChangeColor;
         }
     }
 }

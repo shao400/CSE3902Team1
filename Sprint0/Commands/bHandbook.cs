@@ -22,10 +22,19 @@ namespace Sprint0.Commands
         {
 
             if (myGame.currentState == myGame.stateList[0]
-                || myGame.currentState == myGame.stateList[11])
+                || myGame.currentState == myGame.stateList[11]
+                || myGame.currentState == myGame.stateList[9])
             {
                 if (count == 0)
                 {
+                    if (myGame.currentState == myGame.stateList[0])
+                    {
+                        myGame.normalOrNight = 0;
+                    }
+                    else if (myGame.currentState == myGame.stateList[9])
+                    {
+                        myGame.normalOrNight = 9;
+                    }
                     myGame.currentState = myGame.stateList[12];
                     count++;
                 }

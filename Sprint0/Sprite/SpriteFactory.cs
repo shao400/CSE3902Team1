@@ -52,7 +52,7 @@ namespace Sprint0.Sprite
         public static NRopeSprite NRope = new NRopeSprite();
         public static NTektiteSprite NTektite = new NTektiteSprite();
         public static NZolSprite NZol = new NZolSprite();
-        public static NZolSprite NGel = new NGelSprite();
+        public static NGelSprite NGel = new NGelSprite();
         public static NStalfosSprite NStalfos = new NStalfosSprite();
 
         public static PlayerWoodenSwordSprite PlayerWoodenSwordRight = new PlayerWoodenSwordSprite(SpriteEffects.None, 0);

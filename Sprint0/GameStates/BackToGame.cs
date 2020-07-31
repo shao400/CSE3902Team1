@@ -73,7 +73,15 @@ namespace Sprint0.GameStates
                 }
                 else
                 {
-                    myGame.currentState = myGame.stateList[0];
+                    if(myGame.normalOrNight == 0)
+                    {
+                        myGame.currentState = myGame.stateList[0];
+                    }
+                    else
+                    {
+                        myGame.currentState = myGame.stateList[9];
+                    }
+                    
                     frame = 0;
                     y = IntegerHolder.FiveTwoEight;
                     mapy = 450;
