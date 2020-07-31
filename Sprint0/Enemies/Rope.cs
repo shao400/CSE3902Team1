@@ -16,6 +16,9 @@ namespace Sprint0.Enemies
         bool backmove = false;
         private Rectangle destinationRec;
         private int health = 2;
+        private ISprite Born;
+        private ISprite Death;
+        private int counter = 0;
 
         public Rope(int x, int y)
         {
@@ -23,7 +26,9 @@ namespace Sprint0.Enemies
             xPosition = x;
             yPosition = y;
             RopeSprite = new EnemyRopeSprite(x, y);
-            destinationRec = new Rectangle(x, y, 45, 45);
+            destinationRec = new Rectangle(x, y, 45, 45); 
+            Born = SpriteFactory.EnemyBorn;
+            Death = SpriteFactory.EnemyDeath;
         }
 
         public void Damaged()
@@ -38,36 +43,58 @@ namespace Sprint0.Enemies
 
         public void Draw()
         {
-            if (this.GetHealth() > 0)
+            if (counter < 34)
+            {
+                Born.Draw(new Vector2(destinationRec.X, yPosition), false);
+            }
+
+            if (this.GetHealth() > 0 && counter == 34)
             {
                 Vector2 location = new Vector2(xPosition, yPosition);
                 RopeSprite.Draw(location, false);
+            }
+            if (counter < 70 && this.GetHealth() == 0)
+            {
+                Death.Draw(new Vector2(destinationRec.X, yPosition), false);
             }
         }
 
         public void Update()
         {
-            frame++;
-            if (frame >= 20) frame = 0;
-            if (frame < 10 && !backmove)
+            if (counter < 34)
             {
-                destinationRec.X += 3;
+                Born.Update();
+                counter++;
             }
-            else if (frame > 10 && !backmove)
+            else if (counter >= 34 && this.GetHealth() == 0 && counter < 70)
             {
-                destinationRec.X += 3;
+                Death.Update();
+                counter++;
             }
-            else if (frame < 10 && backmove)
+            else
             {
-                destinationRec.X -= 3;
+                frame++;
+                if (frame >= 20) frame = 0;
+                if (frame < 10 && !backmove)
+                {
+                    destinationRec.X += 3;
+                }
+                else if (frame > 10 && !backmove)
+                {
+                    destinationRec.X += 3;
+                }
+                else if (frame < 10 && backmove)
+                {
+                    destinationRec.X -= 3;
+                }
+                else if (frame > 10 && backmove)
+                {
+                    destinationRec.X -= 3;
+                }
+                if (destinationRec.X > 627) backmove = true;
+                if (destinationRec.X < 96) backmove = false;
+                RopeSprite.Update();
             }
-            else if (frame > 10 && backmove)
-            {
-                destinationRec.X -= 3;
-            }
-            if (destinationRec.X > 627) backmove = true;
-            if (destinationRec.X < 96) backmove = false;
-            RopeSprite.Update();
         }
 
         public Rectangle GetRectangle()

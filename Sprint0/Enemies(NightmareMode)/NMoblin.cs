@@ -29,7 +29,10 @@ namespace Sprint0.Enemies
         private const int md = 3;
         private int counter = 0;
         private Boolean chaseLink = false;
-        private int health = 3;
+        private int health = 3; 
+        private ISprite Born;
+        private ISprite Death;
+        private int counter2 = 0;
         public NMoblin(int x, int y, IPlayer player, List<IBlock> blocks)
         {
             myPlayer = player;
@@ -40,6 +43,8 @@ namespace Sprint0.Enemies
             enemyAllCollision = new EnemyAllCollision(this);
             blocksSet = blocks;
             UdLrCollid = new List<bool>();
+            Born = SpriteFactory.EnemyBorn;
+            Death = SpriteFactory.EnemyDeath;
         }
 
         public void Damaged()
@@ -54,36 +59,59 @@ namespace Sprint0.Enemies
 
         public void Draw()
         {
-            if (this.GetHealth() > 0)
+            if (counter2 < 34)
+            {
+                Born.Draw(new Vector2(destinationRec.X, yPosition), false);
+            }
+
+            if (this.GetHealth() > 0 && counter2 == 34)
             {
                 Vector2 location = new Vector2(xPosition, yPosition);
                 MoblinSprite.Draw(location, leftmove);
+            }
+            if (counter2 < 70 && this.GetHealth() == 0)
+            {
+                Death.Draw(new Vector2(destinationRec.X, yPosition), false);
             }
         }
 
         public void Update()
         {
-            targetRectangle = myPlayer.GetRectangle();
-            xDif = targetRectangle.X - xPosition;
-            yDif = targetRectangle.Y - yPosition;
-
-            if (seeLink() && !chaseLink) counter++;
-            if (!seeLink() && chaseLink) counter--;
-            if (counter > 18) { counter = 18; chaseLink = true; }
-            else if (counter<0) { counter = 0; chaseLink = false; }
-            if (chaseLink) { 
-            if (Math.Abs(xDif) > Math.Abs(yDif))
+            if (counter2 < 34)
             {
-                if (xDif > 0) { xPosition += 1; leftmove = false; }
-                else { xPosition -= 1; leftmove = true; }
+                Born.Update();
+                counter2++;
+            }
+            else if (counter2 >= 34 && this.GetHealth() == 0 && counter2 < 70)
+            {
+                Death.Update();
+                counter2++;
             }
             else
             {
-                if (yDif > 0) yPosition += 1;
-                else yPosition -= 1;
+                targetRectangle = myPlayer.GetRectangle();
+                xDif = targetRectangle.X - xPosition;
+                yDif = targetRectangle.Y - yPosition;
+
+                if (seeLink() && !chaseLink) counter++;
+                if (!seeLink() && chaseLink) counter--;
+                if (counter > 18) { counter = 18; chaseLink = true; }
+                else if (counter < 0) { counter = 0; chaseLink = false; }
+                if (chaseLink)
+                {
+                    if (Math.Abs(xDif) > Math.Abs(yDif))
+                    {
+                        if (xDif > 0) { xPosition += 1; leftmove = false; }
+                        else { xPosition -= 1; leftmove = true; }
+                    }
+                    else
+                    {
+                        if (yDif > 0) yPosition += 1;
+                        else yPosition -= 1;
+                    }
+                }
+                MoblinSprite.Update();
             }
-        }
-            MoblinSprite.Update();
         }
 
         private Boolean seeLink()

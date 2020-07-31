@@ -14,6 +14,9 @@ namespace Sprint0.Enemies
         private int yPosition;
         private Rectangle destinationRec;
         private int health = 5;
+        private ISprite Born;
+        private ISprite Death;
+        private int counter = 0;
 
         public Empty(int x, int y)
         {
@@ -22,6 +25,8 @@ namespace Sprint0.Enemies
             yPosition = y;
             AquaSprite = new EnemyAquaSprite(x, y);
             destinationRec = new Rectangle(x, y, 45, 60);
+            Born = SpriteFactory.EnemyBorn;
+            Death = SpriteFactory.EnemyDeath;
         }
 
         public void Damaged()

@@ -21,6 +21,9 @@ namespace Sprint0.Enemies
         private int health = 20;
         private EnemyAllCollision enemyAllCollision;
         private int initialX;
+        private ISprite Born;
+        private ISprite Death;
+        private int counter = 0;
         public NAqua(int x, int y, IPlayer player)
         {
             myPlayer = player;
@@ -32,6 +35,8 @@ namespace Sprint0.Enemies
             energyBall = new EnergyBall(this, myPlayer);
             projectileCollision = new ProjectileCollision(energyBall, myPlayer);
             enemyAllCollision = new EnemyAllCollision(this);
+            Born = SpriteFactory.EnemyBorn;
+            Death = SpriteFactory.EnemyDeath;
         }
 
 
@@ -46,29 +51,51 @@ namespace Sprint0.Enemies
         }
         public void Draw()
         {
-            if (this.GetHealth() > 0)
+            if (counter < 34)
+            {
+                Born.Draw(new Vector2(destinationRec.X, yPosition), false);
+            }
+
+            if (this.GetHealth() > 0 && counter == 34)
             {
                 energyBall.Shoot();
                 Vector2 location = new Vector2(xPosition, yPosition);
                 AquaSprite.Draw(location, false);
             }
+            if (counter < 70 && this.GetHealth() == 0)
+            {
+                Death.Draw(new Vector2(destinationRec.X, yPosition), false);
+            }
         }
 
         public void Update()
         {
-            energyBall.Update();
-            projectileCollision.ProjectileLinkCollisionTest();
-            targetRec = myPlayer.GetRectangle();
-            if (xPosition - targetRec.X < 250 && targetRec.Y > destinationRec.Y && targetRec.Y < destinationRec.Y + 100 && xPosition > initialX - 250)
+            if (counter < 34)
             {
-                xPosition -= 5;
+                Born.Update();
+                counter++;
             }
-            else if (targetRec.Y <= destinationRec.Y || targetRec.Y >= destinationRec.Y + 100)
+            else if (counter >= 34 && this.GetHealth() == 0 && counter < 70)
             {
-                if (xPosition < initialX) xPosition += 3;
+                Death.Update();
+                counter++;
             }
+            else
+            {
+                energyBall.Update();
+                projectileCollision.ProjectileLinkCollisionTest();
+                targetRec = myPlayer.GetRectangle();
+                if (xPosition - targetRec.X < 250 && targetRec.Y > destinationRec.Y && targetRec.Y < destinationRec.Y + 100 && xPosition > initialX - 250)
+                {
+                    xPosition -= 5;
+                }
+                else if (targetRec.Y <= destinationRec.Y || targetRec.Y >= destinationRec.Y + 100)
+                {
+                    if (xPosition < initialX) xPosition += 3;
+                }
 
-            AquaSprite.Update();
+                AquaSprite.Update();
+            }
         }
 
         public Rectangle GetRectangle()

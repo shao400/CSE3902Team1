@@ -11,7 +11,6 @@ namespace Sprint0.Enemies
 
 
         private ISprite OldmanSprite;
-        private ISprite BlastSprite;
         private int xPosition;
         private int yPosition;
         private Rectangle destinationRec;
@@ -19,16 +18,20 @@ namespace Sprint0.Enemies
         private Vector2 locationB;
         private const int shotDistance = 4;
         public int health = 1;
+        private ISprite Born;
+        private ISprite Death;
+        private int counter = 0;
         public Oldman(int x, int y,Player1 link)
         {
 
             xPosition = x;
             yPosition = y;
             OldmanSprite = new EnemyOldmanSprite(x, y);
-            BlastSprite = new EnemyBlastSprite();
             destinationRec = new Rectangle(x, y, 45, 45);
             locationB = new Vector2(x, y);
             _link = link;
+            Born = SpriteFactory.EnemyBorn;
+            Death = SpriteFactory.EnemyDeath;
         }
 
         public void Damaged()
@@ -43,22 +46,42 @@ namespace Sprint0.Enemies
 
         public void Draw()
         {
-            
-            if (this.GetHealth() > 0)
+            if (counter < 34)
             {
-                
+                Born.Draw(new Vector2(destinationRec.X, yPosition), false);
+            }
+
+            if (this.GetHealth() > 0 && counter == 34)
+            {
+
                 Vector2 locationO = new Vector2(xPosition, yPosition);
                 OldmanSprite.Draw(locationO, false);
-                BlastSprite.Draw(locationB, false);
+            }
+            if (counter < 70 && this.GetHealth() == 0)
+            {
+                Death.Draw(new Vector2(destinationRec.X, yPosition), false);
             }
         }
 
         public void Update()
         {
-            if (locationB.X > _link.GetRectangle().X) locationB.X -= shotDistance;
-            if (locationB.X < _link.GetRectangle().X) locationB.X += shotDistance;
-            if (locationB.Y > _link.GetRectangle().Y) locationB.Y -= shotDistance;
-            if (locationB.Y < _link.GetRectangle().Y) locationB.Y += shotDistance;
+            if (counter < 34)
+            {
+                Born.Update();
+                counter++;
+            }
+            else if (counter >= 34 && this.GetHealth() == 0 && counter < 70)
+            {
+                Death.Update();
+                counter++;
+            }
+            else
+            {
+                if (locationB.X > _link.GetRectangle().X) locationB.X -= shotDistance;
+                if (locationB.X < _link.GetRectangle().X) locationB.X += shotDistance;
+                if (locationB.Y > _link.GetRectangle().Y) locationB.Y -= shotDistance;
+                if (locationB.Y < _link.GetRectangle().Y) locationB.Y += shotDistance;
+            }
         }
 
 

@@ -16,8 +16,8 @@ namespace Sprint0.Sprite
         {
             frame++;
             if (frame < 5) { sourceRec = new Rectangle(138, 185, 16, 16); }
-            else if (frame < 10) { sourceRec = new Rectangle(155, 185, 16, 16); }
-            else if (frame < 15) { sourceRec = new Rectangle(172, 185, 16, 16); frame = 0; }
+            else if (frame < 25) { sourceRec = new Rectangle(155, 185, 16, 16); }
+            else if (frame < 35) { sourceRec = new Rectangle(172, 185, 16, 16); frame = 0; }
         }
 
         public void LoadContent(SpriteBatch batch, Texture2D texture)
@@ -28,7 +28,7 @@ namespace Sprint0.Sprite
 
         public void Draw(Vector2 location, bool isDamaged)
         {
-            destinationRec = new Rectangle((int)location.X,(int)location.Y,32,32) ;
+            destinationRec = new Rectangle((int)location.X,(int)location.Y,45,45) ;
             mySpriteBatch.Begin();
             mySpriteBatch.Draw(myTexture, destinationRec, sourceRec, myColor);
             mySpriteBatch.End();

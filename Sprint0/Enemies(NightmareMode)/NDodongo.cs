@@ -16,7 +16,10 @@ namespace Sprint0.Enemies
         bool leftmove = false;
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
-        private int health = 5;
+        private int health = 5; 
+        private ISprite Born;
+        private ISprite Death;
+        private int counter = 0;
         public NDodongo(int x, int y, IPlayer player)
         {
             myPlayer = player;
@@ -25,6 +28,8 @@ namespace Sprint0.Enemies
             DodongoSprite = new NDodongoSprite();
             destinationRec = new Rectangle(x, y, 90, 45);
             enemyAllCollision = new EnemyAllCollision(this);
+            Born = SpriteFactory.EnemyBorn;
+            Death = SpriteFactory.EnemyDeath;
         }
 
 
@@ -39,31 +44,53 @@ namespace Sprint0.Enemies
         }
         public void Draw()
         {
-            if (this.GetHealth() > 0)
+            if (counter < 34)
+            {
+                Born.Draw(new Vector2(destinationRec.X, yPosition), false);
+            }
+
+            if (this.GetHealth() > 0 && counter == 34)
             {
                 Vector2 location = new Vector2(xPosition, yPosition);
                 DodongoSprite.Draw(location, leftmove);
+            }
+            if (counter < 70 && this.GetHealth() == 0)
+            {
+                Death.Draw(new Vector2(destinationRec.X, yPosition), false);
             }
         }
 
         public void Update()
         {
-            targetRectangle = myPlayer.GetRectangle();
-            xDif = targetRectangle.X - xPosition;
-            yDif = targetRectangle.Y - yPosition;
-            if (Math.Abs(xDif) > Math.Abs(yDif))
+            if (counter < 34)
             {
-                if (xDif > 0) { xPosition += 3; leftmove = false; }
-                else { xPosition -= 3; leftmove = true; }
+                Born.Update();
+                counter++;
+            }
+            else if (counter >= 34 && this.GetHealth() == 0 && counter < 70)
+            {
+                Death.Update();
+                counter++;
             }
             else
             {
-                if (yDif > 0) yPosition += 3;
-                else yPosition -= 3;
+                targetRectangle = myPlayer.GetRectangle();
+                xDif = targetRectangle.X - xPosition;
+                yDif = targetRectangle.Y - yPosition;
+                if (Math.Abs(xDif) > Math.Abs(yDif))
+                {
+                    if (xDif > 0) { xPosition += 3; leftmove = false; }
+                    else { xPosition -= 3; leftmove = true; }
+                }
+                else
+                {
+                    if (yDif > 0) yPosition += 3;
+                    else yPosition -= 3;
+                }
+                if (destinationRec.X > 627) leftmove = true;
+                if (destinationRec.X < 96) leftmove = false;
+                DodongoSprite.Update();
             }
-            if (destinationRec.X > 627) leftmove = true;
-            if (destinationRec.X < 96) leftmove = false;
-            DodongoSprite.Update();
         }
 
         public Rectangle GetRectangle()

@@ -17,7 +17,10 @@ namespace Sprint0.Enemies
         private Rectangle destinationRec, targetRectangle;
         private bool leftmove = false;
         private EnemyAllCollision enemyAllCollision;
-        private int health = 1;
+        private int health = 1; 
+        private ISprite Born;
+        private ISprite Death;
+        private int counter = 0;
         public NStalfos(int x, int y, IPlayer link)
         {
             myPlayer = link;
@@ -26,6 +29,8 @@ namespace Sprint0.Enemies
             StalfosSprite = new NStalfosSprite();
             destinationRec = new Rectangle(x, y, 45, 45);
             enemyAllCollision = new EnemyAllCollision(this);
+            Born = SpriteFactory.EnemyBorn;
+            Death = SpriteFactory.EnemyDeath;
         }
 
 
@@ -40,31 +45,52 @@ namespace Sprint0.Enemies
         }
         public void Draw()
         {
-            if (this.GetHealth() > 0)
+            if (counter < 34)
+            {
+                Born.Draw(new Vector2(destinationRec.X, yPosition), false);
+            }
+
+            if (this.GetHealth() > 0 && counter == 34)
             {
                 Vector2 location = new Vector2(xPosition, yPosition);
                 StalfosSprite.Draw(location, leftmove);
+            }
+            if (counter < 70 && this.GetHealth() == 0)
+            {
+                Death.Draw(new Vector2(destinationRec.X, yPosition), false);
             }
         }
 
         public void Update()
         {
-
-            targetRectangle = myPlayer.GetRectangle();
-            xDif = targetRectangle.X - xPosition;
-            yDif = targetRectangle.Y - yPosition;
-            if (Math.Abs(xDif) > Math.Abs(yDif))
+            if (counter < 34)
             {
-                if (xDif > 0) { xPosition += 1; leftmove = false; }
-                else { xPosition -= 1; leftmove = true; }
+                Born.Update();
+                counter++;
+            }
+            else if (counter >= 34 && this.GetHealth() == 0 && counter < 70)
+            {
+                Death.Update();
+                counter++;
             }
             else
             {
-                if (yDif > 0) yPosition += 1;
-                else yPosition -= 1;
+                targetRectangle = myPlayer.GetRectangle();
+                xDif = targetRectangle.X - xPosition;
+                yDif = targetRectangle.Y - yPosition;
+                if (Math.Abs(xDif) > Math.Abs(yDif))
+                {
+                    if (xDif > 0) { xPosition += 1; leftmove = false; }
+                    else { xPosition -= 1; leftmove = true; }
+                }
+                else
+                {
+                    if (yDif > 0) yPosition += 1;
+                    else yPosition -= 1;
+                }
+                if (Math.Abs(xDif) > 300 || Math.Abs(yDif) > 300) Flash();
+                StalfosSprite.Update();
             }
-            if (Math.Abs(xDif) > 300 || Math.Abs(yDif) > 300) Flash();
-            StalfosSprite.Update();
         }
 
         private void Flash()

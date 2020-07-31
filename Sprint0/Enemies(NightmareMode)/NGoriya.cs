@@ -20,6 +20,9 @@ namespace Sprint0.Enemies
         private EnemyAllCollision enemyAllCollision;
         private IProjectile energyBall;
         private int health = 4;
+        private ISprite Born;
+        private ISprite Death;
+        private int counter = 0;
 
         public NGoriya(int x, int y, IPlayer player)
         {
@@ -32,6 +35,8 @@ namespace Sprint0.Enemies
             enemyAllCollision = new EnemyAllCollision(this);
             energyBall = new EnergyBall(this, myPlayer);
             projectileCollision = new ProjectileCollision(energyBall, myPlayer);
+            Born = SpriteFactory.EnemyBorn;
+            Death = SpriteFactory.EnemyDeath;
         }
 
         public void Damaged()
@@ -46,33 +51,55 @@ namespace Sprint0.Enemies
 
         public void Draw()
         {
-            if (this.GetHealth() > 0)
+            if (counter < 34)
+            {
+                Born.Draw(new Vector2(destinationRec.X, yPosition), false);
+            }
+
+            if (this.GetHealth() > 0 && counter == 34)
             {
                 energyBall.Shoot();
                 Vector2 location = new Vector2(xPosition, yPosition);
                 GoriyaSprite.Draw(location, leftmove);
             }
-            
+            if (counter < 70 && this.GetHealth() == 0)
+            {
+                Death.Draw(new Vector2(destinationRec.X, yPosition), false);
+            }
+
         }
 
         public void Update()
         {
-            energyBall.Update();
-            projectileCollision.ProjectileLinkCollisionTest();
-            targetRectangle = myPlayer.GetRectangle();
-            xDif = targetRectangle.X - xPosition;
-            yDif = targetRectangle.Y - yPosition;
-            if (Math.Abs(xDif) > Math.Abs(yDif))
+            if (counter < 34)
             {
-                if (xDif > 0) { xPosition += 1; leftmove = false; }
-                else { xPosition -= 1; leftmove = true; }
+                Born.Update();
+                counter++;
+            }
+            else if (counter >= 34 && this.GetHealth() == 0 && counter < 70)
+            {
+                Death.Update();
+                counter++;
             }
             else
             {
-                if (yDif > 0) yPosition += 1;
-                else yPosition -= 1;
-            }           
-            GoriyaSprite.Update();
+                energyBall.Update();
+                projectileCollision.ProjectileLinkCollisionTest();
+                targetRectangle = myPlayer.GetRectangle();
+                xDif = targetRectangle.X - xPosition;
+                yDif = targetRectangle.Y - yPosition;
+                if (Math.Abs(xDif) > Math.Abs(yDif))
+                {
+                    if (xDif > 0) { xPosition += 1; leftmove = false; }
+                    else { xPosition -= 1; leftmove = true; }
+                }
+                else
+                {
+                    if (yDif > 0) yPosition += 1;
+                    else yPosition -= 1;
+                }
+                GoriyaSprite.Update();
+            }
         }
 
         public Rectangle GetRectangle()

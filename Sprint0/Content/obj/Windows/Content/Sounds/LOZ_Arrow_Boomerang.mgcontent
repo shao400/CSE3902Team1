@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/99376/OneDrive/CSE3902/Workspace/Team1Project/Sprint0/Content/Sounds/LOZ_Arrow_Boomerang.wav</SourceFile>
-  <SourceTime>2020-07-18T13:07:29.0845906-04:00</SourceTime>
-  <DestFile>C:/Users/99376/OneDrive/CSE3902/Workspace/Team1Project/Sprint0/Content/bin/Windows/Content/Sounds/LOZ_Arrow_Boomerang.xnb</DestFile>
-  <DestTime>2020-07-30T12:42:31.6472556-04:00</DestTime>
+  <SourceFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Arrow_Boomerang.wav</SourceFile>
+  <SourceTime>2020-07-18T02:19:14.4496551-04:00</SourceTime>
+  <DestFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Sounds/LOZ_Arrow_Boomerang.xnb</DestFile>
+  <DestTime>2020-07-30T20:01:24.4755934-04:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

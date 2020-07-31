@@ -16,6 +16,9 @@ namespace Sprint0.Enemies
         bool backmove = false;
         private Rectangle destinationRec;
         private int health = 5;
+        private ISprite Born;
+        private ISprite Death;
+        private int counter = 0;
 
         public Zol(int x, int y)
         {
@@ -24,6 +27,8 @@ namespace Sprint0.Enemies
             yPosition = y;
             ZolSprite = new EnemyZolSprite(x, y);
             destinationRec = new Rectangle(x, y, 45, 45);
+            Born = SpriteFactory.EnemyBorn;
+            Death = SpriteFactory.EnemyDeath;
         }
 
         public void Damaged()
@@ -38,37 +43,59 @@ namespace Sprint0.Enemies
 
         public void Draw()
         {
-            if (this.GetHealth() > 0)
+            if (counter < 34)
+            {
+                Born.Draw(new Vector2(destinationRec.X, yPosition), false);
+            }
+
+            if (this.GetHealth() > 0 && counter == 34)
             {
                 Vector2 location = new Vector2(xPosition, yPosition);
                 ZolSprite.Draw(location, false);
+            }
+            if (counter < 70 && this.GetHealth() == 0)
+            {
+                Death.Draw(new Vector2(destinationRec.X, yPosition), false);
             }
         }
 
         public void Update()
         {
-            frame++;
-            if (frame >= 20) frame = 0;
-            if (frame < 10 && !backmove)
+            if (counter < 34)
             {
-                destinationRec.Y += 5;
+                Born.Update();
+                counter++;
             }
-            else if (frame > 10 && !backmove)
+            else if (counter >= 34 && this.GetHealth() == 0 && counter < 70)
             {
-                destinationRec.Y += 5;
+                Death.Update();
+                counter++;
             }
-            else if (frame < 10 && backmove)
+            else
             {
-                destinationRec.Y -= 5;
-            }
-            else if (frame > 10 && backmove)
-            {
-                destinationRec.Y -= 5;
-            }
+                frame++;
+                if (frame >= 20) frame = 0;
+                if (frame < 10 && !backmove)
+                {
+                    destinationRec.Y += 5;
+                }
+                else if (frame > 10 && !backmove)
+                {
+                    destinationRec.Y += 5;
+                }
+                else if (frame < 10 && backmove)
+                {
+                    destinationRec.Y -= 5;
+                }
+                else if (frame > 10 && backmove)
+                {
+                    destinationRec.Y -= 5;
+                }
 
-            if (destinationRec.Y > 555) backmove = true;
-            if (destinationRec.Y < 264) backmove = false;
-            ZolSprite.Update();
+                if (destinationRec.Y > 555) backmove = true;
+                if (destinationRec.Y < 264) backmove = false;
+                ZolSprite.Update();
+            }
         }
 
         public Rectangle GetRectangle()
