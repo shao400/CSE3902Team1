@@ -108,7 +108,7 @@ namespace Sprint0
             songs.Add(Content.Load<Song>("Sounds/intro"));
             songs.Add(Content.Load<Song>("Sounds/Labyrinth"));
             soundEffect = new Sound(sounds, songs);
-            soundEffect.labyrinth();
+            soundEffect.intro();
             controllerList = new List<object>();
             controllerList.Add(new KeyboardC(this));
             controllerList.Add(new MouseC(this));

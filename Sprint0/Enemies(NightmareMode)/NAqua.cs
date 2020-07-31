@@ -12,8 +12,9 @@ namespace Sprint0.Enemies
     {
 
         private IPlayer myPlayer;
-        private ProjectileCollision projectileCollision;
+        
         private ISprite AquaSprite;
+        private ProjectileCollision projectileCollision;
         private IProjectile energyBall;
         private int xPosition;
         private int yPosition;
@@ -43,6 +44,7 @@ namespace Sprint0.Enemies
         public void Damaged()
         {
             health--;
+            myPlayer.GetSound().bossScream2();
 
         }
         public int GetHealth()
@@ -54,8 +56,16 @@ namespace Sprint0.Enemies
             if (counter < 34)
             {
                 Born.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
+                
             }
-
+            if (counter == 33)
+            {
+                myPlayer.GetSound().bossScream1();
+            }
+            if (counter == 35)
+            {
+                myPlayer.GetSound().bossScream3();
+            }
             if (this.GetHealth() > 0 && counter == 34)
             {
                 energyBall.Shoot();

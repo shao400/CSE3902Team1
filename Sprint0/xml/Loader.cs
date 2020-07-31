@@ -148,7 +148,7 @@ namespace Sprint0.xml
                             enemies.Add(new Dodongo(xpos, ypos));
                             break;
                         case "Aqua":
-                            enemies.Add(new Aqua(xpos, ypos));
+                            enemies.Add(new Aqua(xpos, ypos, game.link));
                             break;
                         case "Rope":
                             enemies.Add(new Rope(xpos, ypos));

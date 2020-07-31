@@ -178,6 +178,7 @@
     <Compile Include="Projectile\Bomb.cs" />
     <Compile Include="Projectile\Arrow.cs" />
     <Compile Include="Projectile\Boomrang.cs" />
+    <Compile Include="Projectile\FireBall.cs" />
     <Compile Include="Projectile\EnergyBall.cs" />
     <Compile Include="Projectile\WoodenSword.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

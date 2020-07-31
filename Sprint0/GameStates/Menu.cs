@@ -83,9 +83,11 @@ namespace Sprint0.GameStates
             {
                 case 0:
                     myGame.currentState = myGame.stateList[0];
+                    myGame.link.GetSound().labyrinth();
                     break;
                 case 1:
                     myGame.currentState = myGame.stateList[9];
+                    myGame.link.GetSound().labyrinth();
                     break;
                 case 2:
                     myGame.Reset();

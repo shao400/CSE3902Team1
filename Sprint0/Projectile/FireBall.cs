@@ -5,12 +5,13 @@ using Sprint0.Sprite;
 
 namespace Sprint0.Projectile
 {
-    class EnergyBall : AbstractProjectile, IProjectile
+    class FireBall : AbstractProjectile, IProjectile
     {
         private ISprite energyBall;
         private IEnemy enemy;
         private IPlayer mPlayer;
         private int counter;
+        private int UpOrDown;
         private int ex, ey, ShotX, ShotY, ShotDistanceX, ShotDistanceY;
         Vector2 location;
 
@@ -19,14 +20,15 @@ namespace Sprint0.Projectile
             shoot, none, explode
         }
         private status currentStatus;
-        public EnergyBall(IEnemy enemy, IPlayer player)
+        public FireBall(IEnemy enemy, IPlayer player, int UpOrDown)
         {
             counter = 140;
+            this.UpOrDown = UpOrDown;
             this.enemy = enemy;
             this.mPlayer = player;
             currentStatus = status.none;
             ShotDistance = 0;
-            this.type = "energyBall";
+            this.type = "FireBall";
         }
         public override void Update()
         {
@@ -66,7 +68,14 @@ namespace Sprint0.Projectile
                 ey = this.enemy.GetRectangle().Y;
                 ex = this.enemy.GetRectangle().X;
                 ShotX = (ex - mPlayer.GetRectangle().X) / 27;
-                ShotY = (ey - mPlayer.GetRectangle().Y) / 27;
+                if (UpOrDown == 0)
+                {
+                    ShotY = (ey - mPlayer.GetRectangle().Y) / 27 - 10;
+                }else
+                {
+                    ShotY = (ey - mPlayer.GetRectangle().Y) / 27 + 10;
+                }
+                
                 energyBall = SpriteFactory.EnemyBlast;
             }
 
