@@ -144,7 +144,7 @@ namespace Sprint0.Inventories
                 }
                 else if (moveCountTot == 2)//candle
                 {
-                    myLink.MaxHealth++;
+                    myLink.isGetCandle = true;
                 }
                 else if (moveCountTot == 3)//potion
                 {
