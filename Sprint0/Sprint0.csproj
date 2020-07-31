@@ -103,12 +103,14 @@
     <Compile Include="Enemies%28NightmareMode%29\NRope.cs" />
     <Compile Include="Enemies%28NightmareMode%29\NStalfos.cs" />
     <Compile Include="Enemies%28NightmareMode%29\NTektite.cs" />
+    <Compile Include="Enemies%28NightmareMode%29\NGel.cs" />
     <Compile Include="Enemies%28NightmareMode%29\NZol.cs" />
     <Compile Include="Enemies\Aqua.cs" />
     <Compile Include="Enemies\Dodongo.cs" />
     <Compile Include="Enemies\Empty.cs" />
     <Compile Include="Enemies\Goriya.cs" />
     <Compile Include="Enemies\Keese.cs" />
+    <Compile Include="Enemies\Gel.cs" />
     <Compile Include="Fog.cs" />
     <Compile Include="GameStates\BackToGame4Handbook.cs" />
     <Compile Include="GameStates\GoToHandbook.cs" />

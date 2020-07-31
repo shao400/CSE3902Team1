@@ -39,7 +39,7 @@ namespace Sprint0.UtilityClass
         public const int Eight = 8;
         public const int Nine = 9;
         public const int Ten = 10;
-
+        public const int TwentyFour = 24;
 
     }
 }

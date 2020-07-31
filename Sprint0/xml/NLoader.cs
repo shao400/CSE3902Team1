@@ -132,16 +132,7 @@ namespace Sprint0.xml
                             break;
                         case "Flame":
                             NPCs.Add(new Flame(xpos, ypos));
-                            break;
-                        //case "Oldman":
-                            //enemies.Add(new Oldman(xpos, ypos, game.link));
-                            //break;                     
-                        //case "Trap":
-                            //enemies.Add(new NTrap(xpos, ypos));
-                            //break;
-                        //case "Wallmaster":
-                            //enemies.Add(new NWallmaster(xpos, ypos, game.link));
-                            //break;                       
+                            break;                                              
                         case "DoorKLeft":
                             doors.Add(new DoorKLeft(xpos, ypos));
                             blocks.Add(new Lock(IntegerHolder.FoutyFive, 384));
@@ -207,6 +198,9 @@ namespace Sprint0.xml
                             break;
                         case "Goriya":
                             enemies.Add(new NGoriya(xpos, ypos, game.link));
+                            break;
+                        case "Gel":
+                            enemies.Add(new NGel(xpos, ypos, game.link));
                             break;
                     }
                 }

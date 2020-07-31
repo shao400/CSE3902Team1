@@ -9,6 +9,7 @@
 	<enemy type="Tektite" xpos="483" ypos="411" />
 	<enemy type="Stalfos" xpos="99" ypos="411" />
 	<enemy type="Keese" xpos="243" ypos="411" />
+	<enemy type="Gel" xpos="243" ypos="542" />
 	<block type="BlockA" xpos="147" ypos="315" />
 	<block type="BlockA" xpos="195" ypos="315" />
 	<block type="BlockA" xpos="147" ypos="507" />

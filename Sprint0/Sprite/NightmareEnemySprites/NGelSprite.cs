@@ -44,7 +44,7 @@ namespace Sprint0.Sprite
         {
 
             mySpriteBatch.Begin();
-            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, IntegerHolder.FoutyFive, IntegerHolder.FoutyFive), sourceRec, myColor);
+            mySpriteBatch.Draw(myTexture, new Rectangle((int)location.X, (int)location.Y, IntegerHolder.TwentyFour, IntegerHolder.TwentyFour), sourceRec, myColor);
             mySpriteBatch.End();
         }
     }

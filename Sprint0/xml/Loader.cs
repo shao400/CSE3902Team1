@@ -171,6 +171,9 @@ namespace Sprint0.xml
                         case "Keese":
                             enemies.Add(new Keese(xpos, ypos));
                             break;
+                        case "Gel":
+                            enemies.Add(new Gel(xpos, ypos));
+                            break;
                         case "DoorKLeft":
                             doors.Add(new DoorKLeft(xpos, ypos));
                             blocks.Add(new Lock(IntegerHolder.FoutyFive, 384));

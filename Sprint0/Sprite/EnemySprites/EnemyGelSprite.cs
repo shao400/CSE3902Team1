@@ -16,7 +16,7 @@ namespace Sprint0.Sprite
 
         public EnemyGelSprite(int x, int y)
         {
-            destinationRec = new Rectangle(x, y, IntegerHolder.FoutyFive, IntegerHolder.FoutyFive);
+            destinationRec = new Rectangle(x, y, IntegerHolder.TwentyFour, IntegerHolder.TwentyFour);
         }
 
 
