@@ -201,6 +201,7 @@
     <Compile Include="Sprite\EnemySprites\EnemyBornSprite.cs" />
     <Compile Include="Sprite\EnemySprites\EnemyDeathSprite.cs" />
     <Compile Include="Sprite\EnemySprites\EnemyBlastSprite.cs" />
+    <Compile Include="Sprite\EnemySprites\EnemyGelSprite.cs" />
     <Compile Include="Sprite\EnemySprites\InfoGoriyaSprite.cs" />
     <Compile Include="Sprite\EnemySprites\InfoKeeseSprite.cs" />
     <Compile Include="Sprite\EnemySprites\InfoMoblinSprite.cs" />
@@ -241,6 +242,7 @@
     <Compile Include="Sprite\LinkSprites\LinkUsingRightSprite.cs" />
     <Compile Include="Sprite\LinkSprites\LinkUsingUpSprite.cs" />
     <Compile Include="Sprite\NightmareEnemySprites\NStalfosSprite.cs" />
+    <Compile Include="Sprite\NightmareEnemySprites\NGelSprite.cs" />
     <Compile Include="Sprite\NightmareEnemySprites\NZolSprite.cs" />
     <Compile Include="Sprite\NightmareEnemySprites\NTektiteSprite.cs" />
     <Compile Include="Sprite\NightmareEnemySprites\NRopeSprite.cs" />

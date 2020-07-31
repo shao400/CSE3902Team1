@@ -4,7 +4,7 @@ using Sprint0.UtilityClass;
 
 namespace Sprint0.Sprite
 {
-    public class EnemyZolSprite : ISprite
+    public class EnemyGelSprite : ISprite
     {
         private static SpriteBatch mySpriteBatch;
         private static Texture2D myTexture;
@@ -14,7 +14,7 @@ namespace Sprint0.Sprite
         int frame = 0;
         bool backmove = false;
 
-        public EnemyZolSprite(int x, int y)
+        public EnemyGelSprite(int x, int y)
         {
             destinationRec = new Rectangle(x, y, IntegerHolder.FoutyFive, IntegerHolder.FoutyFive);
         }
@@ -27,24 +27,24 @@ namespace Sprint0.Sprite
             if (frame >= 20) frame = 0;
             if (frame < IntegerHolder.Ten && !backmove)
             {
-                sourceRec = new Rectangle(79, 28, 12, 16);
+                sourceRec = new Rectangle(55, 16, 8, 8);
                 destinationRec.Y += IntegerHolder.Five;
             }
             else if (frame > IntegerHolder.Ten && !backmove)
             {
-                sourceRec = new Rectangle(95, 30, 14, 14);
+                sourceRec = new Rectangle(65, 15, 6, 9);
                 destinationRec.Y += IntegerHolder.Five;
             }
             else if (frame < IntegerHolder.Ten && backmove)
             {
 
-                sourceRec = new Rectangle(79, 28, 12, 16);
+                sourceRec = new Rectangle(55, 16, 8, 8);
                 destinationRec.Y -= IntegerHolder.Five;
             }
             else if (frame > IntegerHolder.Ten && backmove)
             {
 
-                sourceRec = new Rectangle(95, 30, 14, 14);
+                sourceRec = new Rectangle(65, 15, 6, 9);
                 destinationRec.Y -= IntegerHolder.Five;
             }
 

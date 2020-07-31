@@ -33,6 +33,7 @@ namespace Sprint0.Sprite
         public static EnemyStalfosSprite EnemyStalfos = new EnemyStalfosSprite(0, 0);
         public static EnemyGoriyaSprite EnemyGoriya = new EnemyGoriyaSprite(0, 0);
         public static EnemyZolSprite EnemyZol = new EnemyZolSprite(0, 0);
+        public static EnemyGelSprite EnemyGel = new EnemyGelSprite(0, 0);
         public static EnemyWallmasterSprite EnemyWallmaster = new EnemyWallmasterSprite(0, 0);
         public static EnemyTrapSprite EnemyTrap = new EnemyTrapSprite(0, 0);
         public static EnemyRopeSprite EnemyRope = new EnemyRopeSprite(0, 0);
@@ -51,6 +52,7 @@ namespace Sprint0.Sprite
         public static NRopeSprite NRope = new NRopeSprite();
         public static NTektiteSprite NTektite = new NTektiteSprite();
         public static NZolSprite NZol = new NZolSprite();
+        public static NZolSprite NGel = new NGelSprite();
         public static NStalfosSprite NStalfos = new NStalfosSprite();
 
         public static PlayerWoodenSwordSprite PlayerWoodenSwordRight = new PlayerWoodenSwordSprite(SpriteEffects.None, 0);
@@ -315,6 +317,7 @@ namespace Sprint0.Sprite
             EnemyStalfos.LoadContent(batch, content.Load<Texture2D>("enemy2"));
             EnemyGoriya.LoadContent(batch, content.Load<Texture2D>("enemy2"));
             EnemyZol.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            EnemyGel.LoadContent(batch, content.Load<Texture2D>("enemy2"));
             EnemyWallmaster.LoadContent(batch, content.Load<Texture2D>("enemy2"));
             EnemyTrap.LoadContent(batch, content.Load<Texture2D>("enemy2"));
             EnemyRope.LoadContent(batch, content.Load<Texture2D>("enemy2"));
@@ -333,6 +336,7 @@ namespace Sprint0.Sprite
             NRope.LoadContent(batch, content.Load<Texture2D>("enemy2"));
             NTektite.LoadContent(batch, content.Load<Texture2D>("enemy"));
             NZol.LoadContent(batch, content.Load<Texture2D>("enemy2"));
+            NGel.LoadContent(batch, content.Load<Texture2D>("enemy2"));
             NStalfos.LoadContent(batch, content.Load<Texture2D>("enemy2"));
             InfoGoriya.LoadContent(batch, content.Load<Texture2D>("handbook"));
             InfoRope.LoadContent(batch, content.Load<Texture2D>("handbook"));
