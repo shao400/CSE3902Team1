@@ -44,10 +44,12 @@ namespace Sprint0
         public IGameState currentState;
         public List<IGameState> stateList;
         public Player1 link;
+        public int normalOrNight; // 0 for normal gamestate, 9 for night gamestate
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = StringHolder.Content;           
+            Content.RootDirectory = StringHolder.Content;
+            normalOrNight = 0;
         }
 
         public void Reset()
@@ -114,6 +116,7 @@ namespace Sprint0
             controllerList.Add(new MouseC(this));
             link = new Player1(IntegerHolder.linkInitialX, IntegerHolder.linkInitialY, IntegerHolder.linkHitBoxSize, IntegerHolder.linkHitBoxSize, soundEffect, this);
             hud = new Hud(this);
+            normalOrNight = 0;
             this.IsMouseVisible = true;
             base.Initialize();
             string Room = "Room";
@@ -141,7 +144,7 @@ namespace Sprint0
                 room.loadBatchAndContent(Content, spriteBatch);
             }
             currentRoom = roomList[0];
-            NcurrentRoom = NroomList[0];
+            NcurrentRoom = NroomList[7];
             reader.Close();
             stateList = new List<IGameState>();
             stateList.Add(new InGame(this, hud));
