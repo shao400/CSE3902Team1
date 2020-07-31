@@ -14,18 +14,9 @@ namespace Sprint0.Player
 {
     public class Player1 : IPlayer
     {
-        private enum facing
-        {
-            up, down, left, right
-        }
-        private enum weapon
-        {
-            None, WoodenSword, WhiteSword, MagicalSword, MagicalRod
-        }
-        private enum status
-        {
-            standing, walking, attacking, takingDmg, shooting, booming, arrowShooting, boomrangShooting
-        }
+        private enum facing { up, down, left, right }
+        private enum weapon { None, WoodenSword, WhiteSword, MagicalSword, MagicalRod }
+        private enum status { standing, walking, attacking, takingDmg, shooting, booming, arrowShooting, boomrangShooting }
         public int xAxis;
         public int yAxis;
         private int width;
@@ -164,18 +155,18 @@ namespace Sprint0.Player
             }
             currentSprite.Update();
             //border restrictions
-            if (myGame.currentState == myGame.stateList[0])
+            if (xAxis <= 0 || xAxis >= 720 || yAxis <= IntegerHolder.OneSixEight || yAxis >= 648)
             {
+                if (myGame.currentState == myGame.stateList[0]) myGame.currentState = myGame.stateList[1];
+                else myGame.currentState = myGame.stateList[IntegerHolder.Ten];
                 if (xAxis <= 0)
                 {
-                    xAxis = IntegerHolder.SixTwoFour;
-                    myGame.currentState = myGame.stateList[1];
+                    xAxis = IntegerHolder.SixTwoFour;                    
                     myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[2]);
                 }
                 else if (xAxis >= 720)
                 {
                     xAxis = IntegerHolder.NinetySix;
-                    myGame.currentState = myGame.stateList[1];
                     myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[IntegerHolder.Three]);
                 }
                 else if (yAxis <= IntegerHolder.OneSixEight)
@@ -186,46 +177,12 @@ namespace Sprint0.Player
                         xAxis = 339;
                         yAxis = 411;
                     }
-                    myGame.currentState = myGame.stateList[1];
                     myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[0]);
                 }
                 else if (yAxis >= 648)
                 {
                     yAxis = IntegerHolder.TwoSixFour;
-                    myGame.currentState = myGame.stateList[1];
                     myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[1]);
-                }
-            }
-            else
-            {
-                if (xAxis <= 0)
-                {
-                    xAxis = IntegerHolder.SixTwoFour;
-                    myGame.currentState = myGame.stateList[IntegerHolder.Ten];
-                    myGame.currentState.loadNextRoom(myGame.NcurrentRoom.Connectors[2]);
-                }
-                else if (xAxis >= 720)
-                {
-                    xAxis = IntegerHolder.NinetySix;
-                    myGame.currentState = myGame.stateList[IntegerHolder.Ten];
-                    myGame.currentState.loadNextRoom(myGame.NcurrentRoom.Connectors[IntegerHolder.Three]);
-                }
-                else if (yAxis <= IntegerHolder.OneSixEight)
-                {
-                    yAxis = IntegerHolder.FiveFiveTwo;
-                    if (myGame.NcurrentRoom == myGame.NroomList[17])
-                    {
-                        xAxis = 339;
-                        yAxis = 411;
-                    }
-                    myGame.currentState = myGame.stateList[IntegerHolder.Ten];
-                    myGame.currentState.loadNextRoom(myGame.NcurrentRoom.Connectors[0]);
-                }
-                else if (yAxis >= 648)
-                {
-                    yAxis = IntegerHolder.TwoSixFour;
-                    myGame.currentState = myGame.stateList[IntegerHolder.Ten];
-                    myGame.currentState.loadNextRoom(myGame.NcurrentRoom.Connectors[1]);
                 }
             }
             if (dmgCounter < 18) dmgCounter++;            
@@ -233,7 +190,6 @@ namespace Sprint0.Player
         }
         public void Draw()
         {
-
         }
         public Rectangle GetRectangle()
         {
@@ -283,10 +239,7 @@ namespace Sprint0.Player
                 currentAttack.Stab();
                 currentAttack.setExplo(2);
                 sound.swordSlash();
-            }
-               
-
-
+            }               
         }
         public void Shoot()
         {
@@ -301,9 +254,7 @@ namespace Sprint0.Player
                 currentProjectile.Shoot();
                 sound.swordShoot();
             }
-            else { this.Attack(); }
-            
-
+            else { this.Attack(); }            
         }
         public void Bomb()
         {
@@ -361,56 +312,38 @@ namespace Sprint0.Player
                         myGame.currentState = myGame.stateList[IntegerHolder.Five];
                     }
                 }
-
                 dmgCounter = 0;
-            }
-            
+            }           
         }
 
         public void getHealed()
         {
             sound.getHeart();
-            if (hp < MaxHealth)
-            {
-
-                hp++;
-            }
+            if (hp < MaxHealth) hp++;            
         }
 
         public void increaseMaxHp()
         {
             sound.getHeart();
             const int HpBound = 16;
-            if (MaxHealth < HpBound)
-            {
-                MaxHealth += 2;
-            }
+            if (MaxHealth < HpBound) MaxHealth += 2;            
             hp = MaxHealth;
         }
         public void getRuppy()
         {
             sound.getRupee();
-            if (ruppyCount < 999)
-            {
-                ruppyCount++;
-            }
+            if (ruppyCount < 999) ruppyCount++;            
         }
 
         public void getBomb()
         {
             sound.getItem();
-            if (bombCount < 99)
-            {
-                bombCount++;
-            }
+            if (bombCount < 99) bombCount++;            
         }
         public void getKey()
         {
             sound.getItem();
-            if (keyCount < 99)
-            {
-                keyCount++;
-            }
+            if (keyCount < 99) keyCount++;            
         }
 
         public int getKeyCount()
@@ -420,10 +353,7 @@ namespace Sprint0.Player
 
         public void useKey()
         {
-            if (0 < keyCount)
-            {
-                keyCount--;
-            }
+            if (0 < keyCount) keyCount--;            
         }
 
         public void unlockBothLocks()
@@ -480,10 +410,7 @@ namespace Sprint0.Player
                     }
                 }
             }
-
-
         }
-
         public void removeBothLockSprite()
         {
             int x = -1;
@@ -614,14 +541,8 @@ namespace Sprint0.Player
         public void MapOrCompassGet(int MorC)
         {
             sound.getItem();
-            if (MorC == 0)
-            {
-                GetMap = true;
-            }
-            else if (MorC == 1)
-            {
-                GetCompass = true;
-            }
+            if (MorC == 0) GetMap = true;            
+            else if (MorC == 1) GetCompass = true;            
         }
 
         public List<Boolean> HaveMapOrCompass()
@@ -667,7 +588,6 @@ namespace Sprint0.Player
         {
             return sound;
         }
-
         //collision tests
         public void BlockCollisionTest(List<IBlock> blocks)
         {
@@ -689,10 +609,7 @@ namespace Sprint0.Player
             projectileCollision3 = new ProjectileCollision(currentAttack, this);
             projectileCollision3.ProjectileEnemiesCollisionTest(enemies, sound);
             currentAttack.setExplo(IntegerHolder.Three);
-        }
-
-      
-
+        }      
         public void EnemyCollisionTest(List<IEnemy> enemies)
         {
             linkEnemyCollision.EnemyCollisionTest(enemies, sound);

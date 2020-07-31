@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/Sounds/LOZ_Door_Unlock.wav</SourceFile>
-  <SourceTime>2020-07-18T03:19:30.5411162-04:00</SourceTime>
-  <DestFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/bin/Windows/Content/Sounds/LOZ_Door_Unlock.xnb</DestFile>
-  <DestTime>2020-07-31T14:51:30.4506313-04:00</DestTime>
+  <SourceFile>C:/Users/99376/OneDrive/CSE3902/Workspace/Team1Project/Sprint0/Content/Sounds/LOZ_Door_Unlock.wav</SourceFile>
+  <SourceTime>2020-07-18T13:07:29.0855872-04:00</SourceTime>
+  <DestFile>C:/Users/99376/OneDrive/CSE3902/Workspace/Team1Project/Sprint0/Content/bin/Windows/Content/Sounds/LOZ_Door_Unlock.xnb</DestFile>
+  <DestTime>2020-07-31T15:04:22.3498219-04:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

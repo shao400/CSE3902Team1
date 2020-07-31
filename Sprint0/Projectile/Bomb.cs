@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
 using Sprint0.Player;
@@ -71,36 +67,16 @@ namespace Sprint0.Projectile
         }
         public override int IsExplode()
         {
-            if (currentStatus == status.explode)
-            {
-                return 1;
-            }
-            else if (currentStatus == status.shoot)
-            {
-                return 0;
-            }
-            else
-            {
-                return 2;
-            }
+            if (currentStatus == status.explode) return 1;           
+            else if (currentStatus == status.shoot) return 0;            
+            else return 2;
         }
         public override void setExplo(int i)
         {
 
-            if (i == 1)
-            {
-                
-                currentStatus = status.explode;
-            }
-            else if (i == 0)
-            {
-                currentStatus = status.shoot;
-            }
-            else
-            {
-                currentStatus = status.none;
-            }
-
+            if (i == 1) currentStatus = status.explode;            
+            else if (i == 0) currentStatus = status.shoot;            
+            else currentStatus = status.none;            
         }
         public override void Stab()
         {
