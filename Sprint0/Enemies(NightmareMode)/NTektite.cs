@@ -20,7 +20,7 @@ namespace Sprint0.Enemies
         //private int frame = 0;
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
-        private int health = 1;
+        private int health = IntegerHolder.One;
         private ISprite Born;
         private ISprite Death;
         private int counter = 0;

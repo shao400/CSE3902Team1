@@ -16,7 +16,7 @@ namespace Sprint0.Enemies
         private Player1 _link;
         private Vector2 locationB;
         private const int shotDistance = IntegerHolder.Four;
-        public int health = 1;
+        public int health = IntegerHolder.One;
         private ISprite Born;
         private ISprite Death;
         private int counter = 0;

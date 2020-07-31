@@ -14,7 +14,7 @@ namespace Sprint0.Enemies
         private int frame = 0;
         bool backmove = false;
         private Rectangle destinationRec;
-        private int health = 2;
+        private int health = IntegerHolder.Two;
         private ISprite Born;
         private ISprite Death;
         private int counter = 0;

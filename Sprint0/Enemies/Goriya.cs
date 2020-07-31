@@ -66,10 +66,10 @@ namespace Sprint0.Enemies
             {
                 frame++;
                 if (frame >= 20) frame = 0;
-                if (frame < IntegerHolder.Ten && !backmove) destinationRec.X += 1;                
-                else if (frame > IntegerHolder.Ten && !backmove)  destinationRec.X += 1;                
-                else if (frame < IntegerHolder.Ten && backmove) destinationRec.X -= 1;                
-                else if (frame > IntegerHolder.Ten && backmove) destinationRec.X -= 1;                
+                if (frame < IntegerHolder.Ten && !backmove) destinationRec.X += IntegerHolder.One;                
+                else if (frame > IntegerHolder.Ten && !backmove)  destinationRec.X += IntegerHolder.One;                
+                else if (frame < IntegerHolder.Ten && backmove) destinationRec.X -= IntegerHolder.One;                
+                else if (frame > IntegerHolder.Ten && backmove) destinationRec.X -= IntegerHolder.One;                
                 if (destinationRec.X > 627) backmove = true;
                 if (destinationRec.X < IntegerHolder.NinetySix) backmove = false;
                 GoriyaSprite.Update();

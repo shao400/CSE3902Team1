@@ -14,7 +14,7 @@ namespace Sprint0.Enemies
         private int frame = 0;
         bool backmove = false;
         private Rectangle destinationRec;
-        private int health = IntegerHolder.Five;
+        private int health = IntegerHolder.One;
         private ISprite Born;
         private ISprite Death;
         private int counter = 0;
@@ -73,10 +73,10 @@ namespace Sprint0.Enemies
             {
                 frame++;
                 if (frame >= 20) frame = 0;
-                if (frame < IntegerHolder.Ten && !backmove) destinationRec.Y += IntegerHolder.Five;                
-                else if (frame > IntegerHolder.Ten && !backmove) destinationRec.Y += IntegerHolder.Five;                
-                else if (frame < IntegerHolder.Ten && backmove) destinationRec.Y -= IntegerHolder.Five;                
-                else if (frame > IntegerHolder.Ten && backmove) destinationRec.Y -= IntegerHolder.Five;               
+                if (frame < IntegerHolder.Ten && !backmove) destinationRec.Y += IntegerHolder.One;                
+                else if (frame > IntegerHolder.Ten && !backmove) destinationRec.Y += IntegerHolder.One;                
+                else if (frame < IntegerHolder.Ten && backmove) destinationRec.Y -= IntegerHolder.One;                
+                else if (frame > IntegerHolder.Ten && backmove) destinationRec.Y -= IntegerHolder.One;               
                 if (destinationRec.Y > 555) backmove = true;
                 if (destinationRec.Y < IntegerHolder.TwoSixFour) backmove = false;
                 GelSprite.Update();

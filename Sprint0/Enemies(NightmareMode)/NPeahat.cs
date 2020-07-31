@@ -15,7 +15,7 @@ namespace Sprint0.Enemies
         private int xPosition, yPosition, xDif, yDif;
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
-        private int health = 2;
+        private int health = IntegerHolder.Two;
         private ISprite Born;
         private ISprite Death;
         private int counter = 0;
@@ -78,13 +78,13 @@ namespace Sprint0.Enemies
                 yDif = targetRectangle.Y - yPosition;
                 if (Math.Abs(xDif) > Math.Abs(yDif))
                 {
-                    if (xDif > 0) xPosition += 2;
-                    else xPosition -= 2;
+                    if (xDif > 0) xPosition += IntegerHolder.Two;
+                    else xPosition -= IntegerHolder.Two;
                 }
                 else
                 {
-                    if (yDif > 0) yPosition += 2;
-                    else yPosition -= 2;
+                    if (yDif > 0) yPosition += IntegerHolder.Two;
+                    else yPosition -= IntegerHolder.Two;
                 }
                 PeahatSprite.Update();
             }

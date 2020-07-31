@@ -16,7 +16,7 @@ namespace Sprint0.Enemies
         bool leftmove = false;
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
-        private int health = IntegerHolder.Five; 
+        private int health = IntegerHolder.Ten; 
         private ISprite Born;
         private ISprite Death;
         private int counter = 0;
@@ -79,13 +79,13 @@ namespace Sprint0.Enemies
                 yDif = targetRectangle.Y - yPosition;
                 if (Math.Abs(xDif) > Math.Abs(yDif))
                 {
-                    if (xDif > 0) { xPosition += IntegerHolder.Three; leftmove = false; }
-                    else { xPosition -= IntegerHolder.Three; leftmove = true; }
+                    if (xDif > 0) { xPosition += IntegerHolder.Two; leftmove = false; }
+                    else { xPosition -= IntegerHolder.Two; leftmove = true; }
                 }
                 else
                 {
-                    if (yDif > 0) yPosition += IntegerHolder.Three;
-                    else yPosition -= IntegerHolder.Three;
+                    if (yDif > 0) yPosition += IntegerHolder.Two;
+                    else yPosition -= IntegerHolder.Two;
                 }
                 if (destinationRec.X > 627) leftmove = true;
                 if (destinationRec.X < IntegerHolder.NinetySix) leftmove = false;

@@ -91,13 +91,13 @@ namespace Sprint0.Enemies
                 yDif = targetRectangle.Y - yPosition;
                 if (Math.Abs(xDif) > Math.Abs(yDif))
                 {
-                    if (xDif > 0) { xPosition += 1; leftmove = false; }
-                    else { xPosition -= 1; leftmove = true; }
+                    if (xDif > 0) { xPosition += IntegerHolder.One; leftmove = false; }
+                    else { xPosition -= IntegerHolder.One; leftmove = true; }
                 }
                 else
                 {
-                    if (yDif > 0) yPosition += 1;
-                    else yPosition -= 1;
+                    if (yDif > 0) yPosition += IntegerHolder.One;
+                    else yPosition -= IntegerHolder.One;
                 }
                 GoriyaSprite.Update();
             }

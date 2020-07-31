@@ -18,7 +18,7 @@ namespace Sprint0.Enemies
         private Rectangle destinationRec, targetRectangle;
         private bool leftmove = false;
         private EnemyAllCollision enemyAllCollision;
-        private int health = 1; 
+        private int health = IntegerHolder.One;
         private ISprite Born;
         private ISprite Death;
         private int counter = 0;

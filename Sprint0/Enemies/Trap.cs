@@ -12,7 +12,7 @@ namespace Sprint0.Enemies
         private int xPosition;
         private int yPosition;
         private Rectangle destinationRec;
-        private int health = 1;
+        private int health = IntegerHolder.One;
         private ISprite Born;
         private ISprite Death;
         private int counter = 0;
