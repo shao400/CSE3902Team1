@@ -22,7 +22,7 @@ namespace Sprint0.Projectile
         private status currentStatus;
         public EnergyBall(IEnemy enemy, IPlayer player)
         {
-            counter = 140;
+            counter = 80;
             this.enemy = enemy;
             this.mPlayer = player;
             currentStatus = status.none;
@@ -35,7 +35,7 @@ namespace Sprint0.Projectile
 
             this.hitBox = new Rectangle(Convert.ToInt32(location.X), Convert.ToInt32(location.Y), IntegerHolder.ThirtyFive, 23);
 
-            if (counter > 150)
+            if (counter > 100)
             {
 
                 ShotDistanceX += ShotX;
@@ -43,7 +43,7 @@ namespace Sprint0.Projectile
 
             }
             Console.WriteLine(this.hitBox);
-            if (this.hitBox.X < 0 || this.hitBox.X > 720 || this.hitBox.Y < IntegerHolder.OneSixEight || this.hitBox.Y > 648 || this.IsExplode() == 1)
+            if (counter > 260 && (this.hitBox.X < 0 || this.hitBox.X > 720 || this.hitBox.Y < IntegerHolder.OneSixEight || this.hitBox.Y > 648 || this.IsExplode() == 1))
             {
                 counter = 0;
                 currentStatus = status.none;
@@ -61,18 +61,18 @@ namespace Sprint0.Projectile
         }
         public override void Shoot()
         {
-            if (counter == 150)
+            if (counter == 100)
             {
                 currentStatus = status.shoot;
                 ey = this.enemy.GetRectangle().Y;
                 ex = this.enemy.GetRectangle().X;
-                ShotX = (ex - mPlayer.GetRectangle().X) / 27;
-                ShotY = (ey - mPlayer.GetRectangle().Y) / 27;
+                ShotX = (ex - mPlayer.GetRectangle().X) / 30;
+                ShotY = (ey - mPlayer.GetRectangle().Y) / 30;
                 energyBall = SpriteFactory.EnemyBlast;
             }
 
 
-            if (counter >= 150 && currentStatus == status.shoot)
+            if (counter >= 100 && currentStatus == status.shoot)
             {
                 location = new Vector2(ex - ShotDistanceX, ey - ShotDistanceY);
                 energyBall.Draw(location, false);
