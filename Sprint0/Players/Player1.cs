@@ -155,18 +155,18 @@ namespace Sprint0.Player
             }
             currentSprite.Update();
             //border restrictions
-            if (xAxis <= 0 || xAxis >= 720 || yAxis <= IntegerHolder.OneSixEight || yAxis >= 648)
+            if (myGame.currentState == myGame.stateList[0])
             {
-                if (myGame.currentState == myGame.stateList[0]) myGame.currentState = myGame.stateList[1];
-                else myGame.currentState = myGame.stateList[IntegerHolder.Ten];
                 if (xAxis <= 0)
                 {
-                    xAxis = IntegerHolder.SixTwoFour;                    
+                    xAxis = IntegerHolder.SixTwoFour;
+                    myGame.currentState = myGame.stateList[1];
                     myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[2]);
                 }
                 else if (xAxis >= 720)
                 {
                     xAxis = IntegerHolder.NinetySix;
+                    myGame.currentState = myGame.stateList[1];
                     myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[IntegerHolder.Three]);
                 }
                 else if (yAxis <= IntegerHolder.OneSixEight)
@@ -177,12 +177,48 @@ namespace Sprint0.Player
                         xAxis = 339;
                         yAxis = 411;
                     }
+                    myGame.currentState = myGame.stateList[1];
                     myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[0]);
+
                 }
                 else if (yAxis >= 648)
                 {
                     yAxis = IntegerHolder.TwoSixFour;
+                    myGame.currentState = myGame.stateList[1];
                     myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[1]);
+                }
+            }
+            else
+            {
+                if (xAxis <= 0)
+                {
+                    xAxis = IntegerHolder.SixTwoFour;
+                    myGame.currentState = myGame.stateList[IntegerHolder.Ten];
+                    myGame.currentState.loadNextRoom(myGame.NcurrentRoom.Connectors[2]);
+                }
+                else if (xAxis >= 720)
+                {
+                    xAxis = IntegerHolder.NinetySix;
+                    myGame.currentState = myGame.stateList[IntegerHolder.Ten];
+                    myGame.currentState.loadNextRoom(myGame.NcurrentRoom.Connectors[IntegerHolder.Three]);
+                }
+                else if (yAxis <= IntegerHolder.OneSixEight)
+                {
+                    yAxis = IntegerHolder.FiveFiveTwo;
+                    if (myGame.NcurrentRoom == myGame.NroomList[17])
+                    {
+                        xAxis = 339;
+                        yAxis = 411;
+                    }
+                    myGame.currentState = myGame.stateList[IntegerHolder.Ten];
+                    myGame.currentState.loadNextRoom(myGame.NcurrentRoom.Connectors[0]);
+
+                }
+                else if (yAxis >= 648)
+                {
+                    yAxis = IntegerHolder.TwoSixFour;
+                    myGame.currentState = myGame.stateList[IntegerHolder.Ten];
+                    myGame.currentState.loadNextRoom(myGame.NcurrentRoom.Connectors[1]);
                 }
             }
             if (dmgCounter < 18) dmgCounter++;            
