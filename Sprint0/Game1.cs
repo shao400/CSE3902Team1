@@ -112,6 +112,7 @@ namespace Sprint0
             soundEffect.intro();
             controllerList = new List<object>();
             controllerList.Add(new KeyboardC(this));
+            controllerList.Add(new MouseC(this));
             link = new Player1(IntegerHolder.linkInitialX, IntegerHolder.linkInitialY, IntegerHolder.linkHitBoxSize, IntegerHolder.linkHitBoxSize, soundEffect, this);
             hud = new Hud(this);
             normalOrNight = 0;
