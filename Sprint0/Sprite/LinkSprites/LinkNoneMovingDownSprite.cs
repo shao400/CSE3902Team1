@@ -67,7 +67,7 @@ namespace Sprint0
             mySpriteBatch = spriteBatch;
             myTexture = texture;
         }
-        public bool isChangeColor(Player1 link)
+        public static bool isChangeColor(Player1 link)
         {
             return link.isChangeColor;
         }

@@ -13,7 +13,6 @@ namespace Sprint0.Commands
     {
         private Game1 myGame;
         int count = 0;
-        IGameState token;
 
         public enterPause(Game1 game)
         {
