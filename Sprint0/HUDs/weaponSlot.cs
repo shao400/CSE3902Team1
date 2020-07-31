@@ -18,9 +18,7 @@ namespace Sprint0.HUDs
         }
         public void Draw(int x, int y)
         {
-            //None, WoodenSword, WhiteSword, MagicalSword, MagicalRod
             Vector2 location = new Vector2(x, y);
-            //System.Diagnostics.Debug.WriteLine(_link.states.GetCurrentWeapon());
             
             if (_link.GetCurrentWeapon().Equals(StringHolder.None, System.StringComparison.Ordinal))
             {

@@ -1,13 +1,5 @@
 ﻿using Sprint0.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Sprint0.xml;
 using Sprint0.HUDs;
 using Sprint0.UtilityClass;
 
@@ -55,16 +47,10 @@ namespace Sprint0.GameStates
             {
                 myGame.currentRoom.DoorList[i].Draw();
             }       
-            //myGame.link.GetFog().Draw();
         }
 
         public void Update()
         {
-            //foreach (IEnemy enemy in myGame.currentRoom.enemyList)
-            //{
-            //    enemy.blockCollisionTest(myGame.currentRoom.blockList);
-            //}
-            //The above code did not work here but work when I put them in Roomproperties' Update
             myGame.link.Update();
             myGame.link.BlockCollisionTest(myGame.currentRoom.blockList);
             myGame.link.ProjectileBlocksCollisionTest(myGame.currentRoom.blockList);

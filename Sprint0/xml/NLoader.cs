@@ -54,10 +54,7 @@ namespace Sprint0.xml
                     String type = reader.GetAttribute("type");
 
                     switch (type)
-                    {
-                        //case "Empty":
-                            //enemies.Add(new Empty(xpos, ypos));
-                            //break;                                            
+                    {                                           
                         case "BlockA":
                             blocks.Add(new BlockA(xpos, ypos));
                             break;
