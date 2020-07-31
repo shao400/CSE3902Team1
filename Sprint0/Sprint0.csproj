@@ -204,10 +204,14 @@
     <Compile Include="Sprite\EnemySprites\EnemyDeathSprite.cs" />
     <Compile Include="Sprite\EnemySprites\EnemyBlastSprite.cs" />
     <Compile Include="Sprite\EnemySprites\EnemyGelSprite.cs" />
+    <Compile Include="Sprite\EnemySprites\InfoDogongoSprite.cs" />
+    <Compile Include="Sprite\EnemySprites\InfoAquaSprite.cs" />
+    <Compile Include="Sprite\EnemySprites\InfoZolSprite.cs" />
     <Compile Include="Sprite\EnemySprites\InfoGoriyaSprite.cs" />
     <Compile Include="Sprite\EnemySprites\InfoKeeseSprite.cs" />
     <Compile Include="Sprite\EnemySprites\InfoMoblinSprite.cs" />
     <Compile Include="Sprite\EnemySprites\InfoPeahatSprite.cs" />
+    <Compile Include="Sprite\EnemySprites\InfoGelSprite.cs" />
     <Compile Include="Sprite\EnemySprites\InfoRopeSprite.cs" />
     <Compile Include="Sprite\EnemySprites\InfoStalfosSprite.cs" />
     <Compile Include="Sprite\EnemySprites\InfoTektiteSprite.cs" />

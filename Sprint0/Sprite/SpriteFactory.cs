@@ -68,6 +68,10 @@ namespace Sprint0.Sprite
         public static InfoKeeseSprite InfoKeese = new InfoKeeseSprite();
         public static InfoRopeSprite InfoRope = new InfoRopeSprite();
         public static InfoStalfosSprite InfoStalfos = new InfoStalfosSprite();
+        public static InfoAquaSprite InfoAqua = new InfoAquaSprite();
+        public static InfoZolSprite InfoZol = new InfoZolSprite();
+        public static InfoGelSprite InfoGel = new InfoGelSprite();
+        public static InfoDogongoSprite InfoDogongo = new InfoDogongoSprite();
 
         //Zina
         public static PlayerWoodenSwordShootingSprite PlayerWoodenSwordShootingRight = new PlayerWoodenSwordShootingSprite(SpriteEffects.None, 0);
@@ -333,6 +337,10 @@ namespace Sprint0.Sprite
             InfoPeahat.LoadContent(batch, content.Load<Texture2D>("handbook"));
             InfoTektite.LoadContent(batch, content.Load<Texture2D>("handbook"));
             InfoKeese.LoadContent(batch, content.Load<Texture2D>("handbook"));
+            InfoAqua.LoadContent(batch, content.Load<Texture2D>("handbook"));
+            InfoDogongo.LoadContent(batch, content.Load<Texture2D>("handbook"));
+            InfoZol.LoadContent(batch, content.Load<Texture2D>("handbook"));
+            InfoGel.LoadContent(batch, content.Load<Texture2D>("handbook"));
         }
 
         private static void LoadBlockContent(SpriteBatch batch, ContentManager content)

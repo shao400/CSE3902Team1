@@ -37,6 +37,10 @@ namespace Sprint0.Inventories
             }
             if (moveCountTot > IntegerHolder.Seven)
             {
+                dest1 = new Vector2(-480 + moveCountTot * IntegerHolder.Ninety, 222);
+            }
+            if (moveCountTot > IntegerHolder.Eleven)
+            {
                 moveCountTot = 0;
                 dest1 = new Vector2(238 + moveCountTot * IntegerHolder.Ninety, IntegerHolder.Ninety);
             }
@@ -73,6 +77,19 @@ namespace Sprint0.Inventories
                 case IntegerHolder.Seven:
                     enemyInfoSprite = new InfoKeeseSprite();
                     break;
+                case IntegerHolder.Eight:
+                    enemyInfoSprite = new InfoGelSprite();
+                    break;
+                case IntegerHolder.Nine:
+                    enemyInfoSprite = new InfoZolSprite();
+                    break;
+                case IntegerHolder.Ten:
+                    enemyInfoSprite = new InfoDogongoSprite();
+                    break;
+                case IntegerHolder.Eleven:
+                    enemyInfoSprite = new InfoAquaSprite();
+                    break;
+
                 default:
                     break;
             }

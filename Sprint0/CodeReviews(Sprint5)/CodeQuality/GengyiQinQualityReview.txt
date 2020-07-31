@@ -1,0 +1,10 @@
+Gengyi Qin
+7/31/2020
+Sprint5
+Handbook.cs
+Main Author: Zhizhou He
+Time: 5 min
+
+The general quality is high, apart from some magic numbers and an empty constructor. And in the drawInfo method we probably need to handle the null enemyInfoSprite exception.
+This class is mainly for the enemy handbook in inventories, as all the killed enemy will be recorded in the handbook and displayed with introduction in them. Generally speaking
+ the code is friendly for future updates and easy to maintain.

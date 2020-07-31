@@ -1,0 +1,9 @@
+Gengyi Qin
+7/31/2020
+Sprint5
+Handbook.cs
+Main Author: Zhizhou He
+Time: 5 min
+
+The code is readable in general, the structure is clear and the logic is relatively simple and readable. 
+But some variable names can be clarified for readers, for instance, "moveCountTot", and the magic number shall be replaced with numbers from utility classes.
