@@ -8,8 +8,6 @@ namespace Sprint0.Enemies
 {
     public class Rope : IEnemy
     {
-
-
         private ISprite RopeSprite;
         private int xPosition;
         private int yPosition;
@@ -35,7 +33,6 @@ namespace Sprint0.Enemies
         public void Damaged()
         {
             health--;
-
         }
         public int GetHealth()
         {
@@ -44,20 +41,13 @@ namespace Sprint0.Enemies
 
         public void Draw()
         {
-            if (counter < IntegerHolder.ThirtyFour)
-            {
-                Born.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
-            }
-
+            if (counter < IntegerHolder.ThirtyFour) Born.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);            
             if (this.GetHealth() > 0 && counter == IntegerHolder.ThirtyFour)
             {
                 Vector2 location = new Vector2(xPosition, yPosition);
                 RopeSprite.Draw(location, false);
             }
-            if (counter < IntegerHolder.Seventy && this.GetHealth() == 0)
-            {
-                Death.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
-            }
+            if (counter < IntegerHolder.Seventy && this.GetHealth() == 0) Death.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);           
         }
 
         public void Update()
@@ -76,22 +66,10 @@ namespace Sprint0.Enemies
             {
                 frame++;
                 if (frame >= 20) frame = 0;
-                if (frame < IntegerHolder.Ten && !backmove)
-                {
-                    destinationRec.X += IntegerHolder.Three;
-                }
-                else if (frame > IntegerHolder.Ten && !backmove)
-                {
-                    destinationRec.X += IntegerHolder.Three;
-                }
-                else if (frame < IntegerHolder.Ten && backmove)
-                {
-                    destinationRec.X -= IntegerHolder.Three;
-                }
-                else if (frame > IntegerHolder.Ten && backmove)
-                {
-                    destinationRec.X -= IntegerHolder.Three;
-                }
+                if (frame < IntegerHolder.Ten && !backmove) destinationRec.X += IntegerHolder.Three;               
+                else if (frame > IntegerHolder.Ten && !backmove) destinationRec.X += IntegerHolder.Three;                
+                else if (frame < IntegerHolder.Ten && backmove) destinationRec.X -= IntegerHolder.Three;                
+                else if (frame > IntegerHolder.Ten && backmove) destinationRec.X -= IntegerHolder.Three;                
                 if (destinationRec.X > 627) backmove = true;
                 if (destinationRec.X < IntegerHolder.NinetySix) backmove = false;
                 RopeSprite.Update();

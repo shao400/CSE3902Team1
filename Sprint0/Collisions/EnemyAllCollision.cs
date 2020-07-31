@@ -2,9 +2,7 @@
 using Sprint0.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-//currently not used, since enemy would not collition with items or blocks right now. May update future
+
 namespace Sprint0.Collisions
 {
     public class EnemyAllCollision
@@ -23,8 +21,8 @@ namespace Sprint0.Collisions
             Rectangle myRectangle = myEnemy.GetRectangle();
             Rectangle blockRectangle;
             Rectangle intersectionRectangle;
-            Boolean UpDownCollid = false;
-            Boolean LeftRightCollid = false;
+            bool UpDownCollid = false;
+            bool LeftRightCollid = false;
             foreach (IBlock block in blocks)
             {
 
@@ -38,30 +36,15 @@ namespace Sprint0.Collisions
                     if ((intersectionRectangle.Width >= intersectionRectangle.Height)) // from up or down
                     {
                         UpDownCollid = true;
-                        if (myRectangle.Y > blockRectangle.Y) // from down
-                        {
-                            myEnemy.xReverse(intersectionRectangle.Height, true);
-                            //myEnemy.x += intersectionRectangle.Height;
-                        }
-                        else //from up
-                        {
-                            myEnemy.xReverse(intersectionRectangle.Height, false);
-                            //myEnemy.yAxis -= intersectionRectangle.Height;
-                        }
+                        if (myRectangle.Y > blockRectangle.Y) myEnemy.xReverse(intersectionRectangle.Height, true);
+                        else myEnemy.xReverse(intersectionRectangle.Height, false);                        
                     }
                     else //from right or left
                     {
                         LeftRightCollid = true;
-                        if (myRectangle.X > blockRectangle.X)//from right
-                        {
-                            myEnemy.yReverse(intersectionRectangle.Height, true);
-                            //myEnemy.xAxis += intersectionRectangle.Width;
-                        }
-                        else //from left
-                        {
-                            myEnemy.yReverse(intersectionRectangle.Height, false);
-                            //myEnemy.xAxis -= intersectionRectangle.Width;
-                        }
+                        if (myRectangle.X > blockRectangle.X) myEnemy.yReverse(intersectionRectangle.Height, true);                        
+                        else myEnemy.yReverse(intersectionRectangle.Height, false);
+                        
                     }
                 }
             }

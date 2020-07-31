@@ -7,8 +7,6 @@ namespace Sprint0.NPCs
 {
     public class Flame : INPC
     {
-
-
         private static ISprite FlameSprite;
         private int xPosition;
         private int yPosition;

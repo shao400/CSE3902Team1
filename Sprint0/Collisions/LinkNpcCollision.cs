@@ -37,32 +37,17 @@ namespace Sprint0.Collisions
 
                 if (!intersectionRectangle.IsEmpty)
                 {
-                    if (npc.GetType() == merchant.GetType())
-                    {
-                        myGame.currentState = myGame.stateList[IntegerHolder.Eight];
-                    }
+                    if (npc.GetType() == merchant.GetType()) myGame.currentState = myGame.stateList[IntegerHolder.Eight];                    
                     // check the collison occuring direction
                     if ((intersectionRectangle.Width >= intersectionRectangle.Height)) // from up or down
                     {
-                        if (linkRectangle.Y > npcRectangle.Y) // from down
-                        {
-                            myPlayer.yAxis += intersectionRectangle.Height;
-                        }
-                        else //from up
-                        {
-                            myPlayer.yAxis -= intersectionRectangle.Height;
-                        }
+                        if (linkRectangle.Y > npcRectangle.Y) myPlayer.yAxis += intersectionRectangle.Height;                        
+                        else myPlayer.yAxis -= intersectionRectangle.Height;                       
                     }
                     else //from right or left
                     {
-                        if (linkRectangle.X > npcRectangle.X)//from right
-                        {
-                            myPlayer.xAxis += intersectionRectangle.Width;
-                        }
-                        else //from left
-                        {
-                            myPlayer.xAxis -= intersectionRectangle.Width;
-                        }
+                        if (linkRectangle.X > npcRectangle.X) myPlayer.xAxis += intersectionRectangle.Width;                        
+                        else myPlayer.xAxis -= intersectionRectangle.Width;                        
                     }
                     break;//once link has collision with one block, no need to detect other blocks
                 }

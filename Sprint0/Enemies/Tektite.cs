@@ -1,9 +1,5 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
 using Sprint0.UtilityClass;
@@ -12,8 +8,6 @@ namespace Sprint0.Enemies
 {   //Zina
     public class Tektite : IEnemy
     {
-
-
         private ISprite TektiteSprite;
         private int xPosition;
         private int yPosition;
@@ -38,7 +32,6 @@ namespace Sprint0.Enemies
         public void Damaged()
         {
             health--;
-
         }
         public int GetHealth()
         {
@@ -47,20 +40,13 @@ namespace Sprint0.Enemies
 
         public void Draw()
         {
-            if (counter < IntegerHolder.ThirtyFour)
-            {
-                Born.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
-            }
-
+            if (counter < IntegerHolder.ThirtyFour) Born.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);            
             if (this.GetHealth() > 0 && counter == IntegerHolder.ThirtyFour)
             {
                 Vector2 location = new Vector2(xPosition, yPosition);
                 TektiteSprite.Draw(location, false);
             }
-            if (counter < IntegerHolder.Seventy && this.GetHealth() == 0)
-            {
-                Death.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
-            }
+            if (counter < IntegerHolder.Seventy && this.GetHealth() == 0) Death.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);            
         }
 
         public void Update()
@@ -79,22 +65,10 @@ namespace Sprint0.Enemies
             {
                 frame++;
                 if (frame >= 20) frame = 0;
-                if (frame < IntegerHolder.Ten && !backmove)
-                {
-                    destinationRec.Y += IntegerHolder.Three;
-                }
-                else if (frame > IntegerHolder.Ten && !backmove)
-                {
-                    destinationRec.Y += IntegerHolder.Three;
-                }
-                else if (frame < IntegerHolder.Ten && backmove)
-                {
-                    destinationRec.Y -= IntegerHolder.Three;
-                }
-                else if (frame > IntegerHolder.Ten && backmove)
-                {
-                    destinationRec.Y -= IntegerHolder.Three;
-                }
+                if (frame < IntegerHolder.Ten && !backmove) destinationRec.Y += IntegerHolder.Three;                
+                else if (frame > IntegerHolder.Ten && !backmove) destinationRec.Y += IntegerHolder.Three;                
+                else if (frame < IntegerHolder.Ten && backmove) destinationRec.Y -= IntegerHolder.Three;               
+                else if (frame > IntegerHolder.Ten && backmove) destinationRec.Y -= IntegerHolder.Three;                
                 if (destinationRec.Y > 555) backmove = true;
                 if (destinationRec.Y < IntegerHolder.TwoSixFour) backmove = false;
                 TektiteSprite.Update();

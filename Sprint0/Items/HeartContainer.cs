@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Media;
 using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
 using Sprint0.Sprite;
@@ -17,16 +12,12 @@ namespace Sprint0.Items
         private int yAix;
         private bool picked;
         private int price;
-        //private int width;
-        //private int height;
         public HeartContainer(int x, int y)
         {
             xAix = x;
             yAix = y;
             picked = false;
             price = 15;
-            //width = w;
-            //height = h;
         }
         public void Draw()
         {

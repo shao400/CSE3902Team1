@@ -43,12 +43,7 @@ namespace Sprint0.Collisions
                             myPlayer.GetGame().NcurrentRoom.itemList.Add(new Ruppy(enemy.GetRectangle().X, enemy.GetRectangle().Y));
                             s.enemyDie();
                         }
-                        else
-                        {
-                            s.enemyHit();
-
-
-                        }
+                        else s.enemyHit();                        
                     } 
                     else if (thisProjectile.Type() == StringHolder.Bomb && thisProjectile.IsExplode() == 1)
                     {
@@ -59,13 +54,7 @@ namespace Sprint0.Collisions
                             myPlayer.GetGame().NcurrentRoom.itemList.Add(new Ruppy(enemy.GetRectangle().X, enemy.GetRectangle().Y));
                             s.enemyDie();
                         }
-                        else
-                        {
-                            s.enemyHit();
-
-
-                        }
-                    
+                        else s.enemyHit();                                            
                     }
                     else if (thisProjectile.IsExplode() == IntegerHolder.Three )
                     {
@@ -77,15 +66,8 @@ namespace Sprint0.Collisions
                             myPlayer.GetGame().NcurrentRoom.itemList.Add(new Ruppy(enemy.GetRectangle().X, enemy.GetRectangle().Y));
                             s.enemyDie();
                         }
-                        else
-                        {
-                            s.enemyHit();
-
-
-                        }
-                        
-                    }
-                    
+                        else s.enemyHit();                                              
+                    }                    
                 }
             }
         }
@@ -101,15 +83,9 @@ namespace Sprint0.Collisions
                 intersectionRectangle = Rectangle.Intersect(thisRectangle, blockRectangle);
                 if (!intersectionRectangle.IsEmpty && block.getType() != StringHolder.WaterType && thisProjectile.Type() != StringHolder.Bomb)
                 {
-                            if (thisProjectile.IsExplode() == 0)
-                            {
-                                thisProjectile.setExplo(1);
-                            }
-                            
-                       
-                    break;//once link has collision with one block, no need to detect other blocks
-                
-            }
+                    if (thisProjectile.IsExplode() == 0) thisProjectile.setExplo(1);                                                                             
+                    break;//once link has collision with one block, no need to detect other blocks                
+                }
             }
         }
 
@@ -119,17 +95,14 @@ namespace Sprint0.Collisions
             Rectangle linkRectangle;
             Rectangle intersectionRectangle;
       
-                linkRectangle = myPlayer.GetRectangle();
-                intersectionRectangle = Rectangle.Intersect(thisRectangle, linkRectangle);
-                if (!intersectionRectangle.IsEmpty && thisProjectile.IsExplode() == 0)
-                {
-                    myPlayer.GetSound().linkHurt();
-                    myPlayer.takeDmg(1);
-                        thisProjectile.setExplo(1);
-                    
-
-
-                }           
+            linkRectangle = myPlayer.GetRectangle();
+            intersectionRectangle = Rectangle.Intersect(thisRectangle, linkRectangle);
+            if (!intersectionRectangle.IsEmpty && thisProjectile.IsExplode() == 0)
+            {
+                myPlayer.GetSound().linkHurt();
+                myPlayer.takeDmg(1);
+                thisProjectile.setExplo(1);                  
+            }           
         }
     }
 }

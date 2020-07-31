@@ -8,8 +8,6 @@ namespace Sprint0.Enemies
 {
     public class Trap : IEnemy
     {
-
-
         private ISprite TrapSprite;
         private int xPosition;
         private int yPosition;
@@ -42,21 +40,13 @@ namespace Sprint0.Enemies
 
         public  void Draw()
         {
-            if (counter < IntegerHolder.ThirtyFour)
-            {
-                Born.Draw(new Vector2(destinationRec.X, yPosition), false);
-            }
-
+            if (counter < IntegerHolder.ThirtyFour) Born.Draw(new Vector2(destinationRec.X, yPosition), false);            
             if (this.GetHealth() > 0 && counter == IntegerHolder.ThirtyFour)
             {
                 Vector2 location = new Vector2(xPosition, yPosition);
                     TrapSprite.Draw(location, false);
-                }
-            if (counter < IntegerHolder.Seventy && this.GetHealth() == 0)
-            {
-                Death.Draw(new Vector2(destinationRec.X, yPosition), false);
             }
-
+            if (counter < IntegerHolder.Seventy && this.GetHealth() == 0) Death.Draw(new Vector2(destinationRec.X, yPosition), false);            
         }
 
         public void Update()

@@ -1,13 +1,6 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
+﻿using Microsoft.Xna.Framework.Input;
 using Sprint0.Commands;
-using Sprint0.GameStates;
-using Sprint0.Inventories;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Sprint0.Controller
 {
@@ -30,26 +23,20 @@ namespace Sprint0.Controller
             keymap.Add(Keys.S, new sDown(myGame));
             keymap.Add(Keys.A, new aLeft(myGame));
             keymap.Add(Keys.D, new dRight(myGame));
-
             keymap.Add(Keys.Up, new wUp(myGame));
             keymap.Add(Keys.Down, new sDown(myGame));
             keymap.Add(Keys.Left, new aLeft(myGame));
             keymap.Add(Keys.Right, new dRight(myGame));
-
             keymap.Add(Keys.Q, new qQuit(myGame));
             keymap.Add(Keys.R, new rReset(myGame));
             keymap.Add(Keys.D1, new D1UseItem(myGame));
             keymap.Add(Keys.D2, new Bomb(myGame));
             keymap.Add(Keys.Space, new spaceSelect(myGame));
-            //keymap.Add(Keys.D3, new BoomrangShoot(myGame));
-            //keymap.Add(Keys.D4, new BoomrangShoot(myGame));
+
             attackmap.Add(Keys.Z, new Attack(myGame));
             attackmap.Add(Keys.N, new Shoot(myGame));
             attackmap.Add(Keys.B, new bHandbook(myGame));
-
-            //attackmap.Add(Keys.L, new Boom(myGame));
             attackmap.Add(Keys.M, new mSwitchOption(myGame));
-
             attackmap.Add(Keys.Enter, new enterPause(myGame));
         }
 

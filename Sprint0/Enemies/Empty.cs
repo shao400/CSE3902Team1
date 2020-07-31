@@ -8,8 +8,6 @@ namespace Sprint0.Enemies
 {
     public class Empty :IEnemy
     {
-
-
         private ISprite AquaSprite;
         private int xPosition;
         private int yPosition;

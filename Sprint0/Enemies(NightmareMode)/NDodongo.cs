@@ -10,7 +10,6 @@ namespace Sprint0.Enemies
 {
     public class NDodongo : IEnemy
     {
-
         private IPlayer myPlayer;
         private ISprite DodongoSprite;
         private int xPosition, yPosition, xDif, yDif;

@@ -73,23 +73,10 @@ namespace Sprint0.Enemies
             {
                 frame++;
                 if (frame >= 20) frame = 0;
-                if (frame < IntegerHolder.Ten && !backmove)
-                {
-                    destinationRec.Y += IntegerHolder.Five;
-                }
-                else if (frame > IntegerHolder.Ten && !backmove)
-                {
-                    destinationRec.Y += IntegerHolder.Five;
-                }
-                else if (frame < IntegerHolder.Ten && backmove)
-                {
-                    destinationRec.Y -= IntegerHolder.Five;
-                }
-                else if (frame > IntegerHolder.Ten && backmove)
-                {
-                    destinationRec.Y -= IntegerHolder.Five;
-                }
-
+                if (frame < IntegerHolder.Ten && !backmove) destinationRec.Y += IntegerHolder.Five;                
+                else if (frame > IntegerHolder.Ten && !backmove) destinationRec.Y += IntegerHolder.Five;                
+                else if (frame < IntegerHolder.Ten && backmove) destinationRec.Y -= IntegerHolder.Five;                
+                else if (frame > IntegerHolder.Ten && backmove) destinationRec.Y -= IntegerHolder.Five;               
                 if (destinationRec.Y > 555) backmove = true;
                 if (destinationRec.Y < IntegerHolder.TwoSixFour) backmove = false;
                 GelSprite.Update();

@@ -45,84 +45,51 @@ namespace Sprint0.Collisions
                 intersectionRectangle = Rectangle.Intersect(linkRectangle, itemRectangle);
                 if (!intersectionRectangle.IsEmpty)
                 {
-                    if (item.GetType() == triforce.GetType() && !item.isPickedUp())
-                    {
-                        myPlayer.winGame();
-                    }
-                    if (item.GetType() == heart.GetType() && !item.isPickedUp())
-                    {
-                        myPlayer.getHealed();
-                    }
-                    if (item.GetType() == heartC.GetType() && !item.isPickedUp())
-                    {
-                        myPlayer.increaseMaxHp();
-                    }
-                    if (item.GetType() == ruppy.GetType() && !item.isPickedUp())
-                    {
-                        myPlayer.getRuppy();
-                    }
-                    if (item.GetType() == key.GetType() && !item.isPickedUp())
-                    {
-                        myPlayer.getKey();
-                    }
+                    if (item.GetType() == triforce.GetType() && !item.isPickedUp()) myPlayer.winGame();                    
+                    if (item.GetType() == heart.GetType() && !item.isPickedUp()) myPlayer.getHealed();                    
+                    if (item.GetType() == heartC.GetType() && !item.isPickedUp()) myPlayer.increaseMaxHp();                    
+                    if (item.GetType() == ruppy.GetType() && !item.isPickedUp()) myPlayer.getRuppy();                    
+                    if (item.GetType() == key.GetType() && !item.isPickedUp()) myPlayer.getKey();                    
+                    
                     if (item.GetType() == bomb.GetType() && !item.isPickedUp())
                     {
                         myPlayer.getBomb();
                         myPlayer.myInventory.addItem(item);
-
                     }
+                    
                     if (item.GetType() == bow.GetType() && !item.isPickedUp())
                     {
                         s.getItem();
                         s.fanfare();
                         myPlayer.myInventory.addItem(item);
                     }
+                    
                     if (item.GetType() == boomerang.GetType() && !item.isPickedUp())
                     {
                         s.getItem();
                         s.fanfare();
                         myPlayer.myInventory.addItem(item);
                     }
-                    if (item.GetType() == map.GetType() && !item.isPickedUp())
-                    {
-                        myPlayer.MapOrCompassGet(0);
-                        //myPlayer.myInventory.addItem(item);
-                    }
-                    if (item.GetType() == compass.GetType() && !item.isPickedUp())
-                    {
-                        myPlayer.MapOrCompassGet(GetCompass);
-                        //myPlayer.myInventory.addItem(item);
-                    }
+                    
+                    if (item.GetType() == map.GetType() && !item.isPickedUp()) myPlayer.MapOrCompassGet(0);                    
+                    if (item.GetType() == compass.GetType() && !item.isPickedUp()) myPlayer.MapOrCompassGet(GetCompass);                    
                     if (item.GetType() == woodenSwordItem.GetType() && !item.isPickedUp())
                     {
                         s.getItem();
                         s.fanfare();
                         myPlayer.PickBuyWeapon(StringHolder.WoodenSword);
-                        //myPlayer.myInventory.addItem(item);
                     }
 
                     // check the collison occuring direction
                     if ((intersectionRectangle.Width >= intersectionRectangle.Height)) // from up or down
                     {
-                        if (linkRectangle.Y > itemRectangle.Y) // from down
-                        {
-                            item.PickedUp();
-                        }
-                        else //from up
-                        {
-                            item.PickedUp();
-                        }
+                        if (linkRectangle.Y > itemRectangle.Y)  item.PickedUp();                        
+                        else  item.PickedUp();                       
                     }
                     else //from right or left
                     {
-                        if (linkRectangle.X > itemRectangle.X)//from right
-                        {
-                            item.PickedUp();
-                        }
-                        else //from left
-                        {
-                            item.PickedUp();
-                        }
+                        if (linkRectangle.X > itemRectangle.X) item.PickedUp();                        
+                        else item.PickedUp();                        
                     }
                 }
             }

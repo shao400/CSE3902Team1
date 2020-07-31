@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Sprint0.Sprite;
-
-namespace Sprint0.Commands
+﻿namespace Sprint0.Commands
 {
     class qQuit : ICommand
     {

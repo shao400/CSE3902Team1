@@ -49,8 +49,6 @@ namespace Sprint0.GameStates
             myBatch.End();
             myHud.Draw(x, y);
             map.Draw(mapx, mapy);
-
-
         }
 
         public void Update() 

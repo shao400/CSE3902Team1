@@ -20,7 +20,6 @@ namespace Sprint0.Inventories
         public int moveCountTot = 0;
         public int currentItem = 0;
 
-
         public Inventory(Player1 link)
         {
             myLink = link;

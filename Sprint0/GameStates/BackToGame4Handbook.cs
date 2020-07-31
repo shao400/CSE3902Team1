@@ -44,8 +44,6 @@ namespace Sprint0.GameStates
             myBatch.Draw(myContent.Load<Texture2D>(StringHolder.Handbook), handbookDestRec, handbookSourceRec, Color.White);
             myBatch.End();
             myHud.Draw(x, y);
-
-
         }
 
         public void Update() 

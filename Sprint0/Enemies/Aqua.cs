@@ -2,7 +2,6 @@
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
 using System.Collections.Generic;
-using Sprint0.Player;
 using Sprint0.Collisions;
 using Sprint0.Projectile;
 using Sprint0.UtilityClass;
@@ -11,7 +10,6 @@ namespace Sprint0.Enemies
 {
     public class Aqua : IEnemy 
     {
-
         private IPlayer myPlayer;
         private ISprite AquaSprite;
         private int xPosition;
@@ -52,7 +50,6 @@ namespace Sprint0.Enemies
         {
             health--;
             myPlayer.GetSound().bossScream2();
-
         }
         public int GetHealth()
         {
@@ -60,11 +57,7 @@ namespace Sprint0.Enemies
         }
         public void Draw()
         {
-            if (counter < IntegerHolder.ThirtyFour)
-            {
-                Born.Draw(new Vector2(destinationRec.X, yPosition), false);
-            }
-
+            if (counter < IntegerHolder.ThirtyFour) Born.Draw(new Vector2(destinationRec.X, yPosition), false);            
             if (this.GetHealth() > 0 && counter == IntegerHolder.ThirtyFour)
             {
                 energyBall.Shoot();
@@ -73,18 +66,9 @@ namespace Sprint0.Enemies
                 Vector2 location = new Vector2(xPosition, yPosition);
                 AquaSprite.Draw(location, false);
             }
-            if (counter < IntegerHolder.Seventy && this.GetHealth() == 0)
-            {
-                Death.Draw(new Vector2(destinationRec.X, yPosition), false);
-            }
-            if (counter == IntegerHolder.ThirtyThree)
-            {
-                myPlayer.GetSound().bossScream1();
-            }
-            if (counter == IntegerHolder.ThirtyFive)
-            {
-                myPlayer.GetSound().bossScream3();
-            }
+            if (counter < IntegerHolder.Seventy && this.GetHealth() == 0) Death.Draw(new Vector2(destinationRec.X, yPosition), false);            
+            if (counter == IntegerHolder.ThirtyThree) myPlayer.GetSound().bossScream1();            
+            if (counter == IntegerHolder.ThirtyFive) myPlayer.GetSound().bossScream3();            
         }
 
         public void Update()
@@ -109,22 +93,10 @@ namespace Sprint0.Enemies
                 projectileCollision3.ProjectileLinkCollisionTest();
                 frame++;
                 if (frame >= IntegerHolder.Five) frame = 0;
-                if (frame < 2 && !backmove)
-                {
-                    destinationRec.X += 1;
-                }
-                else if (frame > 2 && !backmove)
-                {
-                    destinationRec.X += 1;
-                }
-                else if (frame < 2 && backmove)
-                {
-                    destinationRec.X -= 1;
-                }
-                else if (frame > 2 && backmove)
-                {
-                    destinationRec.X -= 1;
-                }
+                if (frame < 2 && !backmove) destinationRec.X += 1;                
+                else if (frame > 2 && !backmove) destinationRec.X += 1;                
+                else if (frame < 2 && backmove) destinationRec.X -= 1;                
+                else if (frame > 2 && backmove) destinationRec.X -= 1;                
                 if (destinationRec.X > 470) backmove = true;
                 if (destinationRec.X < 440) backmove = false;
                 AquaSprite.Update();

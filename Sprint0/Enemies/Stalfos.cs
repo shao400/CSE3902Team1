@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Sprint0.Sprite;
 using Sprint0.Interfaces;
 using Sprint0.UtilityClass;
@@ -12,13 +8,9 @@ namespace Sprint0.Enemies
 {
     public class Stalfos : IEnemy
     {
-
-
         private ISprite StalfosSprite;
         private int xPosition;
         private int yPosition;
-        //private int frame = 0;
-        //bool backmove = false;
         private Rectangle destinationRec;
         private int health = 1;
         private ISprite Born;
@@ -26,7 +18,6 @@ namespace Sprint0.Enemies
         private int counter = 0;
         public Stalfos(int x, int y)
         {
-
             xPosition = x;
             yPosition = y;
             StalfosSprite = new EnemyStalfosSprite(x, y);
@@ -38,7 +29,6 @@ namespace Sprint0.Enemies
         public void Damaged()
         {
             health--;
-
         }
         public int GetHealth()
         {
@@ -47,20 +37,13 @@ namespace Sprint0.Enemies
 
         public void Draw()
         {
-            if (counter < IntegerHolder.ThirtyFour)
-            {
-                Born.Draw(new Vector2(destinationRec.X, yPosition), false);
-            }
-
+            if (counter < IntegerHolder.ThirtyFour) Born.Draw(new Vector2(destinationRec.X, yPosition), false);            
             if (this.GetHealth() > 0 && counter == IntegerHolder.ThirtyFour)
             {
                 Vector2 location = new Vector2(xPosition, yPosition);
                 StalfosSprite.Draw(location, false);
             }
-            if (counter < IntegerHolder.Seventy && this.GetHealth() == 0)
-            {
-                Death.Draw(new Vector2(destinationRec.X, yPosition), false);
-            }
+            if (counter < IntegerHolder.Seventy && this.GetHealth() == 0) Death.Draw(new Vector2(destinationRec.X, yPosition), false);            
         }
 
         public void Update()

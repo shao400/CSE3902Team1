@@ -9,8 +9,6 @@ namespace Sprint0.Enemies
 {
     public class Oldman : IEnemy
     {
-
-
         private ISprite OldmanSprite;
         private int xPosition;
         private int yPosition;
@@ -24,7 +22,6 @@ namespace Sprint0.Enemies
         private int counter = 0;
         public Oldman(int x, int y,Player1 link)
         {
-
             xPosition = x;
             yPosition = y;
             OldmanSprite = new EnemyOldmanSprite(x, y);
@@ -47,14 +44,9 @@ namespace Sprint0.Enemies
 
         public void Draw()
         {
-            if (counter < IntegerHolder.ThirtyFour)
-            {
-                Born.Draw(new Vector2(destinationRec.X, yPosition), false);
-            }
-
+            if (counter < IntegerHolder.ThirtyFour) Born.Draw(new Vector2(destinationRec.X, yPosition), false);            
             if (this.GetHealth() > 0 && counter == IntegerHolder.ThirtyFour)
             {
-
                 Vector2 locationO = new Vector2(xPosition, yPosition);
                 OldmanSprite.Draw(locationO, false);
             }

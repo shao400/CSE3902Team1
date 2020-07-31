@@ -8,8 +8,6 @@ namespace Sprint0.Enemies
 {
     public class Keese :IEnemy
     {
-
-
         private ISprite KeeseSprite;
         private int xPosition;
         private int yPosition;
@@ -34,7 +32,6 @@ namespace Sprint0.Enemies
         public void Damaged()
         {
             health--;
-
         }
         public int GetHealth()
         {
@@ -43,11 +40,7 @@ namespace Sprint0.Enemies
 
         public void Draw()
         {
-            if (counter < IntegerHolder.ThirtyFour)
-            {
-                Born.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
-            }
-
+            if (counter < IntegerHolder.ThirtyFour) Born.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);            
             if (this.GetHealth() > 0 && counter == IntegerHolder.ThirtyFour)
             {
                 Vector2 location = new Vector2(xPosition, yPosition);
@@ -75,23 +68,10 @@ namespace Sprint0.Enemies
             {
                 frame++;
                 if (frame >= 20) frame = 0;
-                if (frame < IntegerHolder.Ten && !backmove)
-                {
-                    destinationRec.Y += IntegerHolder.Three;
-                }
-                else if (frame > IntegerHolder.Ten && !backmove)
-                {
-                    destinationRec.Y += IntegerHolder.Three;
-                }
-                else if (frame < IntegerHolder.Ten && backmove)
-                {
-                    destinationRec.Y -= IntegerHolder.Three;
-                }
-                else if (frame > IntegerHolder.Ten && backmove)
-                {
-                    destinationRec.Y -= IntegerHolder.Three;
-                }
-
+                if (frame < IntegerHolder.Ten && !backmove) destinationRec.Y += IntegerHolder.Three;                
+                else if (frame > IntegerHolder.Ten && !backmove) destinationRec.Y += IntegerHolder.Three;                
+                else if (frame < IntegerHolder.Ten && backmove) destinationRec.Y -= IntegerHolder.Three;               
+                else if (frame > IntegerHolder.Ten && backmove) destinationRec.Y -= IntegerHolder.Three;                
                 if (destinationRec.Y > 555) backmove = true;
                 if (destinationRec.Y < IntegerHolder.TwoSixFour) backmove = false;
                 KeeseSprite.Update();

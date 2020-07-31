@@ -11,9 +11,7 @@ namespace Sprint0.Enemies
 {
     public class NAqua : IEnemy
     {
-
-        private IPlayer myPlayer;
-        
+        private IPlayer myPlayer;        
         private ISprite AquaSprite;
         private ProjectileCollision projectileCollision;
         private IProjectile energyBall;
@@ -54,19 +52,9 @@ namespace Sprint0.Enemies
         }
         public void Draw()
         {
-            if (counter < IntegerHolder.ThirtyFour)
-            {
-                Born.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
-                
-            }
-            if (counter == IntegerHolder.ThirtyThree)
-            {
-                myPlayer.GetSound().bossScream1();
-            }
-            if (counter == IntegerHolder.ThirtyFive)
-            {
-                myPlayer.GetSound().bossScream3();
-            }
+            if (counter < IntegerHolder.ThirtyFour) Born.Draw(new Vector2(destinationRec.X, destinationRec.Y), false);
+            if (counter == IntegerHolder.ThirtyThree) myPlayer.GetSound().bossScream1();           
+            if (counter == IntegerHolder.ThirtyFive) myPlayer.GetSound().bossScream3();            
             if (this.GetHealth() > 0 && counter == IntegerHolder.ThirtyFour)
             {
                 energyBall.Shoot();
@@ -129,7 +117,7 @@ namespace Sprint0.Enemies
 
         public void blockCollisionTest(List<IBlock> blocks)
         {
-            //enemyAllCollision.BlockCollisionTest(blocks);
+
         }
     }
 }

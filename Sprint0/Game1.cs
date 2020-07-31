@@ -89,7 +89,6 @@ namespace Sprint0
             sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Get_Item"));
             sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Door_Unlock"));
             sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Get_Rupee"));
-
             sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Boss_Scream1"));
             sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Boss_Scream2"));
             sounds.Add(Content.Load<SoundEffect>("Sounds/LOZ_Boss_Scream3"));
@@ -113,11 +112,10 @@ namespace Sprint0
             soundEffect.intro();
             controllerList = new List<object>();
             controllerList.Add(new KeyboardC(this));
-            controllerList.Add(new MouseC(this));
             link = new Player1(IntegerHolder.linkInitialX, IntegerHolder.linkInitialY, IntegerHolder.linkHitBoxSize, IntegerHolder.linkHitBoxSize, soundEffect, this);
             hud = new Hud(this);
             normalOrNight = 0;
-            this.IsMouseVisible = true;
+            IsMouseVisible = true;
             base.Initialize();
             string Room = "Room";
             string xml = ".xml";
@@ -178,26 +176,18 @@ namespace Sprint0
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
-            // TODO: Add your update logic here
             foreach (IController controller in controllerList)
             {
                 controller.Update();
             }
-
             currentState.Update();
-
             base.Update(gameTime);
-            //link.myInventory.Update();
-            //put this line into update() of pause.cs so Game1 can be simple
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            if (currentState == stateList[IntegerHolder.Seven])
-                GraphicsDevice.Clear(Color.Pink);
-          else
-              GraphicsDevice.Clear(Color.CornflowerBlue);
+            if (currentState == stateList[IntegerHolder.Seven]) GraphicsDevice.Clear(Color.Pink);
+            else GraphicsDevice.Clear(Color.CornflowerBlue);
 
             currentState.Draw();
             base.Draw(gameTime);    

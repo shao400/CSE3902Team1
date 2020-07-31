@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Media;
 using Microsoft.Xna.Framework;
 using Sprint0.Interfaces;
 using Sprint0.Sprite;
@@ -16,8 +11,6 @@ namespace Sprint0.Items
         private int xAix;
         private int yAix;
         private bool picked;
-        //private int width;
-        //private int height;
         private int price;
         public blue_potion(int x, int y)
         {
@@ -25,8 +18,6 @@ namespace Sprint0.Items
             yAix = y;
             picked = false;
             price = 0;
-            //width = w;
-            //height = h;
         }
         public void Draw()
         {

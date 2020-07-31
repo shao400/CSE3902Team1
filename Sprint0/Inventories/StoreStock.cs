@@ -29,8 +29,6 @@ namespace Sprint0.Inventories
         int x = 340;
         int y = 340;
 
-        //donot need that difficult, because item index is fixed
-
         public StoreStock(Player1 link)
         {
             myLink = link;

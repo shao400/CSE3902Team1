@@ -8,8 +8,6 @@ namespace Sprint0.Enemies
 {
     public class Dodongo : IEnemy
     {
-
-
         private ISprite DodongoSprite;
         private int xPosition;
         private int yPosition;
@@ -43,10 +41,7 @@ namespace Sprint0.Enemies
 
         public void Draw()
         {
-            if (counter < IntegerHolder.ThirtyFour)
-            {
-                Born.Draw(new Vector2(destinationRec.X, yPosition), false);
-            }
+            if (counter < IntegerHolder.ThirtyFour) Born.Draw(new Vector2(destinationRec.X, yPosition), false);            
 
             if (this.GetHealth() > 0 && counter == IntegerHolder.ThirtyFour)
             {
@@ -75,22 +70,10 @@ namespace Sprint0.Enemies
             {
                 frame++;
                 if (frame >= 20) frame = 0;
-                if (frame < IntegerHolder.Ten && !backmove)
-                {
-                    destinationRec.X += 1;
-                }
-                else if (frame > IntegerHolder.Ten && !backmove)
-                {
-                    destinationRec.X += 1;
-                }
-                else if (frame < IntegerHolder.Ten && backmove)
-                {
-                    destinationRec.X -= 1;
-                }
-                else if (frame > IntegerHolder.Ten && backmove)
-                {
-                    destinationRec.X -= 1;
-                }
+                if (frame < IntegerHolder.Ten && !backmove) destinationRec.X += 1;                
+                else if (frame > IntegerHolder.Ten && !backmove) destinationRec.X += 1;                
+                else if (frame < IntegerHolder.Ten && backmove) destinationRec.X -= 1;               
+                else if (frame > IntegerHolder.Ten && backmove) destinationRec.X -= 1;                
                 if (destinationRec.X > 627) backmove = true;
                 if (destinationRec.X < IntegerHolder.NinetySix) backmove = false;
                 DodongoSprite.Update();

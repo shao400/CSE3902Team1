@@ -108,7 +108,6 @@ namespace Sprint0.Player
         }
         public string GetCurrentStatus()
         {
-
             return currentStatus.ToString();
         }
         public Game1 GetGame()
@@ -117,14 +116,8 @@ namespace Sprint0.Player
         }
         public string GetCurrentWeapon()
         {
-            if (currentWp.Count != 0)
-            {
-                return currentWp.Peek();
-            }
-            else
-            {
-                return StringHolder.None;
-            }
+            if (currentWp.Count != 0) return currentWp.Peek();            
+            else return StringHolder.None;            
         }
 
         public void PickBuyWeapon(String weaponGet)
@@ -151,39 +144,25 @@ namespace Sprint0.Player
         }
         public void Update()
         {
-
             getPlayerItem1().Update();
             getPlayerItem2().Update();
             if (currentStatus == status.walking && currentFacing == facing.left)
             {
-                if (xAxis > 0)
-                {
-                    xAxis -= IntegerHolder.Five;
-                }
+                if (xAxis > 0) xAxis -= IntegerHolder.Five;               
             }
             else if (currentFacing == facing.right && currentStatus == status.walking)
             {
-                if (xAxis < 720)
-                {
-                    xAxis += IntegerHolder.Five;
-                }
+                if (xAxis < 720) xAxis += IntegerHolder.Five;                
             }
             else if (currentFacing == facing.down && currentStatus == status.walking)
             {
-                if (yAxis < 648)
-                {
-                    yAxis += IntegerHolder.Five;
-                }
+                if (yAxis < 648) yAxis += IntegerHolder.Five;                
             }
             else if (currentFacing == facing.up && currentStatus == status.walking)
             {
-                if (yAxis > IntegerHolder.OneSixEight)
-                {
-                    yAxis -= IntegerHolder.Five;
-                }
+                if (yAxis > IntegerHolder.OneSixEight) yAxis -= IntegerHolder.Five;                
             }
             currentSprite.Update();
-
             //border restrictions
             if (myGame.currentState == myGame.stateList[0])
             {
@@ -209,7 +188,6 @@ namespace Sprint0.Player
                     }
                     myGame.currentState = myGame.stateList[1];
                     myGame.currentState.loadNextRoom(myGame.currentRoom.Connectors[0]);
-
                 }
                 else if (yAxis >= 648)
                 {
@@ -242,7 +220,6 @@ namespace Sprint0.Player
                     }
                     myGame.currentState = myGame.stateList[IntegerHolder.Ten];
                     myGame.currentState.loadNextRoom(myGame.NcurrentRoom.Connectors[0]);
-
                 }
                 else if (yAxis >= 648)
                 {
@@ -251,13 +228,7 @@ namespace Sprint0.Player
                     myGame.currentState.loadNextRoom(myGame.NcurrentRoom.Connectors[1]);
                 }
             }
-
-
-
-            if (dmgCounter < 18)
-            {
-                dmgCounter++;
-            }
+            if (dmgCounter < 18) dmgCounter++;            
             myFog.Update();
         }
         public void Draw()
