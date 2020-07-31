@@ -1,0 +1,9 @@
+Zina Zhang
+7/31/2020
+Sprint5
+Nightmare Enemy
+Main Author: Gengyi Qin
+Time: 5 min
+
+Did a good job on seperate normal enemy and nightmare enemy. Logical is clear to understand. Variable names are clear so that caller would easy to call nightmare enemy and normal enemy.
+Class will be better if comments added for methods.

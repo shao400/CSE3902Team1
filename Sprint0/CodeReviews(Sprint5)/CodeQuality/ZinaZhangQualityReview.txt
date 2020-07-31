@@ -1,0 +1,10 @@
+Zina Zhang
+7/31/2020
+Sprint5
+Nightmare Enemy
+Main Author: Gengyi Qin
+Time: 5 min
+
+General quality is high. Did good job on trace link posistion and move enemy toward link. The game now look more like AI game. He also slow the speed for enemy so that user can ealiy play it. 
+Also did a good job on dealing with magical number. 
+Class might be improved if there is a way to change nightmare mode in normal enemy so that there is less classes in project.
