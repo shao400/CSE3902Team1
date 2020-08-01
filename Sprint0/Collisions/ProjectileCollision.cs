@@ -47,7 +47,10 @@ namespace Sprint0.Collisions
                     } 
                     else if (thisProjectile.Type() == StringHolder.Bomb && thisProjectile.IsExplode() == 1)
                     {
-                        enemy.Damaged();
+                        for (int i = 0; i< enemy.GetHealth(); i++)
+                        {
+                            enemy.Damaged();
+                        }
                         if (enemy.GetHealth() == 0)
                         {
                             myPlayer.GetGame().currentRoom.itemList.Add(new Ruppy(enemy.GetRectangle().X, enemy.GetRectangle().Y));

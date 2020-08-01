@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/shao4/Documents/GitHub/CSE3902Team1/Sprint0/Content/enemy2.png</SourceFile>
-  <SourceTime>2020-08-01T06:57:20.1683982+08:00</SourceTime>
-  <DestFile>C:/Users/shao4/Documents/GitHub/CSE3902Team1/Sprint0/Content/bin/Windows/Content/enemy2.xnb</DestFile>
-  <DestTime>2020-08-01T07:39:03.3441628+08:00</DestTime>
+  <SourceFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/enemy2.png</SourceFile>
+  <SourceTime>2020-06-29T19:41:33.4330262-04:00</SourceTime>
+  <DestFile>E:/CSE3902/Sprint/CSE3902Team1/CSE3902Team1/Sprint0/Content/bin/Windows/Content/enemy2.xnb</DestFile>
+  <DestTime>2020-07-31T19:49:04.760578-04:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2018-12-09T00:35:54+08:00</ImporterTime>
+  <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2018-12-09T00:35:54+08:00</ProcessorTime>
+  <ProcessorTime>2018-12-08T11:35:54-05:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>

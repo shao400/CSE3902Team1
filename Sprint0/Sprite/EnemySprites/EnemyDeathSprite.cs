@@ -13,9 +13,10 @@ namespace Sprint0.Sprite
         int frame = 0;
         public void Update()
         {
+            frame++;
             if (frame < IntegerHolder.Five) { sourceRec= new Rectangle(118, 189, IntegerHolder.Eight, IntegerHolder.Eight); }
-            if (frame < IntegerHolder.Ten) { sourceRec= new Rectangle(118, 189, 0, 0); }
-            if (frame < 15) { sourceRec= new Rectangle(118, 189, IntegerHolder.Eight, IntegerHolder.Eight); frame = 0; }
+            else if (frame < 10) { sourceRec = new Rectangle(138, 185, 16, 16); }
+            else if (frame < 15) { sourceRec= new Rectangle(118, 189, IntegerHolder.Eight, IntegerHolder.Eight); frame = 0; }
         }
 
         public void LoadContent(SpriteBatch batch, Texture2D texture)

@@ -1,0 +1,17 @@
+Lufei Ouyang
+7/31/2020
+Sprint5
+ItemSlot.cs, Handbook.cs
+Main Author: Zhizhou He
+Time: 15 min
+
+For ItemSlot.cs,some of the variables use some meaningless name, which
+reduces the readability. Some of the long methods may split into separate methods.
+Also, the length of the code reduces the readability of the code, but the logic behind this code is 
+relatively clear so it is easy to understand. Furthermore, all the variables follow the PascalCase, 
+which makes reading more seamless.
+
+The Handbook.cs almost has the same idea and same coding style with ItemSlot.cs, which means they have 
+same advantages and disadvantages. The code and some of the methods are too long, but the logic is clear. 
+And some variables have meaningless names. The author can make the code
+have more readability if he revises those shortcomings.

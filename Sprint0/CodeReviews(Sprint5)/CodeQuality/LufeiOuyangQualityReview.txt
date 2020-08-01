@@ -1,0 +1,15 @@
+Lufei Ouyang
+7/31/2020
+Sprint5
+ItemSlot.cs, Handbook.cs
+Main Author: Zhizhou He
+Time: 15 min
+
+
+The ItemSlot.cs and Handbook.cs both contain long methods, those methods may 
+split into separate methods.Both classes have the same idea and coding style, and 
+both classes have high cohesion, which makes the code maintainable and reusable.
+Also, the logic behind each method is simple. And different function does a different 
+thing, which makes the code modular, and it increases the testability.
+One suggestion to this class is that try not to use public fields, it can make the data unsafe, 
+and it can make the code has tight coupling.Fixing this can increase the overall maintainability of the code.
