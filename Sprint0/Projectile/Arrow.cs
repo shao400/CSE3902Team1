@@ -34,7 +34,6 @@ namespace Sprint0.Projectile
             if (currentStatus == status.explode && counter < 20)
             {
                 counter++;
-                Console.WriteLine(counter);
             }
             else if (currentStatus == status.shoot)
             {

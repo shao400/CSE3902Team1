@@ -27,7 +27,6 @@ namespace Sprint0.Inventories
 
         public void addItem(IItem item)
         {
-            Console.WriteLine(item.GetType());
             if (getItemType(item).Equals("Sprint0.Items.Bomb", StringComparison.CurrentCulture))
             {
                 if (myLink.bombCount < 2) myItemList.Add(item);
@@ -36,8 +35,6 @@ namespace Sprint0.Inventories
             {
                 myItemList.Add(item);
             }
-            Console.WriteLine("obtain new item: " + item.GetType());
-            Console.WriteLine("current have " + myItemList.Count + " item");
         }
 
         public void showItem()
@@ -128,12 +125,10 @@ namespace Sprint0.Inventories
                     currentItem = 0;
                     break;
             }
-            Console.WriteLine("current item: " + currentItem);
         }
 
         public void checkRemain()
         {
-            // if item count = 0, move it out from item list
             for (int i = 0; i < myItemList.Count; i++)
             {
                 IItem item = myItemList[i];

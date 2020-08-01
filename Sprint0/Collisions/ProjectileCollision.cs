@@ -7,7 +7,6 @@ using Sprint0.UtilityClass;
 using Sprint0.Player;
 using Sprint0.Items;
 
-//currently not used, since item would not collition with enemy or blocks right now. May update future
 
 namespace Sprint0.Collisions
 {

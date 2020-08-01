@@ -21,7 +21,6 @@ namespace Sprint0.Commands
             if (myGame.currentRoom.roomID > 0)
             {
                 myGame.currentState = myGame.stateList[1];
-                Console.WriteLine(StringHolder.NextRoom + myGame.currentRoom.roomID + StringHolder.MinusOne);
                 myGame.currentState.loadNextRoom(myGame.currentRoom.roomID - 1);
             }
         }

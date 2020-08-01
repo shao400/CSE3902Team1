@@ -42,7 +42,6 @@ namespace Sprint0.Projectile
                 ShotDistanceY += ShotY;
 
             }
-            Console.WriteLine(this.hitBox);
             if (counter > 260 && (this.hitBox.X < 0 || this.hitBox.X > 720 || this.hitBox.Y < IntegerHolder.OneSixEight || this.hitBox.Y > 648 || this.IsExplode() == 1))
             {
                 counter = 0;
