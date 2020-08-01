@@ -1,0 +1,9 @@
+Zhizhou He
+7/31/2020
+Sprint5
+NAqua
+Main Author: Gengyi Qin, Zilin Shao, Ouyang Lufei
+Time: 5 min
+
+The code structure looks clear. Each variable's name is meaningful so it is easy to know what they do.
+I think the Update method is a little bit long and reduce the readbility but since this enemy is unique. I think it is fair. 

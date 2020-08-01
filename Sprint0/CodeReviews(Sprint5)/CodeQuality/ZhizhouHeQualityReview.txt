@@ -1,0 +1,12 @@
+Zhizhou He
+7/31/2020
+Sprint5
+NAqua
+Main Author: Gengyi Qin, Zilin Shao, Ouyang Lufei
+Time: 5 min
+
+In Update method, the enemy can move based on player's position.
+The enemy has two types of attacking ways: dash and shoot energy balls. In Update method, when the enemy detech the player at certain location, it will dash toward the player.
+The code also has high cohesion, the methods that contain strongly related functionalities so it has good maintainability. 
+The integer variables have integerHolder to replace. So in generl, I think the code quality is high and smart. 
+ 
