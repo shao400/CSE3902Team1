@@ -563,6 +563,10 @@ namespace Sprint0.Player
                 blockX.Update();
                 yAxis++;
             }
+            if (yAxis == 427)
+            {
+                sound.secret();
+            }
 
         }
         public List<int> itemCount()

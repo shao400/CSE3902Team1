@@ -22,6 +22,7 @@ namespace Sprint0.Collisions
         private Ruppy ruppy = new Ruppy(0, 0);
         private Key key = new Key(0, 0);
         private Bomb bomb = new Bomb(0, 0);
+        private Arrow arrow = new Arrow(0,0);
         private Bow bow = new Bow(0, 0);
         private Map map = new Map(0, 0);
         private Boomerang boomerang = new Boomerang(0, 0);
@@ -70,7 +71,13 @@ namespace Sprint0.Collisions
                         s.fanfare();
                         myPlayer.myInventory.addItem(item);
                     }
-                    
+                    if (item.GetType() == arrow.GetType() && !item.isPickedUp())
+                    {
+                        s.getItem();
+                        s.fanfare();
+                    }
+
+
                     if (item.GetType() == map.GetType() && !item.isPickedUp()) myPlayer.MapOrCompassGet(0);                    
                     if (item.GetType() == compass.GetType() && !item.isPickedUp()) myPlayer.MapOrCompassGet(GetCompass);                    
                     if (item.GetType() == woodenSwordItem.GetType() && !item.isPickedUp())
