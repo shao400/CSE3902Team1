@@ -6,6 +6,7 @@ using Sprint0.Collisions;
 using System.Collections.Generic;
 using Sprint0.Projectile;
 using Sprint0.UtilityClass;
+using System.Security.Cryptography;
 
 namespace Sprint0.Enemies
 {
@@ -15,8 +16,6 @@ namespace Sprint0.Enemies
         private ISprite AquaSprite;
         private ProjectileCollision projectileCollision;
         private IProjectile energyBall;
-        private int xPosition;
-        private int yPosition;
         private Rectangle destinationRec, targetRec;
         private int health = 20;
         private EnemyAllCollision enemyAllCollision;
@@ -27,11 +26,9 @@ namespace Sprint0.Enemies
         public NAqua(int x, int y, IPlayer player)
         {
             myPlayer = player;
-            xPosition = x;
-            yPosition = y;
             initialX = x;
             AquaSprite = new EnemyAquaSprite(x, y);
-            destinationRec = new Rectangle(xPosition, yPosition, IntegerHolder.OneOO, IntegerHolder.OneOO);
+            destinationRec = new Rectangle(x, y, IntegerHolder.OneOO, IntegerHolder.OneOO);
             energyBall = new EnergyBall(this, myPlayer);
             projectileCollision = new ProjectileCollision(energyBall, myPlayer);
             enemyAllCollision = new EnemyAllCollision(this);
@@ -58,7 +55,7 @@ namespace Sprint0.Enemies
             if (this.GetHealth() > 0 && counter == IntegerHolder.ThirtyFour)
             {
                 energyBall.Shoot();
-                Vector2 location = new Vector2(xPosition, yPosition);
+                Vector2 location = new Vector2(destinationRec.X, destinationRec.Y);
                 AquaSprite.Draw(location, false);
             }
             if (counter < IntegerHolder.Seventy && this.GetHealth() == 0)
@@ -84,13 +81,13 @@ namespace Sprint0.Enemies
                 energyBall.Update();
                 projectileCollision.ProjectileLinkCollisionTest();
                 targetRec = myPlayer.GetRectangle();
-                if (xPosition - targetRec.X < 250 && targetRec.Y > destinationRec.Y && targetRec.Y < destinationRec.Y + IntegerHolder.OneOO && xPosition > initialX - 250)
+                if (destinationRec.X - targetRec.X < 250 && targetRec.Y > destinationRec.Y && targetRec.Y < destinationRec.Y + IntegerHolder.OneOO && destinationRec.X > initialX - 250)
                 {
-                    xPosition -= IntegerHolder.Five;
+                    destinationRec.X -= IntegerHolder.Five;
                 }
                 else if (targetRec.Y <= destinationRec.Y || targetRec.Y >= destinationRec.Y + IntegerHolder.OneOO)
                 {
-                    if (xPosition < initialX) xPosition += IntegerHolder.Three;
+                    if (destinationRec.X < initialX) destinationRec.X += IntegerHolder.Three;
                 }
 
                 AquaSprite.Update();
@@ -99,20 +96,20 @@ namespace Sprint0.Enemies
 
         public Rectangle GetRectangle()
         {
-            destinationRec = new Rectangle(xPosition, yPosition, IntegerHolder.OneOO, IntegerHolder.OneOO);
+            destinationRec = new Rectangle(destinationRec.X, destinationRec.Y, IntegerHolder.ThirtyFive, IntegerHolder.ThirtyFive);
             return destinationRec;
         }
 
         public void xReverse(int distance, bool plus)
         {
-            if (plus) xPosition += distance;
-            else { xPosition -= distance; }
+            if (plus) destinationRec.X += distance;
+            else { destinationRec.X -= distance; }
         }
 
         public void yReverse(int distance, bool plus)
         {
-            if (plus) yPosition += distance;
-            else { yPosition -= distance; }
+            if (plus) destinationRec.Y += distance;
+            else { destinationRec.Y -= distance; }
         }
 
         public void blockCollisionTest(List<IBlock> blocks)

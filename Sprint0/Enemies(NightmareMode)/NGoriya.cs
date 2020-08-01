@@ -15,7 +15,7 @@ namespace Sprint0.Enemies
         private IPlayer myPlayer;
         private ProjectileCollision projectileCollision;
         private ISprite GoriyaSprite;
-        private int xPosition, yPosition, xDif, yDif;
+        private int xDif, yDif;
         bool leftmove = false;
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
@@ -26,11 +26,8 @@ namespace Sprint0.Enemies
         private int counter = 0;
 
         public NGoriya(int x, int y, IPlayer player)
-        {
-           
+        {       
             myPlayer = player;
-            xPosition = x;
-            yPosition = y;
             GoriyaSprite = new NGoriyaSprite();
             destinationRec = new Rectangle(x, y, IntegerHolder.FoutyFive, IntegerHolder.FoutyFive);
             enemyAllCollision = new EnemyAllCollision(this);
@@ -60,7 +57,7 @@ namespace Sprint0.Enemies
             if (this.GetHealth() > 0 && counter == IntegerHolder.ThirtyFour)
             {
                 energyBall.Shoot();
-                Vector2 location = new Vector2(xPosition, yPosition);
+                Vector2 location = new Vector2(destinationRec.X, destinationRec.Y);
                 GoriyaSprite.Draw(location, leftmove);
             }
             if (counter < IntegerHolder.Seventy && this.GetHealth() == 0)
@@ -87,17 +84,17 @@ namespace Sprint0.Enemies
                 energyBall.Update();
                 projectileCollision.ProjectileLinkCollisionTest();
                 targetRectangle = myPlayer.GetRectangle();
-                xDif = targetRectangle.X - xPosition;
-                yDif = targetRectangle.Y - yPosition;
+                xDif = targetRectangle.X - destinationRec.X;
+                yDif = targetRectangle.Y - destinationRec.Y;
                 if (Math.Abs(xDif) > Math.Abs(yDif))
                 {
-                    if (xDif > 0) { xPosition += IntegerHolder.One; leftmove = false; }
-                    else { xPosition -= IntegerHolder.One; leftmove = true; }
+                    if (xDif > 0) { destinationRec.X += IntegerHolder.One; leftmove = false; }
+                    else { destinationRec.X -= IntegerHolder.One; leftmove = true; }
                 }
                 else
                 {
-                    if (yDif > 0) yPosition += IntegerHolder.One;
-                    else yPosition -= IntegerHolder.One;
+                    if (yDif > 0) destinationRec.Y += IntegerHolder.One;
+                    else destinationRec.Y -= IntegerHolder.One;
                 }
                 GoriyaSprite.Update();
             }
@@ -105,20 +102,20 @@ namespace Sprint0.Enemies
 
         public Rectangle GetRectangle()
         {
-            destinationRec = new Rectangle(xPosition, yPosition, IntegerHolder.ThirtyFive, IntegerHolder.ThirtyFive);
+            destinationRec = new Rectangle(destinationRec.X, destinationRec.Y, IntegerHolder.ThirtyFive, IntegerHolder.ThirtyFive);
             return destinationRec;
         }
 
         public void xReverse(int distance, bool plus)
         {
-            if (plus) xPosition += distance;
-            else { xPosition -= distance; }
+            if (plus) destinationRec.X += distance;
+            else { destinationRec.X -= distance; }
         }
 
         public void yReverse(int distance, bool plus)
         {
-            if (plus) yPosition += distance;
-            else { yPosition -= distance; }
+            if (plus) destinationRec.Y += distance;
+            else { destinationRec.Y -= distance; }
         }
 
         public void blockCollisionTest(List<IBlock> blocks) { enemyAllCollision.BlockCollisionTest(blocks); }

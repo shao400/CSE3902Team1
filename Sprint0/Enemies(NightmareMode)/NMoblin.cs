@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using Sprint0.Collisions;
 using Sprint0.UtilityClass;
-using System.Security.Cryptography;
 
 namespace Sprint0.Enemies
 {
@@ -15,7 +14,7 @@ namespace Sprint0.Enemies
 
         private IPlayer myPlayer;
         private ISprite MoblinSprite;
-        private int xPosition, yPosition, xDif, yDif;
+        private int  xDif, yDif;
         bool leftmove = false;
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
@@ -29,8 +28,6 @@ namespace Sprint0.Enemies
         public NMoblin(int x, int y, IPlayer player, List<IBlock> blocks)
         {
             myPlayer = player;
-            xPosition = x;
-            yPosition = y;
             MoblinSprite = new NMoblinSprite();
             destinationRec = new Rectangle(x, y, IntegerHolder.ThirtyFive, IntegerHolder.ThirtyFive);
             enemyAllCollision = new EnemyAllCollision(this);
@@ -58,7 +55,7 @@ namespace Sprint0.Enemies
 
             if (this.GetHealth() > 0 && counter2 == IntegerHolder.ThirtyFour)
             {
-                Vector2 location = new Vector2(xPosition, yPosition);
+                Vector2 location = new Vector2(destinationRec.X, destinationRec.Y);
                 MoblinSprite.Draw(location, leftmove);
             }
             if (counter2 < IntegerHolder.Seventy && this.GetHealth() == 0)
@@ -69,8 +66,6 @@ namespace Sprint0.Enemies
 
         public void Update()
         {
-            xPosition = destinationRec.X;
-            yPosition = destinationRec.Y;
             if (counter2 < IntegerHolder.ThirtyFour)
             {
                 Born.Update();
@@ -84,8 +79,8 @@ namespace Sprint0.Enemies
             else
             {
                 targetRectangle = myPlayer.GetRectangle();
-                xDif = targetRectangle.X - xPosition;
-                yDif = targetRectangle.Y - yPosition;
+                xDif = targetRectangle.X - destinationRec.X;
+                yDif = targetRectangle.Y - destinationRec.Y;
 
                 if (seeLink() && !chaseLink) counter++;
                 if (!seeLink() && chaseLink) counter--;
@@ -95,19 +90,17 @@ namespace Sprint0.Enemies
                 {
                     if (Math.Abs(xDif) > Math.Abs(yDif))
                     {
-                        if (xDif > 0) { xPosition += IntegerHolder.One; leftmove = false; }
-                        else { xPosition -= IntegerHolder.One; leftmove = true; }
+                        if (xDif > 0) { destinationRec.X += IntegerHolder.One; leftmove = false; }
+                        else { destinationRec.X -= IntegerHolder.One; leftmove = true; }
                     }
                     else
                     {
-                        if (yDif > 0) yPosition += IntegerHolder.One;
-                        else yPosition -= IntegerHolder.One;
+                        if (yDif > 0) destinationRec.Y += IntegerHolder.One;
+                        else destinationRec.Y -= IntegerHolder.One;
                     }
                 }
                 MoblinSprite.Update();
             }
-            destinationRec.X = xPosition;
-            destinationRec.Y = yPosition;
         }
 
         private Boolean seeLink()
@@ -116,24 +109,24 @@ namespace Sprint0.Enemies
             int dx = xDif/2;
             int dy = yDif /2;
 
-                if (xPosition > targetRectangle.X && yPosition > targetRectangle.Y)
+                if (destinationRec.X > targetRectangle.X && destinationRec.Y > targetRectangle.Y)
                 { 
-                if (enemyAllCollision.BlockCollisionDetect(blocksSet, xPosition - dx, yPosition - dy, 1)) detected = false;
+                if (enemyAllCollision.BlockCollisionDetect(blocksSet, destinationRec.X - dx, destinationRec.Y - dy, 1)) detected = false;
                 else detected = true;
                 }
-                if (xPosition <= targetRectangle.X && yPosition > targetRectangle.Y)
+                if (destinationRec.X <= targetRectangle.X && destinationRec.Y > targetRectangle.Y)
                 {
-                if (enemyAllCollision.BlockCollisionDetect(blocksSet, xPosition + dx, yPosition - dy, 1)) detected = false;
+                if (enemyAllCollision.BlockCollisionDetect(blocksSet, destinationRec.X + dx, destinationRec.Y - dy, 1)) detected = false;
                 else detected = true;
                 }
-                 if (xPosition <= targetRectangle.X && yPosition <= targetRectangle.Y)
+                 if (destinationRec.X <= targetRectangle.X && destinationRec.Y <= targetRectangle.Y)
                 { 
-                if(enemyAllCollision.BlockCollisionDetect(blocksSet, xPosition +  dx, yPosition +  dy, 1)) detected = false; 
+                if(enemyAllCollision.BlockCollisionDetect(blocksSet, destinationRec.X +  dx, destinationRec.Y +  dy, 1)) detected = false; 
                 else detected = true; 
                 }
-                 if (xPosition > targetRectangle.X && yPosition <= targetRectangle.Y)
+                 if (destinationRec.X > targetRectangle.X && destinationRec.Y <= targetRectangle.Y)
                 {
-                if( enemyAllCollision.BlockCollisionDetect(blocksSet, xPosition - dx, yPosition +  dy, 1)) detected = false; 
+                if( enemyAllCollision.BlockCollisionDetect(blocksSet, destinationRec.X - dx, destinationRec.Y +  dy, 1)) detected = false; 
                 else detected = true; 
                 }
 

@@ -16,7 +16,7 @@ namespace Sprint0.Enemies
 
         private IPlayer myPlayer;
         private ISprite TektiteSprite;
-        private int xPosition, yPosition, xDif, yDif;
+        private int  xDif, yDif;
         //private int frame = 0;
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
@@ -27,8 +27,6 @@ namespace Sprint0.Enemies
         public NTektite(int x, int y, IPlayer player)
         {
             myPlayer = player;
-            xPosition = x;
-            yPosition = y;
             TektiteSprite = new NTektiteSprite();
             destinationRec = new Rectangle(x, y, IntegerHolder.FoutyFive, IntegerHolder.FoutyFive);
             enemyAllCollision = new EnemyAllCollision(this);
@@ -55,7 +53,7 @@ namespace Sprint0.Enemies
 
             if (this.GetHealth() > 0 && counter == IntegerHolder.ThirtyFour)
             {
-                Vector2 location = new Vector2(xPosition, yPosition);
+                Vector2 location = new Vector2(destinationRec.X, destinationRec.Y);
                 TektiteSprite.Draw(location, false);
             }
             if (counter < IntegerHolder.Seventy && this.GetHealth() == 0)
@@ -79,17 +77,17 @@ namespace Sprint0.Enemies
             else
             {
                 targetRectangle = myPlayer.GetRectangle();
-            xDif = targetRectangle.X - xPosition;
-            yDif = targetRectangle.Y - yPosition;
+            xDif = targetRectangle.X - destinationRec.X;
+            yDif = targetRectangle.Y - destinationRec.Y;
             if (Math.Abs(xDif) > Math.Abs(yDif))
             {
-                if (xDif > 0) xPosition += IntegerHolder.Three;
-                else xPosition -= IntegerHolder.Three;
+                if (xDif > 0) destinationRec.X += IntegerHolder.Three;
+                else destinationRec.X -= IntegerHolder.Three;
             }
             else
             {
-                if (yDif > 0) yPosition += IntegerHolder.Three;
-                else yPosition -= IntegerHolder.Three;
+                if (yDif > 0) destinationRec.Y += IntegerHolder.Three;
+                else destinationRec.Y -= IntegerHolder.Three;
             }
             TektiteSprite.Update();
             }
@@ -97,22 +95,21 @@ namespace Sprint0.Enemies
 
         public Rectangle GetRectangle()
         {
-            destinationRec = new Rectangle(xPosition, yPosition, IntegerHolder.ThirtyFive, IntegerHolder.ThirtyFive);
+            destinationRec = new Rectangle(destinationRec.X, destinationRec.Y, IntegerHolder.ThirtyFive, IntegerHolder.ThirtyFive);
             return destinationRec;
         }
 
         public void xReverse(int distance, bool plus)
         {
-            if (plus) xPosition += distance;
-            else { xPosition -= distance; }
+            if (plus) destinationRec.X += distance;
+            else { destinationRec.X -= distance; }
         }
 
         public void yReverse(int distance, bool plus)
         {
-            if (plus) yPosition += distance;
-            else { yPosition -= distance; }
+            if (plus) destinationRec.Y += distance;
+            else { destinationRec.Y -= distance; }
         }
-
         public void blockCollisionTest(List<IBlock> blocks) { enemyAllCollision.BlockCollisionTest(blocks); }
     }
 }

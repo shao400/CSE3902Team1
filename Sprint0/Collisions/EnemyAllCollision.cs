@@ -34,13 +34,13 @@ namespace Sprint0.Collisions
                     // check the collison occuring direction
                     if ((intersectionRectangle.Width >= intersectionRectangle.Height)) // from up or down
                     {
-                        if (myRectangle.Y > blockRectangle.Y) myEnemy.xReverse(intersectionRectangle.Height, true);
-                        else myEnemy.xReverse(intersectionRectangle.Height, false);                        
+                        if (myRectangle.Y > blockRectangle.Y) myEnemy.yReverse(intersectionRectangle.Height, true);
+                        else myEnemy.yReverse(intersectionRectangle.Height, false);                        
                     }
                     else //from right or left
                     {
-                        if (myRectangle.X > blockRectangle.X) myEnemy.yReverse(intersectionRectangle.Width, true);                        
-                        else myEnemy.yReverse(intersectionRectangle.Width, false);
+                        if (myRectangle.X > blockRectangle.X) myEnemy.xReverse(intersectionRectangle.Width, true);                        
+                        else myEnemy.xReverse(intersectionRectangle.Width, false);
                         
                     }
                 }
