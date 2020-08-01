@@ -39,8 +39,8 @@ namespace Sprint0.Collisions
                     }
                     else //from right or left
                     {
-                        if (myRectangle.X > blockRectangle.X) myEnemy.yReverse(intersectionRectangle.Height, true);                        
-                        else myEnemy.yReverse(intersectionRectangle.Height, false);
+                        if (myRectangle.X > blockRectangle.X) myEnemy.yReverse(intersectionRectangle.Width, true);                        
+                        else myEnemy.yReverse(intersectionRectangle.Width, false);
                         
                     }
                 }

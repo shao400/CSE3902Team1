@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using Sprint0.Collisions;
 using Sprint0.UtilityClass;
+using System.Security.Cryptography;
 
 namespace Sprint0.Enemies
 {
@@ -68,6 +69,8 @@ namespace Sprint0.Enemies
 
         public void Update()
         {
+            xPosition = destinationRec.X;
+            yPosition = destinationRec.Y;
             if (counter2 < IntegerHolder.ThirtyFour)
             {
                 Born.Update();
@@ -103,6 +106,8 @@ namespace Sprint0.Enemies
                 }
                 MoblinSprite.Update();
             }
+            destinationRec.X = xPosition;
+            destinationRec.Y = yPosition;
         }
 
         private Boolean seeLink()
@@ -139,22 +144,22 @@ namespace Sprint0.Enemies
 
         public Rectangle GetRectangle()
         {
-            destinationRec = new Rectangle(xPosition, yPosition, IntegerHolder.ThirtyFive, IntegerHolder.ThirtyFive);
+            destinationRec = new Rectangle(destinationRec.X, destinationRec.Y, IntegerHolder.ThirtyFive, IntegerHolder.ThirtyFive);
             return destinationRec;
         }
 
         public void xReverse(int distance, bool plus)
         {
-            if (plus) xPosition += distance;
-            else { xPosition -= distance; }
+            if (plus) destinationRec.X += distance;
+            else { destinationRec.X -= distance; }
         }
 
         public void yReverse(int distance, bool plus)
         {
-            if (plus) yPosition += distance;
-            else { yPosition -= distance; }
+            if (plus) destinationRec.Y += distance;
+            else { destinationRec.Y -= distance; }
         }
 
-        public void blockCollisionTest(List<IBlock> blocks) { enemyAllCollision.BlockCollisionTest(blocks); }
+        public void blockCollisionTest(List<IBlock> blocks) { }
     }
 }
