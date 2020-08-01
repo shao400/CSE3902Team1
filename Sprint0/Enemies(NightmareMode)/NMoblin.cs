@@ -11,13 +11,6 @@ namespace Sprint0.Enemies
     public class NMoblin : IEnemy
     {
 
-        class Position
-        {
-            public int x, y;
-            public Position parent = null;
-            public Position(int _x, int _y) { x = _x; y = _y; }
-
-        }
 
         private IPlayer myPlayer;
         private ISprite MoblinSprite;
@@ -25,9 +18,7 @@ namespace Sprint0.Enemies
         bool leftmove = false;
         private Rectangle destinationRec, targetRectangle;
         private EnemyAllCollision enemyAllCollision;
-        private List<Boolean> UdLrCollid;
         private List<IBlock> blocksSet;
-        private const int md = IntegerHolder.Three;
         private int counter = 0;
         private Boolean chaseLink = false;
         private int health = IntegerHolder.Three; 
@@ -43,7 +34,6 @@ namespace Sprint0.Enemies
             destinationRec = new Rectangle(x, y, IntegerHolder.ThirtyFive, IntegerHolder.ThirtyFive);
             enemyAllCollision = new EnemyAllCollision(this);
             blocksSet = blocks;
-            UdLrCollid = new List<bool>();
             Born = SpriteFactory.EnemyBorn;
             Death = SpriteFactory.EnemyDeath;
         }
@@ -145,51 +135,8 @@ namespace Sprint0.Enemies
             return detected;
         }
 
-        private List<Position> GetAdjacentPos(Position p)
-        {
-            List<Position> adj = new List<Position>();
-            Position left = new Position(p.x -md, p.y);
-            Position right= new Position(p.x + md, p.y);
-            Position up = new Position(p.x, p.y+md);
-            Position down = new Position(p.x, p.y-md);
-            adj.Add(left);
-            adj.Add(right);
-            adj.Add(up);
-            adj.Add(down);
-            return adj;
-        }
+     
 
-        /*Return the Heristiric... Value of a position*/
-        private int FScore(int x, int y)
-        {
-            const int infi = 99999;
-            int h = 0;
-            if (!enemyAllCollision.BlockCollisionDetect(blocksSet, x,y,IntegerHolder.FoutyFive) && x>99 & x<669 && y<597 && y>267)
-            {
-                h += Math.Abs(targetRectangle.X - x);
-                h += Math.Abs(targetRectangle.Y - y);
-                h += Math.Abs(xPosition - x);
-                h += Math.Abs(yPosition - y);
-           }
-            else
-            {
-                h = infi;
-            }
-            return h;
-        }
-
-        private Position itemWithLowestFScore(List<Position> path)
-        {
-            int minIndex = 0;
-            for (int i =0;i<path.Count;i++)
-            {
-                if (FScore(path[i].x,path[i].y)< FScore(path[minIndex].x, path[minIndex].y))
-                {
-                    minIndex = i;
-                }
-            }
-            return path[minIndex];
-        }
         public Rectangle GetRectangle()
         {
             destinationRec = new Rectangle(xPosition, yPosition, IntegerHolder.ThirtyFive, IntegerHolder.ThirtyFive);

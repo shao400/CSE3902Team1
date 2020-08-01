@@ -16,13 +16,12 @@ namespace Sprint0.Collisions
         }
 
         /*Will Return true if collid in Left Right Direction*/
-        public List<Boolean> BlockCollisionTest(IList<IBlock> blocks)
+        public void BlockCollisionTest(IList<IBlock> blocks)
         {
             Rectangle myRectangle = myEnemy.GetRectangle();
             Rectangle blockRectangle;
             Rectangle intersectionRectangle;
-            bool UpDownCollid = false;
-            bool LeftRightCollid = false;
+
             foreach (IBlock block in blocks)
             {
 
@@ -35,23 +34,17 @@ namespace Sprint0.Collisions
                     // check the collison occuring direction
                     if ((intersectionRectangle.Width >= intersectionRectangle.Height)) // from up or down
                     {
-                        UpDownCollid = true;
                         if (myRectangle.Y > blockRectangle.Y) myEnemy.xReverse(intersectionRectangle.Height, true);
                         else myEnemy.xReverse(intersectionRectangle.Height, false);                        
                     }
                     else //from right or left
                     {
-                        LeftRightCollid = true;
                         if (myRectangle.X > blockRectangle.X) myEnemy.yReverse(intersectionRectangle.Height, true);                        
                         else myEnemy.yReverse(intersectionRectangle.Height, false);
                         
                     }
                 }
             }
-            List<Boolean> UDLRCollid = new List<bool>();
-            UDLRCollid.Add(UpDownCollid);
-            UDLRCollid.Add(LeftRightCollid);
-            return UDLRCollid;
         }
 
 
