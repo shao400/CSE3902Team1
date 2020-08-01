@@ -13,7 +13,7 @@ Overview of Sprint 5:
 4. Locks on doors (open with keys)
 5. Hidden room
 6. Nightmare enemies (can shoot and chase)
-7. Store
+7. Store for buy items
 8. Enemy handbook
 9. Bug fixes and optimized
 
@@ -24,6 +24,7 @@ Program Control:
 W,A,S,D and arrow keys---Walk
 Z---Stab
 N---Shoot the sword  //may be a bit different from the original game.
+B----Open/Close Enemy Handbook
 
 ( In Pause screen, Z & N for picking item to equip )  
 

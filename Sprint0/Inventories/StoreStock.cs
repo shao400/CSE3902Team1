@@ -138,7 +138,9 @@ namespace Sprint0.Inventories
                 }
                 else if (moveCountTot == 1)
                 {
-                    myLink.MaxHealth++;
+                    
+                    myLink.MaxHealth+=2;
+                    myLink.hp += 2;
                 }
                 else if (moveCountTot == 2)//candle
                 {
@@ -147,6 +149,7 @@ namespace Sprint0.Inventories
                 else if (moveCountTot == 3)//potion
                 {
                     myLink.MaxHealth+=4;
+                    myLink.hp += 4;
                 }
                 else if (moveCountTot == 4)//ring
                 {
