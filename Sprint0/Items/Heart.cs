@@ -18,7 +18,7 @@ namespace Sprint0.Items
             xAix = x;
             yAix = y;
             picked = false;
-            price = IntegerHolder.Ten;
+            price = 15;
         }
         public void Draw()
         {

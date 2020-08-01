@@ -17,7 +17,7 @@ namespace Sprint0.Items
             xAix = x;
             yAix = y;
             picked = false;
-            price = 0;
+            price = 20;
         }
         public void Draw()
         {
